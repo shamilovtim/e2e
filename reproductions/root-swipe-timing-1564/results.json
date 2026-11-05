@@ -1,0 +1,124 @@
+[
+  {
+    "transitionMs": 500,
+    "header": {
+      "base": {
+        "ref": "merge base with origin/main",
+        "sha": "1bbda5a84987257184457f1374729ed31ece594e"
+      },
+      "head": {
+        "sha": "f52bdc7daa288dd452c48a6564c9ef73c47e6029",
+        "dirty": true
+      },
+      "suite": "apps/root-swipe-native-1564",
+      "command": "e2e run --workers 1 --config e2e.config.ts --retries 0 --video off",
+      "threshold": 0.05,
+      "floorMs": 10,
+      "stop": "resolved after 3 pairs",
+      "machine": "darwin arm64, Apple M5 Max x18, Node 24.22.0, load 7.5",
+      "suiteDiffers": false
+    },
+    "cases": [
+      {
+        "name": "tests.e2e.ts \u203a four consecutive screen swipes move the native list (ios)",
+        "baseMs": 4482,
+        "headMs": 6349
+      },
+      {
+        "name": "tests.e2e.ts \u203a scrollUntilVisible reaches a later native row (ios)",
+        "baseMs": 5440,
+        "headMs": 6534
+      }
+    ],
+    "changes": [],
+    "counters": [],
+    "steps": [
+      {
+        "name": "step screen.scrollUntilVisible",
+        "baseMs": 3627,
+        "headMs": 4601
+      },
+      {
+        "name": "step app.open",
+        "baseMs": 3488,
+        "headMs": 3709
+      },
+      {
+        "name": "step screen.swipe",
+        "baseMs": 2214,
+        "headMs": 4114
+      },
+      {
+        "name": "step expect.toHaveText",
+        "baseMs": 343,
+        "headMs": 346
+      },
+      {
+        "name": "step expect.toBeVisible",
+        "baseMs": 40,
+        "headMs": 39
+      }
+    ]
+  },
+  {
+    "transitionMs": 1500,
+    "header": {
+      "base": {
+        "ref": "merge base with origin/main",
+        "sha": "1bbda5a84987257184457f1374729ed31ece594e"
+      },
+      "head": {
+        "sha": "f52bdc7daa288dd452c48a6564c9ef73c47e6029",
+        "dirty": true
+      },
+      "suite": "apps/root-swipe-native-1564",
+      "command": "e2e run --workers 1 --config e2e.config.ts --retries 0 --video off",
+      "threshold": 0.05,
+      "floorMs": 10,
+      "stop": "resolved after 3 pairs",
+      "machine": "darwin arm64, Apple M5 Max x18, Node 24.22.0, load 5.8",
+      "suiteDiffers": false
+    },
+    "cases": [
+      {
+        "name": "tests.e2e.ts \u203a four consecutive screen swipes move the native list (ios)",
+        "baseMs": 4438,
+        "headMs": 10315
+      },
+      {
+        "name": "tests.e2e.ts \u203a scrollUntilVisible reaches a later native row (ios)",
+        "baseMs": 5692,
+        "headMs": 10455
+      }
+    ],
+    "changes": [],
+    "counters": [],
+    "steps": [
+      {
+        "name": "step screen.scrollUntilVisible",
+        "baseMs": 3698,
+        "headMs": 8561
+      },
+      {
+        "name": "step app.open",
+        "baseMs": 3667,
+        "headMs": 3541
+      },
+      {
+        "name": "step screen.swipe",
+        "baseMs": 2213,
+        "headMs": 8109
+      },
+      {
+        "name": "step expect.toHaveText",
+        "baseMs": 345,
+        "headMs": 349
+      },
+      {
+        "name": "step expect.toBeVisible",
+        "baseMs": 39,
+        "headMs": 42
+      }
+    ]
+  }
+]
