@@ -17,7 +17,9 @@ On 2026-11-05, agent-device 0.21.36, iPhone 15 Pro, iOS 27.0 Simulator:
 | Positive control: press the native switch thumb | Option changed from off to on and the counter changed from 0 to 1. |
 
 The [recorded results](evidence/results-summary.json), retained raw capture
-samples, and screenshots are under [evidence/](evidence/). A video is attached to
+samples, and screenshots are under [evidence/](evidence/). The
+[20-second native video](evidence/native-proof.mp4) is committed here because
+upstream attachments require repository write access. Discussion is on
 [issue #1560](https://github.com/tester-army/e2e/issues/1560).
 
 The initial native captures reported healthy absent/visible keyboard facts with
