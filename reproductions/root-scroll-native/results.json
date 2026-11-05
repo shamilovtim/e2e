@@ -1,0 +1,34 @@
+{
+  "upstreamMain": "1bbda5a84987257184457f1374729ed31ece594e",
+  "proposedGestureBaseline": "2405db7ce6643e3808432f019c946d8ca547fe23",
+  "sdk": "agent-device@0.21.36",
+  "core": "e2e@0.23.0",
+  "nativeFixture": "dev.testerarmy.rootscroll",
+  "ios": {
+    "runtime": "27.0",
+    "model": "iPhone 15 Pro",
+    "backend": "XCTest",
+    "result": "3/3 pass"
+  },
+  "android": {
+    "runtime": "37.1",
+    "backend": "android-helper",
+    "helperVersion": "0.21.36",
+    "ime": "com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME",
+    "result": "3/3 pass"
+  },
+  "proposedGestureAndroid": {
+    "passed": 2,
+    "failed": 1,
+    "fastFailure": "Offset 0; composer touches 67",
+    "cleanup": "The final screenrecord stop reported ownership could not be confirmed; no screenrecord process remained afterward."
+  },
+  "mainSourceAudit": "Every TypeScript file in the isolated main adapter matched origin/main byte-for-byte.",
+  "nativeCases": [
+    "slow",
+    "none",
+    "fast"
+  ],
+  "goal": "Reach terminal Row 39 with positive scroll offset, composer touches 0 and Notes unchanged.",
+  "scope": "Main passing is native compatibility and necessity evidence. The proposed raw-swipe failure is a regression introduced by the PR, not a reproduction of a main bug."
+}
