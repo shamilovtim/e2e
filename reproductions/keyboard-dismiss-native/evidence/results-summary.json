@@ -1,0 +1,230 @@
+{
+  "testedOn": "2026-11-05",
+  "sdkVersion": "0.21.36",
+  "upstreamBase": "1bbda5a",
+  "device": "iPhone 15 Pro",
+  "runtime": "iOS 27.0 Simulator",
+  "steps": 26,
+  "hiddenNoOps": 6,
+  "visibleRefusals": 3,
+  "unexpectedFormChanges": 0,
+  "positiveControlChanges": 1,
+  "metadataLimit": "Some subsequent CLI/SDK captures omitted the optional keyboard fact. The retained initial capture samples report healthy absent/visible facts. No universal producer claim is made.",
+  "results": [
+    {
+      "step": "open",
+      "success": true
+    },
+    {
+      "step": "hidden-before",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "hidden-dismiss-0",
+      "success": true,
+      "wasVisible": false,
+      "dismissed": false,
+      "visible": false,
+      "message": "Keyboard already hidden"
+    },
+    {
+      "step": "hidden-dismiss-1",
+      "success": true,
+      "wasVisible": false,
+      "dismissed": false,
+      "visible": false,
+      "message": "Keyboard already hidden"
+    },
+    {
+      "step": "hidden-dismiss-2",
+      "success": true,
+      "wasVisible": false,
+      "dismissed": false,
+      "visible": false,
+      "message": "Keyboard already hidden"
+    },
+    {
+      "step": "hidden-after",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "focus-0",
+      "success": true
+    },
+    {
+      "step": "focused-dismiss-0",
+      "success": false,
+      "code": "UNSUPPORTED_OPERATION",
+      "message": "Unable to dismiss the iOS keyboard: the keyboard exposes no dismiss key, and background taps are never attempted (no tap outside the keyboard can be proven side-effect-free)"
+    },
+    {
+      "step": "focused-after-0",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "hide-0",
+      "success": true
+    },
+    {
+      "step": "fast-hidden-dismiss-0",
+      "success": true,
+      "wasVisible": false,
+      "dismissed": false,
+      "visible": false,
+      "message": "Keyboard already hidden"
+    },
+    {
+      "step": "fast-hidden-after-0",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "focus-1",
+      "success": true
+    },
+    {
+      "step": "focused-dismiss-1",
+      "success": false,
+      "code": "UNSUPPORTED_OPERATION",
+      "message": "Unable to dismiss the iOS keyboard: the keyboard exposes no dismiss key, and background taps are never attempted (no tap outside the keyboard can be proven side-effect-free)"
+    },
+    {
+      "step": "focused-after-1",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "hide-1",
+      "success": true
+    },
+    {
+      "step": "fast-hidden-dismiss-1",
+      "success": true,
+      "wasVisible": false,
+      "dismissed": false,
+      "visible": false,
+      "message": "Keyboard already hidden"
+    },
+    {
+      "step": "fast-hidden-after-1",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "focus-2",
+      "success": true
+    },
+    {
+      "step": "focused-dismiss-2",
+      "success": false,
+      "code": "UNSUPPORTED_OPERATION",
+      "message": "Unable to dismiss the iOS keyboard: the keyboard exposes no dismiss key, and background taps are never attempted (no tap outside the keyboard can be proven side-effect-free)"
+    },
+    {
+      "step": "focused-after-2",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "hide-2",
+      "success": true
+    },
+    {
+      "step": "fast-hidden-dismiss-2",
+      "success": true,
+      "wasVisible": false,
+      "dismissed": false,
+      "visible": false,
+      "message": "Keyboard already hidden"
+    },
+    {
+      "step": "fast-hidden-after-2",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 0",
+        "option-state": "Option: off"
+      }
+    },
+    {
+      "step": "positive-control-toggle",
+      "success": true
+    },
+    {
+      "step": "positive-control-after",
+      "success": true,
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "keyboard": null,
+      "form": {
+        "changes": "Option changes: 1",
+        "option-state": "Option: on"
+      }
+    }
+  ]
+}

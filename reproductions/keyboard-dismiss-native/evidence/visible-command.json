@@ -1,0 +1,7 @@
+{
+  "success": false,
+  "error": {
+    "code": "UNSUPPORTED_OPERATION",
+    "message": "Unable to dismiss the iOS keyboard: the keyboard exposes no dismiss key, and background taps are never attempted (no tap outside the keyboard can be proven side-effect-free)"
+  }
+}

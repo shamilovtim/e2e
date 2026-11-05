@@ -1,0 +1,227 @@
+{
+  "nodes": [
+    {
+      "depth": 0,
+      "rect": {
+        "width": 393,
+        "height": 852,
+        "x": 0,
+        "y": 0
+      },
+      "type": "Application",
+      "label": "KeyboardDismissDemo",
+      "hittable": false,
+      "enabled": true,
+      "index": 0,
+      "ref": "e1",
+      "kind": "application"
+    },
+    {
+      "parentIndex": 0,
+      "depth": 1,
+      "rect": {
+        "width": 393,
+        "height": 852,
+        "x": 0,
+        "y": 0
+      },
+      "type": "Other",
+      "label": "Keyboard dismissal proof",
+      "hittable": true,
+      "enabled": true,
+      "index": 1,
+      "ref": "e2",
+      "kind": "other"
+    },
+    {
+      "parentIndex": 1,
+      "depth": 2,
+      "rect": {
+        "width": 139.66666666666663,
+        "height": 20.333333333333343,
+        "x": 126.66666666666667,
+        "y": 133.33333333333331
+      },
+      "type": "StaticText",
+      "label": "Option changes: 0",
+      "hittable": true,
+      "enabled": true,
+      "index": 2,
+      "identifier": "changes",
+      "ref": "e3",
+      "kind": "text"
+    },
+    {
+      "parentIndex": 1,
+      "depth": 2,
+      "rect": {
+        "width": 345,
+        "height": 28,
+        "x": 24,
+        "y": 177.6666717529297
+      },
+      "value": "0",
+      "type": "Switch",
+      "label": "Form option",
+      "hittable": true,
+      "enabled": true,
+      "index": 3,
+      "identifier": "option",
+      "checked": false,
+      "ref": "e4",
+      "kind": "switch"
+    },
+    {
+      "label": "Form option",
+      "parentIndex": 3,
+      "hittable": true,
+      "index": 4,
+      "enabled": true,
+      "type": "StaticText",
+      "depth": 3,
+      "rect": {
+        "width": 92,
+        "height": 20.333333333333343,
+        "x": 24,
+        "y": 181.5
+      },
+      "ref": "e5",
+      "kind": "text"
+    },
+    {
+      "label": "0",
+      "parentIndex": 3,
+      "value": "0",
+      "index": 5,
+      "enabled": true,
+      "hittable": true,
+      "type": "Switch",
+      "depth": 3,
+      "rect": {
+        "width": 63,
+        "height": 28,
+        "x": 308,
+        "y": 177.66666666666666
+      },
+      "checked": false,
+      "ref": "e6",
+      "kind": "switch"
+    },
+    {
+      "label": "Option: off",
+      "parentIndex": 1,
+      "index": 6,
+      "enabled": true,
+      "hittable": true,
+      "identifier": "option-state",
+      "type": "StaticText",
+      "depth": 2,
+      "rect": {
+        "width": 81.33333333333334,
+        "height": 20.333333333333343,
+        "x": 155.83333333333334,
+        "y": 229.66666666666666
+      },
+      "ref": "e7",
+      "kind": "text"
+    },
+    {
+      "placeholder": "Notes",
+      "parentIndex": 1,
+      "index": 7,
+      "enabled": true,
+      "hittable": true,
+      "identifier": "notes",
+      "type": "TextField",
+      "depth": 2,
+      "rect": {
+        "width": 345,
+        "height": 34,
+        "x": 24,
+        "y": 274
+      },
+      "password": false,
+      "editable": true,
+      "ref": "e8",
+      "kind": "text-field"
+    },
+    {
+      "label": "Hide keyboard",
+      "parentIndex": 1,
+      "index": 8,
+      "enabled": true,
+      "hittable": true,
+      "identifier": "hide-keyboard",
+      "type": "Button",
+      "depth": 2,
+      "rect": {
+        "width": 110.33333333333331,
+        "height": 20.333333333333314,
+        "x": 141.33333333333331,
+        "y": 332
+      },
+      "ref": "e9",
+      "kind": "button"
+    },
+    {
+      "label": "Reset form",
+      "parentIndex": 1,
+      "index": 9,
+      "enabled": true,
+      "hittable": true,
+      "identifier": "reset",
+      "type": "Button",
+      "depth": 2,
+      "rect": {
+        "width": 83.33333333333331,
+        "height": 20.333333333333314,
+        "x": 155,
+        "y": 376.3333333333333
+      },
+      "ref": "e10",
+      "kind": "button"
+    }
+  ],
+  "truncated": false,
+  "appName": "com.example.keyboard-dismiss-native",
+  "appBundleId": "com.example.keyboard-dismiss-native",
+  "visibility": {
+    "partial": false,
+    "visibleNodeCount": 10,
+    "totalNodeCount": 10,
+    "reasons": []
+  },
+  "keyboard": {
+    "kind": "absent"
+  },
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "presentedSurface": "unknown",
+  "snapshotQuality": {
+    "state": "healthy",
+    "backend": "tree",
+    "timing": {
+      "acquisitionMs": 41.5189266204834,
+      "presentationMs": 0.07092952728271484
+    }
+  },
+  "warnings": [
+    "Simulator AX snapshot unavailable (circuit-disabled); used XCTest for this app generation."
+  ],
+  "snapshotDiagnostics": {
+    "stats": {
+      "count": 2,
+      "p50Ms": 110,
+      "p95Ms": 3853,
+      "maxMs": 3853,
+      "slowThresholdMs": 1500,
+      "platform": "ios",
+      "backends": {
+        "xctest": 2
+      }
+    }
+  },
+  "refsGeneration": 381732
+}
