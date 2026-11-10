@@ -1,0 +1,977 @@
+{
+  "schemaVersion": "report-1",
+  "run": {
+    "id": "01a1c7a2-1e87-7496-abd4-194dfaff268c",
+    "specVersion": "0.1",
+    "runner": {
+      "name": "e2e",
+      "version": "0.23.0"
+    },
+    "status": "failed",
+    "exitCode": 1,
+    "startedAt": "2026-11-10T22:44:13.721Z",
+    "finishedAt": "2026-11-10T22:44:56.150Z",
+    "project": {
+      "id": "dev.e2e.overlay1563",
+      "configDigest": "8f8e986418d02cf96e50b738f6e1a4dd861268b46020ac3f32ddb2c5edfa63f9"
+    },
+    "environment": {
+      "ci": false,
+      "trustNoticeShown": false,
+      "os": "darwin 27.2.0",
+      "arch": "arm64",
+      "runtime": "node v24.22.0"
+    },
+    "targets": [
+      {
+        "id": "ios-main",
+        "index": 0,
+        "platform": "ios",
+        "environment": "test",
+        "engine": {
+          "name": "mobile",
+          "version": "0.12.6",
+          "spiVersion": 1
+        },
+        "capabilities": [
+          "actions",
+          "artifacts",
+          "device",
+          "keyboard",
+          "location",
+          "observation",
+          "pointer"
+        ],
+        "artifactCapabilities": [
+          "screenshot",
+          "video"
+        ],
+        "stateCapability": false
+      }
+    ],
+    "serialGroups": [],
+    "results": [
+      {
+        "id": "96e13e53b3b43cedeee141dd0c8ef29f1d7fc6015e2be9276368de5236691682",
+        "testId": "tests/overlay.e2e.ts::UIKit%20fade%20750ms",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "UIKit fade 750ms"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-11-10T22:44:13.835Z",
+            "durationMs": 14204,
+            "artifacts": [
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-96e13e53b3b43ced/attempt-1/screen-at-failure.txt",
+                "size": 604,
+                "sha256": "d6ca32bac56e0893ac3d28bc85819cbe399452e46025265f48c75887b9cd2173"
+              },
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-96e13e53b3b43ced/attempt-1/screenshots/001-failure.png",
+                "size": 22504,
+                "sha256": "ee90f9493c888870ffb5073929f98966058351e25a2fce455f4ecdc0cb8f0f76"
+              },
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:artifact:2",
+                "kind": "video",
+                "mediaType": "video/mp4",
+                "startedAt": "2026-11-10T22:44:14.945Z",
+                "redaction": "incomplete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-96e13e53b3b43ced/attempt-1/video/video.mp4",
+                "size": 1203868,
+                "sha256": "f2b4943238e91d9347757ed8f6ef51b7308b34f29985754e79d8d30af99be775"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "ASSERTION_FAILED",
+              "message": "expect.toHaveText failed\nlocator: getByTestId(\"results\")\nexpected: text \"Underlying taps: 1\\nOverlay touches: 0\"\nobserved: text \"Underlying taps: 0 Overlay touches: 1\" (match count 1)",
+              "retryable": false,
+              "phase": "body",
+              "details": {
+                "locator": "getByTestId(\"results\")",
+                "expected": "text \"Underlying taps: 1\\nOverlay touches: 0\"",
+                "observed": "text \"Underlying taps: 0 Overlay touches: 1\"",
+                "matches": 1
+              },
+              "source": {
+                "file": "tests/overlay.e2e.ts",
+                "line": 14,
+                "column": 5
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "CA371337-B1F1-4A84-91BB-0E2ACA90E3E2"
+            },
+            "failure": {
+              "url": "dev.e2e.overlay1563",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              },
+              "nodes": 12,
+              "screen": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:artifact:0",
+              "screenshot": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:0",
+                "index": 0,
+                "kind": "resource",
+                "api": "device.openApp",
+                "label": "dev.e2e.overlay1563",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:14.946Z",
+                "durationMs": 1676,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 10,
+                  "column": 18
+                }
+              },
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:1",
+                "index": 1,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Open fade overlay\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:16.623Z",
+                "durationMs": 2598,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:16.623Z",
+                    "durationMs": 2598,
+                    "status": "passed",
+                    "detail": "tap button \"Open fade overlay\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 11,
+                  "column": 44
+                }
+              },
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:2",
+                "index": 2,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Close overlay\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:19.222Z",
+                "durationMs": 2374,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:19.222Z",
+                    "durationMs": 2374,
+                    "status": "passed",
+                    "detail": "tap button \"Close overlay\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 15,
+                  "since": 1,
+                  "changes": [
+                    "added text \"Fade duration: 0.75 s\"",
+                    "added button \"Close overlay\" testid=\"Close overlay\"",
+                    "added text \"Close overlay\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 12,
+                  "column": 45
+                }
+              },
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:3",
+                "index": 3,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Underlying action\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:21.597Z",
+                "durationMs": 402,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:21.597Z",
+                    "durationMs": 402,
+                    "status": "passed",
+                    "detail": "tap button \"Underlying action\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 2,
+                  "changes": [
+                    "removed text \"Fade duration: 0.75 s\"",
+                    "removed button \"Close overlay\" testid=\"Close overlay\"",
+                    "removed text \"Close overlay\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 13,
+                  "column": 59
+                }
+              },
+              {
+                "id": "01a1c7a2-218b-72dc-97fe-b8bc4c41bbc8:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toHaveText",
+                "label": "getByTestId(\"results\")",
+                "status": "failed",
+                "startedAt": "2026-11-10T22:44:22.000Z",
+                "durationMs": 5029,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-11-10T22:44:22.001Z",
+                    "durationMs": 5028,
+                    "status": "failed",
+                    "count": 34,
+                    "detail": "text \"Underlying taps: 0 Overlay touches: 1\" (1 match) x34"
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 3,
+                  "changes": [
+                    "added text \"Underlying taps: 0\\nOverlay touches: 1\" text=\"Underlying taps: 0 Overlay touches: 1\" testid=\"results\"",
+                    "removed text \"Underlying taps: 0\\nOverlay touches: 0\" text=\"Underlying taps: 0 Overlay touches: 0\" testid=\"results\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 14,
+                  "column": 49
+                },
+                "error": {
+                  "category": "test",
+                  "code": "ASSERTION_FAILED",
+                  "message": "expect.toHaveText failed\nlocator: getByTestId(\"results\")\nexpected: text \"Underlying taps: 1\\nOverlay touches: 0\"\nobserved: text \"Underlying taps: 0 Overlay touches: 1\" (match count 1)",
+                  "retryable": false,
+                  "details": {
+                    "locator": "getByTestId(\"results\")",
+                    "expected": "text \"Underlying taps: 1\\nOverlay touches: 0\"",
+                    "observed": "text \"Underlying taps: 0 Overlay touches: 1\"",
+                    "matches": 1
+                  },
+                  "source": {
+                    "file": "tests/overlay.e2e.ts",
+                    "line": 14,
+                    "column": 5
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "21c667c38297dcd0ef9a849f91b05016c2c0410458b7471874acdc2691fe7c7d",
+        "testId": "tests/overlay.e2e.ts::UIKit%20fade%20750ms",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "UIKit fade 750ms"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 1,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-11-10T22:44:28.040Z",
+            "durationMs": 14032,
+            "artifacts": [
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-21c667c38297dcd0/attempt-1/screen-at-failure.txt",
+                "size": 604,
+                "sha256": "1015fec0d933268c15dd6dd0ce4f722209eed4440c5dcadffcc55920a1fc38db"
+              },
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-21c667c38297dcd0/attempt-1/screenshots/001-failure.png",
+                "size": 22504,
+                "sha256": "ee90f9493c888870ffb5073929f98966058351e25a2fce455f4ecdc0cb8f0f76"
+              },
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:artifact:2",
+                "kind": "video",
+                "mediaType": "video/mp4",
+                "startedAt": "2026-11-10T22:44:28.985Z",
+                "redaction": "incomplete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-21c667c38297dcd0/attempt-1/video/video.mp4",
+                "size": 1212759,
+                "sha256": "81dc85d001cb64905bb4442280e0f91ac41b92c3d90cc3deb0d7c3a3b4af2eda"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "ASSERTION_FAILED",
+              "message": "expect.toHaveText failed\nlocator: getByTestId(\"results\")\nexpected: text \"Underlying taps: 1\\nOverlay touches: 0\"\nobserved: text \"Underlying taps: 0 Overlay touches: 1\" (match count 1)",
+              "retryable": false,
+              "phase": "body",
+              "details": {
+                "locator": "getByTestId(\"results\")",
+                "expected": "text \"Underlying taps: 1\\nOverlay touches: 0\"",
+                "observed": "text \"Underlying taps: 0 Overlay touches: 1\"",
+                "matches": 1
+              },
+              "source": {
+                "file": "tests/overlay.e2e.ts",
+                "line": 14,
+                "column": 5
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "CA371337-B1F1-4A84-91BB-0E2ACA90E3E2"
+            },
+            "failure": {
+              "url": "dev.e2e.overlay1563",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              },
+              "nodes": 12,
+              "screen": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:artifact:0",
+              "screenshot": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:0",
+                "index": 0,
+                "kind": "resource",
+                "api": "device.openApp",
+                "label": "dev.e2e.overlay1563",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:28.985Z",
+                "durationMs": 1629,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 10,
+                  "column": 18
+                }
+              },
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:1",
+                "index": 1,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Open fade overlay\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:30.614Z",
+                "durationMs": 2640,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:30.614Z",
+                    "durationMs": 2640,
+                    "status": "passed",
+                    "detail": "tap button \"Open fade overlay\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 11,
+                  "column": 44
+                }
+              },
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:2",
+                "index": 2,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Close overlay\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:33.255Z",
+                "durationMs": 2379,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:33.255Z",
+                    "durationMs": 2379,
+                    "status": "passed",
+                    "detail": "tap button \"Close overlay\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 15,
+                  "since": 1,
+                  "changes": [
+                    "added text \"Fade duration: 0.75 s\"",
+                    "added button \"Close overlay\" testid=\"Close overlay\"",
+                    "added text \"Close overlay\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 12,
+                  "column": 45
+                }
+              },
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:3",
+                "index": 3,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Underlying action\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:35.635Z",
+                "durationMs": 398,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:35.635Z",
+                    "durationMs": 398,
+                    "status": "passed",
+                    "detail": "tap button \"Underlying action\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 2,
+                  "changes": [
+                    "removed text \"Fade duration: 0.75 s\"",
+                    "removed button \"Close overlay\" testid=\"Close overlay\"",
+                    "removed text \"Close overlay\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 13,
+                  "column": 59
+                }
+              },
+              {
+                "id": "01a1c7a2-5908-704d-ace1-73aa594bcbc5:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toHaveText",
+                "label": "getByTestId(\"results\")",
+                "status": "failed",
+                "startedAt": "2026-11-10T22:44:36.034Z",
+                "durationMs": 5028,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-11-10T22:44:36.034Z",
+                    "durationMs": 5028,
+                    "status": "failed",
+                    "count": 37,
+                    "detail": "text \"Underlying taps: 0 Overlay touches: 1\" (1 match) x37"
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 3,
+                  "changes": [
+                    "added text \"Underlying taps: 0\\nOverlay touches: 1\" text=\"Underlying taps: 0 Overlay touches: 1\" testid=\"results\"",
+                    "removed text \"Underlying taps: 0\\nOverlay touches: 0\" text=\"Underlying taps: 0 Overlay touches: 0\" testid=\"results\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 14,
+                  "column": 49
+                },
+                "error": {
+                  "category": "test",
+                  "code": "ASSERTION_FAILED",
+                  "message": "expect.toHaveText failed\nlocator: getByTestId(\"results\")\nexpected: text \"Underlying taps: 1\\nOverlay touches: 0\"\nobserved: text \"Underlying taps: 0 Overlay touches: 1\" (match count 1)",
+                  "retryable": false,
+                  "details": {
+                    "locator": "getByTestId(\"results\")",
+                    "expected": "text \"Underlying taps: 1\\nOverlay touches: 0\"",
+                    "observed": "text \"Underlying taps: 0 Overlay touches: 1\"",
+                    "matches": 1
+                  },
+                  "source": {
+                    "file": "tests/overlay.e2e.ts",
+                    "line": 14,
+                    "column": 5
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4b8a8a661670c5f12d0d0e8ddf0b71750d7ebfa9eae6e742d66073b18a896845",
+        "testId": "tests/overlay.e2e.ts::UIKit%20fade%20750ms",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "UIKit fade 750ms"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 2,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-11-10T22:44:42.073Z",
+            "durationMs": 14060,
+            "artifacts": [
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-4b8a8a661670c5f1/attempt-1/screen-at-failure.txt",
+                "size": 615,
+                "sha256": "832caf33dd59d32c79f42b1032bd3b2074ef2c3697f86489ad92405d27214300"
+              },
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-4b8a8a661670c5f1/attempt-1/screenshots/001-failure.png",
+                "size": 22504,
+                "sha256": "ee90f9493c888870ffb5073929f98966058351e25a2fce455f4ecdc0cb8f0f76"
+              },
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:artifact:2",
+                "kind": "video",
+                "mediaType": "video/mp4",
+                "startedAt": "2026-11-10T22:44:43.019Z",
+                "redaction": "incomplete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-fade-750ms-4b8a8a661670c5f1/attempt-1/video/video.mp4",
+                "size": 1185621,
+                "sha256": "9dd754ecacfd8b94928cf9fc5c3c18b0b182d035286fb3d92b4f5817367d8f31"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "ASSERTION_FAILED",
+              "message": "expect.toHaveText failed\nlocator: getByTestId(\"results\")\nexpected: text \"Underlying taps: 1\\nOverlay touches: 0\"\nobserved: text \"Underlying taps: 0 Overlay touches: 1\" (match count 1)",
+              "retryable": false,
+              "phase": "body",
+              "details": {
+                "locator": "getByTestId(\"results\")",
+                "expected": "text \"Underlying taps: 1\\nOverlay touches: 0\"",
+                "observed": "text \"Underlying taps: 0 Overlay touches: 1\"",
+                "matches": 1
+              },
+              "source": {
+                "file": "tests/overlay.e2e.ts",
+                "line": 14,
+                "column": 5
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "CA371337-B1F1-4A84-91BB-0E2ACA90E3E2"
+            },
+            "failure": {
+              "url": "dev.e2e.overlay1563",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              },
+              "nodes": 12,
+              "screen": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:artifact:0",
+              "screenshot": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:0",
+                "index": 0,
+                "kind": "resource",
+                "api": "device.openApp",
+                "label": "dev.e2e.overlay1563",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:43.020Z",
+                "durationMs": 1780,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 10,
+                  "column": 18
+                }
+              },
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:1",
+                "index": 1,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Open fade overlay\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:44.800Z",
+                "durationMs": 2592,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:44.800Z",
+                    "durationMs": 2592,
+                    "status": "passed",
+                    "detail": "tap button \"Open fade overlay\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 11,
+                  "column": 44
+                }
+              },
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:2",
+                "index": 2,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Close overlay\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:47.393Z",
+                "durationMs": 2366,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:47.393Z",
+                    "durationMs": 2366,
+                    "status": "passed",
+                    "detail": "tap button \"Close overlay\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 15,
+                  "since": 1,
+                  "changes": [
+                    "added text \"Fade duration: 0.75 s\"",
+                    "added button \"Close overlay\" testid=\"Close overlay\"",
+                    "added text \"Close overlay\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 12,
+                  "column": 45
+                }
+              },
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:3",
+                "index": 3,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Underlying action\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:44:49.759Z",
+                "durationMs": 365,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:44:49.759Z",
+                    "durationMs": 365,
+                    "status": "passed",
+                    "detail": "tap button \"Underlying action\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 2,
+                  "changes": [
+                    "removed text \"Fade duration: 0.75 s\"",
+                    "removed button \"Close overlay\" testid=\"Close overlay\"",
+                    "removed text \"Close overlay\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 13,
+                  "column": 59
+                }
+              },
+              {
+                "id": "01a1c7a2-8fd9-7b82-a9b2-71f2ad934889:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toHaveText",
+                "label": "getByTestId(\"results\")",
+                "status": "failed",
+                "startedAt": "2026-11-10T22:44:50.124Z",
+                "durationMs": 5011,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-11-10T22:44:50.125Z",
+                    "durationMs": 5010,
+                    "status": "failed",
+                    "count": 37,
+                    "detail": "text \"Underlying taps: 0 Overlay touches: 1\" (1 match) x37"
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 3,
+                  "changes": [
+                    "added text \"Underlying taps: 0\\nOverlay touches: 1\" text=\"Underlying taps: 0 Overlay touches: 1\" testid=\"results\"",
+                    "removed text \"Underlying taps: 0\\nOverlay touches: 0\" text=\"Underlying taps: 0 Overlay touches: 0\" testid=\"results\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 14,
+                  "column": 49
+                },
+                "error": {
+                  "category": "test",
+                  "code": "ASSERTION_FAILED",
+                  "message": "expect.toHaveText failed\nlocator: getByTestId(\"results\")\nexpected: text \"Underlying taps: 1\\nOverlay touches: 0\"\nobserved: text \"Underlying taps: 0 Overlay touches: 1\" (match count 1)",
+                  "retryable": false,
+                  "details": {
+                    "locator": "getByTestId(\"results\")",
+                    "expected": "text \"Underlying taps: 1\\nOverlay touches: 0\"",
+                    "observed": "text \"Underlying taps: 0 Overlay touches: 1\"",
+                    "matches": 1
+                  },
+                  "source": {
+                    "file": "tests/overlay.e2e.ts",
+                    "line": 14,
+                    "column": 5
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2c6ed7a15ff5b2c625e11b6694b6e3c6fca9b3ddffb36c3cf5b27db477448bf9",
+        "testId": "tests/overlay.e2e.ts::UIKit%20fade%203000ms%20diagnostic",
+        "kind": "test",
+        "declarationIndex": 1,
+        "titlePath": [
+          "UIKit fade 3000ms diagnostic"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 0,
+        "tags": [],
+        "selected": false,
+        "status": "skipped",
+        "skip": {
+          "cause": "filtered",
+          "reason": "title does not match --grep"
+        },
+        "attempts": []
+      },
+      {
+        "id": "bf6cf67877c91427f1c2e55627be70706f7e908e968f0c7c98eab1c0396b4050",
+        "testId": "tests/overlay.e2e.ts::UIKit%20page%20sheet%20control",
+        "kind": "test",
+        "declarationIndex": 2,
+        "titlePath": [
+          "UIKit page sheet control"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 0,
+        "tags": [],
+        "selected": false,
+        "status": "skipped",
+        "skip": {
+          "cause": "filtered",
+          "reason": "title does not match --grep"
+        },
+        "attempts": []
+      }
+    ],
+    "errors": [],
+    "summary": {
+      "discovered": 5,
+      "selected": 3,
+      "executed": 3,
+      "passed": 0,
+      "failed": 3,
+      "interrupted": 0,
+      "flaky": 0,
+      "skipped": 0
+    },
+    "limits": {
+      "maxAgentContextBytes": 16384,
+      "maxLedgerBytes": 8192,
+      "maxObservationBytes": 262144,
+      "maxEventsPerStep": 1000,
+      "maxModelTokensPerCall": 64000
+    },
+    "usage": {
+      "discoveredResults": 5,
+      "maxAgentContextBytes": 0,
+      "maxLedgerBytes": 0,
+      "maxObservationBytes": 0,
+      "artifactBytes": 3671583,
+      "downloads": 0,
+      "events": 12,
+      "modelTokens": 0,
+      "maxModelCallsInStep": 0,
+      "maxActionStepsInStep": 0
+    }
+  }
+}

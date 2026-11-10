@@ -1,0 +1,12 @@
+#root screen
+ #n1416 application "OverlayFixture"
+  #n1417 text "Overlay transition proof"
+  #n1418 button "Open fade overlay" testid="Open fade overlay"
+   #n1419 text "Open fade overlay"
+  #n1420 button "Open slow fade overlay" testid="Open slow fade overlay"
+   #n1421 text "Open slow fade overlay"
+  #n1422 button "Open native sheet" testid="Open native sheet"
+   #n1423 text "Open native sheet"
+  #n1424 button "Underlying action" testid="Underlying action"
+   #n1425 text "Underlying action"
+  #n1426 text "Underlying taps: 0\nOverlay touches: 1" text="Underlying taps: 0 Overlay touches: 1" testid="results"

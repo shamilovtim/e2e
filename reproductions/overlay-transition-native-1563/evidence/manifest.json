@@ -1,0 +1,162 @@
+{
+  "upstreamCommit": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
+  "engineUnmodified": true,
+  "versions": {
+    "e2e": "0.23.0",
+    "mobile": "0.12.6",
+    "agent-device": "0.21.36",
+    "node": "24.22.0"
+  },
+  "simulator": {
+    "model": "iPhone 15 Pro",
+    "runtime": "iOS 27.0",
+    "udid": "CA371337-B1F1-4A84-91BB-0E2ACA90E3E2"
+  },
+  "sourceSHA256": "4ba6fb0e04317a1096ab5496dfeeec9d521ba5a59696e8052330ccff117bb9dd",
+  "runs": [
+    {
+      "directory": "evidence/main-1000",
+      "id": "01a1c7a0-f7a5-7b7d-af1a-939e2fcfffa5",
+      "status": "failed",
+      "exitCode": 1,
+      "results": [
+        {
+          "title": [
+            "UIKit fade 750ms"
+          ],
+          "repeat": 0,
+          "status": "failed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 12553,
+          "secondaryErrors": [],
+          "video": [
+            "overlay-uikit-fade-750ms-96e13e53b3b43ced/attempt-1/video/video.mp4"
+          ]
+        },
+        {
+          "title": [
+            "UIKit fade 3000ms diagnostic"
+          ],
+          "repeat": 0,
+          "status": "failed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 12312,
+          "secondaryErrors": [],
+          "video": [
+            "overlay-uikit-fade-3000ms-diagnostic-2c6ed7a15ff5b2c6/attempt-1/video/video.mp4"
+          ]
+        },
+        {
+          "title": [
+            "UIKit page sheet control"
+          ],
+          "repeat": 0,
+          "status": "passed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 7800,
+          "secondaryErrors": [],
+          "video": [
+            "overlay-uikit-page-sheet-control-bf6cf67877c91427/attempt-1/video/video.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "evidence/main-2000",
+      "id": "01a1c7a2-1e87-7496-abd4-194dfaff268c",
+      "status": "failed",
+      "exitCode": 1,
+      "results": [
+        {
+          "title": [
+            "UIKit fade 750ms"
+          ],
+          "repeat": 0,
+          "status": "failed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 14204,
+          "secondaryErrors": [],
+          "video": [
+            "overlay-uikit-fade-750ms-96e13e53b3b43ced/attempt-1/video/video.mp4"
+          ]
+        },
+        {
+          "title": [
+            "UIKit fade 750ms"
+          ],
+          "repeat": 1,
+          "status": "failed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 14032,
+          "secondaryErrors": [],
+          "video": [
+            "overlay-uikit-fade-750ms-21c667c38297dcd0/attempt-1/video/video.mp4"
+          ]
+        },
+        {
+          "title": [
+            "UIKit fade 750ms"
+          ],
+          "repeat": 2,
+          "status": "failed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 14060,
+          "secondaryErrors": [],
+          "video": [
+            "overlay-uikit-fade-750ms-4b8a8a661670c5f1/attempt-1/video/video.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "evidence/native-sheet-control",
+      "id": "01a1c7a2-eb05-7428-9d3f-eafdbe10298e",
+      "status": "passed",
+      "exitCode": 0,
+      "results": [
+        {
+          "title": [
+            "UIKit page sheet control"
+          ],
+          "repeat": 0,
+          "status": "passed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 7504,
+          "secondaryErrors": [],
+          "video": [
+            "overlay-uikit-page-sheet-control-bf6cf67877c91427/attempt-1/video/video.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "evidence/wait-diagnostic",
+      "id": "01a1c7a3-8c45-7aa7-babc-d241486c6c00",
+      "status": "passed",
+      "exitCode": 0,
+      "results": [
+        {
+          "title": [
+            "UIKit fade 750ms with diagnostic 1000ms wait"
+          ],
+          "repeat": 0,
+          "status": "passed",
+          "attempts": 1,
+          "cleanup": "complete",
+          "durationMs": 7652,
+          "secondaryErrors": [],
+          "video": [
+            "wait-diagnostic-uikit-fade-750ms-with-diagnostic-167981f45982a233/attempt-1/video/video.mp4"
+          ]
+        }
+      ]
+    }
+  ]
+}

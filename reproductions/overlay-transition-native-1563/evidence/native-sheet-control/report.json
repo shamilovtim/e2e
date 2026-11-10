@@ -1,0 +1,367 @@
+{
+  "schemaVersion": "report-1",
+  "run": {
+    "id": "01a1c7a2-eb05-7428-9d3f-eafdbe10298e",
+    "specVersion": "0.1",
+    "runner": {
+      "name": "e2e",
+      "version": "0.23.0"
+    },
+    "status": "passed",
+    "exitCode": 0,
+    "startedAt": "2026-11-10T22:45:06.065Z",
+    "finishedAt": "2026-11-10T22:45:13.703Z",
+    "project": {
+      "id": "dev.e2e.overlay1563",
+      "configDigest": "8f8e986418d02cf96e50b738f6e1a4dd861268b46020ac3f32ddb2c5edfa63f9"
+    },
+    "environment": {
+      "ci": false,
+      "trustNoticeShown": false,
+      "os": "darwin 27.2.0",
+      "arch": "arm64",
+      "runtime": "node v24.22.0"
+    },
+    "targets": [
+      {
+        "id": "ios-main",
+        "index": 0,
+        "platform": "ios",
+        "environment": "test",
+        "engine": {
+          "name": "mobile",
+          "version": "0.12.6",
+          "spiVersion": 1
+        },
+        "capabilities": [
+          "actions",
+          "artifacts",
+          "device",
+          "keyboard",
+          "location",
+          "observation",
+          "pointer"
+        ],
+        "artifactCapabilities": [
+          "screenshot",
+          "video"
+        ],
+        "stateCapability": false
+      }
+    ],
+    "serialGroups": [],
+    "results": [
+      {
+        "id": "96e13e53b3b43cedeee141dd0c8ef29f1d7fc6015e2be9276368de5236691682",
+        "testId": "tests/overlay.e2e.ts::UIKit%20fade%20750ms",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "UIKit fade 750ms"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 0,
+        "tags": [],
+        "selected": false,
+        "status": "skipped",
+        "skip": {
+          "cause": "filtered",
+          "reason": "title does not match --grep"
+        },
+        "attempts": []
+      },
+      {
+        "id": "2c6ed7a15ff5b2c625e11b6694b6e3c6fca9b3ddffb36c3cf5b27db477448bf9",
+        "testId": "tests/overlay.e2e.ts::UIKit%20fade%203000ms%20diagnostic",
+        "kind": "test",
+        "declarationIndex": 1,
+        "titlePath": [
+          "UIKit fade 3000ms diagnostic"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 0,
+        "tags": [],
+        "selected": false,
+        "status": "skipped",
+        "skip": {
+          "cause": "filtered",
+          "reason": "title does not match --grep"
+        },
+        "attempts": []
+      },
+      {
+        "id": "bf6cf67877c91427f1c2e55627be70706f7e908e968f0c7c98eab1c0396b4050",
+        "testId": "tests/overlay.e2e.ts::UIKit%20page%20sheet%20control",
+        "kind": "test",
+        "declarationIndex": 2,
+        "titlePath": [
+          "UIKit page sheet control"
+        ],
+        "file": "tests/overlay.e2e.ts",
+        "source": {
+          "file": "tests/overlay.e2e.ts",
+          "line": 9,
+          "column": 3
+        },
+        "targetId": "ios-main",
+        "platform": "ios",
+        "agent": "default",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "passed",
+        "attempts": [
+          {
+            "id": "01a1c7a2-ee01-72c4-a0cd-f0832ebdd887",
+            "index": 0,
+            "status": "passed",
+            "startedAt": "2026-11-10T22:45:06.177Z",
+            "durationMs": 7504,
+            "artifacts": [
+              {
+                "id": "01a1c7a2-ee01-72c4-a0cd-f0832ebdd887:artifact:0",
+                "kind": "video",
+                "mediaType": "video/mp4",
+                "startedAt": "2026-11-10T22:45:07.270Z",
+                "redaction": "incomplete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "overlay-uikit-page-sheet-control-bf6cf67877c91427/attempt-1/video/video.mp4",
+                "size": 1084363,
+                "sha256": "b3fa628759a8a6742db29f7ecbe695b330916af04bb055a68ef1b8bc4fa16daa"
+              }
+            ],
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "CA371337-B1F1-4A84-91BB-0E2ACA90E3E2"
+            },
+            "steps": [
+              {
+                "id": "01a1c7a2-ee01-72c4-a0cd-f0832ebdd887:0",
+                "index": 0,
+                "kind": "resource",
+                "api": "device.openApp",
+                "label": "dev.e2e.overlay1563",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:45:07.271Z",
+                "durationMs": 1534,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 10,
+                  "column": 18
+                }
+              },
+              {
+                "id": "01a1c7a2-ee01-72c4-a0cd-f0832ebdd887:1",
+                "index": 1,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Open native sheet\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:45:08.806Z",
+                "durationMs": 1594,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:45:08.806Z",
+                    "durationMs": 1594,
+                    "status": "passed",
+                    "detail": "tap button \"Open native sheet\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 11,
+                  "column": 44
+                }
+              },
+              {
+                "id": "01a1c7a2-ee01-72c4-a0cd-f0832ebdd887:2",
+                "index": 2,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Close sheet\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:45:10.401Z",
+                "durationMs": 1368,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:45:10.401Z",
+                    "durationMs": 1368,
+                    "status": "passed",
+                    "detail": "tap button \"Close sheet\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 4,
+                  "since": 1,
+                  "changes": [
+                    "added button \"Close sheet\"",
+                    "added text \"Close sheet\"",
+                    "removed text \"Overlay transition proof\"",
+                    "removed button \"Open fade overlay\" testid=\"Open fade overlay\"",
+                    "removed text \"Open fade overlay\"",
+                    "removed button \"Open slow fade overlay\" testid=\"Open slow fade overlay\"",
+                    "removed text \"Open slow fade overlay\"",
+                    "removed button \"Open native sheet\" testid=\"Open native sheet\"",
+                    "removed text \"Open native sheet\"",
+                    "removed button \"Underlying action\" testid=\"Underlying action\"",
+                    "removed text \"Underlying action\"",
+                    "removed text \"Underlying taps: 0\\nOverlay touches: 0\" text=\"Underlying taps: 0 Overlay touches: 0\" testid=\"results\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 12,
+                  "column": 45
+                }
+              },
+              {
+                "id": "01a1c7a2-ee01-72c4-a0cd-f0832ebdd887:3",
+                "index": 3,
+                "kind": "locator",
+                "api": "locator.tap",
+                "label": "getByRole(\"button\", name: \"Underlying action\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:45:11.769Z",
+                "durationMs": 1371,
+                "events": [
+                  {
+                    "kind": "engine",
+                    "name": "tap",
+                    "startedAt": "2026-11-10T22:45:11.769Z",
+                    "durationMs": 1371,
+                    "status": "passed",
+                    "detail": "tap button \"Underlying action\""
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 2,
+                  "changes": [
+                    "added text \"Overlay transition proof\"",
+                    "added button \"Open fade overlay\" testid=\"Open fade overlay\"",
+                    "added text \"Open fade overlay\"",
+                    "added button \"Open slow fade overlay\" testid=\"Open slow fade overlay\"",
+                    "added text \"Open slow fade overlay\"",
+                    "added button \"Open native sheet\" testid=\"Open native sheet\"",
+                    "added text \"Open native sheet\"",
+                    "added button \"Underlying action\" testid=\"Underlying action\"",
+                    "added text \"Underlying action\"",
+                    "added text \"Underlying taps: 0\\nOverlay touches: 0\" text=\"Underlying taps: 0 Overlay touches: 0\" testid=\"results\"",
+                    "removed button \"Close sheet\"",
+                    "removed text \"Close sheet\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 13,
+                  "column": 59
+                }
+              },
+              {
+                "id": "01a1c7a2-ee01-72c4-a0cd-f0832ebdd887:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toHaveText",
+                "label": "getByTestId(\"results\")",
+                "status": "passed",
+                "startedAt": "2026-11-10T22:45:13.141Z",
+                "durationMs": 44,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-11-10T22:45:13.141Z",
+                    "durationMs": 44,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.e2e.overlay1563",
+                  "nodes": 12,
+                  "since": 3,
+                  "changes": [
+                    "added text \"Underlying taps: 1\\nOverlay touches: 0\" text=\"Underlying taps: 1 Overlay touches: 0\" testid=\"results\"",
+                    "removed text \"Underlying taps: 0\\nOverlay touches: 0\" text=\"Underlying taps: 0 Overlay touches: 0\" testid=\"results\""
+                  ]
+                },
+                "source": {
+                  "file": "tests/overlay.e2e.ts",
+                  "line": 14,
+                  "column": 49
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "summary": {
+      "discovered": 3,
+      "selected": 1,
+      "executed": 1,
+      "passed": 1,
+      "failed": 0,
+      "interrupted": 0,
+      "flaky": 0,
+      "skipped": 0
+    },
+    "limits": {
+      "maxAgentContextBytes": 16384,
+      "maxLedgerBytes": 8192,
+      "maxObservationBytes": 262144,
+      "maxEventsPerStep": 1000,
+      "maxModelTokensPerCall": 64000
+    },
+    "usage": {
+      "discoveredResults": 3,
+      "maxAgentContextBytes": 0,
+      "maxLedgerBytes": 0,
+      "maxObservationBytes": 0,
+      "artifactBytes": 1084363,
+      "downloads": 0,
+      "events": 4,
+      "modelTokens": 0,
+      "maxModelCallsInStep": 0,
+      "maxActionStepsInStep": 0
+    }
+  }
+}
