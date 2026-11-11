@@ -1,0 +1,917 @@
+{
+  "decoder": "Apple AVFoundation, first and final frames, zero requested time tolerances",
+  "videoCount": 70,
+  "allDecoded": true,
+  "results": [
+    {
+      "durationSeconds": 11.173333333333334,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/main-1000/results/overlay-uikit-fade-3000ms-diagnostic-2c6ed7a15ff5b2c6/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 11.031666666666666,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/main-1000/results/overlay-uikit-fade-750ms-96e13e53b3b43ced/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.635,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/main-1000/results/overlay-uikit-page-sheet-control-bf6cf67877c91427/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 12.971666666666666,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/main-2000/results/overlay-uikit-fade-750ms-21c667c38297dcd0/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 12.98,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/main-2000/results/overlay-uikit-fade-750ms-4b8a8a661670c5f1/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 12.97,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/main-2000/results/overlay-uikit-fade-750ms-96e13e53b3b43ced/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.2683333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/native-sheet-control/results/overlay-uikit-page-sheet-control-bf6cf67877c91427/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.413333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-framework/wait-diagnostic/results/wait-diagnostic-uikit-fade-750ms-with-diagnostic-167981f45982a233/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.3733333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/getAttrs-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.5733333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/nativeQuery-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.905,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/nativeSheet-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.42,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/none-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.35,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/none-2/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.3016666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/none-3/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.385,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settle1000-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.391666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settle1000-2/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.4383333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settle1000-3/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.6133333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settle150-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.558333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settle150-2/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.545,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settle150-3/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.7583333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settleDefault-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.705,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settleDefault-2/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.6466666666666665,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/baseline-sdk-existing/settleDefault-3/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.118333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/bindings/anonymous/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.181666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/bindings/duplicate-label-and-id/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 0.57,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/bindings/overlapping-ambiguous/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 1.9933333333333334,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/bridge-canonical/clipped/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.9783333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/bridge-canonical/moving-child/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 1.8883333333333334,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/bridge-controls/slider/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 1.92,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/bridge-controls/switch/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.445,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/native-canonical/clipped/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.721666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/native-canonical/moving-child/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.1433333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/native-controls/slider/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.14,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/native-controls/switch/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.185,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/original/fade3000/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.941666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/original/fade750-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.9133333333333336,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/original/fade750-2/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.953333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/original/fade750-3/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.348333333333334,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/original/sheet/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 1.9866666666666666,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/final-sdk/original/unblocked/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 9.073333333333334,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-fixed-timeout-final-js-f536/results/timeout-observe-expired-pending-press-stays-a5e193c4fc694735/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 5.43,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-fixed-timeout-final-sdk/results/next-attempt-a-pending-native-press-reaches-83c651aee0c28daf/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.533333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-fixed-timeout-final-sdk/results/next-attempt-the-immediately-following-3d0350aeee42eee1/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 8.936666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-fixed-timeout-final-sdk/results/timeout-observe-expired-pending-press-stays-a5e193c4fc694735/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 8.55,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-main-final-sdk/results/overlay-uikit-fade-3000ms-diagnostic-ec85f5bff84fb714/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 5.99,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-main-final-sdk/results/overlay-uikit-fade-750ms-80d4a79d51bf9965/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.48,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-main-final-sdk/results/overlay-uikit-page-sheet-control-1f80526e2b69fd22/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 8.951666666666666,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/framework-main-timeout-final-sdk/results/timeout-short-action-timeout-during-ca5b231a9f10da20/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.61,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/bindings/anonymous/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.091666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/bindings/duplicate-label-and-id/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 0.5066666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/bindings/overlapping-ambiguous/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 8.328333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/framework/results/overlay-uikit-fade-3000ms-diagnostic-ec85f5bff84fb714/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 5.998333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/framework/results/overlay-uikit-fade-750ms-80d4a79d51bf9965/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.6466666666666665,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/framework/results/overlay-uikit-page-sheet-control-1f80526e2b69fd22/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 8.74,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/framework-timeout/results/timeout-short-action-timeout-during-ca5b231a9f10da20/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 6.198333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/sdk/fade3000/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.848333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/sdk/fade750-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.8333333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/sdk/fade750-2/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.9783333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/sdk/fade750-3/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.97,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/sdk/sheet/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 1.9466666666666668,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-0a/sdk/unblocked/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 1.96,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-f417/canonical/clipped/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.003333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-f417/canonical/moving-child/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 1.945,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/provisional-f417/canonical/promoted-cell/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.908333333333333,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/sdk-final-js-f536/fade750-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.5233333333333334,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/sdk-source-base-5a/fade750-1/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.805,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/setup/framework-native-preparation/results/overlay-uikit-fade-3000ms-diagnostic-ec85f5bff84fb714/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.026666666666666,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/setup/framework-native-preparation/results/overlay-uikit-fade-750ms-80d4a79d51bf9965/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 3.7683333333333335,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/setup/framework-native-preparation/results/overlay-uikit-page-sheet-control-1f80526e2b69fd22/attempt-1/video/video.mp4",
+      "videoTracks": 1
+    },
+    {
+      "durationSeconds": 4.341666666666667,
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "path": "evidence/setup/native-optional-pid-copy/video.mp4",
+      "videoTracks": 1
+    }
+  ]
+}

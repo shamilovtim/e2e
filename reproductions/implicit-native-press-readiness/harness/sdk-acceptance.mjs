@@ -25,9 +25,10 @@ for(const [mode,openLabel,closeLabel] of process.env.ACCEPTANCE_CASE?modes.filte
   row.success=row.result?.includes('Underlying taps: 1')&&row.result?.includes('Overlay touches: 0');
  }catch(e){row.error={message:e.message,code:e.code,details:e.details};row.success=false;}finally{if(recording)try{await client.recording.record({action:'stop'});}catch(e){row.recordingError=e.message;}}
  const container=execFileSync('xcrun',['simctl','get_app_container',udid,'dev.e2e.overlay1563','data'],{encoding:'utf8'}).trim();
- if(pid)fs.copyFileSync(path.join(container,'Documents',`events-${pid}.json`),dir+'/native-events.json');
+ fs.copyFileSync(path.join(container,'Documents',pid?`events-${pid}.json`:'events.json'),dir+'/native-events.json');
  save(dir+'/result.json',row);summary.push(row);save(root+'/sdk-final-summary.json',summary);
  console.log(JSON.stringify({mode,success:row.success,result:row.result,closeMs:Math.round(row.closeMs??0),pressMs:Math.round(row.pressMs??0),error:row.error}));
  if(row.error)break;
 }
 }finally{await client.apps.close({platform:'ios',udid});}
+if(summary.length===0||summary.some(row=>row.success!==true))process.exitCode=1;

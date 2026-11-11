@@ -1,0 +1,6 @@
+{
+  "ownedTestSimulator": "Shut down and deleted after all native probes.",
+  "nativeDrivers": "Active owned source-base and final-driver daemons stopped cleanly; no warnings or orphaned claims reported.",
+  "sourceBaseWorkspace": "Disposable isolated source-base worktree removed by its owner after proof artifacts were preserved outside it.",
+  "privateResources": "No private application or user-owned device was targeted by these fixture probes."
+}

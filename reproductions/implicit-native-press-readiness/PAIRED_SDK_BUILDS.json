@@ -1,0 +1,40 @@
+{
+  "baseCommit": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "headCommit": "f5369cb30ff56787effea7819d742aba27feeb50",
+  "baseFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+  "headFingerprint": "46e30d36c1e88cb4e339d088da08a73cd36abcece7ed4acbc2bd8449e82475ca",
+  "sha256": {
+    "baseJs": "e037338cead2d3f2f4fbd1e5840bc6e12ddf55c2297d4a7f8046b9e5e9735fee",
+    "baseNative": "8a5ad70d772e4e430c711ca8bc1fffdfaf6395c45a5ac32c09ff5d29b582f779",
+    "headJs": "e037338cead2d3f2f4fbd1e5840bc6e12ddf55c2297d4a7f8046b9e5e9735fee",
+    "headNative": "32dac358598150b5a41614b34860528f6c70bd50d029eec3cc4fa4249202e1c9",
+    "harness": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "base:runtime-factory.js": "806257a997305f3bfaa6da00db88765df280b5400675ac267ccec67386a8ee29",
+    "head:runtime-factory.js": "ce4c720bc80a861018093b1de9988424e3d5b739446ccc35ed9aecac1fb16c57"
+  },
+  "results": {
+    "sourceBase5a": {
+      "exitCode": 1,
+      "oracle": "Underlying taps: 0 / Overlay touches: 1",
+      "eventOrder": [
+        "fadeDismissBegin",
+        "overlayReceivedTouch",
+        "fadeDismissComplete"
+      ]
+    },
+    "finalJsF536": {
+      "exitCode": 0,
+      "oracle": "Underlying taps: 1 / Overlay touches: 0",
+      "eventOrder": [
+        "fadeDismissBegin",
+        "fadeDismissComplete",
+        "underlyingReceivedTap"
+      ]
+    },
+    "companion31ceefWithF536": {
+      "exitCode": 0,
+      "testCount": 1,
+      "oracle": "After full3000ms fade: Underlying taps: 0 / Overlay touches: 0"
+    }
+  }
+}

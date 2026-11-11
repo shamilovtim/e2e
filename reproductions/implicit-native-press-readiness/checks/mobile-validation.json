@@ -1,0 +1,54 @@
+{
+  "base": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
+  "head": "31ceef35325ffbc14ef02cc1fd0893baf4e0b4c0",
+  "checkoutClean": true,
+  "checks": [
+    {
+      "command": "node node_modules/vitest/vitest.mjs run tests/unit",
+      "cwd": "packages/mobile",
+      "result": "passed",
+      "files": 21,
+      "tests": 522
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit",
+      "cwd": "packages/mobile",
+      "result": "passed"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --project tsconfig.build.json",
+      "cwd": "packages/mobile",
+      "result": "passed"
+    },
+    {
+      "command": "node scripts/stamp-dist.ts",
+      "result": "passed"
+    },
+    {
+      "command": "node node_modules/oxlint/bin/oxlint <changed TypeScript files>",
+      "result": "passed"
+    },
+    {
+      "commands": [
+        "node scripts/check-docs-examples.ts",
+        "node scripts/check-docs-package-managers.ts",
+        "node scripts/check-docs-anchors.ts",
+        "node scripts/check-docs-logos.ts",
+        "node scripts/check-docs-mdx.ts",
+        "node scripts/check-changeset-bumps.ts",
+        "node scripts/check-peer-ranges.ts"
+      ],
+      "result": "passed"
+    }
+  ],
+  "review": "Independent fresh review cleared final response-window cancellation design; no actionable findings remain.",
+  "nativeVerification": {
+    "sdkHead": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad",
+    "adapterBase": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
+    "adapterHead": "31ceef35325ffbc14ef02cc1fd0893baf4e0b4c0",
+    "baseResult": "500 ms timeout, then late native input; SDK request completed after 3071 ms",
+    "headResult": "3/3 cancellation checks passed; no late input after three-second transition; immediate following attempt receives exactly one own tap",
+    "scope": "Standalone generic UIKit fixture; original local app is not involved"
+  },
+  "privacy": "Source patch and report contain only upstream framework code and generic data; private app code, data, media and diagnostic archives are excluded."
+}

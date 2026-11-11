@@ -1,0 +1,47 @@
+{
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "head": "f757b60aa737fe6bfa4a925e6e919058b7313d0c",
+  "changedFiles": 55,
+  "grossChangedLines": 1904,
+  "fullGateStatus": "passed",
+  "passed": {
+    "relatedTests": 1320,
+    "unitTests": 17861,
+    "existingSkippedUnitTests": 1,
+    "checks": [
+      "format",
+      "lint",
+      "typecheck",
+      "layering",
+      "fallow",
+      "native-dupes",
+      "build",
+      "vitest-related",
+      "unit",
+      "command-docs",
+      "adr-citations",
+      "docs-links",
+      "docs-prose",
+      "xctest-selection",
+      "packaged-runner-swift"
+    ]
+  },
+  "nativeFullMatrixHead": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad",
+  "remaining": [],
+  "privacy": "Generic framework code and constructed-fixture data only; no production application code, identifiers, source paths, media, configuration, or diagnostic archives.",
+  "nativeSmokeHead": "f5369cb30ff56787effea7819d742aba27feeb50",
+  "nativeSmokeTreeIdenticalToHead": "cd5cc4df9c140ed69476637993b032b34e598c4a",
+  "pairedNativeComparison": {
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "baseExit": 1,
+    "baseUnderlying": 0,
+    "baseOverlay": 1,
+    "headExit": 0,
+    "headUnderlying": 1,
+    "headOverlay": 0
+  },
+  "exactCommit": true,
+  "checkoutChanged": false,
+  "exactGateReceipt": "checks/agent-device-exact-validation.json",
+  "ciOnlyChecks": "Explicitly skipped or parked checks remain listed in the exact public receipt; no local pass is claimed for them."
+}

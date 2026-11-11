@@ -1,25 +1,27 @@
 # Implicit native press readiness: constructed UIKit evidence
 
-Every source, screenshot, video and app event log here is from a constructed public UIKit fixture. No production application data, source, configuration, backend address, account, device inventory, daemon state, token, lease or diagnostic archive is included. System-app smoke checks remain local and are not part of this bundle.
+All application source, screenshots, videos and app event logs here are from constructed public UIKit fixtures. The patches contain generic upstream framework code. No production application data, source, configuration, backend address, account, device inventory, daemon state, token, lease or diagnostic archive is included. System-app smoke checks remain local and are not part of this bundle.
 
 The SDK fix checks the existing native hittability predicate before ordinary ref-based presses. Tests keep their existing tap calls. The separate framework fix forwards cancellation for pending presses. It does not add a public wait API.
 
-Exact versions, source fingerprints and fixture hashes are in `VERSIONS_AND_RESULTS.json`. The original fixture source is unchanged. Superseded 0a and f417 proofs have their own directories and are not final-head evidence.
+Exact versions, source fingerprints and fixture hashes are in `VERSIONS_AND_RESULTS.json`. Live smoke commit `f5369cb` and final commit `f757b60` have the same Git tree, `cd5cc4df9c140ed69476637993b032b34e598c4a`. The original fixture source is unchanged. Superseded 0a and f417 proofs have their own directories and are not final-head evidence.
 
 ## Outcomes
 
 | Case | Base | Final candidate |
 |---|---|---|
-|750 ms custom UIKit fade, ordinary SDK ref presses | Published SDK 0.21.36 sends the touch to the fading overlay; isolated source 5a proof pending | Final SDK f2bc18d passes 3/3; native completion precedes underlying tap |
-|Deliberate3000 ms fade | Published SDK sends input before completion | Final SDK passes |
-|UIKit pageSheet / unblocked control | Passing controls | Both pass |
-|Native clipping, anonymous / duplicate bindings, moving interactive child | Safety checks exercised | Final ready controls pass; ambiguous identical controls are refused unsent; moved child receives no input |
-|Main framework d8 with final SDK f2bc18d,500 ms action timeout | Step fails at500 ms but SDK request runs3071 ms and later activates the control | Framework 31ceef3 with the same SDK cancels pending input; after full fade counters remain 0/0 |
+|750 ms custom UIKit fade, ordinary SDK ref presses | Actual source `5a836c0` exits 1, underlying 0 / overlay 1 | Final tree smoke `f5369cb` exits 0, underlying 1 / overlay 0, with the exact same exit-aware script |
+|Deliberate 3000 ms fade | Published SDK baseline sends input before completion | Earlier `f2bc18d` broad fixture matrix passes |
+|UIKit pageSheet / unblocked control | Passing controls | Both pass in the `f2bc18d` broad matrix |
+|Native clipping, anonymous / duplicate bindings, moving interactive child | Safety checks exercised | `f2bc18d` ready controls pass; ambiguous identical controls are refused unsent; moved child receives no input |
+|Main framework d8 with final SDK f2bc18d, 500 ms action timeout | Step fails at 500 ms but SDK request runs 3071 ms and later activates the control | Framework `31ceef3` with the same SDK cancels pending input; after full fade counters remain 0/0. Repeated with final tree `f5369cb`: passes, zero native input |
 |Immediately following attempt | Covered by paired recovery probe | Receives exactly one input of its own |
+
+`evidence/sdk-source-base-5a` and `evidence/sdk-final-js-f536` contain the exact source-base/final smoke pair. Harness SHA-256 is `d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599`; failed or empty oracles exit 1 after cleanup. `evidence/framework-fixed-timeout-final-js-f536` contains the final cancellation smoke. Earlier broad native coverage remains explicitly attributed to `f2bc18d`.
 
 `evidence/framework-main-timeout-final-sdk` is the decisive framework failure video and trace. `evidence/framework-fixed-timeout-final-sdk` contains the matching fixed cases. `evidence/final-sdk/original` contains ordinary successful SDK sequences. Each video remains beside its native event log or framework trace where available.
 
-The default simulator AX bridge and the existing alternate native producer were verified from actual diagnostics. `customActions:true` was used only to exercise the existing alternate capture route; it is not required by the fix. Native capture can finish after a750 ms fade, so its moving-child case is ready-control coverage. The bridge case proves a child moving into the original point while the parent is blocked, then receiving no input after the SDK chooses a freshly guarded point.
+The default simulator AX bridge and the existing alternate native producer were verified from actual diagnostics. `customActions:true` was used only to exercise the existing alternate capture route; it is not required by the fix. Native capture can finish after a 750 ms fade, so its moving-child case is ready-control coverage. The bridge case proves a child moving into the original point while the parent is blocked, then receiving no input after the SDK chooses a freshly guarded point.
 
 ## Reproduce the SDK comparison
 
@@ -51,4 +53,4 @@ The framework tests use the built main CLI and an isolated mobile package copy w
 
 The predicate establishes necessary native readiness. It does not certify every point against partial custom occlusion. Existing canonical target, geometry and point guards still apply. No Android behavior claim is made.
 
-`PUBLIC_FILES.json` lists the staged whitelist, hashes and sizes. `PUBLIC_AUDIT.json` records the privacy audit. Decode receipts will be added after the broad gate's CPU work is idle.
+`PUBLIC_FILES.json` lists the staged whitelist, hashes and sizes. `PUBLIC_AUDIT.json` records the privacy audit. All 70 staged videos decode at their first and final frames with zero requested time tolerances; see `VIDEO_DECODE_VALIDATION.json`. The exact-head local gate passed all runnable checks at `f757b60`: 17,861 unit tests and 1,320 related tests passed. `checks/agent-device-exact-validation.json` preserves the explicitly skipped or parked CI-only checks.

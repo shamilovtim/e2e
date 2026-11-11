@@ -1,22 +1,38 @@
 {
-  "status": "PASS for staged constructed-fixture whitelist; final isolated-source-base and gate receipts pending.",
-  "scope": "Text/source/configuration and artifact provenance audit. Only constructed UIKit fixture media is staged.",
+  "status": "PASS: final publication snapshot. Exact-head local gate passed all runnable checks; CI-only skips remain explicit in the curated receipt.",
+  "scope": "Constructed UIKit application source/media and generic upstream framework patches only.",
+  "textFilesScanned": 191,
+  "privateDataFindings": [],
+  "unexpectedFiles": [],
   "excluded": [
-    "Production-app code, names, bundle identifiers, addresses, configuration, screenshots and README files",
-    "System-app smoke media and snapshots",
-    "Daemon state, tokens, leases and environment files",
-    "Whole xcresults, exported diagnostics and global simulator/device inventory",
-    "Private source paths and local dependency trees"
+    "Private application names/data/source/configuration/backend addresses/accounts",
+    "System-app smoke media/snapshots",
+    "Environment values/files, daemon state, tokens and leases",
+    "Whole xcresults, raw diagnostics and global simulator/device inventories",
+    "Private project source paths and dependency trees"
   ],
-  "textFindings": [],
-  "unexpectedStateFiles": [],
-  "mediaProvenance": "All staged video paths are copied from explicitly named constructed-fixture evidence directories; no general screenshot/media directory was scanned or copied.",
-  "mediaDecode": "Existing old receipts are local; full staged decode receipt will be added after broad gate CPU work is idle.",
-  "counts": {
-    "filesBeforeAuditAndManifest": 268,
-    "videos": 67,
-    "bytesBeforeAuditAndManifest": 51500184
+  "mediaProvenance": "Explicit constructed-fixture evidence whitelist only; no general media directory copied.",
+  "videoDecode": {
+    "passed": 70,
+    "total": 70,
+    "receipt": "VIDEO_DECODE_VALIDATION.json",
+    "method": "Apple AVFoundation first/final frames with zero requested time tolerances"
   },
-  "environmentNote": "Portable harnesses name explicit build/device input variables. No environment values, dumps or files are included.",
-  "unexpectedEnvironmentFiles": []
+  "sourcePatches": {
+    "count": 2,
+    "receipt": "checks/source-patch-audit.json",
+    "hashesRechecked": true,
+    "baseApplicationChecks": "Both patches applied cleanly to their exact source bases, as recorded by root."
+  },
+  "pairedHarnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+  "attribution": "Broad f2 proofs, provisional0a/f417 proofs, actual source5a baseline, and f536 smoke/f757 identical tree are explicitly separate.",
+  "exactGate": {
+    "commit": "f757b60aa737fe6bfa4a925e6e919058b7313d0c",
+    "status": "passed",
+    "exactCommit": true,
+    "checkoutChanged": false,
+    "receipt": "checks/agent-device-exact-validation.json"
+  },
+  "mediaUnchangedSinceDecode": true,
+  "receiptScope": "Only the curated public gate receipt is included; raw local audit patterns/receipts and diagnostics remain excluded."
 }

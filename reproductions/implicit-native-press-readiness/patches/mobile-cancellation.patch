@@ -1,0 +1,465 @@
+diff --git a/.changeset/mobile-cancel-pending-press.md b/.changeset/mobile-cancel-pending-press.md
+new file mode 100644
+index 0000000..35c3c30
+--- /dev/null
++++ b/.changeset/mobile-cancel-pending-press.md
+@@ -0,0 +1,5 @@
++---
++"@e2e-dev/mobile": patch
++---
++
++Cancel pending agent-device press requests when their caller is interrupted or the adapter stops waiting for a response. This stops native readiness polling after a failed step while preserving the existing minimum 250 ms acknowledgement allowance and possibly-committed timeout behavior.
+diff --git a/docs/mobile.mdx b/docs/mobile.mdx
+index a3085a5..f869fa5 100644
+--- a/docs/mobile.mdx
++++ b/docs/mobile.mdx
+@@ -769,7 +769,10 @@ message and hint, never `LAUNCH_TIMEOUT`, `ACTION_FAILED`, or
+ **An action that outlives its timeout.** A tap, fill, key, swipe, or
+ `back` gets its `timeout` (default `actionTimeout`). If the device doesn't
+ answer in time, the step fails with `ACTION_FAILED` and isn't retried: the
+-input may have landed. A `longPress` that holds at least as long as the
++input may have landed. Press requests are cancelled when the adapter stops
++waiting, including its minimum 250 ms acknowledgement allowance, or on interruption.
++This stops native readiness polling for an input that has not dispatched.
++A `longPress` that holds at least as long as the
+ time left is refused before it's sent; raise its `timeout`. Snapshots and
+ screenshots run within the timeout of the call that takes them, so a device
+ that stops answering fails the step with `ACTION_FAILED` instead of holding
+diff --git a/packages/mobile/src/actions.ts b/packages/mobile/src/actions.ts
+index a585e65..92ccdcf 100644
+--- a/packages/mobile/src/actions.ts
++++ b/packages/mobile/src/actions.ts
+@@ -63,13 +63,14 @@ export function pointerInteraction(
+   action: PointerAction,
+   settle: Record<string, unknown>,
+   stabilization: Record<string, unknown>,
++  signal: AbortSignal,
+ ): Promise<unknown> {
+   const at = { x: point.x, y: point.y };
+   switch (action.kind) {
+     case 'tap':
+-      return client.interactions.press({ ...at, ...settle });
++      return client.interactions.press({ ...at, ...settle, signal });
+     case 'doubleTap':
+-      return client.interactions.press({ ...at, count: 2, ...settle });
++      return client.interactions.press({ ...at, count: 2, ...settle, signal });
+     case 'longPress':
+       return client.interactions.longPress({ ...at, ...settle, durationMs: action.durationMs ?? DEFAULT_LONG_PRESS_MS });
+     case 'swipeTo': {
+diff --git a/packages/mobile/src/support.ts b/packages/mobile/src/support.ts
+index 19f75da..51726bf 100644
+--- a/packages/mobile/src/support.ts
++++ b/packages/mobile/src/support.ts
+@@ -1,6 +1,6 @@
+ /** Shared helpers for the agent-device engine: error constructors, filenames, PNG headers, gestures, the screen location and size. */
+ 
+-import type { CaptureScreenshotResult } from 'agent-device';
++import { isAgentDeviceError, type CaptureScreenshotResult } from 'agent-device';
+ import { EngineError, withTimeout, type Momentum, type ScrollDirection, type ViewportSize } from 'e2e/engine';
+ 
+ export interface Point {
+@@ -54,8 +54,10 @@ export class InputBudget {
+    * at least as long as the budget left could only be cut off mid-gesture, so
+    * it is refused unsent. An input that does not answer in time may have
+    * landed, so it is `ACTION_MAY_HAVE_COMMITTED` and the runner never repeats it.
++   * Press requests receive caller cancellation and are cancelled when this
++   * wait expires, including its existing acknowledgement allowance.
+    */
+-  send<T>(dispatch: () => Promise<T>, holdMs = 0): Promise<T> {
++  send<T>(dispatch: (signal: AbortSignal) => Promise<T>, holdMs = 0, signal?: AbortSignal): Promise<T> {
+     const remaining = this.remainingMs();
+     if (remaining <= 0) return Promise.reject(this.spent());
+     if (holdMs >= remaining) {
+@@ -67,9 +69,21 @@ export class InputBudget {
+         ),
+       );
+     }
+-    const pending = this.track(dispatch());
++    if (signal?.aborted) return Promise.reject(cancelled(`${this.label} cancelled before it was sent`));
++    const answerMs = Math.max(remaining, MIN_ANSWER_MS);
++    const deadline = new AbortController();
++    const requestSignal = signal === undefined ? deadline.signal : AbortSignal.any([signal, deadline.signal]);
++    const pending = this.track(dispatch(requestSignal));
+     this.sent = true;
+-    return withTimeout(pending, Math.max(remaining, MIN_ANSWER_MS), () => this.maybeCommitted());
++    return withTimeout(pending, answerMs, () => {
++      deadline.abort();
++      return this.maybeCommitted();
++    }).catch((cause: unknown) => {
++      if (deadline.signal.aborted && signal?.aborted !== true && isAgentDeviceError(cause) && cause.details?.reason === 'request_canceled') {
++        throw this.maybeCommitted();
++      }
++      throw cause;
++    });
+   }
+ 
+   /**
+diff --git a/packages/mobile/src/surface.ts b/packages/mobile/src/surface.ts
+index d749021..1d178dc 100644
+--- a/packages/mobile/src/surface.ts
++++ b/packages/mobile/src/surface.ts
+@@ -1456,16 +1456,16 @@ export class AgentDeviceSurface {
+       }
+       switch (action.kind) {
+         case 'tap':
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target, true), ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target, true), ...settle, signal }), 0, operation.signal);
+         case 'focus':
+           // A touch surface focuses by tapping, and a tap on anything but an
+           // editable field activates it; focus is offered for fields only.
+           if (target.node.role !== 'textbox') {
+             throw unsupported(`agent-device can only focus editable fields; node ${target.id} is ${target.node.role ?? 'unknown'}`);
+           }
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target), ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target), ...settle, signal }), 0, operation.signal);
+         case 'doubleTap':
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target), count: 2, ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target), count: 2, ...settle, signal }), 0, operation.signal);
+         case 'longPress':
+           return input.send(
+             () => client.interactions.longPress({ ...this.actionTarget(target), ...settle, durationMs: action.durationMs ?? DEFAULT_LONG_PRESS_MS }),
+@@ -1490,10 +1490,10 @@ export class AgentDeviceSurface {
+             throw unsupported(`agent-device cannot read whether node ${target.id} is checked; tap it instead`);
+           }
+           if (checked === wanted) return undefined;
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target, true), ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target, true), ...settle, signal }), 0, operation.signal);
+         }
+         case 'press':
+-          return this.pressKey(client, target, action.key, settle, input);
++          return this.pressKey(client, target, action.key, settle, input, operation.signal);
+         case 'swipe': {
+           const rect = target.node.rect;
+           if (rect === undefined) throw notActionable(`node ${target.id} has no bounds to swipe within`);
+@@ -1536,7 +1536,7 @@ export class AgentDeviceSurface {
+    * modifiers and the other named keys (`Escape`, `Tab`, `Backspace`, the
+    * arrows) have nothing to land on and are refused.
+    */
+-  private async pressKey(client: AgentDeviceClient, entry: NodeBinding, key: string, settle: SettleOptions, input: InputBudget): Promise<unknown> {
++  private async pressKey(client: AgentDeviceClient, entry: NodeBinding, key: string, settle: SettleOptions, input: InputBudget, signal: AbortSignal): Promise<unknown> {
+     const parsed = parseKey(key);
+     if (parsed === undefined) {
+       throw unsupported(
+@@ -1553,7 +1553,7 @@ export class AgentDeviceSurface {
+     // A key reaches the field through the soft keyboard, which is up only
+     // while the field holds focus.
+     if (entry.node.role === 'textbox' && entry.node.states?.focused !== true) {
+-      await input.send(() => client.interactions.press({ ...this.actionTarget(entry), ...settle }));
++      await input.send((requestSignal) => client.interactions.press({ ...this.actionTarget(entry), ...settle, signal: requestSignal }), 0, signal);
+     }
+     if (enter) return input.send(() => client.command.keyboard({ action: 'enter' }));
+     return input.send(() => client.interactions.type({ text: parsed.key.kind === 'char' ? parsed.key.char : ' ' }));
+@@ -1568,7 +1568,7 @@ export class AgentDeviceSurface {
+     const settle = operation.origin === 'test' ? {} : this.settleOptions;
+     const before = this.latestScreen;
+     const holdMs = action.kind === 'longPress' ? (action.durationMs ?? DEFAULT_LONG_PRESS_MS) : action.kind === 'swipeTo' ? action.durationMs : undefined;
+-    await this.command(`${action.kind} at point`, (client) => input.send(() => pointerInteraction(client, point, action, settle, gestureStabilization(operation)), holdMs), operation.signal);
++    await this.command(`${action.kind} at point`, (client) => input.send((signal) => pointerInteraction(client, point, action, settle, gestureStabilization(operation), signal), holdMs, operation.signal), operation.signal);
+     if (action.kind === 'swipeTo') this.noteGesture(operation);
+     this.markAction(before);
+   }
+@@ -1697,7 +1697,7 @@ export class AgentDeviceSurface {
+     const tipTop = tip.rect.y;
+     const button = nodes.find((node) => node.label === 'Continue' && node.rect !== undefined && node.rect.y > tipTop);
+     if (button?.rect === undefined) return raw;
+-    await this.command('keyboard.dismiss', (client) => input.send(() => client.interactions.press(centreOf(button.rect!))), signal);
++    await this.command('keyboard.dismiss', (client) => input.send((requestSignal) => client.interactions.press({ ...centreOf(button.rect!), signal: requestSignal }), 0, signal), signal);
+     return await this.snapshot(signal, false, input);
+   }
+ 
+diff --git a/packages/mobile/tests/unit/engine.test.ts b/packages/mobile/tests/unit/engine.test.ts
+index edcf91a..c080ff3 100644
+--- a/packages/mobile/tests/unit/engine.test.ts
++++ b/packages/mobile/tests/unit/engine.test.ts
+@@ -490,13 +490,13 @@ describe('lifecycle', () => {
+     await openAttempt(slow);
+     const node = await observed(slow, 'About');
+     await slow.engine.perform!(node.ref, { kind: 'tap' }, operation());
+-    expect(slow.fake.lastArgs('interactions.press')).toEqual({ ref: '@e4', settle: true, settleQuietMs: 600 });
++    expect(slow.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e4', settle: true, settleQuietMs: 600 });
+ 
+     const none = harness({ settle: false });
+     await openAttempt(none);
+     const target = await observed(none, 'About');
+     await none.engine.perform!(target.ref, { kind: 'tap' }, operation());
+-    expect(none.fake.lastArgs('interactions.press')).toEqual({ ref: '@e4' });
++    expect(none.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e4' });
+     await none.engine.session!.back!(operation());
+     expect(none.fake.lastArgs('command.back')).toEqual({});
+     const screen = await screenRootOf(none);
+@@ -1175,8 +1175,8 @@ describe('location', () => {
+     await h.engine.perform!(back!.ref, { kind: 'tap' }, operation());
+     await h.engine.perform!(about.ref, { kind: 'tap' }, operation());
+     expect(h.fake.calls.filter((call) => call.method === 'interactions.press').map((call) => call.args)).toEqual([
+-      { ref: '@e3', settle: true, settleQuietMs: 150 },
+-      { ref: '@e4', settle: true, settleQuietMs: 150 },
++      { signal: expect.any(AbortSignal), ref: '@e3', settle: true, settleQuietMs: 150 },
++      { signal: expect.any(AbortSignal), ref: '@e4', settle: true, settleQuietMs: 150 },
+     ]);
+   });
+ 
+@@ -1317,25 +1317,25 @@ describe('perform', () => {
+     await h.engine.perform!(root.ref, { kind: 'swipe', direction: 'up', momentum: 'fast' }, op);
+     await h.engine.perform!(about!.ref, { kind: 'dragTo', target: back!.ref }, op);
+     expect(h.fake.calls.slice(before).map((call) => [call.method, call.args])).toEqual([
+-      ['interactions.press', { ref: '@e4', settle: true, settleQuietMs: 150 }],
+-      ['interactions.press', { ref: '@e4', count: 2, settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e4', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e4', count: 2, settle: true, settleQuietMs: 150 }],
+       ['interactions.longPress', { ref: '@e4', settle: true, settleQuietMs: 150, durationMs: 900 }],
+       // No duration named: the engine's one-second hold, past a Pressable's delayLongPress.
+       ['interactions.longPress', { ref: '@e4', settle: true, settleQuietMs: 150, durationMs: 1000 }],
+-      ['interactions.press', { ref: '@e7', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e7', settle: true, settleQuietMs: 150 }],
+       ['interactions.hover', { ref: '@e4' }],
+       ['capture.snapshot', { interactiveOnly: false }],
+       ['interactions.fill', { ref: '@e7', text: 'blue', settle: true, settleQuietMs: 150 }],
+       ['capture.snapshot', { interactiveOnly: false }],
+       ['interactions.fill', { ref: '@e7', text: '', settle: true, settleQuietMs: 150 }],
+-      ['interactions.press', { ref: '@e6', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e6', settle: true, settleQuietMs: 150 }],
+       // Enter reaches the field through the soft keyboard, so the unfocused field is tapped first.
+-      ['interactions.press', { ref: '@e7', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e7', settle: true, settleQuietMs: 150 }],
+       ['command.keyboard', { action: 'enter' }],
+-      ['interactions.press', { ref: '@e7', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e7', settle: true, settleQuietMs: 150 }],
+       ['interactions.type', { text: 'a' }],
+       // Space is typed like a character, the unfocused field tapped first.
+-      ['interactions.press', { ref: '@e7', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e7', settle: true, settleQuietMs: 150 }],
+       ['interactions.type', { text: ' ' }],
+       ['interactions.swipe', { from: { x: 195, y: 620 }, to: { x: 195, y: 420 } }],
+       // The root swipe is the viewport swipe: agent-device's whole-screen scroll at its default amount, settled like a tap.
+@@ -1384,10 +1384,10 @@ describe('perform', () => {
+     );
+     await h.engine.perform!(located!.ref, { kind: 'uncheck' }, operation());
+     expect(h.fake.calls.slice(before).filter((call) => call.method === 'interactions.press').map((call) => call.args)).toEqual([
+-      { ref: '@e4', settle: true, settleQuietMs: 150 },
+-      { ref: '@e4', settle: true, settleQuietMs: 150 },
+-      { ref: '@e5', settle: true, settleQuietMs: 150 },
+-      { ref: '@e4', settle: true, settleQuietMs: 150 },
++      { signal: expect.any(AbortSignal), ref: '@e4', settle: true, settleQuietMs: 150 },
++      { signal: expect.any(AbortSignal), ref: '@e4', settle: true, settleQuietMs: 150 },
++      { signal: expect.any(AbortSignal), ref: '@e5', settle: true, settleQuietMs: 150 },
++      { signal: expect.any(AbortSignal), ref: '@e4', settle: true, settleQuietMs: 150 },
+     ]);
+   });
+ 
+@@ -1920,7 +1920,7 @@ describe('device fixture', () => {
+       const before = h.fake.calls.length;
+       await device.dismissKeyboard();
+       expect(h.fake.methods().slice(before)).toEqual(['command.keyboard', 'capture.snapshot', 'interactions.press', 'capture.snapshot']);
+-      expect(h.fake.lastArgs('interactions.press')).toEqual({ x: 195, y: 722 });
++      expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), x: 195, y: 722 });
+     });
+ 
+     it('leaves any other refusal to the caller', async () => {
+@@ -1982,7 +1982,7 @@ describe('device fixture', () => {
+       const submit = await observed(h, 'Submit');
+       await h.engine.perform!(submit.ref, { kind: 'tap' }, { ...operation(), origin: 'test' });
+       expect(Date.now() - startedAt).toBeGreaterThanOrEqual(100);
+-      expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e11' });
++      expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e11' });
+     }
+     // A read leaves the budget alone: the clipboard changes no screen.
+     await device.clipboard();
+@@ -2531,8 +2531,8 @@ describe('snapshot generations', () => {
+     await h.engine.perform!(toggle!.ref, { kind: 'check' }, op);
+     await h.engine.perform!(about!.ref, { kind: 'dragTo', target: back!.ref }, op);
+     expect(h.fake.calls.slice(before).map((call) => [call.method, call.args])).toEqual([
+-      ['interactions.press', { ref: '@e4~s7', settle: true, settleQuietMs: 150 }],
+-      ['interactions.press', { ref: '@e6~s7', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e4~s7', settle: true, settleQuietMs: 150 }],
++      ['interactions.press', { signal: expect.any(AbortSignal), ref: '@e6~s7', settle: true, settleQuietMs: 150 }],
+       ['interactions.drag', { source: '@e4~s7', destination: '@e3~s7' }],
+     ]);
+   });
+@@ -2566,7 +2566,7 @@ describe('snapshot generations', () => {
+     const step: OperationContext = { ...operation(), origin: 'test' };
+     const about = await observed(h, 'About');
+     await h.engine.perform!(about.ref, { kind: 'tap' }, step);
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e4~s8' });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e4~s8' });
+   });
+ 
+   it('drags from a source found again after a transition to a target located before it', async () => {
+@@ -3214,13 +3214,13 @@ describe('deterministic actions', () => {
+    * transition budget. An upper bound on wall-clock time says the same only
+    * on an idle machine.
+    */
+-  async function tapsAtOnce(h: Harness, node: SemanticNode, expected: unknown): Promise<void> {
++  async function tapsAtOnce(h: Harness, node: SemanticNode, expected: Record<string, unknown>): Promise<void> {
+     vi.setTimerTickMode('manual');
+     try {
+       const pending = h.engine.perform!(node.ref, { kind: 'tap' }, test());
+       await new Promise<void>((resolve) => setImmediate(resolve));
+       expect(vi.getTimerCount()).toBe(0);
+-      expect(h.fake.lastArgs('interactions.press')).toEqual(expected);
++      expect(h.fake.lastArgs('interactions.press')).toEqual({ ...expected, signal: expect.any(AbortSignal) });
+       await pending;
+     } finally {
+       vi.setTimerTickMode('nextTimerAsync');
+@@ -3255,7 +3255,7 @@ describe('deterministic actions', () => {
+     const submit = await observed(h, 'Submit');
+     await h.engine.perform!(submit.ref, { kind: 'tap' }, test());
+     expect(Date.now() - startedAt).toBeGreaterThanOrEqual(100);
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e11' });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e11' });
+   });
+ 
+   it('acts on a control that came with the last action where a fresh snapshot lists it once the budget has passed', async () => {
+@@ -3276,7 +3276,7 @@ describe('deterministic actions', () => {
+     const inFlight = await observed(h, 'Submit');
+     h.fake.respond('capture.snapshot', () => submit(600, '@e42'));
+     await h.engine.perform!(inFlight.ref, { kind: 'tap' }, test());
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e42' });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e42' });
+ 
+     // A missing control must be resolved again before any input is dispatched.
+     h.fake.respond('capture.snapshot', () => SETTINGS_SNAPSHOT);
+@@ -3313,7 +3313,7 @@ describe('deterministic actions', () => {
+     expect(h.fake.methods().filter((method) => method === 'interactions.press')).toHaveLength(presses);
+ 
+     await h.engine.perform!((await observed(h, 'Chat')).ref, { kind: 'tap' }, test());
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e12' });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e12' });
+   });
+ 
+   it.each(
+@@ -3342,7 +3342,7 @@ describe('deterministic actions', () => {
+         ? { ...node, ref: '@e42', rect: { x: 0, y: 200, width: 390, height: 44 } } : node),
+     }));
+     await h.engine.perform!(stale.ref, { kind: 'tap' }, test());
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e42' });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e42' });
+   });
+ 
+   it.each(['Enter', 'focused Enter', 'dismiss'] as const)('reobserves after %s hides the keyboard before the control moves', async action => {
+@@ -3362,7 +3362,7 @@ describe('deterministic actions', () => {
+         ? { ...node, ref: '@e42', rect: { x: 0, y: 200, width: 390, height: 44 } } : node),
+     }));
+     await h.engine.perform!(stale.ref, { kind: 'tap' }, test());
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e42' });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e42' });
+   });
+ 
+   it.each(['type', 'fill', 'clear'] as const)('keeps unchanged controls immediate after %s when keyboard state is unchanged', async action => {
+@@ -3394,7 +3394,7 @@ describe('deterministic actions', () => {
+       nodes: [...SETTINGS_NODES, add('@e20', 200), { ...add('@e21', 610), index: 11 }],
+     }));
+     await h.engine.perform!(arriving.ref, { kind: 'tap' }, test());
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e21' });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e21' });
+   });
+ 
+   it('gives a control that moved with the last action the budget too, and skips it once the budget has elapsed', async () => {
+@@ -3425,9 +3425,9 @@ describe('deterministic actions', () => {
+     await h.engine.session!.back!(test());
+     expect(h.fake.lastArgs('command.back')).toEqual({});
+     await h.engine.performAt!({ x: 10, y: 20 }, { kind: 'tap' }, test());
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ x: 10, y: 20 });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), x: 10, y: 20 });
+     await h.engine.performAt!({ x: 10, y: 20 }, { kind: 'doubleTap' }, test());
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ x: 10, y: 20, count: 2 });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), x: 10, y: 20, count: 2 });
+     await h.engine.performAt!({ x: 10, y: 20 }, { kind: 'longPress', durationMs: 700 }, test());
+     expect(h.fake.lastArgs('interactions.longPress')).toEqual({ x: 10, y: 20, durationMs: 700 });
+     await h.engine.performAt!({ x: 10, y: 20 }, { kind: 'longPress' }, test());
+@@ -3440,7 +3440,7 @@ describe('deterministic actions', () => {
+ 
+     const about = await observed(h, 'About');
+     await h.engine.perform!(about.ref, { kind: 'tap' }, { ...operation(), origin: 'agent' });
+-    expect(h.fake.lastArgs('interactions.press')).toEqual({ ref: '@e4', settle: true, settleQuietMs: 150 });
++    expect(h.fake.lastArgs('interactions.press')).toEqual({ signal: expect.any(AbortSignal), ref: '@e4', settle: true, settleQuietMs: 150 });
+   });
+ 
+   it('skips the post-gesture stabilization wait for a test swipe and scroll, and keeps it for the agent', async () => {
+diff --git a/packages/mobile/tests/unit/input-cancellation.test.ts b/packages/mobile/tests/unit/input-cancellation.test.ts
+new file mode 100644
+index 0000000..5d2b8c9
+--- /dev/null
++++ b/packages/mobile/tests/unit/input-cancellation.test.ts
+@@ -0,0 +1,82 @@
++import { mkdtempSync, rmSync } from 'node:fs';
++import { tmpdir } from 'node:os';
++import path from 'node:path';
++import { createAgentDeviceClient } from 'agent-device';
++import { expect, it } from 'vitest';
++import type { OperationContext } from 'e2e/engine';
++import { buildEngine } from '../../src/engine.ts';
++import { AgentDeviceSurface } from '../../src/surface.ts';
++import { InputBudget } from '../../src/support.ts';
++import { SETTINGS_SNAPSHOT } from '../helpers/fake-client.ts';
++import { boot } from '../helpers/harness.ts';
++
++it.each(['caller abort', 'input deadline'] as const)('cancels a press waiting for readiness at the SDK boundary after %s', async (reason) => {
++  const stateDir = mkdtempSync(path.join(tmpdir(), 'e2e-input-cancel-'));
++  let releaseReady!: () => void;
++  let markStarted!: () => void;
++  let markFinished!: () => void;
++  const ready = new Promise<void>((resolve) => { releaseReady = resolve; });
++  const started = new Promise<void>((resolve) => { markStarted = resolve; });
++  const finished = new Promise<void>((resolve) => { markFinished = resolve; });
++  const controller = new AbortController();
++  let delivered = 0;
++  const client = createAgentDeviceClient({ session: 'input-cancel', stateDir }, {
++    transport: async (request, context) => {
++      if (request.command === 'snapshot') return { ok: true, data: SETTINGS_SNAPSHOT };
++      if (request.command === 'open') return { ok: true, data: { appName: 'Settings', appBundleId: 'com.apple.Preferences' } };
++      if (request.command === 'press') {
++        markStarted();
++        await ready;
++        if (context?.signal?.aborted !== true) delivered += 1;
++        markFinished();
++      }
++      return { ok: true, data: {} };
++    },
++  });
++  const engine = buildEngine(new AgentDeviceSurface({ platform: 'ios', transition: 0, settle: false }, () => client));
++  const operation: OperationContext = { signal: controller.signal, timeoutMs: reason === 'input deadline' ? 100 : 30000, runId: 'run', attemptId: 'a1', origin: 'test' };
++  try {
++    await boot({ engine, app: { bundleId: 'Settings' } });
++    await engine.session!.restart!(operation);
++    const [target] = await engine.locate!({ kind: 'query', query: { kind: 'testId', value: { kind: 'string', value: 'ABOUT', exact: true } } }, operation);
++    expect(target).toBeDefined();
++    const pressing = engine.perform!(target!.ref, { kind: 'tap' }, operation);
++    const rejected = expect(pressing).rejects.toMatchObject({ code: reason === 'caller abort' ? 'CANCELLED' : 'ACTION_MAY_HAVE_COMMITTED' });
++    await started;
++    if (reason === 'caller abort') controller.abort();
++    await rejected;
++    // The external control becomes ready after the operation has already ended.
++    releaseReady();
++    await finished;
++    expect(delivered).toBe(0);
++  } finally {
++    releaseReady();
++    await engine.dispose!({ signal: new AbortController().signal, timeoutMs: 1000 });
++    rmSync(stateDir, { recursive: true, force: true });
++  }
++});
++
++it.each(['press', 'type'] as const)('preserves the acknowledgement allowance for %s at the SDK boundary', async (command) => {
++  const stateDir = mkdtempSync(path.join(tmpdir(), 'e2e-input-ack-'));
++  let delivered = 0;
++  const client = createAgentDeviceClient({ session: 'input-ack', stateDir }, {
++    transport: async (request) => {
++      delivered += 1;
++      await new Promise((resolve) => setTimeout(resolve, 180));
++      return request.command === 'type'
++        ? { ok: false, error: { code: 'UNSUPPORTED_OPERATION', message: 'Typing is unavailable' } }
++        : { ok: true, data: {} };
++    },
++  });
++  const budget = new InputBudget(command, 100, (pending) => pending);
++  try {
++    if (command === 'press') {
++      await expect(budget.send((signal) => client.interactions.press({ x: 20, y: 20, signal }), 0, new AbortController().signal)).resolves.toBeDefined();
++    } else {
++      await expect(budget.send(() => client.interactions.type({ text: 'hello' }))).rejects.toMatchObject({ code: 'UNSUPPORTED_OPERATION', message: 'Typing is unavailable' });
++    }
++    expect(delivered).toBe(1);
++  } finally {
++    rmSync(stateDir, { recursive: true, force: true });
++  }
++});

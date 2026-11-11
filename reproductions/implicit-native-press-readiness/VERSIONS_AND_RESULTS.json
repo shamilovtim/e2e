@@ -1,9 +1,13 @@
 {
-  "status": "Final functional proofs staged; isolated source-base proof and exact-head gate receipt will be added before publication.",
+  "status": "Exact-head local gate, native proofs and media decoding passed. CI-only skipped/parked checks remain explicit in the public exact-gate receipt.",
   "sdkFinal": {
-    "commit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad",
+    "commit": "f757b60aa737fe6bfa4a925e6e919058b7313d0c",
+    "liveSmokeCommit": "f5369cb30ff56787effea7819d742aba27feeb50",
+    "tree": "cd5cc4df9c140ed69476637993b032b34e598c4a",
+    "treeIdentityVerified": true,
     "sourceFingerprint": "46e30d36c1e88cb4e339d088da08a73cd36abcece7ed4acbc2bd8449e82475ca",
-    "packageVersion": "0.21.37-dev"
+    "packageVersion": "0.21.37-dev",
+    "note": "The final commit is a commit-message-only amend with exactly the live-tested Git tree."
   },
   "sdkPublishedBaseline": {
     "version": "0.21.36",
@@ -11,7 +15,8 @@
   },
   "sdkSourceBase": {
     "commit": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
-    "status": "Pending isolated same-command runtime proof"
+    "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+    "status": "Verified with same exit-aware script as final smoke; exit1, underlying0/overlay1."
   },
   "frameworkBase": {
     "commit": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
@@ -46,7 +51,8 @@
         "3000ms fade",
         "UIKit pageSheet",
         "unblocked action"
-      ]
+      ],
+      "sdkCommit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad"
     },
     "sdkBindings": {
       "passed": 3,
@@ -54,14 +60,17 @@
         "duplicate label and identifier, second ref",
         "anonymous button ref",
         "identical overlapping matches refused unsent"
-      ]
+      ],
+      "sdkCommit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad"
     },
     "frameworkMainOrdinary": {
-      "passed": 3
+      "passed": 3,
+      "sdkCommit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad"
     },
     "frameworkMainTimeout": {
       "failed": 1,
-      "classification": "Bug: 500ms step fails while request continues3071ms and later delivers input."
+      "classification": "Bug: 500ms step fails while request continues3071ms and later delivers input.",
+      "sdkCommit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad"
     },
     "frameworkFixedTimeout": {
       "passed": 3,
@@ -69,17 +78,54 @@
         "timeout followed by full native fade completion, zero input",
         "pending press reaches deadline",
         "immediate next attempt receives only its own input"
-      ]
+      ],
+      "sdkCommit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad"
     },
     "nativeUnitSubset": {
       "passed": 6,
       "failed": 0,
       "setupNote": "The first runner launch failed before any selected tests connected. The unchanged unit build passed all6 after restarting the owned simulator."
+    },
+    "sourceBaseFinalPair": {
+      "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "baseExit": 1,
+      "headExit": 0,
+      "baseOracle": "Underlying taps: 0 / Overlay touches: 1",
+      "headOracle": "Underlying taps: 1 / Overlay touches: 0",
+      "headSmokeCommit": "f5369cb30ff56787effea7819d742aba27feeb50",
+      "finalCommitSameTree": "f757b60aa737fe6bfa4a925e6e919058b7313d0c"
+    },
+    "finalCancellationSmoke": {
+      "frameworkCommit": "31ceef35325ffbc14ef02cc1fd0893baf4e0b4c0",
+      "sdkSmokeCommit": "f5369cb30ff56787effea7819d742aba27feeb50",
+      "passed": 1,
+      "exit": 0,
+      "oracle": "After actual3000ms fade completion, zero native input events and underlying0/overlay0."
     }
   },
   "producerCoverage": {
     "bridge": "Actual diagnostics: simulator-ax-bridge. Clipped button, moving interactive child, UISwitch and UISlider passed.",
     "native": "Actual diagnostics: apple-runner via existing public customActions:true capture. Clipped button, UISwitch, UISlider and Cell stored refs passed. This capture is slower than750ms; its moving-child case is ready-control coverage, not proof of a blocked point changing.",
     "tree": "Native XCTest regression covers pre-presentation label/type provenance. Unsupported JS preferredBackend probe was not counted as producer coverage."
+  },
+  "pairedHarness": {
+    "path": "harness/sdk-acceptance.mjs",
+    "sha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "exitPolicy": "After cleanup, exit1 for an empty summary or any failed success oracle.",
+    "attribution": "Earlier f2 broad matrix used the same behavioral oracle but an earlier script without nonzero exit enforcement. New source-base/final paired smoke uses this exact exit-aware script."
+  },
+  "sdkBroadFunctionalMatrix": {
+    "commit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad",
+    "evidenceRoot": "evidence/final-sdk",
+    "note": "Broad fixture matrix predates final cold-import repairs; do not attribute these runs to another JS head."
+  },
+  "exactGate": {
+    "status": "passed",
+    "commit": "f757b60aa737fe6bfa4a925e6e919058b7313d0c",
+    "exactCommit": true,
+    "checkoutChanged": false,
+    "unitPassed": 17861,
+    "relatedPassed": 1320,
+    "receipt": "checks/agent-device-exact-validation.json"
   }
 }

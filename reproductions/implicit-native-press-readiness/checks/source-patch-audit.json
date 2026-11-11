@@ -1,0 +1,19 @@
+{
+  "scope": "Generic upstream source patches only",
+  "files": [
+    {
+      "path": "patches/agent-device.patch",
+      "bytes": 118711,
+      "sha256": "7b5514034ac14876576fc15055ab57cf4a3975256617e8985a5cecc27f80445b",
+      "privateAppPatternMatches": 0,
+      "appliesCleanlyToBase": "5a836c05d5abfe3daa7556af4a1906a1e1029e17"
+    },
+    {
+      "path": "patches/mobile-cancellation.patch",
+      "bytes": 28637,
+      "sha256": "c50bb1f2ec0d04ac6c3168feeb8f839244a3054f696852a4096ee69dad8cb5e3",
+      "privateAppPatternMatches": 0,
+      "appliesCleanlyToBase": "d8b694ffa48b04c94d70a11cc280267f1ea9a100"
+    }
+  ]
+}
