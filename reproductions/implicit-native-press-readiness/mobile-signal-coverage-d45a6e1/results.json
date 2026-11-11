@@ -1,0 +1,223 @@
+{
+  "source_head": "d45a6e1551629f0f2dd165b739d6970a059febeb",
+  "source_base": "e15c05852c35de4067f691d0776629fb207c4d0c",
+  "source_patch_sha256": "e1289ad1ff21e66486702997e6b0d62662d4f575800601665c81c125c11f934c",
+  "production_files_changed": [],
+  "runtime": {
+    "node": "24.22.0",
+    "pnpm": "12.3.4",
+    "agent-device": "0.21.36"
+  },
+  "focused": {
+    "test_files_passed": 2,
+    "tests_passed": 4,
+    "exit": 0
+  },
+  "full_mobile_suite": {
+    "test_files_passed": 21,
+    "tests_passed": 524,
+    "exit": 0
+  },
+  "full_pnpm_check": {
+    "exit": 0,
+    "includes": [
+      "lint",
+      "dead-code",
+      "workspace build and typecheck",
+      "documentation",
+      "package and manifest checks"
+    ]
+  },
+  "press_site_mutations": [
+    {
+      "site": "locator-tap",
+      "source": "packages/mobile/src/surface.ts",
+      "line": 1458,
+      "only_replacement": [
+        "input.press(client, { ...this.actionTarget(target, true), ...settle })",
+        "input.send(() => client.interactions.press({ ...this.actionTarget(target, true), ...settle }))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "maps every supported action"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:1345"
+    },
+    {
+      "site": "locator-focus",
+      "source": "packages/mobile/src/surface.ts",
+      "line": 1465,
+      "only_replacement": [
+        "input.press(client, { ...this.actionTarget(target), ...settle })",
+        "input.send(() => client.interactions.press({ ...this.actionTarget(target), ...settle }))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "maps every supported action"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:1345"
+    },
+    {
+      "site": "locator-double-tap",
+      "source": "packages/mobile/src/surface.ts",
+      "line": 1467,
+      "only_replacement": [
+        "input.press(client, { ...this.actionTarget(target), count: 2, ...settle })",
+        "input.send(() => client.interactions.press({ ...this.actionTarget(target), count: 2, ...settle }))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "maps every supported action"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:1345"
+    },
+    {
+      "site": "check-uncheck",
+      "source": "packages/mobile/src/surface.ts",
+      "line": 1492,
+      "only_replacement": [
+        "input.press(client, { ...this.actionTarget(target, true), ...settle })",
+        "input.send(() => client.interactions.press({ ...this.actionTarget(target, true), ...settle }))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "maps every supported action"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:1345"
+    },
+    {
+      "site": "key-field-focus",
+      "source": "packages/mobile/src/surface.ts",
+      "line": 1555,
+      "only_replacement": [
+        "input.press(client, { ...this.actionTarget(entry), ...settle })",
+        "input.send(() => client.interactions.press({ ...this.actionTarget(entry), ...settle }))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "maps every supported action"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:1345"
+    },
+    {
+      "site": "keyboard-tip-continue",
+      "source": "packages/mobile/src/surface.ts",
+      "line": 1698,
+      "only_replacement": [
+        "input.press(client, centreOf(button.rect!))",
+        "input.send(() => client.interactions.press(centreOf(button.rect!)))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "presses Continue on the simulator typing tip"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:1925"
+    },
+    {
+      "site": "pointer-tap",
+      "source": "packages/mobile/src/actions.ts",
+      "line": 71,
+      "only_replacement": [
+        "input.press(client, { ...at, ...settle })",
+        "input.send(() => client.interactions.press({ ...at, ...settle }))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "fills, goes back, and taps at a point"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:3446"
+    },
+    {
+      "site": "pointer-double-tap",
+      "source": "packages/mobile/src/actions.ts",
+      "line": 73,
+      "only_replacement": [
+        "input.press(client, { ...at, count: 2, ...settle })",
+        "input.send(() => client.interactions.press({ ...at, count: 2, ...settle }))"
+      ],
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "-t",
+        "fills, goes back, and taps at a point"
+      ],
+      "exit": 1,
+      "failing_assertion": "tests/unit/engine.test.ts:3446"
+    }
+  ],
+  "device_budget_mutation": {
+    "only_replacement": [
+      "surface.inputBudget('device.dismissKeyboard', { timeoutMs: context.timeouts.action, signal: context.signal })",
+      "surface.inputBudget('device.dismissKeyboard', { timeoutMs: context.timeouts.action, signal: new AbortController().signal })"
+    ],
+    "red_exit": 1,
+    "red_oracle": "expected delivered 0, actual 1",
+    "restored_exit": 0,
+    "production_bytes_restored": true
+  },
+  "all_production_source_restored": true,
+  "native_probe_repeated": false,
+  "publication_state": "captured before source push; local verification only",
+  "captured_at": "2026-11-11T17:53:49+00:00"
+}
