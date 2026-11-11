@@ -1,0 +1,85 @@
+{
+  "phase": "after-first-selector",
+  "openOptions": {
+    "app": "dev.e2e.readinessgeometry",
+    "platform": "ios",
+    "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+    "relaunch": true,
+    "foreground": false
+  },
+  "pressTarget": {
+    "selector": "id=geometry-action"
+  },
+  "observationAbortMs": 6000,
+  "open": {
+    "session": "codex-geometry-after-first-selector",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-first-selector/sessions/codex-geometry-after-first-selector",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-first-selector/sessions/codex-geometry-after-first-selector/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-first-selector/sessions/codex-geometry-after-first-selector/requests/cf5fe427f2ff87fd.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-first-selector/sessions/codex-geometry-after-first-selector/events.ndjson",
+    "appName": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry",
+    "appId": "dev.e2e.readinessgeometry",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 2161,
+      "measuredAt": "2026-11-11T04:38:38.559Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+      "name": "Codex Readiness Geometry iPad 20261111",
+      "identifiers": {
+        "deviceId": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+        "deviceName": "Codex Readiness Geometry iPad 20261111",
+        "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A"
+      },
+      "ios": {
+        "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+        "simulatorSetPath": null
+      }
+    },
+    "identifiers": {
+      "session": "codex-geometry-after-first-selector",
+      "deviceId": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+      "deviceName": "Codex Readiness Geometry iPad 20261111",
+      "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+      "appId": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  },
+  "error": {
+    "message": "request canceled",
+    "code": "COMMAND_FAILED",
+    "details": {
+      "hint": "The request was canceled intentionally (explicit cancel or client disconnect) — no retry is needed unless the cancellation was unintended.",
+      "requestId": "11f81e2ce1a7b694",
+      "dispatched": "unknown",
+      "reason": "request_canceled"
+    }
+  },
+  "pressMs": 6002.059416,
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.006583344656974077
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 17.617416626308113,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 551.0, 813.0)"
+    }
+  ]
+}

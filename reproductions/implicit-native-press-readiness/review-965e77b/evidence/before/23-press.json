@@ -1,0 +1,29 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "selector": "id=geometry-input"
+    }
+  },
+  "ms": 413.50454100000206,
+  "result": {
+    "x": 124,
+    "y": 111,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped id=geometry-input (124, 111)",
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "selector",
+    "selector": "id=geometry-input",
+    "selectorChain": [
+      "id=\"geometry-input\"",
+      "value=\"Geometry input\""
+    ],
+    "refLabel": "Geometry input",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  }
+}

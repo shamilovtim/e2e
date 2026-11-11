@@ -1,0 +1,120 @@
+{
+  "head": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+  "sourceTree": "8cb15eab1621615afa3e5b8b1409f5ff720ed1f4",
+  "nativeFingerprint": "a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3",
+  "buildSource": "Frozen review source, committed without production-byte changes after native builds",
+  "selectedRunnerXCTests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "snapshotPackageTests": {
+    "passed": 52,
+    "failed": 0
+  },
+  "differentialChecks": {
+    "passed": 12,
+    "failed": 0
+  },
+  "finalOverlaySmoke": {
+    "underlyingOverlayCounts": [
+      1,
+      0
+    ],
+    "tapOccurredAfterDismissalComplete": true,
+    "harness": "Identical public sdk-acceptance.mjs (same-command pair above)"
+  },
+  "placedWindowSameProducerRefPair": {
+    "window": [
+      241,
+      224,
+      551,
+      813
+    ],
+    "producer": "private-AX requested-backend",
+    "beforeCommit": "f757b60aa737fe6bfa4a925e6e919058b7313d0c",
+    "beforeDescriptorRect": [
+      240,
+      90,
+      220,
+      42
+    ],
+    "publishedAndLiveRect": [
+      481,
+      314,
+      220,
+      42
+    ],
+    "beforeNativeActionCount": 0,
+    "afterDescriptorRect": [
+      481,
+      314,
+      220,
+      42
+    ],
+    "afterPoint": [
+      591,
+      335
+    ],
+    "afterNativeActionCount": 1
+  },
+  "degradedProjectionCounterfactual": {
+    "baseCommit": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+    "producer": "private-AX deferred after snapshot query timeout",
+    "baseReportedSuccess": true,
+    "baseReportedPoint": [
+      350,
+      111
+    ],
+    "baseNativeActionCount": 0,
+    "candidateError": {
+      "code": "COMMAND_FAILED",
+      "reason": "request_canceled",
+      "dispatched": "unknown",
+      "readinessReported": false
+    },
+    "candidateObservationAbortMs": 6000,
+    "candidateNativeActionCountDuringRecording": 0,
+    "extendedPostCancelObservationInThisPair": false,
+    "healthySelectorControls": {
+      "baseNativeActionCount": 1,
+      "candidateNativeActionCount": 1,
+      "point": [
+        591,
+        335
+      ]
+    }
+  },
+  "slowOverlayCancellation": {
+    "fadeDurationMs": 3000,
+    "callerAbortMs": 350,
+    "postCancelObservationMs": 4200,
+    "underlyingOverlayCounts": [
+      0,
+      0
+    ],
+    "publicError": {
+      "code": "COMMAND_FAILED",
+      "reason": "request_canceled",
+      "dispatched": "unknown"
+    },
+    "attribution": "Observed native no-late-input result; public transport envelope is not relabeled dispatched:no."
+  },
+  "privacy": "Synthetic fixture facts only; no system dumps, state, tokens, or private application data.",
+  "sameCommandOverlayProof": {
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "baseCommit": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+    "baseExit": 1,
+    "baseUnderlyingOverlayCounts": [
+      0,
+      1
+    ],
+    "headCommit": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+    "headExit": 0,
+    "headUnderlyingOverlayCounts": [
+      1,
+      0
+    ],
+    "headResultSha256": "e0a2a887ee4768506f5f9b00668663ae3f14db4af808069c3f2676cade563307",
+    "attribution": "Identical public harness on source5a and final frozen review bytes committed as965; native fingerprint a55f."
+  }
+}

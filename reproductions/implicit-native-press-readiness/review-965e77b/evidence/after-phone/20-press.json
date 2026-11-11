@@ -1,0 +1,29 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "ref": "@e12"
+    }
+  },
+  "ms": 609.2712500000052,
+  "result": {
+    "x": 107,
+    "y": 339,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e12 (107, 339)",
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "ref",
+    "ref": "e12",
+    "refLabel": "Duplicate action",
+    "selectorChain": [
+      "role=\"button\" label=\"Duplicate action\"",
+      "label=\"Duplicate action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "ref": "@e4"
+    }
+  },
+  "ms": 508.4760410000017,
+  "result": {
+    "x": 350,
+    "y": 111,
+    "message": "Tapped @e4 (350, 111)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "ref",
+    "ref": "e4",
+    "refLabel": "Geometry action",
+    "selectorChain": [
+      "id=\"geometry-action\"",
+      "role=\"button\" label=\"Geometry action\"",
+      "label=\"Geometry action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  }
+}

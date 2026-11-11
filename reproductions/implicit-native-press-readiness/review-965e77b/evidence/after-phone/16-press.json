@@ -1,0 +1,30 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "selector": "id=parent-row"
+    }
+  },
+  "ms": 454.2913750000007,
+  "result": {
+    "x": 199,
+    "y": 248,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped id=parent-row (199, 248)",
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "selector",
+    "selector": "id=parent-row",
+    "selectorChain": [
+      "id=\"parent-row\"",
+      "role=\"cell\" label=\"Parent row\"",
+      "label=\"Parent row\""
+    ],
+    "refLabel": "Parent row",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  }
+}

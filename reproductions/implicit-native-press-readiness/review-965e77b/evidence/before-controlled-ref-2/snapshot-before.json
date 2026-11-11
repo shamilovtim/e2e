@@ -1,0 +1,286 @@
+{
+  "nodes": [
+    {
+      "type": "Application",
+      "rect": {
+        "y": 224,
+        "width": 551,
+        "x": 241,
+        "height": 813
+      },
+      "enabled": true,
+      "hittable": false,
+      "label": "GeometryFixture",
+      "index": 0,
+      "depth": 0,
+      "ref": "e1",
+      "kind": "application"
+    },
+    {
+      "type": "StaticText",
+      "parentIndex": 0,
+      "rect": {
+        "y": 269,
+        "width": 503,
+        "x": 265,
+        "height": 30
+      },
+      "enabled": true,
+      "hittable": true,
+      "label": "Native geometry fixture",
+      "index": 1,
+      "depth": 1,
+      "ref": "e2",
+      "kind": "text"
+    },
+    {
+      "identifier": "geometry-input",
+      "type": "TextField",
+      "placeholder": "Geometry input",
+      "parentIndex": 0,
+      "rect": {
+        "y": 314,
+        "width": 200,
+        "x": 265,
+        "height": 42
+      },
+      "enabled": true,
+      "hittable": true,
+      "index": 2,
+      "depth": 1,
+      "password": false,
+      "editable": true,
+      "ref": "e3",
+      "kind": "text-field"
+    },
+    {
+      "identifier": "geometry-action",
+      "type": "Button",
+      "parentIndex": 0,
+      "rect": {
+        "y": 314,
+        "width": 220,
+        "x": 481,
+        "height": 42
+      },
+      "enabled": true,
+      "hittable": true,
+      "label": "Geometry action",
+      "index": 3,
+      "depth": 1,
+      "ref": "e4",
+      "kind": "button"
+    },
+    {
+      "depth": 1,
+      "parentIndex": 0,
+      "hittable": true,
+      "identifier": "landscape",
+      "index": 4,
+      "enabled": true,
+      "type": "Button",
+      "rect": {
+        "y": 364,
+        "width": 100,
+        "x": 265,
+        "height": 36
+      },
+      "label": "Landscape",
+      "ref": "e5",
+      "kind": "button"
+    },
+    {
+      "depth": 1,
+      "parentIndex": 0,
+      "hittable": true,
+      "identifier": "portrait",
+      "index": 5,
+      "enabled": true,
+      "type": "Button",
+      "rect": {
+        "y": 364,
+        "width": 100,
+        "x": 373,
+        "height": 36
+      },
+      "label": "Portrait",
+      "ref": "e6",
+      "kind": "button"
+    },
+    {
+      "depth": 1,
+      "parentIndex": 0,
+      "hittable": true,
+      "identifier": "hide-keyboard",
+      "index": 6,
+      "enabled": true,
+      "type": "Button",
+      "rect": {
+        "y": 364,
+        "x": 481,
+        "width": 140,
+        "height": 36
+      },
+      "label": "Hide keyboard",
+      "ref": "e7",
+      "kind": "button"
+    },
+    {
+      "parentIndex": 0,
+      "hittable": true,
+      "index": 7,
+      "enabled": true,
+      "type": "Table",
+      "rect": {
+        "y": 412,
+        "x": 265,
+        "width": 350,
+        "height": 120
+      },
+      "depth": 1,
+      "hiddenContentBelow": true,
+      "ref": "e8",
+      "kind": "table"
+    },
+    {
+      "parentIndex": 7,
+      "hittable": true,
+      "identifier": "parent-row",
+      "index": 8,
+      "enabled": true,
+      "type": "Cell",
+      "rect": {
+        "y": 412,
+        "x": 265,
+        "width": 350,
+        "height": 120
+      },
+      "depth": 2,
+      "label": "Parent row",
+      "ref": "e9",
+      "kind": "cell"
+    },
+    {
+      "depth": 3,
+      "parentIndex": 8,
+      "hittable": true,
+      "identifier": "child-action",
+      "index": 9,
+      "enabled": true,
+      "type": "Button",
+      "rect": {
+        "y": 447,
+        "x": 503,
+        "width": 100,
+        "height": 45
+      },
+      "label": "Child action",
+      "ref": "e10",
+      "kind": "button"
+    },
+    {
+      "parentIndex": 0,
+      "hittable": true,
+      "identifier": "results",
+      "enabled": true,
+      "index": 10,
+      "type": "StaticText",
+      "rect": {
+        "height": 95,
+        "y": 412,
+        "width": 117,
+        "x": 651
+      },
+      "depth": 1,
+      "ref": "e11",
+      "kind": "text"
+    },
+    {
+      "depth": 1,
+      "parentIndex": 0,
+      "hittable": true,
+      "identifier": "duplicate-action",
+      "index": 11,
+      "enabled": true,
+      "type": "Button",
+      "rect": {
+        "height": 38,
+        "y": 544,
+        "width": 166,
+        "x": 265
+      },
+      "label": "Duplicate action",
+      "ref": "e12",
+      "kind": "button"
+    },
+    {
+      "depth": 1,
+      "parentIndex": 0,
+      "hittable": true,
+      "identifier": "duplicate-action",
+      "index": 12,
+      "enabled": true,
+      "type": "Button",
+      "rect": {
+        "height": 38,
+        "y": 544,
+        "width": 166,
+        "x": 443
+      },
+      "label": "Duplicate action",
+      "ref": "e13",
+      "kind": "button"
+    }
+  ],
+  "truncated": false,
+  "appName": "dev.e2e.readinessgeometry",
+  "appBundleId": "dev.e2e.readinessgeometry",
+  "viewport": {
+    "width": 551,
+    "height": 813
+  },
+  "presentedSurface": "unknown",
+  "visibility": {
+    "partial": true,
+    "visibleNodeCount": 13,
+    "totalNodeCount": 13,
+    "reasons": [
+      "scroll-hidden-below"
+    ]
+  },
+  "snapshotQuality": {
+    "state": "recovered",
+    "backend": "private-ax",
+    "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+    "reasonCode": "requested-backend",
+    "customActions": {
+      "read": 9,
+      "candidates": 9,
+      "truncated": 0,
+      "blocked": false
+    },
+    "timing": {
+      "acquisitionMs": 1275.5849361419678,
+      "presentationMs": 0.11706352233886719
+    }
+  },
+  "snapshotDiagnostics": {
+    "stats": {
+      "count": 3,
+      "p50Ms": 1335,
+      "p95Ms": 3997,
+      "maxMs": 3997,
+      "slowThresholdMs": 1500,
+      "platform": "ios",
+      "backends": {
+        "apple-runner": 3
+      }
+    }
+  },
+  "refsGeneration": 607428,
+  "identifiers": {
+    "session": "codex-geometry-before-controlled-ref-2",
+    "appId": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry"
+  }
+}

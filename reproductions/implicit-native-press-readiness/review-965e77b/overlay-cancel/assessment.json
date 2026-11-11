@@ -1,0 +1,10 @@
+{
+  "rawHarnessResultPreserved": "/tmp/codex-sdk-readiness-geometry-20261111/overlay-cancel/result.json",
+  "rawHarnessAssertionIssue": "Harness incorrectly expected COMMAND_CANCELLED; SDK documents COMMAND_FAILED with details.reason=request_canceled and transport dispatched:unknown after request sent. The raw failed assertion is preserved.",
+  "publicCancellationEnvelopeMatchesDocumentedTaxonomy": true,
+  "nativeObservationAfterAbortMs": 4200,
+  "nativeUnderlyingCount": 0,
+  "nativeOverlayTouchCount": 0,
+  "nativeFadeCompleted": true,
+  "claim": "Explicit caller cancellation while readiness was pending produced no native input through the full fade and following observation; this does not claim a public transport unsent proof."
+}

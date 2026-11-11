@@ -1,0 +1,98 @@
+{
+  "command": {
+    "action": "events"
+  },
+  "ms": 237.01987499999814,
+  "result": [
+    {
+      "event": "appReady",
+      "ms": 0.00662502134218812
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 129.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 14.577874972019345,
+      "screenBounds": "(0.0, 0.0, 393.0, 852.0)",
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "count": 1,
+      "event": "actionReceivedTap",
+      "ms": 43631.213875021785,
+      "orientation": 1
+    },
+    {
+      "count": 2,
+      "event": "actionReceivedTap",
+      "ms": 44147.83133333549,
+      "orientation": 1
+    },
+    {
+      "count": 1,
+      "event": "parentReceivedTap",
+      "ms": 44564.73366665887,
+      "orientation": 1
+    },
+    {
+      "count": 1,
+      "event": "childReceivedTap",
+      "ms": 45064.46291669272,
+      "orientation": 1
+    },
+    {
+      "count": 1,
+      "event": "duplicateAReceivedTap",
+      "ms": 73781.17491665762,
+      "orientation": 1
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 3,
+      "ms": 76613.14495833358,
+      "screenBounds": "(0.0, 0.0, 852.0, 393.0)",
+      "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+    },
+    {
+      "count": 3,
+      "event": "actionReceivedTap",
+      "ms": 108181.20170832844,
+      "orientation": 3
+    },
+    {
+      "count": 4,
+      "event": "actionReceivedTap",
+      "ms": 108714.46287498111,
+      "orientation": 3
+    },
+    {
+      "count": 2,
+      "event": "parentReceivedTap",
+      "ms": 109148.0869166553,
+      "orientation": 3
+    },
+    {
+      "count": 2,
+      "event": "childReceivedTap",
+      "ms": 109681.27716664458,
+      "orientation": 3
+    },
+    {
+      "count": 2,
+      "event": "duplicateAReceivedTap",
+      "ms": 131247.7340416517,
+      "orientation": 3
+    },
+    {
+      "event": "inputChanged",
+      "ms": 159400.9098749957,
+      "text": "Q"
+    },
+    {
+      "event": "inputChanged",
+      "ms": 216551.32916668663,
+      "text": "Qw"
+    }
+  ]
+}

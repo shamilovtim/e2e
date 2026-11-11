@@ -1,0 +1,177 @@
+{
+  "finalCommit": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+  "testedBeforeCommit": true,
+  "originalWIPTimestampsPreserved": true,
+  "nativeSourceFingerprint": "a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3",
+  "nativeBinarySha256": "379ea9c40596308d7ad04f03753cf39725dff82588c9d72140ae8ff853ee2b15",
+  "nativeBinaryMatchesTested": true,
+  "distFilesChecked": 629,
+  "distFileMismatches": [
+    "src/args.js"
+  ],
+  "sourceReview": "Read-only full23-file f757..965 diff and connected production owners; no actionable correctness findings. No tests/builds or SDK source edits during final gate.",
+  "visualPrivacyAudit": {
+    "pngCount": 36,
+    "videoFirstLastPairs": 14,
+    "standaloneStartupFinalScreenshots": 8,
+    "method": "Viewed all alreadydecoded PNGs via nine offline four-image contact sheets, plus individual keyframes inspected earlier. This is a first/last-frame and screenshot audit, not frame-by-frame playback of every video.",
+    "observedContent": "Generic UIKit geometry/overlay fixtures; generated Q/Qw input; default simulator wallpaper,dock,status bars,and keyboard only. No user app content/account data observed.",
+    "snapshotJsonTextAudited": "All included JSON label/identifier/value/text/appName/appBundleId fields were enumerated and inspected; only generic fixture controls/results, Q/Qw, and system keyboard strings.",
+    "pngs": [
+      {
+        "path": "evidence/after-controlled-ref/final.png",
+        "sha256": "69a22acb112a15b6d6e7ed16894ce1914271158eeaa85dad9c9afd0a833c07d0"
+      },
+      {
+        "path": "evidence/after-controlled-ref/startup.png",
+        "sha256": "608090ee1fec14a5fba110d1576094f7052c69acff372150b16d825106e207ec"
+      },
+      {
+        "path": "evidence/after-controlled-ref/video.first.png",
+        "sha256": "c9648cd125e5fa571d5d69ac4ebd46b6dd599c69fdf41b09283c8e2285be154f"
+      },
+      {
+        "path": "evidence/after-controlled-ref/video.last.png",
+        "sha256": "00fc25807181c16a17c30c4b742fa42d9001aaf2f702e123d4d8c286537cf03b"
+      },
+      {
+        "path": "evidence/after-controlled-selector/final.png",
+        "sha256": "934b4d82a72b1b61156ab78b19b1a73b80b6df08fdd7e43e94d15ca8cb464b01"
+      },
+      {
+        "path": "evidence/after-controlled-selector/startup.png",
+        "sha256": "ef5e814b9ca560e2947107aedd01e5b0e29758b8286371640a9a88b9bc964528"
+      },
+      {
+        "path": "evidence/after-controlled-selector/video.first.png",
+        "sha256": "2494b3c962d55b005819b4706676026aa8b2f2568c5658ca5c1c7ca69a4780a7"
+      },
+      {
+        "path": "evidence/after-controlled-selector/video.last.png",
+        "sha256": "8a56467910a366fac93cc3da7b9543197089a04b592f03ce74bec99c7c9b752f"
+      },
+      {
+        "path": "evidence/after-first-selector/video.first.png",
+        "sha256": "f2054cf811caa294a3c40503a3aa675bc35eed8c70752c62654f59fe63df578e"
+      },
+      {
+        "path": "evidence/after-first-selector/video.last.png",
+        "sha256": "f2054cf811caa294a3c40503a3aa675bc35eed8c70752c62654f59fe63df578e"
+      },
+      {
+        "path": "evidence/after-phone/landscape-controls.first.png",
+        "sha256": "fa2ad969b57bac644a2a5c3d530ae1de4f14b193f96e66a3bc47b5d6661af56c"
+      },
+      {
+        "path": "evidence/after-phone/landscape-controls.last.png",
+        "sha256": "b0d696e629a22a1c731c9f66de130393d69e1e5ce86e797bf29a33b873960470"
+      },
+      {
+        "path": "evidence/after-phone/landscape-keyboard.first.png",
+        "sha256": "e5ee28122cffe5a20b5c06f88870598a995ed60db03bcc2105264a7175826865"
+      },
+      {
+        "path": "evidence/after-phone/landscape-keyboard.last.png",
+        "sha256": "caa3854c93394e5fbff37945b6d0f89f5c1ec4d8ee77ff1eec0ee15492297514"
+      },
+      {
+        "path": "evidence/after-phone/portrait-controls.first.png",
+        "sha256": "5405cefb1a1bf9c66566fc67b612d9d66951be19bd24327bc1f23d3a4bc8ddee"
+      },
+      {
+        "path": "evidence/after-phone/portrait-controls.last.png",
+        "sha256": "2c6488a131e272fcb8c855105d8c9d83109143f6edfbc71a5e00a819fe32126e"
+      },
+      {
+        "path": "evidence/before-controlled-ref-2/final.png",
+        "sha256": "254fccb3540b46f3f8ada833c6441d66fd46d44bee6c5a00723db67112624728"
+      },
+      {
+        "path": "evidence/before-controlled-ref-2/startup.png",
+        "sha256": "254fccb3540b46f3f8ada833c6441d66fd46d44bee6c5a00723db67112624728"
+      },
+      {
+        "path": "evidence/before-controlled-ref-2/video.first.png",
+        "sha256": "5428b1547205e7944adf00c4be325adc031b57ba45507757cb96e265e9f296ab"
+      },
+      {
+        "path": "evidence/before-controlled-ref-2/video.last.png",
+        "sha256": "5428b1547205e7944adf00c4be325adc031b57ba45507757cb96e265e9f296ab"
+      },
+      {
+        "path": "evidence/before/landscape-controls.first.png",
+        "sha256": "5592f44afd75ef5c2c121000bf29bdf722a597ea966ad96f06d253c9404fd205"
+      },
+      {
+        "path": "evidence/before/landscape-controls.last.png",
+        "sha256": "d3d508df8a911bb3096aeac721daa0037afb665a2eaa9f0e04cf1d19f74904f7"
+      },
+      {
+        "path": "evidence/before/landscape-keyboard.first.png",
+        "sha256": "cb856f36521bde5a48029c7fcbe08870de4cca0b7d92e86302b7b004f921aa4d"
+      },
+      {
+        "path": "evidence/before/landscape-keyboard.last.png",
+        "sha256": "944fbbeaf3fbbb970af5da6d9e42b8089604a67e10dbc3520f5ccd11b0a65796"
+      },
+      {
+        "path": "evidence/before/portrait-controls.first.png",
+        "sha256": "a277756b8a756d1b02923daf72fe41d0cddfddf2da437167eada0321c5b5cf30"
+      },
+      {
+        "path": "evidence/before/portrait-controls.last.png",
+        "sha256": "e205409548cd9c3540f7a7b11a476853428ea09f1cbd298ee8992b2c72853abd"
+      },
+      {
+        "path": "evidence/source5a-controlled-selector/final.png",
+        "sha256": "48049ca5aaeb59609d220dc64fde63501c694275fd6072110843558b0be43b34"
+      },
+      {
+        "path": "evidence/source5a-controlled-selector/startup.png",
+        "sha256": "254fccb3540b46f3f8ada833c6441d66fd46d44bee6c5a00723db67112624728"
+      },
+      {
+        "path": "evidence/source5a-controlled-selector/video.first.png",
+        "sha256": "5428b1547205e7944adf00c4be325adc031b57ba45507757cb96e265e9f296ab"
+      },
+      {
+        "path": "evidence/source5a-controlled-selector/video.last.png",
+        "sha256": "41431f2332bcb5589b5f7cb537a0f4483fc8e5b2de9b09d9cfdcc95cfbaf2fca"
+      },
+      {
+        "path": "evidence/source5a-sdk-record-warmup/video.first.png",
+        "sha256": "d903c3204e2ea4cb0a29d060a9a2fa2c160d5d7c4b02a4b0dfe9594d98c5533c"
+      },
+      {
+        "path": "evidence/source5a-sdk-record-warmup/video.last.png",
+        "sha256": "d903c3204e2ea4cb0a29d060a9a2fa2c160d5d7c4b02a4b0dfe9594d98c5533c"
+      },
+      {
+        "path": "overlay-cancel/video.first.png",
+        "sha256": "5a5f9e7e93b8c9a8201a399d0fa94756eac2a230bf62bd790c5b17c89f841bab"
+      },
+      {
+        "path": "overlay-cancel/video.last.png",
+        "sha256": "193fb1771747e5e06d160d0419c0d7b89b7d48d29e70d0763831283b958ece76"
+      },
+      {
+        "path": "overlay-smoke/sdk-final/fade750-1/video.first.png",
+        "sha256": "6469c8e5783a451d0ddd4c66e92f57356071761cb957e57e71fe335acc1d4b69"
+      },
+      {
+        "path": "overlay-smoke/sdk-final/fade750-1/video.last.png",
+        "sha256": "8afb58f553a058752f179db0ad626fafaa33f707ab076e149345dbf5c12d0a44"
+      }
+    ]
+  },
+  "assetsRemainedUnchangedDuringReview": true,
+  "fullBuiltByteEqualityClaim": false,
+  "builtArtifactDifference": {
+    "path": "dist/src/args.js",
+    "measuredSha256": "35831b29ee389b89a2155fbf41be69d0b283bb00259adfb144f6d77bfb2cc347",
+    "currentSha256": "9d0fb39fd70c92af4fba40edc5d9066c1cf0d9f7d9bca1dc9fc17240998314f1",
+    "classification": "Unclassified build-byte difference in CLI parser; original bytes not archived. Its source owner src/cli/parser/args.ts has no f757..965 change. No concrete behavior regression found.",
+    "currentSDKStaticAndLiteralDynamicImportClosureIncludesArgs": false
+  },
+  "attributionQualification": "The recorded native build and SDK source are attributable to the frozen source committed as965. Full629-file generated JavaScript byte identity is not claimed: src/args.js differs, original bytes were not archived. The literal SDK import closure excludes this CLI parser; a fresh current-build smoke is tracked separately."
+}

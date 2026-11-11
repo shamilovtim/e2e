@@ -1,0 +1,21 @@
+{
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "head": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+  "sourceTree": "8cb15eab1621615afa3e5b8b1409f5ff720ed1f4",
+  "files": 59,
+  "added": 2267,
+  "deleted": 54,
+  "patchBytes": 144358,
+  "patchSha256": "a9ea6287dc022c29546d92ede9d005dd610fd972c065c3840e0567cf726664ed",
+  "checks": [
+    {
+      "category": "private application names and identifiers",
+      "matches": 0
+    },
+    {
+      "category": "private application source paths",
+      "matches": 0
+    }
+  ],
+  "scope": "Source patch only. Raw diagnostics, environment and state are excluded."
+}

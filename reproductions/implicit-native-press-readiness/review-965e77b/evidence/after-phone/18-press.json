@@ -1,0 +1,31 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "selector": "id=duplicate-action"
+    },
+    "abortMs": 3000
+  },
+  "ms": 59.37991600000532,
+  "error": {
+    "message": "Selector matched 2 distinct actionable elements: id=duplicate-action",
+    "code": "AMBIGUOUS_MATCH",
+    "details": {
+      "selector": "id=duplicate-action",
+      "matches": 2,
+      "candidates": [
+        "@e12 [button] \"Duplicate action\"",
+        "@e13 [button] \"Duplicate action\""
+      ],
+      "dispatched": "no",
+      "refsGeneration": 686891,
+      "hint": "Multiple candidates matched. Narrow the query or pass an exact identifier.",
+      "diagnosticId": "mwbn4f3o-2c7ca112",
+      "logPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-phone/sessions/codex-geometry-after-phone/requests/5b4bc86307be5048.ndjson",
+      "diagnosticsRecord": {
+        "session": "codex-geometry-after-phone",
+        "requestId": "5b4bc86307be5048"
+      }
+    }
+  }
+}

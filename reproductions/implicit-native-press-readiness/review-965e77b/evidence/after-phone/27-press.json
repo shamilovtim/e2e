@@ -1,0 +1,29 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "selector": "label=w"
+    }
+  },
+  "ms": 2535.4874160000036,
+  "result": {
+    "x": 182,
+    "y": 238,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped label=w (182, 238)",
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "selector",
+    "selector": "label=w",
+    "selectorChain": [
+      "role=\"key\" label=\"w\"",
+      "label=\"w\""
+    ],
+    "refLabel": "w",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "phase": "after-controlled-selector",
+  "mode": "selector",
+  "openOptions": {
+    "app": "dev.e2e.readinessgeometry",
+    "platform": "ios",
+    "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+    "relaunch": true,
+    "foreground": false
+  },
+  "observationAbortMs": 6000,
+  "recorder": "External simctl; no SDK snapshot warmup",
+  "open": {
+    "session": "codex-geometry-after-controlled-selector",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-controlled-selector/sessions/codex-geometry-after-controlled-selector",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-controlled-selector/sessions/codex-geometry-after-controlled-selector/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-controlled-selector/sessions/codex-geometry-after-controlled-selector/requests/e412c7d5688c7aa1.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-controlled-selector/sessions/codex-geometry-after-controlled-selector/events.ndjson",
+    "appName": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry",
+    "appId": "dev.e2e.readinessgeometry",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 1961,
+      "measuredAt": "2026-11-11T04:46:21.614Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+      "name": "Codex Readiness Geometry iPad 20261111",
+      "identifiers": {
+        "deviceId": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+        "deviceName": "Codex Readiness Geometry iPad 20261111",
+        "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A"
+      },
+      "ios": {
+        "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+        "simulatorSetPath": null
+      }
+    },
+    "identifiers": {
+      "session": "codex-geometry-after-controlled-selector",
+      "deviceId": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+      "deviceName": "Codex Readiness Geometry iPad 20261111",
+      "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A",
+      "appId": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  },
+  "startupScreenshot": {
+    "path": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/after-controlled-selector/startup.png",
+    "width": 1032,
+    "height": 1376,
+    "logicalWidth": 1032,
+    "logicalHeight": 1376,
+    "pixelDensity": 1,
+    "displayRotation": "portrait",
+    "identifiers": {
+      "session": "codex-geometry-after-controlled-selector"
+    }
+  },
+  "target": {
+    "selector": "id=geometry-action"
+  },
+  "press": {
+    "x": 591,
+    "y": 335,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped id=geometry-action (591, 335)",
+    "referenceWidth": 551,
+    "referenceHeight": 813,
+    "targetKind": "selector",
+    "selector": "id=geometry-action",
+    "selectorChain": [
+      "id=\"geometry-action\"",
+      "role=\"button\" label=\"Geometry action\"",
+      "label=\"Geometry action\""
+    ],
+    "refLabel": "Geometry action",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  },
+  "pressMs": 1807.6126670000003,
+  "finalScreenshot": {
+    "path": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/after-controlled-selector/final.png",
+    "width": 1032,
+    "height": 1376,
+    "logicalWidth": 1032,
+    "logicalHeight": 1376,
+    "pixelDensity": 1,
+    "displayRotation": "portrait",
+    "identifiers": {
+      "session": "codex-geometry-after-controlled-selector"
+    }
+  },
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.004458357580006123
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 15.020458318758756,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 551.0, 813.0)"
+    },
+    {
+      "count": 1,
+      "event": "actionReceivedTap",
+      "ms": 4540.436041657813,
+      "orientation": 1
+    }
+  ]
+}

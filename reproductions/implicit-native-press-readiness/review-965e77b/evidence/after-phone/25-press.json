@@ -1,0 +1,29 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "ref": "@e21"
+    }
+  },
+  "ms": 2538.1161250000005,
+  "result": {
+    "x": 112,
+    "y": 238,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e21 (112, 238)",
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "ref",
+    "ref": "e21",
+    "refLabel": "Q",
+    "selectorChain": [
+      "role=\"key\" label=\"Q\"",
+      "label=\"Q\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  }
+}

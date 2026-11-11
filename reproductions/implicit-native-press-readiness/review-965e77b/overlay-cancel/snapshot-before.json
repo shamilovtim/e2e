@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    {
+      "index": 0,
+      "type": "Application",
+      "role": "UIApplication",
+      "label": "OverlayFixture",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852
+      },
+      "enabled": true,
+      "depth": 0,
+      "pid": 84768,
+      "hittable": false,
+      "ref": "e1",
+      "kind": "application"
+    },
+    {
+      "index": 1,
+      "parentIndex": 0,
+      "type": "StaticText",
+      "role": "UILabel",
+      "label": "Overlay transition proof",
+      "rect": {
+        "x": 24,
+        "y": 80,
+        "width": 340,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 84768,
+      "hittable": true,
+      "ref": "e2",
+      "kind": "text"
+    },
+    {
+      "index": 2,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Open fade overlay",
+      "identifier": "Open fade overlay",
+      "rect": {
+        "x": 24,
+        "y": 140,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 84768,
+      "hittable": true,
+      "ref": "e3",
+      "kind": "button"
+    },
+    {
+      "index": 3,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Open slow fade overlay",
+      "identifier": "Open slow fade overlay",
+      "rect": {
+        "x": 24,
+        "y": 200,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 84768,
+      "hittable": true,
+      "ref": "e4",
+      "kind": "button"
+    },
+    {
+      "index": 4,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Open native sheet",
+      "identifier": "Open native sheet",
+      "rect": {
+        "x": 24,
+        "y": 260,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 84768,
+      "hittable": true,
+      "ref": "e5",
+      "kind": "button"
+    },
+    {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 84768,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    {
+      "index": 6,
+      "parentIndex": 0,
+      "type": "StaticText",
+      "role": "UILabel",
+      "label": "Underlying taps: 0\nOverlay touches: 0",
+      "identifier": "results",
+      "rect": {
+        "x": 24,
+        "y": 610,
+        "width": 340,
+        "height": 100
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 84768,
+      "hittable": true,
+      "ref": "e7",
+      "kind": "text"
+    }
+  ],
+  "truncated": false,
+  "appName": "dev.e2e.overlay1563",
+  "appBundleId": "dev.e2e.overlay1563",
+  "keyboard": {
+    "kind": "absent",
+    "treeBound": true
+  },
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "presentedSurface": "absent",
+  "visibility": {
+    "partial": false,
+    "visibleNodeCount": 7,
+    "totalNodeCount": 7,
+    "reasons": []
+  },
+  "snapshotDiagnostics": {
+    "stats": {
+      "count": 5,
+      "p50Ms": 46,
+      "p95Ms": 55,
+      "maxMs": 55,
+      "slowThresholdMs": 1500,
+      "platform": "ios",
+      "backends": {
+        "simulator-ax-bridge": 5
+      }
+    }
+  },
+  "refsGeneration": 372478,
+  "identifiers": {
+    "session": "codex-geometry-overlay-cancel",
+    "appId": "dev.e2e.overlay1563",
+    "appBundleId": "dev.e2e.overlay1563"
+  }
+}

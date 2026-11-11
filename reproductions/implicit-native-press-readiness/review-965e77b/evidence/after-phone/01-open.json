@@ -1,0 +1,350 @@
+{
+  "command": {
+    "action": "open"
+  },
+  "ms": 2169.0017910000006,
+  "result": {
+    "session": "codex-geometry-after-phone",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-phone/sessions/codex-geometry-after-phone",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-phone/sessions/codex-geometry-after-phone/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-phone/sessions/codex-geometry-after-phone/requests/d1e0b94670bca9f9.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-phone/sessions/codex-geometry-after-phone/events.ndjson",
+    "appName": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry",
+    "appId": "dev.e2e.readinessgeometry",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 1867,
+      "measuredAt": "2026-11-11T04:49:27.036Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "444343EA-314F-44BB-9BC8-3B8FB8E1AA8D",
+      "name": "Codex Readiness Geometry 20261111",
+      "identifiers": {
+        "deviceId": "444343EA-314F-44BB-9BC8-3B8FB8E1AA8D",
+        "deviceName": "Codex Readiness Geometry 20261111",
+        "udid": "444343EA-314F-44BB-9BC8-3B8FB8E1AA8D"
+      },
+      "ios": {
+        "udid": "444343EA-314F-44BB-9BC8-3B8FB8E1AA8D",
+        "simulatorSetPath": null
+      }
+    },
+    "snapshot": {
+      "nodes": [
+        {
+          "index": 0,
+          "type": "Application",
+          "role": "UIApplication",
+          "label": "GeometryFixture",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 852
+          },
+          "enabled": true,
+          "depth": 0,
+          "pid": 82729,
+          "hittable": false,
+          "ref": "e1",
+          "kind": "application"
+        },
+        {
+          "index": 1,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Native geometry fixture",
+          "rect": {
+            "x": 24,
+            "y": 45,
+            "width": 345,
+            "height": 30
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e2",
+          "kind": "text"
+        },
+        {
+          "index": 2,
+          "parentIndex": 0,
+          "type": "TextField",
+          "role": "UITextField",
+          "value": "Geometry input",
+          "placeholder": "Geometry input",
+          "identifier": "geometry-input",
+          "rect": {
+            "x": 24,
+            "y": 90,
+            "width": 200,
+            "height": 42
+          },
+          "enabled": true,
+          "depth": 1,
+          "password": false,
+          "editable": true,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e3",
+          "kind": "text-field"
+        },
+        {
+          "index": 3,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Geometry action",
+          "identifier": "geometry-action",
+          "rect": {
+            "x": 240,
+            "y": 90,
+            "width": 129,
+            "height": 42
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e4",
+          "kind": "button"
+        },
+        {
+          "index": 4,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Landscape",
+          "identifier": "landscape",
+          "rect": {
+            "x": 24,
+            "y": 140,
+            "width": 100,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e5",
+          "kind": "button"
+        },
+        {
+          "index": 5,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Portrait",
+          "identifier": "portrait",
+          "rect": {
+            "x": 132,
+            "y": 140,
+            "width": 100,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e6",
+          "kind": "button"
+        },
+        {
+          "index": 6,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Hide keyboard",
+          "identifier": "hide-keyboard",
+          "rect": {
+            "x": 240,
+            "y": 140,
+            "width": 140,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e7",
+          "kind": "button"
+        },
+        {
+          "index": 7,
+          "parentIndex": 0,
+          "type": "Table",
+          "role": "UITableView",
+          "rect": {
+            "x": 24,
+            "y": 188,
+            "width": 345,
+            "height": 120
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "hiddenContentBelow": true,
+          "ref": "e8",
+          "kind": "table"
+        },
+        {
+          "index": 8,
+          "parentIndex": 7,
+          "type": "Cell",
+          "role": "UITableViewCellAccessibilityElement",
+          "subrole": "UIAccessibilityElement",
+          "identifier": "parent-row",
+          "rect": {
+            "x": 24,
+            "y": 188,
+            "width": 345,
+            "height": 120
+          },
+          "enabled": true,
+          "depth": 2,
+          "pid": 82729,
+          "hittable": true,
+          "label": "Parent row",
+          "ref": "e9",
+          "kind": "cell"
+        },
+        {
+          "index": 9,
+          "parentIndex": 8,
+          "type": "Button",
+          "role": "UIButton",
+          "subrole": "UIAccessibilityElement",
+          "label": "Child action",
+          "identifier": "child-action",
+          "rect": {
+            "x": 262,
+            "y": 223,
+            "width": 100,
+            "height": 45
+          },
+          "enabled": true,
+          "depth": 3,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e10",
+          "kind": "button"
+        },
+        {
+          "index": 10,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Duplicate action",
+          "identifier": "duplicate-action",
+          "rect": {
+            "x": 24,
+            "y": 320,
+            "width": 166,
+            "height": 38
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e11",
+          "kind": "button"
+        },
+        {
+          "index": 11,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Duplicate action",
+          "identifier": "duplicate-action",
+          "rect": {
+            "x": 202,
+            "y": 320,
+            "width": 166,
+            "height": 38
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e12",
+          "kind": "button"
+        },
+        {
+          "index": 12,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "identifier": "results",
+          "rect": {
+            "x": 24,
+            "y": 378,
+            "width": 345,
+            "height": 95
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 82729,
+          "hittable": true,
+          "ref": "e13",
+          "kind": "text"
+        }
+      ],
+      "truncated": false,
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 13,
+        "totalNodeCount": 13,
+        "reasons": [
+          "scroll-hidden-below"
+        ]
+      },
+      "snapshotDiagnostics": {
+        "stats": {
+          "count": 1,
+          "p50Ms": 28,
+          "p95Ms": 28,
+          "maxMs": 28,
+          "slowThresholdMs": 1500,
+          "platform": "ios",
+          "backends": {
+            "simulator-ax-bridge": 1
+          }
+        }
+      },
+      "keyboard": {
+        "kind": "absent",
+        "treeBound": true
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "presentedSurface": "absent",
+      "appName": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry",
+      "refsGeneration": 686880
+    },
+    "identifiers": {
+      "session": "codex-geometry-after-phone",
+      "deviceId": "444343EA-314F-44BB-9BC8-3B8FB8E1AA8D",
+      "deviceName": "Codex Readiness Geometry 20261111",
+      "udid": "444343EA-314F-44BB-9BC8-3B8FB8E1AA8D",
+      "appId": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "command": {
+    "action": "record-start",
+    "name": "landscape-keyboard"
+  },
+  "ms": 827.0282079999743,
+  "result": {
+    "recording": "started",
+    "outPath": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/before/landscape-keyboard.mp4",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-geometry-20261111/state-before/sessions/codex-geometry-before",
+    "recordingBackend": "simctl recordVideo",
+    "recordingScope": "app",
+    "recordOnlySession": false,
+    "activeSessionApp": {
+      "bundleId": "dev.e2e.readinessgeometry",
+      "name": "dev.e2e.readinessgeometry"
+    },
+    "showTouches": false
+  }
+}

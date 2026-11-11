@@ -1,0 +1,286 @@
+{
+  "nodes": [
+    {
+      "depth": 0,
+      "index": 0,
+      "hittable": false,
+      "enabled": true,
+      "label": "GeometryFixture",
+      "type": "Application",
+      "rect": {
+        "width": 551,
+        "y": 224,
+        "height": 813,
+        "x": 241
+      },
+      "ref": "e1",
+      "kind": "application"
+    },
+    {
+      "depth": 1,
+      "index": 1,
+      "hittable": true,
+      "enabled": true,
+      "label": "Native geometry fixture",
+      "type": "StaticText",
+      "rect": {
+        "width": 503,
+        "y": 269,
+        "height": 30,
+        "x": 265
+      },
+      "parentIndex": 0,
+      "ref": "e2",
+      "kind": "text"
+    },
+    {
+      "parentIndex": 0,
+      "depth": 1,
+      "index": 2,
+      "hittable": true,
+      "enabled": true,
+      "identifier": "geometry-input",
+      "type": "TextField",
+      "placeholder": "Geometry input",
+      "rect": {
+        "width": 200,
+        "y": 314,
+        "height": 42,
+        "x": 265
+      },
+      "password": false,
+      "editable": true,
+      "ref": "e3",
+      "kind": "text-field"
+    },
+    {
+      "parentIndex": 0,
+      "depth": 1,
+      "index": 3,
+      "hittable": true,
+      "enabled": true,
+      "identifier": "geometry-action",
+      "label": "Geometry action",
+      "type": "Button",
+      "rect": {
+        "width": 220,
+        "y": 314,
+        "height": 42,
+        "x": 481
+      },
+      "ref": "e4",
+      "kind": "button"
+    },
+    {
+      "parentIndex": 0,
+      "depth": 1,
+      "index": 4,
+      "hittable": true,
+      "enabled": true,
+      "identifier": "landscape",
+      "label": "Landscape",
+      "type": "Button",
+      "rect": {
+        "width": 100,
+        "y": 364,
+        "height": 36,
+        "x": 265
+      },
+      "ref": "e5",
+      "kind": "button"
+    },
+    {
+      "parentIndex": 0,
+      "depth": 1,
+      "index": 5,
+      "hittable": true,
+      "enabled": true,
+      "identifier": "portrait",
+      "label": "Portrait",
+      "type": "Button",
+      "rect": {
+        "width": 100,
+        "y": 364,
+        "height": 36,
+        "x": 373
+      },
+      "ref": "e6",
+      "kind": "button"
+    },
+    {
+      "parentIndex": 0,
+      "depth": 1,
+      "index": 6,
+      "hittable": true,
+      "enabled": true,
+      "identifier": "hide-keyboard",
+      "label": "Hide keyboard",
+      "type": "Button",
+      "rect": {
+        "width": 140,
+        "y": 364,
+        "height": 36,
+        "x": 481
+      },
+      "ref": "e7",
+      "kind": "button"
+    },
+    {
+      "depth": 1,
+      "hittable": true,
+      "index": 7,
+      "enabled": true,
+      "parentIndex": 0,
+      "type": "Table",
+      "rect": {
+        "y": 412,
+        "height": 120,
+        "width": 350,
+        "x": 265
+      },
+      "hiddenContentBelow": true,
+      "ref": "e8",
+      "kind": "table"
+    },
+    {
+      "depth": 2,
+      "index": 8,
+      "hittable": true,
+      "enabled": true,
+      "identifier": "parent-row",
+      "type": "Cell",
+      "rect": {
+        "y": 412,
+        "width": 350,
+        "height": 120,
+        "x": 265
+      },
+      "parentIndex": 7,
+      "label": "Parent row",
+      "ref": "e9",
+      "kind": "cell"
+    },
+    {
+      "parentIndex": 8,
+      "depth": 3,
+      "index": 9,
+      "hittable": true,
+      "enabled": true,
+      "identifier": "child-action",
+      "label": "Child action",
+      "type": "Button",
+      "rect": {
+        "y": 447,
+        "width": 100,
+        "height": 45,
+        "x": 503
+      },
+      "ref": "e10",
+      "kind": "button"
+    },
+    {
+      "parentIndex": 0,
+      "identifier": "results",
+      "hittable": true,
+      "rect": {
+        "y": 412,
+        "width": 117,
+        "height": 95,
+        "x": 651
+      },
+      "depth": 1,
+      "type": "StaticText",
+      "index": 10,
+      "enabled": true,
+      "ref": "e11",
+      "kind": "text"
+    },
+    {
+      "parentIndex": 0,
+      "identifier": "duplicate-action",
+      "hittable": true,
+      "rect": {
+        "y": 544,
+        "width": 166,
+        "height": 38,
+        "x": 265
+      },
+      "depth": 1,
+      "type": "Button",
+      "index": 11,
+      "label": "Duplicate action",
+      "enabled": true,
+      "ref": "e12",
+      "kind": "button"
+    },
+    {
+      "parentIndex": 0,
+      "identifier": "duplicate-action",
+      "hittable": true,
+      "rect": {
+        "y": 544,
+        "width": 166,
+        "height": 38,
+        "x": 443
+      },
+      "depth": 1,
+      "type": "Button",
+      "index": 12,
+      "label": "Duplicate action",
+      "enabled": true,
+      "ref": "e13",
+      "kind": "button"
+    }
+  ],
+  "truncated": false,
+  "appName": "dev.e2e.readinessgeometry",
+  "appBundleId": "dev.e2e.readinessgeometry",
+  "viewport": {
+    "width": 551,
+    "height": 813
+  },
+  "presentedSurface": "unknown",
+  "visibility": {
+    "partial": true,
+    "visibleNodeCount": 13,
+    "totalNodeCount": 13,
+    "reasons": [
+      "scroll-hidden-below"
+    ]
+  },
+  "snapshotQuality": {
+    "state": "recovered",
+    "backend": "private-ax",
+    "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+    "reasonCode": "requested-backend",
+    "customActions": {
+      "read": 9,
+      "candidates": 9,
+      "truncated": 0,
+      "blocked": false
+    },
+    "timing": {
+      "acquisitionMs": 1277.1360874176025,
+      "presentationMs": 0.11599063873291016
+    }
+  },
+  "snapshotDiagnostics": {
+    "stats": {
+      "count": 3,
+      "p50Ms": 1322,
+      "p95Ms": 4548,
+      "maxMs": 4548,
+      "slowThresholdMs": 1500,
+      "platform": "ios",
+      "backends": {
+        "apple-runner": 3
+      }
+    }
+  },
+  "refsGeneration": 885215,
+  "identifiers": {
+    "session": "codex-geometry-after-controlled-ref",
+    "appId": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry"
+  }
+}

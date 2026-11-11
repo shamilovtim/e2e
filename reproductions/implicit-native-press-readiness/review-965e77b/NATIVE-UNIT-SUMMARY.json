@@ -1,0 +1,17 @@
+{
+  "executed": 8,
+  "failures": 0,
+  "sourceFingerprint": "a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3",
+  "tests": [
+    "testSnapshotPresentationPreservesCurrentWireShape",
+    "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+    "testNativePressTypesMatchBridgeGoldenNamesAndUnnamedRunnerTypes",
+    "testAuthorizedPressTargetMatchesGoldenParityTable",
+    "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+    "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+    "testEveryRunnerRequestFieldHasAProductionRequest",
+    "testProductionRunnerRequestsDecodeWithoutDroppingAKey"
+  ],
+  "originalLog": "/tmp/codex-sdk-readiness-geometry-20261111/native-unit/selected8.log",
+  "originalXCResult": "/tmp/codex-sdk-readiness-geometry-20261111/native-unit/Selected8.xcresult"
+}

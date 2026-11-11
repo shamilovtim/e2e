@@ -1,0 +1,1796 @@
+{
+  "snapshot": {
+    "ok": true,
+    "data": {
+      "presentedSurface": "unknown",
+      "snapshotQualityNotes": [
+        {
+          "clippedNodeCount": 8,
+          "droppedNodeCount": 0,
+          "code": "regular-geometry-clipped"
+        }
+      ],
+      "runnerMainThreadBusy": false,
+      "snapshotQuality": {
+        "customActions": {
+          "blocked": false,
+          "candidates": 47,
+          "truncated": 0,
+          "read": 12
+        },
+        "timing": {
+          "acquisitionMs": 1573.6680030822754,
+          "presentationMs": 0.35393238067626953
+        },
+        "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+        "state": "recovered",
+        "backend": "private-ax",
+        "reasonCode": "deferred"
+      },
+      "nodes": [
+        {
+          "depth": 0,
+          "type": "Application",
+          "nativePressTarget": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "height": 393,
+              "width": 852
+            },
+            "type": "Application",
+            "label": "GeometryFixture"
+          },
+          "index": 0,
+          "label": "GeometryFixture",
+          "enabled": true,
+          "rect": {
+            "height": 393,
+            "width": 852,
+            "x": 0,
+            "y": 0
+          },
+          "hittable": false
+        },
+        {
+          "depth": 1,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "rect": {
+              "y": 45,
+              "width": 804,
+              "height": 30,
+              "x": 24
+            },
+            "type": "StaticText",
+            "label": "Native geometry fixture"
+          },
+          "index": 1,
+          "label": "Native geometry fixture",
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "height": 30,
+            "width": 804,
+            "x": 24,
+            "y": 45
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "geometry-input",
+          "depth": 1,
+          "type": "TextField",
+          "nativePressTarget": {
+            "rect": {
+              "x": 24,
+              "height": 42,
+              "width": 200,
+              "y": 90
+            },
+            "type": "TextField",
+            "identifier": "geometry-input",
+            "value": "Q"
+          },
+          "value": "Q",
+          "focused": true,
+          "index": 2,
+          "placeholder": "Geometry input",
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "height": 42,
+            "width": 200,
+            "x": 24,
+            "y": 90
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "geometry-action",
+          "depth": 1,
+          "type": "Button",
+          "nativePressTarget": {
+            "rect": {
+              "y": 90,
+              "height": 42,
+              "x": 240,
+              "width": 220
+            },
+            "type": "Button",
+            "identifier": "geometry-action",
+            "label": "Geometry action"
+          },
+          "index": 3,
+          "label": "Geometry action",
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "height": 42,
+            "width": 220,
+            "x": 240,
+            "y": 90
+          },
+          "hittable": true
+        },
+        {
+          "depth": 2,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "rect": {
+              "width": 114,
+              "height": 18,
+              "x": 293,
+              "y": 102
+            },
+            "type": "StaticText",
+            "label": "Geometry action"
+          },
+          "index": 4,
+          "label": "Geometry action",
+          "enabled": true,
+          "parentIndex": 3,
+          "rect": {
+            "height": 18,
+            "width": 114,
+            "x": 293,
+            "y": 102
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "landscape",
+          "depth": 1,
+          "type": "Button",
+          "nativePressTarget": {
+            "label": "Landscape",
+            "rect": {
+              "width": 100,
+              "height": 36,
+              "x": 24,
+              "y": 140
+            },
+            "identifier": "landscape",
+            "type": "Button"
+          },
+          "label": "Landscape",
+          "index": 5,
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "width": 100,
+            "height": 36,
+            "x": 24,
+            "y": 140
+          },
+          "hittable": true
+        },
+        {
+          "depth": 2,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "label": "Landscape",
+            "rect": {
+              "y": 149,
+              "width": 75,
+              "height": 18,
+              "x": 36.666666666666664
+            },
+            "type": "StaticText"
+          },
+          "label": "Landscape",
+          "enabled": true,
+          "index": 6,
+          "parentIndex": 5,
+          "rect": {
+            "width": 75,
+            "height": 18,
+            "x": 36.666666666666664,
+            "y": 149
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "portrait",
+          "depth": 1,
+          "type": "Button",
+          "nativePressTarget": {
+            "label": "Portrait",
+            "rect": {
+              "y": 140,
+              "width": 100,
+              "x": 132,
+              "height": 36
+            },
+            "identifier": "portrait",
+            "type": "Button"
+          },
+          "label": "Portrait",
+          "index": 7,
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "width": 100,
+            "height": 36,
+            "x": 132,
+            "y": 140
+          },
+          "hittable": true
+        },
+        {
+          "depth": 2,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "label": "Portrait",
+            "rect": {
+              "y": 149,
+              "height": 18,
+              "width": 51,
+              "x": 156.66666666666669
+            },
+            "type": "StaticText"
+          },
+          "label": "Portrait",
+          "enabled": true,
+          "index": 8,
+          "parentIndex": 7,
+          "rect": {
+            "width": 51,
+            "height": 18,
+            "x": 156.66666666666669,
+            "y": 149
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "hide-keyboard",
+          "depth": 1,
+          "type": "Button",
+          "nativePressTarget": {
+            "label": "Hide keyboard",
+            "rect": {
+              "height": 36,
+              "x": 240,
+              "width": 140,
+              "y": 140
+            },
+            "identifier": "hide-keyboard",
+            "type": "Button"
+          },
+          "label": "Hide keyboard",
+          "index": 9,
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "width": 140,
+            "height": 36,
+            "x": 240,
+            "y": 140
+          },
+          "hittable": true
+        },
+        {
+          "depth": 2,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "label": "Hide keyboard",
+            "rect": {
+              "x": 260,
+              "height": 18,
+              "y": 149,
+              "width": 100
+            },
+            "type": "StaticText"
+          },
+          "label": "Hide keyboard",
+          "enabled": true,
+          "index": 10,
+          "parentIndex": 9,
+          "rect": {
+            "width": 100,
+            "height": 18,
+            "x": 260,
+            "y": 149
+          },
+          "hittable": true
+        },
+        {
+          "depth": 1,
+          "type": "Table",
+          "nativePressTarget": {
+            "rect": {
+              "y": 188,
+              "x": 24,
+              "width": 350,
+              "height": 120
+            },
+            "type": "Table"
+          },
+          "index": 11,
+          "enabled": true,
+          "parentIndex": 0,
+          "hittable": true,
+          "rect": {
+            "width": 350,
+            "height": 120,
+            "x": 24,
+            "y": 188
+          }
+        },
+        {
+          "identifier": "parent-row",
+          "depth": 2,
+          "type": "Cell",
+          "nativePressTarget": {
+            "type": "Cell",
+            "identifier": "parent-row",
+            "rect": {
+              "width": 350,
+              "height": 120,
+              "x": 24,
+              "y": 188
+            }
+          },
+          "index": 12,
+          "enabled": true,
+          "selected": true,
+          "parentIndex": 11,
+          "rect": {
+            "y": 188,
+            "width": 350,
+            "x": 24,
+            "height": 120
+          },
+          "hittable": true
+        },
+        {
+          "depth": 3,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "type": "StaticText",
+            "rect": {
+              "y": 188,
+              "height": 120,
+              "x": 79,
+              "width": 275
+            },
+            "label": "Parent row"
+          },
+          "index": 13,
+          "enabled": true,
+          "label": "Parent row",
+          "parentIndex": 12,
+          "rect": {
+            "height": 120,
+            "width": 275,
+            "x": 79,
+            "y": 188
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "child-action",
+          "depth": 3,
+          "type": "Button",
+          "nativePressTarget": {
+            "type": "Button",
+            "identifier": "child-action",
+            "rect": {
+              "x": 297,
+              "y": 223,
+              "width": 100,
+              "height": 45
+            },
+            "label": "Child action"
+          },
+          "index": 14,
+          "label": "Child action",
+          "enabled": true,
+          "parentIndex": 12,
+          "rect": {
+            "height": 45,
+            "width": 77,
+            "x": 297,
+            "y": 223
+          },
+          "hittable": true
+        },
+        {
+          "depth": 4,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "type": "StaticText",
+            "rect": {
+              "y": 236.66666666666666,
+              "x": 306,
+              "height": 18,
+              "width": 82
+            },
+            "label": "Child action"
+          },
+          "index": 15,
+          "enabled": true,
+          "label": "Child action",
+          "parentIndex": 14,
+          "rect": {
+            "height": 18,
+            "width": 68,
+            "x": 306,
+            "y": 236.66666666666666
+          },
+          "hittable": true
+        },
+        {
+          "depth": 2,
+          "type": "Other",
+          "nativePressTarget": {
+            "value": "0%",
+            "type": "Other",
+            "rect": {
+              "x": 341,
+              "width": 30,
+              "y": 188,
+              "height": 120
+            },
+            "label": "Vertical scroll bar, 1 page"
+          },
+          "value": "0%",
+          "index": 16,
+          "label": "Vertical scroll bar, 1 page",
+          "enabled": true,
+          "parentIndex": 11,
+          "rect": {
+            "height": 120,
+            "width": 30,
+            "x": 341,
+            "y": 188
+          },
+          "hittable": true
+        },
+        {
+          "depth": 2,
+          "type": "Other",
+          "nativePressTarget": {
+            "value": "0%",
+            "type": "Other",
+            "rect": {
+              "x": 24,
+              "y": 275,
+              "width": 350,
+              "height": 30
+            },
+            "label": "Horizontal scroll bar, 1 page"
+          },
+          "value": "0%",
+          "index": 17,
+          "label": "Horizontal scroll bar, 1 page",
+          "enabled": true,
+          "parentIndex": 11,
+          "rect": {
+            "height": 30,
+            "width": 350,
+            "x": 24,
+            "y": 275
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "results",
+          "depth": 1,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "type": "StaticText",
+            "identifier": "results",
+            "rect": {
+              "width": 418,
+              "x": 410,
+              "y": 188,
+              "height": 95
+            },
+            "label": "actionReceivedTap: 4\nchildReceivedTap: 2\nduplicateAReceivedTap: 2\nparentReceivedTap: 2"
+          },
+          "index": 18,
+          "label": "actionReceivedTap: 4\nchildReceivedTap: 2\nduplicateAReceivedTap: 2\nparentReceivedTap: 2",
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "height": 95,
+            "width": 418,
+            "x": 410,
+            "y": 188
+          },
+          "hittable": true
+        },
+        {
+          "identifier": "duplicate-action",
+          "depth": 1,
+          "type": "Button",
+          "nativePressTarget": {
+            "type": "Button",
+            "identifier": "duplicate-action",
+            "rect": {
+              "height": 38,
+              "y": 320,
+              "x": 24,
+              "width": 166
+            },
+            "label": "Duplicate action"
+          },
+          "index": 19,
+          "label": "Duplicate action",
+          "enabled": true,
+          "parentIndex": 0,
+          "rect": {
+            "height": 38,
+            "width": 166,
+            "x": 24,
+            "y": 320
+          },
+          "hittable": true
+        },
+        {
+          "depth": 2,
+          "type": "StaticText",
+          "nativePressTarget": {
+            "type": "StaticText",
+            "rect": {
+              "x": 51.66666666666667,
+              "width": 111.00000000000001,
+              "y": 330,
+              "height": 18
+            },
+            "label": "Duplicate action"
+          },
+          "index": 20,
+          "enabled": true,
+          "label": "Duplicate action",
+          "parentIndex": 19,
+          "rect": {
+            "height": 18,
+            "width": 111.00000000000001,
+            "x": 51.66666666666667,
+            "y": 330
+          },
+          "hittable": true
+        },
+        {
+          "label": "Duplicate action",
+          "nativePressTarget": {
+            "type": "Button",
+            "identifier": "duplicate-action",
+            "rect": {
+              "height": 38,
+              "x": 202,
+              "y": 320,
+              "width": 166
+            },
+            "label": "Duplicate action"
+          },
+          "identifier": "duplicate-action",
+          "type": "Button",
+          "parentIndex": 0,
+          "depth": 1,
+          "index": 21,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "height": 38,
+            "width": 166,
+            "x": 202,
+            "y": 320
+          }
+        },
+        {
+          "label": "Duplicate action",
+          "nativePressTarget": {
+            "type": "StaticText",
+            "rect": {
+              "x": 229.66666666666669,
+              "width": 111,
+              "y": 330,
+              "height": 18
+            },
+            "label": "Duplicate action"
+          },
+          "type": "StaticText",
+          "parentIndex": 21,
+          "depth": 2,
+          "index": 22,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "height": 18,
+            "width": 111,
+            "x": 229.66666666666669,
+            "y": 330
+          }
+        },
+        {
+          "nativePressTarget": {
+            "type": "Other",
+            "identifier": "inputView",
+            "rect": {
+              "x": 75,
+              "y": 213,
+              "height": 180,
+              "width": 702
+            }
+          },
+          "identifier": "inputView",
+          "type": "Other",
+          "parentIndex": 0,
+          "depth": 1,
+          "index": 23,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "height": 180,
+            "width": 702,
+            "x": 75,
+            "y": 213
+          }
+        },
+        {
+          "label": "Emoji",
+          "nativePressTarget": {
+            "rect": {
+              "height": 68.73516393505099,
+              "width": 68.0852958475086,
+              "x": 8.47726568115926,
+              "y": 327.6989567998571
+            },
+            "type": "Button",
+            "label": "Emoji"
+          },
+          "type": "Button",
+          "parentIndex": 0,
+          "depth": 1,
+          "index": 24,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "x": 8.47726568115926,
+            "y": 327.6989567998571,
+            "width": 68.0852958475086,
+            "height": 65.30104320014289
+          }
+        },
+        {
+          "label": "Dictate",
+          "nativePressTarget": {
+            "rect": {
+              "height": 68.73516393505099,
+              "x": 775.4374384713321,
+              "y": 327.3656234665238,
+              "width": 68.08529584750863
+            },
+            "identifier": "dictation",
+            "label": "Dictate",
+            "type": "Button"
+          },
+          "identifier": "dictation",
+          "type": "Button",
+          "parentIndex": 0,
+          "depth": 1,
+          "index": 25,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "width": 68.08529584750863,
+            "y": 327.3656234665238,
+            "height": 65.6343765334762,
+            "x": 775.4374384713321
+          }
+        },
+        {
+          "label": "Dictate",
+          "nativePressTarget": {
+            "rect": {
+              "x": 775.4374384713321,
+              "y": 327.3656234665238,
+              "width": 68.08529584750863,
+              "height": 68.73516393505099
+            },
+            "identifier": "dictation",
+            "label": "Dictate",
+            "type": "Button"
+          },
+          "identifier": "dictation",
+          "type": "Button",
+          "parentIndex": 0,
+          "depth": 1,
+          "index": 26,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "width": 68.08529584750863,
+            "y": 327.3656234665238,
+            "height": 65.6343765334762,
+            "x": 775.4374384713321
+          }
+        },
+        {
+          "nativePressTarget": {
+            "rect": {
+              "x": 75,
+              "y": 213,
+              "width": 702,
+              "height": 177
+            },
+            "type": "Keyboard"
+          },
+          "type": "Keyboard",
+          "parentIndex": 0,
+          "keyboardOwned": true,
+          "depth": 1,
+          "index": 27,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "width": 702,
+            "y": 213,
+            "height": 177,
+            "x": 75
+          }
+        },
+        {
+          "nativePressTarget": {
+            "rect": {
+              "y": 213,
+              "x": 75,
+              "height": 177,
+              "width": 702
+            },
+            "identifier": "UIKeyboardLayoutStar Preview",
+            "type": "Other"
+          },
+          "identifier": "UIKeyboardLayoutStar Preview",
+          "type": "Other",
+          "parentIndex": 27,
+          "keyboardOwned": true,
+          "depth": 2,
+          "index": 28,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "width": 702,
+            "y": 213,
+            "height": 177,
+            "x": 75
+          }
+        },
+        {
+          "label": "Padding-Left",
+          "nativePressTarget": {
+            "rect": {
+              "height": 0,
+              "y": 213,
+              "width": 0,
+              "x": 75
+            },
+            "label": "Padding-Left",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 29,
+          "enabled": true,
+          "hittable": false,
+          "rect": {
+            "width": 0,
+            "y": 213,
+            "height": 0,
+            "x": 75
+          }
+        },
+        {
+          "label": "Padding-Right",
+          "nativePressTarget": {
+            "rect": {
+              "x": 75,
+              "width": 0,
+              "y": 213,
+              "height": 0
+            },
+            "label": "Padding-Right",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 30,
+          "enabled": true,
+          "hittable": false,
+          "rect": {
+            "width": 0,
+            "y": 213,
+            "height": 0,
+            "x": 75
+          }
+        },
+        {
+          "label": "Padding-Left",
+          "nativePressTarget": {
+            "rect": {
+              "width": 0,
+              "height": 0,
+              "x": 75,
+              "y": 213
+            },
+            "label": "Padding-Left",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 31,
+          "enabled": true,
+          "hittable": false,
+          "rect": {
+            "width": 0,
+            "y": 213,
+            "height": 0,
+            "x": 75
+          }
+        },
+        {
+          "label": "Padding-Right",
+          "nativePressTarget": {
+            "rect": {
+              "width": 0,
+              "x": 75,
+              "y": 213,
+              "height": 0
+            },
+            "label": "Padding-Right",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 32,
+          "enabled": true,
+          "hittable": false,
+          "rect": {
+            "width": 0,
+            "y": 213,
+            "height": 0,
+            "x": 75
+          }
+        },
+        {
+          "label": "Padding-Left",
+          "nativePressTarget": {
+            "rect": {
+              "y": 213,
+              "width": 0,
+              "x": 75,
+              "height": 0
+            },
+            "label": "Padding-Left",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 33,
+          "enabled": true,
+          "hittable": false,
+          "rect": {
+            "width": 0,
+            "y": 213,
+            "height": 0,
+            "x": 75
+          }
+        },
+        {
+          "label": "Padding-Right",
+          "nativePressTarget": {
+            "rect": {
+              "y": 213,
+              "height": 0,
+              "x": 75,
+              "width": 0
+            },
+            "label": "Padding-Right",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 34,
+          "enabled": true,
+          "hittable": false,
+          "rect": {
+            "width": 0,
+            "y": 213,
+            "height": 0,
+            "x": 75
+          }
+        },
+        {
+          "label": "q",
+          "nativePressTarget": {
+            "rect": {
+              "y": 218,
+              "width": 70,
+              "x": 77,
+              "height": 40
+            },
+            "label": "q",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 35,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "width": 70,
+            "y": 218,
+            "height": 40,
+            "x": 77
+          }
+        },
+        {
+          "label": "w",
+          "nativePressTarget": {
+            "rect": {
+              "width": 70,
+              "y": 218,
+              "height": 40,
+              "x": 147
+            },
+            "type": "Key",
+            "label": "w"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 36,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "y": 218,
+            "height": 40,
+            "x": 147,
+            "width": 70
+          }
+        },
+        {
+          "label": "e",
+          "nativePressTarget": {
+            "rect": {
+              "y": 218,
+              "width": 70,
+              "height": 40,
+              "x": 217
+            },
+            "label": "e",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 37,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "x": 217,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          }
+        },
+        {
+          "label": "r",
+          "nativePressTarget": {
+            "rect": {
+              "x": 287,
+              "height": 40,
+              "y": 218,
+              "width": 70
+            },
+            "label": "r",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 38,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "x": 287,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          }
+        },
+        {
+          "label": "t",
+          "nativePressTarget": {
+            "rect": {
+              "width": 70,
+              "height": 40,
+              "x": 357,
+              "y": 218
+            },
+            "label": "t",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 39,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "x": 357,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          }
+        },
+        {
+          "label": "y",
+          "nativePressTarget": {
+            "rect": {
+              "x": 427,
+              "y": 218,
+              "width": 70,
+              "height": 40
+            },
+            "label": "y",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 40,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "x": 427,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          }
+        },
+        {
+          "label": "u",
+          "nativePressTarget": {
+            "rect": {
+              "height": 40,
+              "width": 70,
+              "y": 218,
+              "x": 497
+            },
+            "label": "u",
+            "type": "Key"
+          },
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "depth": 3,
+          "index": 41,
+          "enabled": true,
+          "hittable": true,
+          "rect": {
+            "x": 497,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          }
+        },
+        {
+          "rect": {
+            "x": 567,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "rect": {
+              "width": 70,
+              "y": 218,
+              "x": 567,
+              "height": 40
+            },
+            "label": "i",
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "i",
+          "index": 42
+        },
+        {
+          "rect": {
+            "x": 637,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "rect": {
+              "y": 218,
+              "width": 70,
+              "x": 637,
+              "height": 40
+            },
+            "label": "o",
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "o",
+          "index": 43
+        },
+        {
+          "rect": {
+            "x": 707,
+            "y": 218,
+            "width": 70,
+            "height": 40
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "rect": {
+              "height": 40,
+              "y": 218,
+              "x": 707,
+              "width": 70
+            },
+            "label": "p",
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "p",
+          "index": 44
+        },
+        {
+          "rect": {
+            "x": 112,
+            "y": 258,
+            "width": 70,
+            "height": 40
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "rect": {
+              "height": 40,
+              "x": 112,
+              "y": 258,
+              "width": 70
+            },
+            "label": "a",
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "a",
+          "index": 45
+        },
+        {
+          "rect": {
+            "x": 182,
+            "y": 258,
+            "width": 70,
+            "height": 40
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "rect": {
+              "width": 70,
+              "height": 40,
+              "y": 258,
+              "x": 182
+            },
+            "label": "s",
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "s",
+          "index": 46
+        },
+        {
+          "rect": {
+            "x": 252,
+            "y": 258,
+            "width": 70,
+            "height": 40
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "rect": {
+              "x": 252,
+              "height": 40,
+              "width": 70,
+              "y": 258
+            },
+            "label": "d",
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "d",
+          "index": 47
+        },
+        {
+          "rect": {
+            "width": 70,
+            "x": 322,
+            "height": 40,
+            "y": 258
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "rect": {
+              "x": 322,
+              "y": 258,
+              "width": 70,
+              "height": 40
+            },
+            "label": "f"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "f",
+          "index": 48
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 392,
+            "y": 258,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "g",
+            "rect": {
+              "y": 258,
+              "height": 40,
+              "width": 70,
+              "x": 392
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "g",
+          "index": 49
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 462,
+            "y": 258,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "h",
+            "rect": {
+              "x": 462,
+              "y": 258,
+              "width": 70,
+              "height": 40
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "h",
+          "index": 50
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 532,
+            "y": 258,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "j",
+            "rect": {
+              "width": 70,
+              "height": 40,
+              "y": 258,
+              "x": 532
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "j",
+          "index": 51
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 602,
+            "y": 258,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "k",
+            "rect": {
+              "width": 70,
+              "height": 40,
+              "y": 258,
+              "x": 602
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "k",
+          "index": 52
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 672,
+            "y": 258,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "l",
+            "rect": {
+              "y": 258,
+              "height": 40,
+              "x": 672,
+              "width": 70
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "l",
+          "index": 53
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 77,
+            "y": 298,
+            "width": 91
+          },
+          "hittable": true,
+          "type": "Button",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "identifier": "shift",
+            "type": "Button",
+            "label": "shift",
+            "rect": {
+              "y": 298,
+              "x": 77,
+              "width": 91,
+              "height": 40
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "identifier": "shift",
+          "label": "shift",
+          "index": 54
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 182,
+            "y": 298,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "z",
+            "rect": {
+              "x": 182,
+              "height": 40,
+              "width": 70,
+              "y": 298
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "z",
+          "index": 55
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 252,
+            "y": 298,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "x",
+            "rect": {
+              "x": 252,
+              "width": 70,
+              "height": 40,
+              "y": 298
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "x",
+          "index": 56
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 322,
+            "y": 298,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "c",
+            "rect": {
+              "width": 70,
+              "x": 322,
+              "y": 298,
+              "height": 40
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "c",
+          "index": 57
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 392,
+            "y": 298,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "v",
+            "rect": {
+              "x": 392,
+              "y": 298,
+              "height": 40,
+              "width": 70
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "v",
+          "index": 58
+        },
+        {
+          "rect": {
+            "height": 40,
+            "x": 462,
+            "y": 298,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "type": "Key",
+            "label": "b",
+            "rect": {
+              "x": 462,
+              "y": 298,
+              "width": 70,
+              "height": 40
+            }
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "b",
+          "index": 59
+        },
+        {
+          "rect": {
+            "height": 40,
+            "y": 298,
+            "x": 532,
+            "width": 70
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "rect": {
+              "height": 40,
+              "x": 532,
+              "y": 298,
+              "width": 70
+            },
+            "type": "Key",
+            "label": "n"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "n",
+          "index": 60
+        },
+        {
+          "rect": {
+            "height": 40,
+            "y": 298,
+            "width": 70,
+            "x": 602
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "label": "m",
+            "rect": {
+              "x": 602,
+              "height": 40,
+              "y": 298,
+              "width": 70
+            },
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "label": "m",
+          "index": 61
+        },
+        {
+          "rect": {
+            "height": 40,
+            "y": 298,
+            "width": 91,
+            "x": 686
+          },
+          "hittable": true,
+          "type": "Key",
+          "parentIndex": 28,
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "label": "delete",
+            "rect": {
+              "height": 40,
+              "x": 686,
+              "y": 298,
+              "width": 91
+            },
+            "identifier": "delete",
+            "type": "Key"
+          },
+          "enabled": true,
+          "depth": 3,
+          "identifier": "delete",
+          "label": "delete",
+          "index": 62
+        },
+        {
+          "index": 63,
+          "depth": 3,
+          "identifier": "more",
+          "label": "numbers",
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "label": "numbers",
+            "rect": {
+              "x": 77,
+              "width": 140,
+              "y": 338,
+              "height": 40
+            },
+            "identifier": "more",
+            "type": "Key"
+          },
+          "rect": {
+            "height": 40,
+            "y": 338,
+            "width": 140,
+            "x": 77
+          },
+          "type": "Key",
+          "hittable": true,
+          "parentIndex": 28,
+          "enabled": true
+        },
+        {
+          "index": 64,
+          "depth": 3,
+          "identifier": "space",
+          "label": "space",
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "label": "space",
+            "rect": {
+              "height": 40,
+              "y": 338,
+              "x": 217,
+              "width": 420
+            },
+            "identifier": "space",
+            "type": "Key"
+          },
+          "rect": {
+            "height": 40,
+            "y": 338,
+            "width": 420,
+            "x": 217
+          },
+          "type": "Key",
+          "hittable": true,
+          "parentIndex": 28,
+          "enabled": true
+        },
+        {
+          "index": 65,
+          "depth": 3,
+          "identifier": "Return",
+          "label": "return",
+          "keyboardOwned": true,
+          "nativePressTarget": {
+            "label": "return",
+            "rect": {
+              "y": 338,
+              "width": 140,
+              "x": 637,
+              "height": 40
+            },
+            "identifier": "Return",
+            "type": "Button"
+          },
+          "rect": {
+            "height": 40,
+            "y": 338,
+            "width": 140,
+            "x": 637
+          },
+          "type": "Button",
+          "hittable": true,
+          "parentIndex": 28,
+          "enabled": true
+        }
+      ],
+      "currentUptimeMs": 484849311.9038333,
+      "truncated": false
+    }
+  },
+  "queries": {
+    "q": {
+      "ok": true,
+      "data": {
+        "found": true,
+        "text": "q",
+        "nodes": [
+          {
+            "enabled": true,
+            "label": "q",
+            "nativePressTarget": {
+              "rect": {
+                "height": 40,
+                "width": 70,
+                "x": 77,
+                "y": 218
+              },
+              "type": "Key",
+              "label": "q"
+            },
+            "type": "Key",
+            "depth": 0,
+            "index": 0,
+            "rect": {
+              "height": 40,
+              "x": 77,
+              "width": 70,
+              "y": 218
+            },
+            "hittable": true
+          }
+        ],
+        "currentUptimeMs": 484849504.9294584,
+        "runnerMainThreadBusy": false
+      }
+    }
+  }
+}

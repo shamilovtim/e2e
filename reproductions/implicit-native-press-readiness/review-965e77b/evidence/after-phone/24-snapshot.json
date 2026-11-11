@@ -1,0 +1,1083 @@
+{
+  "command": {
+    "action": "snapshot"
+  },
+  "ms": 1722.1595000000088,
+  "result": {
+    "nodes": [
+      {
+        "rect": {
+          "y": 0,
+          "height": 393,
+          "width": 852,
+          "x": 0
+        },
+        "index": 0,
+        "hittable": false,
+        "label": "GeometryFixture",
+        "type": "Application",
+        "enabled": true,
+        "depth": 0,
+        "ref": "e1",
+        "kind": "application"
+      },
+      {
+        "rect": {
+          "y": 45,
+          "height": 30,
+          "width": 804,
+          "x": 24
+        },
+        "index": 1,
+        "hittable": true,
+        "label": "Native geometry fixture",
+        "type": "StaticText",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "ref": "e2",
+        "kind": "text"
+      },
+      {
+        "rect": {
+          "y": 90,
+          "height": 42,
+          "width": 200,
+          "x": 24
+        },
+        "index": 2,
+        "hittable": true,
+        "identifier": "geometry-input",
+        "focused": true,
+        "type": "TextField",
+        "enabled": true,
+        "placeholder": "Geometry input",
+        "parentIndex": 0,
+        "depth": 1,
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      {
+        "rect": {
+          "width": 220,
+          "x": 240,
+          "height": 42,
+          "y": 90
+        },
+        "index": 3,
+        "hittable": true,
+        "label": "Geometry action",
+        "identifier": "geometry-action",
+        "type": "Button",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "ref": "e4",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 140,
+          "x": 24,
+          "width": 100,
+          "height": 36
+        },
+        "index": 4,
+        "hittable": true,
+        "label": "Landscape",
+        "identifier": "landscape",
+        "type": "Button",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "ref": "e5",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 140,
+          "x": 132,
+          "width": 100,
+          "height": 36
+        },
+        "index": 5,
+        "hittable": true,
+        "label": "Portrait",
+        "identifier": "portrait",
+        "type": "Button",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "ref": "e6",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 140,
+          "x": 240,
+          "width": 140,
+          "height": 36
+        },
+        "index": 6,
+        "hittable": true,
+        "label": "Hide keyboard",
+        "identifier": "hide-keyboard",
+        "type": "Button",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "ref": "e7",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 188,
+          "height": 120,
+          "x": 24,
+          "width": 350
+        },
+        "index": 7,
+        "hittable": true,
+        "type": "Table",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "hiddenContentBelow": true,
+        "ref": "e8",
+        "kind": "table"
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 188,
+          "width": 350,
+          "height": 120
+        },
+        "index": 8,
+        "hittable": true,
+        "identifier": "parent-row",
+        "type": "Cell",
+        "enabled": true,
+        "selected": true,
+        "parentIndex": 7,
+        "depth": 2,
+        "label": "Parent row",
+        "ref": "e9",
+        "kind": "cell"
+      },
+      {
+        "rect": {
+          "x": 297,
+          "y": 223,
+          "width": 77,
+          "height": 45
+        },
+        "index": 9,
+        "hittable": true,
+        "identifier": "child-action",
+        "label": "Child action",
+        "type": "Button",
+        "enabled": true,
+        "parentIndex": 8,
+        "depth": 3,
+        "ref": "e10",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "x": 410,
+          "y": 188,
+          "width": 418,
+          "height": 95
+        },
+        "index": 10,
+        "hittable": true,
+        "identifier": "results",
+        "label": "actionReceivedTap: 4\nchildReceivedTap: 2\nduplicateAReceivedTap: 2\nparentReceivedTap: 2",
+        "type": "StaticText",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "ref": "e11",
+        "kind": "text"
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 320,
+          "width": 166,
+          "height": 38
+        },
+        "index": 11,
+        "hittable": true,
+        "identifier": "duplicate-action",
+        "label": "Duplicate action",
+        "type": "Button",
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "ref": "e12",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "x": 202,
+          "y": 320,
+          "width": 166,
+          "height": 38
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "index": 12,
+        "label": "Duplicate action",
+        "type": "Button",
+        "identifier": "duplicate-action",
+        "ref": "e13",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "width": 702,
+          "x": 75,
+          "height": 180,
+          "y": 213
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "index": 13,
+        "type": "Other",
+        "identifier": "inputView",
+        "ref": "e14",
+        "kind": "other"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 65.30104320014289,
+          "x": 8.47726568115926,
+          "y": 327.6989567998571,
+          "width": 68.0852958475086
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "index": 14,
+        "label": "Emoji",
+        "type": "Button",
+        "ref": "e15",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 65.6343765334762,
+          "x": 775.4374384713321,
+          "y": 327.3656234665238,
+          "width": 68.08529584750863
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "index": 15,
+        "label": "Dictate",
+        "type": "Button",
+        "identifier": "dictation",
+        "ref": "e16",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 65.6343765334762,
+          "x": 775.4374384713321,
+          "y": 327.3656234665238,
+          "width": 68.08529584750863
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "index": 16,
+        "label": "Dictate",
+        "type": "Button",
+        "identifier": "dictation",
+        "ref": "e17",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 177,
+          "x": 75,
+          "y": 213,
+          "width": 702
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "index": 17,
+        "type": "Keyboard",
+        "keyboardOwned": true,
+        "ref": "e18",
+        "kind": "keyboard"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 177,
+          "x": 75,
+          "y": 213,
+          "width": 702
+        },
+        "hittable": true,
+        "parentIndex": 17,
+        "depth": 2,
+        "index": 18,
+        "type": "Other",
+        "keyboardOwned": true,
+        "identifier": "UIKeyboardLayoutStar Preview",
+        "ref": "e19",
+        "kind": "other"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 0,
+          "x": 75,
+          "y": 213,
+          "width": 0
+        },
+        "hittable": false,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 19,
+        "label": "Padding-Left",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e20",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "x": 77,
+          "y": 218,
+          "width": 70
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 20,
+        "label": "Q",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e21",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "x": 147,
+          "y": 218,
+          "width": 70
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 21,
+        "label": "W",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e22",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "x": 217,
+          "y": 218,
+          "width": 70
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 22,
+        "label": "E",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e23",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "x": 287,
+          "y": 218,
+          "width": 70
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 23,
+        "label": "R",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e24",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "x": 357,
+          "y": 218,
+          "width": 70
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 24,
+        "label": "T",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e25",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "y": 218,
+          "width": 70,
+          "x": 427,
+          "height": 40
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 25,
+        "label": "Y",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e26",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 497,
+          "y": 218
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 26,
+        "label": "U",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e27",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 567,
+          "y": 218
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 27,
+        "label": "I",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e28",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 637,
+          "y": 218
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 28,
+        "label": "O",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e29",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 707,
+          "y": 218
+        },
+        "hittable": true,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 29,
+        "label": "P",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e30",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 75,
+          "y": 213
+        },
+        "hittable": false,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 30,
+        "label": "Padding-Right",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e31",
+        "kind": "key"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 75,
+          "y": 213
+        },
+        "hittable": false,
+        "parentIndex": 18,
+        "depth": 3,
+        "index": 31,
+        "label": "Padding-Left",
+        "type": "Key",
+        "keyboardOwned": true,
+        "ref": "e32",
+        "kind": "key"
+      },
+      {
+        "label": "A",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 32,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 112,
+          "y": 258
+        },
+        "ref": "e33",
+        "kind": "key"
+      },
+      {
+        "label": "S",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 33,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 182,
+          "y": 258
+        },
+        "ref": "e34",
+        "kind": "key"
+      },
+      {
+        "label": "D",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 34,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 252,
+          "y": 258
+        },
+        "ref": "e35",
+        "kind": "key"
+      },
+      {
+        "label": "F",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 35,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 322,
+          "y": 258
+        },
+        "ref": "e36",
+        "kind": "key"
+      },
+      {
+        "label": "G",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 36,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "width": 70,
+          "x": 392,
+          "y": 258
+        },
+        "ref": "e37",
+        "kind": "key"
+      },
+      {
+        "label": "H",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 37,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "x": 462,
+          "y": 258,
+          "width": 70,
+          "height": 40
+        },
+        "ref": "e38",
+        "kind": "key"
+      },
+      {
+        "label": "J",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 38,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 258,
+          "height": 40,
+          "x": 532
+        },
+        "ref": "e39",
+        "kind": "key"
+      },
+      {
+        "label": "K",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 39,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 258,
+          "height": 40,
+          "x": 602
+        },
+        "ref": "e40",
+        "kind": "key"
+      },
+      {
+        "label": "L",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 40,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 258,
+          "height": 40,
+          "x": 672
+        },
+        "ref": "e41",
+        "kind": "key"
+      },
+      {
+        "label": "Padding-Right",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 41,
+        "enabled": true,
+        "hittable": false,
+        "rect": {
+          "width": 0,
+          "y": 213,
+          "height": 0,
+          "x": 75
+        },
+        "ref": "e42",
+        "kind": "key"
+      },
+      {
+        "label": "shift",
+        "selected": true,
+        "identifier": "shift",
+        "type": "Button",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 42,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 91,
+          "y": 298,
+          "height": 40,
+          "x": 77
+        },
+        "ref": "e43",
+        "kind": "button"
+      },
+      {
+        "label": "Padding-Left",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 43,
+        "enabled": true,
+        "hittable": false,
+        "rect": {
+          "width": 0,
+          "y": 213,
+          "height": 0,
+          "x": 75
+        },
+        "ref": "e44",
+        "kind": "key"
+      },
+      {
+        "label": "Z",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 44,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 298,
+          "height": 40,
+          "x": 182
+        },
+        "ref": "e45",
+        "kind": "key"
+      },
+      {
+        "label": "X",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 45,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 298,
+          "height": 40,
+          "x": 252
+        },
+        "ref": "e46",
+        "kind": "key"
+      },
+      {
+        "label": "C",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 46,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 298,
+          "height": 40,
+          "x": 322
+        },
+        "ref": "e47",
+        "kind": "key"
+      },
+      {
+        "label": "V",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 47,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 298,
+          "height": 40,
+          "x": 392
+        },
+        "ref": "e48",
+        "kind": "key"
+      },
+      {
+        "label": "B",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 48,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "width": 70,
+          "y": 298,
+          "height": 40,
+          "x": 462
+        },
+        "ref": "e49",
+        "kind": "key"
+      },
+      {
+        "label": "N",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 49,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "y": 298,
+          "x": 532,
+          "width": 70
+        },
+        "ref": "e50",
+        "kind": "key"
+      },
+      {
+        "label": "M",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 50,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "y": 298,
+          "width": 70,
+          "x": 602
+        },
+        "ref": "e51",
+        "kind": "key"
+      },
+      {
+        "label": "Padding-Right",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 51,
+        "enabled": true,
+        "hittable": false,
+        "rect": {
+          "height": 0,
+          "y": 213,
+          "width": 0,
+          "x": 75
+        },
+        "ref": "e52",
+        "kind": "key"
+      },
+      {
+        "label": "delete",
+        "identifier": "delete",
+        "type": "Key",
+        "parentIndex": 18,
+        "keyboardOwned": true,
+        "depth": 3,
+        "index": 52,
+        "enabled": true,
+        "hittable": true,
+        "rect": {
+          "height": 40,
+          "y": 298,
+          "width": 91,
+          "x": 686
+        },
+        "ref": "e53",
+        "kind": "key"
+      },
+      {
+        "index": 53,
+        "depth": 3,
+        "identifier": "more",
+        "label": "numbers",
+        "keyboardOwned": true,
+        "rect": {
+          "height": 40,
+          "y": 338,
+          "width": 140,
+          "x": 77
+        },
+        "type": "Key",
+        "hittable": true,
+        "parentIndex": 18,
+        "enabled": true,
+        "ref": "e54",
+        "kind": "key"
+      },
+      {
+        "index": 54,
+        "depth": 3,
+        "identifier": "space",
+        "label": "space",
+        "keyboardOwned": true,
+        "rect": {
+          "height": 40,
+          "y": 338,
+          "width": 420,
+          "x": 217
+        },
+        "type": "Key",
+        "hittable": true,
+        "parentIndex": 18,
+        "enabled": true,
+        "ref": "e55",
+        "kind": "key"
+      },
+      {
+        "index": 55,
+        "depth": 3,
+        "identifier": "Return",
+        "label": "return",
+        "keyboardOwned": true,
+        "rect": {
+          "height": 40,
+          "y": 338,
+          "width": 140,
+          "x": 637
+        },
+        "type": "Button",
+        "hittable": true,
+        "parentIndex": 18,
+        "enabled": true,
+        "ref": "e56",
+        "kind": "button"
+      }
+    ],
+    "truncated": false,
+    "appName": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry",
+    "viewport": {
+      "width": 852,
+      "height": 393
+    },
+    "presentedSurface": "unknown",
+    "visibility": {
+      "partial": true,
+      "visibleNodeCount": 56,
+      "totalNodeCount": 56,
+      "reasons": [
+        "scroll-hidden-below"
+      ]
+    },
+    "snapshotQuality": {
+      "state": "recovered",
+      "backend": "private-ax",
+      "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+      "reasonCode": "deferred",
+      "customActions": {
+        "read": 12,
+        "candidates": 47,
+        "truncated": 0,
+        "blocked": false
+      },
+      "timing": {
+        "acquisitionMs": 1678.9730787277222,
+        "presentationMs": 0.5930662155151367
+      }
+    },
+    "snapshotQualityNotes": [
+      {
+        "code": "regular-geometry-clipped",
+        "clippedNodeCount": 8,
+        "droppedNodeCount": 0
+      }
+    ],
+    "warnings": [
+      "Custom actions were read for 12 of 47 merged elements, on-screen ones first; the remaining 35 were not read, so an absent actions list on those is not evidence that they have none. Scroll them into view and re-run to read them."
+    ],
+    "snapshotDiagnostics": {
+      "stats": {
+        "count": 15,
+        "p50Ms": 48,
+        "p95Ms": 1709,
+        "maxMs": 1709,
+        "slowThresholdMs": 1500,
+        "platform": "ios",
+        "backends": {
+          "simulator-ax-bridge": 11,
+          "apple-runner": 4
+        }
+      }
+    },
+    "refsGeneration": 686894,
+    "identifiers": {
+      "session": "codex-geometry-after-phone",
+      "appId": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  }
+}

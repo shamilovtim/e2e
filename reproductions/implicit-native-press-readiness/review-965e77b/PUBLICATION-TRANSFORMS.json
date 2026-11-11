@@ -1,0 +1,14 @@
+{
+  "purpose": "Publication copy of generic fixture evidence; measured results and media preserved.",
+  "transformedFiles": [
+    "harness/probe.mjs",
+    "MANIFEST.json"
+  ],
+  "changes": [
+    "Replaced a local user home path in a harness with the host home-directory API.",
+    "Removed the identifier of an unrelated preserved simulator.",
+    "Added committed source attribution and precise cancellation qualification."
+  ],
+  "sourceVideosUnchanged": true,
+  "originalCandidatePreservedLocally": true
+}

@@ -1,0 +1,36 @@
+{
+  "command": {
+    "action": "record-stop"
+  },
+  "ms": 533.5257910000073,
+  "result": {
+    "recording": "stopped",
+    "outPath": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/before/portrait-controls.mp4",
+    "telemetryPath": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/before/portrait-controls.gesture-telemetry.json",
+    "artifacts": [
+      {
+        "field": "outPath",
+        "artifactType": "screen-recording",
+        "path": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/before/portrait-controls.mp4",
+        "fileName": "portrait-controls.mp4"
+      },
+      {
+        "field": "telemetryPath",
+        "artifactType": "screen-recording-telemetry",
+        "path": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/before/portrait-controls.gesture-telemetry.json",
+        "fileName": "portrait-controls.gesture-telemetry.json"
+      }
+    ],
+    "recordingBackend": "simctl recordVideo",
+    "recordingScope": "app",
+    "recordOnlySession": false,
+    "activeSessionApp": {
+      "bundleId": "dev.e2e.readinessgeometry",
+      "name": "dev.e2e.readinessgeometry"
+    },
+    "durationMs": 31284,
+    "recorder": "confirmed",
+    "nativePathDisposition": "retired",
+    "showTouches": false
+  }
+}

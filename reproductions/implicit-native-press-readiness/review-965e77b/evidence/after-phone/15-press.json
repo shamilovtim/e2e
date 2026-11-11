@@ -1,0 +1,30 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "selector": "id=geometry-action"
+    }
+  },
+  "ms": 664.6146670000016,
+  "result": {
+    "x": 350,
+    "y": 111,
+    "message": "Tapped id=geometry-action (350, 111)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "selector",
+    "selector": "id=geometry-action",
+    "selectorChain": [
+      "id=\"geometry-action\"",
+      "role=\"button\" label=\"Geometry action\"",
+      "label=\"Geometry action\""
+    ],
+    "refLabel": "Geometry action",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  }
+}

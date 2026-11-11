@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "Generic standalone UIKit fixture evidence and generic upstream source patch. Original parent bundle retains historical attribution.",
+  "textFilesScanned": 117,
+  "privateDataFindings": [],
+  "mediaFilesUnchanged": 50,
+  "videoCount": 14,
+  "decodedVideoReceipt": "VIDEO-VALIDATION.json",
+  "visualAudit": {
+    "imagesInspected": 36,
+    "videoFirstLastPairs": 14,
+    "standaloneScreenshots": 8,
+    "content": "Generic fixtures and default simulator OS only.",
+    "fullFrameByFramePlaybackClaim": false
+  },
+  "sourceHead": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+  "gate": {
+    "status": "passed",
+    "exactCommit": true,
+    "checkoutChanged": false,
+    "receipt": "checks/agent-device-exact-validation.json"
+  },
+  "patch": {
+    "sha256": "a9ea6287dc022c29546d92ede9d005dd610fd972c065c3840e0567cf726664ed",
+    "checkedBy": "git apply --check --reverse at exact965 source tree"
+  },
+  "publicationTransforms": "PUBLICATION-TRANSFORMS.json",
+  "excluded": [
+    "Unrelated device identifiers",
+    "Credentials and leases",
+    "Private application content and paths",
+    "Raw global diagnostics and whole xcresult archives"
+  ],
+  "buildQualification": "Measured frozen source maps to965 and exact a55 native binary;628/629 recorded generated JS files match, CLIargs differs. Full generated-build byte identity is not claimed."
+}

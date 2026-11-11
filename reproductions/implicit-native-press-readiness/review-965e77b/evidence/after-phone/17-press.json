@@ -1,0 +1,30 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "selector": "id=child-action"
+    }
+  },
+  "ms": 643.3917080000028,
+  "result": {
+    "x": 336,
+    "y": 246,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped id=child-action (336, 246)",
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "selector",
+    "selector": "id=child-action",
+    "selectorChain": [
+      "id=\"child-action\"",
+      "role=\"button\" label=\"Child action\"",
+      "label=\"Child action\""
+    ],
+    "refLabel": "Child action",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  }
+}

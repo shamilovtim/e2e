@@ -1,0 +1,302 @@
+{
+  "command": {
+    "action": "snapshot"
+  },
+  "ms": 1405.721000000005,
+  "result": {
+    "nodes": [
+      {
+        "rect": {
+          "y": 0,
+          "width": 852,
+          "height": 393,
+          "x": 0
+        },
+        "hittable": false,
+        "type": "Application",
+        "enabled": true,
+        "depth": 0,
+        "label": "GeometryFixture",
+        "index": 0,
+        "ref": "e1",
+        "kind": "application"
+      },
+      {
+        "rect": {
+          "y": 45,
+          "width": 804,
+          "height": 30,
+          "x": 24
+        },
+        "hittable": true,
+        "type": "StaticText",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "label": "Native geometry fixture",
+        "index": 1,
+        "ref": "e2",
+        "kind": "text"
+      },
+      {
+        "rect": {
+          "y": 90,
+          "width": 200,
+          "height": 42,
+          "x": 24
+        },
+        "hittable": true,
+        "type": "TextField",
+        "parentIndex": 0,
+        "enabled": true,
+        "placeholder": "Geometry input",
+        "identifier": "geometry-input",
+        "depth": 1,
+        "index": 2,
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      {
+        "rect": {
+          "y": 90,
+          "width": 220,
+          "height": 42,
+          "x": 240
+        },
+        "hittable": true,
+        "type": "Button",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "identifier": "geometry-action",
+        "label": "Geometry action",
+        "index": 3,
+        "ref": "e4",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 140,
+          "width": 100,
+          "height": 36,
+          "x": 24
+        },
+        "hittable": true,
+        "type": "Button",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "identifier": "landscape",
+        "label": "Landscape",
+        "index": 4,
+        "ref": "e5",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 140,
+          "width": 100,
+          "height": 36,
+          "x": 132
+        },
+        "hittable": true,
+        "type": "Button",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "identifier": "portrait",
+        "label": "Portrait",
+        "index": 5,
+        "ref": "e6",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "x": 240,
+          "height": 36,
+          "y": 140,
+          "width": 140
+        },
+        "hittable": true,
+        "type": "Button",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "identifier": "hide-keyboard",
+        "label": "Hide keyboard",
+        "index": 6,
+        "ref": "e7",
+        "kind": "button"
+      },
+      {
+        "hittable": true,
+        "rect": {
+          "x": 24,
+          "y": 188,
+          "width": 350,
+          "height": 120
+        },
+        "type": "Table",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "index": 7,
+        "hiddenContentBelow": true,
+        "ref": "e8",
+        "kind": "table"
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 188,
+          "width": 350,
+          "height": 120
+        },
+        "selected": true,
+        "type": "Cell",
+        "hittable": true,
+        "parentIndex": 7,
+        "enabled": true,
+        "depth": 2,
+        "identifier": "parent-row",
+        "index": 8,
+        "label": "Parent row",
+        "ref": "e9",
+        "kind": "cell"
+      },
+      {
+        "rect": {
+          "x": 297,
+          "y": 223,
+          "width": 77,
+          "height": 45
+        },
+        "hittable": true,
+        "type": "Button",
+        "parentIndex": 8,
+        "enabled": true,
+        "depth": 3,
+        "identifier": "child-action",
+        "label": "Child action",
+        "index": 9,
+        "ref": "e10",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "x": 410,
+          "y": 188,
+          "width": 418,
+          "height": 95
+        },
+        "hittable": true,
+        "type": "StaticText",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "identifier": "results",
+        "label": "actionReceivedTap: 4\nchildReceivedTap: 2\nduplicateAReceivedTap: 1\nparentReceivedTap: 2",
+        "index": 10,
+        "ref": "e11",
+        "kind": "text"
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 320,
+          "width": 166,
+          "height": 38
+        },
+        "hittable": true,
+        "type": "Button",
+        "parentIndex": 0,
+        "enabled": true,
+        "depth": 1,
+        "identifier": "duplicate-action",
+        "label": "Duplicate action",
+        "index": 11,
+        "ref": "e12",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "x": 202,
+          "y": 320,
+          "width": 166,
+          "height": 38
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "index": 12,
+        "label": "Duplicate action",
+        "type": "Button",
+        "identifier": "duplicate-action",
+        "ref": "e13",
+        "kind": "button"
+      }
+    ],
+    "truncated": false,
+    "appName": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry",
+    "viewport": {
+      "width": 852,
+      "height": 393
+    },
+    "presentedSurface": "unknown",
+    "visibility": {
+      "partial": true,
+      "visibleNodeCount": 13,
+      "totalNodeCount": 13,
+      "reasons": [
+        "scroll-hidden-below"
+      ]
+    },
+    "snapshotQuality": {
+      "state": "recovered",
+      "backend": "private-ax",
+      "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+      "reasonCode": "deferred",
+      "customActions": {
+        "read": 10,
+        "candidates": 10,
+        "truncated": 0,
+        "blocked": false
+      },
+      "timing": {
+        "acquisitionMs": 1361.5269660949707,
+        "presentationMs": 0.4210472106933594
+      }
+    },
+    "snapshotQualityNotes": [
+      {
+        "code": "regular-geometry-clipped",
+        "clippedNodeCount": 2,
+        "droppedNodeCount": 0
+      }
+    ],
+    "snapshotDiagnostics": {
+      "stats": {
+        "count": 13,
+        "p50Ms": 48,
+        "p95Ms": 1415,
+        "maxMs": 1415,
+        "slowThresholdMs": 1500,
+        "platform": "ios",
+        "backends": {
+          "simulator-ax-bridge": 10,
+          "apple-runner": 3
+        }
+      }
+    },
+    "refsGeneration": 686892,
+    "identifiers": {
+      "session": "codex-geometry-after-phone",
+      "appId": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  }
+}

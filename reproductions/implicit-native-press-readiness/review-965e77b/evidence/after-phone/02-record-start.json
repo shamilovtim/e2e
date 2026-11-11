@@ -1,0 +1,20 @@
+{
+  "command": {
+    "action": "record-start",
+    "name": "portrait-controls"
+  },
+  "ms": 1991.8581249999988,
+  "result": {
+    "recording": "started",
+    "outPath": "/tmp/codex-sdk-readiness-geometry-20261111/evidence/after-phone/portrait-controls.mp4",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-geometry-20261111/state-after-phone/sessions/codex-geometry-after-phone",
+    "recordingBackend": "simctl recordVideo",
+    "recordingScope": "app",
+    "recordOnlySession": false,
+    "activeSessionApp": {
+      "bundleId": "dev.e2e.readinessgeometry",
+      "name": "dev.e2e.readinessgeometry"
+    },
+    "showTouches": false
+  }
+}

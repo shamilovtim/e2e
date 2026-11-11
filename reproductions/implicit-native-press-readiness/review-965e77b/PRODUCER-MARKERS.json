@@ -1,0 +1,37 @@
+{
+  "before-controlled-ref-2": [
+    "2026-11-10 23:45:06.539336-0500 AgentDeviceRunnerUITests-Runner[66014:15463944] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=the private AX backend was selected because this capture asked for accessibility custom actions",
+    "2026-11-10 23:45:08.203563-0500 AgentDeviceRunnerUITests-Runner[66014:15463944] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=the private AX backend was selected because this capture asked for accessibility custom actions"
+  ],
+  "after-controlled-ref": [
+    "2026-11-10 23:45:31.615192-0500 AgentDeviceRunnerUITests-Runner[74613:15483752] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=the private AX backend was selected because this capture asked for accessibility custom actions",
+    "2026-11-10 23:45:33.178317-0500 AgentDeviceRunnerUITests-Runner[74613:15483754] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=the private AX backend was selected because this capture asked for accessibility custom actions",
+    "2026-11-10 23:45:33.846365-0500 AgentDeviceRunnerUITests-Runner[74613:15483552] AGENT_DEVICE_RUNNER_SYNTHESIZED_GESTURE_POLICY kind=coordinateTap axHealth=healthy fallbackAllowed=true fallbackAttempted=false"
+  ],
+  "source5a-controlled-selector": [
+    "2026-11-10 23:45:52.947187-0500 AgentDeviceRunnerUITests-Runner[75973:15487864] AGENT_DEVICE_RUNNER_SYNTHESIZED_GESTURE_POLICY kind=coordinateTap axHealth=healthy fallbackAllowed=true fallbackAttempted=false"
+  ],
+  "after-controlled-selector": [
+    "2026-11-10 23:46:26.005628-0500 AgentDeviceRunnerUITests-Runner[76541:15490129] AGENT_DEVICE_RUNNER_SYNTHESIZED_GESTURE_POLICY kind=coordinateTap axHealth=healthy fallbackAllowed=true fallbackAttempted=false"
+  ],
+  "source5a-sdk-record-warmup": [
+    "2026-11-10 23:47:03.998997-0500 AgentDeviceRunnerUITests-Runner[79620:15500756] AGENT_DEVICE_RUNNER_SNAPSHOT_XCTEST_CHANNEL_PENALIZED bundle=dev.e2e.readinessgeometry reason=queries_backend_timeout",
+    "2026-11-10 23:47:04.318570-0500 AgentDeviceRunnerUITests-Runner[79620:15500756] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=snapshot returned no semantic controls or content",
+    "2026-11-10 23:47:05.265639-0500 AgentDeviceRunnerUITests-Runner[79620:15501352] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:47:05.870664-0500 AgentDeviceRunnerUITests-Runner[79620:15500756] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:47:06.245223-0500 AgentDeviceRunnerUITests-Runner[79620:15500711] AGENT_DEVICE_RUNNER_SYNTHESIZED_GESTURE_POLICY kind=coordinateTap axHealth=healthy fallbackAllowed=true fallbackAttempted=false"
+  ],
+  "after-first-selector": [
+    "2026-11-10 23:38:43.060870-0500 AgentDeviceRunnerUITests-Runner[59000:15432737] AGENT_DEVICE_RUNNER_SNAPSHOT_XCTEST_CHANNEL_PENALIZED bundle=dev.e2e.readinessgeometry reason=queries_backend_timeout",
+    "2026-11-10 23:38:43.379668-0500 AgentDeviceRunnerUITests-Runner[59000:15432737] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=snapshot returned no semantic controls or content",
+    "2026-11-10 23:38:44.293506-0500 AgentDeviceRunnerUITests-Runner[59000:15432734] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:44.883266-0500 AgentDeviceRunnerUITests-Runner[59000:15432737] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:45.575671-0500 AgentDeviceRunnerUITests-Runner[59000:15432737] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:46.314926-0500 AgentDeviceRunnerUITests-Runner[59000:15432737] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:47.005631-0500 AgentDeviceRunnerUITests-Runner[59000:15432737] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:47.711953-0500 AgentDeviceRunnerUITests-Runner[59000:15432736] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:48.395780-0500 AgentDeviceRunnerUITests-Runner[59000:15432738] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:49.095294-0500 AgentDeviceRunnerUITests-Runner[59000:15432734] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+    "2026-11-10 23:38:49.899760-0500 AgentDeviceRunnerUITests-Runner[59000:15432737] AGENT_DEVICE_RUNNER_SNAPSHOT_RECOVERED backend=private-ax reason=XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen"
+  ]
+}

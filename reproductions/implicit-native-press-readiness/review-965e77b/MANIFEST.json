@@ -1,0 +1,118 @@
+{
+  "purpose": "PR4391 native geometry before/after validation, generic UIKit fixture only; standalone append candidate, existing frozen70-video bundle untouched.",
+  "sources": {
+    "beforeRef": "f757b60aa737fe6bfa4a925e6e919058b7313d0c",
+    "originalSDKCounterfactual": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+    "after": "Frozen review source delta over f757; exact native fingerprint a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3, JS tree hash recorded in BUILD-PROVENANCE.json.",
+    "afterCommittedAs": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+    "attribution": "Native QA used the frozen review source before its commit; BUILD-PROVENANCE.json retains exact measured build hashes. Exact-commit local validation is recorded separately."
+  },
+  "devices": {
+    "iPhone": {
+      "model": "iPhone 15 Pro",
+      "runtime": "iOS27.0",
+      "udid": "444343EA-314F-44BB-9BC8-3B8FB8E1AA8D"
+    },
+    "iPad": {
+      "model": "iPad Pro13-inch(M5)",
+      "runtime": "iOS27.0",
+      "udid": "AE130B7C-C960-40DA-BEDC-5113F3DEE99A"
+    }
+  },
+  "measuredWindow": {
+    "rect": [
+      241,
+      224,
+      551,
+      813
+    ],
+    "actionWindowLocalRect": [
+      240,
+      90,
+      220,
+      42
+    ],
+    "actionScreenLiveRect": [
+      481,
+      314,
+      220,
+      42
+    ],
+    "canonicalScreenPoint": [
+      591,
+      335
+    ]
+  },
+  "controlledNativeRefPair": {
+    "phases": [
+      "before-controlled-ref-2",
+      "after-controlled-ref"
+    ],
+    "samePrecondition": "Fresh state/runner; foreground:false; diagnostic text-read warmup; external simctl recorder; native customActions capture before ordinary ref. Both native probes requested privateAX without channel penalty.",
+    "before": "Public/live481314 but source descriptor24090; ordinary ref target_not_ready/changed/dispatched:no; event0.",
+    "after": "Public/source descriptor/live481314; same ordinary ref succeeds591335; native action1.",
+    "conclusion": "Normalizing source descriptor with the owning snapshot geometry transform fixes reachable placed-window refusal."
+  },
+  "healthyFirstSelectorPair": {
+    "phases": [
+      "source5a-controlled-selector",
+      "after-controlled-selector"
+    ],
+    "samePrecondition": "Fresh state/runner; foreground:false; screenshot-only startup; external simctl recorder; no snapshot/read warmup.",
+    "observed": "Both succeed at591335 with one native action; no timeout/deferred native markers. One observation each, no performance claim."
+  },
+  "degradedCounterfactualPair": {
+    "phases": [
+      "source5a-sdk-record-warmup",
+      "after-first-selector"
+    ],
+    "samePrecondition": "Fresh state/runner; foreground:false; SDK recording.start performs capture before ordinary selector. Both own logs record queries_backend_timeout then privateAX recovery with XCTest-backed tiers deferred.",
+    "originalSource5a": "Reports tap success350111 against551x813 reference, native action0.",
+    "candidate": "Explicit caller observation cancellation after6000ms: COMMAND_FAILED / request_canceled / dispatched:unknown, no readiness field. Native action0 through recording stop/event read. No extended post-cancel observation claimed for this degraded pair.",
+    "conclusion": "Repeated/degraded capture still lacks screen anchoring; original source5a already fails actual mutation under the same recipe (false success). Candidate produced no observed native input before cancellation and event read; cancellation is not a public unsent proof. No claim of general repeated placed-window support."
+  },
+  "phoneControls": {
+    "phases": [
+      "before",
+      "after-phone"
+    ],
+    "portraitAndLandscape": "Refs/selectors deliver intended action, parent/child targets remain separate; duplicate selectors AMBIGUOUS_MATCH/dispatched:no; exact duplicate A ref onlyA.",
+    "nativeCountsEachPhase": {
+      "action": 4,
+      "parent": 2,
+      "child": 2,
+      "duplicateA": 2,
+      "duplicateB": 0
+    },
+    "keyboard": "Native events Q then Qw using ordinary key ref and selector. Captured/source/live key frame77,218,70,40 agrees; no iPhone landscape mixed-space failure reproduced."
+  },
+  "overlaySmoke": {
+    "fade750": "Native fadecomplete6491ms then underlyingtap6653ms; underlying1/overlay0.",
+    "cancelSlowFade": "signal350ms explicitly cancels pending press;4200ms follow-up spans fade completion; native underlying0/overlay0. Public COMMAND_FAILED reason=request_canceled dispatched:unknown is documented transport envelope; no public unsent claim.",
+    "harnessIssue": "Cancellation raw result success:false preserved because harness incorrectly expected nonexistent COMMAND_CANCELLED. Separate assessment.json confirms actual taxonomy and no-late native behavior."
+  },
+  "nativeUnit": {
+    "executed": 8,
+    "failures": 0,
+    "fullSuiteClaim": false
+  },
+  "videoValidation": {
+    "included": 14,
+    "allOriginalVideosDecoded": 19,
+    "method": "VIDEO-VALIDATION.json records requested and actual decoded timestamps; static recordings can return an earlier final image. Native events, results and direct geometry probes are independent oracles."
+  },
+  "limitations": [
+    "Measured iPhone landscape and one placed iPad window on iOS27.0; no macOS, physical-device, iPad landscape or general multiwindow coverage claim.",
+    "Degraded privateAX capture without anchor remains a measured limitation; no guessed coordinate transforms added.",
+    "Fixture event key actionScreenFrame is misnamed: UIView.convert(to:nil) is window-local. It is not used as screen-space oracle. Live XCUI query frames and screenshots provide screen proof.",
+    "Original invalid setup before-controlled-ref (no native lease) and exploratory phases are retained outside append candidate, not counted as product evidence.",
+    "Original early phases using SDK recording were not healthy-first captures; only controlled-selector pair has that claim."
+  ],
+  "cleanup": {
+    "allOwnedSDKClientsClosed": true,
+    "measuredDaemonsStoppedClean": true,
+    "ownedSimulatorsShutdownAndDeleted": true,
+    "otherDevicesUntouched": true
+  },
+  "privacy": "Only standalone generic fixture source, outputs and owned fixture-specific native markers included. No leases, runner tokens, credentials, private app data or global diagnostics copied."
+}
