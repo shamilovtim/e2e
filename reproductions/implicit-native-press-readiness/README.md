@@ -1,5 +1,7 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The ready-path cost investigation](readiness-cost-ad2-intermediate/README.md) preserves all 24 intermediate recordings, including failed probes and setup attempts. [The subsequent pre-integration revision](readiness-cost-cce5-pre-integration/README.md) preserves 16 recordings, the measured 329–347 ms added cost, the failed original one-second caller probe, and its exact historical gate. These datasets precede the merged geometry fix; they do not establish combined behavior.
+
 [The reported-authority test follow-up](followup-4399-reported-authority-2c30d54/README.md) proves the positive presenter handoff with an unknown destination and a real guard assertion; omitting the source fact fails. The exact-head gate passes with all runtime/native source inputs unchanged from the preceding review.
 
 [The #4439 review follow-up](followup-4399-review-16763e0/README.md) adds the provider authority handoff, nine behavioral provider controls, the exact new gate and strengthened native payload test. All five review findings have explicit dispositions. The original five videos retain their earlier source attribution.

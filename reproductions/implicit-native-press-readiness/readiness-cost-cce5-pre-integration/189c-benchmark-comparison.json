@@ -1,0 +1,196 @@
+{
+  "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "method": "Same frozen fixture, owned phone, portrait, three SDK ref presses and one CLI per mode. Exact baseline wrapper bytes reused. Fresh baseline cases were measured earlier in this round; these timestamps are retained, not claimed interleaved. New-head cases ran after fresh native validation, with no competing uploads, builds, tests or media decoding.",
+  "pairs": [
+    {
+      "mode": "anonymous",
+      "base": {
+        "case": "base5a-anonymous-current-1",
+        "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+        "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+        "nativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          734.4943750000002,
+          989.0761659999989,
+          980.5512500000004
+        ],
+        "medianMs": 980.5512500000004,
+        "cliMs": 960.3042089999999,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0,
+        "resultFileMtimeUTC": "2026-11-11T19:01:06.528950+00:00"
+      },
+      "head": {
+        "case": "189c-anonymous-current-1",
+        "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+        "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+        "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          1075.011458,
+          1315.332124999999,
+          1309.109124999999
+        ],
+        "medianMs": 1309.109124999999,
+        "cliMs": 1303.8238330000004,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0,
+        "resultFileMtimeUTC": "2026-11-11T19:23:42.626870+00:00"
+      },
+      "addedMedianMs": 328.5578749999986,
+      "addedCLIMs": 343.5196240000005
+    },
+    {
+      "mode": "buttons",
+      "base": {
+        "case": "base5a-buttons-current-1",
+        "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+        "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+        "nativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          771.4531660000002,
+          949.817916,
+          980.6193330000006
+        ],
+        "medianMs": 949.817916,
+        "cliMs": 975.9663330000003,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0,
+        "resultFileMtimeUTC": "2026-11-11T19:01:55.894468+00:00"
+      },
+      "head": {
+        "case": "189c-buttons-current-1",
+        "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+        "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+        "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          1017.3906250000009,
+          1296.8171660000007,
+          1280.5770420000008
+        ],
+        "medianMs": 1280.5770420000008,
+        "cliMs": 1258.4448749999992,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0,
+        "resultFileMtimeUTC": "2026-11-11T19:24:32.208046+00:00"
+      },
+      "addedMedianMs": 330.75912600000083,
+      "addedCLIMs": 282.4785419999989
+    },
+    {
+      "mode": "shared",
+      "base": {
+        "case": "base5a-shared-current-1",
+        "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+        "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+        "nativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          742.2282500000001,
+          454.8248330000006,
+          459.3519580000011
+        ],
+        "medianMs": 459.3519580000011,
+        "cliMs": 521.9614999999994,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0,
+        "resultFileMtimeUTC": "2026-11-11T19:02:54.429749+00:00"
+      },
+      "head": {
+        "case": "189c-shared-current-1",
+        "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+        "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+        "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          1092.5229170000002,
+          806.2119579999999,
+          802.435125
+        ],
+        "medianMs": 806.2119579999999,
+        "cliMs": 894.1023750000004,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0,
+        "resultFileMtimeUTC": "2026-11-11T19:20:15.148606+00:00"
+      },
+      "addedMedianMs": 346.85999999999876,
+      "addedCLIMs": 372.14087500000096
+    }
+  ],
+  "firstCaller1000": {
+    "phase": "189c-shared-caller1000-first-1",
+    "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "exitCode": 1,
+    "cleanupExitCode": 0,
+    "success": false,
+    "warmRefsMs": [
+      1001.8362920000009
+    ],
+    "medianMs": 1001.8362920000009,
+    "cliMs": null,
+    "targetTaps": 1,
+    "siblingTaps": 0,
+    "inputEvents": {
+      "controlReceivedTap": 1
+    },
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "warmCaller1000": {
+    "phase": "189c-shared-caller1000-warm-1",
+    "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [
+      829.1645000000008
+    ],
+    "medianMs": 829.1645000000008,
+    "cliMs": 889.3891660000008,
+    "targetTaps": 3,
+    "siblingTaps": 0,
+    "inputEvents": {
+      "controlReceivedTap": 3
+    },
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "callerBudgetConclusion": "Original no-extra-warmup probe still canceled at1001.8ms after dispatch, with request_canceled/dispatched unknown and one intended tap. Separate extra normal-budget-warmup experiment completed the measured1s SDK press in829.2ms; total3 intended taps includes warm-up and CLI. Warm experiment ran first chronologically; cases each relaunched fixture and own runner/daemon. Neither result proves a native server-deadline guarantee.",
+  "remainingCost": "Added medians are329\u2013347ms, with a slower first shared sample1092.5ms kept visible. No zero-cost or guaranteed1s first-call completion claim."
+}

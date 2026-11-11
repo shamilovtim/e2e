@@ -1,0 +1,20 @@
+{
+  "source": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+  "devices": [
+    {
+      "role": "phone",
+      "beforeCleanup": "Booted",
+      "shutdownExitCode": 0,
+      "originalState": "Shutdown",
+      "finalState": "Shutdown"
+    },
+    {
+      "role": "ipad",
+      "beforeCleanup": "Shutdown",
+      "shutdownExitCode": 0,
+      "originalState": "Shutdown",
+      "finalState": "Shutdown"
+    }
+  ],
+  "unrelatedDevicesChanged": false
+}

@@ -1,0 +1,43 @@
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
+@@ -3,6 +3,40 @@
+ 
+ extension RunnerTests {
+ #if AGENT_DEVICE_RUNNER_UNIT_TESTS
++  @MainActor
++  func testDiagnosticPressCandidateSnapshotFrameSpace() throws {
++    let fixture = XCUIApplication(bundleIdentifier: "dev.e2e.readinessgeometry")
++    fixture.activate()
++    let elements = fixture.descendants(matching: .any).matching(identifier: "geometry-action").allElementsBoundByIndex
++    XCTAssertEqual(elements.count, 1)
++    let element = try XCTUnwrap(elements.first)
++    let appFrame = fixture.frame
++    let liveFrame = element.frame
++    let snapshot = try element.snapshot()
++    XCTAssertEqual(snapshot.identifier, "geometry-action")
++    let snapshotFrame = snapshot.frame
++    let windows = fixture.windows.allElementsBoundByIndex
++    XCTAssertLessThanOrEqual(windows.count, 8)
++    var windowFrames: [[String: [Double]]] = []
++    for window in windows.prefix(8) {
++      let live = window.frame
++      let captured = try window.snapshot().frame
++      windowFrames.append([
++        "live": [Double(live.minX), Double(live.minY), Double(live.width), Double(live.height)],
++        "snapshot": [Double(captured.minX), Double(captured.minY), Double(captured.width), Double(captured.height)],
++      ])
++    }
++    let result: [String: Any] = [
++      "appFrame": [Double(appFrame.minX), Double(appFrame.minY), Double(appFrame.width), Double(appFrame.height)],
++      "candidateLiveFrame": [Double(liveFrame.minX), Double(liveFrame.minY), Double(liveFrame.width), Double(liveFrame.height)],
++      "candidateSnapshotFrame": [Double(snapshotFrame.minX), Double(snapshotFrame.minY), Double(snapshotFrame.width), Double(snapshotFrame.height)],
++      "windows": windowFrames,
++      "candidateSnapshotReads": 1,
++    ]
++    let data = try JSONSerialization.data(withJSONObject: result, options: [.sortedKeys])
++    NSLog("AGENT_DEVICE_FRAME_SPACE_PROBE=%@", String(decoding: data, as: UTF8.self))
++  }
++
+   func testNativeReadPrefilterPreservesNormalizedExactIdentity() {
+     for identifier in ["  continue-control\n", "", "caf\u{0065}\u{0301}"] {
+       let label = identifier.isEmpty ? "  caf\u{0065}\u{0301}\n" : "Continue"

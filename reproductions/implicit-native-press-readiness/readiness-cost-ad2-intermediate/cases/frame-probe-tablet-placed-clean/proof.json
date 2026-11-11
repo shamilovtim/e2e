@@ -1,0 +1,120 @@
+{
+  "case": "frame-probe-tablet-placed-clean",
+  "sourceContext": "7ab3d2330353587131368547eab52491bd294489 plus isolated diagnostic-only patch",
+  "optimizedCandidateProof": false,
+  "originalGenericResult": {
+    "role": "placed-tablet",
+    "selectedTests": 1,
+    "candidateSnapshotReads": 1,
+    "scope": "Isolated 7ab3 source plus the diagnostic patch; no performance claim.",
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "frames": {
+      "appFrame": [
+        0,
+        0,
+        375,
+        611
+      ],
+      "candidateLiveFrame": [
+        569,
+        415,
+        111,
+        42
+      ],
+      "candidateSnapshotFrame": [
+        240,
+        90,
+        111,
+        42
+      ],
+      "candidateSnapshotReads": 1,
+      "windows": [
+        {
+          "live": [
+            329,
+            325,
+            375,
+            611
+          ],
+          "snapshot": [
+            0,
+            0,
+            375,
+            611
+          ]
+        }
+      ]
+    },
+    "expectedOriginEstablished": false,
+    "snapshotFrameMatchesLive": false,
+    "rootTranslatedSnapshotMatchesLive": false,
+    "qualified": false
+  },
+  "originalResultSha256": "743f783f557af1afeccb800c79e4a33a98a0500f6af90e4d34169bfa54445aea",
+  "nativeLogSummary": {
+    "passedTestCases": 1,
+    "failedTestCases": 0,
+    "executedSummaries": [
+      [
+        1,
+        0
+      ]
+    ],
+    "rawLogIncluded": false
+  },
+  "derivedClassification": "One native method passed with genuine placed-window frames. Original wrapper exited 1 because it used the wrong application-origin qualification. Raw native exit/status/qualified=false flags remain unchanged; the derived correction uses the independently observed live window.",
+  "originalWrapperExitReportedByParent": 1,
+  "derivedWindowCorrection": {
+    "applicationFrame": [
+      0,
+      0,
+      375,
+      611
+    ],
+    "windowLiveFrame": [
+      329,
+      325,
+      375,
+      611
+    ],
+    "windowSnapshotFrame": [
+      0,
+      0,
+      375,
+      611
+    ],
+    "translation": [
+      329,
+      325
+    ],
+    "candidateLiveFrame": [
+      569,
+      415,
+      111,
+      42
+    ],
+    "candidateSnapshotFrame": [
+      240,
+      90,
+      111,
+      42
+    ],
+    "translatedCandidateSnapshot": [
+      569,
+      415,
+      111,
+      42
+    ],
+    "translatedEqualsLive": true,
+    "qualification": "A screen-relative application origin is not required to prove placement. This observation does not yet prove window-scoped candidate snapshot semantics or any optimized implementation."
+  },
+  "datasetStatus": "Pinned 7ab diagnostic only, not ad2 performance or final optimized proof.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "case": "189c-tree-ref-1",
+  "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "finalSourceAttribution": "Runtime footage remains189c. Historical cce5 production equality is separate and does not validate a subsequent integration.",
+  "classification": "pass",
+  "originalWrapperSummary": {
+    "phase": "189c-tree-ref-1",
+    "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {},
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "executionInputs": {
+    "head": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "kind": "values",
+    "mode": "tree-ref",
+    "sourceTree": "265123df2e3f93d3d4883b603dc47e564e7e864b",
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+    "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+    "runtimeJSFiles": 622,
+    "wrapperSha256": "37832904492be9ebf63e61f07d55806de82e80cd0ca3585f982a2a5a01854fbf",
+    "driverSha256": "13c57357fa66d41186f17605d84c78de875815333228e8795bb707a7254653b9",
+    "archivedBeforeRun": true,
+    "warmRefRuns": 3,
+    "callerSignalBudgetMs": 15000,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "b6997713c356a4984edf542453573e283ed112bce77a3469660583d5befdf26c",
+    "sourceTreeManifestSha256": "13ff9e0625dcc7e3b5e1f7d3d5799b091695c38c572b0342cd5492940af96fde"
+  },
+  "executedSources": [
+    {
+      "path": "cases/189c-tree-ref-1/source/executed-driver.py",
+      "originalArchivedSha256": "13c57357fa66d41186f17605d84c78de875815333228e8795bb707a7254653b9",
+      "publicSha256": "13c57357fa66d41186f17605d84c78de875815333228e8795bb707a7254653b9",
+      "normalization": "Byte-equal original archive."
+    },
+    {
+      "path": "cases/189c-tree-ref-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "37832904492be9ebf63e61f07d55806de82e80cd0ca3585f982a2a5a01854fbf",
+      "publicSha256": "37832904492be9ebf63e61f07d55806de82e80cd0ca3585f982a2a5a01854fbf",
+      "normalization": "Byte-equal original archive."
+    }
+  ],
+  "qualification": "Fresh189c run uses corrected placed-window focus oracle and passes. Original ad2 failed Key-node assertion/result remains unchanged in the intermediate dataset.",
+  "datasetStatus": "PRE-INTEGRATION historical source189c; no post-c267 or combined execution claim.",
+  "nativeBuild": {
+    "sourceFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "faaee6eda1ab1ff468269464120848dec98fc7a360d4149dffcff87ae3c20882"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "c8d9004a3c860ab610905cb5c2a6167567e0b7374012372a442eb645680caeae"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "ba40ce14a6e06891307f1e65169a06f01b054fe7cbadfe06721e104f1e34e40f"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10809968,
+        "mode": 493,
+        "digest": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "2e6d1253898b409eca941d2027c1fa2c2ec5ff3cc566fe4a891f2af45d1aad08",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing configuration omitted."
+  },
+  "originalResultSha256": "3283bbb929f33c153a734f3212961c58f42f402ebc3623cb698174f4bd420a3a",
+  "observations": {
+    "phase": "189c-tree-ref-1",
+    "mode": "tree-ref",
+    "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "nativeBuiltFrom": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+    "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+    "coldOpenMs": 2251.84975,
+    "nativeBinaryUnchanged": true,
+    "focusRoutes": [
+      {
+        "label": "actual-runner-tree-ref",
+        "sdkCaptureQuality": {
+          "state": "healthy",
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 27.37593650817871,
+            "presentationMs": 0.04792213439941406
+          }
+        },
+        "sdkCaptureWarnings": [
+          "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+        ],
+        "sdkCaptureDiagnostics": {
+          "stats": {
+            "count": 4,
+            "p50Ms": 105,
+            "p95Ms": 3960,
+            "maxMs": 3960,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "apple-runner": 4
+            }
+          }
+        },
+        "publicField": {
+          "hittable": true,
+          "placeholder": "Geometry input",
+          "depth": 5,
+          "type": "TextField",
+          "enabled": true,
+          "parentIndex": 4,
+          "rect": {
+            "x": 353,
+            "width": 200,
+            "y": 415,
+            "height": 42
+          },
+          "index": 6,
+          "identifier": "geometry-input",
+          "password": false,
+          "editable": true,
+          "ref": "e7",
+          "kind": "text-field"
+        },
+        "captureOptions": {
+          "interactiveOnly": true,
+          "raw": true
+        },
+        "nativeSource": {
+          "raw": true,
+          "node": {
+            "hittable": true,
+            "placeholder": "Geometry input",
+            "depth": 5,
+            "type": "TextField",
+            "enabled": true,
+            "parentIndex": 4,
+            "nativePressTarget": {
+              "identifier": "geometry-input",
+              "type": 49,
+              "rect": {
+                "y": 415,
+                "height": 42,
+                "width": 200,
+                "x": 353
+              }
+            },
+            "rect": {
+              "x": 353,
+              "y": 415,
+              "height": 42,
+              "width": 200
+            },
+            "index": 6,
+            "identifier": "geometry-input"
+          },
+          "quality": {
+            "backend": "tree",
+            "timing": {
+              "presentationMs": 0.04410743713378906,
+              "acquisitionMs": 23.609042167663574
+            },
+            "state": "healthy"
+          },
+          "binding": {
+            "identifier": "geometry-input",
+            "type": 49,
+            "rect": {
+              "y": 415,
+              "height": 42,
+              "width": 200,
+              "x": 353
+            }
+          }
+        },
+        "press": {
+          "x": 453,
+          "y": 436,
+          "message": "Tapped @e7 (453, 436)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 375,
+          "referenceHeight": 611,
+          "targetKind": "ref",
+          "ref": "e7",
+          "refLabel": "geometry-input",
+          "selectorChain": [
+            "id=\"geometry-input\"",
+            "text=\"geometry-input\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 447.0321249999997,
+        "events": [
+          {
+            "actualText": "",
+            "event": "inputFocusBegan",
+            "length": 0,
+            "ms": 8593.68062496651
+          }
+        ],
+        "afterField": {
+          "focused": true,
+          "rect": {
+            "y": 415,
+            "x": 353,
+            "width": 200,
+            "height": 42
+          },
+          "hittable": true,
+          "index": 2,
+          "type": "TextField",
+          "placeholder": "Geometry input",
+          "enabled": true,
+          "identifier": "geometry-input",
+          "depth": 1,
+          "parentIndex": 0,
+          "password": false,
+          "editable": true,
+          "ref": "e3",
+          "kind": "text-field"
+        },
+        "keyboardKeys": 0,
+        "focusOracle": "recipient-event-and-focused-state"
+      }
+    ],
+    "setup": [
+      {
+        "label": "End editing before ordinary focus proof",
+        "id": "hide-keyboard",
+        "result": {
+          "x": 637,
+          "y": 483,
+          "message": "Tapped id=hide-keyboard (637, 483)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 375,
+          "referenceHeight": 611,
+          "targetKind": "selector",
+          "selector": "id=hide-keyboard",
+          "selectorChain": [
+            "id=\"hide-keyboard\"",
+            "role=\"button\" label=\"Hide keyboard\"",
+            "label=\"Hide keyboard\""
+          ],
+          "refLabel": "Hide keyboard",
+          "resolution": {
+            "source": "runtime",
+            "phase": "pre-action",
+            "kind": "unique"
+          }
+        },
+        "events": [
+          {
+            "event": "keyboardDismissRequested",
+            "ms": 7717.774625052698
+          }
+        ]
+      }
+    ],
+    "contentChangeReads": [],
+    "nativeWindowRects": [
+      {
+        "width": 375,
+        "x": 329,
+        "y": 325,
+        "height": 611
+      }
+    ],
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "scope": "Actual runner-tree SDK ref via naturally windowed guest-bridge fallback; native backend must be observed, not inferred from raw format.",
+    "nativeEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.00400003045797348
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 15.400916687212884,
+        "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+      },
+      {
+        "event": "keyboardDismissRequested",
+        "ms": 7717.774625052698
+      },
+      {
+        "actualText": "",
+        "event": "inputFocusBegan",
+        "length": 0,
+        "ms": 8593.68062496651
+      }
+    ],
+    "samples": []
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

@@ -1,0 +1,754 @@
+{
+  "case": "189c-duplicates-1",
+  "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "finalSourceAttribution": "Runtime footage remains189c. Historical cce5 production equality is separate and does not validate a subsequent integration.",
+  "classification": "pass-with-qualified-caller-cancellation",
+  "originalWrapperSummary": {
+    "phase": "189c-duplicates-1",
+    "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {
+      "duplicateBReceivedTap": 1
+    },
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "executionInputs": {
+    "head": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "kind": "geometry",
+    "mode": "duplicates",
+    "sourceTree": "265123df2e3f93d3d4883b603dc47e564e7e864b",
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+    "fixtureBinarySha256": "fabcc12f1ecde84783f97cfdf90b1761a4f9a7690e8e854a0d0c6fc86506e10f",
+    "runtimeJSFiles": 622,
+    "wrapperSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+    "driverSha256": "13c57357fa66d41186f17605d84c78de875815333228e8795bb707a7254653b9",
+    "archivedBeforeRun": true,
+    "warmRefRuns": 3,
+    "callerSignalBudgetMs": 15000,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "b6997713c356a4984edf542453573e283ed112bce77a3469660583d5befdf26c",
+    "sourceTreeManifestSha256": "13ff9e0625dcc7e3b5e1f7d3d5799b091695c38c572b0342cd5492940af96fde"
+  },
+  "executedSources": [
+    {
+      "path": "cases/189c-duplicates-1/source/executed-driver.py",
+      "originalArchivedSha256": "13c57357fa66d41186f17605d84c78de875815333228e8795bb707a7254653b9",
+      "publicSha256": "13c57357fa66d41186f17605d84c78de875815333228e8795bb707a7254653b9",
+      "normalization": "Byte-equal original archive."
+    },
+    {
+      "path": "cases/189c-duplicates-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "publicSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "normalization": "Byte-equal original archive."
+    }
+  ],
+  "datasetStatus": "PRE-INTEGRATION historical source189c; no post-c267 or combined execution claim.",
+  "nativeBuild": {
+    "sourceFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "faaee6eda1ab1ff468269464120848dec98fc7a360d4149dffcff87ae3c20882"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "c8d9004a3c860ab610905cb5c2a6167567e0b7374012372a442eb645680caeae"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "ba40ce14a6e06891307f1e65169a06f01b054fe7cbadfe06721e104f1e34e40f"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10809968,
+        "mode": 493,
+        "digest": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "2e6d1253898b409eca941d2027c1fa2c2ec5ff3cc566fe4a891f2af45d1aad08",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing configuration omitted."
+  },
+  "originalResultSha256": "2e592bd3f4654dacf87ff795504c0c4907bb7027b2646bc2281ee05172f92e5e",
+  "observations": {
+    "phase": "189c-duplicates-1",
+    "mode": "duplicates",
+    "sdkSource": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "nativeBuiltAt": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+    "fixtureBinarySha256": "fabcc12f1ecde84783f97cfdf90b1761a4f9a7690e8e854a0d0c6fc86506e10f",
+    "coldOpenMs": 2051.700125,
+    "targets": [
+      {
+        "index": 7,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Duplicate action",
+        "identifier": "duplicate-control",
+        "rect": {
+          "x": 24,
+          "y": 180,
+          "width": 345,
+          "height": 70
+        },
+        "enabled": true,
+        "depth": 1,
+        "hittable": true,
+        "ref": "e8",
+        "kind": "button"
+      },
+      {
+        "index": 8,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Duplicate action",
+        "identifier": "duplicate-control",
+        "rect": {
+          "x": 24,
+          "y": 290,
+          "width": 345,
+          "height": 70
+        },
+        "enabled": true,
+        "depth": 1,
+        "hittable": true,
+        "ref": "e9",
+        "kind": "button"
+      }
+    ],
+    "nativeBinaryUnchanged": true,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "nativeEvents": [
+      {
+        "event": "geometryChanged",
+        "mode": "clipped",
+        "ms": 1.6175417695194483,
+        "orientation": 0,
+        "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+      },
+      {
+        "event": "modeChanged",
+        "mode": "clipped",
+        "ms": 7.097166730090976
+      },
+      {
+        "event": "appReady",
+        "ms": 7.2569167241454124,
+        "otherControlCount": 500
+      },
+      {
+        "event": "modeChanged",
+        "mode": "duplicates",
+        "ms": 4193.909833324142
+      },
+      {
+        "event": "fixtureGeometry",
+        "mode": "duplicates",
+        "ms": 4196.171291754581,
+        "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+      },
+      {
+        "event": "duplicateBReceivedTap",
+        "ms": 8006.495208363049
+      }
+    ],
+    "samples": [
+      {
+        "label": "selector-ambiguity",
+        "target": {
+          "selector": "id=duplicate-control"
+        },
+        "error": {
+          "code": "AMBIGUOUS_MATCH",
+          "message": "Selector matched 2 distinct actionable elements: id=duplicate-control",
+          "details": {
+            "selector": "id=duplicate-control",
+            "matches": 2,
+            "candidates": [
+              "@e8 [button] \"Duplicate action\"",
+              "@e9 [button] \"Duplicate action\""
+            ],
+            "dispatched": "no",
+            "hint": "Multiple candidates matched. Narrow the query or pass an exact identifier."
+          }
+        },
+        "ms": 37.03720799999974,
+        "events": [
+          {
+            "event": "geometryChanged",
+            "mode": "clipped",
+            "ms": 1.6175417695194483,
+            "orientation": 0,
+            "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+          },
+          {
+            "event": "modeChanged",
+            "mode": "clipped",
+            "ms": 7.097166730090976
+          },
+          {
+            "event": "appReady",
+            "ms": 7.2569167241454124,
+            "otherControlCount": 500
+          },
+          {
+            "event": "modeChanged",
+            "mode": "duplicates",
+            "ms": 4193.909833324142
+          },
+          {
+            "event": "fixtureGeometry",
+            "mode": "duplicates",
+            "ms": 4196.171291754581,
+            "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 0.9909999999999999
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.657
+          }
+        ]
+      },
+      {
+        "label": "blocked-ref-observation",
+        "target": {
+          "ref": "@e8"
+        },
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "request canceled",
+          "details": {
+            "hint": "The request was canceled intentionally (explicit cancel or client disconnect) — no retry is needed unless the cancellation was unintended.",
+            "dispatched": "unknown",
+            "reason": "request_canceled"
+          }
+        },
+        "ms": 1501.1483750000007,
+        "events": [
+          {
+            "event": "geometryChanged",
+            "mode": "clipped",
+            "ms": 1.6175417695194483,
+            "orientation": 0,
+            "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+          },
+          {
+            "event": "modeChanged",
+            "mode": "clipped",
+            "ms": 7.097166730090976
+          },
+          {
+            "event": "appReady",
+            "ms": 7.2569167241454124,
+            "otherControlCount": 500
+          },
+          {
+            "event": "modeChanged",
+            "mode": "duplicates",
+            "ms": 4193.909833324142
+          },
+          {
+            "event": "fixtureGeometry",
+            "mode": "duplicates",
+            "ms": 4196.171291754581,
+            "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 44.909
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 44.07
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 47.953
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 46.015
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 45.392
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 42.327
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 46.644999999999996
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 45.13699999999999
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 41.632000000000005
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 42.812999999999995
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 41.192
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 42.893
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 45.98
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 44.382999999999996
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 43.825
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          }
+        ]
+      },
+      {
+        "label": "ready-ref",
+        "target": {
+          "ref": "@e9"
+        },
+        "press": {
+          "x": 197,
+          "y": 325,
+          "runnerMainThreadBusy": false,
+          "message": "Tapped @e9 (197, 325)",
+          "referenceWidth": 393,
+          "referenceHeight": 852,
+          "targetKind": "ref",
+          "ref": "e9",
+          "refLabel": "Duplicate action",
+          "selectorChain": [
+            "role=\"button\" label=\"Duplicate action\"",
+            "label=\"Duplicate action\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 384.5789160000004,
+        "events": [
+          {
+            "event": "geometryChanged",
+            "mode": "clipped",
+            "ms": 1.6175417695194483,
+            "orientation": 0,
+            "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+          },
+          {
+            "event": "modeChanged",
+            "mode": "clipped",
+            "ms": 7.097166730090976
+          },
+          {
+            "event": "appReady",
+            "ms": 7.2569167241454124,
+            "otherControlCount": 500
+          },
+          {
+            "event": "modeChanged",
+            "mode": "duplicates",
+            "ms": 4193.909833324142
+          },
+          {
+            "event": "fixtureGeometry",
+            "mode": "duplicates",
+            "ms": 4196.171291754581,
+            "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+          },
+          {
+            "event": "duplicateBReceivedTap",
+            "ms": 8006.495208363049
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 41.554
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 330.314
+          }
+        ]
+      }
+    ],
+    "nativeGeometryObservations": {
+      "liveElementRead": {
+        "ms": 122.21437500000047,
+        "result": {
+          "data": {
+            "found": true,
+            "text": "Duplicate action",
+            "runnerMainThreadBusy": false,
+            "nodes": [
+              {
+                "type": "Button",
+                "depth": 0,
+                "rect": {
+                  "height": 70,
+                  "width": 345,
+                  "x": 24,
+                  "y": 290
+                },
+                "label": "Duplicate action",
+                "hittable": true,
+                "enabled": true,
+                "identifier": "duplicate-control",
+                "index": 0
+              }
+            ]
+          },
+          "ok": true
+        }
+      },
+      "rawSnapshotQuality": {
+        "state": "healthy",
+        "backend": "tree",
+        "timing": {
+          "presentationMs": 0.03993511199951172,
+          "acquisitionMs": 20.32291889190674
+        }
+      },
+      "rawWindowRects": [
+        {
+          "y": 0,
+          "x": 0,
+          "height": 852,
+          "width": 393
+        }
+      ],
+      "nativeWindowTreeQuality": {
+        "state": "healthy",
+        "backend": "tree",
+        "timing": {
+          "presentationMs": 0.03993511199951172,
+          "acquisitionMs": 20.32291889190674
+        }
+      },
+      "sourceRootRects": [
+        {
+          "width": 393,
+          "y": 0,
+          "x": 0,
+          "height": 852
+        }
+      ],
+      "rawNodes": [
+        {
+          "type": "Button",
+          "nativePressTarget": {
+            "type": 9,
+            "rect": {
+              "y": 180,
+              "x": 24,
+              "width": 345,
+              "height": 70
+            },
+            "identifier": "duplicate-control",
+            "label": "Duplicate action"
+          },
+          "parentIndex": 16,
+          "depth": 6,
+          "index": 17,
+          "label": "Duplicate action",
+          "rect": {
+            "x": 24,
+            "width": 345,
+            "y": 180,
+            "height": 70
+          },
+          "enabled": true,
+          "identifier": "duplicate-control",
+          "hittable": true
+        },
+        {
+          "type": "Button",
+          "nativePressTarget": {
+            "rect": {
+              "x": 24,
+              "y": 290,
+              "width": 345,
+              "height": 70
+            },
+            "type": 9,
+            "identifier": "duplicate-control",
+            "label": "Duplicate action"
+          },
+          "parentIndex": 16,
+          "depth": 6,
+          "index": 20,
+          "label": "Duplicate action",
+          "rect": {
+            "y": 290,
+            "height": 70,
+            "width": 345,
+            "x": 24
+          },
+          "enabled": true,
+          "identifier": "duplicate-control",
+          "hittable": true
+        }
+      ],
+      "strict": [
+        {
+          "target": {
+            "type": 9,
+            "rect": {
+              "y": 180,
+              "x": 24,
+              "width": 345,
+              "height": 70
+            },
+            "identifier": "duplicate-control",
+            "label": "Duplicate action",
+            "point": {
+              "x": 197,
+              "y": 215
+            }
+          },
+          "observation": {
+            "ms": 40.91870799999924,
+            "result": {
+              "ok": true,
+              "data": {
+                "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+                "runnerMainThreadBusy": false,
+                "pressReadiness": "blocked"
+              }
+            }
+          }
+        },
+        {
+          "target": {
+            "rect": {
+              "x": 24,
+              "y": 290,
+              "width": 345,
+              "height": 70
+            },
+            "type": 9,
+            "identifier": "duplicate-control",
+            "label": "Duplicate action",
+            "point": {
+              "x": 197,
+              "y": 325
+            }
+          },
+          "observation": {
+            "ms": 38.224459000000024,
+            "result": {
+              "ok": true,
+              "data": {
+                "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+                "pressReadiness": "ready",
+                "runnerMainThreadBusy": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

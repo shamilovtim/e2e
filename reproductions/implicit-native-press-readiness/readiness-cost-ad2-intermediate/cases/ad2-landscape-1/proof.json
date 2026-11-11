@@ -1,0 +1,489 @@
+{
+  "case": "ad2-landscape-1",
+  "datasetStatus": "Measured ad2 intermediate or authentic paired 5a baseline, not final root-read-elision proof.",
+  "wrapperSummary": {
+    "phase": "ad2-landscape-1",
+    "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {
+      "clippedRowReceivedTap": 1
+    },
+    "frameComparison": {
+      "publicVisibleRect": {
+        "x": 24,
+        "y": 180,
+        "width": 600,
+        "height": 70
+      },
+      "canonicalPoint": {
+        "x": 324,
+        "y": 215
+      },
+      "nativeSourceRect": {
+        "width": 600,
+        "height": 400,
+        "x": 24,
+        "y": -150
+      },
+      "nativeLiveElementRect": {
+        "x": 24,
+        "y": -150,
+        "width": 600,
+        "height": 400
+      },
+      "nativeRectsMatch": true,
+      "strictReadiness": "ready"
+    },
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "executionInputs": {
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "kind": "geometry",
+    "mode": "landscape",
+    "sourceTree": "dc7ebe49a8a5343c846b731c1d71979977867965",
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+    "fixtureBinarySha256": "fabcc12f1ecde84783f97cfdf90b1761a4f9a7690e8e854a0d0c6fc86506e10f",
+    "runtimeJSFiles": 622,
+    "wrapperSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+    "driverSha256": "d87bf2913a5fe8ac3d21695c99c0c5edda14b84f25f5bc9ecab8ad3737991bef",
+    "archivedBeforeRun": true
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "packageVersion": "0.21.37-dev",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "c2ddb9a2c00775efc11003061a7232014632a3f74a603b2fd5cd91a48219428f",
+    "xctestrunSize": 19680,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "1a3311bced4ce930092bd1e113c26a7e32a656e5a176590e1b8c0f292c6ec849"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "eba4552fe9c62ffba027ca91f892596bdc5b8743d070f98b73f0b8b154c532c1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "ae9425f2cd43e36a422bb25beeeb6683d89bc18f0977caaef12aef41cbab6c13"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10791280,
+        "mode": 493,
+        "digest": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "23a57f3ec6bf9f483e3bf7667f12185e6475b6e78a7a7102542de13fecb1258c",
+    "qualification": "Selected generic source/build facts and relative artifact hashes only; host paths, build environment/settings and signing configuration omitted."
+  },
+  "executedSources": [
+    {
+      "path": "cases/ad2-landscape-1/source/executed-driver.py",
+      "originalArchivedSha256": "d87bf2913a5fe8ac3d21695c99c0c5edda14b84f25f5bc9ecab8ad3737991bef",
+      "publicSha256": "d87bf2913a5fe8ac3d21695c99c0c5edda14b84f25f5bc9ecab8ad3737991bef",
+      "bytes": 5008,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/ad2-landscape-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "publicSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "bytes": 14103,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "originalResultIncluded": false,
+  "originalResultSha256": "b19cb928fee8f4d1b1a4b2ccb5ce0b395f8ca592fc7372904fc980eb3e746246",
+  "observations": {
+    "phase": "ad2-landscape-1",
+    "mode": "landscape",
+    "sdkSource": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "nativeBuiltAt": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+    "fixtureBinarySha256": "fabcc12f1ecde84783f97cfdf90b1761a4f9a7690e8e854a0d0c6fc86506e10f",
+    "coldOpenMs": 2135.905125,
+    "target": {
+      "index": 8,
+      "parentIndex": 7,
+      "type": "Cell",
+      "role": "UITableViewCellAccessibilityElement",
+      "subrole": "UIAccessibilityElement",
+      "identifier": "clipped-row",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 600,
+        "height": 70
+      },
+      "enabled": true,
+      "depth": 2,
+      "hittable": true,
+      "label": "Visible tail of row 0",
+      "ref": "e9",
+      "kind": "cell"
+    },
+    "frameComparison": {
+      "publicVisibleRect": {
+        "x": 24,
+        "y": 180,
+        "width": 600,
+        "height": 70
+      },
+      "canonicalPoint": {
+        "x": 324,
+        "y": 215
+      },
+      "nativeSourceRect": {
+        "width": 600,
+        "height": 400,
+        "x": 24,
+        "y": -150
+      },
+      "nativeLiveElementRect": {
+        "x": 24,
+        "y": -150,
+        "width": 600,
+        "height": 400
+      },
+      "nativeRectsMatch": true,
+      "strictReadiness": "ready"
+    },
+    "actualInputPoint": {
+      "x": 324,
+      "y": 215
+    },
+    "nativeBinaryUnchanged": true,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "nativeEvents": [
+      {
+        "event": "geometryChanged",
+        "mode": "clipped",
+        "ms": 1.7330832779407501,
+        "orientation": 0,
+        "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+      },
+      {
+        "event": "modeChanged",
+        "mode": "clipped",
+        "ms": 10.918041691184044
+      },
+      {
+        "event": "appReady",
+        "ms": 11.08283328358084,
+        "otherControlCount": 500
+      },
+      {
+        "event": "geometryChanged",
+        "mode": "clipped",
+        "ms": 3887.7563333371654,
+        "orientation": 3,
+        "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+      },
+      {
+        "event": "fixtureGeometry",
+        "mode": "clipped",
+        "ms": 3888.1961666047573,
+        "rawCenterY": 50,
+        "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+        "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+        "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+      },
+      {
+        "event": "clippedRowReceivedTap",
+        "ms": 6285.840333322994,
+        "row": 0
+      }
+    ],
+    "samples": [
+      {
+        "label": "frame-ref",
+        "target": {
+          "ref": "@e9"
+        },
+        "press": {
+          "x": 324,
+          "y": 215,
+          "message": "Tapped @e9 (324, 215)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 852,
+          "referenceHeight": 393,
+          "targetKind": "ref",
+          "ref": "e9",
+          "refLabel": "Visible tail of row 0",
+          "selectorChain": [
+            "id=\"clipped-row\"",
+            "role=\"cell\" label=\"Visible tail of row 0\"",
+            "label=\"Visible tail of row 0\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 407.04312500000015,
+        "events": [
+          {
+            "event": "geometryChanged",
+            "mode": "clipped",
+            "ms": 1.7330832779407501,
+            "orientation": 0,
+            "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+          },
+          {
+            "event": "modeChanged",
+            "mode": "clipped",
+            "ms": 10.918041691184044
+          },
+          {
+            "event": "appReady",
+            "ms": 11.08283328358084,
+            "otherControlCount": 500
+          },
+          {
+            "event": "geometryChanged",
+            "mode": "clipped",
+            "ms": 3887.7563333371654,
+            "orientation": 3,
+            "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+          },
+          {
+            "event": "fixtureGeometry",
+            "mode": "clipped",
+            "ms": 3888.1961666047573,
+            "rawCenterY": 50,
+            "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+            "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+            "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+          },
+          {
+            "event": "clippedRowReceivedTap",
+            "ms": 6285.840333322994,
+            "row": 0
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 62.518
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 328.719
+          }
+        ]
+      }
+    ],
+    "nativeGeometryObservations": {
+      "liveElementRead": {
+        "ms": 117.15145800000028,
+        "result": {
+          "ok": true,
+          "data": {
+            "nodes": [
+              {
+                "enabled": true,
+                "rect": {
+                  "x": 24,
+                  "y": -150,
+                  "width": 600,
+                  "height": 400
+                },
+                "depth": 0,
+                "hittable": true,
+                "identifier": "clipped-row",
+                "index": 0,
+                "type": "Cell"
+              }
+            ],
+            "runnerMainThreadBusy": false,
+            "text": "clipped-row",
+            "found": true
+          }
+        }
+      },
+      "rawSnapshotQuality": {
+        "state": "healthy",
+        "timing": {
+          "presentationMs": 0.04303455352783203,
+          "acquisitionMs": 24.567008018493652
+        },
+        "backend": "tree"
+      },
+      "rawWindowRects": [
+        {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "nativeWindowTreeQuality": {
+        "state": "healthy",
+        "timing": {
+          "presentationMs": 0.04303455352783203,
+          "acquisitionMs": 24.567008018493652
+        },
+        "backend": "tree"
+      },
+      "sourceRootRects": [
+        {
+          "width": 852,
+          "y": 0,
+          "height": 393,
+          "x": 0
+        }
+      ],
+      "rawNodes": [
+        {
+          "enabled": true,
+          "type": "Cell",
+          "nativePressTarget": {
+            "type": 75,
+            "rect": {
+              "width": 600,
+              "height": 400,
+              "x": 24,
+              "y": -150
+            },
+            "identifier": "clipped-row"
+          },
+          "depth": 7,
+          "rect": {
+            "height": 400,
+            "y": -150,
+            "x": 24,
+            "width": 600
+          },
+          "hittable": true,
+          "parentIndex": 17,
+          "label": "Visible tail of row 0",
+          "identifier": "clipped-row",
+          "index": 18
+        }
+      ],
+      "strict": [
+        {
+          "target": {
+            "type": 75,
+            "rect": {
+              "width": 600,
+              "height": 400,
+              "x": 24,
+              "y": -150
+            },
+            "identifier": "clipped-row",
+            "point": {
+              "x": 324,
+              "y": 215
+            }
+          },
+          "observation": {
+            "ms": 61.58258300000125,
+            "result": {
+              "ok": true,
+              "data": {
+                "runnerMainThreadBusy": false,
+                "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+                "pressReadiness": "ready"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "classification": "pass",
+  "runtimeJsManifest": {
+    "originalSha256": "345747700bb956e5b4fe09509f87d39d5ee9ebbd35bd43d282b859a46221e5c6",
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "files": 622,
+    "sharedManifest": "ad2-runtime-js-manifest.json"
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

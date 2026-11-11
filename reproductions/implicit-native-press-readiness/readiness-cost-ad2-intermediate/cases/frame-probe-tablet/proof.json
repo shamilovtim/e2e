@@ -1,0 +1,75 @@
+{
+  "case": "frame-probe-tablet",
+  "sourceContext": "7ab3d2330353587131368547eab52491bd294489 plus isolated diagnostic-only patch",
+  "optimizedCandidateProof": false,
+  "originalGenericResult": {
+    "role": "placed-tablet",
+    "selectedTests": 1,
+    "candidateSnapshotReads": 1,
+    "scope": "Isolated 7ab3 source plus the diagnostic patch; no performance claim.",
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "frames": {
+      "appFrame": [
+        0,
+        0,
+        1032,
+        1376
+      ],
+      "candidateLiveFrame": [
+        240,
+        90,
+        220,
+        42
+      ],
+      "candidateSnapshotFrame": [
+        240,
+        90,
+        220,
+        42
+      ],
+      "candidateSnapshotReads": 1,
+      "windows": [
+        {
+          "live": [
+            0,
+            0,
+            1032,
+            1376
+          ],
+          "snapshot": [
+            0,
+            0,
+            1032,
+            1376
+          ]
+        }
+      ]
+    },
+    "expectedOriginEstablished": false,
+    "snapshotFrameMatchesLive": true,
+    "rootTranslatedSnapshotMatchesLive": true,
+    "qualified": false
+  },
+  "originalResultSha256": "715672f756ab042df1f940b9a36742ec9fc19af2aee2336c289a28aba19423c3",
+  "nativeLogSummary": {
+    "passedTestCases": 1,
+    "failedTestCases": 0,
+    "executedSummaries": [
+      [
+        1,
+        0
+      ]
+    ],
+    "rawLogIncluded": false
+  },
+  "derivedClassification": "Fullscreen tablet setup failed to establish a placed window. One native method passed, but the intended placement prerequisite was absent; original qualified=false is retained.",
+  "datasetStatus": "Pinned 7ab diagnostic only, not ad2 performance or final optimized proof.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

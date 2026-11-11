@@ -1,0 +1,177 @@
+{
+  "case": "frame-probe-window-tablet",
+  "classification": "qualified-owning-window-scope-diagnostic",
+  "datasetStatus": "Pinned 7ab plus diagnostic-only owning-window query; not ad2 performance proof.",
+  "originalGenericResult": {
+    "role": "placed-tablet",
+    "selectedTests": 1,
+    "candidateSnapshotReads": 1,
+    "scope": "Isolated 7ab3 source plus the diagnostic patch; no performance claim.",
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "frames": {
+      "appFrame": [
+        0,
+        0,
+        375,
+        611
+      ],
+      "candidateLiveFrame": [
+        569,
+        415,
+        111,
+        42
+      ],
+      "candidateSnapshotFrame": [
+        240,
+        90,
+        111,
+        42
+      ],
+      "candidateSnapshotReads": 1,
+      "candidateWindowIndex": 0,
+      "queryScope": "owning-window",
+      "windows": [
+        {
+          "live": [
+            329,
+            325,
+            375,
+            611
+          ],
+          "snapshot": [
+            0,
+            0,
+            375,
+            611
+          ]
+        }
+      ]
+    },
+    "expectedOriginEstablished": true,
+    "probeScopeMatches": true,
+    "snapshotFrameMatchesLive": false,
+    "rootTranslatedSnapshotMatchesLive": false,
+    "owningWindowTranslatedSnapshotMatchesLive": true,
+    "qualified": true
+  },
+  "executionInputs": {
+    "head": "7ab3d2330353587131368547eab52491bd294489",
+    "sourceDiffSha256": "4b80df5ea227f43677b91a96d704ded03bb96336538b0d5e5569cd49406a6767",
+    "nativeFingerprint": "c8e8ed5bf0da697a9396127cec59ab55deb998032605d7aa8d9fa7e8c21e5b25",
+    "nativeBinarySha256": "b8202525031c215fdf3182b1b9505a15035f7eff7d105c1baca0dec67677b7f0",
+    "wrapperSha256": "8b778c15a7c54082de24f3d25884a2d4e3a142a85ad8a3f53ac5cb63965007cd",
+    "patchSha256": "0845a29657182c5700e23b06258d4a71405f805a861ae57c03ec648af0724961",
+    "archivedBeforeRun": true
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "c8e8ed5bf0da697a9396127cec59ab55deb998032605d7aa8d9fa7e8c21e5b25",
+    "packageVersion": "0.21.37-dev",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "bbeebddb44826fe140f3b90c9a894e293ade4d61b205e3aae50dbe31341789a5",
+    "xctestrunSize": 19671,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 331936,
+        "mode": 493,
+        "digest": "c2b5f301ed98f103948f0ce8fc005180e391c8392e0465d7039582e6d485a996"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "6dc98d57e8873c47c5ebce454473e03c65cf622c880d71671dd2106d75fdfef5"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "9545d2bf1b4f4f3a4d6add11eaa0d58de1f4db02fa1d8acfba493d4752ac92c1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 26600144,
+        "mode": 493,
+        "digest": "b8202525031c215fdf3182b1b9505a15035f7eff7d105c1baca0dec67677b7f0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "18cc74cb60abba991f33ae594979859938a98d883d8f1044e0c87f4f49d817fc",
+    "qualification": "Selected generic source/build facts and relative artifact hashes only; host paths, build environment/settings and signing configuration omitted."
+  },
+  "executedSources": [
+    {
+      "path": "cases/frame-probe-window-tablet/source/executed-frame-space-window-probe-source.json",
+      "originalArchivedSha256": "1512bcf4bd379f5db841bb8d40dbda7cca79dec5302792b0073553f4f1ae875b",
+      "publicSha256": "1512bcf4bd379f5db841bb8d40dbda7cca79dec5302792b0073553f4f1ae875b",
+      "bytes": 311,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/frame-probe-window-tablet/source/executed-frame-space-window-probe.patch",
+      "originalArchivedSha256": "0845a29657182c5700e23b06258d4a71405f805a861ae57c03ec648af0724961",
+      "publicSha256": "0845a29657182c5700e23b06258d4a71405f805a861ae57c03ec648af0724961",
+      "bytes": 2565,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/frame-probe-window-tablet/source/executed-run-frame-space-probe.py",
+      "originalArchivedSha256": "8b778c15a7c54082de24f3d25884a2d4e3a142a85ad8a3f53ac5cb63965007cd",
+      "publicSha256": "8b778c15a7c54082de24f3d25884a2d4e3a142a85ad8a3f53ac5cb63965007cd",
+      "bytes": 4760,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "qualification": "Archived wrapper/patch/source metadata existed before execution. Actual window-scoped candidate snapshot remains local on placed tablet; the single owning-window transform matches the live screen frame. Original V1 missing-executed-wrapper caveat remains limited to V1.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

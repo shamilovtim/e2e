@@ -1,0 +1,139 @@
+{
+  "case": "native-ad2-phone-1",
+  "classification": "six-selected-native-tests-pass",
+  "datasetStatus": "ad2 intermediate, not full native suite or final optimization proof.",
+  "result": {
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "role": "phone",
+    "tests": [
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+      "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+      "testReadinessKeepsTextInputBindingAcrossContentChanges",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate"
+    ],
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "d6a4a57a3fd3bc81e8c3d419d85b4e5b20d711da831aa805eb2d22c8d347c163",
+    "wrapperSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+    "sourceTree": "dc7ebe49a8a5343c846b731c1d71979977867965",
+    "archivedBeforeRun": true,
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "observedTests": 6,
+    "observedFailures": 0,
+    "success": true
+  },
+  "executionInputs": {
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "role": "phone",
+    "tests": [
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+      "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+      "testReadinessKeepsTextInputBindingAcrossContentChanges",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate"
+    ],
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "d6a4a57a3fd3bc81e8c3d419d85b4e5b20d711da831aa805eb2d22c8d347c163",
+    "wrapperSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+    "sourceTree": "dc7ebe49a8a5343c846b731c1d71979977867965",
+    "archivedBeforeRun": true
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "packageVersion": "0.21.37-dev",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "c2ddb9a2c00775efc11003061a7232014632a3f74a603b2fd5cd91a48219428f",
+    "xctestrunSize": 19680,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 332144,
+        "mode": 493,
+        "digest": "00008a6fa25d136e83ed71fb6f60a755b1b4b212965d01071a62c1a4d963e7e9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "6791a824444369415de204c4694dcc7ede01b2d4b1443d01cb85e0607ffe87e5"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "79d4114bddf8a2834811c47e13aebd1d948a294ebc5944cb0dd69f33ee896e4f"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 26603344,
+        "mode": 493,
+        "digest": "d6a4a57a3fd3bc81e8c3d419d85b4e5b20d711da831aa805eb2d22c8d347c163"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "33784d9af5b8568a92ec23b6eb1e954045dd21d76c6b9a138747dd80a1880f56",
+    "qualification": "Selected generic source/build facts and relative artifact hashes only; host paths, build environment/settings and signing configuration omitted."
+  },
+  "executedSources": [
+    {
+      "path": "cases/native-ad2-phone-1/source/executed-wrapper.py",
+      "originalArchivedSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+      "publicSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+      "bytes": 5374,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

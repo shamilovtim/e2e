@@ -1,0 +1,49 @@
+{
+  "case": "frame-probe-tablet-placement",
+  "sourceContext": "7ab3d2330353587131368547eab52491bd294489 plus isolated diagnostic-only patch",
+  "optimizedCandidateProof": false,
+  "derivedClassification": "One coarse generic-fixture resize setup only; not a product/performance test.",
+  "selectedSetupFacts": {
+    "scope": "One coarse public-fixture window placement only; no performance result.",
+    "input": {
+      "x": 1022,
+      "y": 1366,
+      "dx": -400,
+      "dy": -450,
+      "durationMs": 900
+    },
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "beforeViewport": {
+      "width": 1032,
+      "height": 1376
+    },
+    "afterViewport": {
+      "width": 375,
+      "height": 611
+    },
+    "afterApplicationRect": {
+      "width": 375,
+      "y": 325,
+      "height": 611,
+      "x": 329
+    },
+    "afterActionRect": {
+      "width": 111,
+      "y": 415,
+      "height": 42,
+      "x": 569
+    }
+  },
+  "originalPrivateSetupArtifactSha256": "e24073b1a8803259a767b977a068cd361eec2251dbc1cd3c6ba1a5ae0fa79c0a",
+  "datasetStatus": "Pinned 7ab diagnostic only, not ad2 performance or final optimized proof.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

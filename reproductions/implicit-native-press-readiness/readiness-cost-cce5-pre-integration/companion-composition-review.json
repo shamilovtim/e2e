@@ -1,0 +1,14 @@
+{
+  "sdkReadinessHead": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "viewportAuthorityHead": "2c30d548499e615061b77ec527d7842ae40398d0",
+  "method": "Independent read-only comparison of overlapping owners in separately verified branches; no combined execution or merge performed.",
+  "finding": "Compatible additive evidence; no inherent semantic collision or bypass found.",
+  "requiredMergeHandling": [
+    "Retain both native target and viewport fields/functions in the same private-evidence owner and facade. Attachment merges existing fields.",
+    "In buildSnapshotState, copy viewport evidence after stripNativePressTargets produces the final node array.",
+    "Clone memory-session data once, then reattach both native target bindings and viewport evidence to cloned nodes. Do not select only one branch copier."
+  ],
+  "appleWire": "Viewport authority and native target descriptors use distinct keys; presentation can preserve descriptors while attaching viewport authority.",
+  "combinedOrderingExpectation": "Origin authorization must occur before readiness; fresh re-resolution must re-enter the origin guard.",
+  "limitations": "This is composition review only. Each published native/behavioral result remains attributed to its separately tested source; no combined runtime proof is claimed."
+}

@@ -1,0 +1,11 @@
+{
+  "reference": "4388 comment 6802899987, as supplied by parent",
+  "decision": "Decision: text-entry press identity:\n\nAccepting [the maintainer's proposal](https://github.com/callstack/agent-device/pull/4391#issuecomment-6801889431): TextField, SearchField, TextView and SecureTextField contents are not part of the private native press binding. Both capture producers omit these values, and both matchers exempt them through shared text-entry type policies. Type, identifier, label, app/surface and the full unclipped rectangle still bind the target. Non-text-entry controls retain value binding, and all exact matches are counted before native hittability can authorize input.\n\nThis intentionally replaces the earlier producer-specific text-value guarantee. Contents are mutable state, and preserving separate raw/accessibility views adds live reads while still providing only a partial content guarantee. Readiness will not claim that text-entry contents are unchanged. An authored value selector retains its normal meaning when canonical resolution runs; this change does not relax selector matching, fill/type confirmation, or other action guards.\n\nADR 0011 has been amended first. Implementation and validation follow: remove the private value-source plumbing and extra flat-input probe, consolidate each candidate's attributes into one snapshot, preserve coordinate ownership for placed windows, and repeat the same three actual 500-control base/head measurements. No new runtime or performance result is claimed yet. Partial-point occlusion and degraded unanchored geometry remain separate issues #4347 and #4399.\n",
+  "textEntryTypesExemptFromPrivatePressValueBinding": [
+    "TextField",
+    "SearchField",
+    "TextView",
+    "SecureTextField"
+  ],
+  "historicalQualification": "Earlier d3/7ab raw-content stale-read guarantees are historical and are intentionally replaced by this new text-entry value exemption. They are not promised by the provisional optimized implementation. Canonical authored value selectors, fill/type confirmation and other guards retain their separate meanings."
+}

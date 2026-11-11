@@ -1,0 +1,154 @@
+{
+  "datasetStatus": "PRE-INTEGRATION historical evidence, not final source or combined runtime proof",
+  "validatedSource": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+  "SDKRuntimeSource": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "subsequentUpstreamMerged": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "cases": [
+    {
+      "case": "189c-anonymous-current-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-anonymous-current-1/proof.json",
+      "video": "cases/189c-anonymous-current-1/video.mp4"
+    },
+    {
+      "case": "189c-buttons-current-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-buttons-current-1/proof.json",
+      "video": "cases/189c-buttons-current-1/video.mp4"
+    },
+    {
+      "case": "189c-clipped-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-clipped-1/proof.json",
+      "video": "cases/189c-clipped-1/video.mp4"
+    },
+    {
+      "case": "189c-duplicates-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass-with-qualified-caller-cancellation",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-duplicates-1/proof.json",
+      "video": "cases/189c-duplicates-1/video.mp4"
+    },
+    {
+      "case": "189c-exact-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-exact-1/proof.json",
+      "video": "cases/189c-exact-1/video.mp4"
+    },
+    {
+      "case": "189c-fade750-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-fade750-1/proof.json",
+      "video": "cases/189c-fade750-1/video.mp4"
+    },
+    {
+      "case": "189c-ipad-placed-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-ipad-placed-1/proof.json",
+      "video": "cases/189c-ipad-placed-1/video.mp4"
+    },
+    {
+      "case": "189c-landscape-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-landscape-1/proof.json",
+      "video": "cases/189c-landscape-1/video.mp4"
+    },
+    {
+      "case": "189c-missing-current-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-missing-current-1/proof.json",
+      "video": "cases/189c-missing-current-1/video.mp4"
+    },
+    {
+      "case": "189c-shared-caller1000-first-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "failed-original-one-second-caller-budget",
+      "wrapperSuccess": false,
+      "wrapperExitCode": 1,
+      "proof": "cases/189c-shared-caller1000-first-1/proof.json",
+      "video": "cases/189c-shared-caller1000-first-1/video.mp4"
+    },
+    {
+      "case": "189c-shared-caller1000-warm-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass-separate-explicit-warm-experiment",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-shared-caller1000-warm-1/proof.json",
+      "video": "cases/189c-shared-caller1000-warm-1/video.mp4"
+    },
+    {
+      "case": "189c-shared-current-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-shared-current-1/proof.json",
+      "video": "cases/189c-shared-current-1/video.mp4"
+    },
+    {
+      "case": "189c-tree-ref-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-tree-ref-1/proof.json",
+      "video": "cases/189c-tree-ref-1/video.mp4"
+    },
+    {
+      "case": "189c-values-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/189c-values-1/proof.json",
+      "video": "cases/189c-values-1/video.mp4"
+    },
+    {
+      "case": "native-189c-phone-1",
+      "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+      "classification": "six-selected-native-tests-pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/native-189c-phone-1/proof.json",
+      "video": "cases/native-189c-phone-1/video.mp4"
+    },
+    {
+      "case": "native-cce5-phone-1",
+      "source": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+      "classification": "six-selected-native-tests-pass",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/native-cce5-phone-1/proof.json",
+      "video": "cases/native-cce5-phone-1/video.mp4"
+    }
+  ],
+  "count": 16,
+  "ad2Preservation": "Older202-file/24-video curated intermediate is unchanged and remains separately attributed."
+}

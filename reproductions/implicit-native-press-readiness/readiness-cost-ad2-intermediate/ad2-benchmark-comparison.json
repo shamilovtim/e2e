@@ -1,0 +1,180 @@
+{
+  "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "method": "Same frozen fixture, owned phone, portrait, three warm SDK ref presses and one CLI per mode, sequential base/head; source/runtime/native/fixture guards archived before each run; no competing uploads, builds, tests or media decoding.",
+  "pairs": [
+    {
+      "mode": "anonymous",
+      "base": {
+        "case": "base5a-anonymous-current-1",
+        "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+        "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+        "nativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          734.4943750000002,
+          989.0761659999989,
+          980.5512500000004
+        ],
+        "medianMs": 980.5512500000004,
+        "cliMs": 960.3042089999999,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0
+      },
+      "head": {
+        "case": "ad2-anonymous-current-1",
+        "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+        "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+        "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          1177.6045410000006,
+          1415.0865840000006,
+          1434.0003749999996
+        ],
+        "medianMs": 1415.0865840000006,
+        "cliMs": 1424.4443749999991,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0
+      },
+      "addedMedianMs": 434.53533400000015,
+      "addedCLIMs": 464.1401659999992
+    },
+    {
+      "mode": "buttons",
+      "base": {
+        "case": "base5a-buttons-current-1",
+        "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+        "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+        "nativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          771.4531660000002,
+          949.817916,
+          980.6193330000006
+        ],
+        "medianMs": 949.817916,
+        "cliMs": 975.9663330000003,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0
+      },
+      "head": {
+        "case": "ad2-buttons-current-1",
+        "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+        "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+        "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          1118.6112090000006,
+          1350.431708,
+          1361.1374579999992
+        ],
+        "medianMs": 1350.431708,
+        "cliMs": 1322.4539160000004,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0
+      },
+      "addedMedianMs": 400.6137920000001,
+      "addedCLIMs": 346.4875830000001
+    },
+    {
+      "mode": "shared",
+      "base": {
+        "case": "base5a-shared-current-1",
+        "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+        "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+        "nativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          742.2282500000001,
+          454.8248330000006,
+          459.3519580000011
+        ],
+        "medianMs": 459.3519580000011,
+        "cliMs": 521.9614999999994,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0
+      },
+      "head": {
+        "case": "ad2-shared-current-1",
+        "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+        "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+        "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "warmRefsMs": [
+          995.5418329999993,
+          968.9463749999995,
+          978.5072499999987
+        ],
+        "medianMs": 978.5072499999987,
+        "cliMs": 1017.7522910000007,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "wrapperExitCode": 0,
+        "cleanupExitCode": 0,
+        "recorderExitCode": 0
+      },
+      "addedMedianMs": 519.1552919999976,
+      "addedCLIMs": 495.79079100000126
+    }
+  ],
+  "remainingCost": "Ready-path added medians remain400\u2013519ms. No lower-latency or hard numerical acceptance claim is made.",
+  "missing": {
+    "phase": "ad2-missing-current-1",
+    "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": 365.7737500000003,
+    "targetTaps": 0,
+    "siblingTaps": 0,
+    "inputEvents": {},
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "caller1000": {
+    "phase": "ad2-shared-caller1000-1",
+    "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "exitCode": 1,
+    "cleanupExitCode": 0,
+    "success": false,
+    "warmRefsMs": [
+      1002.9182090000004
+    ],
+    "medianMs": 1002.9182090000004,
+    "cliMs": null,
+    "targetTaps": 1,
+    "siblingTaps": 0,
+    "inputEvents": {
+      "controlReceivedTap": 1
+    },
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "caller1000Conclusion": "One-second caller signal expired at1002.9ms after tap dispatch; typed request_canceled with dispatched unknown. Exactly one intended tap and zero sibling taps. This failed caller completion is not proof of a native readiness failure or server deadline."
+}

@@ -1,0 +1,156 @@
+{
+  "source": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+  "production": {
+    "nativeFingerprint": "88b0a868511fca8e4468c1c62b7e8646c76da1dace0537466869f06c2384ee0a",
+    "nativeXCTestBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+    "byteEqualToActual189cXCTestBinary": true,
+    "binaryArchitectures": "x86_64 arm64",
+    "actualArtifactsVerified": 11,
+    "artifactsComparedWith189c": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "newSha256": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545",
+        "oldSha256": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "newSha256": "faaee6eda1ab1ff468269464120848dec98fc7a360d4149dffcff87ae3c20882",
+        "oldSha256": "faaee6eda1ab1ff468269464120848dec98fc7a360d4149dffcff87ae3c20882",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "newSha256": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9",
+        "oldSha256": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "newSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "oldSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "newSha256": "c8d9004a3c860ab610905cb5c2a6167567e0b7374012372a442eb645680caeae",
+        "oldSha256": "c8d9004a3c860ab610905cb5c2a6167567e0b7374012372a442eb645680caeae",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "newSha256": "ba40ce14a6e06891307f1e65169a06f01b054fe7cbadfe06721e104f1e34e40f",
+        "oldSha256": "ba40ce14a6e06891307f1e65169a06f01b054fe7cbadfe06721e104f1e34e40f",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "newSha256": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129",
+        "oldSha256": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "newSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "oldSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "newSha256": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d",
+        "oldSha256": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "newSha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+        "oldSha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "newSha256": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76",
+        "oldSha256": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76",
+        "equal": true
+      }
+    ]
+  },
+  "oldRawNativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+  "rawFingerprintEqual": false,
+  "rawFingerprintDifference": "Unit-only fixture source changes the raw source fingerprint despite unchanged production runtime bytes.",
+  "unit": {
+    "nativeFingerprint": "88b0a868511fca8e4468c1c62b7e8646c76da1dace0537466869f06c2384ee0a",
+    "nativeXCTestBinarySha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+    "fixtureHostBinarySha256": "4b92fb9ec417fc342ee9a1b0ad17cfc63e072731c9462b50c9710ec5a5a4cf3d",
+    "binaryArchitectures": "x86_64 arm64",
+    "actualArtifactsVerified": 11,
+    "artifactsComparedWith189c": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "newSha256": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545",
+        "oldSha256": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "newSha256": "4b92fb9ec417fc342ee9a1b0ad17cfc63e072731c9462b50c9710ec5a5a4cf3d",
+        "oldSha256": "d4717655338228d6d329c8232817712cf8a0b9e97a493f76f8be8b1273aa0163",
+        "equal": false
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "newSha256": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9",
+        "oldSha256": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "newSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "oldSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "newSha256": "5d47393d988cc60535b9ac7f147ab6f7c2e9b09454148fec106938ac41208580",
+        "oldSha256": "5d47393d988cc60535b9ac7f147ab6f7c2e9b09454148fec106938ac41208580",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "newSha256": "b6efc07f7252fa13decbdbdf0a9552dcc07e582ee90849bab7be0d865e9af6dd",
+        "oldSha256": "b6efc07f7252fa13decbdbdf0a9552dcc07e582ee90849bab7be0d865e9af6dd",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "newSha256": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129",
+        "oldSha256": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "newSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "oldSha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "newSha256": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d",
+        "oldSha256": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "newSha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+        "oldSha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+        "equal": true
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "newSha256": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76",
+        "oldSha256": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76",
+        "equal": true
+      }
+    ]
+  }
+}

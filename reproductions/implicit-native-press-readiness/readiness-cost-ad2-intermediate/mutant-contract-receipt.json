@@ -1,0 +1,32 @@
+{
+  "reviewedSHA": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+  "reviewedStatusBefore": "",
+  "experimentSHA": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+  "mutation": "Remove the mutable-text-entry value exemption from the canonical matcher, while preserving type/identifier/label/rect matching.",
+  "focusedSuite": "packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts",
+  "purpose": "Prove canonical string and native-number text-entry content-change cases detect loss of the newly accepted contract.",
+  "reviewedSHAAfter": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+  "reviewedStatusAfter": "",
+  "patchSha256": "07ef21b9803821a0364507d2f834a0c1802469b814d3e1326f267c6e7df12bcd",
+  "experimentRemoved": true,
+  "runs": [
+    {
+      "phase": "green-before",
+      "passed": 28,
+      "failed": 0,
+      "success": true
+    },
+    {
+      "phase": "red",
+      "passed": 20,
+      "failed": 8,
+      "success": false
+    },
+    {
+      "phase": "green-after",
+      "passed": 28,
+      "failed": 0,
+      "success": true
+    }
+  ]
+}

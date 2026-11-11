@@ -1,0 +1,283 @@
+{
+  "datasetStatus": "Historical pre-integration media only",
+  "method": "Python standard-library ISO BMFF track/atom inventory plus review of each track user-data value. No media transformation.",
+  "videos": [
+    {
+      "case": "189c-anonymous-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 13.533333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.446666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-buttons-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 13.395,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.155
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-clipped-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 8.558333333333334,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 8.47
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-duplicates-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 10.976666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 10.871666666666666
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-exact-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 8.221666666666666,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 8.11
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-fade750-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 3.8266666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 2.88
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-ipad-placed-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 15.585,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.686666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-landscape-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 9.231666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 9.158333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-missing-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 8.15,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 7.9
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-shared-caller1000-first-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 8.963333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 8.865
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-shared-caller1000-warm-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 10.983333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 10.733333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-shared-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 12.113333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 12.033333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-tree-ref-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 13.436666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.371666666666666
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "189c-values-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 31.04,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 33.31166666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "native-189c-phone-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 33.60166666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 33.59
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "native-cce5-phone-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 39.211666666666666,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 39.405
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    }
+  ],
+  "audioTracks": 0,
+  "metadataReview": {
+    "perVideo": "One track udta/tagc value com.apple.policy.screenrecording.1",
+    "privateValueFindings": 0
+  }
+}

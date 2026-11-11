@@ -1,0 +1,854 @@
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m b/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
+index 901d185..ab9a24d 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
+@@ -555,8 +555,18 @@ - (void)agentDeviceWillAttachToWindow:(UIWindow *)window {
+     second.frame = window.windowScene.coordinateSpace.bounds;
+     second.accessibilityIdentifier = @"agent-device-second-window";
+     second.rootViewController = [UIViewController new];
++    if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-second-window-duplicate"]) {
++      UIButton *duplicate = [UIButton buttonWithType:UIButtonTypeSystem];
++      duplicate.frame = CGRectMake(40, 300, 200, 44);
++      duplicate.accessibilityIdentifier = @"native-window-duplicate";
++      [duplicate setTitle:@"Window duplicate" forState:UIControlStateNormal];
++      [second.rootViewController.view addSubview:duplicate];
++    }
+     self.secondWindow = second;
+     [second makeKeyAndVisible];
++    if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-second-window-zero-frame"]) {
++      second.frame = CGRectZero;
++    }
+   }
+ }
+ 
+@@ -647,6 +657,14 @@ - (void)viewDidLoad {
+     }
+   }
+ 
++  if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-second-window-duplicate"]) {
++    UIButton *duplicate = [UIButton buttonWithType:UIButtonTypeSystem];
++    duplicate.frame = CGRectMake(40, 300, 200, 44);
++    duplicate.accessibilityIdentifier = @"native-window-duplicate";
++    [duplicate setTitle:@"Window duplicate" forState:UIControlStateNormal];
++    [self.view addSubview:duplicate];
++  }
++
+   if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-text-entry-regression"]) {
+     BOOL digitCountValue =
+         [NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-text-entry-digit-count-value"];
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
+index 10c670c..bef0b3b 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
+@@ -373,50 +373,63 @@ extension RunnerTests {
+   /// public selector reads, a hittable sibling can never stand in for the authorized control.
+   func queryAuthorizedPressTarget(app: XCUIApplication, target: NativePressTarget, appBundleId: String? = nil) throws -> Response {
+     let expected = target.rect
+-    guard let type = XCUIElement.ElementType(rawValue: target.type),
+-      target.valueSource == nil || target.valueSource == "accessibility",
++    guard XCUIElement.ElementType(rawValue: target.type) != nil,
+       expected.width > 0, expected.height > 0,
+       [expected.x, expected.y, expected.width, expected.height].allSatisfy({ $0.isFinite }) else {
+       return Response(ok: true, data: DataPayload(pressReadiness: "missing", pressReadinessAppBundleId: appBundleId))
+     }
+     let roots = try elementSearchRoots(root: app, litDisplayID: requestLitPanel?.displayID)
+-    let windows = roots.flatMap { root -> [XCUIElement] in
+-      var windows: [XCUIElement] = []
+-      let held = holdingRecordedIssues {
+-        windows = root is XCUIApplication ? root.windows.allElementsBoundByIndex : [root]
++    var windows: [XCUIElement] = []
++    let held = holdingRecordedIssues {
++      windows = roots.flatMap { $0 is XCUIApplication ? $0.windows.allElementsBoundByIndex : [$0] }
++    }
++    guard held.issues.isEmpty, held.exceptionMessage == nil, !windows.isEmpty else {
++      throw RunnerAppScreenCaptureFailure.unresolvedScreen
++    }
++    let orientation = capturedInterfaceOrientation(app: app)
++    let identity = Self.authorizedPressTargetPredicate(target)
++    var matches: [XCUIElement] = []
++    for window in windows {
++      let windowSnapshot = try window.snapshot()
++      var frame = CGRect.null
++      let geometry = holdingRecordedIssues { frame = window.frame }
++      if !geometry.issues.isEmpty || geometry.exceptionMessage != nil
++        || !SnapshotGeometry.isPositiveFinite(frame) || !SnapshotGeometry.isPositiveFinite(windowSnapshot.frame) {
++        var possible: Bool?
++        let probe = holdingRecordedIssues {
++          possible = identity.evaluate(with: windowSnapshot)
++            || window.descendants(matching: .any).matching(identity).count > 0
++        }
++        guard probe.issues.isEmpty, probe.exceptionMessage == nil, possible == false else {
++          throw RunnerAppScreenCaptureFailure.unresolvedScreen
++        }
++        continue
+       }
+-      return held.issues.isEmpty && held.exceptionMessage == nil ? windows : []
+-    }
+-    let offsets = windows.compactMap { window -> CGSize? in
+-      var offset: CGSize?
+-      let held = holdingRecordedIssues {
+-        guard window.exists else { return }
+-        let frame = window.frame
+-        offset = SnapshotContentTranslation.offset(reportedBox: CGRect(origin: .zero, size: frame.size), viewportBox: frame)
++      // A placed app can report origin zero while its window is on screen elsewhere.
++      let space = SnapshotGeometrySpace.space(reportedBySurfaceHost: true,
++        reportedFrame: windowSnapshot.frame, inheritedFrom: .appOrientation,
++        viewport: .reported(box: frame, interfaceOrientation: orientation))
++      if target.matches(type: windowSnapshot.elementType.rawValue, identifier: windowSnapshot.identifier,
++        label: windowSnapshot.label, value: Self.valueText(windowSnapshot.value),
++        rect: SnapshotRect(space.orientedFrame(of: windowSnapshot.frame))) {
++        matches.append(window)
+       }
+-      return held.issues.isEmpty && held.exceptionMessage == nil ? offset : nil
+-    }
+-    func matchesBinding(_ attributes: XCUIElementAttributes, rect: CGRect, value: String?) -> Bool {
+-      target.matches(type: attributes.elementType.rawValue, identifier: attributes.identifier,
+-        label: attributes.label, value: value, rect: SnapshotRect(rect))
+-    }
+-    // Snapshot frames may be window-local and input values may differ from live accessors.
+-    // This only prefilters; the live frame and canonical native value below remain authoritative.
+-    let binding = NSPredicate { object, _ in
+-      guard let attributes = object as? XCUIElementAttributes else { return false }
+-      let frame = attributes.frame
+-      return matchesBinding(attributes, rect: frame, value: target.value) || offsets.contains {
+-        matchesBinding(attributes, rect: frame.offsetBy(dx: $0.width, dy: $0.height), value: target.value)
++      let binding = NSPredicate { object, _ in
++        guard let attributes = object as? XCUIElementAttributes else { return false }
++        return target.matches(type: attributes.elementType.rawValue, identifier: attributes.identifier,
++          label: attributes.label, value: Self.valueText(attributes.value),
++          rect: SnapshotRect(space.orientedFrame(of: attributes.frame)))
++      }
++      let candidates = window.descendants(matching: .any)
++        .matching(identity).matching(binding).allElementsBoundByIndex
++      for element in candidates {
++        let snapshot = try element.snapshot()
++        if target.matches(type: snapshot.elementType.rawValue, identifier: snapshot.identifier,
++          label: snapshot.label, value: Self.valueText(snapshot.value),
++          rect: SnapshotRect(space.orientedFrame(of: snapshot.frame))) {
++          matches.append(element)
++        }
+       }
+-    }
+-    let matches = try roots.flatMap {
+-      $0.descendants(matching: .any).matching(Self.authorizedPressTargetPredicate(target)).matching(binding).allElementsBoundByIndex
+-    }.filter { element in
+-      guard element.exists else { return false }
+-      // Index-bound handles re-resolve the retained exact type/id/label predicate.
+-      return try target.matches(type: target.type, identifier: target.identifier, label: target.label,
+-        value: nativePressTargetValue(element, type: type, accessibilityValue: target.valueSource == "accessibility"),
+-        rect: SnapshotRect(element.frame))
+     }
+     let state = matches.count > 1 ? "ambiguous" : matches.first.map { $0.isHittable ? "ready" : "blocked" } ?? "missing"
+     return Response(ok: true, data: DataPayload(pressReadiness: state, pressReadinessAppBundleId: appBundleId))
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
+index 83757f4..1ec92fc 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
+@@ -1,4 +1,3 @@
+-import XCTest
+ import AgentDeviceSnapshotPresentation
+ 
+ // MARK: - Wire Models
+@@ -245,7 +244,7 @@ extension NativePressTarget {
+   func matches(type: UInt, identifier: String?, label: String?, value: String?, rect: SnapshotRect) -> Bool {
+     func text(_ value: String?) -> String { (value ?? "").trimmingCharacters(in: .whitespacesAndNewlines) }
+     return self.type == type && text(self.identifier) == text(identifier)
+-      && text(self.label) == text(label) && (type == XCUIElement.ElementType.secureTextField.rawValue || text(self.value) == text(value))
++      && text(self.label) == text(label) && (Self.textEntryTypes.contains(type) || text(self.value) == text(value))
+       && [self.rect.x - rect.x, self.rect.y - rect.y, self.rect.width - rect.width, self.rect.height - rect.height]
+         .allSatisfy { $0.isFinite && abs($0) <= 1 }
+       && self.rect.width >= 0 && self.rect.height >= 0 && rect.width >= 0 && rect.height >= 0
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift
+index 9eb797e..3257008 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift
+@@ -10,13 +10,6 @@ extension RunnerTests {
+ #endif
+   }
+ 
+-  /// Read the input value view retained by its producer, never raw-or-display equivalence.
+-  func nativePressTargetValue(_ element: XCUIElement, type: XCUIElement.ElementType, accessibilityValue: Bool = false) throws -> String? {
+-    if type == .secureTextField { return nil }
+-    if !accessibilityValue && Self.placeholderElementTypes.contains(type) { return Self.valueText(try element.snapshot().value) }
+-    return Self.valueText(element.value)
+-  }
+-
+   func interactiveRootNode(rect: CGRect) -> RawAXNode {
+     RawAXNode(
+       index: 0,
+@@ -242,7 +235,7 @@ extension RunnerTests {
+       nativePressTarget: nativePressTarget(type: snapshot.elementType.rawValue,
+         identifier: evaluation.identifier.isEmpty ? nil : evaluation.identifier,
+         label: snapshot.label.isEmpty ? nil : snapshot.label,
+-        value: snapshot.elementType == .secureTextField ? nil : Self.valueText(snapshot.value),
++        value: evaluation.valueText,
+         frame: snapshot.frame)
+     )
+   }
+@@ -697,18 +690,8 @@ extension RunnerTests {
+       let valueText = Self.valueText(element.value)
+       let elementType = element.elementType
+       let enabled = element.isEnabled
+-      var target = nativePressTarget(type: elementType.rawValue, identifier: identifier,
++      let target = nativePressTarget(type: elementType.rawValue, identifier: identifier,
+         label: label, value: valueText, frame: frame)
+-#if os(iOS)
+-      if elementType != .secureTextField && Self.placeholderElementTypes.contains(elementType) {
+-        target = nil
+-        let held = holdingRecordedIssues {
+-          target = try? NativePressTarget(type: elementType.rawValue, identifier: identifier,
+-            label: label, value: nativePressTargetValue(element, type: elementType), rect: SnapshotRect(frame))
+-        }
+-        if !held.issues.isEmpty || held.exceptionMessage != nil { target = nil }
+-      }
+-#endif
+ 
+       node = RawAXNode(
+         index: index,
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
+index de8b2bc..4f4e859 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
+@@ -41,10 +41,11 @@ extension RunnerTests {
+     }
+     let reference = fixtures[0].expected
+     let r = reference.rect
+-    // Raw native masks are ignored here; captured host descriptors already omit secure values.
+-    let secure = NativePressTarget(type: XCUIElement.ElementType.secureTextField.rawValue,
+-      identifier: nil, label: nil, value: nil, rect: r)
+-    XCTAssertTrue(secure.matches(type: secure.type, identifier: nil, label: nil, value: "redacted", rect: r))
++    for type in [XCUIElement.ElementType.searchField, .textField, .secureTextField, .textView] {
++      let input = NativePressTarget(type: type.rawValue, identifier: nil, label: nil, value: "before", rect: r)
++      XCTAssertNil(input.value)
++      XCTAssertTrue(input.matches(type: type.rawValue, identifier: nil, label: nil, value: "after", rect: r))
++    }
+     // JSON cannot encode non-finite numbers; both consumers exercise them natively.
+     for invalid in [Double.nan, Double.infinity, -Double.infinity] {
+       for rect in [
+@@ -145,51 +146,83 @@ extension RunnerTests {
+ 
+ #if os(iOS)
+   @MainActor
+-  func testReadinessDistinguishesRawInputContentsFromItsPlaceholder() throws {
++  func testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow() throws {
++    app.launchArguments = ["--agent-device-native-states", "--agent-device-second-window", "--agent-device-second-window-zero-frame"]
++    app.launch()
++    defer { app.terminate() }
++    let field = app.textFields["native-field"]
++    XCTAssertTrue(field.waitForFixtureExistence(timeout: appExistenceTimeout))
++    let auxiliary = app.windows["agent-device-second-window"]
++    XCTAssertTrue(auxiliary.exists)
++    XCTAssertTrue(auxiliary.frame.isEmpty)
++    XCTAssertEqual(auxiliary.descendants(matching: .textField).count, 0)
++    let target = NativePressTarget(type: field.elementType.rawValue, identifier: field.identifier,
++      label: field.label, value: nil, rect: SnapshotRect(field.frame))
++    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: target).data?.pressReadiness,
++      field.isHittable ? "ready" : "blocked")
++  }
++
++  @MainActor
++  func testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry() throws {
++    for zeroFrame in [false, true] {
++      app.launchArguments = ["--agent-device-second-window", "--agent-device-second-window-duplicate"]
++        + (zeroFrame ? ["--agent-device-second-window-zero-frame"] : [])
++      app.launch()
++      defer { app.terminate() }
++      let auxiliary = app.windows["agent-device-second-window"]
++      XCTAssertTrue(auxiliary.waitForFixtureExistence(timeout: appExistenceTimeout))
++      let main = app.windows.matching(NSPredicate(format: "identifier != %@", "agent-device-second-window")).firstMatch
++      let button = main.buttons["native-window-duplicate"]
++      XCTAssertTrue(button.exists)
++      XCTAssertEqual(auxiliary.buttons.matching(identifier: "native-window-duplicate").count, 1)
++      let target = NativePressTarget(type: button.elementType.rawValue, identifier: button.identifier,
++        label: button.label, value: Self.valueText(button.value), rect: SnapshotRect(button.frame))
++      if zeroFrame {
++        XCTAssertTrue(auxiliary.frame.isEmpty)
++        XCTAssertThrowsError(try queryAuthorizedPressTarget(app: app, target: target)) { error in
++          XCTAssertEqual(error as? RunnerAppScreenCaptureFailure, .unresolvedScreen)
++        }
++      } else {
++        XCTAssertEqual(SnapshotRect(auxiliary.buttons["native-window-duplicate"].frame), target.rect)
++        XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: target).data?.pressReadiness, "ambiguous")
++      }
++    }
++  }
++
++  @MainActor
++  func testReadinessKeepsTextInputBindingAcrossContentChanges() throws {
+     app.launchArguments = ["--agent-device-native-states"]
+     app.launch()
+     defer { app.terminate() }
+     let field = app.textFields["native-field"]
+     XCTAssertTrue(field.waitForFixtureExistence(timeout: appExistenceTimeout))
+-    let emptyHandle = try XCTUnwrap(app.textFields.matching(NSPredicate { object, _ in
+-      guard let attributes = object as? XCUIElementAttributes else { return false }
+-      return attributes.elementType == .textField && attributes.identifier == "native-field" && Self.valueText(attributes.value) == nil
+-    }).allElementsBoundByIndex.first)
+-    XCTAssertTrue(emptyHandle.exists)
+     let empty = try XCTUnwrap(flatSnapshotNode(element: field, index: 0, parentIndex: nil)?.nativePressTarget)
++    let retained = try XCTUnwrap(app.textFields.matching(Self.authorizedPressTargetPredicate(empty)).allElementsBoundByIndex.first)
++    XCTAssertTrue(retained.exists)
+     XCTAssertNil(empty.value)
+     XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: empty).data?.pressReadiness, "ready")
+-    // XCTest edits are setup: readiness must distinguish actual text equal to the placeholder.
+     let text = "Native input"
+     XCTAssertEqual(field.placeholderValue, text)
+     XCTAssertEqual(Self.valueText(field.value), text)
+-    let accessibility = NativePressTarget(type: empty.type, identifier: empty.identifier, label: empty.label,
+-      value: text, valueSource: "accessibility", rect: empty.rect)
+-    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: accessibility).data?.pressReadiness, "ready")
+-    let unknown = NativePressTarget(type: empty.type, identifier: empty.identifier, label: empty.label,
+-      value: text, valueSource: "unknown", rect: empty.rect)
+-    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: unknown).data?.pressReadiness, "missing")
+     field.tap()
+     field.typeText(text)
+     XCTAssertEqual(try field.snapshot().value as? String, text)
+-    XCTAssertFalse(emptyHandle.exists, "index binding must re-evaluate its exact retained predicate")
++    XCTAssertTrue(retained.exists)
+     let populated = try XCTUnwrap(flatSnapshotNode(element: field, index: 0, parentIndex: nil)?.nativePressTarget)
+-    XCTAssertEqual(populated.value, text)
++    XCTAssertNil(populated.value)
+     XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: populated).data?.pressReadiness, "ready")
+-    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: empty).data?.pressReadiness, "missing")
+-    // Empty and literal-placeholder text report the same AX value; this view cannot distinguish them.
+-    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: accessibility).data?.pressReadiness, "ready")
++    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: empty).data?.pressReadiness, "ready")
+     field.typeText("!")
+-    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: accessibility).data?.pressReadiness, "missing")
++    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: empty).data?.pressReadiness, "ready")
+     field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: text.count + 1))
+     XCTAssertNil(Self.valueText(try field.snapshot().value))
+-    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: populated).data?.pressReadiness, "missing")
++    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: populated).data?.pressReadiness, "ready")
+     let cleared = try XCTUnwrap(flatSnapshotNode(element: field, index: 0, parentIndex: nil)?.nativePressTarget)
+     XCTAssertNil(cleared.value)
+     XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: cleared).data?.pressReadiness, "ready")
+-    XCTAssertTrue(emptyHandle.exists)
++    XCTAssertTrue(retained.exists)
+     app.terminate()
+-    XCTAssertFalse(emptyHandle.exists)
++    XCTAssertFalse(retained.exists)
+   }
+ 
+   @MainActor
+diff --git a/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift b/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift
+index 737816c..9369030 100644
+--- a/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift
++++ b/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift
+@@ -29,20 +29,19 @@ public struct SnapshotRect: Codable, Equatable {
+ }
+ 
+ public struct NativePressTarget: Codable, Equatable {
++  // XCUIElement codes for SearchField, TextField, SecureTextField, and TextView.
++  public static let textEntryTypes: Set<UInt> = [45, 49, 50, 52]
+   public let type: UInt
+   public let identifier: String?
+   public let label: String?
+   public let value: String?
+-  public let valueSource: String?
+   public let rect: SnapshotRect
+ 
+-  public init(type: UInt, identifier: String?, label: String?, value: String?, valueSource: String? = nil, rect: SnapshotRect) {
++  public init(type: UInt, identifier: String?, label: String?, value: String?, rect: SnapshotRect) {
+     self.type = type
+     self.identifier = identifier
+     self.label = label
+-    // XCUIElement.ElementType.secureTextField.rawValue; this portable package does not import XCTest.
+-    self.value = type == 50 ? nil : value
+-    self.valueSource = valueSource
++    self.value = Self.textEntryTypes.contains(type) ? nil : value
+     self.rect = rect
+   }
+ }
+@@ -114,7 +113,7 @@ public struct RawAXNode: Equatable {
+     updated.hittable = hittable
+     if let source = nativePressTarget, let nativePressTargetRect {
+       updated.nativePressTarget = NativePressTarget(type: source.type, identifier: source.identifier,
+-        label: source.label, value: source.value, valueSource: source.valueSource, rect: nativePressTargetRect)
++        label: source.label, value: source.value, rect: nativePressTargetRect)
+     }
+     return updated
+   }
+diff --git a/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift b/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift
+index 2f36ab4..cce05e6 100644
+--- a/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift
++++ b/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift
+@@ -65,29 +65,31 @@ final class ConformanceTests: XCTestCase {
+     XCTAssertEqual(result.qualityNotes.first?.clippedNodeCount, 1)
+     XCTAssertEqual(result.qualityNotes.first?.droppedNodeCount, 0)
+   }
+-  func testInputValueViewSurvivesGeometryNormalizationAndCodable() throws {
++  func testTextEntryBindingSurvivesGeometryNormalizationAndCodableWithoutContents() throws {
+     let rect = SnapshotRect(x: 10, y: 20, width: 100, height: 40)
+-    let target = NativePressTarget(type: 49, identifier: "input", label: nil, value: "Hint",
+-      valueSource: "accessibility", rect: rect)
++    let target = NativePressTarget(type: 49, identifier: "input", label: nil, value: "Hint", rect: rect)
+     let node = RawAXNode(index: 0, type: "TextField", label: nil, identifier: "input", value: "Hint",
+       rect: rect, enabled: true, focused: nil, selected: nil, hittable: true, depth: 0, parentIndex: nil,
+       hiddenContentAbove: nil, hiddenContentBelow: nil, nativePressTarget: target)
+     let normalized = SnapshotGeometrySpace.normalized(nodes: [node],
+       viewport: .reported(box: CGRect(x: 0, y: 0, width: 390, height: 844)))
+     XCTAssertEqual(normalized[0].nativePressTarget, target)
++    XCTAssertNil(normalized[0].nativePressTarget?.value)
+     XCTAssertEqual(try JSONDecoder().decode(NativePressTarget.self, from: JSONEncoder().encode(target)), target)
+   }
+ 
+-  func testSecureValuesAreOmittedBeforeNativeBindingSerialization() throws {
+-    let raw = RawAXNode(index: 0, type: "SecureTextField", label: "Password", identifier: "password",
+-      value: "private-secret", rect: SnapshotRect(x: 0, y: 0, width: 100, height: 40),
+-      enabled: true, focused: nil, selected: nil, hittable: true, depth: 0, parentIndex: nil,
+-      hiddenContentAbove: nil, hiddenContentBelow: nil,
+-      nativePressTarget: NativePressTarget(type: 50, identifier: "password", label: "Password", value: "private-secret",
+-        rect: SnapshotRect(x: 0, y: 0, width: 100, height: 40)))
+-    XCTAssertNil(raw.nativePressTarget?.value)
+-    let encoded = try JSONEncoder().encode(raw.nativePressTarget)
+-    XCTAssertFalse(String(decoding: encoded, as: UTF8.self).contains("private-secret"))
++  func testTextEntryValuesAreOmittedBeforeNativeBindingSerialization() throws {
++    for (type, name) in [(45, "SearchField"), (49, "TextField"), (50, "SecureTextField"), (52, "TextView")] {
++      let raw = RawAXNode(index: 0, type: name, label: "Input", identifier: "input",
++        value: "private-secret", rect: SnapshotRect(x: 0, y: 0, width: 100, height: 40),
++        enabled: true, focused: nil, selected: nil, hittable: true, depth: 0, parentIndex: nil,
++        hiddenContentAbove: nil, hiddenContentBelow: nil,
++        nativePressTarget: NativePressTarget(type: UInt(type), identifier: "input", label: "Input", value: "private-secret",
++          rect: SnapshotRect(x: 0, y: 0, width: 100, height: 40)))
++      XCTAssertNil(raw.nativePressTarget?.value)
++      let encoded = try JSONEncoder().encode(raw.nativePressTarget)
++      XCTAssertFalse(String(decoding: encoded, as: UTF8.self).contains("private-secret"))
++    }
+   }
+ 
+ }
+diff --git a/contracts/fixtures/authorized-press-target.json b/contracts/fixtures/authorized-press-target.json
+index 864099a..09dc220 100644
+--- a/contracts/fixtures/authorized-press-target.json
++++ b/contracts/fixtures/authorized-press-target.json
+@@ -376,5 +376,109 @@
+       }
+     },
+     "matches": false
++  },
++  {
++    "name": "search field contents are not press identity",
++    "expected": {
++      "type": 45,
++      "label": "Input",
++      "value": "before",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 45,
++      "label": "Input",
++      "value": "after",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "text field contents are not press identity",
++    "expected": {
++      "type": 49,
++      "label": "Input",
++      "value": "before",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 49,
++      "label": "Input",
++      "value": "after",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "secure text field contents are not press identity",
++    "expected": {
++      "type": 50,
++      "label": "Input",
++      "value": "before",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 50,
++      "label": "Input",
++      "value": "after",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "text view contents are not press identity",
++    "expected": {
++      "type": 52,
++      "label": "Input",
++      "value": "before",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 52,
++      "label": "Input",
++      "value": "after",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
+   }
+ ]
+diff --git a/docs/adr/0011-interaction-guarantee-contract.md b/docs/adr/0011-interaction-guarantee-contract.md
+index dc0e0df..64d9dc5 100644
+--- a/docs/adr/0011-interaction-guarantee-contract.md
++++ b/docs/adr/0011-interaction-guarantee-contract.md
+@@ -18,7 +18,7 @@ Completed process history is in git history.
+ - Multiple mutating selector matches collapse only if they form one ancestor–descendant chain and every member resolves to the same actionable node. Otherwise, the mutation fails with `AMBIGUOUS_MATCH`. Maestro's explicit expected-point/non-hittable compatibility path stays separate.
+ - Keep synthesized iOS gesture policy outside the element dispatch-path matrix.
+ - On Android, the press/click moving-target guard samples fresh geometry until the target remains on one surface at one position for 100 ms, within a 1,500 ms transition window. A target that cannot establish that evidence is refused. Other platforms retain their existing guard schedule.
+-- On `runtime-ref` and `runtime-selector`, ordinary primary iOS `press` and `click` actions wait for native hittability when the request-bound Apple runtime advertises `pressReadiness`. The original request budget bounds the wait; ambiguity or changed target authorization refuses input.
++- On `runtime-ref` and `runtime-selector`, ordinary primary iOS `press` and `click` actions wait for native hittability when the request-bound Apple runtime advertises `pressReadiness`. The original request budget bounds the wait; ambiguity or changed target authorization refuses input. Text-entry contents are not part of press identity.
+ 
+ ## Context
+ 
+@@ -324,15 +324,16 @@ A daemon reset there destroyed every healthy app session that the daemon owned.
+ ### Native readiness for ordinary iOS taps
+ 
+ Ordinary resolved `press` and `click` actions wait implicitly when the request-bound Apple owner
+-reports that the exact authorized control is not natively hittable. The snapshot `hittable` field records capture-time geometric actionability; it does not establish that an overlay has released input. The native read checks live control hittability separately. The native mutation-read binds numeric element type, identifier, label, value, and rectangle before
++reports that the exact authorized control is not natively hittable. The snapshot `hittable` field records capture-time geometric actionability; it does not establish that an overlay has released input. The native read checks live control hittability separately. The native mutation-read binds numeric element type, identifier, label, and rectangle before
+ counting matches; a hittable duplicate cannot replace a blocked target. The binding keeps the capture
+ producer's native identity and full rectangle, after required coordinate normalization and before row
+ promotion or clipping. This private evidence survives session storage and is omitted from public
+-snapshots. Secure field values are omitted before the wire.
+-Input values are compared in the capture producer's view: native captures retain raw contents;
+-guest AX captures retain their reported accessibility value through private provenance.
+-Reauthorization cannot change value views, even when the strings are equal.
+-Identical reported AX values cannot prove an underlying content change.
++snapshots. Non-text-entry controls also bind their value.
++TextField, SearchField, TextView, and SecureTextField values are omitted from the private press binding.
++Text-entry contents are state, not press identity; readiness does not prove that contents are unchanged.
++This rule replaces producer-specific input-value binding, which adds live reads and still cannot
++distinguish contents that accessibility reports with the same value.
++Selectors retain their authored value constraints when the canonical target is re-observed.
+ A native reply must prove the actual queried app matches the authorized surface. The wait polls only this native binding. After a blocked wait becomes ready, one fresh canonical capture must still authorize the same target on the same surface and its parent/child guards must choose the dispatch point before input. The original request deadline and cancellation signal bound every read and capture.
+ Expected-target and already-resolved bindings are checked once and refuse a blocked control
+ without recapturing or replacing that binding.
+diff --git a/packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts b/packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts
+index 26156a5..da4827f 100644
+--- a/packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts
++++ b/packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts
+@@ -46,10 +46,9 @@ for (const raw of [false, true]) {
+             ...node,
+             nativePressTarget: {
+               type: [2, 46, 75, 1, 9, 49][index]!,
+-              ...(node.type === 'TextField' ? { valueSource: 'accessibility' as const } : {}),
+               label: node.label,
+               identifier: node.identifier,
+-              value: node.value,
++              value: node.type === 'TextField' ? undefined : node.value,
+               rect: node.rect!,
+             },
+           })),
+@@ -78,18 +77,17 @@ for (const raw of [false, true]) {
+       rect: full,
+     });
+     const field = snapshot.nodes.find((node) => node.type === 'TextField')!;
++    expect(field.value).toBe('Hint');
+     expect(readSnapshotNativePressTargets(snapshot.nodes)?.get(field.index)).toMatchObject({
+       type: 49,
+-      value: 'Hint',
+-      valueSource: 'accessibility',
++      value: undefined,
+       rect: full,
+     });
+     const cloned = copySnapshotNativePressTargets(snapshot.nodes, structuredClone(snapshot.nodes));
+-    expect(readSnapshotNativePressTargets(cloned)?.get(field.index)?.valueSource).toBe(
+-      'accessibility',
++    expect(readSnapshotNativePressTargets(cloned)?.get(field.index)).toEqual(
++      readSnapshotNativePressTargets(snapshot.nodes)?.get(field.index),
+     );
+     expect(JSON.stringify(snapshot)).not.toContain('nativePressTarget');
+-    expect(JSON.stringify(snapshot)).not.toContain('valueSource');
+   });
+ }
+ 
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts
+index 7f7872e..d2c2986 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts
+@@ -35,26 +35,13 @@ for (const field of ['x', 'y', 'width', 'height'] as const) {
+   });
+ }
+ 
+-test('equal reported values cannot rebind across producer value views', () => {
+-  const source = { ...cases[0]!.expected, type: 49, value: 'Hint' };
+-  const accessibility = { ...source, valueSource: 'accessibility' as const };
+-  expect(matchesAuthorizedPressTarget(source, accessibility)).toBe(false);
+-  expect(matchesAuthorizedPressTarget(accessibility, source)).toBe(false);
+-  expect(matchesAuthorizedPressTarget(accessibility, accessibility)).toBe(true);
+-  const unknown = { ...source, valueSource: 'unknown' } as unknown as SnapshotNativePressTarget;
+-  expect(matchesAuthorizedPressTarget(unknown, unknown)).toBe(false);
+-});
+-
+-test('canonical secure input bindings ignore masked value changes', () => {
+-  const expected = {
+-    type: 'SecureTextField',
+-    label: 'Password',
+-    value: '••••',
+-    rect: cases[0]!.expected.rect,
+-  };
+-  const candidate = { ...expected, value: '••••••' };
+-  expect(matchesAuthorizedPressTarget(expected, candidate)).toBe(true);
+-  for (const type of ['TextField', 50]) {
+-    expect(matchesAuthorizedPressTarget({ ...expected, type }, { ...candidate, type })).toBe(false);
+-  }
+-});
++for (const type of ['SearchField', 'TextField', 'SecureTextField', 'TextView']) {
++  test(`canonical ${type} binding excludes mutable contents`, () => {
++    const expected = { type, label: 'Input', value: 'before', rect: cases[0]!.expected.rect };
++    const candidate = { ...expected, value: 'after' };
++    expect(matchesAuthorizedPressTarget(expected, candidate)).toBe(true);
++    expect(matchesAuthorizedPressTarget(expected, { ...candidate, label: 'Replacement' })).toBe(
++      false,
++    );
++  });
++}
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
+index afee282..3c26dde 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
+@@ -1,5 +1,6 @@
+ import { areCapturedRectsAtSamePosition } from '@agent-device/kernel/rect-center';
+ import type { SnapshotNativePressTarget } from '@agent-device/kernel/snapshot';
++import { NATIVE_PRESS_TEXT_ENTRY_TYPES } from '@agent-device/kernel/snapshot';
+ 
+ type TargetBinding = Omit<SnapshotNativePressTarget, 'type'> & { type: string | number };
+ 
+@@ -10,11 +11,9 @@ export function matchesAuthorizedPressTarget(
+ ): boolean {
+   return (
+     expected.type === candidate.type &&
+-    (expected.valueSource === undefined || expected.valueSource === 'accessibility') &&
+-    expected.valueSource === candidate.valueSource &&
+     (['identifier', 'label', 'value'] as const).every(
+       (key) =>
+-        (key === 'value' && expected.type === 'SecureTextField') ||
++        (key === 'value' && NATIVE_PRESS_TEXT_ENTRY_TYPES.has(expected.type)) ||
+         (expected[key] ?? '').trim().normalize('NFC') ===
+           (candidate[key] ?? '').trim().normalize('NFC'),
+     ) &&
+diff --git a/packages/kernel/src/snapshot.ts b/packages/kernel/src/snapshot.ts
+index 1b2b6b3..e1ca01f 100644
+--- a/packages/kernel/src/snapshot.ts
++++ b/packages/kernel/src/snapshot.ts
+@@ -284,14 +284,24 @@ export type IosValueSemantics = {
+   busy?: true;
+ };
+ 
++/** Numeric native codes and canonical names share the text-entry press-identity rule. */
++export const NATIVE_PRESS_TEXT_ENTRY_TYPES = new Set<string | number>([
++  'SearchField',
++  'TextField',
++  'SecureTextField',
++  'TextView',
++  45,
++  49,
++  50,
++  52,
++]);
++
+ /** Internal Apple capture wire provenance; removed before public snapshot assembly. */
+ export type SnapshotNativePressTarget = {
+   type: number;
+   identifier?: string;
+   label?: string;
+   value?: string;
+-  /** Set when TextField, SearchField or TextView values come from accessibility instead of raw input. */
+-  valueSource?: 'accessibility';
+   rect: Rect;
+ };
+ 
+diff --git a/packages/platform-apple/src/snapshot-source/tree.test.ts b/packages/platform-apple/src/snapshot-source/tree.test.ts
+index 16d388c..cfb6cce 100644
+--- a/packages/platform-apple/src/snapshot-source/tree.test.ts
++++ b/packages/platform-apple/src/snapshot-source/tree.test.ts
+@@ -855,25 +855,8 @@ test('bridge binding carries classified numeric native types, including trait pr
+   }
+ });
+ 
+-test('bridge binding omits secure values before presentation', () => {
+-  const decoded = decodeSnapshotBridgeTree(
+-    {
+-      [automationType]: 50,
+-      [label]: 'Password',
+-      XC_kAXXCAttributeValue: 'private-secret',
+-      [frame]: { X: 10, Y: 20, Width: 100, Height: 40 },
+-      [children]: [],
+-    },
+-    { truncated: false },
+-    limits,
+-  );
+-  assert.equal(decoded.nodes[0]?.nativePressTarget?.type, 50);
+-  assert.equal(decoded.nodes[0]?.nativePressTarget?.value, undefined);
+-  assert.equal(decoded.nodes[0]?.nativePressTarget?.valueSource, undefined);
+-});
+-
+-test('guest input bindings retain their reported value view even when no value is present', () => {
+-  for (const type of [45, 49, 52]) {
++test('bridge press bindings omit text-entry contents before presentation', () => {
++  for (const type of [45, 49, 50, 52]) {
+     for (const value of [undefined, 'Hint']) {
+       const node = decodeSnapshotBridgeTree(
+         {
+@@ -885,8 +868,9 @@ test('guest input bindings retain their reported value view even when no value i
+         { truncated: false },
+         limits,
+       ).nodes[0]!;
+-      assert.equal(node.nativePressTarget?.valueSource, 'accessibility');
+-      assert.equal(node.nativePressTarget?.value, value);
++      assert.equal(node.nativePressTarget?.type, type);
++      assert.equal(node.nativePressTarget?.value, undefined);
++      assert.equal(node.value, value);
+     }
+   }
+ });
+diff --git a/packages/platform-apple/src/snapshot-source/tree.ts b/packages/platform-apple/src/snapshot-source/tree.ts
+index 01b9f61..6412a6f 100644
+--- a/packages/platform-apple/src/snapshot-source/tree.ts
++++ b/packages/platform-apple/src/snapshot-source/tree.ts
+@@ -5,6 +5,7 @@ import {
+   isRectVisibleInViewport,
+ } from '@agent-device/kernel/rect';
+ import type { RawSnapshotNode, Rect } from '@agent-device/kernel/snapshot';
++import { NATIVE_PRESS_TEXT_ENTRY_TYPES } from '@agent-device/kernel/snapshot';
+ import type { IosViewportEvidence } from '@agent-device/contracts/ios-snapshot';
+ import { snapshotSourceError } from './errors.ts';
+ import { isQuarterTurnedWindowFrame } from './window-coordinate-space.ts';
+@@ -299,10 +300,7 @@ function nodeFacts(
+             type: nativeType,
+             identifier: optionalString(value[ATTRIBUTE.identifier]),
+             label: optionalString(value[ATTRIBUTE.label]),
+-            ...(['TextField', 'SearchField', 'TextView'].includes(type ?? '')
+-              ? { valueSource: 'accessibility' as const }
+-              : {}),
+-            ...(type === 'SecureTextField'
++            ...(NATIVE_PRESS_TEXT_ENTRY_TYPES.has(nativeType)
+               ? {}
+               : { value: optionalScalar(value[ATTRIBUTE.value]) }),
+             rect: frame,
+diff --git a/test/integration/provider-scenarios/press-selector-resolution.test.ts b/test/integration/provider-scenarios/press-selector-resolution.test.ts
+index 1ffff51..a8b2659 100644
+--- a/test/integration/provider-scenarios/press-selector-resolution.test.ts
++++ b/test/integration/provider-scenarios/press-selector-resolution.test.ts
+@@ -139,6 +139,63 @@ test('press refuses a selector miss after one interactive and full capture attem
+   );
+ });
+ 
++for (const target of ['label="Input"', 'value="before"']) {
++  test(`text-entry readiness preserves authored ${target} matching after contents change`, async () => {
++    const before = [
++      APPLICATION_ONLY_NODES[0]!,
++      {
++        index: 1,
++        parentIndex: 0,
++        type: 'TextField',
++        label: 'Input',
++        identifier: 'input',
++        value: 'before',
++        editable: true,
++        hittable: true,
++        rect: { x: 40, y: 240, width: 100, height: 50 },
++      },
++    ];
++    const changed = before.map((node) => ({
++      ...node,
++      ...('value' in node ? { value: 'after' } : {}),
++    }));
++    await withPressSelectorDaemon(
++      [
++        snapshotEntry(before),
++        {
++          command: 'ios.runner.pressReadiness',
++          result: { pressReadiness: 'blocked', pressReadinessAppBundleId: APP },
++        },
++        {
++          command: 'ios.runner.pressReadiness',
++          result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++        },
++        { ...snapshotEntry(changed), repeat: true },
++        ...(target.startsWith('label=') ? [tapEntry(90, 265)] : []),
++      ],
++      async (daemon, transcript) => {
++        const press = await daemon.callCommand('press', [target]);
++        if (target.startsWith('label=')) {
++          assertRpcOk(press);
++          assert.equal(
++            transcript.calls.filter((call) => call.command === 'ios.runner.tap').length,
++            1,
++          );
++        } else {
++          const error = assertRpcError(press, 500, 'COMMAND_FAILED', /Selector did not match/);
++          assert.equal((error.details as { reason?: unknown }).reason, 'selector_not_found');
++          assert.equal((error.details as { dispatched?: unknown }).dispatched, 'no');
++          assert.equal(
++            transcript.calls.filter((call) => call.command === 'ios.runner.tap').length,
++            0,
++          );
++        }
++        transcript.assertComplete();
++      },
++    );
++  });
++}
++
+ test('native fallback readiness failure cannot corroborate a changed tree', async () => {
+   const baseline = snapshotEntry(CONTINUE_BUTTON_NODES);
+   const changed = snapshotEntry(
+diff --git a/website/docs/docs/commands.md b/website/docs/docs/commands.md
+index 11224a1..d29ac1f 100644
+--- a/website/docs/docs/commands.md
++++ b/website/docs/docs/commands.md
+@@ -495,8 +495,6 @@ A successful `click` or `press` means the action was sent to where the command f
+ 
+ When an iOS runtime advertises native press readiness, a single primary `click` or `press` with a selector or `@ref` checks whether the resolved control can receive input. If a dismissing overlay still blocks it, the command waits within its existing request budget. An already-resolved target from a mutating `find` or replay is checked once and refuses a blocked control immediately. The target's identity, frame and app must stay the same while waiting. A missing native match refuses immediately; only a matched control that cannot yet receive input is waited on. This check does not prove that a partially covered control's center is clear. Raw coordinates and non-default tap options keep their existing behavior.
+ 
+-For non-secure text inputs, readiness compares the captured value. A capture can report the placeholder for an empty field, so a field whose contents change to or from that same text can still match and be pressed once unblocked. Secure-field values are omitted; readiness cannot detect their content changes. Run `snapshot -i` and use a fresh selector to re-observe the target before retrying. Add `--verify` to check for a screen change after the press.
+-
+ A native-readiness refusal reports `COMMAND_FAILED`, `details.reason: target_not_ready`, and `details.dispatched: no`; `details.readiness` identifies the refusal or last observed state. An enclosing bounded batch or replay deadline can instead report `daemon_request_timeout`. A refused `@ref` press needs a fresh `snapshot -i` and a selector before retrying, because re-observation retires its ref frame. Cancellation retains the normal `request_canceled` reason and delivery evidence; cancellation after a request was sent can report `dispatched: unknown`. Typed native transport errors also keep their own error codes and reasons.
+ 
+ A `click` or `press` whose target the daemon resolves to a point (`@ref` or selector) re-checks that target's position before dispatching when the session's previous action animated the screen, and dispatches where it came to rest. When that check cannot confirm a stable position — the target was still moving, or a re-check could not measure it — the command refuses with `target_still_moving` and `dispatched: no`: nothing was dispatched, the point the command resolved is in `error.details.rect`, and where the target was last seen is in `error.details.movedToRect` when that last look measured one. Run `wait <selector>` on the target and retry the same command, or add `--settle` so the action waits for the UI to go quiet. A refused `@ref` press needs a fresh `snapshot -i` and a selector, because the wait retires the ref. Two dispatch paths hand off before the check: a press at raw coordinates has no resolved target to re-check, and a dispatch the backend performs on the element itself — `click @ref` on a backend with element dispatch, or a Maestro non-hittable coordinate fallback — goes to that backend rather than through a resolved point.

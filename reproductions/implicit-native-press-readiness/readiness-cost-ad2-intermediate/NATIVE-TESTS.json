@@ -1,0 +1,26 @@
+{
+  "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+  "scope": "Six selected native methods, not a full native suite.",
+  "result": {
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "role": "phone",
+    "tests": [
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+      "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+      "testReadinessKeepsTextInputBindingAcrossContentChanges",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate"
+    ],
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "d6a4a57a3fd3bc81e8c3d419d85b4e5b20d711da831aa805eb2d22c8d347c163",
+    "wrapperSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+    "sourceTree": "dc7ebe49a8a5343c846b731c1d71979977867965",
+    "archivedBeforeRun": true,
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "observedTests": 6,
+    "observedFailures": 0,
+    "success": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "production": {
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+    "binaryArchitectures": "x86_64 arm64",
+    "derivedRootIsExplicitAndTaskOwned": true
+  },
+  "unit": {
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+    "binaryArchitectures": "x86_64 arm64",
+    "derivedRootIsExplicitAndTaskOwned": true
+  },
+  "macos": {
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "57219b8764f696e6f2e3364a3b68e031070bb9d119ec3f609159a90d30f817f5",
+    "binaryArchitectures": "arm64",
+    "derivedRootIsExplicitAndTaskOwned": true,
+    "buildOnly": true
+  }
+}

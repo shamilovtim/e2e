@@ -1,0 +1,644 @@
+{
+  "scope": "All completed ad2 intermediate, authentic paired 5a baselines, selected native method recording and original diagnostic/setup/failure recordings. Not final root-read-elision proof.",
+  "method": "Existing AVFoundation AVAssetReader full-stream uncompressed BGRA decode; every yielded sample had a pixel buffer and each reader completed. Endpoints use track preferredTransform with no adaptive rotation/cropping/content edits.",
+  "videos": 24,
+  "samples": 3726,
+  "decodeErrors": 0,
+  "allOriginalRecordingBytesUnchanged": true,
+  "cases": [
+    {
+      "case": "ad2-anonymous-current-1",
+      "sourceRelative": "evidence/ad2-anonymous-current-1/video.mp4",
+      "video": "cases/ad2-anonymous-current-1/video.mp4",
+      "decodedVideoSamples": 127,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 13.858333333333333,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "f016fc4441de983dd8ef6ec5a6b6d181573fd229457f6c34d347eb7b9b7ac780",
+      "videoBytes": 1320972,
+      "firstPngSha256": "c21193b694bbedd1fd903bde90ea9181296a82bb67a06751d01b624fdb088ffb",
+      "lastPngSha256": "d9d705115bb7ff6699548803a91fd82affdec7eb061a809233a8049a77292229",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-buttons-current-1",
+      "sourceRelative": "evidence/ad2-buttons-current-1/video.mp4",
+      "video": "cases/ad2-buttons-current-1/video.mp4",
+      "decodedVideoSamples": 125,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 13.491666666666667,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "c964d3920382b5542a27cd4f9fb86b6f63e6be65aeeec393a77f8b1a534e6303",
+      "videoBytes": 1385120,
+      "firstPngSha256": "64d88d753446f9b3c23dfb7ee718f1d261792cee0bd060b61345ab5c5c5adb54",
+      "lastPngSha256": "bfc43521989ef7b157931b981a3acb0362955a4e6cbf91e8e0473a81300b9e6e",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-clipped-1",
+      "sourceRelative": "evidence/ad2-clipped-1/video.mp4",
+      "video": "cases/ad2-clipped-1/video.mp4",
+      "decodedVideoSamples": 86,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 9.115,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "fbf52f66ee7555b369ae6c54d2fb835439bc34e28f6e377e28251250389dce48",
+      "videoBytes": 1018368,
+      "firstPngSha256": "b5e06f175f8e6a30a4291437efffab4da2d0231691a2949cf4669511a8c257f9",
+      "lastPngSha256": "dcb6bef3360cb24fa63e70f4ff4dcf2fa04f482c13a26edeb4c43ba3f7ab0607",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-duplicates-1",
+      "sourceRelative": "evidence/ad2-duplicates-1/video.mp4",
+      "video": "cases/ad2-duplicates-1/video.mp4",
+      "decodedVideoSamples": 201,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2556,
+        1178
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2556,
+        1178
+      ],
+      "lastSampleSeconds": 11.005,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "77f75d25a0efed5883e15520c61eec1d3979186ce769610155b01cec459c7458",
+      "videoBytes": 1543393,
+      "firstPngSha256": "c5e0d51a8bdba20e62aa264c520fce013733a596b44360af779e226f19b5e8d1",
+      "lastPngSha256": "d0ab61c8159d1c469ecfa971b771721b90d8854172edf946d1476c9c06866d3a",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-exact-1",
+      "sourceRelative": "evidence/ad2-exact-1/video.mp4",
+      "video": "cases/ad2-exact-1/video.mp4",
+      "decodedVideoSamples": 94,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 8.086666666666666,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "9b38a481fd96813fce07a5f44dc853fb23d9f93b74a1f2f55155242a693070f9",
+      "videoBytes": 823535,
+      "firstPngSha256": "38a6bb58072637f64f0b6e0f3ae925dbae237d84ed99c0b1df0d7aebcf89b653",
+      "lastPngSha256": "77101dd8f46dd4c08a85e068744160909f56953c6c26b763edd7219b56cb9a4e",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-fade750-1",
+      "sourceRelative": "evidence/ad2-fade750-1/sdk-final/fade750-1/video.mp4",
+      "video": "cases/ad2-fade750-1/video.mp4",
+      "decodedVideoSamples": 111,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 2.9066666666666667,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "b4314db148888220215894fb7efbad5ef6124bf42547da385eea5bc759e6bff6",
+      "videoBytes": 499433,
+      "firstPngSha256": "e3f6ce9e06a7719a4c2eed5b180bfb58d3a463e4ad2c0e1f5cc72352747f14ff",
+      "lastPngSha256": "4515c48823baa92cef68691ab65f9d32e57036dcc13264f38dac2e6dd62d32c8",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-ipad-placed-1",
+      "sourceRelative": "evidence/ad2-ipad-placed-1/video.mp4",
+      "video": "cases/ad2-ipad-placed-1/video.mp4",
+      "decodedVideoSamples": 128,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 14.393333333333333,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "7b51121df6bd6da5b057c9b991d6843ab3041580e261fd90fbcf5a735bfef1e5",
+      "videoBytes": 6963737,
+      "firstPngSha256": "c6fbc254b8ba581b22833bbe502d8b7a7478e1b562668ab475fd5527f01586ad",
+      "lastPngSha256": "afb2b03f48c44317e04402b2432ed9891b051b98665612d6e44641543a196627",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-landscape-1",
+      "sourceRelative": "evidence/ad2-landscape-1/video.mp4",
+      "video": "cases/ad2-landscape-1/video.mp4",
+      "decodedVideoSamples": 174,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 9.126666666666667,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "238a61f84052982b38aa88dcd225744c401874c672472656edb17ec4c1ff31bd",
+      "videoBytes": 2674409,
+      "firstPngSha256": "8b3630f99fbbeaf5b49b33d272c243412397a89da5f5c2238a39a39cefcc1d8b",
+      "lastPngSha256": "44bab34abcfb636ef27f4c8571c4503afe0c2cc69ce76ee42d6fd45bfc6e4ca0",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-missing-current-1",
+      "sourceRelative": "evidence/ad2-missing-current-1/video.mp4",
+      "video": "cases/ad2-missing-current-1/video.mp4",
+      "decodedVideoSamples": 121,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 8.721666666666666,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "5d8f5ed947b732c08b62e56fdb256948c72c4b41d5f8bcccf0c96b04ebc3bbeb",
+      "videoBytes": 1500023,
+      "firstPngSha256": "ac95e0a7038f0b85c6ce574416e0aa17da05e634ce3d73bb2206143282b4f96c",
+      "lastPngSha256": "861b4ebe871ab7236be5fa848e68b62e3b25fcb122fb4b44af26ef0b5e4b1ab9",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-shared-caller1000-1",
+      "sourceRelative": "evidence/ad2-shared-caller1000-1/video.mp4",
+      "video": "cases/ad2-shared-caller1000-1/video.mp4",
+      "decodedVideoSamples": 120,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 9.115,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "3176edb10d3a0f51be4d5d4bef56981e7badf7cc61b8ccc19a1fe6eddd6689b7",
+      "videoBytes": 1517738,
+      "firstPngSha256": "566b37d84d1286ed0c0805225c5c7bb15834947b6cc01faeb26df954973eaed1",
+      "lastPngSha256": "1d4b09446d101fa35be09fedae071f86ddbbbccc3c22cc70a27957caddd0c29c",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-shared-current-1",
+      "sourceRelative": "evidence/ad2-shared-current-1/video.mp4",
+      "video": "cases/ad2-shared-current-1/video.mp4",
+      "decodedVideoSamples": 150,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 13.088333333333333,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "fff3acf8ec6aa14a9bd46d3a4352c7f46c40e349cc4bcd579b2053cfd97f9418",
+      "videoBytes": 1376747,
+      "firstPngSha256": "ac95e0a7038f0b85c6ce574416e0aa17da05e634ce3d73bb2206143282b4f96c",
+      "lastPngSha256": "a9c83d58e49683b52c62feb903f7c9a356b636b7ab87cc67f0dac7aa98c1d408",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-tree-ref-1",
+      "sourceRelative": "evidence/ad2-tree-ref-1/video.mp4",
+      "video": "cases/ad2-tree-ref-1/video.mp4",
+      "decodedVideoSamples": 176,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 13.256666666666666,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "1f0bb3253867ffea4189d847854e8b84c2ed81703ce16af588f281ca7f8671ae",
+      "videoBytes": 9715583,
+      "firstPngSha256": "4a6437c2594643e1a0d218a03bb848cf63185a5f609352f8a32524dd5dd070ce",
+      "lastPngSha256": "861187f847283ca0e659b304944e92a41864833b265bb73b783a15657ae7057d",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "ad2-values-1",
+      "sourceRelative": "evidence/ad2-values-1/video.mp4",
+      "video": "cases/ad2-values-1/video.mp4",
+      "decodedVideoSamples": 533,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 30.883333333333333,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "f6ce3a3172d05e1f78b0976875dd9895f787975eb2320f5fae77fde431857eac",
+      "videoBytes": 5318726,
+      "firstPngSha256": "187bb846e7f85035b84b6cfc1b10f47fd584a5d1e04a819282859769db6ccd75",
+      "lastPngSha256": "ad9b2f6406c1411527136cc748f5bfa24a9f4a306d94bc159433498c67c0489c",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "base5a-anonymous-current-1",
+      "sourceRelative": "evidence/base5a-anonymous-current-1/video.mp4",
+      "video": "cases/base5a-anonymous-current-1/video.mp4",
+      "decodedVideoSamples": 129,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 11.8,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "d9c1d37e8fd75d4ef0e027569d07072739d36f5cf49ce635780322b35b20db3f",
+      "videoBytes": 815786,
+      "firstPngSha256": "04d0f86a5507e7ed64b65d90ec4f2b04a5c06ac5859b59e80fde2509e430e0c9",
+      "lastPngSha256": "2dbfa31f8074e65f449123fa66ad530120be4980a5588f1ce8c29932b1e05cb9",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "base5a-buttons-current-1",
+      "sourceRelative": "evidence/base5a-buttons-current-1/video.mp4",
+      "video": "cases/base5a-buttons-current-1/video.mp4",
+      "decodedVideoSamples": 126,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 11.536666666666667,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "1cdb5a1813e6a8f5cae194c4cee52869a8926b8b804a3bc2f194c56e179f2f83",
+      "videoBytes": 1442557,
+      "firstPngSha256": "f07062b628181d0416110a6f78fc1923a0ac61a2682630a6f697a3793cbc7327",
+      "lastPngSha256": "d9c8046195acfccdde9b0eff2cdcfa694e9348aeef5ea74eba4d40062ea8663c",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "base5a-shared-current-1",
+      "sourceRelative": "evidence/base5a-shared-current-1/video.mp4",
+      "video": "cases/base5a-shared-current-1/video.mp4",
+      "decodedVideoSamples": 127,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 10.168333333333333,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "203f0edcd7342c72a674b794ccb64cabd361908a6907d934175c72dbe55419cf",
+      "videoBytes": 1431115,
+      "firstPngSha256": "64d88d753446f9b3c23dfb7ee718f1d261792cee0bd060b61345ab5c5c5adb54",
+      "lastPngSha256": "11fb16828fde44c68780668a6169e81874f39e4b2a32c7da27d3143d8ce56fb4",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "frame-probe-phone",
+      "sourceRelative": "frame-probe-phone/video.mp4",
+      "video": "cases/frame-probe-phone/video.mp4",
+      "decodedVideoSamples": 9,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 16.833333333333332,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "be52d7f84066f9867b0281fe73c4387cb3ed1b74820c050bb85c0796b8a45cb0",
+      "videoBytes": 79448,
+      "firstPngSha256": "50f9e29d89f9c2a989a3d3e768e3e3c614a8167ec8bb00b318f94d00bf3c430b",
+      "lastPngSha256": "27308471fb0aabfc641c8f070d16cf36193baa9c6ea01aa21c4179027f7560dc",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "frame-probe-tablet",
+      "sourceRelative": "frame-probe-tablet/video.mp4",
+      "video": "cases/frame-probe-tablet/video.mp4",
+      "decodedVideoSamples": 103,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 20.736666666666668,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "04f8e0f8e517274d64eeb1f055ee2e11f37ddc80ac2f8554eebc0879ab6a1f8d",
+      "videoBytes": 358189,
+      "firstPngSha256": "c0e380b7d23de9c79ce64fabbb01d7db5b2447b35f0f7270de85a01a7d840af5",
+      "lastPngSha256": "74a4801c407c35d2541dc683027341d8621aea44fc6012be8e0930cda6903e51",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "frame-probe-tablet-placed",
+      "sourceRelative": "frame-probe-tablet-placed/video.mp4",
+      "video": "cases/frame-probe-tablet-placed/video.mp4",
+      "decodedVideoSamples": 41,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 3.6866666666666665,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "29d42b61b07c7c3d6ae937aa8bf0c999fcfae229d67762305d4cc572576e8c78",
+      "videoBytes": 3233683,
+      "firstPngSha256": "c8b0a11decb017d919e7fcd2ad1431bb211d5769a76c59070d18f2e753726baa",
+      "lastPngSha256": "34e163755702823e0b3cb8da669e0261d114cac801fa15457f0b9c47e5a24629",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "frame-probe-tablet-placed-clean",
+      "sourceRelative": "frame-probe-tablet-placed-clean/video.mp4",
+      "video": "cases/frame-probe-tablet-placed-clean/video.mp4",
+      "decodedVideoSamples": 34,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 3.2666666666666666,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "8d40a5deb96f344a52feff5d7f1af27f9e310a618bcc71fc4cdd18e4756ca21b",
+      "videoBytes": 2368303,
+      "firstPngSha256": "9d97e904da8893c48fcc535c9475456052ac349f0939af8d12dd4a8c9461710f",
+      "lastPngSha256": "850bfc3369129456e1e16f230a8ecd9ab7588218e00c42914e2620511f8a1405",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "frame-probe-tablet-placement",
+      "sourceRelative": "frame-probe-tablet-placement/video.mp4",
+      "video": "cases/frame-probe-tablet-placement/video.mp4",
+      "decodedVideoSamples": 102,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 11.578333333333333,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "98c345e9d76f75828acbd76f1aac38f45a6ac9e437875d6125ece85cd3eb4d13",
+      "videoBytes": 14046248,
+      "firstPngSha256": "722f181b1defa1d53636e29c19e86b7818349d656f0c0869138e2176e0226582",
+      "lastPngSha256": "6546e82adafc936b3b8408487894c1149e8f8ec77d454e9890a8dc2c99462070",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "frame-probe-window-phone",
+      "sourceRelative": "frame-probe-window-phone/video.mp4",
+      "video": "cases/frame-probe-window-phone/video.mp4",
+      "decodedVideoSamples": 231,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 17.205,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "a39c0821797db925d2e54be9e72bdb7c9883ce0ede2fab7f80747a35e350b8b4",
+      "videoBytes": 7618405,
+      "firstPngSha256": "7218250db924533fbac8f13b387febb3168976025f7b66fa84cd0841261d9678",
+      "lastPngSha256": "1cd200ec0149553444484918de837105e8188145dece83b600d1310b6e3ae58b",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "frame-probe-window-tablet",
+      "sourceRelative": "frame-probe-window-tablet/video.mp4",
+      "video": "cases/frame-probe-window-tablet/video.mp4",
+      "decodedVideoSamples": 31,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 2.743333333333333,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "3434bf87f1b510f5cd13d085d14a4e041af4f5794ee44a5e2728b308bde4601b",
+      "videoBytes": 2308329,
+      "firstPngSha256": "8e9d97b098d350c1810466b7358493f7f9b88475e8d253be3278c24ab0c0f3bc",
+      "lastPngSha256": "2d229beceaec0d978986c3d9c29de793a703b50ff0f41e92b6ebb9d3c083d5b7",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "case": "native-ad2-phone-1",
+      "sourceRelative": "native-ad2-phone-1/video.mp4",
+      "video": "cases/native-ad2-phone-1/video.mp4",
+      "decodedVideoSamples": 647,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 35.38666666666666,
+      "originalRecordingByteUnchanged": true,
+      "videoSha256": "30e154023e144b903d3d685bfbfb3595c26904f1b4c3ab34400fa791caf91b60",
+      "videoBytes": 19006188,
+      "firstPngSha256": "32f084d3c040e724cc6972ff3f556c6c68a5dfe92d302271c68089a1412c5cd0",
+      "lastPngSha256": "26d4b01d45680116f8f9de2abf74a27a104111137f872ec3f83974933b35f250",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    }
+  ],
+  "visualReview": {
+    "endpointPngs": 48,
+    "contactSheets": 5,
+    "allEndpointsInspected": true,
+    "scope": "Every first/last decoded endpoint inspected on contact sheets; every interior frame was not visually reviewed.",
+    "content": "Generic UIKit fixtures and default dedicated simulator OS/Springboard only at reviewed endpoints.",
+    "orientation": "Track preferred transform retained. Rotations may leave sideways/inverted interface content; no adaptive rotation/cropping/content edits."
+  },
+  "audioTracks": 0,
+  "metadataReview": "One generic track user-data tag com.apple.policy.screenrecording.1 in each video; no private metadata value observed."
+}

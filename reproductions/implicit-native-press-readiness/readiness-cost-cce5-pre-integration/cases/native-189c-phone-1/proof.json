@@ -1,0 +1,137 @@
+{
+  "case": "native-189c-phone-1",
+  "classification": "six-selected-native-tests-pass",
+  "datasetStatus": "PRE-INTEGRATION only; not full native suite or post-c267 proof.",
+  "result": {
+    "head": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "role": "phone",
+    "tests": [
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+      "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+      "testReadinessKeepsTextInputBindingAcrossContentChanges",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate"
+    ],
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+    "wrapperSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+    "sourceTree": "265123df2e3f93d3d4883b603dc47e564e7e864b",
+    "archivedBeforeRun": true,
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "observedTests": 6,
+    "observedFailures": 0,
+    "success": true
+  },
+  "executionInputs": {
+    "head": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "role": "phone",
+    "tests": [
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+      "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+      "testReadinessKeepsTextInputBindingAcrossContentChanges",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate"
+    ],
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+    "wrapperSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+    "sourceTree": "265123df2e3f93d3d4883b603dc47e564e7e864b",
+    "archivedBeforeRun": true
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "c2ddb9a2c00775efc11003061a7232014632a3f74a603b2fd5cd91a48219428f",
+    "xctestrunSize": 19680,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 332176,
+        "mode": 493,
+        "digest": "d4717655338228d6d329c8232817712cf8a0b9e97a493f76f8be8b1273aa0163"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "5d47393d988cc60535b9ac7f147ab6f7c2e9b09454148fec106938ac41208580"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "b6efc07f7252fa13decbdbdf0a9552dcc07e582ee90849bab7be0d865e9af6dd"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 26607632,
+        "mode": 493,
+        "digest": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "83d3f88215499ce89512eae2f13bce5720ff72c9064e56eacad57ddf4fb5d769",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing configuration omitted."
+  },
+  "executedSources": [
+    {
+      "path": "cases/native-189c-phone-1/source/executed-wrapper.py",
+      "originalArchivedSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+      "publicSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+      "normalization": "Byte-equal original archive."
+    }
+  ],
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

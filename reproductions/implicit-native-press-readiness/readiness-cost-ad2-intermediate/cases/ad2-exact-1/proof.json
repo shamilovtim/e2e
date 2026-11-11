@@ -1,0 +1,451 @@
+{
+  "case": "ad2-exact-1",
+  "datasetStatus": "Measured ad2 intermediate or authentic paired 5a baseline, not final root-read-elision proof.",
+  "wrapperSummary": {
+    "phase": "ad2-exact-1",
+    "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {},
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "executionInputs": {
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "kind": "geometry",
+    "mode": "exact",
+    "sourceTree": "dc7ebe49a8a5343c846b731c1d71979977867965",
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+    "fixtureBinarySha256": "c1ba061c6c4e0af9425f551c6964100b4e0f51ea84a547b9e68c3d7263e48413",
+    "runtimeJSFiles": 622,
+    "wrapperSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+    "driverSha256": "d87bf2913a5fe8ac3d21695c99c0c5edda14b84f25f5bc9ecab8ad3737991bef",
+    "archivedBeforeRun": true
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "packageVersion": "0.21.37-dev",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "c2ddb9a2c00775efc11003061a7232014632a3f74a603b2fd5cd91a48219428f",
+    "xctestrunSize": 19680,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "1a3311bced4ce930092bd1e113c26a7e32a656e5a176590e1b8c0f292c6ec849"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "eba4552fe9c62ffba027ca91f892596bdc5b8743d070f98b73f0b8b154c532c1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "ae9425f2cd43e36a422bb25beeeb6683d89bc18f0977caaef12aef41cbab6c13"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10791280,
+        "mode": 493,
+        "digest": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "23a57f3ec6bf9f483e3bf7667f12185e6475b6e78a7a7102542de13fecb1258c",
+    "qualification": "Selected generic source/build facts and relative artifact hashes only; host paths, build environment/settings and signing configuration omitted."
+  },
+  "executedSources": [
+    {
+      "path": "cases/ad2-exact-1/source/executed-driver.py",
+      "originalArchivedSha256": "d87bf2913a5fe8ac3d21695c99c0c5edda14b84f25f5bc9ecab8ad3737991bef",
+      "publicSha256": "d87bf2913a5fe8ac3d21695c99c0c5edda14b84f25f5bc9ecab8ad3737991bef",
+      "bytes": 5008,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/ad2-exact-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "publicSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "bytes": 14103,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "originalResultIncluded": false,
+  "originalResultSha256": "e054ad935776079183120215082fcfe0083c919fd157b4c58f51ba1452786e67",
+  "observations": {
+    "phase": "ad2-exact-1",
+    "mode": "exact",
+    "sdkSource": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "nativeBuiltAt": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+    "fixtureBinarySha256": "c1ba061c6c4e0af9425f551c6964100b4e0f51ea84a547b9e68c3d7263e48413",
+    "coldOpenMs": 2173.646417,
+    "targets": [
+      {
+        "index": 8,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Overlapping action",
+        "identifier": "overlap",
+        "rect": {
+          "x": 24,
+          "y": 650,
+          "width": 340,
+          "height": 48
+        },
+        "enabled": true,
+        "depth": 1,
+        "hittable": true,
+        "ref": "e9",
+        "kind": "button"
+      },
+      {
+        "index": 9,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Overlapping action",
+        "identifier": "overlap",
+        "rect": {
+          "x": 24,
+          "y": 650,
+          "width": 340,
+          "height": 48
+        },
+        "enabled": true,
+        "depth": 1,
+        "hittable": true,
+        "ref": "e10",
+        "kind": "button"
+      }
+    ],
+    "nativeBinaryUnchanged": true,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "nativeEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.0077500008046627045
+      }
+    ],
+    "samples": [
+      {
+        "label": "selector-ambiguity",
+        "target": {
+          "selector": "id=overlap"
+        },
+        "error": {
+          "code": "AMBIGUOUS_MATCH",
+          "message": "Selector matched 2 distinct actionable elements: id=overlap",
+          "details": {
+            "selector": "id=overlap",
+            "matches": 2,
+            "candidates": [
+              "@e9 [button] \"Overlapping action\"",
+              "@e10 [button] \"Overlapping action\""
+            ],
+            "dispatched": "no",
+            "hint": "Multiple candidates matched. Narrow the query or pass an exact identifier."
+          }
+        },
+        "ms": 45.77574999999979,
+        "events": [
+          {
+            "event": "appReady",
+            "ms": 0.0077500008046627045
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.477
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.9200000000000002
+          }
+        ]
+      },
+      {
+        "label": "ref-ambiguity",
+        "target": {
+          "ref": "@e10"
+        },
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "Resolved target was not ready for input; nothing was dispatched",
+          "details": {
+            "reason": "target_not_ready",
+            "readiness": "ambiguous",
+            "dispatched": "no",
+            "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref."
+          }
+        },
+        "ms": 59.26774999999998,
+        "events": [
+          {
+            "event": "appReady",
+            "ms": 0.0077500008046627045
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 48.595
+          }
+        ]
+      }
+    ],
+    "nativeGeometryObservations": {
+      "liveElementRead": {
+        "ms": 57.874041000000034,
+        "result": {
+          "ok": false,
+          "error": {
+            "code": "AMBIGUOUS_MATCH",
+            "message": "selector matched multiple elements"
+          }
+        }
+      },
+      "rawSnapshotQuality": {
+        "timing": {
+          "presentationMs": 0.03695487976074219,
+          "acquisitionMs": 18.321990966796875
+        },
+        "state": "healthy",
+        "backend": "tree"
+      },
+      "rawWindowRects": [
+        {
+          "width": 393,
+          "height": 852,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "nativeWindowTreeQuality": {
+        "timing": {
+          "presentationMs": 0.03695487976074219,
+          "acquisitionMs": 18.321990966796875
+        },
+        "state": "healthy",
+        "backend": "tree"
+      },
+      "sourceRootRects": [
+        {
+          "x": 0,
+          "width": 393,
+          "height": 852,
+          "y": 0
+        }
+      ],
+      "rawNodes": [
+        {
+          "type": "Button",
+          "hittable": true,
+          "index": 17,
+          "rect": {
+            "x": 24,
+            "height": 48,
+            "width": 340,
+            "y": 650
+          },
+          "identifier": "overlap",
+          "parentIndex": 4,
+          "depth": 5,
+          "label": "Overlapping action",
+          "enabled": true,
+          "nativePressTarget": {
+            "type": 9,
+            "identifier": "overlap",
+            "label": "Overlapping action",
+            "rect": {
+              "width": 340,
+              "height": 48,
+              "x": 24,
+              "y": 650
+            }
+          }
+        },
+        {
+          "depth": 5,
+          "label": "Overlapping action",
+          "rect": {
+            "x": 24,
+            "y": 650,
+            "width": 340,
+            "height": 48
+          },
+          "nativePressTarget": {
+            "type": 9,
+            "label": "Overlapping action",
+            "rect": {
+              "x": 24,
+              "width": 340,
+              "height": 48,
+              "y": 650
+            },
+            "identifier": "overlap"
+          },
+          "type": "Button",
+          "enabled": true,
+          "hittable": true,
+          "parentIndex": 4,
+          "identifier": "overlap",
+          "index": 19
+        }
+      ],
+      "strict": [
+        {
+          "target": {
+            "type": 9,
+            "identifier": "overlap",
+            "label": "Overlapping action",
+            "rect": {
+              "width": 340,
+              "height": 48,
+              "x": 24,
+              "y": 650
+            },
+            "point": {
+              "x": 194,
+              "y": 674
+            }
+          },
+          "observation": {
+            "ms": 43.64466700000048,
+            "result": {
+              "data": {
+                "runnerMainThreadBusy": false,
+                "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants",
+                "pressReadiness": "ambiguous"
+              },
+              "ok": true
+            }
+          }
+        },
+        {
+          "target": {
+            "type": 9,
+            "label": "Overlapping action",
+            "rect": {
+              "x": 24,
+              "width": 340,
+              "height": 48,
+              "y": 650
+            },
+            "identifier": "overlap",
+            "point": {
+              "x": 194,
+              "y": 674
+            }
+          },
+          "observation": {
+            "ms": 46.25712500000009,
+            "result": {
+              "ok": true,
+              "data": {
+                "pressReadiness": "ambiguous",
+                "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants",
+                "runnerMainThreadBusy": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "classification": "pass",
+  "runtimeJsManifest": {
+    "originalSha256": "345747700bb956e5b4fe09509f87d39d5ee9ebbd35bd43d282b859a46221e5c6",
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "files": 622,
+    "sharedManifest": "ad2-runtime-js-manifest.json"
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

@@ -1,0 +1,1506 @@
+{
+  "source": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+  "actualSDKAndBenchmarkSource": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "runtimeJSFilesByteEqual": 622,
+  "nativeTrackedFilesCompared": 247,
+  "changedSourceFiles": [
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+    "packages/daemon-client/src/__tests__/daemon-client-startup-race.test.ts"
+  ],
+  "onlyNativeChangeUnitFixture": true,
+  "allOtherNativeFilesByteEqual": true,
+  "packagedProductionInputDifference": [],
+  "productionPackageExclusion": "scripts/package-apple-runner-source.mjs explicitly skips AgentDeviceRunnerAppFixtures.m; all other native files and packaging scripts are byte-identical. New exact packaged-runner-swift gate passed.",
+  "nativeProductionPreprocessing": "Whole changed fixture body requires TARGET_OS_IOS && defined(AGENT_DEVICE_RUNNER_UNIT_TESTS); production builds omit it.",
+  "upstreamTestFix": "Exact b660429 test-only correction, byte-identical to main.",
+  "nativeInputsEqual": false,
+  "attribution": "SDKfunctional/performance recordings remain at189c; this equality proof supports unchanged runtime behavior and is not relabeled fresh cce5 SDK footage.",
+  "nativeFiles": [
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner.xcodeproj/project.pbxproj",
+      "baseBlob": "89b7ac51a3e5d11dcdaa6acff27662df13850b1d",
+      "headBlob": "89b7ac51a3e5d11dcdaa6acff27662df13850b1d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "baseBlob": "919434a6254f0e9651f402737811be6634a03e9c",
+      "headBlob": "919434a6254f0e9651f402737811be6634a03e9c",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner.xcodeproj/xcshareddata/xcschemes/AgentDeviceRunner.xcscheme",
+      "baseBlob": "2ee0f7256dc5afa681e38d0455a233fb85bc863e",
+      "headBlob": "2ee0f7256dc5afa681e38d0455a233fb85bc863e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerApp.h",
+      "baseBlob": "45251e8ec6246d498fee6614a6136df18a62ffa7",
+      "headBlob": "45251e8ec6246d498fee6614a6136df18a62ffa7",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerApp.m",
+      "baseBlob": "3c6bc8f59e9aeb7dfca9a2ac573901c09049ab63",
+      "headBlob": "3c6bc8f59e9aeb7dfca9a2ac573901c09049ab63",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+      "baseBlob": "ab9a24d933f36cf50ba5b9f7110d9746e0556431",
+      "headBlob": "d894346bd1c6699402be0d19d7ca5cdb41395b3b",
+      "equal": false
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/Info.plist",
+      "baseBlob": "af35d72e3e4532e51529892c748e01f6f0620908",
+      "headBlob": "af35d72e3e4532e51529892c748e01f6f0620908",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/UnitTests/AgentDeviceTextEntryFields.h",
+      "baseBlob": "3b42987af050b9a40e1bde30f324185e2c034e94",
+      "headBlob": "3b42987af050b9a40e1bde30f324185e2c034e94",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/UnitTests/AgentDeviceTextEntryFields.m",
+      "baseBlob": "81544e0244fe3667749377afb93c93938fadcb6b",
+      "headBlob": "81544e0244fe3667749377afb93c93938fadcb6b",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests.xctestplan",
+      "baseBlob": "c94ebf963fcebc3b3536a2f8f9e2a74fe71cc2fd",
+      "headBlob": "c94ebf963fcebc3b3536a2f8f9e2a74fe71cc2fd",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/AgentDeviceRunnerUITests-Bridging-Header.h",
+      "baseBlob": "f448d0ae80d031688f7af65d13505e27348c2d83",
+      "headBlob": "f448d0ae80d031688f7af65d13505e27348c2d83",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/AgentDeviceRunnerUITests.entitlements",
+      "baseBlob": "41a3e8c46718c69e0e452b813b315ddc20ba219e",
+      "headBlob": "41a3e8c46718c69e0e452b813b315ddc20ba219e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerAXSnapshotBridge.h",
+      "baseBlob": "3330817e673a3e0dbe0eeb2d5f8a43641c8f5da4",
+      "headBlob": "3330817e673a3e0dbe0eeb2d5f8a43641c8f5da4",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerAXSnapshotBridge.m",
+      "baseBlob": "ad6b04b00baeb72b4e54c04fd07d09c7ca035196",
+      "headBlob": "ad6b04b00baeb72b4e54c04fd07d09c7ca035196",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerAlertButtonChoice.swift",
+      "baseBlob": "527f33a688342b3aa4bdd58f4d22768e3a6c7566",
+      "headBlob": "527f33a688342b3aa4bdd58f4d22768e3a6c7566",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerAlertLabelVocabulary.swift",
+      "baseBlob": "5649c2e55a47fd61bd5aaadcb49063ce0d60eb33",
+      "headBlob": "5649c2e55a47fd61bd5aaadcb49063ce0d60eb33",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerAlertVerification.swift",
+      "baseBlob": "f9567599b2496390b70f5fa627767693917c3794",
+      "headBlob": "f9567599b2496390b70f5fa627767693917c3794",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerAppScreenCapture.swift",
+      "baseBlob": "dff4f67bb523c40d206164a329bf1f8744d4043e",
+      "headBlob": "dff4f67bb523c40d206164a329bf1f8744d4043e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerHttpRequestFraming.swift",
+      "baseBlob": "1a80468c1c3e32202f131b44dc1cfe19f8afa043",
+      "headBlob": "1a80468c1c3e32202f131b44dc1cfe19f8afa043",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerIsolationCanary.swift",
+      "baseBlob": "5e1ee97c4a50eee9a409878128b161c05000ebff",
+      "headBlob": "5e1ee97c4a50eee9a409878128b161c05000ebff",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerLaunchConfirmationPrompt.swift",
+      "baseBlob": "cd3f81601fcd3415f9db11a3b27368f7103decb6",
+      "headBlob": "cd3f81601fcd3415f9db11a3b27368f7103decb6",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerListenerPeer.swift",
+      "baseBlob": "efe9197a2fbb9389e42c0bd87721a5460ae7d149",
+      "headBlob": "efe9197a2fbb9389e42c0bd87721a5460ae7d149",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerListenerToken.swift",
+      "baseBlob": "d23b465adc1dd21b2bac54202c91d808ddbb380b",
+      "headBlob": "d23b465adc1dd21b2bac54202c91d808ddbb380b",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerMainOwnedState.swift",
+      "baseBlob": "da6a98a00446e00608be3d5e2965db4c7941bcab",
+      "headBlob": "da6a98a00446e00608be3d5e2965db4c7941bcab",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerObjCExceptionCatcher.h",
+      "baseBlob": "b4303fc5da6c0c13207de755800be53195c4f3b9",
+      "headBlob": "b4303fc5da6c0c13207de755800be53195c4f3b9",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerObjCExceptionCatcher.m",
+      "baseBlob": "7235eedff7054dd3a89cc43678390ccea1f3fd9c",
+      "headBlob": "7235eedff7054dd3a89cc43678390ccea1f3fd9c",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerRequestPanel.swift",
+      "baseBlob": "6c43319cd2852599bda9073fea33f454d2fe9c0b",
+      "headBlob": "6c43319cd2852599bda9073fea33f454d2fe9c0b",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerScrollViewportPolicy.swift",
+      "baseBlob": "df458c3d8fc7fe99f26f1b7a803434ccd69b1efe",
+      "headBlob": "df458c3d8fc7fe99f26f1b7a803434ccd69b1efe",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSelectorMatchPolicy.swift",
+      "baseBlob": "a1a82916ddfdfdac09dfc975a8b426964c770194",
+      "headBlob": "a1a82916ddfdfdac09dfc975a8b426964c770194",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSimulatorEdgeContact.h",
+      "baseBlob": "5857abda9c0c5429bfa76f89729bf745ee0bc3a3",
+      "headBlob": "5857abda9c0c5429bfa76f89729bf745ee0bc3a3",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSimulatorEdgeTouch.h",
+      "baseBlob": "0def8170ea21a93ddd0ab7af79a2284dd388e7aa",
+      "headBlob": "0def8170ea21a93ddd0ab7af79a2284dd388e7aa",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSimulatorEdgeTouch.m",
+      "baseBlob": "c7765479fe48afe6635de08623ea960fa65112ec",
+      "headBlob": "c7765479fe48afe6635de08623ea960fa65112ec",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSnapshotBridge.h",
+      "baseBlob": "4fecd5267135a70c0fa79df96ca1d8e5bc36eea5",
+      "headBlob": "4fecd5267135a70c0fa79df96ca1d8e5bc36eea5",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSnapshotBridge.m",
+      "baseBlob": "771b536857cf432aebd4a0e80f148b9b03f32cff",
+      "headBlob": "771b536857cf432aebd4a0e80f148b9b03f32cff",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerStringNormalization.swift",
+      "baseBlob": "be62687ba28ec7a9a1e616ab7f697f2e72352a0f",
+      "headBlob": "be62687ba28ec7a9a1e616ab7f697f2e72352a0f",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSurfacePolicy.swift",
+      "baseBlob": "847ade0ea37d5048ed0db0c9aef94d5f30be18b7",
+      "headBlob": "847ade0ea37d5048ed0db0c9aef94d5f30be18b7",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSynthesizedGesture.h",
+      "baseBlob": "4ae66d4deb9095f1fd85acfcdf20016d01c8e708",
+      "headBlob": "4ae66d4deb9095f1fd85acfcdf20016d01c8e708",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSynthesizedGesture.m",
+      "baseBlob": "e19fc7b60772d13ed85c3a4c8a73fc8324a8fdd4",
+      "headBlob": "e19fc7b60772d13ed85c3a4c8a73fc8324a8fdd4",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSynthesizedTextEntry.h",
+      "baseBlob": "dd01eb9c5ddac4481ab8ffe2b2ffa8ea977d3945",
+      "headBlob": "dd01eb9c5ddac4481ab8ffe2b2ffa8ea977d3945",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSynthesizedTextEntry.m",
+      "baseBlob": "5edffde88d0ac62f3ddd2dd7ccd290c03c830587",
+      "headBlob": "5edffde88d0ac62f3ddd2dd7ccd290c03c830587",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSystemPromptStrings.swift",
+      "baseBlob": "d3d7e1d6c88f55f2afca2fa63e7666329d1ba54a",
+      "headBlob": "d3d7e1d6c88f55f2afca2fa63e7666329d1ba54a",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSystemSurfaceHostPolicy.swift",
+      "baseBlob": "39ed13f0b632fe166c22a0f870b079086921cdc2",
+      "headBlob": "39ed13f0b632fe166c22a0f870b079086921cdc2",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTapPointPolicy.swift",
+      "baseBlob": "3c43e85f6d2754591803fa04ce971b581d9719c4",
+      "headBlob": "3c43e85f6d2754591803fa04ce971b581d9719c4",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+AXSnapshotFallback.swift",
+      "baseBlob": "ad05f5c8843b7206c46f2cdcc577410628922aae",
+      "headBlob": "ad05f5c8843b7206c46f2cdcc577410628922aae",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Alert.swift",
+      "baseBlob": "c1442451381113c7244a53922e607dfe06ed1953",
+      "headBlob": "c1442451381113c7244a53922e607dfe06ed1953",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+AlertObservation.swift",
+      "baseBlob": "b29fb00e108f7cd83c735e64faa79baa4b0e85f8",
+      "headBlob": "b29fb00e108f7cd83c735e64faa79baa4b0e85f8",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+BlockingSystemModalResolution.swift",
+      "baseBlob": "542ad00733ddbe8c58b31e64547b19d0251487ee",
+      "headBlob": "542ad00733ddbe8c58b31e64547b19d0251487ee",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandDispatch.swift",
+      "baseBlob": "160f7c4103a370703ef3fca861bd6b7e4bf36085",
+      "headBlob": "160f7c4103a370703ef3fca861bd6b7e4bf36085",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+      "baseBlob": "5ac5f36d4ef308ea3e5f4a250151bf24e4642817",
+      "headBlob": "5ac5f36d4ef308ea3e5f4a250151bf24e4642817",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandJournal.swift",
+      "baseBlob": "53b50f02955e2105aa5faadab3d3f42ac6bbed33",
+      "headBlob": "53b50f02955e2105aa5faadab3d3f42ac6bbed33",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Environment.swift",
+      "baseBlob": "00587d95fbb23421272ff6977890a837d5a67b46",
+      "headBlob": "00587d95fbb23421272ff6977890a837d5a67b46",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Exceptions.swift",
+      "baseBlob": "d126485482d98454e306c22dceb97f3afb32f293",
+      "headBlob": "d126485482d98454e306c22dceb97f3afb32f293",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+GestureExecution.swift",
+      "baseBlob": "e5c49d01589294283be5c1e294840fe54ec2fca3",
+      "headBlob": "e5c49d01589294283be5c1e294840fe54ec2fca3",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift",
+      "baseBlob": "8efb416415d4231688d427b6a90adefe4ecd4cd9",
+      "headBlob": "8efb416415d4231688d427b6a90adefe4ecd4cd9",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Keyboard.swift",
+      "baseBlob": "797113a8b9dd100173d842e80d195c6c3f604952",
+      "headBlob": "797113a8b9dd100173d842e80d195c6c3f604952",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Lifecycle.swift",
+      "baseBlob": "6f5f55d1bc6c947584d685f640100257dc056760",
+      "headBlob": "6f5f55d1bc6c947584d685f640100257dc056760",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+MainThreadWork.swift",
+      "baseBlob": "bccd95caaa060763b06cdf367a7533e5ab186a1e",
+      "headBlob": "bccd95caaa060763b06cdf367a7533e5ab186a1e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift",
+      "baseBlob": "1ec92fc326608abb5fc2fbe41fdebab31c82592c",
+      "headBlob": "1ec92fc326608abb5fc2fbe41fdebab31c82592c",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Navigation.swift",
+      "baseBlob": "fd85b8b781151bc659f749576ed1666f9a499148",
+      "headBlob": "fd85b8b781151bc659f749576ed1666f9a499148",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Orientation.swift",
+      "baseBlob": "45ef96f5e1ad5ea118ef9e695423de33c76a2c50",
+      "headBlob": "45ef96f5e1ad5ea118ef9e695423de33c76a2c50",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+PrivateAXElementTypes.swift",
+      "baseBlob": "53e2eac6e46145c54cc094c2024dfc61919bda42",
+      "headBlob": "53e2eac6e46145c54cc094c2024dfc61919bda42",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+PrivateAXPresentation.swift",
+      "baseBlob": "000c76e1863ec6e5c0076ddb0d790e14c4306df3",
+      "headBlob": "000c76e1863ec6e5c0076ddb0d790e14c4306df3",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+ScreenEdgeGesture.swift",
+      "baseBlob": "40f93e7988b0e314add59d9497add2ce365f17b2",
+      "headBlob": "40f93e7988b0e314add59d9497add2ce365f17b2",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+ScreenRecorder.swift",
+      "baseBlob": "0bfe1a2e640dd25c90f779d5195f76d124a0e602",
+      "headBlob": "0bfe1a2e640dd25c90f779d5195f76d124a0e602",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+ScrollDragExecution.swift",
+      "baseBlob": "87c8911dcf0b94bfc22b5a544dbab48967ebb447",
+      "headBlob": "87c8911dcf0b94bfc22b5a544dbab48967ebb447",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+ScrollGesture.swift",
+      "baseBlob": "326eec698f1f1998a24a87393835f3f9b4db7dc8",
+      "headBlob": "326eec698f1f1998a24a87393835f3f9b4db7dc8",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SequenceExecution.swift",
+      "baseBlob": "f545781011f0bab6ff9cceb9ba2f1d89efcbf6ae",
+      "headBlob": "f545781011f0bab6ff9cceb9ba2f1d89efcbf6ae",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Snapshot.swift",
+      "baseBlob": "97cbcbb624c643cba966e77ba09fe0a8ca718a3a",
+      "headBlob": "97cbcbb624c643cba966e77ba09fe0a8ca718a3a",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift",
+      "baseBlob": "32570083a19b4fd3ddbb649a0ab90b11ffc61913",
+      "headBlob": "32570083a19b4fd3ddbb649a0ab90b11ffc61913",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotBackendCapabilities.swift",
+      "baseBlob": "4a5b4786392e19382718a02f6dad5ef1b75e8310",
+      "headBlob": "4a5b4786392e19382718a02f6dad5ef1b75e8310",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotBridge.swift",
+      "baseBlob": "5ccbe992327fd989702267ee55612a5cbac216c2",
+      "headBlob": "5ccbe992327fd989702267ee55612a5cbac216c2",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotCapturePlan.swift",
+      "baseBlob": "d6fb41356a76e78e0cdcbfbb4a00cb0dded9f864",
+      "headBlob": "d6fb41356a76e78e0cdcbfbb4a00cb0dded9f864",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotCaptureTarget.swift",
+      "baseBlob": "8eefa99322fcbbdc62c2753a161a6b3f40f1f245",
+      "headBlob": "8eefa99322fcbbdc62c2753a161a6b3f40f1f245",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotChannelPolicy.swift",
+      "baseBlob": "3bcee9c604518e43e8f2b41492c18bf4882ae73c",
+      "headBlob": "3bcee9c604518e43e8f2b41492c18bf4882ae73c",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotExecution.swift",
+      "baseBlob": "10496e5e947506799823f75622ffa0cedf5f812b",
+      "headBlob": "10496e5e947506799823f75622ffa0cedf5f812b",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotPresentationInvariant.swift",
+      "baseBlob": "13c7fad9f3f13d05435d95e7eb1e74fac5003dd8",
+      "headBlob": "13c7fad9f3f13d05435d95e7eb1e74fac5003dd8",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotTiming.swift",
+      "baseBlob": "62e6819a8163bdf307afc15cd06f8d0d3d2d3209",
+      "headBlob": "62e6819a8163bdf307afc15cd06f8d0d3d2d3209",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SynthesizedCommitDeadline.swift",
+      "baseBlob": "7947052a5edc7852b2872af1de3d852f46a57915",
+      "headBlob": "7947052a5edc7852b2872af1de3d852f46a57915",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SynthesizedGesturePolicy.swift",
+      "baseBlob": "3c4f3ef1a3f26682ebefa4293fc7c06e3d9188c6",
+      "headBlob": "3c4f3ef1a3f26682ebefa4293fc7c06e3d9188c6",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SynthesizedInteraction.swift",
+      "baseBlob": "95032a1052635fe955b273b5c2b772b5a90784d6",
+      "headBlob": "95032a1052635fe955b273b5c2b772b5a90784d6",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SynthesizedTextEntry.swift",
+      "baseBlob": "41aeb9571f56ca6bcc6f60323d0a6fda55d2a85e",
+      "headBlob": "41aeb9571f56ca6bcc6f60323d0a6fda55d2a85e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SystemModal.swift",
+      "baseBlob": "7cd020566873f72c67a0f847847ecaa6962f37b0",
+      "headBlob": "7cd020566873f72c67a0f847847ecaa6962f37b0",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextEntry.swift",
+      "baseBlob": "ca8ec50d4204082c3568c81a897dac5f2b61fb6d",
+      "headBlob": "ca8ec50d4204082c3568c81a897dac5f2b61fb6d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextEntryConfirmation.swift",
+      "baseBlob": "c537f8a4a398b2cb88ed5256b71eb6c6eb66faab",
+      "headBlob": "c537f8a4a398b2cb88ed5256b71eb6c6eb66faab",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextEntryFocus.swift",
+      "baseBlob": "8565a88c35af228ea4a47b3c8af9a507e67ce392",
+      "headBlob": "8565a88c35af228ea4a47b3c8af9a507e67ce392",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextEntryReadiness.swift",
+      "baseBlob": "fa7f9da8075c30ab3c2f8fe97edc5116e6c91913",
+      "headBlob": "fa7f9da8075c30ab3c2f8fe97edc5116e6c91913",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextInputCandidatePolicy.swift",
+      "baseBlob": "e8dc68912b206f1bec83accfcd08d559ba84a9c5",
+      "headBlob": "e8dc68912b206f1bec83accfcd08d559ba84a9c5",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextInputProbe.swift",
+      "baseBlob": "adba1bd27c633f0e57ae8f95857c808ac5b7d4d1",
+      "headBlob": "adba1bd27c633f0e57ae8f95857c808ac5b7d4d1",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextTyping.swift",
+      "baseBlob": "4ec331f5a0cfb51a14bc66a23070995fa2cd5c10",
+      "headBlob": "4ec331f5a0cfb51a14bc66a23070995fa2cd5c10",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Transport.swift",
+      "baseBlob": "f181a109c1a02dec1c2144b29276456cdb8286e8",
+      "headBlob": "f181a109c1a02dec1c2144b29276456cdb8286e8",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TvRemote.swift",
+      "baseBlob": "17a05d9f6a0ed576d40a6d14ccadde252d503e56",
+      "headBlob": "17a05d9f6a0ed576d40a6d14ccadde252d503e56",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TypeExecution.swift",
+      "baseBlob": "8e85a229f8e8e9bb3be6034c8d1d9e377ef8624e",
+      "headBlob": "8e85a229f8e8e9bb3be6034c8d1d9e377ef8624e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests.swift",
+      "baseBlob": "edfafba624aba48ef6ea82cd40ded10eb09c45f0",
+      "headBlob": "edfafba624aba48ef6ea82cd40ded10eb09c45f0",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerXCTestEventBridge.h",
+      "baseBlob": "dadac434094ea4d890c2807676bb20c0e2a72cee",
+      "headBlob": "dadac434094ea4d890c2807676bb20c0e2a72cee",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerXCTestEventBridge.m",
+      "baseBlob": "1d72e33eaa2aae94f0d9a7f0cc3682e39376a322",
+      "headBlob": "1d72e33eaa2aae94f0d9a7f0cc3682e39376a322",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/FixtureExistence.swift",
+      "baseBlob": "eaa3b6f7b723e477a7a90568c6614a71e37a5bc9",
+      "headBlob": "eaa3b6f7b723e477a7a90568c6614a71e37a5bc9",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerAXModalScopeCapture.h",
+      "baseBlob": "b3501d1b0740d64404d69d9a5e9371e204eb7404",
+      "headBlob": "b3501d1b0740d64404d69d9a5e9371e204eb7404",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerAXModalScopeCapture.m",
+      "baseBlob": "b149ead3f408c96040719499d4d6438a9a71a31f",
+      "headBlob": "b149ead3f408c96040719499d4d6438a9a71a31f",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerAXSnapshotBridge+Internal.h",
+      "baseBlob": "966ceea697a90a218b7736b8c1b7cf4491e7fee3",
+      "headBlob": "966ceea697a90a218b7736b8c1b7cf4491e7fee3",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerEdgeContactTesting.h",
+      "baseBlob": "65f9acdc82b4740418029c237ee0488e37e81692",
+      "headBlob": "65f9acdc82b4740418029c237ee0488e37e81692",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerEdgeContactTesting.m",
+      "baseBlob": "192654a0ef2c29f1beca49c982e9de7cb6771368",
+      "headBlob": "192654a0ef2c29f1beca49c982e9de7cb6771368",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerModalScopeAcquisition.swift",
+      "baseBlob": "e114a6c09c4552e279f7b4c6d2d7401cd3b3fb98",
+      "headBlob": "e114a6c09c4552e279f7b4c6d2d7401cd3b3fb98",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerRequestPanelTests.swift",
+      "baseBlob": "d3d7d66d6b73805cd28ec767efb9be2eed7a7b7d",
+      "headBlob": "d3d7d66d6b73805cd28ec767efb9be2eed7a7b7d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerSnapshotBridge+Internal.h",
+      "baseBlob": "d5c29fcb9b73722c9fabbc7d2312162944a1abb0",
+      "headBlob": "d5c29fcb9b73722c9fabbc7d2312162944a1abb0",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerSnapshotBridgeReaderRequest.h",
+      "baseBlob": "3ee76f267717af2355cf45e438601c0d4a1b0a09",
+      "headBlob": "3ee76f267717af2355cf45e438601c0d4a1b0a09",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerSnapshotBridgeTesting.h",
+      "baseBlob": "07f2b5b93c302c834379722f6d73f360fce593d9",
+      "headBlob": "07f2b5b93c302c834379722f6d73f360fce593d9",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerSnapshotBridgeTesting.m",
+      "baseBlob": "4bb07a35f7b5c49e3b9ec8ab31557e42814e357a",
+      "headBlob": "4bb07a35f7b5c49e3b9ec8ab31557e42814e357a",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AXRecoveryConformanceTests.swift",
+      "baseBlob": "cde158367b7fb084cb58d29c4c3729c916c7e541",
+      "headBlob": "cde158367b7fb084cb58d29c4c3729c916c7e541",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AXSnapshotFallbackTests.swift",
+      "baseBlob": "daa25fbb4e995de67a1d4aed632c9585523d5e57",
+      "headBlob": "daa25fbb4e995de67a1d4aed632c9585523d5e57",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AlertButtonChoiceTests.swift",
+      "baseBlob": "84be886374b93e3933ed20cc9ef6e0235c65ae9c",
+      "headBlob": "84be886374b93e3933ed20cc9ef6e0235c65ae9c",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AlertDispatchTests.swift",
+      "baseBlob": "ebf5189ea6815c959af08ee6c4a416ee6ea4fb9f",
+      "headBlob": "ebf5189ea6815c959af08ee6c4a416ee6ea4fb9f",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AlertLabelVocabularyTests.swift",
+      "baseBlob": "c59efc5d16c44185c245cbef780431565ed0bfc9",
+      "headBlob": "c59efc5d16c44185c245cbef780431565ed0bfc9",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AlertObservationTests.swift",
+      "baseBlob": "ac6cbb1f124fce693557783c8f0e37a7d0cf8a25",
+      "headBlob": "ac6cbb1f124fce693557783c8f0e37a7d0cf8a25",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AlertSurfaceTests.swift",
+      "baseBlob": "26dbd0f6970c21e9902326454e17fd8a9c2760e7",
+      "headBlob": "26dbd0f6970c21e9902326454e17fd8a9c2760e7",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AlertTests.swift",
+      "baseBlob": "aa5f9181520d3da0834cab07e685e39753d66b58",
+      "headBlob": "aa5f9181520d3da0834cab07e685e39753d66b58",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AlertVerificationTests.swift",
+      "baseBlob": "5af19880998ba7fa74fdd6f7de1017fc47974f10",
+      "headBlob": "5af19880998ba7fa74fdd6f7de1017fc47974f10",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+AppScreenCaptureTests.swift",
+      "baseBlob": "aa4de3af5712af0eff3a50a8da46de138dabef08",
+      "headBlob": "aa4de3af5712af0eff3a50a8da46de138dabef08",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ApplicationStateRawValueTests.swift",
+      "baseBlob": "ab6641e830b2e0383534c1d172122085d330603e",
+      "headBlob": "ab6641e830b2e0383534c1d172122085d330603e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+BlockingSystemModalResolutionTests.swift",
+      "baseBlob": "2f2e101bdee9f3cf04dd44d92a1816496d5006c2",
+      "headBlob": "2f2e101bdee9f3cf04dd44d92a1816496d5006c2",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandDispatchTests.swift",
+      "baseBlob": "ec4be101ead805ec3b5b89608dc1d33d3799c265",
+      "headBlob": "ec4be101ead805ec3b5b89608dc1d33d3799c265",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandExecutionTests.swift",
+      "baseBlob": "94bd79292acd8c61452a2d91f42f07245324a71f",
+      "headBlob": "94bd79292acd8c61452a2d91f42f07245324a71f",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandJournalTests.swift",
+      "baseBlob": "ac9892a66400a4cb9145ec63f8db39ca10ce9404",
+      "headBlob": "ac9892a66400a4cb9145ec63f8db39ca10ce9404",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CoordinateTextEntryTests.swift",
+      "baseBlob": "3e6666d6cd600bcaa6464f2318c9219cbb681536",
+      "headBlob": "3e6666d6cd600bcaa6464f2318c9219cbb681536",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+EnvironmentTests.swift",
+      "baseBlob": "1fd965f9cc7c7a52340398124c0844978c1b3a0b",
+      "headBlob": "1fd965f9cc7c7a52340398124c0844978c1b3a0b",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+FocusWitnessConformanceTests.swift",
+      "baseBlob": "cbe9295e65a96a715319ebdd2b0a7e6769007f3e",
+      "headBlob": "cbe9295e65a96a715319ebdd2b0a7e6769007f3e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+GestureExecutionTests.swift",
+      "baseBlob": "d5c517cf45b9f9191b0d00467596a4db33f14753",
+      "headBlob": "d5c517cf45b9f9191b0d00467596a4db33f14753",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+HttpRequestFramingTests.swift",
+      "baseBlob": "df64858db11169a77ff79f0b33e18e515ab41fe4",
+      "headBlob": "df64858db11169a77ff79f0b33e18e515ab41fe4",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+InteractionTests.swift",
+      "baseBlob": "f610e4459670e21e28943ad8e8fc76405e620f2e",
+      "headBlob": "f610e4459670e21e28943ad8e8fc76405e620f2e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+      "baseBlob": "06c3aacf0ae9be531312197f097147c7613bd5d5",
+      "headBlob": "06c3aacf0ae9be531312197f097147c7613bd5d5",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+LaunchConfirmationPromptTests.swift",
+      "baseBlob": "4a9b1033f95bce811befaf16dc9566789451924d",
+      "headBlob": "4a9b1033f95bce811befaf16dc9566789451924d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+LifecycleCacheTests.swift",
+      "baseBlob": "ba72518020bdaee349f297ed8d69e5f3e4b6f63a",
+      "headBlob": "ba72518020bdaee349f297ed8d69e5f3e4b6f63a",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+LifecycleTests.swift",
+      "baseBlob": "5d076bb49a27e486806e51bd92f35f55e80a5db4",
+      "headBlob": "5d076bb49a27e486806e51bd92f35f55e80a5db4",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ListenerPeerTests.swift",
+      "baseBlob": "825e8f946bb996ac6cc2d3935beb05c527f85258",
+      "headBlob": "825e8f946bb996ac6cc2d3935beb05c527f85258",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ListenerTokenTests.swift",
+      "baseBlob": "2b04091a83e110d8b50e35f34656c0b69d819b24",
+      "headBlob": "2b04091a83e110d8b50e35f34656c0b69d819b24",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+MainThreadWorkTests.swift",
+      "baseBlob": "6da6f0be5c409f0a722d28184f77a590943c7024",
+      "headBlob": "6da6f0be5c409f0a722d28184f77a590943c7024",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ModalScopeCaptureTests.swift",
+      "baseBlob": "611ab48701f00db5ab9042b233659d8566c79a1f",
+      "headBlob": "611ab48701f00db5ab9042b233659d8566c79a1f",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ModelsTests.swift",
+      "baseBlob": "0e63d9812a1ed44accaf4f5cbb6007f8403fdd51",
+      "headBlob": "0e63d9812a1ed44accaf4f5cbb6007f8403fdd51",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+NavigationTests.swift",
+      "baseBlob": "2b987ae36a0f8768f533e6cd86f4db8f984bac6d",
+      "headBlob": "2b987ae36a0f8768f533e6cd86f4db8f984bac6d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+PasteboardWriteTests.swift",
+      "baseBlob": "0f2192f9da041f58054ec0df28c24884ded41ee1",
+      "headBlob": "0f2192f9da041f58054ec0df28c24884ded41ee1",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+PresentedSurfacePayloadTests.swift",
+      "baseBlob": "ab136d6fcab5a7b0d501a4b718b280198674ac73",
+      "headBlob": "ab136d6fcab5a7b0d501a4b718b280198674ac73",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+PrivateAXPresentationTests.swift",
+      "baseBlob": "6bb92417d9599b12880e83a6e1212cacded3c375",
+      "headBlob": "6bb92417d9599b12880e83a6e1212cacded3c375",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+RecordedIssueSuppressionTests.swift",
+      "baseBlob": "44d46c8a10af341ad3acb21d9ca8874c7bea7069",
+      "headBlob": "44d46c8a10af341ad3acb21d9ca8874c7bea7069",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+RecordingTests.swift",
+      "baseBlob": "dff99553593346c635b9ade344350abd79e30a8d",
+      "headBlob": "dff99553593346c635b9ade344350abd79e30a8d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ScreenEdgeGestureTests.swift",
+      "baseBlob": "cd31d508e2899d84593b804fc5a6f3cfb96fab6b",
+      "headBlob": "cd31d508e2899d84593b804fc5a6f3cfb96fab6b",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ScrollDragExecutionTests.swift",
+      "baseBlob": "36d29a55fe6b96ce656ef58c94074d454dedff1d",
+      "headBlob": "36d29a55fe6b96ce656ef58c94074d454dedff1d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ScrollGestureTests.swift",
+      "baseBlob": "9e9b9d26fc10bbddfbe1e150bbac30586cf62f50",
+      "headBlob": "9e9b9d26fc10bbddfbe1e150bbac30586cf62f50",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ScrollViewportPolicyTests.swift",
+      "baseBlob": "b08b97d52b0d1fd5bb4fb32f9bedb5e31f991f0a",
+      "headBlob": "b08b97d52b0d1fd5bb4fb32f9bedb5e31f991f0a",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift",
+      "baseBlob": "96dfca9e28ed3dc5c1504052340288410814ec10",
+      "headBlob": "96dfca9e28ed3dc5c1504052340288410814ec10",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SequenceExecutionTests.swift",
+      "baseBlob": "131b91ef5044d815b53c3ccf6e492a3de8825d88",
+      "headBlob": "131b91ef5044d815b53c3ccf6e492a3de8825d88",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotAcquisitionTests.swift",
+      "baseBlob": "54d26f854125b8a0216cdbec58cfd0e997a8eed8",
+      "headBlob": "54d26f854125b8a0216cdbec58cfd0e997a8eed8",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotBackendCapabilitiesTests.swift",
+      "baseBlob": "a56627eed91723de68d0e43de4a8fda403551375",
+      "headBlob": "a56627eed91723de68d0e43de4a8fda403551375",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotBridgeTests.swift",
+      "baseBlob": "97d8aa97165b597826e3e4450e230a3329a4b576",
+      "headBlob": "97d8aa97165b597826e3e4450e230a3329a4b576",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanOccupancyTests.swift",
+      "baseBlob": "9b5b7d9508668704a451dbb76e3f6a65e152469c",
+      "headBlob": "9b5b7d9508668704a451dbb76e3f6a65e152469c",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanTests.swift",
+      "baseBlob": "388bb94ea5399ac0d33d7bbc3c03a5301a9a6052",
+      "headBlob": "388bb94ea5399ac0d33d7bbc3c03a5301a9a6052",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCaptureTargetTests.swift",
+      "baseBlob": "837ce2752272c7ca4b8177f95dec2ad5f4813708",
+      "headBlob": "837ce2752272c7ca4b8177f95dec2ad5f4813708",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotExecutionTests.swift",
+      "baseBlob": "59e6eaefa0085555c00c4748629c6a3ecfaff26d",
+      "headBlob": "59e6eaefa0085555c00c4748629c6a3ecfaff26d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotHittabilityTests.swift",
+      "baseBlob": "89828f62f7972c20cd7fed8ec1465d4f4d04a8c0",
+      "headBlob": "89828f62f7972c20cd7fed8ec1465d4f4d04a8c0",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotPresentationConformanceTests.swift",
+      "baseBlob": "b738a6d4c621ed225f524e446b847004a2aa94d2",
+      "headBlob": "b738a6d4c621ed225f524e446b847004a2aa94d2",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotPresentationGeometryTests.swift",
+      "baseBlob": "db52ad5d2fbca2c0d6005c71b23156a67ffb0cdd",
+      "headBlob": "db52ad5d2fbca2c0d6005c71b23156a67ffb0cdd",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotPresentationInvariantTests.swift",
+      "baseBlob": "9aeea4f49090bbb931217597b0120f120eca954f",
+      "headBlob": "9aeea4f49090bbb931217597b0120f120eca954f",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotPresentationTests.swift",
+      "baseBlob": "8138eb41fb6d3791d85e1221f4e6d195f15f8006",
+      "headBlob": "8138eb41fb6d3791d85e1221f4e6d195f15f8006",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotQualityStateTests.swift",
+      "baseBlob": "6e73c3435f0598cb3b1cf0f950fac2549702848f",
+      "headBlob": "6e73c3435f0598cb3b1cf0f950fac2549702848f",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotScopePolicyTests.swift",
+      "baseBlob": "e4cb4c84f0e6ea2df494442dfd1a88b6fa2cb8b1",
+      "headBlob": "e4cb4c84f0e6ea2df494442dfd1a88b6fa2cb8b1",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotTests.swift",
+      "baseBlob": "e71ab4452765245616a1786595ca1b63721b04df",
+      "headBlob": "e71ab4452765245616a1786595ca1b63721b04df",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotTimingTests.swift",
+      "baseBlob": "771f779aa387931d837f1cf3589d194e44aefe2e",
+      "headBlob": "771f779aa387931d837f1cf3589d194e44aefe2e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotTraversalIdentityTests.swift",
+      "baseBlob": "4d4391ad57f931a02595a7a4c584fa00fe126e50",
+      "headBlob": "4d4391ad57f931a02595a7a4c584fa00fe126e50",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotVisibilityFoldTests.swift",
+      "baseBlob": "c40bdfad1adbd4cd9d8343aca1e7635d09a4c5c9",
+      "headBlob": "c40bdfad1adbd4cd9d8343aca1e7635d09a4c5c9",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SynthesizedCommitDeadlineTests.swift",
+      "baseBlob": "8995bf974d6e700576f766e759a6d4a78ae4b75d",
+      "headBlob": "8995bf974d6e700576f766e759a6d4a78ae4b75d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SynthesizedGesturePolicyTests.swift",
+      "baseBlob": "6ab882fc4ec2df4e301077f076d3752370a005ac",
+      "headBlob": "6ab882fc4ec2df4e301077f076d3752370a005ac",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SynthesizedGestureTests.swift",
+      "baseBlob": "49c6c14f24494af2ffb1a9e06ff34cd9c84cfa96",
+      "headBlob": "49c6c14f24494af2ffb1a9e06ff34cd9c84cfa96",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SynthesizedInteractionTests.swift",
+      "baseBlob": "ae841c8816e67f6fda346a2a42e1eea8c5890077",
+      "headBlob": "ae841c8816e67f6fda346a2a42e1eea8c5890077",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SynthesizedTextEntryTests.swift",
+      "baseBlob": "586603efdeec4e6052181762dcb6eaeaf7ea0e74",
+      "headBlob": "586603efdeec4e6052181762dcb6eaeaf7ea0e74",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SystemModalTests.swift",
+      "baseBlob": "2e841b112f661d56343128f075de3e0950a33563",
+      "headBlob": "2e841b112f661d56343128f075de3e0950a33563",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SystemSurfaceHostPolicyTests.swift",
+      "baseBlob": "a72ea3b7fa65e3a034b5eab361b71b0643468561",
+      "headBlob": "a72ea3b7fa65e3a034b5eab361b71b0643468561",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TapPointPolicyTests.swift",
+      "baseBlob": "791b1b253012123fc600299f739b2f8b13ca8289",
+      "headBlob": "791b1b253012123fc600299f739b2f8b13ca8289",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextEntryConfirmationTests.swift",
+      "baseBlob": "b3749e1f02b44126836fcdc021716630e90bea44",
+      "headBlob": "b3749e1f02b44126836fcdc021716630e90bea44",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextEntryFocusTests.swift",
+      "baseBlob": "9a5e630e9d311d86afe49855d1c0caaef5bb2174",
+      "headBlob": "9a5e630e9d311d86afe49855d1c0caaef5bb2174",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextEntryLatencyTests.swift",
+      "baseBlob": "8b2fc7aad9a3b05ca83cef8eb1bd851b0dacba26",
+      "headBlob": "8b2fc7aad9a3b05ca83cef8eb1bd851b0dacba26",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextEntryPolicyTests.swift",
+      "baseBlob": "b5d77265095fa4def5d2795c7f2e3c63e12d3c75",
+      "headBlob": "b5d77265095fa4def5d2795c7f2e3c63e12d3c75",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextEntryReadinessTests.swift",
+      "baseBlob": "44e05347f05d9d0c68018b60a0c43f186180f47d",
+      "headBlob": "44e05347f05d9d0c68018b60a0c43f186180f47d",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextInputCandidatePolicyTests.swift",
+      "baseBlob": "ec3201275b7df97953e2ff880b69c91cb8573113",
+      "headBlob": "ec3201275b7df97953e2ff880b69c91cb8573113",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextInputProbeTests.swift",
+      "baseBlob": "3b88b50588c810801dd41d9906067e22e0b58b99",
+      "headBlob": "3b88b50588c810801dd41d9906067e22e0b58b99",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TextTypingTests.swift",
+      "baseBlob": "e692526a79b5c19c8d668c6096c7ac390a0dac0e",
+      "headBlob": "e692526a79b5c19c8d668c6096c7ac390a0dac0e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TransportTests.swift",
+      "baseBlob": "11456ceaec943120b7102f932665ac67ed33e2ac",
+      "headBlob": "11456ceaec943120b7102f932665ac67ed33e2ac",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+TvRemoteTests.swift",
+      "baseBlob": "1715151a005506007ccc20100bf47f2700ef3344",
+      "headBlob": "1715151a005506007ccc20100bf47f2700ef3344",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+XCTestEventBridgeTests.swift",
+      "baseBlob": "6dd48b02ad701b06dc6c871cf2eafd5b9ff30ffa",
+      "headBlob": "6dd48b02ad701b06dc6c871cf2eafd5b9ff30ffa",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/SoleScreenRouteReading.swift",
+      "baseBlob": "25165456466fefa6c11aa850f759ad452ddfb8d2",
+      "headBlob": "25165456466fefa6c11aa850f759ad452ddfb8d2",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/RecordingScripts/RecordingExportSupport.swift",
+      "baseBlob": "4178a0082950c414a714a245cc53302e59012caf",
+      "headBlob": "4178a0082950c414a714a245cc53302e59012caf",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/RecordingScripts/recording-frames.swift",
+      "baseBlob": "2fc72fbcf277d9ecd65c86c889618804b937f68e",
+      "headBlob": "2fc72fbcf277d9ecd65c86c889618804b937f68e",
+      "equal": true
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/RecordingScripts/recording-overlay.swift",
+      "baseBlob": "ccfe990e8d936585f86305dc5d7063753499a18c",
+      "headBlob": "ccfe990e8d936585f86305dc5d7063753499a18c",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+      "baseBlob": "3bf9fcc55f93c531b8d627262b4d4167f2c9e3f1",
+      "headBlob": "3bf9fcc55f93c531b8d627262b4d4167f2c9e3f1",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/LICENSE.idb",
+      "baseBlob": "e95d126e9f51a95416298f64d7b86f67f68db4d8",
+      "headBlob": "e95d126e9f51a95416298f64d7b86f67f68db4d8",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/README.md",
+      "baseBlob": "b6b9fdaf03fa69bbbc2d631297fd6e649a2f0b1c",
+      "headBlob": "b6b9fdaf03fa69bbbc2d631297fd6e649a2f0b1c",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridge.m",
+      "baseBlob": "c5ae0272b4593f90fe9df86e8b04bd69ce97da18",
+      "headBlob": "c5ae0272b4593f90fe9df86e8b04bd69ce97da18",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+      "baseBlob": "f2b1f2b44ff9cafbb426070a83bb5f09f8072fbc",
+      "headBlob": "f2b1f2b44ff9cafbb426070a83bb5f09f8072fbc",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+      "baseBlob": "b38f0964672f14f566f897da5aab4eb34deaf88a",
+      "headBlob": "b38f0964672f14f566f897da5aab4eb34deaf88a",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+      "baseBlob": "a8078754bbfb43d92e25a18e855442caa2bca021",
+      "headBlob": "a8078754bbfb43d92e25a18e855442caa2bca021",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+      "baseBlob": "ddd4fc11bb30a9cccffbafc2d0c1eb8a0047f254",
+      "headBlob": "ddd4fc11bb30a9cccffbafc2d0c1eb8a0047f254",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+      "baseBlob": "222857af54670db755b16c42d2d8c61971107873",
+      "headBlob": "222857af54670db755b16c42d2d8c61971107873",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+      "baseBlob": "7e8059b54d26f70052c0eac250812bf24e53e56a",
+      "headBlob": "7e8059b54d26f70052c0eac250812bf24e53e56a",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+      "baseBlob": "9160c87c5c24bde9da4e6c862fdc88b92090ffde",
+      "headBlob": "9160c87c5c24bde9da4e6c862fdc88b92090ffde",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+      "baseBlob": "5a1497748015cc53d0c92a30127ff214839946d4",
+      "headBlob": "5a1497748015cc53d0c92a30127ff214839946d4",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Package.runner.swift",
+      "baseBlob": "fd6b3e59cc1e7e942496be38c38035c399e495bb",
+      "headBlob": "fd6b3e59cc1e7e942496be38c38035c399e495bb",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Package.swift",
+      "baseBlob": "018a655709687e0b93c6dfa78605759d5151cb7b",
+      "headBlob": "018a655709687e0b93c6dfa78605759d5151cb7b",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/README.md",
+      "baseBlob": "88d079fb06ba806860fa5afcb98cea2329256a4e",
+      "headBlob": "88d079fb06ba806860fa5afcb98cea2329256a4e",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/AlertSurface.swift",
+      "baseBlob": "a2f2f396bd09b8739d7fc1b7e7c1d9624be665a2",
+      "headBlob": "a2f2f396bd09b8739d7fc1b7e7c1d9624be665a2",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/ModalScopePair.swift",
+      "baseBlob": "ab2ced8fc75a001e6e7eb83466c10e1a241cae83",
+      "headBlob": "ab2ced8fc75a001e6e7eb83466c10e1a241cae83",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/ModalSurface.swift",
+      "baseBlob": "e662cc1ed2cd9a72c464277e480df6b1d97ef890",
+      "headBlob": "e662cc1ed2cd9a72c464277e480df6b1d97ef890",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/PresentedSurface.swift",
+      "baseBlob": "94e19aca059ff73d70805848ca3a52c9e67b5a6a",
+      "headBlob": "94e19aca059ff73d70805848ca3a52c9e67b5a6a",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotCoordinateSpace.swift",
+      "baseBlob": "6d4f033da947f4eb54854bd296b18794310ee167",
+      "headBlob": "6d4f033da947f4eb54854bd296b18794310ee167",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotGeometry.swift",
+      "baseBlob": "176090a3207f68f03d2e8aa40664cd4ba194ea58",
+      "headBlob": "176090a3207f68f03d2e8aa40664cd4ba194ea58",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotKeyboardSurface.swift",
+      "baseBlob": "567d3dc6dfaf5f5ffc3ab098b6716a4b988f20c5",
+      "headBlob": "567d3dc6dfaf5f5ffc3ab098b6716a4b988f20c5",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift",
+      "baseBlob": "936903040ff5c5114febbdc8de5fe8d293bd0fc8",
+      "headBlob": "936903040ff5c5114febbdc8de5fe8d293bd0fc8",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotPresentation.swift",
+      "baseBlob": "d7e69b7f843dc62134cb34b814d10280a8ae3530",
+      "headBlob": "d7e69b7f843dc62134cb34b814d10280a8ae3530",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotPresentationFailure.swift",
+      "baseBlob": "b58accae59e960be050a3813b6af738408113926",
+      "headBlob": "b58accae59e960be050a3813b6af738408113926",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotPresentationInvariant.swift",
+      "baseBlob": "a28ba33b2c49238511fb117484fe8ededef9ad0f",
+      "headBlob": "a28ba33b2c49238511fb117484fe8ededef9ad0f",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotPresentationProjection.swift",
+      "baseBlob": "2839adccafaee43dd2936c332ed5210eea172f8d",
+      "headBlob": "2839adccafaee43dd2936c332ed5210eea172f8d",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotPresentedSurface.swift",
+      "baseBlob": "5e2f21ad88cac6d6fcb1585bd5db8ee96d2d5509",
+      "headBlob": "5e2f21ad88cac6d6fcb1585bd5db8ee96d2d5509",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotScopePolicy.swift",
+      "baseBlob": "16ddb3917ce604851d61d73562a551eeb3b6f676",
+      "headBlob": "16ddb3917ce604851d61d73562a551eeb3b6f676",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotVisibilityFold.swift",
+      "baseBlob": "e1b82f91acd1efd3f39fc18f2438ceff67ef2caf",
+      "headBlob": "e1b82f91acd1efd3f39fc18f2438ceff67ef2caf",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotVisibilityFoldProjection.swift",
+      "baseBlob": "d5a8d5e81b64aa86685c66d33c2f91c527a52a61",
+      "headBlob": "d5a8d5e81b64aa86685c66d33c2f91c527a52a61",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/RecordingSupport/FixtureRect.swift",
+      "baseBlob": "6706ec77214ef566e61962ddba93290c2dd884b2",
+      "headBlob": "6706ec77214ef566e61962ddba93290c2dd884b2",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/RecordingSupport/RawAlertRecording.swift",
+      "baseBlob": "8174e2772cde58531c0e90294e647188706cd3a8",
+      "headBlob": "8174e2772cde58531c0e90294e647188706cd3a8",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/SnapshotPresentationConformance/PrintAlertSurface.swift",
+      "baseBlob": "880ec8ca09c9ccf6fac1bd10e3063bbb71d4b11c",
+      "headBlob": "880ec8ca09c9ccf6fac1bd10e3063bbb71d4b11c",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/SnapshotPresentationConformance/main.swift",
+      "baseBlob": "e0dd9b7818784ea0580eb59c71321a3fa293543e",
+      "headBlob": "e0dd9b7818784ea0580eb59c71321a3fa293543e",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ActionabilityPolicyTests.swift",
+      "baseBlob": "47d018dd96184cc0f05f730b1901737605cec40e",
+      "headBlob": "47d018dd96184cc0f05f730b1901737605cec40e",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/AlertSurfaceTests.swift",
+      "baseBlob": "e03fa8d3c13b786c33aeed74e9d601917c50345a",
+      "headBlob": "e03fa8d3c13b786c33aeed74e9d601917c50345a",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift",
+      "baseBlob": "cce05e69f2264a7f64e0fdcb1e5e8647b6e4f6a2",
+      "headBlob": "cce05e69f2264a7f64e0fdcb1e5e8647b6e4f6a2",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/CoordinateSpaceTests.swift",
+      "baseBlob": "569cf8568b0e81780797aa3acd751d1e621a4d38",
+      "headBlob": "569cf8568b0e81780797aa3acd751d1e621a4d38",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/FixtureRect.swift",
+      "baseBlob": "730b2fa52a9a764038f9c429c3528f7ac2bab22e",
+      "headBlob": "730b2fa52a9a764038f9c429c3528f7ac2bab22e",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/InvariantTests.swift",
+      "baseBlob": "2a2eee8f48232c30ad8287ffd3b968e839eea26d",
+      "headBlob": "2a2eee8f48232c30ad8287ffd3b968e839eea26d",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ModalScopePairTests.swift",
+      "baseBlob": "2c826cb24a7a575272435196d7222c20f673c4e9",
+      "headBlob": "2c826cb24a7a575272435196d7222c20f673c4e9",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ModalSurfaceTests.swift",
+      "baseBlob": "944a2fea90112f6d90d46b56a1b30844aa3fd565",
+      "headBlob": "944a2fea90112f6d90d46b56a1b30844aa3fd565",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/PrintAlertSurfaceTests.swift",
+      "baseBlob": "650c3733f794701f94d231608ed602196d917049",
+      "headBlob": "650c3733f794701f94d231608ed602196d917049",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/RecordedAlertSurface.swift",
+      "baseBlob": "2af2711da0a393fa98a446b711e5b2f6dcff3696",
+      "headBlob": "2af2711da0a393fa98a446b711e5b2f6dcff3696",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/RegularDepthTests.swift",
+      "baseBlob": "5589a9c30468deda7689a87086447346c3811164",
+      "headBlob": "5589a9c30468deda7689a87086447346c3811164",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/SnapshotPresentationProjectionTests.swift",
+      "baseBlob": "9bdb57fb66b9ed8fa7a8af91a6e9f2066742ac26",
+      "headBlob": "9bdb57fb66b9ed8fa7a8af91a6e9f2066742ac26",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/SnapshotPresentedSurfaceTests.swift",
+      "baseBlob": "4fac89a52445447a3b8d08c3f58888320071e1b0",
+      "headBlob": "4fac89a52445447a3b8d08c3f58888320071e1b0",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/SnapshotVisibilityFoldTests.swift",
+      "baseBlob": "a2d337fa6a8d4c97e7d2c4ae8b303c0e5c8d9031",
+      "headBlob": "a2d337fa6a8d4c97e7d2c4ae8b303c0e5c8d9031",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/README.md",
+      "baseBlob": "25da57b86cac979ce32554d12dd94c66e4f7ce81",
+      "headBlob": "25da57b86cac979ce32554d12dd94c66e4f7ce81",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/iphone-duo-folded-safari-open-this-page-in-app.json",
+      "baseBlob": "cf573bc2afe1216d0c5bc750212e3c21d5a57265",
+      "headBlob": "cf573bc2afe1216d0c5bc750212e3c21d5a57265",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/iphone-duo-folded-settings-clear-history-sheet.json",
+      "baseBlob": "189a075bd0adc76a60c05c7e740b204cbb7a639c",
+      "headBlob": "189a075bd0adc76a60c05c7e740b204cbb7a639c",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/iphone-duo-folded-springboard-open-in-app.json",
+      "baseBlob": "045f686fba5e30e304ed52d03f889cd3922d1d03",
+      "headBlob": "045f686fba5e30e304ed52d03f889cd3922d1d03",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/iphone-duo-folded-springboard-without-alert.json",
+      "baseBlob": "54e99c0bf506c1515b21a66a8a2041bff8427fe8",
+      "headBlob": "54e99c0bf506c1515b21a66a8a2041bff8427fe8",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/iphone-duo-unfolded-safari-open-this-page-in-app.json",
+      "baseBlob": "35adb4e0b752e062888e7a9fc99256d50d57b83b",
+      "headBlob": "35adb4e0b752e062888e7a9fc99256d50d57b83b",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/iphone-duo-unfolded-settings-without-modal.json",
+      "baseBlob": "a8a9e181d9ce9eda856f101d49270cde517d65e6",
+      "headBlob": "a8a9e181d9ce9eda856f101d49270cde517d65e6",
+      "equal": true
+    },
+    {
+      "path": "apple/snapshot-presentation/Tests/AlertSurfaceCorpus/iphone-duo-unfolded-springboard-open-in-app.json",
+      "baseBlob": "eaea9822bba6dd05a19cca22b340abb94660c01f",
+      "headBlob": "eaea9822bba6dd05a19cca22b340abb94660c01f",
+      "equal": true
+    }
+  ],
+  "productionArtifactsCompared": 11,
+  "allProductionArtifactBytesEqual": true,
+  "productionXCTestBinarySha256": "bf0188a4853fd202a114da3ce66060527b399882050c4d0dfb0fd05b53a16b77",
+  "newOfficialRawNativeFingerprint": "88b0a868511fca8e4468c1c62b7e8646c76da1dace0537466869f06c2384ee0a"
+}

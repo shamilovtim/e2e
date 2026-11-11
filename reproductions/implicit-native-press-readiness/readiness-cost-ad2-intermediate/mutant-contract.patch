@@ -1,0 +1,12 @@
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
+index 3c26dde..03e7722 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
+@@ -13,7 +13,6 @@ export function matchesAuthorizedPressTarget(
+     expected.type === candidate.type &&
+     (['identifier', 'label', 'value'] as const).every(
+       (key) =>
+-        (key === 'value' && NATIVE_PRESS_TEXT_ENTRY_TYPES.has(expected.type)) ||
+         (expected[key] ?? '').trim().normalize('NFC') ===
+           (candidate[key] ?? '').trim().normalize('NFC'),
+     ) &&

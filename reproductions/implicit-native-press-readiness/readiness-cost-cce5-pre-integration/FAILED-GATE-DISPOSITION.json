@@ -1,0 +1,32 @@
+{
+  "nativeDupes": {
+    "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "status": "failed",
+    "newDuplicateCount": 1,
+    "correction": "Unit-guarded fixture UIButton factory deduplicated; no production code or policy threshold weakening.",
+    "originalReportSha256": "808c551fb3b884a8c392f79b2d320a25cdb6844021860868e29ba96b25c3dd9f"
+  },
+  "unitFixture": {
+    "failedSource": "c7338a30f6552648c26c28dad6f57cb30cbb2e11",
+    "failedGateReceipt": "c733-exact-gate-receipt.json",
+    "failedTest": "packages/daemon-client/src/__tests__/daemon-client-startup-race.test.ts",
+    "failedAssertion": "Expected no daemon-startup-phases marker, observed one.",
+    "upstreamFix": "b66042936ac40805a53dc69e70e6e41946255353",
+    "upstreamPR": "https://github.com/callstack/agent-device/pull/4416",
+    "appliedSource": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+    "correctionFileIdenticalToMergedUpstream": true,
+    "diagnosis": "The old mock starts a second real child before refusing the retry. This child is never returned to production ownership and can write a marker before fixture cleanup. Upstream moves refusal before spawn and asserts exactly one fixture-entry directory.",
+    "limitation": "The PID in the actual failed marker was not independently attributed. The observed failure is consistent with this known test-fixture defect; no exact orphan-PID proof, old-base replay, host-contention diagnosis, or production regression claim is made.",
+    "focusedCorrectedFile": {
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0
+    },
+    "independentReview": "Parent and independent reviewer confirmed code path and exact upstream fix; no extra runtime fix added.",
+    "preservedFailures": [
+      "189c native-dupes gate failed",
+      "c733 unit gate failed;17899passed1failed1skipped"
+    ]
+  },
+  "qualification": "The actual failed marker PID was not independently attributed. No exact orphan-PID proof or old-base replay is claimed. Both failed receipts remain failed."
+}

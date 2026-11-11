@@ -1,0 +1,21 @@
+{
+  "status": "Passed for curated intermediate candidate; root independent publication audit separate",
+  "textFilesChecked": 122,
+  "binaryMediaFilesChecked": 77,
+  "privateValueFindings": [],
+  "jsonPrivateStateFindings": [],
+  "sourceVocabulary": "Generic executed source and source patch may declare protocol/header fields; actual private values are not included. No path-literal exemption needed.",
+  "media": {
+    "originalRecordings": 24,
+    "originalBytesUnchanged": true,
+    "decodedVideoSamples": 3726,
+    "decodeErrors": 0,
+    "audioTracks": 0,
+    "genericMetadataTag": "com.apple.policy.screenrecording.1",
+    "endpointsInspected": 48,
+    "contactSheetsInspected": 5,
+    "visualScope": "Every first/last endpoint inspected; every interior frame was not visually inspected. Generic fixtures/default dedicated simulator OS only at reviewed endpoints."
+  },
+  "scope": "ad2 remains a measured intermediate. Caller/tree wrapper failures, old diagnostic setup/infrastructure failures and original-wrapper absence limits remain explicit.",
+  "published": false
+}

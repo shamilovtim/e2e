@@ -1,0 +1,123 @@
+{
+  "kind": "Derived classification correcting original wrapper qualification; original raw attempt results are preserved in each case.",
+  "conclusion": {
+    "version": 1,
+    "sourceContext": "Isolated 7ab3d2330353587131368547eab52491bd294489 plus bounded diagnostic-only method; no performance claim.",
+    "probeNativeSourceFingerprint": "d545c243da5f750e59c67629e7ec79bd4f6dcc31122b85d6729ca4e3803a3aa6",
+    "phone": {
+      "nativeUnitTestExit": 0,
+      "frames": {
+        "appFrame": [
+          0,
+          0,
+          393,
+          852
+        ],
+        "candidateLiveFrame": [
+          240,
+          90,
+          129,
+          42
+        ],
+        "candidateSnapshotFrame": [
+          240,
+          90,
+          129,
+          42
+        ],
+        "candidateSnapshotReads": 1,
+        "windows": [
+          {
+            "live": [
+              0,
+              0,
+              393,
+              852
+            ],
+            "snapshot": [
+              0,
+              0,
+              393,
+              852
+            ]
+          }
+        ]
+      },
+      "snapshotFrameMatchesLive": true
+    },
+    "placedTablet": {
+      "nativeUnitTestExit": 0,
+      "originalWrapperExit": 1,
+      "frames": {
+        "appFrame": [
+          0,
+          0,
+          375,
+          611
+        ],
+        "candidateLiveFrame": [
+          569,
+          415,
+          111,
+          42
+        ],
+        "candidateSnapshotFrame": [
+          240,
+          90,
+          111,
+          42
+        ],
+        "candidateSnapshotReads": 1,
+        "windows": [
+          {
+            "live": [
+              329,
+              325,
+              375,
+              611
+            ],
+            "snapshot": [
+              0,
+              0,
+              375,
+              611
+            ]
+          }
+        ]
+      },
+      "placementEstablishedByLiveWindowFrame": true,
+      "candidateNeedsOwningWindowTranslation": true,
+      "translatedCandidateEqualsLive": true,
+      "wrapperClassificationCorrection": "The original wrapper incorrectly required a nonzero application frame. The independently observed live window frame proves placement while application origin remains zero; original output is retained unchanged."
+    },
+    "safetyConsequences": [
+      "Application-frame origin cannot decide whether window geometry is needed.",
+      "A candidate snapshot can be window-local while the live element frame is screen-relative.",
+      "Final matching must use one established owning-window coordinate transform; never a raw-or-translated union.",
+      "Snapshot semantics under a window-scoped candidate query still need fresh native verification."
+    ],
+    "preservedAttempts": [
+      {
+        "case": "frame-probe-phone",
+        "classification": "qualified full-screen phone diagnostic"
+      },
+      {
+        "case": "frame-probe-tablet",
+        "classification": "full-screen tablet setup did not establish placement"
+      },
+      {
+        "case": "frame-probe-tablet-placement",
+        "classification": "one coarse resize setup; observed viewport375x611"
+      },
+      {
+        "case": "frame-probe-tablet-placed",
+        "classification": "runner startup failure before test connection; no frame conclusion"
+      },
+      {
+        "case": "frame-probe-tablet-placed-clean",
+        "classification": "native test passed; genuine placed frames; wrapper assumption corrected in this derived summary"
+      }
+    ]
+  },
+  "historicalStageQualification": "Original V1 derived conclusion is retained. Its then-pending window-scoped verification is subsequently supplied by frame-probe-window-phone/tablet; those observed candidate snapshot frames remain local and the single owning-window transform matches the live frame."
+}

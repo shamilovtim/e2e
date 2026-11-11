@@ -1,0 +1,27 @@
+{
+  "source": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+  "datasetStatus": "Historical pre-integration native refresh only",
+  "scope": "Six selected native methods, not a full native suite.",
+  "result": {
+    "head": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+    "role": "phone",
+    "tests": [
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+      "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+      "testReadinessKeepsTextInputBindingAcrossContentChanges",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate"
+    ],
+    "nativeFingerprint": "88b0a868511fca8e4468c1c62b7e8646c76da1dace0537466869f06c2384ee0a",
+    "nativeBinarySha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+    "wrapperSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+    "sourceTree": "d53ecf15df6847d9a055f4554d6c90669b4f27ff",
+    "archivedBeforeRun": true,
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "observedTests": 6,
+    "observedFailures": 0,
+    "success": true
+  }
+}

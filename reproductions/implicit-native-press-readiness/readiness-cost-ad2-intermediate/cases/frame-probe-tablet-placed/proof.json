@@ -1,0 +1,30 @@
+{
+  "case": "frame-probe-tablet-placed",
+  "sourceContext": "7ab3d2330353587131368547eab52491bd294489 plus isolated diagnostic-only patch",
+  "optimizedCandidateProof": false,
+  "originalGenericResult": {
+    "role": "placed-tablet",
+    "selectedTests": 1,
+    "candidateSnapshotReads": 1,
+    "scope": "Isolated 7ab3 source plus the diagnostic patch; no performance claim.",
+    "exitCode": 65,
+    "recordingExitCode": 0,
+    "qualified": false
+  },
+  "originalResultSha256": "1aa1520da214c50988bb78474653e591b2e8af53aec65b77503036b5612ad730",
+  "nativeLogSummary": {
+    "passedTestCases": 0,
+    "failedTestCases": 0,
+    "executedSummaries": [],
+    "rawLogIncluded": false
+  },
+  "derivedClassification": "Runner startup failure before test connection. Native tool exit 65, no executed/passed/failed test case and no frame conclusion. Recording retained; this is not a product timeout or coordinate failure.",
+  "datasetStatus": "Pinned 7ab diagnostic only, not ad2 performance or final optimized proof.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

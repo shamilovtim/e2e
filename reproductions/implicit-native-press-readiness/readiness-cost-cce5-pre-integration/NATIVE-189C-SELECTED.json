@@ -1,0 +1,26 @@
+{
+  "source": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "scope": "Six selected native methods at runtime source, not full native suite; final cce5 refresh remains separate.",
+  "result": {
+    "head": "189c14a5355c921dd2ff29228aa733203ffe0002",
+    "role": "phone",
+    "tests": [
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+      "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+      "testReadinessKeepsTextInputBindingAcrossContentChanges",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate"
+    ],
+    "nativeFingerprint": "b5f57b31d7b883a23dc4e246b04fc123533a6191862669c0def3678ba35330ad",
+    "nativeBinarySha256": "755b95c0436d5c728115b4608b0e39974936778916aa314b98c77323a12d30a9",
+    "wrapperSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+    "sourceTree": "265123df2e3f93d3d4883b603dc47e564e7e864b",
+    "archivedBeforeRun": true,
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "observedTests": 6,
+    "observedFailures": 0,
+    "success": true
+  }
+}

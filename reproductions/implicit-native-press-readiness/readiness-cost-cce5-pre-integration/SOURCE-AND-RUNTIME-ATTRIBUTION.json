@@ -1,0 +1,26 @@
+{
+  "finalTree": "d53ecf15df6847d9a055f4554d6c90669b4f27ff",
+  "runtimeSDKAndPerformanceSource": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "benchmarkBaseline": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "sourcePatch": {
+    "path": "final-source.patch",
+    "sha256": "f56cad1c03f30821574b770603e865f9c54d883636bdbfda9be183aef560fa4a",
+    "bytes": 205608
+  },
+  "finalExactGate": "gates/cce5-exact-passed.json",
+  "exactGateCounts": {
+    "runnablePassed": 15,
+    "unitPassed": 17900,
+    "unitExistingSkipped": 1,
+    "relatedPassed": 1325
+  },
+  "runtimeEquality": "cce5-source-equality-189c.json preserves actual 622-JS byte equality and production-artifact equality without claiming the raw native source fingerprint stayed equal. Runtime videos remain at 189c.",
+  "post189Changes": "Only unit-guarded native fixture UIButton factory plus exact already-upstream test correction b66042936ac40805a53dc69e70e6e41946255353 (#4416), cherry-picked with provenance. No new production code.",
+  "nativeRefresh": "Completed cce5 six-selected-native pass with actual installed fresh fixture host verification; not post-integration.",
+  "compositionScope": "companion-composition-review.json is read-only additive review only. Future merge must retain both private-fact copiers in order. No combined execution or merge is claimed.",
+  "datasetStatus": "Historical PRE-INTEGRATION proof only. New post-c267 source and combined execution require separate evidence.",
+  "validatedPreIntegrationSource": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+  "gateUpstreamAtRun": "5781ba4aa63462d7fa55b5987e5841a01c691dfc",
+  "subsequentUpstreamMerged": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "productionArtifacts": "All11 cce5 production artifacts and622 JS files equal actual189c. Raw source fingerprint differs; cce5 unit fixture host changed and was independently installed/verified before its six tests."
+}

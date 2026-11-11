@@ -1,0 +1,208 @@
+{
+  "status": "Final curated intermediate candidate; root sole publisher",
+  "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+  "cases": [
+    {
+      "case": "ad2-anonymous-current-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-anonymous-current-1/proof.json",
+      "video": "cases/ad2-anonymous-current-1/video.mp4"
+    },
+    {
+      "case": "ad2-buttons-current-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-buttons-current-1/proof.json",
+      "video": "cases/ad2-buttons-current-1/video.mp4"
+    },
+    {
+      "case": "ad2-clipped-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-clipped-1/proof.json",
+      "video": "cases/ad2-clipped-1/video.mp4"
+    },
+    {
+      "case": "ad2-duplicates-1",
+      "classification": "pass-with-qualified-caller-cancellation",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-duplicates-1/proof.json",
+      "video": "cases/ad2-duplicates-1/video.mp4"
+    },
+    {
+      "case": "ad2-exact-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-exact-1/proof.json",
+      "video": "cases/ad2-exact-1/video.mp4"
+    },
+    {
+      "case": "ad2-fade750-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-fade750-1/proof.json",
+      "video": "cases/ad2-fade750-1/video.mp4"
+    },
+    {
+      "case": "ad2-ipad-placed-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-ipad-placed-1/proof.json",
+      "video": "cases/ad2-ipad-placed-1/video.mp4"
+    },
+    {
+      "case": "ad2-landscape-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-landscape-1/proof.json",
+      "video": "cases/ad2-landscape-1/video.mp4"
+    },
+    {
+      "case": "ad2-missing-current-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-missing-current-1/proof.json",
+      "video": "cases/ad2-missing-current-1/video.mp4"
+    },
+    {
+      "case": "ad2-shared-caller1000-1",
+      "classification": "failed-one-second-caller-budget",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": false,
+      "wrapperExitCode": 1,
+      "proof": "cases/ad2-shared-caller1000-1/proof.json",
+      "video": "cases/ad2-shared-caller1000-1/video.mp4"
+    },
+    {
+      "case": "ad2-shared-current-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-shared-current-1/proof.json",
+      "video": "cases/ad2-shared-current-1/video.mp4"
+    },
+    {
+      "case": "ad2-tree-ref-1",
+      "classification": "original-harness-failure-with-derived-focus-observation",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": false,
+      "wrapperExitCode": 1,
+      "proof": "cases/ad2-tree-ref-1/proof.json",
+      "video": "cases/ad2-tree-ref-1/video.mp4"
+    },
+    {
+      "case": "ad2-values-1",
+      "classification": "pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/ad2-values-1/proof.json",
+      "video": "cases/ad2-values-1/video.mp4"
+    },
+    {
+      "case": "base5a-anonymous-current-1",
+      "classification": "pass",
+      "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/base5a-anonymous-current-1/proof.json",
+      "video": "cases/base5a-anonymous-current-1/video.mp4"
+    },
+    {
+      "case": "base5a-buttons-current-1",
+      "classification": "pass",
+      "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/base5a-buttons-current-1/proof.json",
+      "video": "cases/base5a-buttons-current-1/video.mp4"
+    },
+    {
+      "case": "base5a-shared-current-1",
+      "classification": "pass",
+      "source": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+      "wrapperSuccess": true,
+      "wrapperExitCode": 0,
+      "proof": "cases/base5a-shared-current-1/proof.json",
+      "video": "cases/base5a-shared-current-1/video.mp4"
+    },
+    {
+      "case": "frame-probe-phone",
+      "classification": "Qualified fullscreen phone diagnostic: one selected native method passed; live and snapshot frames equal. No performance or optimized-candidate claim.",
+      "source": "7ab3d2330353587131368547eab52491bd294489 plus diagnostic patch",
+      "proof": "cases/frame-probe-phone/proof.json",
+      "video": "cases/frame-probe-phone/video.mp4"
+    },
+    {
+      "case": "frame-probe-tablet",
+      "classification": "Fullscreen tablet setup failed to establish a placed window. One native method passed, but the intended placement prerequisite was absent; original qualified=false is retained.",
+      "source": "7ab3d2330353587131368547eab52491bd294489 plus diagnostic patch",
+      "proof": "cases/frame-probe-tablet/proof.json",
+      "video": "cases/frame-probe-tablet/video.mp4"
+    },
+    {
+      "case": "frame-probe-tablet-placed",
+      "classification": "Runner startup failure before test connection. Native tool exit 65, no executed/passed/failed test case and no frame conclusion. Recording retained; this is not a product timeout or coordinate failure.",
+      "source": "7ab3d2330353587131368547eab52491bd294489 plus diagnostic patch",
+      "proof": "cases/frame-probe-tablet-placed/proof.json",
+      "video": "cases/frame-probe-tablet-placed/video.mp4"
+    },
+    {
+      "case": "frame-probe-tablet-placed-clean",
+      "classification": "One native method passed with genuine placed-window frames. Original wrapper exited 1 because it used the wrong application-origin qualification. Raw native exit/status/qualified=false flags remain unchanged; the derived correction uses the independently observed live window.",
+      "source": "7ab3d2330353587131368547eab52491bd294489 plus diagnostic patch",
+      "proof": "cases/frame-probe-tablet-placed-clean/proof.json",
+      "video": "cases/frame-probe-tablet-placed-clean/video.mp4"
+    },
+    {
+      "case": "frame-probe-tablet-placement",
+      "classification": "One coarse generic-fixture resize setup only; not a product/performance test.",
+      "source": "7ab3d2330353587131368547eab52491bd294489 plus diagnostic patch",
+      "proof": "cases/frame-probe-tablet-placement/proof.json",
+      "video": "cases/frame-probe-tablet-placement/video.mp4"
+    },
+    {
+      "case": "frame-probe-window-phone",
+      "classification": "qualified-owning-window-scope-diagnostic",
+      "source": "7ab3d2330353587131368547eab52491bd294489 plus owning-window diagnostic",
+      "proof": "cases/frame-probe-window-phone/proof.json",
+      "video": "cases/frame-probe-window-phone/video.mp4"
+    },
+    {
+      "case": "frame-probe-window-tablet",
+      "classification": "qualified-owning-window-scope-diagnostic",
+      "source": "7ab3d2330353587131368547eab52491bd294489 plus owning-window diagnostic",
+      "proof": "cases/frame-probe-window-tablet/proof.json",
+      "video": "cases/frame-probe-window-tablet/video.mp4"
+    },
+    {
+      "case": "native-ad2-phone-1",
+      "classification": "six-selected-native-tests-pass",
+      "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+      "proof": "cases/native-ad2-phone-1/proof.json",
+      "video": "cases/native-ad2-phone-1/video.mp4"
+    }
+  ],
+  "count": 24,
+  "scope": "16 public production-path SDK cases, one six-selected-native recording and seven diagnostic/setup/failure recordings. All original failed outputs are retained with separately labeled derived observations."
+}

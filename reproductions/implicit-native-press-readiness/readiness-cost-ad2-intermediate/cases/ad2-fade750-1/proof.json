@@ -1,0 +1,206 @@
+{
+  "case": "ad2-fade750-1",
+  "datasetStatus": "Measured ad2 intermediate or authentic paired 5a baseline, not final root-read-elision proof.",
+  "wrapperSummary": {
+    "source": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "closeMs": 963.8170420000006,
+    "pressMs": 910.371916000001,
+    "wallSeconds": 11.4866105,
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599"
+  },
+  "executionInputs": {
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "sourceTree": "dc7ebe49a8a5343c846b731c1d71979977867965",
+    "nativeFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "nativeBinarySha256": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32",
+    "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+    "runtimeJSFiles": 622,
+    "wrapperSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "driverSha256": "405cccf850a5b6e5a1a128bfdb9ca0ae92d8df1a8fe66cc6aabca7274716db90",
+    "archivedBeforeRun": true,
+    "case": "fade750-1"
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "7a8a55bca293cbd08f483874b055aa46f4281aa73c509dc349807728adcde4b1",
+    "packageVersion": "0.21.37-dev",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "c2ddb9a2c00775efc11003061a7232014632a3f74a603b2fd5cd91a48219428f",
+    "xctestrunSize": 19680,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "1a3311bced4ce930092bd1e113c26a7e32a656e5a176590e1b8c0f292c6ec849"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "eba4552fe9c62ffba027ca91f892596bdc5b8743d070f98b73f0b8b154c532c1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "ae9425f2cd43e36a422bb25beeeb6683d89bc18f0977caaef12aef41cbab6c13"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10791280,
+        "mode": 493,
+        "digest": "15f5ab462109aea3e18eefa68882a66cfb25a356c433c6907827e33994326f32"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "23a57f3ec6bf9f483e3bf7667f12185e6475b6e78a7a7102542de13fecb1258c",
+    "qualification": "Selected generic source/build facts and relative artifact hashes only; host paths, build environment/settings and signing configuration omitted."
+  },
+  "executedSources": [
+    {
+      "path": "cases/ad2-fade750-1/source/executed-driver.py",
+      "originalArchivedSha256": "405cccf850a5b6e5a1a128bfdb9ca0ae92d8df1a8fe66cc6aabca7274716db90",
+      "publicSha256": "cbb3096f9b2627d114503f2e263c5ded2f374104f01ebdb6b0e2bbdb67b1430a",
+      "bytes": 4340,
+      "normalization": "Owned-device or local driver-input literal replaced by a generic configuration placeholder; original archived hash retained."
+    },
+    {
+      "path": "cases/ad2-fade750-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "publicSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "bytes": 3528,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "originalResultIncluded": false,
+  "observations": {
+    "mode": "fade750-1",
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "closeMs": 963.8170420000006,
+    "target": {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "pressMs": 910.371916000001,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true
+  },
+  "fadeQualification": "Unchanged d006 750 ms harness and retained original generic fixture; one underlying action and zero overlay touches. Source archive and execution inputs preserve exact hashes.",
+  "classification": "pass",
+  "runtimeJsManifest": {
+    "originalSha256": "345747700bb956e5b4fe09509f87d39d5ee9ebbd35bd43d282b859a46221e5c6",
+    "head": "ad2afeacfa9ab8b7f6886cfb1f041aa646d6406f",
+    "files": 622,
+    "sharedManifest": "ad2-runtime-js-manifest.json"
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

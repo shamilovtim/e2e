@@ -1,0 +1,25 @@
+{
+  "sourceHead": "189c14a5355c921dd2ff29228aa733203ffe0002",
+  "sourceBase": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "measurement": "git diff --stat origin/main...HEAD; same result from original merge base",
+  "changedFiles": 88,
+  "insertions": 2744,
+  "deletions": 115,
+  "grossLines": 2859,
+  "repositoryGuideline": 2500,
+  "compliesWithGrossLineGuideline": false,
+  "approximateBreakdown": {
+    "runtimeSourceGross": 714,
+    "runtimeSourceNet": 630,
+    "testSupportGross": 1603,
+    "fixtureGross": 510,
+    "docsGross": 32
+  },
+  "independentSmallerDesignAssessment": {
+    "status": "read-only completed",
+    "defensibleReductionToMeetGuidelineFound": false,
+    "reason": "Explicit cross-language vectors and distinct behavioral boundary checks account for most growth. A sufficient cut would require a fixture schema/decoder or formatting tricks, or remove meaningful coverage. A small test-local setup deduplication would save only20\u201335 lines."
+  },
+  "disposition": "Retain this coherent behavior change and explicit regression coverage. Record the size exception transparently; do not add a fixture DSL, formatting workaround or test deletion to satisfy a cosmetic count. No source edits during frozen native/performance verification.",
+  "bundleSizeCheck": "Published prior-head check was skipped; no candidate npm byte-growth result is claimed."
+}

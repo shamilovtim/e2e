@@ -1,0 +1,23 @@
+{
+  "status": "Passed for historical pre-integration candidate; root independent audit separate",
+  "textFilesChecked": 92,
+  "binaryMediaFilesChecked": 52,
+  "privateValueFindings": [],
+  "jsonPrivateStateFindings": [],
+  "sourceException": "Exactly two generic temporary test literals on four source-patch lines, with exact authored source-patch hash retained. No broad path exemption.",
+  "genericSourceLiteralLines": 4,
+  "sourceVocabulary": "Source declares generic protocol/header names without actual private values. Failed receipt stack paths and actual marker PID are excluded.",
+  "media": {
+    "originalRecordings": 16,
+    "originalBytesUnchanged": true,
+    "decodedSamples": 3539,
+    "decodeErrors": 0,
+    "audioTracks": 0,
+    "genericMetadataTag": "com.apple.policy.screenrecording.1",
+    "endpointsInspected": 32,
+    "contactSheetsInspected": 4,
+    "visualScope": "All endpoints reviewed; every interior frame was not visually inspected. Generic fixtures/default dedicated simulator OS at reviewed endpoints."
+  },
+  "scope": "cce5/189c historical pre-integration only; not final source, post-c267 or combined runtime proof.",
+  "published": false
+}

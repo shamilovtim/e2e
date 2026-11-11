@@ -1,0 +1,75 @@
+{
+  "case": "frame-probe-phone",
+  "sourceContext": "7ab3d2330353587131368547eab52491bd294489 plus isolated diagnostic-only patch",
+  "optimizedCandidateProof": false,
+  "originalGenericResult": {
+    "role": "phone",
+    "selectedTests": 1,
+    "candidateSnapshotReads": 1,
+    "scope": "Isolated 7ab3 source plus the diagnostic patch; no performance claim.",
+    "exitCode": 0,
+    "recordingExitCode": 0,
+    "frames": {
+      "appFrame": [
+        0,
+        0,
+        393,
+        852
+      ],
+      "candidateLiveFrame": [
+        240,
+        90,
+        129,
+        42
+      ],
+      "candidateSnapshotFrame": [
+        240,
+        90,
+        129,
+        42
+      ],
+      "candidateSnapshotReads": 1,
+      "windows": [
+        {
+          "live": [
+            0,
+            0,
+            393,
+            852
+          ],
+          "snapshot": [
+            0,
+            0,
+            393,
+            852
+          ]
+        }
+      ]
+    },
+    "expectedOriginEstablished": true,
+    "snapshotFrameMatchesLive": true,
+    "rootTranslatedSnapshotMatchesLive": true,
+    "qualified": true
+  },
+  "originalResultSha256": "3b7f698e826b92436d1b12c4fdd40356d7f3bb7062961042b0c0238047743224",
+  "nativeLogSummary": {
+    "passedTestCases": 1,
+    "failedTestCases": 0,
+    "executedSummaries": [
+      [
+        1,
+        0
+      ]
+    ],
+    "rawLogIncluded": false
+  },
+  "derivedClassification": "Qualified fullscreen phone diagnostic: one selected native method passed; live and snapshot frames equal. No performance or optimized-candidate claim.",
+  "datasetStatus": "Pinned 7ab diagnostic only, not ad2 performance or final optimized proof.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

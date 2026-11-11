@@ -1,0 +1,14 @@
+{
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "changedFiles": 89,
+  "insertions": 2762,
+  "deletions": 127,
+  "grossLines": 2889,
+  "repositoryGuideline": 2500,
+  "compliesWithGrossLineGuideline": false,
+  "priorReviewedAssessment": "size-assessment-root.json retains the exact 189c assessment and approximate breakdown; final cce5 adds only the documented fixture/upstream test corrections.",
+  "disposition": "Transparent documented size exception. No numeric compliance claim, fixture DSL/formatting workaround or coverage deletion. Prior independent assessment found no defensible reduction sufficient to meet the guideline.",
+  "bundleSize": "No candidate npm byte-growth result is claimed.",
+  "datasetStatus": "PRE-INTEGRATION intermediate only; not post-c267 source or combined execution proof.",
+  "validatedPreIntegrationSource": "cce5aa19e93cccc182a9610d63d50b638a89a1f3"
+}
