@@ -1,5 +1,9 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The fixture-only final review](fixture-review-c7d640f/README.md) records current SDK source `c7d640f`, its clean exact gate and the current native golden-data recheck, with unchanged verified runtime artifacts.
+
+[The independent web assertion fix](web-timeout-70d7f9b/README.md) records the pre-existing 2000/1999 ms CI failure and its bounded diagnostic assertion in PR #1690.
+
 [The final SDK review follow-up](review-17a9673/README.md) records source `17a9673`, its passed exact gate, fresh production/unit native builds, nine selected native tests and a new unchanged-harness overlay video.
 
 [The final SDK review evidence](final-ca43623/README.md) records source `ca43623`, its exact-commit gate, bounded native-only polling, the large-tree query correction, clipped and duplicate controls, and 19 additional generic fixture videos. Older runs retain their original source attribution.

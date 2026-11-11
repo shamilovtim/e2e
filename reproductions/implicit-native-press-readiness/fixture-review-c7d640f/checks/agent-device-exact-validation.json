@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "status": "passed",
+  "exitCode": 0,
+  "head": "c7d640fa927be35c09ef37a64b5343a8d9b585ef",
+  "sourceTree": "f23aebad099e8e3618cbbf1eaa1feaf74dfc2158",
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "mergeBase": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "command": "pnpm check:affected --run --head c7d640fa927be35c09ef37a64b5343a8d9b585ef",
+  "exactCommit": true,
+  "checkoutChanged": false,
+  "startedAt": "2026-11-11T07:16:21.396Z",
+  "finishedAt": "2026-11-11T07:20:02.064Z",
+  "failOpen": false,
+  "checks": [
+    {
+      "id": "format",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "ios-snapshot-differential",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests)"
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 1322,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 17893,
+          "failed": 0,
+          "skipped": 1,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "deduplicated",
+      "reason": "covered by related tests"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests, Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests)"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests, Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "command-docs",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "adr-citations",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "docs-links",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "docs-prose",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests)"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ],
+  "nativeVerificationScope": "Fresh17 native builds, nine selected tests and live overlay proof retain their original source attribution. A separate existing native golden-method verification exercises the changed JSON fixture at this head; shipped-native input and SDK JS identity are verified separately.",
+  "executionScope": "Only the clean, serialized run-I9kUwp is represented. An earlier interrupted run is preserved locally and is excluded.",
+  "privacyScope": "Curated check status and counts only. Raw diagnostics, home paths, state, environment and private application data are excluded."
+}

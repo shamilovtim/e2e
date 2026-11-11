@@ -1,0 +1,34 @@
+{
+  "sourceHead": "c7d640fa927be35c09ef37a64b5343a8d9b585ef",
+  "sourceCleanBefore": true,
+  "fixturePath": "contracts/fixtures/authorized-press-target.json",
+  "fixtureSha256": "e5a093f68b60300a99b733c4ae0c1ac70d5b94039f9249009ccaec6e47121707",
+  "fixtureCaseCount": 17,
+  "nativeSourceFingerprint": "615de8dee67b5d299f4507c0d12f76c16fc98cc0df2259afd83bd573034f703b",
+  "unitArtifactCompiledAt": "17a96733f87bc571f0c785eac99230691b3c5bf8",
+  "unitXctestBinarySha256": "ff460ff4a4b75ea5a2a4ff4676cdccd4cd122862b2eea60a6c9c2511fe904f8f",
+  "currentDistJavaScriptFiles": 629,
+  "currentJavaScriptByteEqualToVerified17": true,
+  "nativeBuildPerformed": false,
+  "videoRecorded": false,
+  "selectedExistingNativeTest": "testAuthorizedPressTargetMatchesGoldenParityTable",
+  "attribution": "The existing615 unit binary reads the current golden JSON through its repository #filePath at runtime. Binary and production runtime are unchanged; fixture data is current c7 source. The nine-test and 750ms video proof remains attributed to17.",
+  "sourceCleanAfter": true,
+  "fixtureHashUnchangedDuringRecheck": true,
+  "exitCode": 0,
+  "selectedNativeTests": 1,
+  "passedNativeTests": 1,
+  "failedNativeTests": 0,
+  "skippedNativeTests": 0,
+  "actualCases": [
+    {
+      "name": "testAuthorizedPressTargetMatchesGoldenParityTable()",
+      "result": "Passed"
+    }
+  ],
+  "cleanup": {
+    "ownedPhone": "shutdown and retained pending final CI/review cleanup",
+    "daemonStarted": false,
+    "otherDevicesTouched": false
+  }
+}

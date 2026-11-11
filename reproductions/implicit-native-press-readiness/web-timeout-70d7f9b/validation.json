@@ -1,0 +1,271 @@
+{
+  "base": "e53401488a57c901dff72a8bd2a322990f157328",
+  "head": "70d7f9b702d2ebb6b27436d02046b82c049ec716",
+  "issue": "https://github.com/e2e-inc/e2e/issues/1689",
+  "pullRequest": "https://github.com/e2e-inc/e2e/pull/1690",
+  "files": 1,
+  "added": 5,
+  "deleted": 1,
+  "patchSha256": "a2fdf00a1c7f57f715930dda5effc1e0ca28b716513c4b37e1300e8d85e973cd",
+  "runtimeSourceChanged": false,
+  "checks": {
+    "initialImplementation": {
+      "head": "5a512f983a97290180ae4542cb6238347484b052",
+      "phase": "Initial numeric-timeout assertion",
+      "installFrozenLockfile": "passed",
+      "fullBuild": "passed",
+      "chromiumSetup": "passed",
+      "pnpmCheck": "passed",
+      "focusedRealChromium": {
+        "passed": 83,
+        "failed": 0
+      },
+      "completeWebPackage": {
+        "filesPassed": 75,
+        "passed": 784,
+        "failed": 0,
+        "existingSkipped": 1
+      }
+    },
+    "boundedAssertionFollowup": {
+      "head": "70d7f9b702d2ebb6b27436d02046b82c049ec716",
+      "phase": "Revised positive timeout no greater than2000ms",
+      "affectedLint": "passed",
+      "webTypecheck": "passed",
+      "completeWebPackage": {
+        "filesPassed": 75,
+        "passed": 784,
+        "failed": 0,
+        "existingSkipped": 1
+      }
+    }
+  },
+  "redEvidence": {
+    "jobUrl": "https://github.com/e2e-inc/e2e/actions/runs/42974746808/job/130371253075",
+    "expectedBudgetMs": 2000,
+    "observedRemainingBudgetMs": 1999,
+    "testAndActionBlobsIdenticalToBaseAndMain": true
+  },
+  "review": "Parent independent cold reviews of both the initial single-line change and the final bounded assertion (+5/-1): no findings in either round.",
+  "assertionsRetained": [
+    "anchored full error prefix",
+    "positive Playwright timeout no greater than2000ms",
+    "missing-locator diagnostic",
+    "NOT_ACTIONABLE",
+    "nonretryable",
+    "elapsed below3500ms"
+  ],
+  "scope": "Generic upstream framework code and source/CI evidence only; no private application data, raw diagnostics, state or environment.",
+  "previousHead": "5a512f983a97290180ae4542cb6238347484b052",
+  "reviewFollowup": "Extract anchored integer diagnostic; assert greater than0 and at most2000. Parent cold review clear; one Cubic thread fixed and resolved.",
+  "localPhaseAttribution": "Each local phase validated the working-tree source content subsequently committed at its named head. No source changed between that phase validation and its commit. Full install/build/pnpm check and the focused83 command were not rerun for the bounded-assertion follow-up; that follow-up ran affected lint/typecheck and the complete web package suite.",
+  "remoteValidation": {
+    "head": "70d7f9b702d2ebb6b27436d02046b82c049ec716",
+    "allReportedChecksTerminal": true,
+    "failedChecks": 0,
+    "requiredChecks": "passed",
+    "latestAutomatedReview": "zero new issues",
+    "unresolvedThreads": 0,
+    "repositoryStatusVerdict": "READY",
+    "checks": [
+      {
+        "name": "changes",
+        "workflow": "benchmark",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164722/job/130382024080"
+      },
+      {
+        "name": "changes",
+        "workflow": "docs",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164816/job/130382024347"
+      },
+      {
+        "name": "changes",
+        "workflow": "mobile",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164697/job/130382024053"
+      },
+      {
+        "name": "check",
+        "workflow": "pr-policy",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978159942/job/130382013712"
+      },
+      {
+        "name": "check",
+        "workflow": "pr-policy",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978233047/job/130382244880"
+      },
+      {
+        "name": "label",
+        "workflow": "pr-size",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978160121/job/130382015144"
+      },
+      {
+        "name": "drop",
+        "workflow": "review-label",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978159908/job/130382014276"
+      },
+      {
+        "name": "check",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198700"
+      },
+      {
+        "name": "web",
+        "workflow": "benchmark",
+        "status": "COMPLETED",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164722/job/130382103753"
+      },
+      {
+        "name": "build",
+        "workflow": "docs",
+        "status": "COMPLETED",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164816/job/130382104821"
+      },
+      {
+        "name": "ios ${{ matrix.suite }}",
+        "workflow": "mobile",
+        "status": "COMPLETED",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164697/job/130382105659"
+      },
+      {
+        "name": "test (22)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198811"
+      },
+      {
+        "name": "test (24)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198906"
+      },
+      {
+        "name": "test (26)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198680"
+      },
+      {
+        "name": "test (22.22.3)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198729"
+      },
+      {
+        "name": "test (24.8.0)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198938"
+      },
+      {
+        "name": "web agent",
+        "workflow": "benchmark",
+        "status": "COMPLETED",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164722/job/130382103402"
+      },
+      {
+        "name": "android ${{ matrix.suite }}",
+        "workflow": "mobile",
+        "status": "COMPLETED",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164697/job/130382106100"
+      },
+      {
+        "name": "docs gate",
+        "workflow": "docs",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164816/job/130382102968"
+      },
+      {
+        "name": "bun (1.4.3)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198773"
+      },
+      {
+        "name": "bun (latest)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198776"
+      },
+      {
+        "name": "${{ matrix.platform }} app cache",
+        "workflow": "mobile",
+        "status": "COMPLETED",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164697/job/130382105870"
+      },
+      {
+        "name": "benchmark gate",
+        "workflow": "benchmark",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164722/job/130382101995"
+      },
+      {
+        "name": "install (11)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198460"
+      },
+      {
+        "name": "install (12)",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130382198867"
+      },
+      {
+        "name": "mobile gate",
+        "workflow": "mobile",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164697/job/130382104005"
+      },
+      {
+        "name": "spec gate",
+        "workflow": "spec",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/e2e-inc/e2e/actions/runs/42978164795/job/130384801335"
+      },
+      {
+        "name": "cubic \u00b7 AI code reviewer",
+        "workflow": "",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "url": "https://www.cubic.dev/pr/e2e-inc/e2e/pull/1690"
+      }
+    ],
+    "readyLabel": "not applied: GitHub denied AddLabelsToLabelable permissions",
+    "note": "Path-skipped benchmark, mobile and docs jobs are recorded as skipped, not passed."
+  }
+}

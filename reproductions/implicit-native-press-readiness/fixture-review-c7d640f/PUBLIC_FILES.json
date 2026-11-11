@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "PUBLIC_AUDIT.json",
+      "bytes": 278,
+      "sha256": "0490032cdae18ba0c44d9b5c762073769a516ffd657ec5b90ab0b189b99714f9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1855,
+      "sha256": "76cb19624721b67fbb63b5a08315651a7d4a56cb9ccee3e30dd2a674e29b31c4"
+    },
+    {
+      "path": "checks/agent-device-exact-validation.json",
+      "bytes": 5441,
+      "sha256": "831fbf177e5104c061f1fb3c5558915a990000faa3ab2783f1812f6766d3d60b"
+    },
+    {
+      "path": "checks/source-patch-audit.json",
+      "bytes": 809,
+      "sha256": "36460c688ad430493cdf85e168c1094383cdc8ec3ef8663325aea3b2fc566d85"
+    },
+    {
+      "path": "native/GOLDEN-RECHECK.json",
+      "bytes": 1516,
+      "sha256": "c44360db6ae9caa5c42e9b55fb26d5a82a3ef887b10706010c00dda80d6dfbf0"
+    },
+    {
+      "path": "native/PUBLIC_FILES.json",
+      "bytes": 318,
+      "sha256": "a34f451951eeb814ac45a1387db34aeb6b386c35e2027f50eba23dece1d25a8f"
+    },
+    {
+      "path": "native/README.md",
+      "bytes": 1055,
+      "sha256": "5f160e2b5f865db8251792dc0f9e0403e4df1b4aee13b9dcda9b6b3916840440"
+    },
+    {
+      "path": "patches/agent-device.patch",
+      "bytes": 184654,
+      "sha256": "9f1802c29e887371278f20948bcdb0040575dbb60be44ac94a2e4f1046e649d2"
+    }
+  ]
+}

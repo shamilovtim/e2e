@@ -1,0 +1,26 @@
+{
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "head": "c7d640fa927be35c09ef37a64b5343a8d9b585ef",
+  "sourceTree": "f23aebad099e8e3618cbbf1eaa1feaf74dfc2158",
+  "files": 87,
+  "added": 2383,
+  "deleted": 113,
+  "patchBytes": 184654,
+  "patchSha256": "9f1802c29e887371278f20948bcdb0040575dbb60be44ac94a2e4f1046e649d2",
+  "checks": [
+    {
+      "category": "private application names and identifiers",
+      "matches": 0
+    },
+    {
+      "category": "private application source paths",
+      "matches": 0
+    }
+  ],
+  "scope": "Source patch only. Raw diagnostics, environment and state excluded.",
+  "baseApplyCheck": {
+    "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+    "passed": true,
+    "scope": "git apply --check against clean detached named-base checkout; no files changed."
+  }
+}
