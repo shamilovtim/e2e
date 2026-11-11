@@ -1,0 +1,510 @@
+diff --git a/.changeset/mobile-cancel-pending-press.md b/.changeset/mobile-cancel-pending-press.md
+new file mode 100644
+index 00000000..48e41e5b
+--- /dev/null
++++ b/.changeset/mobile-cancel-pending-press.md
+@@ -0,0 +1,5 @@
++---
++"@e2e-dev/mobile": patch
++---
++
++Cancel pending taps, double taps, focus and check actions when their timeout expires or the run is interrupted. Input already sent to the device may still finish.
+diff --git a/docs/mobile.mdx b/docs/mobile.mdx
+index a3085a5c..634b0bf0 100644
+--- a/docs/mobile.mdx
++++ b/docs/mobile.mdx
+@@ -769,7 +769,10 @@ message and hint, never `LAUNCH_TIMEOUT`, `ACTION_FAILED`, or
+ **An action that outlives its timeout.** A tap, fill, key, swipe, or
+ `back` gets its `timeout` (default `actionTimeout`). If the device doesn't
+ answer in time, the step fails with `ACTION_FAILED` and isn't retried: the
+-input may have landed. A `longPress` that holds at least as long as the
++input may have landed. A pending tap, double tap, focus or check is cancelled
++when its timeout expires or the run is interrupted. Input already sent to
++the device may still finish.
++A `longPress` that holds at least as long as the
+ time left is refused before it's sent; raise its `timeout`. Snapshots and
+ screenshots run within the timeout of the call that takes them, so a device
+ that stops answering fails the step with `ACTION_FAILED` instead of holding
+diff --git a/docs/reference/mobile.mdx b/docs/reference/mobile.mdx
+index 71d9efc6..b932c564 100644
+--- a/docs/reference/mobile.mdx
++++ b/docs/reference/mobile.mdx
+@@ -359,8 +359,10 @@ so a cold boot on CI is never charged against `launchTimeout`.
+   first attempt, and that device's app is not opened there.
+ 
+ <Note>
+-agent-device commands take no abort signal, so a timed-out command keeps
+-running on the device. The next attempt waits for it to settle.
++A pending tap, double tap, focus or check is cancelled when its timeout expires
++or the run is interrupted. Input already sent to the device may still finish.
++Other commands can outlive their caller's timeout; the next attempt waits for
++their SDK requests to settle.
+ </Note>
+ 
+ #### Capabilities
+diff --git a/packages/mobile/src/actions.ts b/packages/mobile/src/actions.ts
+index a585e654..92ccdcf1 100644
+--- a/packages/mobile/src/actions.ts
++++ b/packages/mobile/src/actions.ts
+@@ -63,13 +63,14 @@ export function pointerInteraction(
+   action: PointerAction,
+   settle: Record<string, unknown>,
+   stabilization: Record<string, unknown>,
++  signal: AbortSignal,
+ ): Promise<unknown> {
+   const at = { x: point.x, y: point.y };
+   switch (action.kind) {
+     case 'tap':
+-      return client.interactions.press({ ...at, ...settle });
++      return client.interactions.press({ ...at, ...settle, signal });
+     case 'doubleTap':
+-      return client.interactions.press({ ...at, count: 2, ...settle });
++      return client.interactions.press({ ...at, count: 2, ...settle, signal });
+     case 'longPress':
+       return client.interactions.longPress({ ...at, ...settle, durationMs: action.durationMs ?? DEFAULT_LONG_PRESS_MS });
+     case 'swipeTo': {
+diff --git a/packages/mobile/src/device.ts b/packages/mobile/src/device.ts
+index fadce6e4..2fa5d5a3 100644
+--- a/packages/mobile/src/device.ts
++++ b/packages/mobile/src/device.ts
+@@ -316,7 +316,7 @@ export function createDeviceFixture(surface: AgentDeviceSurface, context: Engine
+       await surface.screenCommand('device.alert', (client) => client.command.alert({ ...surface.selection(), action }), context.signal);
+     },
+     async dismissKeyboard() {
+-      await surface.dismissKeyboard(context.signal, surface.inputBudget('device.dismissKeyboard', context.timeouts.action));
++      await surface.dismissKeyboard(context.signal, surface.inputBudget('device.dismissKeyboard', context.timeouts.action, context.signal));
+     },
+     async clipboard() {
+       const result = await surface.command(
+diff --git a/packages/mobile/src/engine.ts b/packages/mobile/src/engine.ts
+index 0cfbbc8f..e8051b15 100644
+--- a/packages/mobile/src/engine.ts
++++ b/packages/mobile/src/engine.ts
+@@ -34,28 +34,28 @@ export function buildEngine(surface: AgentDeviceSurface): EngineHandle {
+     dispose: (context) => surface.dispose(context),
+     // The harness signal does not abort at an operation's budget, so each
+     // operation enforces its own; see InputBudget in support.ts.
+-    observe: (operation, options) => surface.observe(operation, options, surface.inputBudget('observe', operation.timeoutMs)),
+-    locate: (expression, operation) => surface.locate(expression, operation, surface.inputBudget('locate', operation.timeoutMs)),
+-    perform: (ref, action, operation) => surface.perform(ref, action, operation, surface.inputBudget(action.kind, operation.timeoutMs)),
++    observe: (operation, options) => surface.observe(operation, options, surface.inputBudget('observe', operation.timeoutMs, operation.signal)),
++    locate: (expression, operation) => surface.locate(expression, operation, surface.inputBudget('locate', operation.timeoutMs, operation.signal)),
++    perform: (ref, action, operation) => surface.perform(ref, action, operation, surface.inputBudget(action.kind, operation.timeoutMs, operation.signal)),
+     actions: DEVICE_ACTIONS,
+-    performAt: (point, action, operation) => surface.performAt(point, action, operation, surface.inputBudget(action.kind, operation.timeoutMs)),
++    performAt: (point, action, operation) => surface.performAt(point, action, operation, surface.inputBudget(action.kind, operation.timeoutMs, operation.signal)),
+     pointerActions: DEVICE_POINTER_ACTIONS,
+     keyboard: {
+-      type: (text, keyboardOptions, operation) => surface.typeText(text, keyboardOptions, operation, surface.inputBudget('type', operation.timeoutMs)),
+-      press: (key, operation) => surface.pressFocusedKey(key, operation, surface.inputBudget('press', operation.timeoutMs)),
+-      dismiss: (operation) => surface.dismissKeyboard(operation.signal, surface.inputBudget('keyboard dismiss', operation.timeoutMs)),
++      type: (text, keyboardOptions, operation) => surface.typeText(text, keyboardOptions, operation, surface.inputBudget('type', operation.timeoutMs, operation.signal)),
++      press: (key, operation) => surface.pressFocusedKey(key, operation, surface.inputBudget('press', operation.timeoutMs, operation.signal)),
++      dismiss: (operation) => surface.dismissKeyboard(operation.signal, surface.inputBudget('keyboard dismiss', operation.timeoutMs, operation.signal)),
+     },
+     validateApp: (app, info) => validateApp(app, info, surface.options.platform),
+     // No `open`: a device app has no URL to open, so the runner serves
+     // `app.open()` with `restart`, the fresh launch of the pinned app, which
+     // is also the device's "recreate the context".
+     session: {
+-      back: (operation) => surface.back(operation, surface.inputBudget('back', operation.timeoutMs)),
++      back: (operation) => surface.back(operation, surface.inputBudget('back', operation.timeoutMs, operation.signal)),
+       restart: (operation) => surface.restart(operation),
+       reset: (operation) => surface.reset(operation),
+     },
+     artifacts: {
+-      screenshot: (label, operation) => surface.screenshot(label, operation, surface.inputBudget('screenshot', operation.timeoutMs)),
++      screenshot: (label, operation) => surface.screenshot(label, operation, surface.inputBudget('screenshot', operation.timeoutMs, operation.signal)),
+       startVideo: (operation) => surface.startVideo(operation),
+       stopVideo: (operation) => surface.stopVideo(operation),
+     },
+diff --git a/packages/mobile/src/support.ts b/packages/mobile/src/support.ts
+index 19f75da9..fe81096d 100644
+--- a/packages/mobile/src/support.ts
++++ b/packages/mobile/src/support.ts
+@@ -35,14 +35,15 @@ export class InputBudget {
+   private sent = false;
+ 
+   /**
+-   * `track` keeps the device command itself in flight, past a timeout that
+-   * abandons it, until it settles. The callers' own tracking settles with the
+-   * race, so this is the registration the next attempt waits on.
++   * `track` keeps the SDK request in flight, past a timeout that abandons
++   * it, until its promise settles. Cancellation can settle that promise
++   * before already accepted native work ends.
+    */
+   constructor(
+     private readonly label: string,
+     timeoutMs: number,
+     private readonly track: <T>(pending: Promise<T>) => Promise<T>,
++    private readonly signal: AbortSignal,
+   ) {
+     this.endsAt = Date.now() + timeoutMs;
+   }
+@@ -54,8 +55,10 @@ export class InputBudget {
+    * at least as long as the budget left could only be cut off mid-gesture, so
+    * it is refused unsent. An input that does not answer in time may have
+    * landed, so it is `ACTION_MAY_HAVE_COMMITTED` and the runner never repeats it.
++   * Press requests receive caller cancellation and are cancelled when this
++   * wait expires, including its existing acknowledgement allowance.
+    */
+-  send<T>(dispatch: () => Promise<T>, holdMs = 0): Promise<T> {
++  send<T>(dispatch: (signal: AbortSignal) => Promise<T>, holdMs = 0): Promise<T> {
+     const remaining = this.remainingMs();
+     if (remaining <= 0) return Promise.reject(this.spent());
+     if (holdMs >= remaining) {
+@@ -67,9 +70,15 @@ export class InputBudget {
+         ),
+       );
+     }
+-    const pending = this.track(dispatch());
++    const answerMs = Math.max(remaining, MIN_ANSWER_MS);
++    const deadline = new AbortController();
++    const requestSignal = AbortSignal.any([this.signal, deadline.signal]);
++    const pending = this.track(dispatch(requestSignal));
+     this.sent = true;
+-    return withTimeout(pending, Math.max(remaining, MIN_ANSWER_MS), () => this.maybeCommitted());
++    return withTimeout(pending, answerMs, () => {
++      deadline.abort();
++      return this.maybeCommitted();
++    });
+   }
+ 
+   /**
+diff --git a/packages/mobile/src/surface.ts b/packages/mobile/src/surface.ts
+index d749021a..81842912 100644
+--- a/packages/mobile/src/surface.ts
++++ b/packages/mobile/src/surface.ts
+@@ -470,10 +470,9 @@ export class AgentDeviceSurface {
+   /** How this worker's device records through its provider: set in init when the pool's provider records and the slot rides one of its leases. */
+   private leaseRecorder: LeaseRecorder | undefined;
+   /**
+-   * Commands still running on the device. agent-device takes no abort
+-   * signal, so a cancelled or timed-out call is only abandoned by its
+-   * caller; it keeps executing. The next attempt waits for these to settle
+-   * before it opens anything, so a ghost tap can never land in a retry.
++   * SDK requests still pending, including uncancelled commands abandoned
++   * by their caller. Cancelled press promises can settle before native
++   * work ends; agent-device owns its bounded drain and device-request ordering.
+    */
+   private readonly inflight = new Set<Promise<unknown>>();
+ 
+@@ -573,9 +572,9 @@ export class AgentDeviceSurface {
+     return result;
+   }
+ 
+-  /** The budget one operation runs under; its device commands stay in flight until they settle. */
+-  inputBudget(label: string, timeoutMs: number): InputBudget {
+-    return new InputBudget(label, timeoutMs, (pending) => this.track(pending));
++  /** The budget and cancellation signal shared by one operation's inputs. */
++  inputBudget(label: string, timeoutMs: number, signal: AbortSignal): InputBudget {
++    return new InputBudget(label, timeoutMs, (pending) => this.track(pending), signal);
+   }
+ 
+   /** Registers one device command as in flight until it settles. */
+@@ -1456,16 +1455,16 @@ export class AgentDeviceSurface {
+       }
+       switch (action.kind) {
+         case 'tap':
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target, true), ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target, true), ...settle, signal }));
+         case 'focus':
+           // A touch surface focuses by tapping, and a tap on anything but an
+           // editable field activates it; focus is offered for fields only.
+           if (target.node.role !== 'textbox') {
+             throw unsupported(`agent-device can only focus editable fields; node ${target.id} is ${target.node.role ?? 'unknown'}`);
+           }
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target), ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target), ...settle, signal }));
+         case 'doubleTap':
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target), count: 2, ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target), count: 2, ...settle, signal }));
+         case 'longPress':
+           return input.send(
+             () => client.interactions.longPress({ ...this.actionTarget(target), ...settle, durationMs: action.durationMs ?? DEFAULT_LONG_PRESS_MS }),
+@@ -1490,7 +1489,7 @@ export class AgentDeviceSurface {
+             throw unsupported(`agent-device cannot read whether node ${target.id} is checked; tap it instead`);
+           }
+           if (checked === wanted) return undefined;
+-          return input.send(() => client.interactions.press({ ...this.actionTarget(target, true), ...settle }));
++          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target, true), ...settle, signal }));
+         }
+         case 'press':
+           return this.pressKey(client, target, action.key, settle, input);
+@@ -1553,7 +1552,7 @@ export class AgentDeviceSurface {
+     // A key reaches the field through the soft keyboard, which is up only
+     // while the field holds focus.
+     if (entry.node.role === 'textbox' && entry.node.states?.focused !== true) {
+-      await input.send(() => client.interactions.press({ ...this.actionTarget(entry), ...settle }));
++      await input.send((requestSignal) => client.interactions.press({ ...this.actionTarget(entry), ...settle, signal: requestSignal }));
+     }
+     if (enter) return input.send(() => client.command.keyboard({ action: 'enter' }));
+     return input.send(() => client.interactions.type({ text: parsed.key.kind === 'char' ? parsed.key.char : ' ' }));
+@@ -1568,7 +1567,7 @@ export class AgentDeviceSurface {
+     const settle = operation.origin === 'test' ? {} : this.settleOptions;
+     const before = this.latestScreen;
+     const holdMs = action.kind === 'longPress' ? (action.durationMs ?? DEFAULT_LONG_PRESS_MS) : action.kind === 'swipeTo' ? action.durationMs : undefined;
+-    await this.command(`${action.kind} at point`, (client) => input.send(() => pointerInteraction(client, point, action, settle, gestureStabilization(operation)), holdMs), operation.signal);
++    await this.command(`${action.kind} at point`, (client) => input.send((signal) => pointerInteraction(client, point, action, settle, gestureStabilization(operation), signal), holdMs), operation.signal);
+     if (action.kind === 'swipeTo') this.noteGesture(operation);
+     this.markAction(before);
+   }
+@@ -1697,7 +1696,7 @@ export class AgentDeviceSurface {
+     const tipTop = tip.rect.y;
+     const button = nodes.find((node) => node.label === 'Continue' && node.rect !== undefined && node.rect.y > tipTop);
+     if (button?.rect === undefined) return raw;
+-    await this.command('keyboard.dismiss', (client) => input.send(() => client.interactions.press(centreOf(button.rect!))), signal);
++    await this.command('keyboard.dismiss', (client) => input.send((requestSignal) => client.interactions.press({ ...centreOf(button.rect!), signal: requestSignal })), signal);
+     return await this.snapshot(signal, false, input);
+   }
+ 
+diff --git a/packages/mobile/tests/helpers/fake-client.ts b/packages/mobile/tests/helpers/fake-client.ts
+index d91a3260..b65e3877 100644
+--- a/packages/mobile/tests/helpers/fake-client.ts
++++ b/packages/mobile/tests/helpers/fake-client.ts
+@@ -14,6 +14,7 @@ export type Responder = (args: unknown) => unknown;
+ export interface RecordedCall {
+   readonly method: string;
+   readonly args: unknown;
++  readonly signal?: AbortSignal;
+ }
+ 
+ export interface FakeClient {
+@@ -38,7 +39,12 @@ export function createFakeClient(initial: Readonly<Record<string, Responder>> =
+       },
+       apply: (_target, _self, args: unknown[]) => {
+         const method = path.join('.');
+-        calls.push({ method, args: args[0] });
++        const argument = args[0];
++        const options = typeof argument === 'object' && argument !== null && 'signal' in argument
++          ? argument as Record<string, unknown>
++          : undefined;
++        const { signal, ...recordedArgs } = options ?? {};
++        calls.push({ method, args: options === undefined ? argument : recordedArgs, ...(signal instanceof AbortSignal ? { signal } : {}) });
+         const responder = responders.get(method);
+         return Promise.resolve().then(() => (responder === undefined ? {} : responder(args[0])));
+       },
+diff --git a/packages/mobile/tests/unit/engine.test.ts b/packages/mobile/tests/unit/engine.test.ts
+index edcf91af..50c5cd3c 100644
+--- a/packages/mobile/tests/unit/engine.test.ts
++++ b/packages/mobile/tests/unit/engine.test.ts
+@@ -3353,7 +3353,7 @@ describe('deterministic actions', () => {
+     const search = await observed(h, 'Search');
+     if (action === 'Enter') await h.engine.perform!(search.ref, { kind: 'press', key: 'Enter' }, test());
+     else if (action === 'focused Enter') await h.engine.keyboard!.press('Enter', test());
+-    else await h.surface.dismissKeyboard(test().signal, h.surface.inputBudget('keyboard dismiss', test().timeoutMs));
++    else await h.surface.dismissKeyboard(test().signal, h.surface.inputBudget('keyboard dismiss', test().timeoutMs, test().signal));
+     h.fake.respond('capture.snapshot', () => ({ ...SETTINGS_SNAPSHOT, keyboard: { kind: 'absent' } }));
+     const stale = await observed(h, 'About');
+     h.fake.respond('capture.snapshot', () => ({
+diff --git a/packages/mobile/tests/unit/input-cancellation.test.ts b/packages/mobile/tests/unit/input-cancellation.test.ts
+new file mode 100644
+index 00000000..e1a1eb2d
+--- /dev/null
++++ b/packages/mobile/tests/unit/input-cancellation.test.ts
+@@ -0,0 +1,56 @@
++import { mkdtempSync, rmSync } from 'node:fs';
++import { tmpdir } from 'node:os';
++import path from 'node:path';
++import { createAgentDeviceClient } from 'agent-device';
++import { expect, it } from 'vitest';
++import type { OperationContext } from 'e2e/engine';
++import { buildEngine } from '../../src/engine.ts';
++import { AgentDeviceSurface } from '../../src/surface.ts';
++import { SETTINGS_SNAPSHOT } from '../helpers/fake-client.ts';
++import { boot } from '../helpers/harness.ts';
++
++it.each(['caller abort', 'input deadline'] as const)('cancels a pending press at the SDK boundary after %s', async (reason) => {
++  const stateDir = mkdtempSync(path.join(tmpdir(), 'e2e-input-cancel-'));
++  let releaseRequest!: () => void;
++  let markStarted!: () => void;
++  let markFinished!: () => void;
++  const pendingRequest = new Promise<void>((resolve) => { releaseRequest = resolve; });
++  const started = new Promise<void>((resolve) => { markStarted = resolve; });
++  const finished = new Promise<void>((resolve) => { markFinished = resolve; });
++  const controller = new AbortController();
++  let delivered = 0;
++  const client = createAgentDeviceClient({ session: 'input-cancel', stateDir }, {
++    transport: async (request, context) => {
++      if (request.command === 'snapshot') return { ok: true, data: SETTINGS_SNAPSHOT };
++      if (request.command === 'open') return { ok: true, data: { appName: 'Settings', appBundleId: 'com.apple.Preferences' } };
++      if (request.command === 'press') {
++        markStarted();
++        await pendingRequest;
++        if (context?.signal?.aborted !== true) delivered += 1;
++        markFinished();
++      }
++      return { ok: true, data: {} };
++    },
++  });
++  const engine = buildEngine(new AgentDeviceSurface({ platform: 'ios', transition: 0, settle: false }, () => client));
++  const operation: OperationContext = { signal: controller.signal, timeoutMs: reason === 'input deadline' ? 100 : 30000, runId: 'run', attemptId: 'a1', origin: 'test' };
++  try {
++    await boot({ engine, app: { bundleId: 'Settings' } });
++    await engine.session!.restart!(operation);
++    const [target] = await engine.locate!({ kind: 'query', query: { kind: 'testId', value: { kind: 'string', value: 'ABOUT', exact: true } } }, operation);
++    expect(target).toBeDefined();
++    const pressing = engine.perform!(target!.ref, { kind: 'tap' }, operation);
++    const rejected = expect(pressing).rejects.toMatchObject({ code: reason === 'caller abort' ? 'CANCELLED' : 'ACTION_MAY_HAVE_COMMITTED' });
++    await started;
++    if (reason === 'caller abort') controller.abort();
++    await rejected;
++    // The external request resumes after the operation has already ended.
++    releaseRequest();
++    await finished;
++    expect(delivered).toBe(0);
++  } finally {
++    releaseRequest();
++    await engine.dispose!({ signal: new AbortController().signal, timeoutMs: 1000 });
++    rmSync(stateDir, { recursive: true, force: true });
++  }
++});
+diff --git a/packages/mobile/tests/unit/support.test.ts b/packages/mobile/tests/unit/support.test.ts
+index 683ad427..31ad904d 100644
+--- a/packages/mobile/tests/unit/support.test.ts
++++ b/packages/mobile/tests/unit/support.test.ts
+@@ -1,3 +1,7 @@
++import { mkdtempSync, rmSync } from 'node:fs';
++import { tmpdir } from 'node:os';
++import path from 'node:path';
++import { createAgentDeviceClient } from 'agent-device';
+ import { describe, expect, it, vi } from 'vitest';
+ import { InputBudget, sanitizeFilename, screenLocation, swipeWithin } from '../../src/support.ts';
+ 
+@@ -6,29 +10,29 @@ describe('support helpers', () => {
+     const hung = () => new Promise<never>(() => undefined);
+     vi.useFakeTimers();
+     try {
+-      const cut = new InputBudget('tap', 300, (pending) => pending).send(hung);
++      const cut = new InputBudget('tap', 300, (pending) => pending, new AbortController().signal).send(hung);
+       const committed = expect(cut).rejects.toMatchObject({ code: 'ACTION_MAY_HAVE_COMMITTED' });
+       await vi.advanceTimersByTimeAsync(300);
+       await committed;
+ 
+       // Sent with almost nothing left, a tap still gets time to answer.
+-      const late = new InputBudget('tap', 10, (pending) => pending).send(() => new Promise((resolve) => setTimeout(() => resolve('tapped'), 200)));
++      const late = new InputBudget('tap', 10, (pending) => pending, new AbortController().signal).send(() => new Promise((resolve) => setTimeout(() => resolve('tapped'), 200)));
+       await vi.advanceTimersByTimeAsync(200);
+       await expect(late).resolves.toBe('tapped');
+ 
+       // A spent budget sends nothing; after an input went out, the next one is refused as possibly committed.
+-      const spent = new InputBudget('tap', 100, (pending) => pending);
++      const spent = new InputBudget('tap', 100, (pending) => pending, new AbortController().signal);
+       await vi.advanceTimersByTimeAsync(100);
+       let dispatched = false;
+       await expect(spent.send(async () => (dispatched = true))).rejects.toMatchObject({ code: 'OPERATION_TIMEOUT', message: 'tap timed out before it was sent' });
+       expect(dispatched).toBe(false);
+-      const twoStep = new InputBudget('press', 100, (pending) => pending);
++      const twoStep = new InputBudget('press', 100, (pending) => pending, new AbortController().signal);
+       await twoStep.send(async () => undefined);
+       await vi.advanceTimersByTimeAsync(100);
+       await expect(twoStep.send(async () => undefined)).rejects.toMatchObject({ code: 'ACTION_MAY_HAVE_COMMITTED' });
+ 
+       // A command that throws before it is sent does not count as sent.
+-      const refused = new InputBudget('press', 100, (pending) => pending);
++      const refused = new InputBudget('press', 100, (pending) => pending, new AbortController().signal);
+       expect(() => refused.send(() => {
+         throw new Error('no target');
+       })).toThrow('no target');
+@@ -37,7 +41,7 @@ describe('support helpers', () => {
+ 
+       // A hold the budget cannot cover is refused unsent, with the reason.
+       let held = false;
+-      await expect(new InputBudget('longPress', 2_000, (pending) => pending).send(async () => (held = true), 3_000)).rejects.toMatchObject({
++      await expect(new InputBudget('longPress', 2_000, (pending) => pending, new AbortController().signal).send(async () => (held = true), 3_000)).rejects.toMatchObject({
+         code: 'NOT_ACTIONABLE',
+         message: expect.stringMatching(/^longPress holds for 3000 ms, but only 2000 ms of its timeout are left/),
+       });
+@@ -52,19 +56,19 @@ describe('support helpers', () => {
+     const hung = () => new Promise<never>(() => undefined);
+     vi.useFakeTimers();
+     try {
+-      await expect(new InputBudget('snapshot', 300, (pending) => pending).read(async () => 'tree')).resolves.toBe('tree');
++      await expect(new InputBudget('snapshot', 300, (pending) => pending, new AbortController().signal).read(async () => 'tree')).resolves.toBe('tree');
+ 
+-      const cut = new InputBudget('snapshot', 200, (pending) => pending).read(hung);
++      const cut = new InputBudget('snapshot', 200, (pending) => pending, new AbortController().signal).read(hung);
+       const timedOut = expect(cut).rejects.toMatchObject({ code: 'OPERATION_TIMEOUT', message: 'snapshot timed out before the device answered' });
+       await vi.advanceTimersByTimeAsync(200);
+       await timedOut;
+ 
+-      const spent = new InputBudget('snapshot', 100, (pending) => pending);
++      const spent = new InputBudget('snapshot', 100, (pending) => pending, new AbortController().signal);
+       await vi.advanceTimersByTimeAsync(100);
+       await expect(spent.read(async () => 'late')).rejects.toMatchObject({ code: 'OPERATION_TIMEOUT', message: 'snapshot timed out before it was sent' });
+ 
+       // After a swipe went out, a read that does not answer must not let a replay send the swipe again.
+-      const dismissal = new InputBudget('keyboard dismiss', 300, (pending) => pending);
++      const dismissal = new InputBudget('keyboard dismiss', 300, (pending) => pending, new AbortController().signal);
+       await dismissal.send(async () => undefined);
+       const after = dismissal.read(hung);
+       const committed = expect(after).rejects.toMatchObject({ code: 'ACTION_MAY_HAVE_COMMITTED' });
+@@ -102,3 +106,68 @@ describe('support helpers', () => {
+     expect(sanitizeFilename('x'.repeat(100))).toHaveLength(64);
+   });
+ });
++
++it.each(['press', 'type'] as const)('preserves the acknowledgement allowance for %s at the SDK boundary', async (command) => {
++  const stateDir = mkdtempSync(path.join(tmpdir(), 'e2e-input-ack-'));
++  let delivered = 0;
++  const client = createAgentDeviceClient({ session: 'input-ack', stateDir }, {
++    transport: async (request) => {
++      delivered += 1;
++      await new Promise((resolve) => setTimeout(resolve, 180));
++      return request.command === 'type'
++        ? { ok: false, error: { code: 'UNSUPPORTED_OPERATION', message: 'Typing is unavailable' } }
++        : { ok: true, data: {} };
++    },
++  });
++  const budget = new InputBudget(command, 100, (pending) => pending, new AbortController().signal);
++  try {
++    if (command === 'press') {
++      await expect(budget.send((signal) => client.interactions.press({ x: 20, y: 20, signal }))).resolves.toBeDefined();
++    } else {
++      await expect(budget.send((signal) => client.interactions.type({ text: 'hello', signal }))).rejects.toMatchObject({ code: 'UNSUPPORTED_OPERATION', message: 'Typing is unavailable' });
++    }
++    expect(delivered).toBe(1);
++  } finally {
++    rmSync(stateDir, { recursive: true, force: true });
++  }
++});
++
++it('keeps caller cancellation on later inputs from the same operation', async () => {
++  const stateDir = mkdtempSync(path.join(tmpdir(), 'e2e-input-operation-cancel-'));
++  const controller = new AbortController();
++  let release!: () => void;
++  let markStarted!: () => void;
++  let markFinished!: () => void;
++  const held = new Promise<void>((resolve) => { release = resolve; });
++  const started = new Promise<void>((resolve) => { markStarted = resolve; });
++  const finished = new Promise<void>((resolve) => { markFinished = resolve; });
++  let requests = 0;
++  let delivered = 0;
++  const client = createAgentDeviceClient({ session: 'operation-cancel', stateDir }, {
++    transport: async (_request, context) => {
++      requests += 1;
++      if (requests === 2) {
++        markStarted();
++        await held;
++      }
++      if (context?.signal?.aborted !== true) delivered += 1;
++      if (requests === 2) markFinished();
++      return { ok: true, data: {} };
++    },
++  });
++  const budget = new InputBudget('tap', 30000, (pending) => pending, controller.signal);
++  try {
++    await budget.send((signal) => client.interactions.press({ x: 20, y: 20, signal }));
++    const second = budget.send((signal) => client.interactions.press({ x: 30, y: 30, signal }));
++    const canceled = expect(second).rejects.toMatchObject({ details: { reason: 'request_canceled' } });
++    await started;
++    controller.abort();
++    await canceled;
++    release();
++    await finished;
++    expect(delivered).toBe(1);
++  } finally {
++    release();
++    rmSync(stateDir, { recursive: true, force: true });
++  }
++});

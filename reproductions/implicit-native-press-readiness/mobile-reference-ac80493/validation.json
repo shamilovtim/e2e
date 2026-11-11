@@ -1,0 +1,41 @@
+{
+  "head": "ac80493b14d137628782d72aca07fcc4fb8b32e6",
+  "base": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
+  "previousHead": "9dc33e80fc2545e2af56519fc780590259472b77",
+  "delta": "Only docs/reference/mobile.mdx Note; runtime source byte-identical to previous head",
+  "sourceTrees": {
+    "9dc33e80fc2545e2af56519fc780590259472b77": "9b1941bcfad53149cc7af4f82dfab5be6ab4f73f",
+    "ac80493b14d137628782d72aca07fcc4fb8b32e6": "9b1941bcfad53149cc7af4f82dfab5be6ab4f73f"
+  },
+  "runtimeSourceIdentical": true,
+  "docsChecks": {
+    "examples": "passed",
+    "package-managers": "passed",
+    "anchors": "passed",
+    "logos": "passed",
+    "mdx": "passed"
+  },
+  "docsExamples": 40,
+  "docsPages": 75,
+  "anchorLinks": 1074,
+  "vendorPages": 21,
+  "proseSentenceWords": [
+    19,
+    9,
+    17
+  ],
+  "proseMaxDescriptionWords": 25,
+  "paragraphSentences": 3,
+  "referencePageLineCountBefore": 1184,
+  "referencePageLineCountAfter": 1186,
+  "noteWordCountBefore": 23,
+  "noteWordCountAfter": 45,
+  "independentReview": "Parent agent reviewed the isolated note delta and found no actionable issue",
+  "privacyCounts": {
+    "privateApplicationData": 0,
+    "localHomePaths": 0,
+    "credentialValues": 0
+  },
+  "fullPatchSha256": "31d37157996a3f5d5c0476a3ac201607f2120f09b5bb91415b4fd9ec6b94b885",
+  "liveNativeProofRemainsAttributedTo": "c282cf9099c907adf581872d0cf57e74b70719ac and SDK965, with prior9dc AST equality; no new native run for docs-only follow-up"
+}
