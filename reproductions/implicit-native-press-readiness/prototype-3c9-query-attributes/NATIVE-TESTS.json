@@ -1,0 +1,70 @@
+{
+  "hostSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeFingerprint": "6253afcc52245869d1f60e882029e8dc21b7014153eb808bc5b83fdb376b13fb",
+  "productionBuild": "passed",
+  "unitBuild": "passed",
+  "result": "passed",
+  "total": 9,
+  "failed": 0,
+  "skipped": 0,
+  "tests": [
+    {
+      "name": "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "seconds": 0.022
+    },
+    {
+      "name": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+      "seconds": 0.057
+    },
+    {
+      "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether",
+      "seconds": 0.042
+    },
+    {
+      "name": "testEveryRunnerRequestFieldHasAProductionRequest",
+      "seconds": 0.066
+    },
+    {
+      "name": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+      "seconds": 0.036
+    },
+    {
+      "name": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "seconds": 0.043
+    },
+    {
+      "name": "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+      "seconds": 0.049
+    },
+    {
+      "name": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+      "seconds": 4.73
+    },
+    {
+      "name": "testSnapshotPresentationPreservesCurrentWireShape",
+      "seconds": 0.011
+    }
+  ],
+  "qualification": "Original eight and command-table bookkeeping test are existing tests. The625 prototype adds assertions for wrong-label/same-id and value mismatch. These passing tests did not cover the later demonstrated real-window and placeholder differences.",
+  "originalSelection": {
+    "count": 8,
+    "passed": 8,
+    "cases": [
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+      "testEveryRunnerRequestFieldHasAProductionRequest",
+      "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+      "testSnapshotPresentationPreservesCurrentWireShape"
+    ]
+  },
+  "additionalCommandTableTest": {
+    "count": 1,
+    "passed": 1,
+    "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether"
+  },
+  "unitBinarySha256": "39a9fb3224704106d34b4b6dd1eeb3f3eabc67cb453fe441013d7ae4ca092a33"
+}

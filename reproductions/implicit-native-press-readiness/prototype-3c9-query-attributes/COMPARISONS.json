@@ -1,0 +1,89 @@
+{
+  "qualification": "Actual baseline5a source artifacts versus prototype3c9; same frozenv1.1 binary and owned phone, serial warmed routes, n3 ref plus one CLI. Cold/startup/setup timings stay per-case. Prototype is diagnostic work, not final accepted implementation. No performance gate is used to excuse a correctness regression.",
+  "largeControlCases": [
+    {
+      "variant": "anonymous",
+      "baseline": "base5a-anonymous-1",
+      "prototype": "head3c9-anonymous-1",
+      "baselineWarmRefMs": [
+        743.6324999999997,
+        976.8661669999992,
+        975.6574170000004
+      ],
+      "prototypeWarmRefMs": [
+        1004.7357909999992,
+        1228.679291999999,
+        1232.4174590000002
+      ],
+      "baselineWarmMedianMs": 975.6574170000004,
+      "prototypeWarmMedianMs": 1228.679291999999,
+      "addedMedianMs": 253.02187499999854,
+      "baselineCliMs": 983.341375,
+      "prototypeCliMs": 1250.8748749999995,
+      "addedCliMs": 267.53349999999955,
+      "targetInputsEach": 4,
+      "siblingInputsEach": 0,
+      "fixtureBinaryEqual": true
+    },
+    {
+      "variant": "buttons",
+      "baseline": "base5a-buttons-1",
+      "prototype": "head3c9-buttons-1",
+      "baselineWarmRefMs": [
+        731.4179999999997,
+        948.0645409999997,
+        946.1382080000003
+      ],
+      "prototypeWarmRefMs": [
+        973.9608340000004,
+        1192.9469170000002,
+        1194.8904169999987
+      ],
+      "baselineWarmMedianMs": 946.1382080000003,
+      "prototypeWarmMedianMs": 1192.9469170000002,
+      "addedMedianMs": 246.8087089999999,
+      "baselineCliMs": 978.8113749999993,
+      "prototypeCliMs": 1206.2678749999995,
+      "addedCliMs": 227.45650000000023,
+      "targetInputsEach": 4,
+      "siblingInputsEach": 0,
+      "fixtureBinaryEqual": true
+    },
+    {
+      "variant": "shared",
+      "baseline": "base5a-shared-1",
+      "prototype": "head3c9-shared-1",
+      "baselineWarmRefMs": [
+        744.4282499999999,
+        452.5437499999998,
+        450.78750000000036
+      ],
+      "prototypeWarmRefMs": [
+        998.3376249999992,
+        723.6950830000005,
+        728.4222910000008
+      ],
+      "baselineWarmMedianMs": 452.5437499999998,
+      "prototypeWarmMedianMs": 728.4222910000008,
+      "addedMedianMs": 275.87854100000095,
+      "baselineCliMs": 530.672790999999,
+      "prototypeCliMs": 809.6133329999993,
+      "addedCliMs": 278.9405420000003,
+      "targetInputsEach": 4,
+      "siblingInputsEach": 0,
+      "fixtureBinaryEqual": true
+    }
+  ],
+  "missingCases": [
+    "headc7-missing-1",
+    "head3c9-missing-1"
+  ],
+  "placedPair": [
+    "head615-ipad-placed-1",
+    "head3c9-ipad-placed-2"
+  ],
+  "fieldPair": [
+    "head615-landscape-field-1",
+    "diag625-landscape-field-1"
+  ]
+}

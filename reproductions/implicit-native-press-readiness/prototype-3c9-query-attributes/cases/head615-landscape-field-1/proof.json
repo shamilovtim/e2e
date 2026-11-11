@@ -1,0 +1,250 @@
+{
+  "case": "head615-landscape-field-1",
+  "classification": "paired-baseline",
+  "explanation": "Old615 ordinary selector focus succeeds. AX/tree captured empty-value bindings already return missing under615 within the readiness feature (not a claim about original upstream5a); distinguish that producer/live mismatch from the new selector regression.",
+  "hostSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeBuiltFrom": "17a96733f87bc571f0c785eac99230691b3c5bf8",
+  "nativeFingerprint": "615de8dee67b5d299f4507c0d12f76c16fc98cc0df2259afd83bd573034f703b",
+  "nativeBinarySha256": "d3f10f6fd3edf59dcbc343d64ba4b94bf4d6bd3e769e78a8e03381fe5ed8b3a7",
+  "fixtureBinarySha256": "8ab16911c49d3ad877bdf4b6285c6df146294ceb1a403837e2d6b707bb9d04d5",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": null,
+  "nativeModeSetupMs": null,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": null,
+  "sessionClosed": true,
+  "fixtureAttribution": "Same universal generic geometry app binary installed from frozen source; its binary digest is independently retained in fixture manifest.",
+  "samples": [],
+  "live": {
+    "ok": true,
+    "data": {
+      "text": "Geometry input",
+      "nodes": [
+        {
+          "type": "TextField",
+          "enabled": true,
+          "depth": 0,
+          "value": "Geometry input",
+          "rect": {
+            "height": 42,
+            "x": 24,
+            "width": 200,
+            "y": 90
+          },
+          "index": 0,
+          "hittable": true,
+          "identifier": "geometry-input"
+        }
+      ],
+      "found": true,
+      "runnerMainThreadBusy": false
+    }
+  },
+  "captures": [
+    {
+      "raw": false,
+      "quality": {
+        "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+        "state": "recovered",
+        "timing": {
+          "acquisitionMs": 1331.7960500717163,
+          "presentationMs": 0.16796588897705078
+        },
+        "reasonCode": "requested-backend",
+        "backend": "private-ax",
+        "customActions": {
+          "candidates": 9,
+          "truncated": 0,
+          "blocked": false,
+          "read": 9
+        }
+      },
+      "node": {
+        "type": "TextField",
+        "enabled": true,
+        "rect": {
+          "height": 42,
+          "y": 90,
+          "width": 200,
+          "x": 24
+        },
+        "index": 2,
+        "parentIndex": 0,
+        "nativePressTarget": {
+          "value": "",
+          "rect": {
+            "height": 42,
+            "width": 200,
+            "x": 24,
+            "y": 90
+          },
+          "type": 49,
+          "identifier": "geometry-input",
+          "label": ""
+        },
+        "identifier": "geometry-input",
+        "hittable": true,
+        "depth": 1,
+        "placeholder": "Geometry input"
+      },
+      "target": {
+        "value": "",
+        "rect": {
+          "height": 42,
+          "width": 200,
+          "x": 24,
+          "y": 90
+        },
+        "type": 49,
+        "identifier": "geometry-input",
+        "label": "",
+        "point": {
+          "x": 124,
+          "y": 111
+        }
+      },
+      "readiness": {
+        "data": {
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "pressReadiness": "missing",
+          "runnerMainThreadBusy": false
+        },
+        "ok": true
+      }
+    },
+    {
+      "raw": true,
+      "quality": {
+        "state": "healthy",
+        "timing": {
+          "acquisitionMs": 21.703004837036133,
+          "presentationMs": 0.03993511199951172
+        },
+        "backend": "tree"
+      },
+      "node": {
+        "nativePressTarget": {
+          "rect": {
+            "y": 90,
+            "height": 42,
+            "width": 200,
+            "x": 24
+          },
+          "type": 49,
+          "identifier": "geometry-input"
+        },
+        "depth": 5,
+        "parentIndex": 4,
+        "index": 6,
+        "placeholder": "Geometry input",
+        "type": "TextField",
+        "enabled": true,
+        "hittable": true,
+        "identifier": "geometry-input",
+        "rect": {
+          "x": 24,
+          "y": 90,
+          "height": 42,
+          "width": 200
+        }
+      },
+      "target": {
+        "rect": {
+          "y": 90,
+          "height": 42,
+          "width": 200,
+          "x": 24
+        },
+        "type": 49,
+        "identifier": "geometry-input",
+        "point": {
+          "x": 124,
+          "y": 111
+        }
+      },
+      "readiness": {
+        "data": {
+          "pressReadiness": "missing",
+          "runnerMainThreadBusy": false,
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry"
+        },
+        "ok": true
+      }
+    }
+  ],
+  "liveTupleTarget": {
+    "type": 49,
+    "identifier": "geometry-input",
+    "value": "Geometry input",
+    "rect": {
+      "height": 42,
+      "x": 24,
+      "width": 200,
+      "y": 90
+    },
+    "point": {
+      "x": 124,
+      "y": 111
+    }
+  },
+  "liveTupleReadiness": {
+    "data": {
+      "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+      "runnerMainThreadBusy": false,
+      "pressReadiness": "ready"
+    },
+    "ok": true
+  },
+  "selectorPress": {
+    "x": 124,
+    "y": 111,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped id=geometry-input (124, 111)",
+    "referenceWidth": 852,
+    "referenceHeight": 393,
+    "targetKind": "selector",
+    "selector": "id=geometry-input",
+    "selectorChain": [
+      "id=\"geometry-input\"",
+      "value=\"Geometry input\""
+    ],
+    "refLabel": "Geometry input",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  },
+  "after": {
+    "field": {
+      "index": 2,
+      "parentIndex": 0,
+      "type": "TextField",
+      "role": "UITextField",
+      "value": "Geometry input",
+      "placeholder": "Geometry input",
+      "identifier": "geometry-input",
+      "rect": {
+        "x": 24,
+        "y": 90,
+        "width": 200,
+        "height": 42
+      },
+      "enabled": true,
+      "focused": true,
+      "depth": 1,
+      "password": false,
+      "editable": true,
+      "hittable": true,
+      "ref": "e3",
+      "kind": "text-field"
+    },
+    "keys": 37
+  },
+  "observationCompleted": true,
+  "predicateDiagnosticObservations": [],
+  "nativeEvents": []
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Baseline5a anonymous Button CLI display metadata",
+  "selectedPublicRef": "e13",
+  "selectedRawNativeType": 9,
+  "selectedIdentifier": "",
+  "selectedLabel": "",
+  "selectedValue": "",
+  "selectedFrame": {
+    "x": 24,
+    "y": 220,
+    "width": 345,
+    "height": 40
+  },
+  "reportedDisplayHint": "Shared ID",
+  "hintSource": {
+    "ref": "e8",
+    "identifier": "mode-shared",
+    "frame": {
+      "x": 24,
+      "y": 160,
+      "width": 166,
+      "height": 36
+    }
+  },
+  "finding": "The nearest-vertical-center display-label fallback chooses this separate header. The selected node, role-only selectorChain, frame and point remain row0; this display hint is not the native authorization tuple. Candidate native capture independently confirms empty id/label for row0.",
+  "sourceFiles": [
+    "packages/capture-kit/src/snapshot-node-lookup.ts",
+    "packages/command-runtime/src/commands/interaction/runtime/resolution-disclosure.ts"
+  ]
+}

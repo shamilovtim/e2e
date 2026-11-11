@@ -1,0 +1,129 @@
+{
+  "cases": [
+    {
+      "case": "base5a-anonymous",
+      "classification": "setup",
+      "explanation": "Fixture discovery: completely empty Other controls were omitted by baseline public presentation; no target press attempted."
+    },
+    {
+      "case": "base5a-anonymous-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "base5a-anonymous-v1.1",
+      "classification": "setup",
+      "explanation": "Harness setup: direct private probe raced lazy native runner startup; no target press attempted."
+    },
+    {
+      "case": "base5a-anonymous-v1.1-warm",
+      "classification": "setup",
+      "explanation": "Harness assertion: baseline presented label included the shared value; it was not authoritative raw label. No target press attempted."
+    },
+    {
+      "case": "base5a-buttons-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "base5a-shared-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "diag625-ipad-placed-1",
+      "classification": "prototype-regression",
+      "explanation": "Real placed window: source and live target frames agree globally, while predicate attrs use window-local frame. Old615 ready and actual intended tap;625 missing and no target dispatch."
+    },
+    {
+      "case": "diag625-landscape-field-1",
+      "classification": "prototype-regression",
+      "explanation": "Ordinary empty-field selector focus: live XCUIElement value is placeholder text but predicate snapshot attrs value is empty. Old615 selector focuses;625 refuses missing. Initial keyboard attempt stopped here; this is not a keyboard-key failure."
+    },
+    {
+      "case": "diag625-landscape-keyboard-1",
+      "classification": "prototype-regression",
+      "explanation": "Ordinary empty-field selector focus: live XCUIElement value is placeholder text but predicate snapshot attrs value is empty. Old615 selector focuses;625 refuses missing. Initial keyboard attempt stopped here; this is not a keyboard-key failure."
+    },
+    {
+      "case": "diag625-landscape-keyboard-2",
+      "classification": "diagnostic-observation",
+      "explanation": "Keyboard was opened with an explicitly qualified coordinate setup tap after selector-focus regression. One landscape system key was read only: source/attrs/live agree, strict ready, no key dispatch. This does not prove selector focus."
+    },
+    {
+      "case": "head3c9-anonymous-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head3c9-buttons-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head3c9-clipped-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head3c9-duplicates-1",
+      "classification": "pass-with-bounded-caller-cancellation",
+      "explanation": "Strict blocked/ready duplicate states retained. Selector ambiguity refused. Blocked ref caller canceled at1500ms with dispatched unknown; no input events. Ready sibling dispatched once. This is not labeled a product timeout."
+    },
+    {
+      "case": "head3c9-exact-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head3c9-ipad-1",
+      "classification": "setup",
+      "explanation": "Placed-window setup incomplete: native window was maximized at origin zero; stopped before target input."
+    },
+    {
+      "case": "head3c9-ipad-placed-1",
+      "classification": "setup",
+      "explanation": "Placed-window setup incomplete: native window was maximized at origin zero; stopped before target input."
+    },
+    {
+      "case": "head3c9-ipad-placed-2",
+      "classification": "prototype-regression",
+      "explanation": "Real placed window: source and live target frames agree globally, while predicate attrs use window-local frame. Old615 ready and actual intended tap;625 missing and no target dispatch."
+    },
+    {
+      "case": "head3c9-landscape-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head3c9-missing-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head3c9-shared-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head615-ipad-placed-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head615-landscape-field-1",
+      "classification": "paired-baseline",
+      "explanation": "Old615 ordinary selector focus succeeds. AX/tree captured empty-value bindings already return missing under615 within the readiness feature (not a claim about original upstream5a); distinguish that producer/live mismatch from the new selector regression."
+    },
+    {
+      "case": "headc7-missing-1",
+      "classification": "pass",
+      "explanation": "Observed requested behavior on generic fixture."
+    },
+    {
+      "case": "head3c9-fade750-1",
+      "classification": "pass",
+      "explanation": "Exact unchanged public d006 harness,750ms fade; one underlying action and zero overlay touches. Earlier17 evidence remains immutable."
+    }
+  ]
+}

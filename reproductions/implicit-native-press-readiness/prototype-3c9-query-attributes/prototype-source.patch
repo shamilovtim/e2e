@@ -1,0 +1,4167 @@
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSurfacePolicy.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSurfacePolicy.swift
+index cf5cf75..847ade0 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSurfacePolicy.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSurfacePolicy.swift
+@@ -14,7 +14,7 @@ extension CommandType {
+       .actionButton, .volumeUp, .volumeDown, .keyboardReturn, .recordStop, .status, .uptime,
+       .appState, .pasteboardWrite, .activate, .terminate, .targetReset, .shutdown:
+       return .none
+-    case .tap, .longPress, .drag, .type, .swipe, .scroll, .findText, .querySelector, .readText,
++    case .tap, .longPress, .drag, .type, .swipe, .scroll, .findText, .querySelector, .pressReadiness, .readText,
+       .snapshot, .backInApp, .backSystem, .gesture, .gestureViewport, .appSwitcher,
+       .keyboardDismiss, .sequence:
+       return .appWindows
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift
+index ff8f147..5ac5f36 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift
+@@ -448,6 +448,14 @@ extension RunnerTests {
+       }
+       let found = try findElement(app: activeApp, text: text) != nil
+       return Response(ok: true, data: DataPayload(found: found))
++    case .pressReadiness:
++      if let target = command.authorizedTarget {
++        guard let actualBundleId = activeAppBundleId, actualBundleId == command.appBundleId else {
++          return Response(ok: true, data: DataPayload(pressReadiness: "surface-mismatch", pressReadinessAppBundleId: activeAppBundleId))
++        }
++        return try queryAuthorizedPressTarget(app: activeApp, target: target, appBundleId: activeAppBundleId)
++      }
++      return Response(ok: false, error: ErrorPayload(message: "pressReadiness requires an authorized target"))
+     case .querySelector:
+       guard let selectorKey = command.selectorKey, let selectorValue = command.selectorValue else {
+         return Response(ok: false, error: ErrorPayload(message: "querySelector requires selectorKey and selectorValue"))
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
+index 2080a02..3983bbd 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
+@@ -369,6 +369,43 @@ extension RunnerTests {
+     try resolveRunnerWindow(app: app).frame
+   }
+ 
++  /// A mutation-read: count every exact target binding, including blocked duplicates. Unlike
++  /// public selector reads, a hittable sibling can never stand in for the authorized control.
++  func queryAuthorizedPressTarget(app: XCUIApplication, target: AuthorizedPressTarget, appBundleId: String? = nil) throws -> Response {
++    let expected = target.rect
++    guard expected.width > 0, expected.height > 0,
++      [expected.x, expected.y, expected.width, expected.height].allSatisfy({ $0.isFinite }) else {
++      return Response(ok: true, data: DataPayload(pressReadiness: "missing", pressReadinessAppBundleId: appBundleId))
++    }
++    func text(_ value: Any?) -> String {
++      String(describing: value ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
++    }
++    let identity = Self.authorizedPressTargetPredicate(target)
++    // Query predicates read snapshot attributes in bulk, rather than resolving every type match.
++    let binding = NSPredicate { object, _ in
++      guard let attributes = object as? XCUIElementAttributes else { return false }
++      return target.matches(type: attributes.elementType.rawValue, identifier: attributes.identifier,
++        label: attributes.label, value: target.type == XCUIElement.ElementType.secureTextField.rawValue ? nil : text(attributes.value),
++        rect: SnapshotRect(attributes.frame))
++    }
++    let matches = try elementQueries(app: app, matching: .any)
++      .flatMap { $0.matching(identity).matching(binding).allElementsBoundByIndex }
++    let state = matches.count > 1 ? "ambiguous" : matches.first.map { $0.exists ? ($0.isHittable ? "ready" : "blocked") : "missing" } ?? "missing"
++    return Response(ok: true, data: DataPayload(pressReadiness: state, pressReadinessAppBundleId: appBundleId))
++  }
++
++  static func authorizedPressTargetPredicate(_ target: AuthorizedPressTarget) -> NSPredicate {
++    var predicates = [NSPredicate(format: "elementType == %@", NSNumber(value: target.type))]
++    // Broad prefilters preserve whitespace/canonical-equivalent bindings; the final match stays exact.
++    if let identifier = target.identifier?.trimmingCharacters(in: .whitespacesAndNewlines), !identifier.isEmpty {
++      predicates.append(NSPredicate(format: "identifier CONTAINS[cd] %@", identifier))
++    }
++    if let label = target.label?.trimmingCharacters(in: .whitespacesAndNewlines), !label.isEmpty {
++      predicates.append(NSPredicate(format: "label CONTAINS[cd] %@", label))
++    }
++    return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
++  }
++
+   func queryElement(app: XCUIApplication, selectorKey: String, selectorValue: String) throws -> Response {
+     // querySelector is a read — it backs get/is/wait and the offscreen-refusal
+     // double-check, none of which mutate. The fail-closed raw-match rule exists
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
+index d02f0f9..4b221ae 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
+@@ -1,3 +1,4 @@
++import XCTest
+ import AgentDeviceSnapshotPresentation
+ 
+ // MARK: - Wire Models
+@@ -14,6 +15,7 @@ enum CommandType: String, Codable, CaseIterable {
+   case desktopScroll
+   case findText
+   case querySelector
++  case pressReadiness
+   case readText
+   case snapshot
+   case screenshot
+@@ -239,6 +241,29 @@ struct RunnerLitPanelFact: Codable {
+   let heightPt: Double
+ }
+ 
++struct AuthorizedPressTarget: Codable {
++  let type: UInt
++  let identifier: String?
++  let label: String?
++  let value: String?
++  let rect: SnapshotRect
++  let point: PressTargetPoint
++
++  func matches(type: UInt, identifier: String?, label: String?, value: String?, rect: SnapshotRect) -> Bool {
++    func text(_ value: String?) -> String { (value ?? "").trimmingCharacters(in: .whitespacesAndNewlines) }
++    return self.type == type && text(self.identifier) == text(identifier)
++      && text(self.label) == text(label) && (type == XCUIElement.ElementType.secureTextField.rawValue || text(self.value) == text(value))
++      && [self.rect.x - rect.x, self.rect.y - rect.y, self.rect.width - rect.width, self.rect.height - rect.height]
++        .allSatisfy { $0.isFinite && abs($0) <= 1 }
++      && self.rect.width >= 0 && self.rect.height >= 0 && rect.width >= 0 && rect.height >= 0
++  }
++}
++
++struct PressTargetPoint: Codable {
++  let x: Double
++  let y: Double
++}
++
+ struct Command: Codable {
+   let command: CommandType
+   let commandId: String?
+@@ -247,6 +272,7 @@ struct Command: Codable {
+   let text: String?
+   let selectorKey: String?
+   let selectorValue: String?
++  let authorizedTarget: AuthorizedPressTarget?
+   let allowNonHittableCoordinateFallback: Bool?
+   let delayMs: Int?
+   let textEntryMode: String?
+@@ -332,7 +358,7 @@ extension Command {
+     case .actionButton, .volumeUp, .volumeDown:
+       return .presentedSurfaceMutation
+ 
+-    case .querySelector:
++    case .querySelector, .pressReadiness:
+       return .selectorResolution
+ 
+     case .mouseClick, .home, .recordStart, .activate:
+@@ -492,6 +518,8 @@ struct DataPayload: Codable {
+   var imageBase64: String?
+   var text: String?
+   var found: Bool?
++  var pressReadiness: String?
++  var pressReadinessAppBundleId: String?
+   var items: [String]?
+   /// Set on an alert read that is SpringBoard's `Open in “<App>”?` launch confirmation, in the
+   /// device's language; absent otherwise.
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+PrivateAXPresentation.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+PrivateAXPresentation.swift
+index f6365d5..000c76e 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+PrivateAXPresentation.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+PrivateAXPresentation.swift
+@@ -77,7 +77,9 @@ extension RunnerTests {
+       focused: fields.focused, selected: fields.selected,
+       hittable: false,
+       depth: depth, parentIndex: parentIndex, hiddenContentAbove: nil, hiddenContentBelow: nil,
+-      actions: fields.actions)
++      actions: fields.actions,
++      nativePressTarget: UInt(exactly: fields.rawType).flatMap { nativePressTarget(type: $0,
++        identifier: fields.identifier, label: fields.label, value: fields.value, frame: fields.rect) })
+   }
+ 
+   private func privateAXPresentationString(_ value: Any?) -> String {
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift
+index 17f409c..dc3f516 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift
+@@ -2,6 +2,14 @@ import XCTest
+ import AgentDeviceSnapshotPresentation
+ 
+ extension RunnerTests {
++  func nativePressTarget(type: UInt, identifier: String?, label: String?, value: String?, frame: CGRect) -> NativePressTarget? {
++#if os(iOS)
++    return NativePressTarget(type: type, identifier: identifier, label: label, value: value, rect: SnapshotRect(frame))
++#else
++    return nil
++#endif
++  }
++
+   func interactiveRootNode(rect: CGRect) -> RawAXNode {
+     RawAXNode(
+       index: 0,
+@@ -223,7 +231,12 @@ extension RunnerTests {
+       depth: depth,
+       parentIndex: parentIndex,
+       hiddenContentAbove: nil,
+-      hiddenContentBelow: nil
++      hiddenContentBelow: nil,
++      nativePressTarget: nativePressTarget(type: snapshot.elementType.rawValue,
++        identifier: evaluation.identifier.isEmpty ? nil : evaluation.identifier,
++        label: snapshot.label.isEmpty ? nil : snapshot.label,
++        value: snapshot.elementType == .secureTextField ? nil : Self.valueText(snapshot.value),
++        frame: snapshot.frame)
+     )
+   }
+ 
+@@ -519,7 +532,9 @@ extension RunnerTests {
+       depth: 0,
+       parentIndex: nil,
+       hiddenContentAbove: nil,
+-      hiddenContentBelow: nil
++      hiddenContentBelow: nil,
++      nativePressTarget: nativePressTarget(type: candidate.type.rawValue, identifier: candidate.identifier,
++        label: candidate.label, value: candidate.valueText, frame: candidate.frame)
+     )
+   }
+ 
+@@ -691,7 +706,9 @@ extension RunnerTests {
+         depth: 1,
+         parentIndex: parentIndex,
+         hiddenContentAbove: nil,
+-        hiddenContentBelow: nil
++        hiddenContentBelow: nil,
++        nativePressTarget: nativePressTarget(type: elementType.rawValue, identifier: identifier,
++          label: label, value: valueText, frame: frame)
+       )
+     })
+     if let exceptionMessage {
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandExecutionTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandExecutionTests.swift
+index 27d36a8..583396c 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandExecutionTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandExecutionTests.swift
+@@ -9,6 +9,17 @@ private final class RunnerCoordinateTapObserver {
+ }
+ 
+ extension RunnerTests {
++  @MainActor
++  func testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying() throws {
++    let command = try JSONDecoder().decode(Command.self, from: Data(
++      #"{"command":"pressReadiness","appBundleId":"com.example.session","authorizedTarget":{"type":9,"label":"Continue","rect":{"x":0,"y":0,"width":100,"height":40},"point":{"x":50,"y":20}}}"#.utf8))
++    let response = try executeOnMainPrepared(command: command, activeApp: app,
++      activeAppBundleId: "com.apple.SafariViewService")
++    XCTAssertTrue(response.ok)
++    XCTAssertEqual(response.data?.pressReadiness, "surface-mismatch")
++    XCTAssertEqual(response.data?.pressReadinessAppBundleId, "com.apple.SafariViewService")
++  }
++
+   private func observeCoordinateTaps(droppingFirst: Bool = false) throws -> (
+     observer: RunnerCoordinateTapObserver, restore: () -> Void
+   ) {
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ModelsTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ModelsTests.swift
+index 293685b..0e63d98 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ModelsTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ModelsTests.swift
+@@ -248,7 +248,7 @@ extension RunnerTests {
+   /// theirs. `appState` arrived with #2929, `pasteboardWrite` with the runner-written simulator
+   /// clipboard, `snapshotBridge` with the runner-served Simulator AX bridge.
+   private static let commandsNewerThanTheMergeBase: Set<CommandType> = [
+-    .appState, .pasteboardWrite, .volumeUp, .volumeDown, .snapshotBridge,
++    .appState, .pasteboardWrite, .volumeUp, .volumeDown, .snapshotBridge, .pressReadiness,
+   ]
+ 
+   /// The commands production never runs through the prepared path's body: `executeOnMain` answers
+@@ -308,6 +308,10 @@ extension RunnerTests {
+         .querySelector,
+         expectation(interaction: false, retry: false, launch: .existingApp, converts: true, retains: true, isReadOnly: true)
+       ),
++      (
++        .pressReadiness,
++        expectation(interaction: false, retry: false, launch: .existingApp, converts: true, retains: true, isReadOnly: true)
++      ),
+       (.readText, expectation(interaction: false, retry: true, launch: .existingApp, converts: false, retains: true, isReadOnly: true)),
+       (.snapshot, expectation(interaction: false, retry: true, launch: .existingApp, converts: false, retains: false, isReadOnly: true)),
+       (.screenshot, expectation(interaction: false, retry: true, launch: .noApp, converts: false, retains: false, isReadOnly: true)),
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
+index 243c01e..b920c48 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
+@@ -3,6 +3,68 @@ import AgentDeviceSnapshotPresentation
+ 
+ extension RunnerTests {
+ #if AGENT_DEVICE_RUNNER_UNIT_TESTS
++  func testNativeReadPrefilterPreservesNormalizedExactIdentity() {
++    for identifier in ["  continue-control\n", "", "caf\u{0065}\u{0301}"] {
++      let label = identifier.isEmpty ? "  caf\u{0065}\u{0301}\n" : "Continue"
++      let target = AuthorizedPressTarget(type: 9, identifier: identifier, label: label, value: nil,
++        rect: SnapshotRect(x: 10, y: 20, width: 100, height: 40), point: PressTargetPoint(x: 60, y: 40))
++      let rawIdentifier = identifier.trimmingCharacters(in: .whitespacesAndNewlines).precomposedStringWithCanonicalMapping
++      let rawLabel = label.trimmingCharacters(in: .whitespacesAndNewlines).precomposedStringWithCanonicalMapping
++      XCTAssertTrue(Self.authorizedPressTargetPredicate(target).evaluate(with: [
++        "elementType": 9, "identifier": rawIdentifier, "label": rawLabel,
++      ]))
++      XCTAssertFalse(Self.authorizedPressTargetPredicate(target).evaluate(with: [
++        "elementType": 9, "identifier": rawIdentifier, "label": "Unrelated",
++      ]))
++      XCTAssertTrue(target.matches(type: 9, identifier: rawIdentifier, label: rawLabel, value: nil, rect: target.rect))
++      XCTAssertFalse(target.matches(type: 9, identifier: rawIdentifier + "-other", label: rawLabel, value: nil, rect: target.rect))
++    }
++  }
++
++  func testAuthorizedPressTargetMatchesGoldenParityTable() throws {
++    struct Fixture: Decodable {
++      let name: String
++      let expected: NativePressTarget
++      let candidate: NativePressTarget
++      let matches: Bool
++    }
++    let root = URL(fileURLWithPath: #filePath)
++      .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
++      .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
++    let fixtures = try JSONDecoder().decode([Fixture].self, from:
++      Data(contentsOf: root.appendingPathComponent("contracts/fixtures/authorized-press-target.json")))
++      .map { fixture in
++        (name: fixture.name, expected: AuthorizedPressTarget(type: fixture.expected.type,
++          identifier: fixture.expected.identifier, label: fixture.expected.label, value: fixture.expected.value,
++          rect: fixture.expected.rect, point: PressTargetPoint(x: 0, y: 0)), candidate: fixture.candidate,
++          matches: fixture.matches)
++      }
++    XCTAssertFalse(fixtures.isEmpty)
++    for fixture in fixtures {
++      let candidate = fixture.candidate
++      XCTAssertEqual(fixture.expected.matches(type: candidate.type, identifier: candidate.identifier,
++        label: candidate.label, value: candidate.value, rect: candidate.rect), fixture.matches, fixture.name)
++    }
++    // JSON cannot encode non-finite numbers; both consumers exercise them natively.
++    let reference = fixtures[0].expected
++    let r = reference.rect
++    for invalid in [Double.nan, Double.infinity, -Double.infinity] {
++      for rect in [
++        SnapshotRect(x: invalid, y: r.y, width: r.width, height: r.height),
++        SnapshotRect(x: r.x, y: invalid, width: r.width, height: r.height),
++        SnapshotRect(x: r.x, y: r.y, width: invalid, height: r.height),
++        SnapshotRect(x: r.x, y: r.y, width: r.width, height: invalid),
++      ] {
++        XCTAssertFalse(reference.matches(type: reference.type, identifier: reference.identifier,
++          label: reference.label, value: reference.value, rect: rect))
++        let invalidTarget = AuthorizedPressTarget(type: reference.type, identifier: reference.identifier,
++          label: reference.label, value: reference.value, rect: rect, point: reference.point)
++        XCTAssertFalse(invalidTarget.matches(type: reference.type, identifier: reference.identifier,
++          label: reference.label, value: reference.value, rect: rect))
++      }
++    }
++  }
++
+   func testDirectSelectorRejectsTwoRawMatchesBeforeHittabilityPreference() {
+     let decision = classifyDirectSelectorCandidates(
+       [
+@@ -118,6 +180,23 @@ extension RunnerTests {
+     XCTAssertEqual(response.data?.nodes?.count, 1)
+     XCTAssertEqual(response.data?.nodes?.first?.identifier, duplicateIdentifier)
+     XCTAssertEqual(response.data?.nodes?.first?.hittable, true)
++
++    // The same native owner must not use the read preference for a previously resolved target.
++    for element in matches {
++      let frame = element.frame
++      // Canonical presentation coordinates must not filter the source-native identity/frame.
++      for point in [PressTargetPoint(x: frame.midX, y: frame.midY), PressTargetPoint(x: -10_000, y: -10_000)] {
++        let target = AuthorizedPressTarget(type: element.elementType.rawValue,
++          identifier: element.identifier, label: element.label, value: String(describing: element.value ?? ""),
++          rect: SnapshotRect(frame), point: point)
++        let readiness = try queryAuthorizedPressTarget(app: app, target: target)
++        XCTAssertEqual(readiness.data?.pressReadiness, element.isHittable ? "ready" : "blocked")
++      }
++      let changedValue = AuthorizedPressTarget(type: element.elementType.rawValue,
++        identifier: element.identifier, label: element.label, value: "not-the-native-value",
++        rect: SnapshotRect(frame), point: PressTargetPoint(x: frame.midX, y: frame.midY))
++      XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: changedValue).data?.pressReadiness, "missing")
++    }
+   }
+ #endif
+ #endif
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotAcquisitionTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotAcquisitionTests.swift
+index b884ebf..54d26f8 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotAcquisitionTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotAcquisitionTests.swift
+@@ -10,18 +10,19 @@ final class ElementAttributesFixture: NSObject, XCUIElementSnapshot {
+   let label: String
+   let children: [XCUIElementSnapshot]
+   let identifier: String
++  let value: Any?
+   @objc let displayID: NSNumber?
+ 
+-  init(_ elementType: XCUIElement.ElementType, _ frame: CGRect, label: String = "", identifier: String = "", children: [XCUIElementSnapshot] = [], displayID: NSNumber? = nil) {
++  init(_ elementType: XCUIElement.ElementType, _ frame: CGRect, label: String = "", identifier: String = "", children: [XCUIElementSnapshot] = [], displayID: NSNumber? = nil, value: Any? = nil) {
+     self.elementType = elementType
+     self.frame = frame
+     self.label = label
+     self.children = children
+     self.identifier = identifier
+     self.displayID = displayID
++    self.value = value
+   }
+ 
+-  var value: Any? { nil }
+   var title: String { "" }
+   var isEnabled: Bool { true }
+   var horizontalSizeClass: XCUIElement.SizeClass { .unspecified }
+@@ -35,6 +36,29 @@ final class ElementAttributesFixture: NSObject, XCUIElementSnapshot {
+ }
+ 
+ extension RunnerTests {
++  @MainActor
++  func testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis() {
++    let frame = CGRect(x: 10, y: 20, width: 100, height: 40)
++    let child = ElementAttributesFixture(.staticText, frame, label: "Continue")
++    for snapshot in [
++      ElementAttributesFixture(.slider, frame, value: "0.5"),
++      ElementAttributesFixture(.switch, frame, value: "1"),
++      ElementAttributesFixture(.button, frame, children: [child]),
++    ] {
++      let evaluation = evaluateSnapshot(snapshot)
++      XCTAssertFalse(evaluation.label.isEmpty, "fixture must exercise synthesized presentation")
++      let captured = makeSnapshotNode(snapshot: snapshot, evaluation: evaluation, depth: 1, index: 1, parentIndex: 0)
++      XCTAssertEqual(captured.label, evaluation.label)
++#if os(iOS)
++      XCTAssertEqual(captured.nativePressTarget?.type, snapshot.elementType.rawValue)
++      XCTAssertNil(captured.nativePressTarget?.label)
++      XCTAssertEqual(captured.nativePressTarget?.value, Self.valueText(snapshot.value))
++#else
++      XCTAssertNil(captured.nativePressTarget)
++#endif
++    }
++  }
++
+   private static let containerFrame = CGRect(x: 20, y: 800, width: 360, height: 31)
+ 
+   @MainActor
+diff --git a/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotCoordinateSpace.swift b/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotCoordinateSpace.swift
+index efe6985..6d4f033 100644
+--- a/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotCoordinateSpace.swift
++++ b/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotCoordinateSpace.swift
+@@ -274,7 +274,8 @@ extension SnapshotGeometrySpace {
+               enabled: node.enabled,
+               frame: frame,
+               viewport: viewport
+-            )
++            ),
++          nativePressTargetRect: node.nativePressTarget.map { SnapshotRect(nodeSpace.orientedFrame(of: $0.rect.cgRect)) }
+         )
+       )
+     }
+diff --git a/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift b/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift
+index 5ef9708..cf35541 100644
+--- a/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift
++++ b/apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift
+@@ -28,7 +28,25 @@ public struct SnapshotRect: Codable, Equatable {
+   }
+ }
+ 
++public struct NativePressTarget: Codable, Equatable {
++  public let type: UInt
++  public let identifier: String?
++  public let label: String?
++  public let value: String?
++  public let rect: SnapshotRect
++
++  public init(type: UInt, identifier: String?, label: String?, value: String?, rect: SnapshotRect) {
++    self.type = type
++    self.identifier = identifier
++    self.label = label
++    // XCUIElement.ElementType.secureTextField.rawValue; this portable package does not import XCTest.
++    self.value = type == 50 ? nil : value
++    self.rect = rect
++  }
++}
++
+ public struct RawAXNode: Equatable {
++  public private(set) var nativePressTarget: NativePressTarget?
+   public private(set) var index: Int
+   public let type: String
+   public let label: String?
+@@ -66,8 +84,10 @@ public struct RawAXNode: Equatable {
+     parentIndex: Int?,
+     hiddenContentAbove: Bool?,
+     hiddenContentBelow: Bool?,
+-    actions: [String]? = nil
++    actions: [String]? = nil,
++    nativePressTarget: NativePressTarget? = nil
+   ) {
++    self.nativePressTarget = nativePressTarget
+     self.index = index
+     self.type = type
+     self.label = label
+@@ -86,10 +106,14 @@ public struct RawAXNode: Equatable {
+     self.actions = actions
+   }
+ 
+-  func replacing(rect: SnapshotRect, hittable: Bool?) -> RawAXNode {
++  func replacing(rect: SnapshotRect, hittable: Bool?, nativePressTargetRect: SnapshotRect?) -> RawAXNode {
+     var updated = self
+     updated.rect = rect
+     updated.hittable = hittable
++    if let source = nativePressTarget, let nativePressTargetRect {
++      updated.nativePressTarget = NativePressTarget(type: source.type, identifier: source.identifier,
++        label: source.label, value: source.value, rect: nativePressTargetRect)
++    }
+     return updated
+   }
+ 
+@@ -299,6 +323,7 @@ public struct SnapshotPresentationNode {
+ }
+ 
+ public struct PresentedNode: Codable, Equatable {
++  public let nativePressTarget: NativePressTarget?
+   public let index: Int
+   public let type: String
+   public let label: String?
+@@ -324,6 +349,7 @@ public struct PresentedNode: Codable, Equatable {
+     depth: Int? = nil,
+     parentIndex: Int?? = nil
+   ) {
++    self.nativePressTarget = raw.nativePressTarget
+     self.index = index ?? raw.index
+     self.type = raw.type
+     self.label = raw.label
+diff --git a/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift b/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift
+index 2b90b2c..d039b02 100644
+--- a/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift
++++ b/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift
+@@ -44,7 +44,9 @@ final class ConformanceTests: XCTestCase {
+             depth: 1,
+             parentIndex: 0,
+             hiddenContentAbove: nil,
+-            hiddenContentBelow: nil
++            hiddenContentBelow: nil,
++            nativePressTarget: NativePressTarget(type: 9, identifier: nil, label: "Continue", value: nil,
++              rect: SnapshotRect(x: 80, y: 10, width: 40, height: 20))
+           ),
+         ],
+         truncated: false,
+@@ -57,8 +59,22 @@ final class ConformanceTests: XCTestCase {
+ 
+     XCTAssertEqual(result.nodes.map(\.label), ["App", "Continue"])
+     XCTAssertEqual(result.nodes[1].rect, SnapshotRect(x: 80, y: 10, width: 20, height: 20))
++    XCTAssertEqual(result.nodes[1].nativePressTarget?.rect, SnapshotRect(x: 80, y: 10, width: 40, height: 20))
++    XCTAssertEqual(result.nodes[1].nativePressTarget?.type, 9)
+     XCTAssertEqual(result.qualityNotes.first?.code, .regularGeometryClipped)
+     XCTAssertEqual(result.qualityNotes.first?.clippedNodeCount, 1)
+     XCTAssertEqual(result.qualityNotes.first?.droppedNodeCount, 0)
+   }
++  func testSecureValuesAreOmittedBeforeNativeBindingSerialization() throws {
++    let raw = RawAXNode(index: 0, type: "SecureTextField", label: "Password", identifier: "password",
++      value: "private-secret", rect: SnapshotRect(x: 0, y: 0, width: 100, height: 40),
++      enabled: true, focused: nil, selected: nil, hittable: true, depth: 0, parentIndex: nil,
++      hiddenContentAbove: nil, hiddenContentBelow: nil,
++      nativePressTarget: NativePressTarget(type: 50, identifier: "password", label: "Password", value: "private-secret",
++        rect: SnapshotRect(x: 0, y: 0, width: 100, height: 40)))
++    XCTAssertNil(raw.nativePressTarget?.value)
++    let encoded = try JSONEncoder().encode(raw.nativePressTarget)
++    XCTAssertFalse(String(decoding: encoded, as: UTF8.self).contains("private-secret"))
++  }
++
+ }
+diff --git a/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/CoordinateSpaceTests.swift b/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/CoordinateSpaceTests.swift
+index 5a4c641..569cf85 100644
+--- a/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/CoordinateSpaceTests.swift
++++ b/apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/CoordinateSpaceTests.swift
+@@ -384,9 +384,10 @@ final class CoordinateSpaceTests: XCTestCase {
+   ) -> RawAXNode {
+     RawAXNode(
+       index: index, type: type, label: label, identifier: nil, value: nil,
+-      rect: SnapshotRect(x: rect.minX, y: rect.minY, width: rect.width, height: rect.height),
++      rect: SnapshotRect(rect.standardized),
+       enabled: true, focused: nil, selected: nil, hittable: false,
+-      depth: depth, parentIndex: parent, hiddenContentAbove: nil, hiddenContentBelow: nil
++      depth: depth, parentIndex: parent, hiddenContentAbove: nil, hiddenContentBelow: nil,
++      nativePressTarget: type == "Button" ? NativePressTarget(type: 9, identifier: nil, label: label, value: nil, rect: SnapshotRect(rect)) : nil
+     )
+   }
+ 
+@@ -408,6 +409,7 @@ final class CoordinateSpaceTests: XCTestCase {
+       )
+       XCTAssertEqual(normalized.count, 4)
+       XCTAssertEqual(normalized[3].rect.cgRect, expected.cgRect, testCase.name)
++      XCTAssertEqual(normalized[3].nativePressTarget?.rect.cgRect, expected.cgRect, testCase.name)
+     }
+   }
+ 
+diff --git a/contracts/fixtures/authorized-press-target.json b/contracts/fixtures/authorized-press-target.json
+new file mode 100644
+index 0000000..9c49c09
+--- /dev/null
++++ b/contracts/fixtures/authorized-press-target.json
+@@ -0,0 +1,403 @@
++[
++  {
++    "name": "same target",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "one point capture rounding",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 41,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "target moved",
++    "expected": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "rect": {
++        "x": 42,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": false
++  },
++  {
++    "name": "different control role",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 48,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": false
++  },
++  {
++    "name": "different label same rectangle",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Replacement",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": false
++  },
++  {
++    "name": "different identifier same rectangle",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      },
++      "identifier": "other"
++    },
++    "matches": false
++  },
++  {
++    "name": "different native value",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      },
++      "value": "1"
++    },
++    "matches": false
++  },
++  {
++    "name": "label case is identity",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": false
++  },
++  {
++    "name": "anonymous exact rectangle",
++    "expected": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "secure value is never required or duplicated",
++    "expected": {
++      "type": 50,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 50,
++      "value": "redacted",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "shared nonempty identifier and value",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      },
++      "identifier": "continue-control",
++      "value": "Ready"
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      },
++      "identifier": "continue-control",
++      "value": "Ready"
++    },
++    "matches": true
++  },
++  {
++    "name": "negative width",
++    "expected": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": -1,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": -1,
++        "height": 50
++      }
++    },
++    "matches": false
++  },
++  {
++    "name": "positive y width height rounding",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 241,
++        "width": 101,
++        "height": 51
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "negative y width height rounding",
++    "expected": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "label": "Continue",
++      "rect": {
++        "x": 40,
++        "y": 239,
++        "width": 99,
++        "height": 49
++      }
++    },
++    "matches": true
++  },
++  {
++    "name": "y outside capture rounding",
++    "expected": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 242,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "matches": false
++  },
++  {
++    "name": "width outside capture rounding",
++    "expected": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 102,
++        "height": 50
++      }
++    },
++    "matches": false
++  },
++  {
++    "name": "height outside capture rounding",
++    "expected": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 50
++      }
++    },
++    "candidate": {
++      "type": 9,
++      "rect": {
++        "x": 40,
++        "y": 240,
++        "width": 100,
++        "height": 52
++      }
++    },
++    "matches": false
++  }
++]
+diff --git a/contracts/fixtures/runner-command-read-only.json b/contracts/fixtures/runner-command-read-only.json
+index a49de04..773a975 100644
+--- a/contracts/fixtures/runner-command-read-only.json
++++ b/contracts/fixtures/runner-command-read-only.json
+@@ -107,6 +107,12 @@
+     },
+     "readOnly": false
+   },
++  {
++    "command": {
++      "command": "pressReadiness"
++    },
++    "readOnly": true
++  },
+   {
+     "command": {
+       "command": "querySelector"
+diff --git a/contracts/fixtures/runner-requests.json b/contracts/fixtures/runner-requests.json
+index 36ccc24..a736474 100644
+--- a/contracts/fixtures/runner-requests.json
++++ b/contracts/fixtures/runner-requests.json
+@@ -64,6 +64,7 @@
+   {"name": "ios-simulator.runner-command-recovery.status", "producer": "packages/apple-runner/src/__tests__/index-runner-requests.test.ts", "request": {"command": "status", "statusCommandId": "<commandId>"}},
+   {"name": "ios-simulator.runner-disposal.shutdown", "producer": "packages/apple-runner/src/__tests__/index-runner-requests.test.ts", "request": {"command": "shutdown", "commandId": "<commandId>"}},
+   {"name": "ios-simulator.runner-lifecycle-prepare.uptime", "producer": "packages/apple-runner/src/__tests__/index-runner-requests.test.ts", "request": {"command": "uptime", "commandId": "<commandId>"}},
++  {"name": "ios-simulator.runner-press-readiness.authorized-target", "producer": "packages/platform-apple/src/__tests__/index-runner-requests.test.ts", "request": {"command": "pressReadiness", "authorizedTarget": {"type": 9, "identifier": "continue-control", "label": "Continue", "value": "Ready", "rect": {"x": 40, "y": 240, "width": 100, "height": 50}, "point": {"x": 90, "y": 265}}, "appBundleId": "com.example.app", "commandId": "<commandId>"}},
+   {"name": "ios-simulator.runner-selector-query.label", "producer": "packages/platform-apple/src/__tests__/index-runner-requests.test.ts", "request": {"command": "querySelector", "selectorKey": "label", "selectorValue": "Go", "appBundleId": "com.example.app", "commandId": "<commandId>"}},
+   {"name": "ios-simulator.runner-sequence.bound-orientation", "producer": "packages/platform-apple/src/__tests__/interactions-press-series-runner-requests.test.ts", "request": {"command": "sequence", "steps": [{"kind": "tap", "x": 10, "y": 20, "synthesized": true}], "appBundleId": "com.example.app", "sequenceOrientation": 1, "commandId": "<commandId>"}},
+   {"name": "ios-simulator.runner-session-readiness.uptime", "producer": "packages/apple-runner/src/__tests__/index-runner-requests.test.ts", "request": {"command": "uptime", "commandId": "<commandId>"}},
+diff --git a/contracts/fixtures/runner-surface-policy.json b/contracts/fixtures/runner-surface-policy.json
+index 933b248..ec46cb0 100644
+--- a/contracts/fixtures/runner-surface-policy.json
++++ b/contracts/fixtures/runner-surface-policy.json
+@@ -10,6 +10,7 @@
+   "desktopScroll": "none",
+   "findText": "app-windows",
+   "querySelector": "app-windows",
++  "pressReadiness": "app-windows",
+   "readText": "app-windows",
+   "snapshot": "app-windows",
+   "snapshotBridge": "none",
+diff --git a/docs/adr/0011-interaction-guarantee-contract.md b/docs/adr/0011-interaction-guarantee-contract.md
+index ed88537..7ec87c1 100644
+--- a/docs/adr/0011-interaction-guarantee-contract.md
++++ b/docs/adr/0011-interaction-guarantee-contract.md
+@@ -18,6 +18,7 @@ Completed process history is in git history.
+ - Multiple mutating selector matches collapse only if they form one ancestor–descendant chain and every member resolves to the same actionable node. Otherwise, the mutation fails with `AMBIGUOUS_MATCH`. Maestro's explicit expected-point/non-hittable compatibility path stays separate.
+ - Keep synthesized iOS gesture policy outside the element dispatch-path matrix.
+ - On Android, the press/click moving-target guard samples fresh geometry until the target remains on one surface at one position for 100 ms, within a 1,500 ms transition window. A target that cannot establish that evidence is refused. Other platforms retain their existing guard schedule.
++- On `runtime-ref` and `runtime-selector`, ordinary primary iOS `press` and `click` actions wait for native hittability when the request-bound Apple runtime advertises `pressReadiness`. The original request budget bounds the wait; ambiguity or changed target authorization refuses input.
+ 
+ ## Context
+ 
+@@ -86,6 +87,7 @@ export const INTERACTION_GUARANTEES = [
+   'resolutionDisclosure',  // disclose the source of target resolution
+   'outcomeObservation',    // state what the path observes after dispatch
+   'targetStability',       // refuse tap positions that change between observations
++  'nativeReadiness',       // wait for admitted native control readiness before ordinary press/click
+ ] as const;
+ ```
+ 
+@@ -319,6 +321,27 @@ Since #1105, the capture-resolving interaction commands also declare `preserve-d
+ Their dominant timeout mode is the same blocked accessibility capture as `snapshot`.
+ A daemon reset there destroyed every healthy app session that the daemon owned.
+ 
++### Native readiness for ordinary iOS taps
++
++Ordinary resolved `press` and `click` actions wait implicitly when the request-bound Apple owner
++reports that the exact authorized control is not natively hittable. The snapshot `hittable` field records capture-time geometric actionability; it does not establish that an overlay has released input. The native read checks live control hittability separately. The native mutation-read binds numeric element type, identifier, label, value, and rectangle before
++counting matches; a hittable duplicate cannot replace a blocked target. The binding keeps the capture
++producer's native identity and full rectangle, after required coordinate normalization and before row
++promotion or clipping. This private evidence survives session storage and is omitted from public
++snapshots. Secure field values are omitted before the wire.
++A native reply must prove the actual queried app matches the authorized surface. After a blocked
++read, the fresh canonical parent/child guards choose the dispatch point. The wait polls only this native binding. After a blocked wait becomes ready, one fresh canonical capture must still authorize the same target on the same surface before input. The original request deadline and cancellation signal bound every read and capture.
++Expected-target and already-resolved bindings are checked once and refuse a blocked control
++without recapturing or replacing that binding.
++Only `blocked` is waitable. A `missing` native match, ambiguity, changed authorization, unsupported native proof, cancellation, or timeout refuses before input. Raw coordinates and non-default tap options retain their existing semantics.
++
++The retained rectangle must use the same coordinate space as the live native element frame.
++Control matching does not filter candidates by containment of the canonical tap point.
++Canonical point guards validate that point separately.
++The request admits the dedicated internal `pressReadiness` operation conditionally. A public `querySelector` operation alone does not authorize this check. Public selector reads retain their existing matching policy. This guard supplies a necessary condition for fully blocked controls; native
++hittability does not certify the preserved point against partial app-drawn coverage. It does not
++wait for a selector that canonical resolution could not initially find.
++
+ ## Consequences
+ 
+ - A new dispatch path or a new guarantee forces a whole-matrix decision.
+@@ -441,6 +464,7 @@ Step 3 is not complete:
+ 
+ ## Alternatives considered
+ 
++- **An explicit transition-wait API or a fixed sleep:** rejected for native readiness. Tree stability and a universal duration cannot establish whether a control can receive input.
+ - **Delete the fast paths** (single resolution spine): unacceptable.
+   The direct iOS path saves a full snapshot round trip per interaction.
+   The ref fast path is the backbone of replay throughput.
+diff --git a/packages/apple-runner/src/__tests__/runner-command-traits.test.ts b/packages/apple-runner/src/__tests__/runner-command-traits.test.ts
+index fd08966..0743397 100644
+--- a/packages/apple-runner/src/__tests__/runner-command-traits.test.ts
++++ b/packages/apple-runner/src/__tests__/runner-command-traits.test.ts
+@@ -53,6 +53,7 @@ test('runner command trait table pins lifecycle-sensitive command groups', () =>
+       'appState',
+       'findText',
+       'gestureViewport',
++      'pressReadiness',
+       'querySelector',
+       'readText',
+       'screenshot',
+diff --git a/packages/apple-runner/src/runner-command-traits.ts b/packages/apple-runner/src/runner-command-traits.ts
+index a6dea8d..9bfdaac 100644
+--- a/packages/apple-runner/src/runner-command-traits.ts
++++ b/packages/apple-runner/src/runner-command-traits.ts
+@@ -79,6 +79,7 @@ export const RUNNER_COMMAND_TRAITS = {
+   desktopScroll: PREFLIGHT_SKIPPABLE_TOUCH_MUTATION_TRAITS,
+   findText: READ_ONLY_TRAITS,
+   querySelector: READ_ONLY_TRAITS,
++  pressReadiness: READ_ONLY_TRAITS,
+   readText: READ_ONLY_TRAITS,
+   snapshot: READ_ONLY_TRAITS,
+   screenshot: READ_ONLY_TRAITS,
+@@ -123,6 +124,7 @@ const RUNNER_COMMAND_SURFACE_POLICY = {
+   desktopScroll: 'none',
+   findText: 'app-windows',
+   querySelector: 'app-windows',
++  pressReadiness: 'app-windows',
+   readText: 'app-windows',
+   snapshot: 'app-windows',
+   screenshot: 'observed-screen',
+diff --git a/packages/apple-runner/src/runner-contract.ts b/packages/apple-runner/src/runner-contract.ts
+index d1aadeb..1ba706e 100644
+--- a/packages/apple-runner/src/runner-contract.ts
++++ b/packages/apple-runner/src/runner-contract.ts
+@@ -1,3 +1,4 @@
++import type { AuthorizedPressTarget } from '@agent-device/contracts/selector-observation-runtime';
+ import {
+   AppError,
+   createRequestCanceledError,
+@@ -88,6 +89,7 @@ export type RunnerCommand = {
+     | 'desktopScroll'
+     | 'findText'
+     | 'querySelector'
++    | 'pressReadiness'
+     | 'readText'
+     | 'snapshot'
+     | 'screenshot'
+@@ -127,6 +129,7 @@ export type RunnerCommand = {
+   text?: string;
+   selectorKey?: ElementSelectorKey;
+   selectorValue?: string;
++  authorizedTarget?: AuthorizedPressTarget;
+   allowNonHittableCoordinateFallback?: boolean;
+   delayMs?: number;
+   textEntryMode?: 'append' | 'replace';
+diff --git a/packages/capture-kit/src/snapshot-state.ts b/packages/capture-kit/src/snapshot-state.ts
+index 63010b6..f0b824b 100644
+--- a/packages/capture-kit/src/snapshot-state.ts
++++ b/packages/capture-kit/src/snapshot-state.ts
+@@ -1,5 +1,6 @@
+ import type { CommandFlags } from '@agent-device/contracts/command';
+ import {
++  attachSnapshotNativePressTargets,
+   readSnapshotOcclusionContextEvidence,
+   readSnapshotTextInputGeometry,
+   attachSnapshotTextInputGeometry,
+@@ -100,11 +101,13 @@ export function buildSnapshotState(
+       : normalizedNodes;
+   const annotations = snapshotCaptureAnnotationsFrom(data);
+   const presentation = snapshotPresentationOptionsFromFlags(flags);
+-  const nodes = attachRefs(
+-    snapshotRaw
+-      ? scopedNodes
+-      : annotateCoveredSnapshotNodes(scopedNodes, overlayOptionsForBackend(data?.backend)),
+-    snapshotRefMinting(data),
++  const nodes = stripNativePressTargets(
++    attachRefs(
++      snapshotRaw
++        ? scopedNodes
++        : annotateCoveredSnapshotNodes(scopedNodes, overlayOptionsForBackend(data?.backend)),
++      snapshotRefMinting(data),
++    ),
+   );
+   const textInputGeometry = readSnapshotTextInputGeometry(data.nodes);
+   if (textInputGeometry) attachSnapshotTextInputGeometry(nodes, textInputGeometry);
+@@ -134,6 +137,17 @@ export function buildSnapshotState(
+   };
+ }
+ 
++function stripNativePressTargets(nodes: import('@agent-device/kernel/snapshot').SnapshotNode[]) {
++  const targets = new Map(
++    nodes.flatMap((node) =>
++      node.nativePressTarget ? [[node.index, node.nativePressTarget] as const] : [],
++    ),
++  );
++  if (!targets.size) return nodes;
++  const published = nodes.map(({ nativePressTarget: _private, ...node }) => node);
++  return attachSnapshotNativePressTargets(published, targets);
++}
++
+ function annotateBackendReplacementSurfaces(
+   owner: object & { backend?: SnapshotBackend },
+   nodes: RawSnapshotNode[],
+diff --git a/packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts b/packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts
+new file mode 100644
+index 0000000..062bf07
+--- /dev/null
++++ b/packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts
+@@ -0,0 +1,104 @@
++import { expect, test } from 'vitest';
++import type { RawSnapshotNode } from '@agent-device/kernel/snapshot';
++import { readSnapshotNativePressTargets } from '@agent-device/contracts/snapshot-private-evidence';
++import { presentIosSnapshotAcquisition } from '../ios-snapshot-runtime.ts';
++import { buildSnapshotState } from '../../snapshot-state.ts';
++
++const screen = { x: 0, y: 0, width: 390, height: 844 };
++const full = { x: 16, y: 100, width: 350, height: 100 };
++const nodes: RawSnapshotNode[] = [
++  { index: 0, depth: 0, type: 'Application', rect: screen },
++  {
++    index: 1,
++    parentIndex: 0,
++    depth: 1,
++    type: 'ScrollView',
++    rect: { x: 0, y: 150, width: 390, height: 100 },
++  },
++  { index: 2, parentIndex: 1, depth: 2, type: 'Cell', label: 'General', rect: full },
++  { index: 3, parentIndex: 2, depth: 3, type: 'Other', label: 'General', rect: full },
++  {
++    index: 4,
++    parentIndex: 3,
++    depth: 4,
++    type: 'Button',
++    label: 'General',
++    identifier: 'com.apple.settings.general',
++    rect: full,
++  },
++];
++
++// Source/native identity must survive geometric and semantic presentation. Comparing public Cell
++// id/rect with raw XCTest would miss a ready Settings row; prior guard fixtures never presented it.
++for (const raw of [false, true]) {
++  test(`native source binding survives clipping and promoted identifiers without leaking: raw=${raw}`, () => {
++    const captured = presentIosSnapshotAcquisition(
++      {
++        stage: 'acquired',
++        acquisition: {
++          producer: 'simulator-ax-bridge',
++          intent: 'full',
++          nodes: nodes.map((node, index) => ({
++            ...node,
++            nativePressTarget: {
++              type: [2, 46, 75, 1, 9][index]!,
++              label: node.label,
++              identifier: node.identifier,
++              value: node.value,
++              rect: node.rect!,
++            },
++          })),
++          truncated: false,
++          viewport: { kind: 'reported', rect: screen },
++          lineage: { targetId: 'sim-1' },
++          residue: [],
++        },
++      },
++      { interactiveOnly: true, raw },
++    );
++    const snapshot = buildSnapshotState(captured, {
++      snapshotInteractiveOnly: true,
++      snapshotRaw: raw,
++    });
++    const cell = snapshot.nodes.find((node) => node.type === 'Cell')!;
++    if (!raw) {
++      expect(cell.identifier).toBe('com.apple.settings.general');
++      expect(cell.rect).toEqual({ x: 16, y: 150, width: 350, height: 50 });
++    }
++    expect(readSnapshotNativePressTargets(snapshot.nodes)?.get(cell.index)).toEqual({
++      type: 75,
++      label: 'General',
++      identifier: undefined,
++      value: undefined,
++      rect: full,
++    });
++    expect(JSON.stringify(snapshot)).not.toContain('nativePressTarget');
++  });
++}
++
++test('an acquired provider without native provenance does not gain readiness evidence', () => {
++  const captured = presentIosSnapshotAcquisition({
++    stage: 'acquired',
++    acquisition: {
++      producer: 'simulator-ax-bridge',
++      intent: 'full',
++      truncated: false,
++      nodes: [
++        nodes[0]!,
++        {
++          index: 1,
++          parentIndex: 0,
++          depth: 1,
++          type: 'SecureTextField',
++          value: 'private-secret',
++          rect: full,
++        },
++      ],
++      viewport: { kind: 'reported', rect: screen },
++      lineage: {},
++      residue: [],
++    },
++  });
++  const snapshot = buildSnapshotState(captured, {});
++  expect(readSnapshotNativePressTargets(snapshot.nodes)?.size ?? 0).toBe(0);
++});
+diff --git a/packages/command-runtime/src/command-runtime/runtime-factory.ts b/packages/command-runtime/src/command-runtime/runtime-factory.ts
+index b5069c4..1e214b3 100644
+--- a/packages/command-runtime/src/command-runtime/runtime-factory.ts
++++ b/packages/command-runtime/src/command-runtime/runtime-factory.ts
+@@ -1,3 +1,4 @@
++import { copySnapshotNativePressTargets } from '@agent-device/contracts/capture';
+ import type {
+   AgentDeviceRuntime,
+   AgentDeviceRuntimeConfig,
+@@ -51,7 +52,7 @@ function cloneSessionRecord(
+   if (!record) return undefined;
+   return {
+     ...record,
+-    ...(record.snapshot ? { snapshot: structuredClone(record.snapshot) } : {}),
++    ...(record.snapshot ? { snapshot: cloneSnapshot(record.snapshot) } : {}),
+     ...(record.metadata ? { metadata: cloneMetadata(record.metadata) } : {}),
+   };
+ }
+@@ -63,3 +64,9 @@ function cloneMetadata(metadata: Record<string, unknown>): Record<string, unknow
+     return { ...metadata };
+   }
+ }
++
++function cloneSnapshot(snapshot: NonNullable<CommandSessionRecord['snapshot']>) {
++  const cloned = structuredClone(snapshot);
++  copySnapshotNativePressTargets(snapshot.nodes, cloned.nodes);
++  return cloned;
++}
+diff --git a/packages/command-runtime/src/commands/capture/runtime/snapshot-unchanged.ts b/packages/command-runtime/src/commands/capture/runtime/snapshot-unchanged.ts
+index 90957fd..f84a4b1 100644
+--- a/packages/command-runtime/src/commands/capture/runtime/snapshot-unchanged.ts
++++ b/packages/command-runtime/src/commands/capture/runtime/snapshot-unchanged.ts
+@@ -99,6 +99,7 @@ type ComparableSnapshotNode = Omit<
+   | 'inheritsLabel'
+   | 'inheritsIdentifier'
+   | 'iosValueSemantics'
++  | 'nativePressTarget'
+ >;
+ 
+ type ScalarPresentationField = Exclude<
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/interactions.ts b/packages/command-runtime/src/commands/interaction/runtime/interactions.ts
+index e709673..8a2b1ff 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/interactions.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/interactions.ts
+@@ -162,12 +162,25 @@ async function tapCommand(
+   // The moving-target gate (#3471): after every pre-dispatch guard has accepted the target and
+   // before the device is touched. A press issued straight after an action that animated the UI can
+   // otherwise resolve a point the control has already vacated and report success on the vacancy.
+-  const atRest = await guardResolvedTargetAgainstMotion(
++  let atRest = await guardResolvedTargetAgainstMotion(
+     runtime,
+     options,
+     resolutionRequest,
+     resolved,
+   );
++  if (
++    atRest.kind !== 'point' &&
++    runtime.backend.readPressReadiness &&
++    (options.count ?? 1) === 1 &&
++    (options.intervalMs ?? 0) === 0 &&
++    (options.holdMs ?? 0) === 0 &&
++    (options.jitterPx ?? 0) === 0 &&
++    options.doubleTap !== true &&
++    (options.button ?? 'primary') === 'primary'
++  ) {
++    const { guardPressReadiness } = await import('./press-readiness.ts');
++    atRest = await guardPressReadiness(runtime, options, resolutionRequest, atRest);
++  }
+   const point = requireResolvedPoint(atRest);
+   const pointObservation = pointObservationOf(atRest);
+   let backendResult;
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts b/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts
+index d820790..efe75f4 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts
+@@ -302,7 +302,7 @@ type MovingTargetMeasured = {
+  * what actually got dispatched — a resolution that kept its authorized frame node measured nothing
+  * here, and the gate refuses rather than comparing one stale rect to itself.
+  */
+-async function reObserveTarget(
++export async function reObserveTarget(
+   runtime: AgentDeviceRuntime,
+   options: CommandContext & { target: InteractionTarget },
+   params: ResolveInteractionTargetParams,
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts
+new file mode 100644
+index 0000000..10e3422
+--- /dev/null
++++ b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts
+@@ -0,0 +1,36 @@
++import { readFileSync } from 'node:fs';
++import { expect, test } from 'vitest';
++import { matchesAuthorizedPressTarget } from './press-readiness-binding.ts';
++import type { SnapshotNativePressTarget } from '@agent-device/kernel/snapshot';
++
++// Shared with the native mutation-read: identity or capture geometry changes must never rebind input.
++const cases = JSON.parse(
++  readFileSync(
++    new URL('../../../../../../contracts/fixtures/authorized-press-target.json', import.meta.url),
++    'utf8',
++  ),
++) as {
++  name: string;
++  expected: SnapshotNativePressTarget;
++  candidate: SnapshotNativePressTarget;
++  matches: boolean;
++}[];
++for (const fixture of cases) {
++  test(`authorized native target parity: ${fixture.name}`, () => {
++    expect(matchesAuthorizedPressTarget(fixture.expected, fixture.candidate)).toBe(fixture.matches);
++  });
++}
++
++// JSON cannot encode non-finite numbers; both language consumers exercise them natively.
++for (const field of ['x', 'y', 'width', 'height'] as const) {
++  test(`non-finite native ${field} never establishes a binding`, () => {
++    const { expected, candidate } = cases[0]!;
++    for (const value of [Number.NaN, Infinity, -Infinity]) {
++      const rect = { ...candidate.rect, [field]: value };
++      expect(matchesAuthorizedPressTarget(expected, { ...candidate, rect })).toBe(false);
++      expect(matchesAuthorizedPressTarget({ ...expected, rect }, { ...candidate, rect })).toBe(
++        false,
++      );
++    }
++  });
++}
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
+new file mode 100644
+index 0000000..c82da97
+--- /dev/null
++++ b/packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts
+@@ -0,0 +1,21 @@
++import { areCapturedRectsAtSamePosition } from '@agent-device/kernel/rect-center';
++import type { SnapshotNativePressTarget } from '@agent-device/kernel/snapshot';
++
++type TargetBinding = Omit<SnapshotNativePressTarget, 'type'> & { type: string | number };
++
++/** Exact native identity plus the existing capture-rounding band, shared with canonical rechecks. */
++export function matchesAuthorizedPressTarget(
++  expected: TargetBinding,
++  candidate: TargetBinding,
++): boolean {
++  return (
++    expected.type === candidate.type &&
++    (['identifier', 'label', 'value'] as const).every(
++      (key) =>
++        (key === 'value' && (expected.type === 'SecureTextField' || expected.type === 50)) ||
++        (expected[key] ?? '').trim().normalize('NFC') ===
++          (candidate[key] ?? '').trim().normalize('NFC'),
++    ) &&
++    areCapturedRectsAtSamePosition(expected.rect, candidate.rect)
++  );
++}
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts b/packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts
+new file mode 100644
+index 0000000..60bfa66
+--- /dev/null
++++ b/packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts
+@@ -0,0 +1,429 @@
++import type { Point } from '@agent-device/kernel/snapshot';
++import { presentIosSnapshotAcquisition } from '@agent-device/capture-kit/ios-snapshot-runtime';
++import { presentIosRunnerSnapshot } from '@agent-device/capture-kit/ios-snapshot-engine';
++import { buildSnapshotState } from '@agent-device/capture-kit/snapshot-state';
++import { attachSnapshotNativePressTargets } from '@agent-device/contracts/snapshot-private-evidence';
++import { afterEach, expect, test, vi } from 'vitest';
++import type { AgentDeviceBackend } from '@agent-device/contracts/backend';
++import type { NativePressReadiness } from '@agent-device/contracts/selector-observation-runtime';
++import { localCommandPolicy } from '@agent-device/contracts/command-policy';
++import { createLocalArtifactAdapter } from '@agent-device/host-kit/local-artifact-adapter';
++import {
++  getRequestSignal,
++  markRequestCanceled,
++  registerRequestAbort,
++  clearRequestAbortRegistration,
++  withRequestDeadline,
++} from '@agent-device/host-kit/request';
++import { makeSnapshotState } from '@agent-device/selectors/snapshot-geometry-fixtures';
++import { createAgentDevice } from '../../../runtime.ts';
++import { createMemorySessionStore } from '../../../command-runtime/runtime-factory.ts';
++import { ref, selector } from './selector-read-utils.ts';
++
++afterEach(() => vi.restoreAllMocks());
++
++// Invariant: a geometrically unchanged, canonically authorized control can still be natively
++// blocked. Removing the live guard makes the first tap arrive before `ready`; motion-only tests
++// cannot detect that because their fake native owner exposes only geometry.
++function tree(label = 'Continue', childPhase?: 'before' | 'after') {
++  const snapshot = makeSnapshotState([
++    { index: 0, type: 'Application', depth: 0, rect: { x: 0, y: 0, width: 400, height: 800 } },
++    {
++      index: 1,
++      type: 'Button',
++      label,
++      depth: 1,
++      parentIndex: 0,
++      rect: childPhase
++        ? { x: 20, y: 140, width: 300, height: 100 }
++        : { x: 40, y: 240, width: 100, height: 50 },
++      hittable: true,
++    },
++  ]);
++  if (childPhase)
++    snapshot.nodes.push({
++      index: 2,
++      ref: 'e3',
++      depth: 2,
++      parentIndex: 1,
++      type: 'Button',
++      label: 'Independent child',
++      hittable: true,
++      rect:
++        childPhase === 'before'
++          ? { x: 20, y: 220, width: 300, height: 20 }
++          : { x: 20, y: 166, width: 300, height: 74 },
++    });
++  const node = snapshot.nodes[1]!;
++  attachSnapshotNativePressTargets(
++    snapshot.nodes,
++    new Map([[node.index, { type: 9, label, rect: node.rect! }]]),
++  );
++  return snapshot;
++}
++
++async function exercise(input: {
++  kind?: 'selector' | 'ref' | 'point';
++  states: NativePressReadiness[];
++  timeoutMs?: number;
++  changeTarget?: boolean;
++  cancelInRead?: boolean;
++  transportFailure?: boolean;
++  nativeBudgetAbort?: boolean;
++  expireInRead?: boolean;
++  expireInRecheck?: boolean;
++  resultDeadline?: boolean;
++  missingSource?: boolean;
++  movingChild?: boolean;
++  options?: { count?: number; doubleTap?: boolean };
++}) {
++  const events: string[] = [];
++  const points: Point[] = [];
++  const requestId = `readiness:${Math.random()}`;
++  const execute = async () => {
++    let reads = 0;
++    const device = createAgentDevice({
++      backend: {
++        platform: 'ios',
++        captureSnapshot: async () => {
++          events.push('capture');
++          if (input.expireInRecheck && reads > 0) {
++            const realNow = Date.now;
++            vi.spyOn(Date, 'now').mockImplementation(() => realNow() + 10_000);
++          }
++          const snapshot = tree(
++            input.changeTarget && reads > 0 ? 'Replacement' : 'Continue',
++            input.movingChild ? (reads > 0 ? 'after' : 'before') : undefined,
++          );
++          if (input.missingSource) attachSnapshotNativePressTargets(snapshot.nodes, new Map());
++          return { snapshot };
++        },
++        readPressReadiness: async (context) => {
++          events.push('read');
++          reads++;
++          if (input.cancelInRead) markRequestCanceled(requestId);
++          if (input.transportFailure) throw new Error('native query failed');
++          if (input.nativeBudgetAbort && reads > 1) {
++            context.signal!.throwIfAborted();
++            await new Promise<void>((_resolve, reject) => {
++              context.signal!.addEventListener('abort', () => reject(context.signal!.reason), {
++                once: true,
++              });
++            });
++          }
++          const state = input.states[Math.min(reads - 1, input.states.length - 1)]!;
++          events.push(state);
++          if (input.expireInRead) {
++            const realNow = Date.now;
++            vi.spyOn(Date, 'now').mockImplementation(() => realNow() + 10_000);
++          }
++          return state;
++        },
++        tap: async (_context, point) => {
++          events.push('tap');
++          points.push(point);
++          return { ok: true };
++        },
++      } satisfies AgentDeviceBackend,
++      artifacts: createLocalArtifactAdapter(),
++      sessions: createMemorySessionStore([
++        {
++          name: 'default',
++          snapshot: tree('Continue', input.movingChild ? 'before' : undefined),
++          refFrameSnapshot: tree('Continue', input.movingChild ? 'before' : undefined),
++        },
++      ]),
++      policy: localCommandPolicy(),
++      signal: input.nativeBudgetAbort ? undefined : getRequestSignal(requestId),
++    });
++    await device.interactions.press(
++      input.kind === 'point'
++        ? { kind: 'point', x: 90, y: 265 }
++        : input.kind === 'ref'
++          ? ref('@e2')
++          : selector('label="Continue"'),
++      { requestId, ...input.options },
++    );
++    return { ok: true as const, data: {} };
++  };
++  const registration = input.resultDeadline
++    ? registerRequestAbort(requestId, undefined, {
++        resultDeadlineMs: Date.now() + (input.timeoutMs ?? 150),
++      })
++    : undefined;
++  const run = input.resultDeadline
++    ? execute().finally(() => clearRequestAbortRegistration(registration))
++    : withRequestDeadline(requestId, input.timeoutMs ?? 2_000, execute);
++  return { run, events, points };
++}
++
++for (const kind of ['selector', 'ref'] as const) {
++  test(`${kind} press waits for native readiness and sends its original point once`, async () => {
++    const { run, events, points } = await exercise({
++      kind,
++      states: ['blocked', 'blocked', 'ready'],
++    });
++    await run;
++    expect(events.indexOf('tap')).toBeGreaterThan(events.indexOf('ready'));
++    expect(events.slice(events.indexOf('read'), events.indexOf('ready'))).not.toContain('capture');
++    expect(
++      events.slice(events.indexOf('ready')).filter((event) => event === 'capture'),
++    ).toHaveLength(1);
++    expect(points).toEqual([{ x: 90, y: 265 }]);
++  });
++}
++
++for (const states of [['ambiguous'], ['missing']] as NativePressReadiness[][]) {
++  test(`unconfirmed ${states[0]} target never sends input`, async () => {
++    const { run, points, events } = await exercise({ states, timeoutMs: 2_000 });
++    await expect(run).rejects.toMatchObject({
++      details: { reason: 'target_not_ready', readiness: states[0], dispatched: 'no' },
++    });
++    expect(points).toEqual([]);
++    expect(events.filter((event) => event === 'read')).toHaveLength(1);
++    expect(events.slice(events.indexOf('read'))).not.toContain('capture');
++  });
++}
++
++test('permanent native blocking reaches the existing request deadline without sending input', async () => {
++  const { run, points } = await exercise({ states: ['blocked'], timeoutMs: 100 });
++  await expect(run).rejects.toMatchObject({
++    details: { reason: 'daemon_request_timeout', dispatched: 'no' },
++  });
++  expect(points).toEqual([]);
++});
++
++test('a native budget abort preserves the blocked state instead of reporting a read failure', async () => {
++  const { run, points } = await exercise({
++    states: ['blocked'],
++    timeoutMs: 150,
++    nativeBudgetAbort: true,
++  });
++  await expect(run).rejects.toMatchObject({
++    details: { reason: 'daemon_request_timeout', readiness: 'blocked', dispatched: 'no' },
++  });
++  expect(points).toEqual([]);
++});
++
++test('a replaced canonical target is refused by the one recheck after native readiness', async () => {
++  const { run, points, events } = await exercise({
++    kind: 'ref',
++    states: ['blocked', 'ready'],
++    changeTarget: true,
++  });
++  await expect(run).rejects.toMatchObject({
++    details: { reason: 'target_not_ready', readiness: 'changed', dispatched: 'no' },
++  });
++  expect(points).toEqual([]);
++  expect(events).toContain('ready');
++});
++
++for (const failure of ['cancelInRead', 'transportFailure'] as const) {
++  test(`${failure} cannot fall through to dispatch`, async () => {
++    const { run, points } = await exercise({ states: ['ready'], [failure]: true });
++    await expect(run).rejects.toMatchObject({
++      details: {
++        dispatched: 'no',
++        ...(failure === 'cancelInRead'
++          ? { reason: 'request_canceled' }
++          : { reason: 'target_not_ready', readiness: 'native-read-failed' }),
++      },
++    });
++    expect(points).toEqual([]);
++  });
++}
++
++test('explicit coordinates preserve their existing dispatch semantics', async () => {
++  const { run, events, points } = await exercise({ kind: 'point', states: ['blocked'] });
++  await run;
++  expect(events).not.toContain('read');
++  expect(points).toEqual([{ x: 90, y: 265 }]);
++});
++
++// A timer callback may not have fired when the native promise resolves. Absolute time still wins.
++test('a late native ready reply cannot send input before the deadline timer callback', async () => {
++  const { run, points } = await exercise({ states: ['ready'], expireInRead: true });
++  await expect(run).rejects.toMatchObject({ details: { dispatched: 'no' } });
++  expect(points).toEqual([]);
++});
++
++test('first-ready input does not add a second canonical capture', async () => {
++  const { run, events } = await exercise({ states: ['ready'] });
++  await run;
++  expect(events.slice(events.indexOf('read'))).toEqual(['read', 'ready', 'tap']);
++});
++
++test('a final canonical recheck that crosses the absolute deadline cannot send input', async () => {
++  const { run, points } = await exercise({ states: ['blocked', 'ready'], expireInRecheck: true });
++  await expect(run).rejects.toMatchObject({ details: { dispatched: 'no' } });
++  expect(points).toEqual([]);
++});
++
++test('a production result deadline preserves the last blocked native state', async () => {
++  const { run, points } = await exercise({
++    states: ['blocked'],
++    resultDeadline: true,
++    nativeBudgetAbort: true,
++    timeoutMs: 150,
++  });
++  await expect(run).rejects.toMatchObject({
++    details: { reason: 'target_not_ready', readiness: 'blocked', dispatched: 'no' },
++  });
++  expect(points).toEqual([]);
++});
++
++test('a child moving into the old parent point uses the fresh canonically guarded point', async () => {
++  const { run, points } = await exercise({ states: ['blocked', 'ready'], movingChild: true });
++  await run;
++  expect(points).toHaveLength(1);
++  expect(points[0]!.x).toBe(170);
++  expect(points[0]!.y).toBeGreaterThanOrEqual(140);
++  expect(points[0]!.y).toBeLessThan(166);
++});
++
++for (const options of [{ count: 1 }, { doubleTap: false }]) {
++  test(`explicit ordinary tap defaults still await readiness: ${JSON.stringify(options)}`, async () => {
++    const { run, events, points } = await exercise({ states: ['blocked', 'ready'], options });
++    await run;
++    expect(events.indexOf('tap')).toBeGreaterThan(events.indexOf('ready'));
++    expect(points).toHaveLength(1);
++  });
++}
++
++for (const producer of ['simulator-ax-bridge', 'apple-runner'] as const) {
++  test(`${producer} capture stored and read through the session retains raw native row binding privately`, async () => {
++    const screen = { x: 0, y: 0, width: 400, height: 800 };
++    const full = { x: 20, y: 100, width: 300, height: 100 };
++    const rawNodes = [
++      { index: 0, depth: 0, type: 'Application', rect: screen },
++      {
++        index: 1,
++        parentIndex: 0,
++        depth: 1,
++        type: 'ScrollView',
++        rect: { x: 0, y: 150, width: 400, height: 100 },
++      },
++      { index: 2, parentIndex: 1, depth: 2, type: 'Cell', label: 'General', rect: full },
++      {
++        index: 3,
++        parentIndex: 2,
++        depth: 3,
++        type: 'Button',
++        label: 'General',
++        identifier: 'settings-general',
++        rect: full,
++      },
++    ];
++    const request = {
++      projection: 'regular',
++      interactiveOnly: true,
++      depth: null,
++      scope: null,
++      customActions: false,
++      acquisitionIntent: 'full',
++    } as const;
++    const snapshot =
++      producer === 'simulator-ax-bridge'
++        ? buildSnapshotState(
++            presentIosSnapshotAcquisition(
++              {
++                stage: 'acquired',
++                acquisition: {
++                  producer,
++                  intent: 'full',
++                  nodes: rawNodes.map((node, index) => ({
++                    ...node,
++                    nativePressTarget: {
++                      type: [2, 46, 75, 9][index]!,
++                      label: 'label' in node ? node.label : undefined,
++                      identifier: 'identifier' in node ? node.identifier : undefined,
++                      rect: node.rect,
++                    },
++                  })),
++                  truncated: false,
++                  viewport: { kind: 'reported', rect: screen },
++                  lineage: {},
++                  residue: [],
++                },
++              },
++              { interactiveOnly: true },
++            ),
++            { snapshotInteractiveOnly: true },
++          )
++        : buildSnapshotState(
++            {
++              ...presentIosRunnerSnapshot(
++                {
++                  stage: 'presented',
++                  presentation: {
++                    producer,
++                    intent: 'full',
++                    payload: {
++                      nodes: rawNodes.map((node) => ({
++                        ...node,
++                        rect: node.index > 1 ? { ...full, y: 150, height: 50 } : node.rect,
++                        nativePressTarget: {
++                          type: [2, 46, 75, 9][node.index]!,
++                          label: 'label' in node ? node.label : undefined,
++                          identifier: 'identifier' in node ? node.identifier : undefined,
++                          rect: node.rect,
++                        },
++                      })),
++                      truncated: false,
++                    },
++                  },
++                  validation: {
++                    presentationKey: request,
++                    viewport: { kind: 'reported', rect: screen },
++                    hittability: { kind: 'available' },
++                    lineage: {},
++                    residue: [],
++                  },
++                },
++                request,
++              ),
++              backend: 'xctest',
++              producer,
++            },
++            { snapshotInteractiveOnly: true },
++          );
++    const points: Point[] = [];
++    const device = createAgentDevice({
++      backend: {
++        platform: 'ios',
++        captureSnapshot: async () => ({ snapshot }),
++        // Independent native facts: the real Cell has no promoted child id and is not clipped.
++        readPressReadiness: async (_context, target) =>
++          target.type === 75 &&
++          !target.identifier &&
++          target.rect.y === 100 &&
++          target.rect.height === 100
++            ? 'ready'
++            : 'missing',
++        tap: async (_context, point) => {
++          points.push(point);
++          return { ok: true };
++        },
++      },
++      artifacts: createLocalArtifactAdapter(),
++      policy: localCommandPolicy(),
++      sessions: createMemorySessionStore([{ name: 'default' }]),
++    });
++    const captured = await device.capture.snapshot({ interactiveOnly: true });
++    const cell = captured.nodes.find((node) => node.type === 'Cell')!;
++    expect(cell.identifier).toBe('settings-general');
++    expect(JSON.stringify(captured)).not.toContain('nativePressTarget');
++    expect(JSON.stringify(await device.sessions.get('default'))).not.toContain('nativePressTarget');
++    await device.interactions.press(ref('@' + cell.ref));
++    expect(points).toHaveLength(1);
++  });
++}
++
++test('an admitted native owner without capture source provenance refuses before query or input', async () => {
++  const { run, events, points } = await exercise({ states: ['ready'], missingSource: true });
++  await expect(run).rejects.toMatchObject({
++    details: { readiness: 'missing-source-binding', dispatched: 'no' },
++  });
++  expect(events).not.toContain('read');
++  expect(points).toEqual([]);
++});
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts b/packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts
+new file mode 100644
+index 0000000..bba35e0
+--- /dev/null
++++ b/packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts
+@@ -0,0 +1,159 @@
++import type {
++  ResolvedInteractionTarget,
++  InteractionTarget,
++} from '@agent-device/contracts/interaction';
++import type { AgentDeviceRuntime, CommandContext } from '@agent-device/contracts/runtime-contract';
++import type { BackendCommandContext } from '@agent-device/contracts/backend';
++import type { NativePressReadiness } from '@agent-device/contracts/selector-observation-runtime';
++import { matchesAuthorizedPressTarget } from './press-readiness-binding.ts';
++import { readSnapshotNativePressTargets } from '@agent-device/contracts/capture';
++import { AppError, discloseDispatch } from '@agent-device/kernel/errors';
++import { INTERACTION_ERROR_REASONS } from '@agent-device/selectors/interaction-error';
++import { toBackendContext } from '../../runtime-common.ts';
++import type { ResolveInteractionTargetParams } from './interaction-resolution-request.ts';
++import { reObserveTarget } from './moving-target-gate.ts';
++
++/** A live necessary condition, not proof that the canonical coordinate is free of partial cover. */
++export async function guardPressReadiness(
++  runtime: AgentDeviceRuntime,
++  options: CommandContext & { target: InteractionTarget },
++  params: ResolveInteractionTargetParams,
++  original: ResolvedInteractionTarget,
++): Promise<ResolvedInteractionTarget> {
++  if (!runtime.backend.readPressReadiness || original.kind === 'point') return original;
++  const { getRequestExecutionDeadlineMs, getRequestResultDeadlineMs } =
++    await import('@agent-device/host-kit/request');
++  const deadline = Math.min(
++    getRequestExecutionDeadlineMs(options.requestId) ?? Infinity,
++    getRequestResultDeadlineMs(options.requestId) ?? Infinity,
++  );
++  const context = toBackendContext(runtime, options);
++  if (Number.isFinite(deadline)) {
++    const budget = AbortSignal.timeout(Math.max(0, Math.ceil(deadline - Date.now())));
++    context.signal = context.signal ? AbortSignal.any([context.signal, budget]) : budget;
++  }
++  try {
++    return await awaitReadiness(runtime, options, params, original, { context, deadline });
++  } catch (error) {
++    if (error instanceof AppError) throw discloseDispatch(error, 'no');
++    throw refusal('native-read-failed', error);
++  }
++}
++
++async function awaitReadiness(
++  runtime: AgentDeviceRuntime,
++  options: CommandContext & { target: InteractionTarget },
++  params: ResolveInteractionTargetParams,
++  original: Exclude<ResolvedInteractionTarget, { kind: 'point' }>,
++  budget: { context: BackendCommandContext; deadline: number },
++): Promise<ResolvedInteractionTarget> {
++  const { context, deadline } = budget;
++  let state: NativePressReadiness = 'missing';
++  let waited = false;
++  try {
++    while (true) {
++      assertBudget(context, deadline, state);
++      state = await runtime.backend.readPressReadiness!(
++        context,
++        nativeTarget(original),
++        original.preAction?.surfaceBundleId,
++      );
++      assertBudget(context, deadline, state);
++      if (state === 'ready') break;
++      if (state !== 'blocked' || !Number.isFinite(deadline)) throw refusal(state);
++      // This is post-resolution readiness, never a wait for a selector that does not exist.
++      if (params.expectedResolvedTarget || params.preresolvedTarget) throw refusal(state);
++      await waitForNextRead(context.signal, Math.min(50, deadline - Date.now()));
++      waited = true;
++    }
++    const ready = waited
++      ? await revalidate(runtime, { ...options, signal: context.signal }, params, original)
++      : original;
++    assertBudget(context, deadline, state);
++    return ready;
++  } catch (error) {
++    if (!(error instanceof AppError) && Date.now() >= deadline) throw refusal(state, error);
++    throw error;
++  }
++}
++
++function nativeTarget(resolved: Exclude<ResolvedInteractionTarget, { kind: 'point' }>) {
++  const source =
++    resolved.preAction &&
++    resolved.node &&
++    readSnapshotNativePressTargets(resolved.preAction.nodes)?.get(resolved.node.index);
++  if (!source || !resolved.point) throw refusal('missing-source-binding');
++  return { ...source, point: resolved.point };
++}
++
++async function revalidate(
++  runtime: AgentDeviceRuntime,
++  options: CommandContext & { target: InteractionTarget },
++  params: ResolveInteractionTargetParams,
++  original: Exclude<ResolvedInteractionTarget, { kind: 'point' }>,
++): Promise<Exclude<ResolvedInteractionTarget, { kind: 'point' }>> {
++  const observed = await reObserveTarget(runtime, options, params);
++  const fresh = observed.resolved;
++  if (
++    !observed.measured ||
++    fresh.kind === 'point' ||
++    observed.surfaceBundleId !== original.preAction?.surfaceBundleId
++  )
++    throw refusal('changed');
++  const before = original.node;
++  const after = fresh.node;
++  if (!before?.type || !before.rect || !original.point || !after?.type || !after.rect)
++    throw refusal('changed');
++  if (
++    !matchesAuthorizedPressTarget(
++      { ...before, type: before.type, rect: before.rect },
++      { ...after, type: after.type, rect: after.rect },
++    )
++  )
++    throw refusal('changed');
++  if (!matchesAuthorizedPressTarget(nativeTarget(original), nativeTarget(fresh)))
++    throw refusal('changed');
++  // The target is authorized, not a stale numeric point: this capture re-ran parent/child guards.
++  return fresh;
++}
++
++function assertBudget(
++  context: BackendCommandContext,
++  deadline: number,
++  state: NativePressReadiness,
++): void {
++  context.signal?.throwIfAborted();
++  if (Date.now() >= deadline) throw refusal(state);
++}
++
++function refusal(state: string, cause?: unknown): AppError {
++  return discloseDispatch(
++    new AppError(
++      'COMMAND_FAILED',
++      'Resolved target was not ready for input; nothing was dispatched',
++      {
++        reason: INTERACTION_ERROR_REASONS.targetNotReady,
++        readiness: state,
++        hint: 'Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref.',
++      },
++      cause,
++    ),
++    'no',
++  );
++}
++
++async function waitForNextRead(signal: AbortSignal | undefined, ms: number): Promise<void> {
++  signal?.throwIfAborted();
++  await new Promise<void>((resolve, reject) => {
++    const abort = () => {
++      clearTimeout(timer);
++      reject(signal?.reason);
++    };
++    const timer = setTimeout(() => {
++      signal?.removeEventListener('abort', abort);
++      resolve();
++    }, ms);
++    signal?.addEventListener('abort', abort, { once: true });
++  });
++  signal?.throwIfAborted();
++}
+diff --git a/packages/contracts/src/backend.ts b/packages/contracts/src/backend.ts
+index 2b54340..f8731d4 100644
+--- a/packages/contracts/src/backend.ts
++++ b/packages/contracts/src/backend.ts
+@@ -1,3 +1,7 @@
++import type {
++  AuthorizedPressTarget,
++  NativePressReadiness,
++} from './selector-observation-runtime.ts';
+ import type { ScreenshotScreenMask } from './screenshot.ts';
+ import type { ScreenshotResultData } from './snapshot-types.ts';
+ import type { SnapshotCaptureAnnotations } from './snapshot-capture-annotations.ts';
+@@ -442,6 +446,12 @@ export type AgentDeviceBackend = {
+     node: Pick<SnapshotNode, 'identifier' | 'label'>,
+     rootViewport: Rect | null,
+   ): Promise<Rect | null>;
++  /** Strict native necessary-condition read; never substitutes a target or bypasses its canonical point guards. */
++  readPressReadiness?(
++    context: BackendCommandContext,
++    target: AuthorizedPressTarget,
++    surfaceBundleId?: string,
++  ): Promise<NativePressReadiness>;
+   tap?(
+     context: BackendCommandContext,
+     point: Point,
+diff --git a/packages/contracts/src/facades/capture.ts b/packages/contracts/src/facades/capture.ts
+index 5245d1d..f28e5d9 100644
+--- a/packages/contracts/src/facades/capture.ts
++++ b/packages/contracts/src/facades/capture.ts
+@@ -64,6 +64,9 @@ export type {
+   ScreenshotResultData,
+ } from '../snapshot-types.ts';
+ export {
++  attachSnapshotNativePressTargets,
++  copySnapshotNativePressTargets,
++  readSnapshotNativePressTargets,
+   attachSnapshotTextInputGeometry,
+   readSnapshotTextInputGeometry,
+   attachSnapshotClickabilityEvidence,
+@@ -73,6 +76,7 @@ export {
+   readSnapshotOcclusionContextEvidence,
+ } from '../snapshot-private-evidence.ts';
+ export type {
++  SnapshotNativePressTargets,
+   SnapshotTextInputGeometry,
+   AndroidSiblingOrderEvidence,
+   SnapshotClickabilityEvidence,
+diff --git a/packages/contracts/src/interaction-guarantees.ts b/packages/contracts/src/interaction-guarantees.ts
+index fcecfa2..c3fbdff 100644
+--- a/packages/contracts/src/interaction-guarantees.ts
++++ b/packages/contracts/src/interaction-guarantees.ts
+@@ -86,6 +86,9 @@ export const INTERACTION_GUARANTEES = [
+   // vacated and report success on the vacancy. The gate is backend-neutral: it re-observes past the
+   // window and refuses rather than dispatching at a position two observations disagree about.
+   'targetStability',
++  // Ordinary primary iOS taps wait for the authorized control's native hittability when their
++  // request-bound backend advertises readPressReadiness. This does not certify a partially covered point.
++  'nativeReadiness',
+ ] as const;
+ 
+ export type InteractionGuarantee = (typeof INTERACTION_GUARANTEES)[number];
+@@ -213,6 +216,12 @@ const DIRECT_IOS_TARGET_STABILITY: GuaranteeEnforcement = {
+     "Intentional: the fused runner request queries the element and taps it inside one XCTest request, so the runner aims at the element's own live frame at tap time rather than at a rect the daemon captured earlier and carried across a round trip — the capture-to-dispatch distance #3471 closes does not exist on this route. Its hittability semantics stay the runner's, as the offscreen cell above already records.",
+ };
+ 
++const OTHER_ROUTE_NATIVE_READINESS: GuaranteeEnforcement = {
++  kind: 'inapplicable',
++  reason:
++    'The bounded native readiness check belongs to ordinary primary iOS press/click on runtime-selector and runtime-ref. Other routes keep their explicit gesture, native-handle, coordinate, or compatibility semantics.',
++};
++
+ // The two runtime tree paths (selector and ref resolution) run the SAME shared
+ // guard/observation implementations; only how the target is found
+ // (disambiguation) and how failures are described (errorTaxonomy) differ.
+@@ -281,11 +290,17 @@ const RUNTIME_TREE_SHARED_GUARANTEES = {
+     via: 'packages/command-runtime/src/commands/interaction/runtime/settle.ts#settleAfterInteraction',
+   },
+   targetStability: RUNTIME_TREE_TARGET_STABILITY,
++  nativeReadiness: {
++    kind: 'runtime',
++    via: 'packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts#guardPressReadiness',
++    appliesTo: ['press', 'click'],
++  },
+ } satisfies Partial<Record<InteractionGuarantee, GuaranteeEnforcement>>;
+ 
+ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPathContract> = {
+   'runtime-selector': {
+-    description: 'Daemon tree capture, selector chain resolution, guarded coordinate tap.',
++    description:
++      'Daemon tree capture, selector chain resolution, guarded coordinate tap. Ordinary primary iOS taps also await strict native readiness when the request-bound backend advertises readPressReadiness through its admitted pressReadiness operation.',
+     commands: ['press', 'click', 'fill', 'longpress', 'hover'],
+     guarantees: {
+       ...RUNTIME_TREE_SHARED_GUARANTEES,
+@@ -308,7 +323,7 @@ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPa
+   },
+   'runtime-ref': {
+     description:
+-      'Session snapshot ref lookup, guarded coordinate tap. #1654: when the caller already resolved the node (a mutating `find`), the lookup is replaced by that node and every guarantee below is enforced against it — the guards are unchanged, only the lookup is skipped.',
++      'Session snapshot ref lookup, guarded coordinate tap. Ordinary primary iOS taps await strict native readiness when the request-bound backend advertises readPressReadiness through its admitted pressReadiness operation. #1654: when the caller already resolved the node (a mutating `find`), the lookup is replaced by that node and every guarantee below is enforced against it — the guards are unchanged, only the lookup is skipped.',
+     commands: ['press', 'click', 'fill', 'longpress', 'hover'],
+     guarantees: {
+       ...RUNTIME_TREE_SHARED_GUARANTEES,
+@@ -337,6 +352,7 @@ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPa
+       'Target-authored gesture drag resolves source and destination independently through the runtime tree, verifies both identities on replay, then dispatches one uninterrupted pointer plan.',
+     commands: ['gesture'],
+     guarantees: {
++      nativeReadiness: OTHER_ROUTE_NATIVE_READINESS,
+       disambiguation: {
+         kind: 'runtime',
+         via: 'packages/command-runtime/src/commands/interaction/runtime/selector-action-resolution.ts#resolveActionSelector',
+@@ -410,6 +426,7 @@ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPa
+       'click @ref / fill @ref / hover @ref dispatch through the bound touch operation, whose web runtime owner selects clickRef/fillRef/hoverRef internally; no mobile owner advertises native-ref support. The route bypasses runtime resolution when no non-default options are set. A zero-round-trip preflight (preflightNativeRefInteraction) runs the shared guards against the stored session snapshot node first; no snapshot / no usable rect makes the preflight a no-op.',
+     commands: ['click', 'fill', 'hover'],
+     guarantees: {
++      nativeReadiness: OTHER_ROUTE_NATIVE_READINESS,
+       disambiguation: {
+         kind: 'inapplicable',
+         reason: 'Refs identify exactly one node by construction.',
+@@ -490,6 +507,7 @@ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPa
+     description: 'Raw x/y tap. Semantics are intentionally minimal.',
+     commands: ['press', 'click', 'fill', 'longpress', 'hover'],
+     guarantees: {
++      nativeReadiness: OTHER_ROUTE_NATIVE_READINESS,
+       disambiguation: {
+         kind: 'inapplicable',
+         reason: 'Coordinates name a point, not an element.',
+@@ -554,6 +572,7 @@ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPa
+       'Mutating `find <locator> focus`, and the focus leg of `find <locator> type`: find captures its own tree, ranks its own candidate set, runs the node stages its `findAct` row declares, then dispatches a point focus itself (`type` then dispatches the text) instead of re-entering the interaction leaf. `find click`/`find fill` are NOT this path — they hand the resolved node to `runtime-ref` as a pre-resolved target (#1654). `focus <x> <y>` shares only `executeFocusPoint`; it is a generic-route command that never enters the interaction leaf and no row of this matrix classifies. Every cell below classifies what the `findAct` row plus this seam actually run, not what the acting rows run.',
+     commands: ['find'],
+     guarantees: {
++      nativeReadiness: OTHER_ROUTE_NATIVE_READINESS,
+       // find's own ranking, but under the same ambiguity contract the runtime paths use: one
+       // `reject-candidates` policy row (#1625), `--first`/`--last` the only narrowing, and
+       // `preferOnscreenMatches` as the tie-break rather than a geometry-wins rule.
+@@ -647,6 +666,7 @@ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPa
+       'An explicit Maestro-compatible simple-selector click completed as an XCTest element tap. This path is selected only when the runner was allowed to use the non-hittable coordinate fallback but reported that it did not use it.',
+     commands: ['click'],
+     guarantees: {
++      nativeReadiness: OTHER_ROUTE_NATIVE_READINESS,
+       disambiguation: {
+         kind: 'waived',
+         reason:
+@@ -710,6 +730,7 @@ export const INTERACTION_DISPATCH_PATHS: Record<InteractionPathId, InteractionPa
+       'Replay-only coordinate fallback for non-hittable elements (allowNonHittableCoordinateFallback), matching Maestro semantics.',
+     commands: ['press', 'click', 'fill'],
+     guarantees: {
++      nativeReadiness: OTHER_ROUTE_NATIVE_READINESS,
+       disambiguation: {
+         kind: 'waived',
+         reason:
+diff --git a/packages/contracts/src/platform-runtime-operations.ts b/packages/contracts/src/platform-runtime-operations.ts
+index 5e604a5..13343ff 100644
+--- a/packages/contracts/src/platform-runtime-operations.ts
++++ b/packages/contracts/src/platform-runtime-operations.ts
+@@ -12,7 +12,10 @@ import type { ScreenRecordingRuntimeHost } from './screen-recording-runtime-host
+ import type { ScreenRecordingRuntimeOperations } from './screen-recording-runtime.ts';
+ import type { ScreenshotRuntimeOperations } from './screenshot-runtime.ts';
+ import type { SnapshotRuntimeHost, SnapshotRuntimeOperations } from './snapshot-runtime.ts';
+-import type { SelectorObservationRuntimeOperations } from './selector-observation-runtime.ts';
++import type {
++  SelectorObservationRuntimeOperations,
++  PressReadinessRuntimeOperations,
++} from './selector-observation-runtime.ts';
+ import type { ViewportRuntimeOperations } from './viewport-runtime.ts';
+ import type { FocusRuntimeOperations } from './focus-runtime.ts';
+ import type { GestureCommandInput, GestureSemanticInput } from './gesture-plan-types.ts';
+@@ -70,6 +73,7 @@ export type PlatformRuntimeOperations = AppLogRuntimeOperations &
+   ScreenshotRuntimeOperations &
+   SnapshotRuntimeOperations &
+   SelectorObservationRuntimeOperations &
++  PressReadinessRuntimeOperations &
+   ViewportRuntimeOperations &
+   FocusRuntimeOperations &
+   GestureRuntimeOperations &
+@@ -187,7 +191,7 @@ export const tapPointUse = defineUse({ required: ['tapPoint'] });
+ export const capturedTapUse = defineUse({
+   required: ['captureSnapshot', 'tapPoint'],
+   preferred: ['tapRef'],
+-  conditional: ['tapElementSelector', 'querySelector'],
++  conditional: ['tapElementSelector', 'querySelector', 'pressReadiness'],
+ });
+ export const longPressPointUse = defineUse({ required: ['longPressPoint'] });
+ export const capturedLongPressUse = defineUse({
+diff --git a/packages/contracts/src/platform-runtime-unavailable.ts b/packages/contracts/src/platform-runtime-unavailable.ts
+index ea88a27..06e589f 100644
+--- a/packages/contracts/src/platform-runtime-unavailable.ts
++++ b/packages/contracts/src/platform-runtime-unavailable.ts
+@@ -206,6 +206,7 @@ export function createUnavailablePlatformRuntimeFacts(
+       sendPushNotification: frozen.appDeployment,
+       uninstallApp: frozen.appDeployment,
+       appState: frozen.appState,
++      pressReadiness: frozen.touch,
+       networkDump: frozen.network,
+       screenRecordingStart: frozen.screenRecording,
+       screenRecordingReattach: frozen.screenRecording,
+diff --git a/packages/contracts/src/runtime-operation-names.ts b/packages/contracts/src/runtime-operation-names.ts
+index d5048e2..bc7ea8f 100644
+--- a/packages/contracts/src/runtime-operation-names.ts
++++ b/packages/contracts/src/runtime-operation-names.ts
+@@ -72,6 +72,7 @@ export const RUNTIME_OPERATION_NAMES = [
+   'power',
+   'prepareAppleRunner',
+   'prepareApplicationOpen',
++  'pressReadiness',
+   'querySelector',
+   'readAlert',
+   'readClipboard',
+diff --git a/packages/contracts/src/selector-observation-runtime.ts b/packages/contracts/src/selector-observation-runtime.ts
+index 8cce121..103cca3 100644
+--- a/packages/contracts/src/selector-observation-runtime.ts
++++ b/packages/contracts/src/selector-observation-runtime.ts
+@@ -1,4 +1,4 @@
+-import type { Rect } from '@agent-device/kernel/snapshot';
++import type { Point, Rect, SnapshotNativePressTarget } from '@agent-device/kernel/snapshot';
+ import type { ElementSelectorKey } from './interactor-types.ts';
+ import type { RuntimeOperationFact } from './platform-runtime.ts';
+ import type { SessionSurface } from './session-surface.ts';
+@@ -12,9 +12,35 @@ type ObservationInput = Readonly<{
+ 
+ export type FindTextInput = ObservationInput & Readonly<{ text: string }>;
+ 
++/** A canonical resolution's target; this read never chooses a substitute by label or hittability. */
++export type AuthorizedPressTarget = Readonly<SnapshotNativePressTarget & { point: Point }>;
++
++export type NativePressReadiness =
++  | 'ready'
++  | 'blocked'
++  | 'missing'
++  | 'ambiguous'
++  | 'surface-mismatch';
++
+ export type QuerySelectorInput = ObservationInput &
+   Readonly<{ selector: Readonly<{ key: ElementSelectorKey; value: string }> }>;
+ 
++export type PressReadinessInput = Readonly<{
++  authorizedTarget: AuthorizedPressTarget;
++  appBundleId: string;
++  execution: SnapshotRuntimeExecution;
++  signal?: AbortSignal;
++}>;
++
++export type PressReadinessResult = Readonly<{
++  readiness: NativePressReadiness;
++  appBundleId?: string;
++}>;
++
++export type PressReadinessRuntimeOperations = Readonly<{
++  pressReadiness(input: PressReadinessInput): Promise<PressReadinessResult>;
++}>;
++
+ /**
+  * Positive native observations are authoritative and preserve matches that an advertising owner's
+  * bulk capture may omit. A negative observation means only "not proven by this owner"; the caller
+@@ -35,9 +61,7 @@ export type QuerySelectorNodeReading = Readonly<{
+ }>;
+ 
+ export type QuerySelectorResult = SelectorObservationResult &
+-  Readonly<{
+-    node?: QuerySelectorNodeReading;
+-  }>;
++  Readonly<{ node?: QuerySelectorNodeReading }>;
+ 
+ export type SelectorObservationRuntimeOperations = Readonly<{
+   findText(input: FindTextInput): Promise<FindTextResult>;
+diff --git a/packages/contracts/src/snapshot-private-evidence.ts b/packages/contracts/src/snapshot-private-evidence.ts
+index 9cfce23..1df31cf 100644
+--- a/packages/contracts/src/snapshot-private-evidence.ts
++++ b/packages/contracts/src/snapshot-private-evidence.ts
+@@ -1,4 +1,8 @@
+-import type { RawSnapshotNode, Rect } from '@agent-device/kernel/snapshot';
++import type {
++  RawSnapshotNode,
++  Rect,
++  SnapshotNativePressTarget,
++} from '@agent-device/kernel/snapshot';
+ 
+ /**
+  * Capture-local clickability facts for consumers that reproduce Maestro's private
+@@ -31,7 +35,10 @@ export type SnapshotOcclusionContextEvidence = {
+ /** Complete text-input geometry measured before iOS semantic projection; absent means unknown. */
+ export type SnapshotTextInputGeometry = Readonly<{ rects: readonly Rect[] }>;
+ 
++export type SnapshotNativePressTargets = ReadonlyMap<number, SnapshotNativePressTarget>;
++
+ type SnapshotPrivateEvidence = {
++  nativePressTargets?: SnapshotNativePressTargets;
+   textInputGeometry?: SnapshotTextInputGeometry;
+   clickability?: SnapshotClickabilityEvidence;
+   occlusionContext?: SnapshotOcclusionContextEvidence;
+@@ -96,3 +103,21 @@ export function readSnapshotTextInputGeometry(
+ ): SnapshotTextInputGeometry | undefined {
+   return owner ? privateEvidenceBySnapshotObject.get(owner)?.textInputGeometry : undefined;
+ }
++
++export function attachSnapshotNativePressTargets<T extends object>(
++  owner: T,
++  targets: SnapshotNativePressTargets,
++): T {
++  return attachSnapshotPrivateEvidence(owner, { nativePressTargets: targets });
++}
++
++export function readSnapshotNativePressTargets(
++  owner: object,
++): SnapshotNativePressTargets | undefined {
++  return privateEvidenceBySnapshotObject.get(owner)?.nativePressTargets;
++}
++
++export function copySnapshotNativePressTargets<T extends object>(source: object, target: T): T {
++  const targets = readSnapshotNativePressTargets(source);
++  return targets ? attachSnapshotNativePressTargets(target, targets) : target;
++}
+diff --git a/packages/daemon/src/core/interaction/internal/types.ts b/packages/daemon/src/core/interaction/internal/types.ts
+index a3a015f..07522bf 100644
+--- a/packages/daemon/src/core/interaction/internal/types.ts
++++ b/packages/daemon/src/core/interaction/internal/types.ts
+@@ -1,3 +1,4 @@
++import type { AgentDeviceBackend } from '@agent-device/contracts/backend';
+ import type { CoordinateTapTextInputEvidence } from '@agent-device/contracts/interactor-types';
+ import type { SurfaceScopedNodes } from '@agent-device/contracts/interaction';
+ import type { DaemonResponse } from '@agent-device/kernel/contracts';
+@@ -124,6 +125,7 @@ export type InteractionRuntimeInput = {
+     node: Pick<import('@agent-device/kernel/snapshot').SnapshotNode, 'identifier' | 'label'>,
+     rootViewport: Rect | null,
+   ) => Promise<Rect | null>;
++  readPressReadiness?: AgentDeviceBackend['readPressReadiness'];
+   pairedGestureViewport?: Rect;
+   touchExecutor?: BoundTouchExecutor;
+   gestures?: BoundGestureExecutor;
+diff --git a/packages/daemon/src/core/runtime-operation-effects.ts b/packages/daemon/src/core/runtime-operation-effects.ts
+index eb9c80e..769d940 100644
+--- a/packages/daemon/src/core/runtime-operation-effects.ts
++++ b/packages/daemon/src/core/runtime-operation-effects.ts
+@@ -46,6 +46,7 @@ export const RUNTIME_OPERATION_EFFECTS: Readonly<
+   fillRef: 'mutates',
+   finalizeApplicationClose: 'mutates',
+   findText: 'repeatable',
++  pressReadiness: 'repeatable',
+   focusPoint: 'mutates',
+   gestureViewport: 'repeatable',
+   home: 'mutates',
+diff --git a/packages/daemon/src/core/touch-runtime.ts b/packages/daemon/src/core/touch-runtime.ts
+index 7093e96..4344982 100644
+--- a/packages/daemon/src/core/touch-runtime.ts
++++ b/packages/daemon/src/core/touch-runtime.ts
+@@ -24,7 +24,10 @@ import { successText } from '@agent-device/kernel/success-text';
+ import { requireIntInRange } from '@agent-device/kernel/validation';
+ import type { DaemonCommandContext } from './context.ts';
+ import type { DirectIosSelectorTarget } from './direct-ios-selector.ts';
+-import type { QuerySelectorRuntimeOperations } from '@agent-device/contracts/selector-observation-runtime';
++import type {
++  QuerySelectorRuntimeOperations,
++  PressReadinessRuntimeOperations,
++} from '@agent-device/contracts/selector-observation-runtime';
+ import {
+   admitRuntimeOperations,
+   type RuntimeAdmissionBindings,
+@@ -195,6 +198,7 @@ export type BoundTouchExecutor = Readonly<{
+    * guard refuses on the capture's verdict unchanged.
+    */
+   querySelector?: QuerySelectorRuntimeOperations['querySelector'];
++  pressReadiness?: PressReadinessRuntimeOperations['pressReadiness'];
+ }>;
+ 
+ export function createBoundTouchExecutor(
+@@ -211,7 +215,13 @@ export function createBoundTouchExecutor(
+   // declares it CONDITIONAL and only when the exact owner advertised it. The freeze keeps the
+   // executor's shape identical to the builders' own.
+   const querySelector = bound.captured ? bound.runtime.operations.querySelector : undefined;
+-  return querySelector ? Object.freeze({ ...base, querySelector }) : base;
++  const pressReadiness =
++    bound.kind === 'tap' && bound.captured ? bound.runtime.operations.pressReadiness : undefined;
++  return Object.freeze({
++    ...base,
++    ...(querySelector ? { querySelector } : {}),
++    ...(pressReadiness ? { pressReadiness } : {}),
++  });
+ }
+ 
+ function createBaseTouchExecutor(
+diff --git a/packages/daemon/src/execution/__tests__/interaction-get-runtime-fixture.ts b/packages/daemon/src/execution/__tests__/interaction-get-runtime-fixture.ts
+index 443ace3..3fd50c2 100644
+--- a/packages/daemon/src/execution/__tests__/interaction-get-runtime-fixture.ts
++++ b/packages/daemon/src/execution/__tests__/interaction-get-runtime-fixture.ts
+@@ -28,6 +28,8 @@ import {
+ import type {
+   QuerySelectorInput,
+   QuerySelectorResult,
++  PressReadinessInput,
++  PressReadinessResult,
+ } from '@agent-device/contracts/selector-observation-runtime';
+ import type { DeviceInfo } from '@agent-device/kernel/device';
+ import type { DaemonPlatformServices } from '../../core/platform-services.ts';
+@@ -105,6 +107,13 @@ export const mockQuerySelector = vi.fn(
+   async (_input: QuerySelectorInput): Promise<QuerySelectorResult> => ({ found: false }),
+ );
+ 
++export const mockPressReadiness = vi.fn(
++  async (input: PressReadinessInput): Promise<PressReadinessResult> => ({
++    readiness: 'ready',
++    appBundleId: input.appBundleId,
++  }),
++);
++
+ /**
+  * Flip to model an exact owner cell: no live element read (web, HarmonyOS, provider), no capture
+  * at all (the watchOS sentinel, an inactive provider), which refuses admission outright, or no
+@@ -118,6 +127,7 @@ export const elementReadFixtureState = {
+   tapElementSelectorAvailable: true,
+   /** Off by default: only the tests pinning the #1542 rescue wiring advertise the live read. */
+   querySelectorAvailable: false,
++  pressReadinessAvailable: false,
+ };
+ 
+ export function resetGetRuntimeFixture(): void {
+@@ -161,6 +171,12 @@ export function resetGetRuntimeFixture(): void {
+   elementReadFixtureState.typeTextAvailable = true;
+   elementReadFixtureState.tapElementSelectorAvailable = true;
+   elementReadFixtureState.querySelectorAvailable = false;
++  elementReadFixtureState.pressReadinessAvailable = false;
++  mockPressReadiness.mockReset();
++  mockPressReadiness.mockImplementation(async (input) => ({
++    readiness: 'ready',
++    appBundleId: input.appBundleId,
++  }));
+   mockQuerySelector.mockReset();
+   mockQuerySelector.mockResolvedValue({ found: false });
+ }
+@@ -207,6 +223,7 @@ function fixtureTouchFacts(device: DeviceInfo) {
+       ? available
+       : unavailable,
+     querySelector: elementReadFixtureState.querySelectorAvailable ? available : unavailable,
++    pressReadiness: elementReadFixtureState.pressReadinessAvailable ? available : unavailable,
+   };
+ }
+ 
+@@ -248,6 +265,9 @@ const mockBindElementReadRuntime: BindDeviceRuntime = vi.fn(async (device: Devic
+       ...(elementReadFixtureState.tapElementSelectorAvailable
+         ? { tapElementSelector: mockTapElementSelector }
+         : {}),
++      ...(elementReadFixtureState.pressReadinessAvailable
++        ? { pressReadiness: mockPressReadiness }
++        : {}),
+       ...(elementReadFixtureState.querySelectorAvailable
+         ? { querySelector: mockQuerySelector }
+         : {}),
+diff --git a/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.test.ts b/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.test.ts
+index cc0ba7a..4883733 100644
+--- a/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.test.ts
++++ b/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.test.ts
+@@ -108,7 +108,8 @@ beforeEach(() => {
+   });
+ });
+ 
+-test('a changed post-action capture corroborates an iOS tap reported as failed', async () => {
++// For no delivery, an unrelated overlay change cannot corroborate a tap proved not dispatched.
++test.each([undefined, 'unknown', 'no'] as const)('dispatch disclosure (%s)', async (delivery) => {
+   const sessionName = 'ios-tap-corroboration';
+   const sessionStore = makeSessionStore();
+   const session = makeIosSession(sessionName, {
+@@ -121,6 +122,7 @@ test('a changed post-action capture corroborates an iOS tap reported as failed',
+       throw new AppError(
+         'XCTEST_RECORDED_FAILURE',
+         'XCTest recorded a failure while executing tap; the action may not have been performed.',
++        delivery ? { dispatched: delivery } : undefined,
+       );
+     }
+     if (command === 'snapshot') return snapshotPayload(imageViewerNodes);
+@@ -129,13 +131,22 @@ test('a changed post-action capture corroborates an iOS tap reported as failed',
+ 
+   const response = await runClick(sessionStore, sessionName);
+ 
+-  expect(response?.ok).toBe(true);
++  expect(response?.ok).toBe(delivery !== 'no');
+   if (response?.ok) {
+     expect(response.data?.warning).toMatch(/post-action accessibility capture changed/);
+     expect(response.data?.selector).toBe('id="unfollow"');
+   }
+   expect(legacyDispatchCapture.mock.calls.filter((call) => call[1] === 'press')).toHaveLength(1);
+-  expect(sessionStore.get(sessionName)?.actions).toHaveLength(1);
++  expect(sessionStore.get(sessionName)?.actions).toHaveLength(delivery === 'no' ? 0 : 1);
++  if (delivery === 'no') {
++    expect(response).toMatchObject({
++      ok: false,
++      error: { code: 'XCTEST_RECORDED_FAILURE', details: { dispatched: 'no' } },
++    });
++    expect(legacyDispatchCapture.mock.calls.filter((call) => call[1] === 'snapshot')).toHaveLength(
++      0,
++    );
++  }
+ });
+ 
+ test('a corroborated tap failure still records the tree it acted through (#3471)', async () => {
+diff --git a/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.ts b/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.ts
+index ffb9a3b..9139733 100644
+--- a/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.ts
++++ b/packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.ts
+@@ -2,7 +2,7 @@ import type { CommandFlags } from '@agent-device/contracts/command';
+ import type { InteractionTarget } from '@agent-device/contracts/interaction';
+ import type { SnapshotQualityVerdict } from '@agent-device/kernel/snapshot';
+ import type { SnapshotState } from '@agent-device/contracts/snapshot-model';
+-import { asAppError } from '@agent-device/kernel/errors';
++import { asAppError, readDispatchDisclosure } from '@agent-device/kernel/errors';
+ import {
+   isSparseSnapshotQualityVerdict,
+   preferredSnapshotBackendForVerdict,
+@@ -85,9 +85,11 @@ function canCorroborateIosTapFailure(
+   params: IosTapCorroborationParams,
+   session: SessionState,
+ ): boolean {
++  const error = asAppError(params.error);
+   return (
+     isTapCommand(params.command) &&
+-    asAppError(params.error).code === XCTEST_RECORDED_FAILURE &&
++    error.code === XCTEST_RECORDED_FAILURE &&
++    readDispatchDisclosure(error.details) !== 'no' &&
+     isLocalIosRunnerSession(session, { skipPendingPostGestureStabilization: false })
+   );
+ }
+diff --git a/packages/daemon/src/execution/interaction/internal/interaction-runtime.ts b/packages/daemon/src/execution/interaction/internal/interaction-runtime.ts
+index 701534b..99aa26b 100644
+--- a/packages/daemon/src/execution/interaction/internal/interaction-runtime.ts
++++ b/packages/daemon/src/execution/interaction/internal/interaction-runtime.ts
+@@ -102,6 +102,7 @@ export async function createInteractionRuntimeForRoute(
+     // the verdict it may overturn come from one admission (ADR 0019 §2). A session whose owner did
+     // not advertise the read keeps the bulk-tree verdict unchanged.
+     confirmOffscreenTargetVisible: readOffscreenTargetRescue(params, session),
++    readPressReadiness: readNativePressReadiness(params, session),
+     pairedGestureViewport: params.pairedGestureViewport,
+     touchExecutor: params.touchExecutor,
+     gestures: params.gestures,
+@@ -139,6 +140,35 @@ function readOffscreenTargetRescue(
+     });
+ }
+ 
++/** Uses only the strict readiness operation admitted by this request's touch owner. */
++function readNativePressReadiness(
++  params: InteractionRouteInput & {
++    touchExecutor?: BoundTouchExecutor;
++    gestures?: BoundGestureExecutor;
++  },
++  session: InteractionRuntimeInput['session'],
++): InteractionRuntimeInput['readPressReadiness'] {
++  const pressReadiness = params.touchExecutor?.pressReadiness;
++  if (!pressReadiness) return undefined;
++  return async (context, authorizedTarget, surfaceBundleId) => {
++    const appBundleId = surfaceBundleId ?? session.appBundleId;
++    if (!appBundleId)
++      throw new KernelAppError(
++        'UNSUPPORTED_OPERATION',
++        'Native press readiness requires an authorized app scope',
++      );
++    const result = await pressReadiness({
++      authorizedTarget,
++      appBundleId,
++      execution: runtimeExecutionFromContext(
++        params.contextFromFlags(params.req.flags, session.appBundleId, session.trace?.outPath),
++      ),
++      signal: context.signal,
++    });
++    return result.appBundleId === appBundleId ? result.readiness : 'surface-mismatch';
++  };
++}
++
+ type FinalizeTouchInteractionInput = Omit<
+   Parameters<typeof finalizeInteraction>[0],
+   'operations'
+@@ -207,6 +237,7 @@ function createInteractionBackend(params: InteractionRuntimeInput): AgentDeviceB
+       }),
+     }),
+     ...gestureBackendMembers(params, gestureContext),
++    ...(params.readPressReadiness ? { readPressReadiness: params.readPressReadiness } : {}),
+     ...(params.confirmOffscreenTargetVisible
+       ? {
+           confirmOffscreenTargetVisible: async (_context, node, rootViewport) =>
+diff --git a/packages/daemon/src/execution/interaction/internal/interaction-touch-runtime.test.ts b/packages/daemon/src/execution/interaction/internal/interaction-touch-runtime.test.ts
+index 47da4ca..6e7a14c 100644
+--- a/packages/daemon/src/execution/interaction/internal/interaction-touch-runtime.test.ts
++++ b/packages/daemon/src/execution/interaction/internal/interaction-touch-runtime.test.ts
+@@ -9,6 +9,7 @@ import { runInteraction } from '../../../__tests__/support/touch-interaction-run
+ import {
+   elementReadFixtureState,
+   mockQuerySelector,
++  mockPressReadiness,
+   mockTapPoint,
+   resetGetRuntimeFixture,
+ } from '../../__tests__/interaction-get-runtime-fixture.ts';
+@@ -127,3 +128,51 @@ test('press @ref hands the command surface no rescue hook when the owner does no
+   expect(touchSurfaceConfigs.at(-1)?.backend.confirmOffscreenTargetVisible).toBeUndefined();
+   expect(mockQuerySelector).not.toHaveBeenCalled();
+ });
++
++test.each([true, false])(
++  'press route forwards strict readiness only when its own operation is advertised: %s',
++  async (advertised) => {
++    const sessionStore = offscreenRefSessionStore();
++    elementReadFixtureState.querySelectorAvailable = true;
++    elementReadFixtureState.pressReadinessAvailable = advertised;
++    await runInteraction(sessionStore, RESCUE_ROUTE_SESSION, 'press', ['@e2']);
++    const read = touchSurfaceConfigs.at(-1)?.backend.readPressReadiness;
++    if (!advertised) {
++      expect(read).toBeUndefined();
++      expect(mockPressReadiness).not.toHaveBeenCalled();
++      return;
++    }
++    expect(read).toBeDefined();
++    const authorizedTarget = {
++      type: 9,
++      label: 'Far item',
++      rect: { x: 20, y: 1200, width: 120, height: 44 },
++      point: { x: 80, y: 1222 },
++    };
++    await expect(read!({}, authorizedTarget, 'com.example.app')).resolves.toBe('ready');
++    expect(mockPressReadiness).toHaveBeenCalledWith(
++      expect.objectContaining({ authorizedTarget, appBundleId: 'com.example.app' }),
++    );
++    expect(mockQuerySelector).not.toHaveBeenCalled();
++  },
++);
++
++test('strict readiness refuses a missing app scope before contacting its owner', async () => {
++  const sessionStore = offscreenRefSessionStore();
++  sessionStore.get(RESCUE_ROUTE_SESSION)!.appBundleId = undefined;
++  elementReadFixtureState.pressReadinessAvailable = true;
++  await runInteraction(sessionStore, RESCUE_ROUTE_SESSION, 'press', ['@e2']);
++  const read = touchSurfaceConfigs.at(-1)?.backend.readPressReadiness;
++  expect(read).toBeDefined();
++  await expect(
++    read!(
++      {},
++      { type: 9, rect: { x: 1, y: 2, width: 3, height: 4 }, point: { x: 2, y: 3 } },
++      undefined,
++    ),
++  ).rejects.toMatchObject({
++    code: 'UNSUPPORTED_OPERATION',
++    message: 'Native press readiness requires an authorized app scope',
++  });
++  expect(mockPressReadiness).not.toHaveBeenCalled();
++});
+diff --git a/packages/daemon/src/sessions/handlers/__tests__/install-source.test.ts b/packages/daemon/src/sessions/handlers/__tests__/install-source.test.ts
+index 248fa0f..656b242 100644
+--- a/packages/daemon/src/sessions/handlers/__tests__/install-source.test.ts
++++ b/packages/daemon/src/sessions/handlers/__tests__/install-source.test.ts
+@@ -493,6 +493,7 @@ function sourceRuntimeFacts(
+       ...screenshotRuntimeOperationFacts({ capture: unavailable }),
+       findText: unavailable,
+       querySelector: unavailable,
++      pressReadiness: unavailable,
+       setViewport: unavailable,
+       focusPoint: unavailable,
+       typeText: unavailable,
+diff --git a/packages/kernel/src/snapshot.ts b/packages/kernel/src/snapshot.ts
+index a42ce47..9d3e38f 100644
+--- a/packages/kernel/src/snapshot.ts
++++ b/packages/kernel/src/snapshot.ts
+@@ -284,7 +284,17 @@ export type IosValueSemantics = {
+   busy?: true;
+ };
+ 
++/** Internal Apple capture wire provenance; removed before public snapshot assembly. */
++export type SnapshotNativePressTarget = {
++  type: number;
++  identifier?: string;
++  label?: string;
++  value?: string;
++  rect: Rect;
++};
++
+ export type RawSnapshotNode = {
++  nativePressTarget?: SnapshotNativePressTarget;
+   index: number;
+   type?: string;
+   role?: string;
+diff --git a/packages/platform-android/src/runtime.ts b/packages/platform-android/src/runtime.ts
+index 020efe3..8007fa3 100644
+--- a/packages/platform-android/src/runtime.ts
++++ b/packages/platform-android/src/runtime.ts
+@@ -314,6 +314,7 @@ export function createAndroidPlatformRuntime(host: PlatformRuntimeHost): Platfor
+         }),
+         // No native text reading: every text wait on this owner polls the canonical tree. No live
+         // selector read either: the off-screen guard refuses on the capture's verdict unchanged.
++        pressReadiness: unavailableFact('unsupported-platform-leaf'),
+         ...selectorObservationRuntimeOperationFacts({
+           findText: snapshotKindUnavailable,
+           querySelector: snapshotKindUnavailable,
+diff --git a/packages/platform-apple/src/__tests__/index-runner-requests.test.ts b/packages/platform-apple/src/__tests__/index-runner-requests.test.ts
+index 19bed7a..3afc9d2 100644
+--- a/packages/platform-apple/src/__tests__/index-runner-requests.test.ts
++++ b/packages/platform-apple/src/__tests__/index-runner-requests.test.ts
+@@ -219,6 +219,25 @@ const INTERACTOR_SITES: Record<string, InteractorDrive> = {
+ type ScopedDrive = readonly [DeviceInfo, (outPath: string) => Promise<unknown>];
+ 
+ const SCOPED_SITES: Record<string, ScopedDrive> = {
++  'ios-simulator.runner-press-readiness.authorized-target': [
++    IOS_SIMULATOR,
++    () =>
++      queryAppleRunnerSelector(
++        IOS_SIMULATOR,
++        {
++          authorizedTarget: {
++            type: 9,
++            identifier: 'continue-control',
++            label: 'Continue',
++            value: 'Ready',
++            rect: { x: 40, y: 240, width: 100, height: 50 },
++            point: { x: 90, y: 265 },
++          },
++        },
++        APP,
++        {},
++      ),
++  ],
+   'ios-simulator.runner-selector-query.label': [
+     IOS_SIMULATOR,
+     () => queryAppleRunnerSelector(IOS_SIMULATOR, { key: 'label', value: 'Go' }, APP, {}),
+diff --git a/packages/platform-apple/src/__tests__/runtime-selector-query.test.ts b/packages/platform-apple/src/__tests__/runtime-selector-query.test.ts
+index d9c8520..001b8d9 100644
+--- a/packages/platform-apple/src/__tests__/runtime-selector-query.test.ts
++++ b/packages/platform-apple/src/__tests__/runtime-selector-query.test.ts
+@@ -9,7 +9,10 @@ const { queryAppleRunnerSelector } = vi.hoisted(() => ({
+ 
+ vi.mock('../core/runner-selector-query.ts', () => ({ queryAppleRunnerSelector }));
+ 
+-import { bindAppleQuerySelectorRuntime } from '../runtime-selector-query.ts';
++import {
++  bindAppleQuerySelectorRuntime,
++  bindApplePressReadinessRuntime,
++} from '../runtime-selector-query.ts';
+ 
+ beforeEach(() => {
+   queryAppleRunnerSelector.mockReset();
+@@ -89,3 +92,114 @@ test('a node without a usable rect answers found without a node (the rescue stay
+     found: true,
+   });
+ });
++
++function readinessBinding(signal = new AbortController().signal) {
++  return bindApplePressReadinessRuntime({ device: IOS_SIMULATOR, signal });
++}
++
++test('strict readiness requires app scope before contacting the runner', async () => {
++  const input = {
++    authorizedTarget: {
++      type: 9,
++      rect: { x: 0, y: 0, width: 10, height: 10 },
++      point: { x: 5, y: 5 },
++    },
++    execution: {},
++  };
++  await expect(
++    // @ts-expect-error Untyped callers cannot omit the authorized app scope.
++    readinessBinding().pressReadiness(input),
++  ).rejects.toMatchObject({ code: 'INVALID_ARGS' });
++  expect(queryAppleRunnerSelector).not.toHaveBeenCalled();
++});
++
++test('strict readiness cannot accept a public selector response as native proof', async () => {
++  await expect(
++    readinessBinding().pressReadiness({
++      appBundleId: APP,
++      execution: {},
++      authorizedTarget: {
++        type: 9,
++        rect: { x: 0, y: 0, width: 10, height: 10 },
++        point: { x: 5, y: 5 },
++      },
++    }),
++  ).rejects.toMatchObject({ code: 'UNSUPPORTED_OPERATION' });
++});
++
++for (const readiness of ['ready', 'blocked', 'missing', 'ambiguous'] as const) {
++  test(`strict native ${readiness} preserves the proof and request scope`, async () => {
++    queryAppleRunnerSelector.mockResolvedValue({
++      pressReadiness: readiness,
++      pressReadinessAppBundleId: APP,
++    });
++    const authorizedTarget = {
++      type: 9,
++      rect: { x: 0, y: 0, width: 10, height: 10 },
++      point: { x: 5, y: 5 },
++    };
++    await expect(
++      readinessBinding().pressReadiness({
++        appBundleId: APP,
++        execution: {
++          requestId: 'native-read',
++          iosXctestrunFile: '/tmp/native.xctestrun',
++          traceLogPath: '/tmp/native-trace.log',
++          verbose: true,
++        },
++        authorizedTarget,
++      }),
++    ).resolves.toEqual({ readiness, appBundleId: APP });
++    expect(queryAppleRunnerSelector).toHaveBeenCalledWith(
++      IOS_SIMULATOR,
++      { authorizedTarget },
++      APP,
++      expect.objectContaining({
++        requestId: 'native-read',
++        iosXctestrunFile: '/tmp/native.xctestrun',
++        traceLogPath: '/tmp/native-trace.log',
++        verbose: true,
++        signal: expect.any(AbortSignal),
++      }),
++    );
++  });
++}
++
++test('a ready reply from another surface cannot authorize the app target', async () => {
++  queryAppleRunnerSelector.mockResolvedValue({
++    pressReadiness: 'ready',
++    pressReadinessAppBundleId: 'com.apple.springboard',
++  });
++  await expect(
++    readinessBinding().pressReadiness({
++      appBundleId: APP,
++      execution: {},
++      authorizedTarget: {
++        type: 9,
++        rect: { x: 0, y: 0, width: 10, height: 10 },
++        point: { x: 5, y: 5 },
++      },
++    }),
++  ).resolves.toEqual({ readiness: 'surface-mismatch', appBundleId: 'com.apple.springboard' });
++});
++
++test.each(['binding', 'input'] as const)(
++  'an aborted %s signal prevents a strict runner read',
++  async (source) => {
++    const controller = new AbortController();
++    controller.abort();
++    await expect(
++      readinessBinding(source === 'binding' ? controller.signal : undefined).pressReadiness({
++        appBundleId: APP,
++        execution: {},
++        signal: source === 'input' ? controller.signal : undefined,
++        authorizedTarget: {
++          type: 9,
++          rect: { x: 0, y: 0, width: 10, height: 10 },
++          point: { x: 5, y: 5 },
++        },
++      }),
++    ).rejects.toMatchObject({ name: 'AbortError' });
++    expect(queryAppleRunnerSelector).not.toHaveBeenCalled();
++  },
++);
+diff --git a/packages/platform-apple/src/core/runner-selector-query.ts b/packages/platform-apple/src/core/runner-selector-query.ts
+index 1ff7eeb..0bf760f 100644
+--- a/packages/platform-apple/src/core/runner-selector-query.ts
++++ b/packages/platform-apple/src/core/runner-selector-query.ts
+@@ -1,23 +1,27 @@
+ import { interpretIosNode } from '@agent-device/capture-kit/ios-node-interpretation';
+ import type { RawSnapshotNode } from '@agent-device/kernel/snapshot';
+-import type { ElementSelectorKey } from '@agent-device/contracts/interactor-types';
++import type {
++  AuthorizedPressTarget,
++  QuerySelectorInput,
++} from '@agent-device/contracts/selector-observation-runtime';
+ import type { AppleRunnerCommandOptions } from '@agent-device/apple-runner';
+ import { isHandheldAppleDevice, type DeviceInfo } from '@agent-device/kernel/device';
+ import { runAppleRunnerCommand } from './runner-client.ts';
+ 
+-/** The single Apple runner `querySelector` command builder shared by bound and safety-probe reads. */
++/** Builds the distinct public selector and strict readiness runner reads. */
+ export async function queryAppleRunnerSelector(
+   device: DeviceInfo,
+-  selector: Readonly<{ key: ElementSelectorKey; value: string }>,
++  selector: QuerySelectorInput['selector'] | Readonly<{ authorizedTarget: AuthorizedPressTarget }>,
+   appBundleId: string | undefined,
+   options: AppleRunnerCommandOptions,
+ ): Promise<Record<string, unknown>> {
+   const result = await runAppleRunnerCommand(
+     device,
+     {
+-      command: 'querySelector',
+-      selectorKey: selector.key,
+-      selectorValue: selector.value,
++      command: 'authorizedTarget' in selector ? 'pressReadiness' : 'querySelector',
++      ...('authorizedTarget' in selector
++        ? { authorizedTarget: selector.authorizedTarget }
++        : { selectorKey: selector.key, selectorValue: selector.value }),
+       appBundleId,
+     },
+     options,
+diff --git a/packages/platform-apple/src/runner-demand.test.ts b/packages/platform-apple/src/runner-demand.test.ts
+index 17730b9..00be4f1 100644
+--- a/packages/platform-apple/src/runner-demand.test.ts
++++ b/packages/platform-apple/src/runner-demand.test.ts
+@@ -23,6 +23,7 @@ test.each([
+   ['a touch', 'tapPoint'],
+   ['a text read', 'readTextAtPoint'],
+   ['a native text observation', 'findText'],
++  ['a native press readiness read', 'pressReadiness'],
+   ['custom actions', 'captureSnapshotWithCustomActions'],
+   ['an alert', 'readAlert'],
+   ['runner preparation', 'prepareAppleRunner'],
+diff --git a/packages/platform-apple/src/runner-demand.ts b/packages/platform-apple/src/runner-demand.ts
+index a04e798..3056a43 100644
+--- a/packages/platform-apple/src/runner-demand.ts
++++ b/packages/platform-apple/src/runner-demand.ts
+@@ -24,6 +24,7 @@ const APPLE_SIMULATOR_OPERATION_HOSTS: Readonly<
+   closeApplication: 'simulator',
+   finalizeApplicationClose: 'simulator',
+   prepareAppleRunner: 'runner',
++  pressReadiness: 'runner',
+   configureProviderPortReverse: 'simulator',
+   ensureReady: 'simulator',
+   bootTarget: 'simulator',
+diff --git a/packages/platform-apple/src/runner-interaction-facts.ts b/packages/platform-apple/src/runner-interaction-facts.ts
+index dc85ed5..f5cea46 100644
+--- a/packages/platform-apple/src/runner-interaction-facts.ts
++++ b/packages/platform-apple/src/runner-interaction-facts.ts
+@@ -103,6 +103,9 @@ function appleSnapshotFacts(device: DeviceInfo) {
+ export function appleRunnerInteractionFacts(device: DeviceInfo) {
+   return {
+     appState: appleAppStateFact(device),
++    pressReadiness: ['ios', 'ipados'].includes(resolveDeviceAppleOs(device))
++      ? appleFocusFact(device)
++      : unavailable,
+     prepareAppleRunner: applePrepareAppleRunnerFact(device),
+     ...appleSnapshotFacts(device),
+     ...selectorObservationRuntimeOperationFacts({
+diff --git a/packages/platform-apple/src/runner-runtime.test.ts b/packages/platform-apple/src/runner-runtime.test.ts
+index f9bffd0..6dfaa40 100644
+--- a/packages/platform-apple/src/runner-runtime.test.ts
++++ b/packages/platform-apple/src/runner-runtime.test.ts
+@@ -26,6 +26,8 @@ test('runtime observations use the forwarded runner with request and application
+           text: 'Continue',
+           appBundleId: 'com.example.app',
+           state: 'runningForeground',
++          pressReadiness: 'ready',
++          pressReadinessAppBundleId: 'com.example.app',
+         };
+       },
+     },
+@@ -102,6 +104,25 @@ test('runtime observations use the forwarded runner with request and application
+   });
+   expect(commands.at(-1)).toMatchObject({ command: 'readText', appBundleId: 'com.example.app' });
+   expect(requestIds.at(-1)).toBe('observe-remote');
++  const authorizedTarget = {
++    type: 9,
++    label: 'Continue',
++    rect: { x: 1, y: 2, width: 30, height: 40 },
++    point: { x: 16, y: 22 },
++  };
++  expect(
++    await operations.pressReadiness!({
++      authorizedTarget,
++      appBundleId: options.appBundleId,
++      execution,
++    }),
++  ).toEqual({ readiness: 'ready', appBundleId: options.appBundleId });
++  expect(commands.at(-1)).toMatchObject({
++    command: 'pressReadiness',
++    authorizedTarget,
++    appBundleId: options.appBundleId,
++  });
++  expect(requestIds.at(-1)).toBe('observe-remote');
+   const beforeCancel = commands.length;
+   controller.abort();
+   await expect(
+diff --git a/packages/platform-apple/src/runner-runtime.ts b/packages/platform-apple/src/runner-runtime.ts
+index f693e09..c76042f 100644
+--- a/packages/platform-apple/src/runner-runtime.ts
++++ b/packages/platform-apple/src/runner-runtime.ts
+@@ -21,7 +21,10 @@ import { createAppleInteractor } from './interactor.ts';
+ import { appleRunnerInteractionFacts } from './runner-interaction-facts.ts';
+ import { bindAppleAppStateRuntime } from './app-state-runtime.ts';
+ import { bindAppleFindTextRuntime } from './runtime-snapshot.ts';
+-import { bindAppleQuerySelectorRuntime } from './runtime-selector-query.ts';
++import {
++  bindAppleQuerySelectorRuntime,
++  bindApplePressReadinessRuntime,
++} from './runtime-selector-query.ts';
+ import { bindElementTextRuntime } from '@agent-device/contracts/element-text-runtime';
+ import {
+   captureSnapshotSignal,
+@@ -120,8 +123,9 @@ export function createAppleRunnerRuntime(options: {
+       captureSnapshotWithoutActiveApp: captureSnapshot,
+     });
+   };
++  const facts = appleRunnerInteractionFacts(options.device);
+   return {
+-    facts: appleRunnerInteractionFacts(options.device),
++    facts,
+     bindDeployment: (
+       request: Omit<Parameters<typeof createAppleAppDeploymentOperations>[0], 'device'>,
+     ) => createAppleAppDeploymentOperations({ ...request, device: options.device }),
+@@ -194,6 +198,7 @@ export function createAppleRunnerRuntime(options: {
+       };
+       const params = { ...request, device: options.device };
+       const query = bindAppleQuerySelectorRuntime(params);
++      const readiness = bindApplePressReadinessRuntime(params);
+       return {
+         ...bindAppleAppStateRuntime(host, params),
+         ...bindAppleFindTextRuntime(host, { ...params, appBackend: 'xctest' }),
+@@ -204,6 +209,16 @@ export function createAppleRunnerRuntime(options: {
+             { deviceId: options.device.id, requestId: input.execution?.requestId },
+             () => query.querySelector(input),
+           ),
++        ...(facts.pressReadiness.available
++          ? {
++              pressReadiness: (input: Parameters<typeof readiness.pressReadiness>[0]) =>
++                withAppleRunnerProvider(
++                  runCommand,
++                  { deviceId: options.device.id, requestId: input.execution.requestId },
++                  () => readiness.pressReadiness(input),
++                ),
++            }
++          : {}),
+         ...bindBridgeSnapshot(request.signal, request.snapshot),
+       };
+     },
+diff --git a/packages/platform-apple/src/runtime-selector-query.ts b/packages/platform-apple/src/runtime-selector-query.ts
+index 5ff076e..f563c7a 100644
+--- a/packages/platform-apple/src/runtime-selector-query.ts
++++ b/packages/platform-apple/src/runtime-selector-query.ts
+@@ -1,8 +1,12 @@
++import { AppError } from '@agent-device/kernel/errors';
+ import type {
+   QuerySelectorInput,
+   QuerySelectorNodeReading,
+   QuerySelectorResult,
+   SelectorObservationRuntimeOperations,
++  PressReadinessInput,
++  PressReadinessResult,
++  PressReadinessRuntimeOperations,
+ } from '@agent-device/contracts/selector-observation-runtime';
+ import type { DeviceInfo } from '@agent-device/kernel/device';
+ import { parseRect } from '@agent-device/kernel/record';
+@@ -53,6 +57,50 @@ export function bindAppleQuerySelectorRuntime(
+   });
+ }
+ 
++/** The owner's strict, app-scoped readiness read, independent of public selector semantics. */
++export function bindApplePressReadinessRuntime(
++  request: AppleSelectorQueryRequest,
++): PressReadinessRuntimeOperations {
++  return Object.freeze({
++    pressReadiness: async (input: PressReadinessInput): Promise<PressReadinessResult> => {
++      const signal = input.signal
++        ? AbortSignal.any([request.signal, input.signal])
++        : request.signal;
++      signal.throwIfAborted();
++      if (!input.appBundleId)
++        throw new AppError('INVALID_ARGS', 'Native press readiness requires an app bundle ID');
++      const { queryAppleRunnerSelector } = await import('./core/runner-selector-query.ts');
++      const data = await queryAppleRunnerSelector(
++        request.device,
++        { authorizedTarget: input.authorizedTarget },
++        input.appBundleId,
++        { ...input.execution, signal },
++      );
++      const readiness = data.pressReadiness;
++      if (
++        readiness !== 'ready' &&
++        readiness !== 'blocked' &&
++        readiness !== 'missing' &&
++        readiness !== 'ambiguous' &&
++        readiness !== 'surface-mismatch'
++      ) {
++        throw new AppError(
++          'UNSUPPORTED_OPERATION',
++          'Runner did not report native press readiness; rebuild the Apple runner',
++        );
++      }
++      const appBundleId =
++        typeof data.pressReadinessAppBundleId === 'string'
++          ? data.pressReadinessAppBundleId
++          : undefined;
++      return Object.freeze({
++        readiness: appBundleId === input.appBundleId ? readiness : 'surface-mismatch',
++        ...(appBundleId ? { appBundleId } : {}),
++      });
++    },
++  });
++}
++
+ function readQuerySelectorNode(
+   data: Record<string, unknown>,
+ ): QuerySelectorNodeReading | undefined {
+diff --git a/packages/platform-apple/src/runtime.test.ts b/packages/platform-apple/src/runtime.test.ts
+index e10d7de..cedc559 100644
+--- a/packages/platform-apple/src/runtime.test.ts
++++ b/packages/platform-apple/src/runtime.test.ts
+@@ -968,3 +968,29 @@ test('the macOS surface branch composes the per-capture signal with the binding
+   poll.abort(new DOMException('Wait deadline exceeded', 'TimeoutError'));
+   expect(passed.aborted).toBe(true);
+ });
++
++// A public selector port is not a declaration of strict native readiness support.
++test.each([
++  [leaves.ios, true],
++  [leaves.ipados, true],
++  [appleDevice({ kind: 'device' }), true],
++  [leaves.tvos, false],
++  [leaves.macos, false],
++  [leaves.visionos, false],
++  [leaves.watchos, false],
++] as const)(
++  'advertises and binds strict press readiness only on the supported Apple leaf %s',
++  async (device, advertised) => {
++    const binding = await createApplePlatformRuntime(platformRuntimeHostFixture()).bind({
++      device,
++      intent: { kind: 'ordinary' },
++      scope: {
++        signal: new AbortController().signal,
++        diagnostics: { emit: () => {} },
++        progress: { report: () => {} },
++      },
++    });
++    expect(binding.facts.operations.pressReadiness.available).toBe(advertised);
++    expect(binding.operations.pressReadiness).toBeTypeOf(advertised ? 'function' : 'undefined');
++  },
++);
+diff --git a/packages/platform-apple/src/runtime.ts b/packages/platform-apple/src/runtime.ts
+index efe68a9..9f08c02 100644
+--- a/packages/platform-apple/src/runtime.ts
++++ b/packages/platform-apple/src/runtime.ts
+@@ -30,7 +30,10 @@ import {
+   bindLocalScreenshotInteractor,
+   screenshotRuntimeOperationFacts,
+ } from '@agent-device/contracts/screenshot-runtime';
+-import { type SelectorObservationRuntimeOperations } from '@agent-device/contracts/selector-observation-runtime';
++import {
++  type SelectorObservationRuntimeOperations,
++  type PressReadinessRuntimeOperations,
++} from '@agent-device/contracts/selector-observation-runtime';
+ import { bindLocalTypeTextInteractor } from '@agent-device/contracts/type-text-runtime';
+ import { bindLocalTouchInteractor } from '@agent-device/contracts/touch-runtime';
+ import { viewportRuntimeOperationFacts } from '@agent-device/contracts/viewport-runtime';
+@@ -62,7 +65,10 @@ import { createAppleNavigationOperations } from './navigation/runtime.ts';
+ import { createAppleSystemOperations } from './system/runtime.ts';
+ import { appleFoldableFacts, createAppleFoldableOperations } from './foldable/runtime.ts';
+ import { bindAppleFindTextRuntime, bindAppleSnapshotRuntime } from './runtime-snapshot.ts';
+-import { bindAppleQuerySelectorRuntime } from './runtime-selector-query.ts';
++import {
++  bindAppleQuerySelectorRuntime,
++  bindApplePressReadinessRuntime,
++} from './runtime-selector-query.ts';
+ import { macOsHelperSurface, type MacOsAppBackend } from '@agent-device/contracts/session';
+ import { hostMacOsAppBackend } from './os/macos/app-backend.ts';
+ import { macOsNativeBackendFacts } from './os/macos/native-backend-facts.ts';
+@@ -275,9 +281,15 @@ export function createApplePlatformRuntime(host: PlatformRuntimeHost): PlatformR
+             signal: request.scope.signal,
+           }),
+       );
++      const pressReadinessOperations: Partial<PressReadinessRuntimeOperations> = whenAdmitted(
++        facts.operations.pressReadiness,
++        () =>
++          bindApplePressReadinessRuntime({ device: request.device, signal: request.scope.signal }),
++      );
+       const operations: DeviceBinding<PlatformRuntimeOperations>['operations'] = {
+         ...appStateOperations,
+         ...selectorQueryOperations,
++        ...pressReadinessOperations,
+         ...logs.operations,
+         ...createAppleAppDeploymentOperations({
+           host,
+diff --git a/packages/platform-apple/src/snapshot-source/tree.test.ts b/packages/platform-apple/src/snapshot-source/tree.test.ts
+index b6eaefc..3a5c359 100644
+--- a/packages/platform-apple/src/snapshot-source/tree.test.ts
++++ b/packages/platform-apple/src/snapshot-source/tree.test.ts
+@@ -47,35 +47,38 @@ test('the bridge tree becomes one depth-first raw snapshot with viewport evidenc
+     limits,
+   );
+ 
+-  assert.deepEqual(result.nodes, [
+-    {
+-      index: 0,
+-      type: 'Application',
+-      role: 'Application',
+-      rect: { x: 0, y: 0, width: 390, height: 844 },
+-      depth: 0,
+-      hittable: false,
+-    },
+-    {
+-      index: 1,
+-      parentIndex: 0,
+-      type: 'Window',
+-      role: 'Window',
+-      subrole: 'UIWindow',
+-      rect: { x: 0, y: 0, width: 390, height: 844 },
+-      depth: 1,
+-      hittable: true,
+-    },
+-    {
+-      index: 2,
+-      parentIndex: 1,
+-      type: 'Button',
+-      label: 'Continue',
+-      rect: { x: 20, y: 700, width: 120, height: 48 },
+-      depth: 2,
+-      hittable: true,
+-    },
+-  ]);
++  assert.deepEqual(
++    result.nodes.map(({ nativePressTarget: _internal, ...node }) => node),
++    [
++      {
++        index: 0,
++        type: 'Application',
++        role: 'Application',
++        rect: { x: 0, y: 0, width: 390, height: 844 },
++        depth: 0,
++        hittable: false,
++      },
++      {
++        index: 1,
++        parentIndex: 0,
++        type: 'Window',
++        role: 'Window',
++        subrole: 'UIWindow',
++        rect: { x: 0, y: 0, width: 390, height: 844 },
++        depth: 1,
++        hittable: true,
++      },
++      {
++        index: 2,
++        parentIndex: 1,
++        type: 'Button',
++        label: 'Continue',
++        rect: { x: 20, y: 700, width: 120, height: 48 },
++        depth: 2,
++        hittable: true,
++      },
++    ],
++  );
+   assert.deepEqual(result.viewport, {
+     kind: 'reported',
+     rect: { x: 0, y: 0, width: 390, height: 844 },
+@@ -827,3 +830,43 @@ for (const row of traitClassification.cases) {
+     assert.deepEqual(actual, row.bridge.expected, row.name);
+   });
+ }
++
++test('bridge binding carries classified numeric native types, including trait promotion', () => {
++  for (const [fields, expected] of [
++    [{ [automationType]: 0 }, 1],
++    [{ [automationType]: 9 }, 9],
++    [{ [automationType]: 34 }, 34],
++    [{ [automationType]: 39 }, 39],
++    [{ [automationType]: 51 }, 51],
++    [{ [application]: 'UIApplication' }, 2],
++    [{ [automationType]: 1, [traits]: '268435456' }, 9],
++  ] as const) {
++    const decoded = decodeSnapshotBridgeTree(
++      {
++        ...fields,
++        [label]: 'Control',
++        [frame]: { X: 10, Y: 20, Width: 100, Height: 40 },
++        [children]: [],
++      },
++      { truncated: false },
++      limits,
++    );
++    assert.equal(decoded.nodes[0]?.nativePressTarget?.type, expected);
++  }
++});
++
++test('bridge binding omits secure values before presentation', () => {
++  const decoded = decodeSnapshotBridgeTree(
++    {
++      [automationType]: 50,
++      [label]: 'Password',
++      XC_kAXXCAttributeValue: 'private-secret',
++      [frame]: { X: 10, Y: 20, Width: 100, Height: 40 },
++      [children]: [],
++    },
++    { truncated: false },
++    limits,
++  );
++  assert.equal(decoded.nodes[0]?.nativePressTarget?.type, 50);
++  assert.equal(decoded.nodes[0]?.nativePressTarget?.value, undefined);
++});
+diff --git a/packages/platform-apple/src/snapshot-source/tree.ts b/packages/platform-apple/src/snapshot-source/tree.ts
+index bac1e96..be37c14 100644
+--- a/packages/platform-apple/src/snapshot-source/tree.ts
++++ b/packages/platform-apple/src/snapshot-source/tree.ts
+@@ -287,11 +287,24 @@ function nodeFacts(
+   const userInteractionEnabled = optionalBoolean(value[ATTRIBUTE.userInteractionEnabled]);
+   // Trimmed like the runner's `placeholderText`: a whitespace placeholder is no placeholder.
+   const placeholder = optionalString(value[ATTRIBUTE.placeholder])?.trim();
++  const type = elementTypeName(elementClass, automationType, traits);
++  const nativeType = type === 'Other' ? 1 : ELEMENT_TYPE_NAMES.indexOf(type ?? '');
+   return {
+     index,
+     ...(parentIndex === undefined ? {} : { parentIndex }),
+-    ...(elementTypeName(elementClass, automationType, traits)
+-      ? { type: elementTypeName(elementClass, automationType, traits) }
++    ...(type ? { type } : {}),
++    ...(nativeType >= 0 && frame
++      ? {
++          nativePressTarget: {
++            type: nativeType,
++            identifier: optionalString(value[ATTRIBUTE.identifier]),
++            label: optionalString(value[ATTRIBUTE.label]),
++            ...(type === 'SecureTextField'
++              ? {}
++              : { value: optionalScalar(value[ATTRIBUTE.value]) }),
++            rect: frame,
++          },
++        }
+       : {}),
+     ...(elementClass ? { role: elementClass } : {}),
+     ...(baseClass && baseClass !== elementClass ? { subrole: baseClass } : {}),
+diff --git a/packages/platform-harmonyos/src/runtime.ts b/packages/platform-harmonyos/src/runtime.ts
+index 52c3aa8..381daf2 100644
+--- a/packages/platform-harmonyos/src/runtime.ts
++++ b/packages/platform-harmonyos/src/runtime.ts
+@@ -213,6 +213,7 @@ export function createHarmonyPlatformRuntime(host: PlatformRuntimeHost): Platfor
+         }),
+         // No native text reading: every text wait on this owner polls the canonical tree. No live
+         // selector read either: the off-screen guard refuses on the capture's verdict unchanged.
++        pressReadiness: unavailableFact('unsupported-platform-leaf'),
+         ...selectorObservationRuntimeOperationFacts({
+           findText: snapshotKindUnavailable,
+           querySelector: snapshotKindUnavailable,
+diff --git a/packages/platform-web/src/runtime.ts b/packages/platform-web/src/runtime.ts
+index 1e26106..82f0a49 100644
+--- a/packages/platform-web/src/runtime.ts
++++ b/packages/platform-web/src/runtime.ts
+@@ -366,6 +366,7 @@ function webRuntimeFacts(
+       }),
+       // No native text reading: every text wait on this owner polls the canonical tree. No live
+       // selector read either: the off-screen guard refuses on the capture's verdict unchanged.
++      pressReadiness: unavailableFact('unsupported-platform-leaf'),
+       ...selectorObservationRuntimeOperationFacts({
+         findText: openTargetKindUnavailable,
+         querySelector: openTargetKindUnavailable,
+diff --git a/packages/provider-revyl/src/facts-runtime.test.ts b/packages/provider-revyl/src/facts-runtime.test.ts
+index f6a4f95..d5e5154 100644
+--- a/packages/provider-revyl/src/facts-runtime.test.ts
++++ b/packages/provider-revyl/src/facts-runtime.test.ts
+@@ -96,6 +96,7 @@ const EXPECTED_CELLS = {
+   power: 'mode',
+   prepareAppleRunner: 'mode',
+   querySelector: 'mode',
++  pressReadiness: 'mode',
+   readAlert: 'mode',
+   readClipboard: 'mode',
+   readSetting: 'mode',
+diff --git a/packages/provider-revyl/src/facts-runtime.ts b/packages/provider-revyl/src/facts-runtime.ts
+index 0def664..6c7f095 100644
+--- a/packages/provider-revyl/src/facts-runtime.ts
++++ b/packages/provider-revyl/src/facts-runtime.ts
+@@ -169,6 +169,10 @@ export function revylFacts(device: DeviceInfo): RuntimeFacts<PlatformRuntimeOper
+         withoutActiveApp: available,
+       }),
+       ...screenshotRuntimeOperationFacts({ capture: available }),
++      pressReadiness: unavailableFact(
++        'unsupported-provider-mode',
++        'Revyl-owned devices do not expose native press-readiness checks.',
++      ),
+       // A live selector read needs the local reader's rescue hook, which a rented device has none of,
+       // so both text readings answer from the captured tree like `elementText` does.
+       ...selectorObservationRuntimeOperationFacts({
+diff --git a/packages/selectors/src/interaction-error.ts b/packages/selectors/src/interaction-error.ts
+index e50ad1e..6f03530 100644
+--- a/packages/selectors/src/interaction-error.ts
++++ b/packages/selectors/src/interaction-error.ts
+@@ -41,6 +41,8 @@ export const INTERACTION_ERROR_REASONS = {
+    * hint that names that recovery.
+    */
+   targetStillMoving: 'target_still_moving',
++  /** A resolved control was not natively actionable before dispatch; no input was sent. */
++  targetNotReady: 'target_not_ready',
+ } as const;
+ 
+ /** The part of a covered node a refusal reports. */
+diff --git a/packages/test-kit/src/runtime-operation-facts.ts b/packages/test-kit/src/runtime-operation-facts.ts
+index 11d54e7..636106e 100644
+--- a/packages/test-kit/src/runtime-operation-facts.ts
++++ b/packages/test-kit/src/runtime-operation-facts.ts
+@@ -50,6 +50,7 @@ export const unavailableDeploymentSnapshotAndShutdownOperationFacts = Object.fre
+   ...screenshotRuntimeOperationFacts({ capture: unavailable }),
+   findText: unavailable,
+   querySelector: unavailable,
++  pressReadiness: unavailable,
+   setViewport: unavailable,
+   focusPoint: unavailable,
+   typeText: unavailable,
+diff --git a/src/__tests__/runner-read-only-registry-parity.test.ts b/src/__tests__/runner-read-only-registry-parity.test.ts
+index 8a20ebe..b0ccf77 100644
+--- a/src/__tests__/runner-read-only-registry-parity.test.ts
++++ b/src/__tests__/runner-read-only-registry-parity.test.ts
+@@ -54,12 +54,13 @@ const REGISTRY_COUNTERPART: Record<RunnerName, RegistryRequest> = {
+   pasteboardWrite: { command: 'clipboard', positionals: ['write', 'x'] },
+ };
+ 
+-// Runner commands that drive runner or app lifecycle, not a user-visible command, with whether the
+-// resend gate may treat them as reads.
++// Runner-internal operations with no user-visible command, and whether the resend gate may
++// treat them as reads.
+ const RUNNER_INTERNAL: Readonly<Record<string, boolean>> = {
+   status: true,
+   uptime: true,
+   appState: true,
++  pressReadiness: true,
+   snapshotBridge: true,
+   gestureViewport: true,
+   sequence: false,
+diff --git a/test/integration/interaction-contract/daemon-harness.ts b/test/integration/interaction-contract/daemon-harness.ts
+index 240b5a6..82f5507 100644
+--- a/test/integration/interaction-contract/daemon-harness.ts
++++ b/test/integration/interaction-contract/daemon-harness.ts
+@@ -1,5 +1,8 @@
+ import { assertRpcOk } from '../provider-scenarios/assertions.ts';
+-import { PROVIDER_SCENARIO_IOS_SIMULATOR } from '../provider-scenarios/fixtures.ts';
++import {
++  iosNativeSnapshotNodes,
++  PROVIDER_SCENARIO_IOS_SIMULATOR,
++} from '../provider-scenarios/fixtures.ts';
+ import {
+   createProviderScenarioHarness,
+   withProviderScenarioResource,
+@@ -97,7 +100,11 @@ export function runnerSnapshotEntry(
+     command: 'ios.runner.snapshot',
+     deviceId: CONTRACT_DEVICE_ID,
+     platform: 'apple',
+-    result: { nodes, truncated: false, ...result },
++    result: {
++      nodes: iosNativeSnapshotNodes(nodes),
++      truncated: false,
++      ...result,
++    },
+   };
+ }
+ 
+diff --git a/test/integration/interaction-contract/interaction-response-shape.test.ts b/test/integration/interaction-contract/interaction-response-shape.test.ts
+index bce9255..ff79ef1 100644
+--- a/test/integration/interaction-contract/interaction-response-shape.test.ts
++++ b/test/integration/interaction-contract/interaction-response-shape.test.ts
+@@ -65,7 +65,14 @@ test(
+   'interaction response shape: press @ref uses the canonical ref envelope',
+   async () => {
+     await withIosContractDaemon(
+-      [runnerSnapshotEntry(RUNNER_CONTINUE_NODES), runnerTapEntry(NOISY_DEFAULT_TAP_RESULT)],
++      [
++        runnerSnapshotEntry(RUNNER_CONTINUE_NODES),
++        {
++          command: 'ios.runner.pressReadiness',
++          result: { pressReadiness: 'ready', pressReadinessAppBundleId: CONTRACT_APP },
++        },
++        runnerTapEntry(NOISY_DEFAULT_TAP_RESULT),
++      ],
+       async (daemon, transcript) => {
+         assertRpcOk(await daemon.callCommand('snapshot', [], { snapshotInteractiveOnly: true }));
+ 
+@@ -127,7 +134,14 @@ test('interaction response shape: longpress @ref uses the canonical ref envelope
+ 
+ test('interaction response shape: press selector uses the canonical selector envelope', async () => {
+   await withIosContractDaemon(
+-    [runnerSnapshotEntry(RUNNER_CONTINUE_NODES), runnerTapEntry({})],
++    [
++      runnerSnapshotEntry(RUNNER_CONTINUE_NODES),
++      {
++        command: 'ios.runner.pressReadiness',
++        result: { pressReadiness: 'ready', pressReadinessAppBundleId: CONTRACT_APP },
++      },
++      runnerTapEntry({}),
++    ],
+     async (daemon, transcript) => {
+       const data = assertRpcOk(await daemon.callCommand('press', ['label=Continue']));
+       assertRunnerRequest(transcript, 'ios.runner.tap', tapRequest(200, 322));
+diff --git a/test/integration/interaction-contract/runtime-harness.ts b/test/integration/interaction-contract/runtime-harness.ts
+index 4edfc4b..3a47876 100644
+--- a/test/integration/interaction-contract/runtime-harness.ts
++++ b/test/integration/interaction-contract/runtime-harness.ts
+@@ -1,3 +1,9 @@
++import assert from 'node:assert/strict';
++import { AppError } from '@agent-device/kernel/errors';
++import { attachSnapshotNativePressTargets } from '@agent-device/contracts/snapshot-private-evidence';
++import { withRequestDeadline } from '@agent-device/host-kit/request';
++import type { InteractionTarget } from '@agent-device/contracts/interaction';
++import { continueButtonSnapshot } from './fixtures.ts';
+ import type { AgentDeviceBackend } from '@agent-device/contracts/backend';
+ import type { CommandClock, CommandSessionRecord } from '@agent-device/contracts/runtime-contract';
+ import type { SnapshotState } from '@agent-device/contracts/snapshot-model';
+@@ -11,6 +17,7 @@ type ContractBackendOverrides = Partial<
+     | 'captureSnapshot'
+     | 'tap'
+     | 'tapTarget'
++    | 'readPressReadiness'
+     | 'fill'
+     | 'fillTarget'
+     | 'performGesture'
+@@ -48,6 +55,7 @@ export function createContractDevice(
+         overrides.captureSnapshot ? await overrides.captureSnapshot(...args) : { snapshot },
+       tap: async (...args) => await overrides.tap?.(...args),
+       tapTarget: overrides.tapTarget,
++      readPressReadiness: overrides.readPressReadiness,
+       fill: async (...args) => await overrides.fill?.(...args),
+       fillTarget: overrides.fillTarget,
+       performGesture: overrides.performGesture,
+@@ -97,3 +105,42 @@ export function selector(
+ ): import('@agent-device/contracts/interaction').SelectorTarget {
+   return { kind: 'selector', selector: value };
+ }
++
++/** A stationary tree must not allow dispatch while the same native target is blocked. */
++export async function runNativeReadinessScenario(
++  target: InteractionTarget,
++  finalState: 'ready' | 'ambiguous',
++): Promise<void> {
++  const events: string[] = [];
++  const requestId = `contract-native-ready-${target.kind}:${finalState}`;
++  const snapshot = continueButtonSnapshot();
++  const node = snapshot.nodes[0]!;
++  attachSnapshotNativePressTargets(
++    snapshot.nodes,
++    new Map([[node.index, { type: 9, label: 'Continue', value: 'Continue', rect: node.rect! }]]),
++  );
++  const device = createContractDevice(snapshot, {
++    readPressReadiness: async () => {
++      const state = events.includes('blocked') ? finalState : 'blocked';
++      events.push(state);
++      return state;
++    },
++    tap: async () => {
++      events.push('tap');
++    },
++  });
++  await withRequestDeadline(requestId, 2_000, async () => {
++    const press = device.interactions.press(target, { requestId });
++    if (finalState === 'ready') await press;
++    else
++      await assert.rejects(press, (error: unknown) => {
++        assert.ok(error instanceof AppError);
++        assert.equal(error.details?.reason, 'target_not_ready');
++        assert.equal(error.details?.readiness, 'ambiguous');
++        assert.equal(error.details?.dispatched, 'no');
++        return true;
++      });
++    return { ok: true, data: {} };
++  });
++  assert.deepEqual(events, ['blocked', finalState, ...(finalState === 'ready' ? ['tap'] : [])]);
++}
+diff --git a/test/integration/interaction-contract/runtime-ref.contract.test.ts b/test/integration/interaction-contract/runtime-ref.contract.test.ts
+index 4db849a..63063af 100644
+--- a/test/integration/interaction-contract/runtime-ref.contract.test.ts
++++ b/test/integration/interaction-contract/runtime-ref.contract.test.ts
+@@ -1,4 +1,9 @@
+-import { ref, createContractClock, createContractDevice } from './runtime-harness.ts';
++import {
++  ref,
++  createContractClock,
++  createContractDevice,
++  runNativeReadinessScenario,
++} from './runtime-harness.ts';
+ import assert from 'node:assert/strict';
+ import { test } from 'vitest';
+ import type { InteractionGuarantee } from '@agent-device/contracts/interaction-guarantees';
+@@ -264,7 +269,14 @@ test(
+   scenario('responseConstruction'),
+   async () => {
+     await withIosContractDaemon(
+-      [runnerSnapshotEntry(RUNNER_CONTINUE_NODES), runnerTapEntry({ x: 200, y: 322 })],
++      [
++        runnerSnapshotEntry(RUNNER_CONTINUE_NODES),
++        {
++          command: 'ios.runner.pressReadiness',
++          result: { pressReadiness: 'ready', pressReadinessAppBundleId: 'com.example.app' },
++        },
++        runnerTapEntry({ x: 200, y: 322 }),
++      ],
+       async (daemon) => {
+         const snapshot = await daemon.callCommand('snapshot', [], {
+           snapshotInteractiveOnly: true,
+@@ -318,3 +330,9 @@ test(scenarioNames(RUNTIME_REF_COVERAGE, 'resolutionDisclosure')[1]!, async () =
+     kind: 'label-fallback',
+   });
+ });
++
++for (const [index, finalState] of (['ready', 'ambiguous'] as const).entries()) {
++  test(scenarioNames(RUNTIME_REF_COVERAGE, 'nativeReadiness')[index]!, async () => {
++    await runNativeReadinessScenario(ref('@e1'), finalState);
++  });
++}
+diff --git a/test/integration/interaction-contract/runtime-ref.coverage.ts b/test/integration/interaction-contract/runtime-ref.coverage.ts
+index 50ef469..08718e2 100644
+--- a/test/integration/interaction-contract/runtime-ref.coverage.ts
++++ b/test/integration/interaction-contract/runtime-ref.coverage.ts
+@@ -20,6 +20,10 @@ export const RUNTIME_REF_COVERAGE = definePathCoverage('runtime-ref', {
+     'runtime-ref resolutionDisclosure: an @ref discloses the exact ref-provenance shape',
+     'runtime-ref resolutionDisclosure: trailing-label recovery discloses label-fallback, never exact',
+   ],
++  nativeReadiness: [
++    'runtime-ref nativeReadiness: stationary control waits for its native blocker to finish',
++    'runtime-ref nativeReadiness: ambiguous native control refuses before input',
++  ],
+   targetStability: [
+     'runtime-ref targetStability: a ref whose authorized node is still moving is refused with target_still_moving',
+     'runtime-ref targetStability: a ref that came to rest is tapped at the re-observed position',
+diff --git a/test/integration/interaction-contract/runtime-selector.contract.test.ts b/test/integration/interaction-contract/runtime-selector.contract.test.ts
+index 970af7e..de87d63 100644
+--- a/test/integration/interaction-contract/runtime-selector.contract.test.ts
++++ b/test/integration/interaction-contract/runtime-selector.contract.test.ts
+@@ -1,4 +1,9 @@
+-import { selector, createContractClock, createContractDevice } from './runtime-harness.ts';
++import {
++  selector,
++  createContractClock,
++  createContractDevice,
++  runNativeReadinessScenario,
++} from './runtime-harness.ts';
+ import assert from 'node:assert/strict';
+ import { test } from 'vitest';
+ import type { InteractionGuarantee } from '@agent-device/contracts/interaction-guarantees';
+@@ -258,6 +263,10 @@ test(
+       [
+         // A resolves and taps at y=300; B resolves at 360 and its two re-observations disagree.
+         runnerSnapshotEntry(runnerNodesAtY(300)),
++        {
++          command: 'ios.runner.pressReadiness',
++          result: { pressReadiness: 'ready', pressReadinessAppBundleId: 'com.example.app' },
++        },
+         runnerTapEntry({ x: 200, y: 322 }),
+         runnerSnapshotEntry(runnerNodesAtY(360)),
+         runnerSnapshotEntry(runnerNodesAtY(420)),
+@@ -419,7 +428,14 @@ test(
+   scenario('responseConstruction'),
+   async () => {
+     await withIosContractDaemon(
+-      [runnerSnapshotEntry(RUNNER_CONTINUE_NODES), runnerTapEntry({ x: 200, y: 322 })],
++      [
++        runnerSnapshotEntry(RUNNER_CONTINUE_NODES),
++        {
++          command: 'ios.runner.pressReadiness',
++          result: { pressReadiness: 'ready', pressReadinessAppBundleId: 'com.example.app' },
++        },
++        runnerTapEntry({ x: 200, y: 322 }),
++      ],
+       async (daemon) => {
+         const press = await daemon.callCommand('press', ['label=Continue']);
+         const data = assertRpcOk(press);
+@@ -470,3 +486,9 @@ test(scenarioNames(RUNTIME_SELECTOR_COVERAGE, 'resolutionDisclosure')[1]!, async
+   // The winner never appears among its own alternatives.
+   assert.ok(!resolution.alternatives.some((entry) => entry.diagnosticRef === 'diag-e3'));
+ });
++
++for (const [index, finalState] of (['ready', 'ambiguous'] as const).entries()) {
++  test(scenarioNames(RUNTIME_SELECTOR_COVERAGE, 'nativeReadiness')[index]!, async () => {
++    await runNativeReadinessScenario(selector('label="Continue"'), finalState);
++  });
++}
+diff --git a/test/integration/interaction-contract/runtime-selector.coverage.ts b/test/integration/interaction-contract/runtime-selector.coverage.ts
+index 9e962ea..f54b402 100644
+--- a/test/integration/interaction-contract/runtime-selector.coverage.ts
++++ b/test/integration/interaction-contract/runtime-selector.coverage.ts
+@@ -31,6 +31,10 @@ export const RUNTIME_SELECTOR_COVERAGE = definePathCoverage('runtime-selector',
+     'runtime-selector resolutionDisclosure: a unique match discloses the unique runtime shape',
+     'runtime-selector resolutionDisclosure: an equivalent wrapper chain discloses matchCount, winnerDiagnostic, and structural equivalence',
+   ],
++  nativeReadiness: [
++    'runtime-selector nativeReadiness: stationary control waits for its native blocker to finish',
++    'runtime-selector nativeReadiness: ambiguous native control refuses before input',
++  ],
+   targetStability: [
+     'runtime-selector targetStability: a settled slide-in is tapped where it came to rest',
+     'runtime-selector targetStability: a target still moving at the end of the window is refused with target_still_moving',
+diff --git a/test/integration/provider-scenarios/fixtures.ts b/test/integration/provider-scenarios/fixtures.ts
+index f65b058..f2f20bd 100644
+--- a/test/integration/provider-scenarios/fixtures.ts
++++ b/test/integration/provider-scenarios/fixtures.ts
+@@ -1,3 +1,4 @@
++import type { RawSnapshotNode } from '@agent-device/kernel/snapshot';
+ import fs from 'node:fs';
+ import os from 'node:os';
+ import path from 'node:path';
+@@ -97,3 +98,37 @@ export function createDemoIosApp(prefix: string): { tempRoot: string; appPath: s
+   );
+   return { tempRoot, appPath };
+ }
++
++/** Scripted runner captures retain the native source before the host presents their nodes. */
++export function iosNativeSnapshotNodes(nodes: readonly unknown[]): unknown[] {
++  return nodes.map((candidate) => {
++    const node = candidate as RawSnapshotNode;
++    if (!node?.type || !node.rect) return candidate;
++    const type = node.type.replace(/^XCUIElementType/, '');
++    const nativeType = (
++      {
++        Application: 2,
++        Window: 4,
++        Button: 9,
++        Other: 1,
++        ScrollView: 46,
++        StaticText: 48,
++        TextField: 49,
++        SecureTextField: 50,
++        TextView: 52,
++        Cell: 75,
++      } as Record<string, number>
++    )[type];
++    if (nativeType === undefined) return candidate;
++    return {
++      ...node,
++      nativePressTarget: node.nativePressTarget ?? {
++        type: nativeType,
++        identifier: node.identifier,
++        label: node.label,
++        ...(type === 'SecureTextField' ? {} : { value: node.value }),
++        rect: node.rect,
++      },
++    };
++  });
++}
+diff --git a/test/integration/provider-scenarios/interaction-verify.test.ts b/test/integration/provider-scenarios/interaction-verify.test.ts
+index 733fdd7..45113e9 100644
+--- a/test/integration/provider-scenarios/interaction-verify.test.ts
++++ b/test/integration/provider-scenarios/interaction-verify.test.ts
+@@ -1,7 +1,7 @@
+ import assert from 'node:assert/strict';
+ import { test } from 'vitest';
+ import { assertRpcOk } from './assertions.ts';
+-import { PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
++import { iosNativeSnapshotNodes, PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
+ import { createProviderScenarioHarness, withProviderScenarioResource } from './harness.ts';
+ import {
+   createAppleRunnerProviderFromTranscript,
+@@ -51,7 +51,7 @@ function snapshotEntry(nodes: unknown[]): ProviderScenarioProviderEntry {
+     command: 'ios.runner.snapshot',
+     deviceId: DEVICE_ID,
+     platform: 'apple',
+-    result: { nodes, truncated: false },
++    result: { nodes: iosNativeSnapshotNodes(nodes), truncated: false },
+   };
+ }
+ 
+@@ -60,6 +60,10 @@ test('Provider-backed integration press --verify returns post-action evidence di
+     // snapshot -i to obtain refs; the first capture after open settles: one extra read
+     snapshotEntry(BEFORE_NODES),
+     snapshotEntry(BEFORE_NODES),
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     {
+       command: 'ios.runner.tap',
+       deviceId: DEVICE_ID,
+diff --git a/test/integration/provider-scenarios/ios-world.ts b/test/integration/provider-scenarios/ios-world.ts
+index cd9b67b..0b623ef 100644
+--- a/test/integration/provider-scenarios/ios-world.ts
++++ b/test/integration/provider-scenarios/ios-world.ts
+@@ -6,6 +6,7 @@ import { buildGesturePlan } from '@agent-device/contracts/gesture-plan';
+ import type { RawSnapshotNode } from '@agent-device/kernel/snapshot';
+ import { type ProviderScenarioTranscript, createProviderTranscript } from './transcript.ts';
+ import {
++  iosNativeSnapshotNodes,
+   createDemoIosApp,
+   PROVIDER_SCENARIO_IOS_REINSTALL_DEVICE,
+   PROVIDER_SCENARIO_IOS_SIMULATOR,
+@@ -46,6 +47,10 @@ export async function createIosSettingsWorld(): Promise<IosSettingsWorld> {
+     runnerSnapshot(),
+     runnerSnapshot(),
+     runnerSnapshot(),
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: 'com.apple.Preferences' },
++    },
+     {
+       command: 'ios.runner.tap',
+       deviceId: PROVIDER_SCENARIO_IOS_SIMULATOR.id,
+@@ -340,6 +345,10 @@ export async function createIosSettledClickWorld(): Promise<IosSettledClickWorld
+     generalCellSnapshot({ y: 319 }),
+     generalCellSnapshot({ y: 406 }),
+     generalCellSnapshot({ y: 406 }),
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: 'com.apple.Preferences' },
++    },
+     {
+       command: 'ios.runner.tap',
+       deviceId: PROVIDER_SCENARIO_IOS_SIMULATOR.id,
+@@ -429,7 +438,7 @@ function runnerSnapshot() {
+     deviceId: PROVIDER_SCENARIO_IOS_SIMULATOR.id,
+     platform: 'apple' as const,
+     result: {
+-      nodes: [
++      nodes: iosNativeSnapshotNodes([
+         {
+           index: 0,
+           type: 'XCUIElementTypeCell',
+@@ -448,7 +457,7 @@ function runnerSnapshot() {
+           enabled: true,
+           hittable: true,
+         },
+-      ],
++      ]),
+       truncated: false,
+     },
+   };
+@@ -460,7 +469,7 @@ function generalCellSnapshot(options: { y: number }) {
+     deviceId: PROVIDER_SCENARIO_IOS_SIMULATOR.id,
+     platform: 'apple' as const,
+     result: {
+-      nodes: [
++      nodes: iosNativeSnapshotNodes([
+         {
+           index: 0,
+           type: 'XCUIElementTypeApplication',
+@@ -479,7 +488,7 @@ function generalCellSnapshot(options: { y: number }) {
+           enabled: true,
+           hittable: true,
+         },
+-      ],
++      ]),
+       truncated: false,
+     },
+   };
+diff --git a/test/integration/provider-scenarios/limrun-ios-snapshot-owner.test.ts b/test/integration/provider-scenarios/limrun-ios-snapshot-owner.test.ts
+index 001fbf0..d50a494 100644
+--- a/test/integration/provider-scenarios/limrun-ios-snapshot-owner.test.ts
++++ b/test/integration/provider-scenarios/limrun-ios-snapshot-owner.test.ts
+@@ -292,6 +292,25 @@ function limrunRuntimeDependencies(): LimrunRuntimeDependencies {
+ function runnerAnswer(command: Record<string, unknown>): Record<string, unknown> {
+   if (command.command === 'appState') return { applicationState: 'notRunning' };
+   if (command.command === 'snapshotBridge') return bridgeAnswer(command);
++  if (command.command === 'pressReadiness' && command.authorizedTarget) {
++    const target = command.authorizedTarget as {
++      type?: number;
++      label?: string;
++      rect?: { x?: number; y?: number; width?: number; height?: number };
++    };
++    return {
++      pressReadiness:
++        target.type === 9 &&
++        target.label === 'Continue' &&
++        target.rect?.x === 24 &&
++        target.rect?.y === 96 &&
++        target.rect?.width === 160 &&
++        target.rect?.height === 48
++          ? 'ready'
++          : 'missing',
++      pressReadinessAppBundleId: 'com.example.app',
++    };
++  }
+   return {
+     nodes: [
+       {
+diff --git a/test/integration/provider-scenarios/press-selector-resolution.test.ts b/test/integration/provider-scenarios/press-selector-resolution.test.ts
+index 0dad270..e04b32c 100644
+--- a/test/integration/provider-scenarios/press-selector-resolution.test.ts
++++ b/test/integration/provider-scenarios/press-selector-resolution.test.ts
+@@ -1,7 +1,7 @@
+ import assert from 'node:assert/strict';
+ import { test } from 'vitest';
+ import { assertRpcError, assertRpcOk } from './assertions.ts';
+-import { PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
++import { iosNativeSnapshotNodes, PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
+ import { createProviderScenarioHarness, withProviderScenarioResource } from './harness.ts';
+ import {
+   createAppleRunnerProviderFromTranscript,
+@@ -44,7 +44,7 @@ function snapshotEntry(nodes: readonly unknown[]): ProviderScenarioProviderEntry
+     command: 'ios.runner.snapshot',
+     deviceId: DEVICE_ID,
+     platform: 'apple',
+-    result: { nodes, truncated: false },
++    result: { nodes: iosNativeSnapshotNodes(nodes), truncated: false },
+   };
+ }
+ 
+@@ -99,14 +99,21 @@ async function withPressSelectorDaemon(
+ 
+ test('press resolving on the first capture costs exactly one snapshot call', async () => {
+   await withPressSelectorDaemon(
+-    [snapshotEntry(CONTINUE_BUTTON_NODES), tapEntry(200, 322)],
++    [
++      snapshotEntry(CONTINUE_BUTTON_NODES),
++      {
++        command: 'ios.runner.pressReadiness',
++        result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++      },
++      tapEntry(200, 322),
++    ],
+     async (daemon, transcript) => {
+       const callsBeforePress = transcript.calls.length;
+       const press = await daemon.callCommand('press', ['label=Continue']);
+       assertRpcOk(press);
+       assert.deepEqual(
+         transcript.calls.slice(callsBeforePress).map((call) => call.command),
+-        ['ios.runner.snapshot', 'ios.runner.tap'],
++        ['ios.runner.snapshot', 'ios.runner.pressReadiness', 'ios.runner.tap'],
+       );
+       transcript.assertComplete();
+     },
+diff --git a/test/integration/provider-scenarios/settle-observation.test.ts b/test/integration/provider-scenarios/settle-observation.test.ts
+index e37a59c..b709113 100644
+--- a/test/integration/provider-scenarios/settle-observation.test.ts
++++ b/test/integration/provider-scenarios/settle-observation.test.ts
+@@ -1,7 +1,7 @@
+ import assert from 'node:assert/strict';
+ import { test } from 'vitest';
+ import { assertRpcOk } from './assertions.ts';
+-import { PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
++import { iosNativeSnapshotNodes, PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
+ import { createProviderScenarioHarness, withProviderScenarioResource } from './harness.ts';
+ import {
+   createAppleRunnerProviderFromTranscript,
+@@ -127,7 +127,7 @@ function snapshotEntry(nodes: readonly unknown[]): ProviderScenarioProviderEntry
+     command: 'ios.runner.snapshot',
+     deviceId: DEVICE_ID,
+     platform: 'apple',
+-    result: { nodes, truncated: false },
++    result: { nodes: iosNativeSnapshotNodes(nodes), truncated: false },
+   };
+ }
+ 
+@@ -150,7 +150,7 @@ function changingSnapshotEntry(nodes: (label: string) => unknown[]): ProviderSce
+     repeat: true,
+     result: () => {
+       capture += 1;
+-      return { nodes: nodes(`Loading ${capture}`), truncated: false };
++      return { nodes: iosNativeSnapshotNodes(nodes(`Loading ${capture}`)), truncated: false };
+     },
+   };
+ }
+@@ -183,9 +183,17 @@ test(
+       snapshotEntry(BEFORE_NODES),
+       // press label=Continue --settle: resolution capture, tap, settle captures
+       snapshotEntry(BEFORE_NODES),
++      {
++        command: 'ios.runner.pressReadiness',
++        result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++      },
+       tapEntry(200, 322),
+       quietSnapshotEntry(SETTLED_NODES),
+       // press @e2 (the Done ref from the settled diff): tap on the stored tree
++      {
++        command: 'ios.runner.pressReadiness',
++        result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++      },
+       tapEntry(200, 522),
+     ]);
+     const appleRunnerProvider = createAppleRunnerProviderFromTranscript(
+@@ -278,12 +286,12 @@ test(
+         assert.equal(followUpData.warning, undefined);
+         assert.equal(followUpData.x, 200);
+         assert.equal(followUpData.y, 522);
+-        // The round trip settle exists to remove: the follow-up spends a tap and
+-        // nothing else. Asserted directly, since a quiet-UI entry would happily
++        // The round trip settle exists to remove: the follow-up spends a native readiness read and tap,
++        // without another capture. Asserted directly, since a quiet-UI entry would happily
+         // serve a stray capture.
+         assert.deepEqual(
+           runnerTranscript.calls.slice(callsBeforeFollowUp).map((call) => call.command),
+-          ['ios.runner.tap'],
++          ['ios.runner.pressReadiness', 'ios.runner.tap'],
+         );
+ 
+         runnerTranscript.assertComplete();
+@@ -314,6 +322,10 @@ test('Provider-backed integration never-settled press --settle does not issue di
+     // tap, then a settle stream that never repeats itself, so the loop can only ever time out.
+     snapshotEntry(BEFORE_NODES),
+     snapshotEntry(BEFORE_NODES),
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(200, 322),
+     changingSnapshotEntry(loadingNodes),
+   ]);
+@@ -378,9 +390,17 @@ test('Provider-backed integration modal-dismiss press --settle attaches the unch
+     // The dialog closes leaving Continue in place — a removals-only diff with
+     // no added refs, so the tail is the only actionable-target payload.
+     snapshotEntry(MODAL_BEFORE_NODES),
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(200, 422),
+     quietSnapshotEntry(MODAL_DISMISSED_NODES),
+     // press @e3 (the Continue ref from the tail): tap on the stored tree.
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(200, 322),
+   ]);
+   const appleRunnerProvider = createAppleRunnerProviderFromTranscript(
+@@ -454,7 +474,7 @@ test('Provider-backed integration modal-dismiss press --settle attaches the unch
+       assert.equal(followUpData.y, 322);
+       assert.deepEqual(
+         runnerTranscript.calls.slice(callsBeforeFollowUp).map((call) => call.command),
+-        ['ios.runner.tap'],
++        ['ios.runner.pressReadiness', 'ios.runner.tap'],
+       );
+ 
+       runnerTranscript.assertComplete();
+@@ -717,6 +737,10 @@ test('Provider-backed integration fill --settle summoning the keyboard still att
+     quietSnapshotEntry(FILL_SETTLED_NODES),
+     // press @e17 (the "Discard and go back" ref from the tail): tap on the
+     // stored settled tree.
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(201, 202),
+   ]);
+   const appleRunnerProvider = createAppleRunnerProviderFromTranscript(
+@@ -794,7 +818,7 @@ test('Provider-backed integration fill --settle summoning the keyboard still att
+       assert.equal(followUpData.y, 202);
+       assert.deepEqual(
+         runnerTranscript.calls.slice(callsBeforeFollowUp).map((call) => call.command),
+-        ['ios.runner.tap'],
++        ['ios.runner.pressReadiness', 'ios.runner.tap'],
+       );
+ 
+       runnerTranscript.assertComplete();
+diff --git a/test/integration/provider-scenarios/stale-ref-warning.test.ts b/test/integration/provider-scenarios/stale-ref-warning.test.ts
+index 327b0df..3dabc10 100644
+--- a/test/integration/provider-scenarios/stale-ref-warning.test.ts
++++ b/test/integration/provider-scenarios/stale-ref-warning.test.ts
+@@ -1,7 +1,7 @@
+ import assert from 'node:assert/strict';
+ import { test } from 'vitest';
+ import { assertRpcError, assertRpcOk } from './assertions.ts';
+-import { PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
++import { iosNativeSnapshotNodes, PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
+ import { createProviderScenarioHarness, withProviderScenarioResource } from './harness.ts';
+ import {
+   createAppleRunnerProviderFromTranscript,
+@@ -67,7 +67,7 @@ function snapshotEntry(nodes = NODES): ProviderScenarioProviderEntry {
+     command: 'ios.runner.snapshot',
+     deviceId: DEVICE_ID,
+     platform: 'apple',
+-    result: { nodes, truncated: false },
++    result: { nodes: iosNativeSnapshotNodes(nodes), truncated: false },
+   };
+ }
+ 
+@@ -87,11 +87,19 @@ test('Provider-backed integration iOS @refs reject after a selector press replac
+     snapshotEntry(),
+     // press label=Continue: selector resolution capture replaces the stored tree
+     snapshotEntry(),
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(200, 322),
+     // press @e2 while stale: rejects before any runner command
+     // snapshot: re-issues refs
+     snapshotEntry(),
+     // press @e2 after refresh: no warning
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(200, 422),
+   ]);
+   const appleRunnerProvider = createAppleRunnerProviderFromTranscript(
+@@ -156,6 +164,10 @@ test('Provider-backed iOS press rejects a stale ref after navigation', async ()
+     snapshotEntry(MAGIC_CODE_NODES),
+     // press label=Back: the pre-action capture still sees that screen.
+     snapshotEntry(MAGIC_CODE_NODES),
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(28, 98),
+     // The stale press rejects before any runner command.
+   ]);
+diff --git a/test/integration/provider-scenarios/versioned-refs.test.ts b/test/integration/provider-scenarios/versioned-refs.test.ts
+index 171ae7d..4ce658e 100644
+--- a/test/integration/provider-scenarios/versioned-refs.test.ts
++++ b/test/integration/provider-scenarios/versioned-refs.test.ts
+@@ -1,7 +1,7 @@
+ import assert from 'node:assert/strict';
+ import { test } from 'vitest';
+ import { assertRpcError, assertRpcOk } from './assertions.ts';
+-import { PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
++import { iosNativeSnapshotNodes, PROVIDER_SCENARIO_IOS_SIMULATOR } from './fixtures.ts';
+ import { createProviderScenarioHarness, withProviderScenarioResource } from './harness.ts';
+ import {
+   createAppleRunnerProviderFromTranscript,
+@@ -51,7 +51,7 @@ function snapshotEntry(): ProviderScenarioProviderEntry {
+     command: 'ios.runner.snapshot',
+     deviceId: DEVICE_ID,
+     platform: 'apple',
+-    result: { nodes: NODES, truncated: false },
++    result: { nodes: iosNativeSnapshotNodes(NODES), truncated: false },
+   };
+ }
+ 
+@@ -72,12 +72,20 @@ test('Provider-backed integration rejects stale pinned @refs and accepts current
+     snapshotEntry(),
+     // press @e2~s{g1}: pinned to the CURRENT frame — admitted, taps Cancel,
+     // and crosses the seam so the frame expires
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(200, 422),
+     // snapshot -i: re-issues a fresh complete frame at g2 (= g1+1)
+     snapshotEntry(),
+     // press @e2~s{g1}: an outlived pin against the active g2 frame — rejected
+     // with a precise generation mismatch before any runner command
+     // press @e2~s{g2}: pinned to the current frame — admitted, taps Cancel
++    {
++      command: 'ios.runner.pressReadiness',
++      result: { pressReadiness: 'ready', pressReadinessAppBundleId: APP },
++    },
+     tapEntry(200, 422),
+   ]);
+   const appleRunnerProvider = createAppleRunnerProviderFromTranscript(
+diff --git a/website/docs/docs/commands.md b/website/docs/docs/commands.md
+index 58138d0..d29ac1f 100644
+--- a/website/docs/docs/commands.md
++++ b/website/docs/docs/commands.md
+@@ -493,6 +493,10 @@ If rotation stops repeated iOS presses, inspect the screen before continuing wit
+ 
+ A successful `click` or `press` means the action was sent to where the command found the target. It does not confirm that the element received it or that the screen changed. When the next step depends on it, add `--verify` (reports `changedFromBefore`), add `--settle` (returns the diff once the UI goes quiet), or follow with `wait <selector>`. Before retrying a failed interaction, see [Retry after a failed command](#retry-after-a-failed-command).
+ 
++When an iOS runtime advertises native press readiness, a single primary `click` or `press` with a selector or `@ref` checks whether the resolved control can receive input. If a dismissing overlay still blocks it, the command waits within its existing request budget. An already-resolved target from a mutating `find` or replay is checked once and refuses a blocked control immediately. The target's identity, frame and app must stay the same while waiting. A missing native match refuses immediately; only a matched control that cannot yet receive input is waited on. This check does not prove that a partially covered control's center is clear. Raw coordinates and non-default tap options keep their existing behavior.
++
++A native-readiness refusal reports `COMMAND_FAILED`, `details.reason: target_not_ready`, and `details.dispatched: no`; `details.readiness` identifies the refusal or last observed state. An enclosing bounded batch or replay deadline can instead report `daemon_request_timeout`. A refused `@ref` press needs a fresh `snapshot -i` and a selector before retrying, because re-observation retires its ref frame. Cancellation retains the normal `request_canceled` reason and delivery evidence; cancellation after a request was sent can report `dispatched: unknown`. Typed native transport errors also keep their own error codes and reasons.
++
+ A `click` or `press` whose target the daemon resolves to a point (`@ref` or selector) re-checks that target's position before dispatching when the session's previous action animated the screen, and dispatches where it came to rest. When that check cannot confirm a stable position — the target was still moving, or a re-check could not measure it — the command refuses with `target_still_moving` and `dispatched: no`: nothing was dispatched, the point the command resolved is in `error.details.rect`, and where the target was last seen is in `error.details.movedToRect` when that last look measured one. Run `wait <selector>` on the target and retry the same command, or add `--settle` so the action waits for the UI to go quiet. A refused `@ref` press needs a fresh `snapshot -i` and a selector, because the wait retires the ref. Two dispatch paths hand off before the check: a press at raw coordinates has no resolved target to re-check, and a dispatch the backend performs on the element itself — `click @ref` on a backend with element dispatch, or a Maestro non-hittable coordinate fallback — goes to that backend rather than through a resolved point.
+ 
+ ### Text entry

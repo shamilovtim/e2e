@@ -1,0 +1,107 @@
+{
+  "case": "head3c9-fade750-1",
+  "classification": "pass",
+  "hostSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeBuiltFrom": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeFingerprint": "6253afcc52245869d1f60e882029e8dc21b7014153eb808bc5b83fdb376b13fb",
+  "nativeBinarySha256": "fbd24fe8435cc5993bea2b9692895df38c14f025b7b50e73beb349c39e88cfd7",
+  "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+  "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+  "overallWallSeconds": 10.428125583,
+  "exitCode": 0,
+  "result": {
+    "mode": "fade750-1",
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "closeMs": 947.9339999999993,
+    "target": {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "pressMs": 900.3443750000006,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true
+  },
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.0060416641645133495
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeOverlayOpened",
+      "ms": 4659.643416642211
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeDismissBegin",
+      "ms": 5672.629624954425
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 6426.231666642707
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 6622.539666655939
+    }
+  ],
+  "qualification": "Exact unchanged public d006 harness,750ms fade; one underlying action and zero overlay touches. Earlier17 evidence remains immutable.",
+  "fixtureAttribution": "Installed generic fade app inspected after the run while owned device was shutdown; matches the retained original build binary. The smoke harness did not record a fixture digest at run time."
+}

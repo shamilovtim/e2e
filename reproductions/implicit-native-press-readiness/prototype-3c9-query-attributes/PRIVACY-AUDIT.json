@@ -1,0 +1,13 @@
+{
+  "textFilesChecked": 78,
+  "forbiddenPatternHits": [],
+  "visualReview": {
+    "endpointPngs": 50,
+    "contactSheets": 5,
+    "inspected": true,
+    "scope": "All decoded first/last endpoints inspected on five contact sheets. Full streams decoded but not every interior frame visually inspected.",
+    "observedContent": "Generic UIKit fixture screens, dedicated simulator Springboard with generic fixture/runner icons, and default unconfigured simulator Settings during placed-window setup. No private product/account content observed at reviewed endpoints."
+  },
+  "excluded": "Raw state, runner/process logs, tokens, device UUIDs, inventories, home paths, app-container paths and xcresult are outside this subset.",
+  "published": false
+}

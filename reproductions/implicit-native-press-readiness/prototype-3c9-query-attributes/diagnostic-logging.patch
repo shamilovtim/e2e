@@ -1,0 +1,57 @@
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift
+@@ -380,16 +380,54 @@
+     func text(_ value: Any?) -> String {
+       String(describing: value ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+     }
++    let diagnosticEnabled = appBundleId == "dev.e2e.readinessgeometry"
++    func diagnostic(_ kind: String, _ payload: [String: Any]) {
++      guard diagnosticEnabled else { return }
++      var row = payload
++      row["kind"] = kind
++      row["uptime"] = ProcessInfo.processInfo.systemUptime
++      if let data = try? JSONSerialization.data(withJSONObject: row, options: [.sortedKeys]),
++        let text = String(data: data, encoding: .utf8) { print("QA_PREDICATE_DIAG " + text) }
++    }
++    func tuple(_ attributes: XCUIElementAttributes) -> [String: Any] {
++      let frame = attributes.frame
++      return ["type": attributes.elementType.rawValue, "identifier": attributes.identifier,
++        "label": attributes.label, "value": String(describing: attributes.value ?? ""),
++        "frame": ["x": Double(frame.minX), "y": Double(frame.minY),
++          "width": Double(frame.width), "height": Double(frame.height)]]
++    }
+     let identity = Self.authorizedPressTargetPredicate(target)
+     // Query predicates read snapshot attributes in bulk, rather than resolving every type match.
+     let binding = NSPredicate { object, _ in
++      diagnostic("block-object", ["class": object.map { String(reflecting: Swift.type(of: $0)) } ?? "nil",
++        "conforms": object is XCUIElementAttributes])
+       guard let attributes = object as? XCUIElementAttributes else { return false }
++      diagnostic("block-attributes", tuple(attributes))
+       return target.matches(type: attributes.elementType.rawValue, identifier: attributes.identifier,
+         label: attributes.label, value: target.type == XCUIElement.ElementType.secureTextField.rawValue ? nil : text(attributes.value),
+         rect: SnapshotRect(attributes.frame))
+     }
+     let matches = try elementQueries(app: app, matching: .any)
+       .flatMap { $0.matching(identity).matching(binding).allElementsBoundByIndex }
++    if diagnosticEnabled {
++      let prefilter = try elementQueries(app: app, matching: .any).flatMap { $0.matching(identity).allElementsBoundByIndex }
++      diagnostic("counts", ["identityMatches": prefilter.count, "bindingMatches": matches.count])
++      diagnostic("live-app", tuple(app))
++      let appSnapshot = try app.snapshot()
++      diagnostic("application-snapshot", tuple(appSnapshot))
++      for (index, window) in app.windows.allElementsBoundByIndex.enumerated() {
++        diagnostic("live-window", ["index": index, "tuple": tuple(window)])
++        let snapshot = try window.snapshot()
++        diagnostic("window-snapshot", ["index": index, "tuple": tuple(snapshot)])
++        for (childIndex, child) in snapshot.children.enumerated() {
++          diagnostic("window-child", ["windowIndex": index, "childIndex": childIndex, "tuple": tuple(child)])
++          for (grandchildIndex, grandchild) in child.children.enumerated() {
++            diagnostic("window-grandchild", ["windowIndex": index, "childIndex": childIndex,
++              "grandchildIndex": grandchildIndex, "tuple": tuple(grandchild)])
++          }
++        }
++      }
++    }
+     let state = matches.count > 1 ? "ambiguous" : matches.first.map { $0.exists ? ($0.isHittable ? "ready" : "blocked") : "missing" } ?? "missing"
+     return Response(ok: true, data: DataPayload(pressReadiness: state, pressReadinessAppBundleId: appBundleId))
+   }

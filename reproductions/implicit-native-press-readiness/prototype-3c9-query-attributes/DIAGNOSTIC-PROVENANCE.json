@@ -1,0 +1,10 @@
+{
+  "baseSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "modifiedFile": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift",
+  "baseFileSha256": "8d8d280c5a4ae6afac166fa56aba2f49a3b08797667119f16a172f925a54ee2f",
+  "diagnosticFileSha256": "6228565a1e329ba80d0f2429a4a79745df78c69f5d435b4fb3f793923d320fc5",
+  "patchSha256": "10ef1af0ea52462232caf804fdfec3d1e950fed644c47f69f475b35b24d91c63",
+  "nativeFingerprint": "40d7f5ce661cf64d8bbeca19148fcecda31508f79c5cf2345882ae2ce79391a1",
+  "nativeBinarySha256": "827268742b27ae8c184c778546e031404d0d51579b69d4c076d390f50a13feb4",
+  "changes": "Logging-only local diagnostic. Same matching expressions/query and response; logs exact attrs/object class, counts, live/snapshot app/windows/carriers after matching. This additional observation changes timing and is excluded from production performance claims."
+}

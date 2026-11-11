@@ -1,0 +1,588 @@
+{
+  "case": "diag625-landscape-keyboard-2",
+  "classification": "diagnostic-observation",
+  "explanation": "Keyboard was opened with an explicitly qualified coordinate setup tap after selector-focus regression. One landscape system key was read only: source/attrs/live agree, strict ready, no key dispatch. This does not prove selector focus.",
+  "hostSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeBuiltFrom": "logging-only diagnostic based on 3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeFingerprint": "40d7f5ce661cf64d8bbeca19148fcecda31508f79c5cf2345882ae2ce79391a1",
+  "nativeBinarySha256": "827268742b27ae8c184c778546e031404d0d51579b69d4c076d390f50a13feb4",
+  "fixtureBinarySha256": "8ab16911c49d3ad877bdf4b6285c6df146294ceb1a403837e2d6b707bb9d04d5",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": null,
+  "nativeModeSetupMs": null,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": null,
+  "sessionClosed": true,
+  "fixtureAttribution": "Same universal generic geometry app binary installed from frozen source; its binary digest is independently retained in fixture manifest.",
+  "samples": [],
+  "live": {
+    "data": {
+      "text": "Q",
+      "runnerMainThreadBusy": false,
+      "found": true,
+      "nodes": [
+        {
+          "label": "Q",
+          "type": "Key",
+          "enabled": true,
+          "depth": 0,
+          "index": 0,
+          "hittable": true,
+          "rect": {
+            "height": 40,
+            "x": 77,
+            "y": 218,
+            "width": 70
+          }
+        }
+      ]
+    },
+    "ok": true
+  },
+  "key": {
+    "nativePressTarget": {
+      "type": 20,
+      "label": "Q",
+      "rect": {
+        "x": 77,
+        "y": 218,
+        "height": 40,
+        "width": 70
+      }
+    },
+    "rect": {
+      "y": 218,
+      "width": 70,
+      "x": 77,
+      "height": 40
+    },
+    "depth": 8,
+    "hittable": true,
+    "parentIndex": 52,
+    "index": 54,
+    "enabled": true,
+    "label": "Q",
+    "keyboardOwned": true,
+    "type": "Key"
+  },
+  "authorizedTarget": {
+    "type": 20,
+    "label": "Q",
+    "rect": {
+      "x": 77,
+      "y": 218,
+      "height": 40,
+      "width": 70
+    },
+    "point": {
+      "x": 112,
+      "y": 238
+    }
+  },
+  "readiness": {
+    "data": {
+      "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+      "runnerMainThreadBusy": false,
+      "pressReadiness": "ready"
+    },
+    "ok": true
+  },
+  "observationCompleted": true,
+  "setupField": {
+    "data": {
+      "found": true,
+      "text": "Geometry input",
+      "nodes": [
+        {
+          "type": "TextField",
+          "value": "Geometry input",
+          "enabled": true,
+          "depth": 0,
+          "index": 0,
+          "rect": {
+            "x": 24,
+            "y": 90,
+            "height": 42,
+            "width": 200
+          },
+          "hittable": true,
+          "identifier": "geometry-input"
+        }
+      ],
+      "runnerMainThreadBusy": false
+    },
+    "ok": true
+  },
+  "coordinateSetup": {
+    "purpose": "Focus generic empty text field to expose keyboard; this bypasses the failing selector path and is not a selector-success claim.",
+    "result": {
+      "x": 124,
+      "y": 111,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped (124, 111)",
+      "targetKind": "point"
+    }
+  },
+  "predicateDiagnosticObservations": [
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 36,
+        "width": 100,
+        "x": 24,
+        "y": 140
+      },
+      "identifier": "landscape",
+      "kind": "block-attributes",
+      "label": "Landscape",
+      "type": 9,
+      "value": ""
+    },
+    {
+      "bindingMatches": 1,
+      "identityMatches": 1,
+      "kind": "counts"
+    },
+    {
+      "frame": {
+        "height": 852,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "live-app",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "frame": {
+        "height": 852,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "application-snapshot",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "index": 0,
+      "kind": "live-window",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "index": 0,
+      "kind": "window-snapshot",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "childIndex": 0,
+      "kind": "window-child",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    },
+    {
+      "childIndex": 0,
+      "grandchildIndex": 0,
+      "kind": "window-grandchild",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 36,
+        "width": 100,
+        "x": 24,
+        "y": 140
+      },
+      "identifier": "landscape",
+      "kind": "block-attributes",
+      "label": "Landscape",
+      "type": 9,
+      "value": ""
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 36,
+        "width": 100,
+        "x": 24,
+        "y": 140
+      },
+      "identifier": "landscape",
+      "kind": "block-attributes",
+      "label": "Landscape",
+      "type": 9,
+      "value": ""
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 40,
+        "width": 70,
+        "x": 77,
+        "y": 218
+      },
+      "identifier": "",
+      "kind": "block-attributes",
+      "label": "Q",
+      "type": 20,
+      "value": ""
+    },
+    {
+      "bindingMatches": 1,
+      "identityMatches": 1,
+      "kind": "counts"
+    },
+    {
+      "frame": {
+        "height": 393,
+        "width": 852,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "live-app",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "frame": {
+        "height": 393,
+        "width": 852,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "application-snapshot",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "index": 0,
+      "kind": "live-window",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "index": 0,
+      "kind": "window-snapshot",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "childIndex": 0,
+      "kind": "window-child",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    },
+    {
+      "childIndex": 0,
+      "grandchildIndex": 0,
+      "kind": "window-grandchild",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    },
+    {
+      "index": 1,
+      "kind": "live-window",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "index": 1,
+      "kind": "window-snapshot",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "childIndex": 0,
+      "kind": "window-child",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 1
+    },
+    {
+      "childIndex": 0,
+      "grandchildIndex": 0,
+      "kind": "window-grandchild",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 1
+    },
+    {
+      "childIndex": 0,
+      "grandchildIndex": 1,
+      "kind": "window-grandchild",
+      "tuple": {
+        "frame": {
+          "height": 180,
+          "width": 852,
+          "x": 0,
+          "y": 213
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 1
+    },
+    {
+      "index": 2,
+      "kind": "live-window",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "index": 2,
+      "kind": "window-snapshot",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "childIndex": 0,
+      "kind": "window-child",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 2
+    },
+    {
+      "childIndex": 0,
+      "grandchildIndex": 0,
+      "kind": "window-grandchild",
+      "tuple": {
+        "frame": {
+          "height": 180,
+          "width": 852,
+          "x": 0,
+          "y": 213
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 2
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 40,
+        "width": 70,
+        "x": 77,
+        "y": 218
+      },
+      "identifier": "",
+      "kind": "block-attributes",
+      "label": "Q",
+      "type": 20,
+      "value": ""
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 40,
+        "width": 70,
+        "x": 77,
+        "y": 218
+      },
+      "identifier": "",
+      "kind": "block-attributes",
+      "label": "Q",
+      "type": 20,
+      "value": ""
+    }
+  ],
+  "nativeEvents": []
+}

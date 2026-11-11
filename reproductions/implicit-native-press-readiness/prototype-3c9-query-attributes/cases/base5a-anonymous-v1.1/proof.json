@@ -1,0 +1,57 @@
+{
+  "case": "base5a-anonymous-v1.1",
+  "classification": "setup",
+  "explanation": "Harness setup: direct private probe raced lazy native runner startup; no target press attempted.",
+  "hostSource": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "nativeBuiltFrom": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "nativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+  "nativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+  "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": 1918.798667,
+  "nativeModeSetupMs": null,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": false,
+  "sessionClosed": true,
+  "mode": "anonymous",
+  "initialTarget": {
+    "index": 12,
+    "parentIndex": 11,
+    "type": "Other",
+    "role": "ReadinessVariants.OtherControl",
+    "subrole": "UIControl",
+    "value": "Shared icon value",
+    "rect": {
+      "x": 24,
+      "y": 220,
+      "width": 345,
+      "height": 40
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "ref": "e13",
+    "kind": "other"
+  },
+  "samples": [],
+  "harnessError": {
+    "message": "fetch failed"
+  },
+  "nativeEvents": [
+    {
+      "event": "modeChanged",
+      "ms": 0.009125040378421545,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "appReady",
+      "ms": 0.6246666889637709,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    }
+  ]
+}

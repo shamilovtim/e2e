@@ -1,0 +1,517 @@
+{
+  "case": "head3c9-duplicates-1",
+  "classification": "pass-with-bounded-caller-cancellation",
+  "explanation": "Strict blocked/ready duplicate states retained. Selector ambiguity refused. Blocked ref caller canceled at1500ms with dispatched unknown; no input events. Ready sibling dispatched once. This is not labeled a product timeout.",
+  "hostSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeBuiltFrom": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeFingerprint": "6253afcc52245869d1f60e882029e8dc21b7014153eb808bc5b83fdb376b13fb",
+  "nativeBinarySha256": "fbd24fe8435cc5993bea2b9692895df38c14f025b7b50e73beb349c39e88cfd7",
+  "fixtureBinarySha256": "fabcc12f1ecde84783f97cfdf90b1761a4f9a7690e8e854a0d0c6fc86506e10f",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": 1930.589416,
+  "nativeModeSetupMs": null,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": true,
+  "sessionClosed": true,
+  "mode": "duplicates",
+  "targets": [
+    {
+      "index": 7,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Duplicate action",
+      "identifier": "duplicate-control",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 345,
+        "height": 70
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e8",
+      "kind": "button"
+    },
+    {
+      "index": 8,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Duplicate action",
+      "identifier": "duplicate-control",
+      "rect": {
+        "x": 24,
+        "y": 290,
+        "width": 345,
+        "height": 70
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e9",
+      "kind": "button"
+    }
+  ],
+  "nativeBinaryUnchanged": true,
+  "samples": [
+    {
+      "label": "selector-ambiguity",
+      "target": {
+        "selector": "id=duplicate-control"
+      },
+      "ms": 34.58575000000019,
+      "error": {
+        "code": "AMBIGUOUS_MATCH",
+        "message": "Selector matched 2 distinct actionable elements: id=duplicate-control",
+        "details": {
+          "selector": "id=duplicate-control",
+          "matches": 2,
+          "candidates": [
+            "@e8 [button] \"Duplicate action\"",
+            "@e9 [button] \"Duplicate action\""
+          ],
+          "dispatched": "no",
+          "hint": "Multiple candidates matched. Narrow the query or pass an exact identifier."
+        }
+      },
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 0.853
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.5330000000000001
+        }
+      ]
+    },
+    {
+      "label": "blocked-ref-observation",
+      "target": {
+        "ref": "@e8"
+      },
+      "ms": 1502.8426249999993,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "request canceled",
+        "details": {
+          "hint": "The request was canceled intentionally (explicit cancel or client disconnect) — no retry is needed unless the cancellation was unintended.",
+          "dispatched": "unknown",
+          "reason": "request_canceled"
+        }
+      },
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 31.461000000000002
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 32.294000000000004
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 32.359
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 31.621000000000002
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.967000000000002
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 28.43
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 24.506
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 29.226
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 31.418000000000003
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.762
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.493
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.522000000000002
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.506999999999998
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.68
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.647000000000002
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.851
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 32.851
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 31.452
+        }
+      ]
+    },
+    {
+      "label": "ready-ref",
+      "target": {
+        "ref": "@e9"
+      },
+      "press": {
+        "x": 197,
+        "y": 325,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e9 (197, 325)",
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e9",
+        "refLabel": "Duplicate action",
+        "selectorChain": [
+          "role=\"button\" label=\"Duplicate action\"",
+          "label=\"Duplicate action\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 370.3222500000011,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 30.017
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 326.95000000000005
+        }
+      ]
+    }
+  ],
+  "nativeGeometryObservations": {
+    "liveElementRead": {
+      "ms": 114.51512500000081,
+      "result": {
+        "ok": true,
+        "data": {
+          "found": true,
+          "runnerMainThreadBusy": false,
+          "text": "Duplicate action",
+          "nodes": [
+            {
+              "identifier": "duplicate-control",
+              "enabled": true,
+              "rect": {
+                "y": 290,
+                "width": 345,
+                "height": 70,
+                "x": 24
+              },
+              "depth": 0,
+              "type": "Button",
+              "index": 0,
+              "hittable": true,
+              "label": "Duplicate action"
+            }
+          ]
+        }
+      }
+    },
+    "rawSnapshotQuality": {
+      "backend": "tree",
+      "state": "healthy",
+      "timing": {
+        "acquisitionMs": 17.401933670043945,
+        "presentationMs": 0.031948089599609375
+      }
+    },
+    "rawNodes": [
+      {
+        "depth": 6,
+        "hittable": true,
+        "nativePressTarget": {
+          "label": "Duplicate action",
+          "type": 9,
+          "identifier": "duplicate-control",
+          "rect": {
+            "x": 24,
+            "height": 70,
+            "y": 180,
+            "width": 345
+          }
+        },
+        "label": "Duplicate action",
+        "type": "Button",
+        "identifier": "duplicate-control",
+        "rect": {
+          "width": 345,
+          "height": 70,
+          "x": 24,
+          "y": 180
+        },
+        "index": 17,
+        "parentIndex": 16,
+        "enabled": true
+      },
+      {
+        "depth": 6,
+        "hittable": true,
+        "nativePressTarget": {
+          "label": "Duplicate action",
+          "type": 9,
+          "identifier": "duplicate-control",
+          "rect": {
+            "y": 290,
+            "height": 70,
+            "width": 345,
+            "x": 24
+          }
+        },
+        "label": "Duplicate action",
+        "type": "Button",
+        "identifier": "duplicate-control",
+        "rect": {
+          "width": 345,
+          "height": 70,
+          "x": 24,
+          "y": 290
+        },
+        "index": 20,
+        "parentIndex": 16,
+        "enabled": true
+      }
+    ],
+    "strict": [
+      {
+        "target": {
+          "label": "Duplicate action",
+          "type": 9,
+          "identifier": "duplicate-control",
+          "rect": {
+            "x": 24,
+            "height": 70,
+            "y": 180,
+            "width": 345
+          },
+          "point": {
+            "x": 197,
+            "y": 215
+          }
+        },
+        "observation": {
+          "ms": 26.819958000000042,
+          "result": {
+            "data": {
+              "pressReadiness": "blocked",
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer"
+            },
+            "ok": true
+          }
+        }
+      },
+      {
+        "target": {
+          "label": "Duplicate action",
+          "type": 9,
+          "identifier": "duplicate-control",
+          "rect": {
+            "y": 290,
+            "height": 70,
+            "width": 345,
+            "x": 24
+          },
+          "point": {
+            "x": 197,
+            "y": 325
+          }
+        },
+        "observation": {
+          "ms": 24.621750000000247,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+              "pressReadiness": "ready"
+            },
+            "ok": true
+          }
+        }
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 1.4589166385121644,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 6.870458310004324
+    },
+    {
+      "event": "appReady",
+      "ms": 7.021916680969298,
+      "otherControlCount": 500
+    },
+    {
+      "event": "modeChanged",
+      "mode": "duplicates",
+      "ms": 3992.821375024505
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "duplicates",
+      "ms": 3994.9317916762084,
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+    },
+    {
+      "event": "duplicateBReceivedTap",
+      "ms": 7789.317791641224
+    }
+  ]
+}

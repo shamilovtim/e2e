@@ -1,6 +1,8 @@
 # Implicit native press readiness: constructed UIKit evidence
 
-[The fixture-only final review](fixture-review-c7d640f/README.md) records current SDK source `c7d640f`, its clean exact gate and the current native golden-data recheck, with unchanged verified runtime artifacts.
+[The query-attributes prototype investigation](prototype-3c9-query-attributes/README.md) adds matched 500-control measurements, fast missing-binding refusals, and all 25 additional recordings. It explicitly records the rejected prototype’s placed-window and input-value regressions; it is not final-fix evidence. Setup recordings can show default simulator Springboard or Settings.
+
+[The fixture-only final review](fixture-review-c7d640f/README.md) records SDK source `c7d640f`, its clean exact gate and that revision’s native golden-data recheck, with unchanged verified runtime artifacts.
 
 [The independent web assertion fix](web-timeout-70d7f9b/README.md) records the pre-existing 2000/1999 ms CI failure and its bounded diagnostic assertion in PR #1690.
 

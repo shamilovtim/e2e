@@ -1,0 +1,202 @@
+{
+  "case": "head3c9-ipad-placed-1",
+  "classification": "setup",
+  "explanation": "Placed-window setup incomplete: native window was maximized at origin zero; stopped before target input.",
+  "hostSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeBuiltFrom": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeFingerprint": "6253afcc52245869d1f60e882029e8dc21b7014153eb808bc5b83fdb376b13fb",
+  "nativeBinarySha256": "fbd24fe8435cc5993bea2b9692895df38c14f025b7b50e73beb349c39e88cfd7",
+  "fixtureBinarySha256": "8ab16911c49d3ad877bdf4b6285c6df146294ceb1a403837e2d6b707bb9d04d5",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": 2102.554,
+  "nativeModeSetupMs": null,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": false,
+  "sessionClosed": true,
+  "mode": "ipad",
+  "target": {
+    "index": 3,
+    "parentIndex": 0,
+    "type": "Button",
+    "role": "UIButton",
+    "label": "Geometry action",
+    "identifier": "geometry-action",
+    "rect": {
+      "x": 240,
+      "y": 90,
+      "width": 220,
+      "height": 42
+    },
+    "enabled": true,
+    "depth": 1,
+    "hittable": true,
+    "ref": "e4",
+    "kind": "button"
+  },
+  "frameComparison": {
+    "publicVisibleRect": {
+      "x": 240,
+      "y": 90,
+      "width": 220,
+      "height": 42
+    },
+    "canonicalPoint": {
+      "x": 350,
+      "y": 111
+    },
+    "nativeSourceRect": {
+      "y": 90,
+      "height": 42,
+      "x": 240,
+      "width": 220
+    },
+    "nativeLiveElementRect": {
+      "y": 90,
+      "width": 220,
+      "height": 42,
+      "x": 240
+    },
+    "nativeRectsMatch": true,
+    "strictReadiness": "ready"
+  },
+  "placement": {
+    "inferredRootViewOrigin": {
+      "x": 0,
+      "y": 0
+    },
+    "nativeWindowRects": [
+      {
+        "width": 1032,
+        "y": 0,
+        "x": 0,
+        "height": 1376
+      }
+    ]
+  },
+  "samples": [],
+  "nativeGeometryObservations": {
+    "liveElementRead": {
+      "ms": 114.0307499999999,
+      "result": {
+        "data": {
+          "nodes": [
+            {
+              "hittable": true,
+              "label": "Geometry action",
+              "depth": 0,
+              "identifier": "geometry-action",
+              "type": "Button",
+              "index": 0,
+              "rect": {
+                "y": 90,
+                "width": 220,
+                "height": 42,
+                "x": 240
+              },
+              "enabled": true
+            }
+          ],
+          "found": true,
+          "runnerMainThreadBusy": false,
+          "text": "Geometry action"
+        },
+        "ok": true
+      }
+    },
+    "rawSnapshotQuality": {
+      "backend": "tree",
+      "state": "healthy",
+      "timing": {
+        "acquisitionMs": 21.237969398498535,
+        "presentationMs": 0.041961669921875
+      }
+    },
+    "rawWindowRects": [
+      {
+        "width": 1032,
+        "y": 0,
+        "x": 0,
+        "height": 1376
+      }
+    ],
+    "rawNodes": [
+      {
+        "index": 7,
+        "nativePressTarget": {
+          "rect": {
+            "y": 90,
+            "height": 42,
+            "x": 240,
+            "width": 220
+          },
+          "identifier": "geometry-action",
+          "type": 9,
+          "label": "Geometry action"
+        },
+        "rect": {
+          "width": 220,
+          "height": 42,
+          "y": 90,
+          "x": 240
+        },
+        "type": "Button",
+        "enabled": true,
+        "parentIndex": 4,
+        "identifier": "geometry-action",
+        "depth": 5,
+        "label": "Geometry action",
+        "hittable": true
+      }
+    ],
+    "strict": [
+      {
+        "target": {
+          "rect": {
+            "y": 90,
+            "height": 42,
+            "x": 240,
+            "width": 220
+          },
+          "identifier": "geometry-action",
+          "type": 9,
+          "label": "Geometry action",
+          "point": {
+            "x": 350,
+            "y": 111
+          }
+        },
+        "observation": {
+          "ms": 31.70195799999965,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadiness": "ready",
+              "pressReadinessAppBundleId": "dev.e2e.readinessgeometry"
+            },
+            "ok": true
+          }
+        }
+      }
+    ]
+  },
+  "error": {
+    "message": "iPad fixture did not open in a nonzero placed window"
+  },
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.0046666827984154224
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 13.292208313941956,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+    }
+  ]
+}

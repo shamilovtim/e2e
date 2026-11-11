@@ -1,0 +1,302 @@
+{
+  "case": "diag625-landscape-keyboard-1",
+  "classification": "prototype-regression",
+  "explanation": "Ordinary empty-field selector focus: live XCUIElement value is placeholder text but predicate snapshot attrs value is empty. Old615 selector focuses;625 refuses missing. Initial keyboard attempt stopped here; this is not a keyboard-key failure.",
+  "hostSource": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeBuiltFrom": "logging-only diagnostic based on 3c9efb43155683f714ca1af5768f42ddf7112aa6",
+  "nativeFingerprint": "40d7f5ce661cf64d8bbeca19148fcecda31508f79c5cf2345882ae2ce79391a1",
+  "nativeBinarySha256": "827268742b27ae8c184c778546e031404d0d51579b69d4c076d390f50a13feb4",
+  "fixtureBinarySha256": "8ab16911c49d3ad877bdf4b6285c6df146294ceb1a403837e2d6b707bb9d04d5",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": null,
+  "nativeModeSetupMs": null,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": null,
+  "sessionClosed": true,
+  "fixtureAttribution": "Same universal generic geometry app binary installed from frozen source; its binary digest is independently retained in fixture manifest.",
+  "samples": [],
+  "error": {
+    "code": "COMMAND_FAILED",
+    "message": "Resolved target was not ready for input; nothing was dispatched",
+    "details": {
+      "reason": "target_not_ready",
+      "readiness": "missing",
+      "dispatched": "no",
+      "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref."
+    }
+  },
+  "predicateDiagnosticObservations": [
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 36,
+        "width": 100,
+        "x": 24,
+        "y": 140
+      },
+      "identifier": "landscape",
+      "kind": "block-attributes",
+      "label": "Landscape",
+      "type": 9,
+      "value": ""
+    },
+    {
+      "bindingMatches": 1,
+      "identityMatches": 1,
+      "kind": "counts"
+    },
+    {
+      "frame": {
+        "height": 852,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "live-app",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "frame": {
+        "height": 852,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "application-snapshot",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "index": 0,
+      "kind": "live-window",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "index": 0,
+      "kind": "window-snapshot",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "childIndex": 0,
+      "kind": "window-child",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    },
+    {
+      "childIndex": 0,
+      "grandchildIndex": 0,
+      "kind": "window-grandchild",
+      "tuple": {
+        "frame": {
+          "height": 852,
+          "width": 393,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 36,
+        "width": 100,
+        "x": 24,
+        "y": 140
+      },
+      "identifier": "landscape",
+      "kind": "block-attributes",
+      "label": "Landscape",
+      "type": 9,
+      "value": ""
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 36,
+        "width": 100,
+        "x": 24,
+        "y": 140
+      },
+      "identifier": "landscape",
+      "kind": "block-attributes",
+      "label": "Landscape",
+      "type": 9,
+      "value": ""
+    },
+    {
+      "class": "XCElementSnapshot",
+      "conforms": true,
+      "kind": "block-object"
+    },
+    {
+      "frame": {
+        "height": 42,
+        "width": 200,
+        "x": 24,
+        "y": 90
+      },
+      "identifier": "geometry-input",
+      "kind": "block-attributes",
+      "label": "",
+      "type": 49,
+      "value": ""
+    },
+    {
+      "bindingMatches": 0,
+      "identityMatches": 1,
+      "kind": "counts"
+    },
+    {
+      "frame": {
+        "height": 393,
+        "width": 852,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "live-app",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "frame": {
+        "height": 393,
+        "width": 852,
+        "x": 0,
+        "y": 0
+      },
+      "identifier": "",
+      "kind": "application-snapshot",
+      "label": "GeometryFixture",
+      "type": 2,
+      "value": ""
+    },
+    {
+      "index": 0,
+      "kind": "live-window",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "index": 0,
+      "kind": "window-snapshot",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 4,
+        "value": ""
+      }
+    },
+    {
+      "childIndex": 0,
+      "kind": "window-child",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    },
+    {
+      "childIndex": 0,
+      "grandchildIndex": 0,
+      "kind": "window-grandchild",
+      "tuple": {
+        "frame": {
+          "height": 393,
+          "width": 852,
+          "x": 0,
+          "y": 0
+        },
+        "identifier": "",
+        "label": "",
+        "type": 1,
+        "value": ""
+      },
+      "windowIndex": 0
+    }
+  ],
+  "nativeEvents": []
+}

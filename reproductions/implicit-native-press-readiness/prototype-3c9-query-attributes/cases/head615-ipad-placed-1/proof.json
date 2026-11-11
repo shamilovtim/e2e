@@ -1,0 +1,295 @@
+{
+  "case": "head615-ipad-placed-1",
+  "classification": "pass",
+  "explanation": "Observed requested behavior on generic fixture.",
+  "hostSource": "c7d640fa927be35c09ef37a64b5343a8d9b585ef",
+  "nativeBuiltFrom": "17a96733f87bc571f0c785eac99230691b3c5bf8",
+  "nativeFingerprint": "615de8dee67b5d299f4507c0d12f76c16fc98cc0df2259afd83bd573034f703b",
+  "nativeBinarySha256": "d3f10f6fd3edf59dcbc343d64ba4b94bf4d6bd3e769e78a8e03381fe5ed8b3a7",
+  "fixtureBinarySha256": "8ab16911c49d3ad877bdf4b6285c6df146294ceb1a403837e2d6b707bb9d04d5",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": 2380.2173340000004,
+  "nativeModeSetupMs": null,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": true,
+  "sessionClosed": true,
+  "mode": "ipad",
+  "target": {
+    "hittable": true,
+    "index": 3,
+    "depth": 1,
+    "enabled": true,
+    "type": "Button",
+    "parentIndex": 0,
+    "identifier": "geometry-action",
+    "rect": {
+      "x": 481,
+      "height": 42,
+      "width": 220,
+      "y": 314
+    },
+    "label": "Geometry action",
+    "ref": "e4",
+    "kind": "button"
+  },
+  "frameComparison": {
+    "publicVisibleRect": {
+      "x": 481,
+      "height": 42,
+      "width": 220,
+      "y": 314
+    },
+    "canonicalPoint": {
+      "x": 591,
+      "y": 335
+    },
+    "nativeSourceRect": {
+      "height": 42,
+      "width": 220,
+      "y": 314,
+      "x": 481
+    },
+    "nativeLiveElementRect": {
+      "width": 220,
+      "y": 314,
+      "x": 481,
+      "height": 42
+    },
+    "nativeRectsMatch": true,
+    "strictReadiness": "ready"
+  },
+  "placement": {
+    "inferredRootViewOrigin": {
+      "x": 241,
+      "y": 224
+    },
+    "nativeWindowRects": [
+      {
+        "y": 224,
+        "width": 551,
+        "height": 813,
+        "x": 241
+      }
+    ],
+    "sourceRootRects": [
+      {
+        "width": 551,
+        "height": 813,
+        "y": 224,
+        "x": 241
+      }
+    ],
+    "qualification": "actionScreenFrame fixture event is window-local and is not used as screen proof.",
+    "verifiedByNativeWindow": true
+  },
+  "actualInputPoint": {
+    "x": 591,
+    "y": 335
+  },
+  "nativeBinaryUnchanged": true,
+  "samples": [
+    {
+      "label": "frame-ref",
+      "target": {
+        "ref": "@e4"
+      },
+      "press": {
+        "x": 591,
+        "y": 335,
+        "message": "Tapped @e4 (591, 335)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 551,
+        "referenceHeight": 813,
+        "targetKind": "ref",
+        "ref": "e4",
+        "refLabel": "Geometry action",
+        "selectorChain": [
+          "id=\"geometry-action\"",
+          "role=\"button\" label=\"Geometry action\"",
+          "label=\"Geometry action\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 478.1965419999997,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 67.891
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 370.30400000000003
+        }
+      ]
+    }
+  ],
+  "nativeGeometryObservations": {
+    "liveElementRead": {
+      "ms": 127.38187499999913,
+      "result": {
+        "data": {
+          "nodes": [
+            {
+              "label": "Geometry action",
+              "hittable": true,
+              "index": 0,
+              "type": "Button",
+              "depth": 0,
+              "identifier": "geometry-action",
+              "rect": {
+                "width": 220,
+                "y": 314,
+                "x": 481,
+                "height": 42
+              },
+              "enabled": true
+            }
+          ],
+          "text": "Geometry action",
+          "found": true,
+          "runnerMainThreadBusy": false
+        },
+        "ok": true
+      }
+    },
+    "rawSnapshotQuality": {
+      "state": "recovered",
+      "customActions": {
+        "truncated": 0,
+        "candidates": 9,
+        "blocked": false,
+        "read": 9
+      },
+      "timing": {
+        "presentationMs": 0.1729726791381836,
+        "acquisitionMs": 1343.3359861373901
+      },
+      "backend": "private-ax",
+      "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+      "reasonCode": "requested-backend"
+    },
+    "rawWindowRects": [
+      {
+        "y": 224,
+        "width": 551,
+        "height": 813,
+        "x": 241
+      }
+    ],
+    "nativeWindowTreeQuality": {
+      "state": "healthy",
+      "timing": {
+        "presentationMs": 0.03898143768310547,
+        "acquisitionMs": 22.367000579833984
+      },
+      "backend": "tree"
+    },
+    "sourceRootRects": [
+      {
+        "width": 551,
+        "height": 813,
+        "y": 224,
+        "x": 241
+      }
+    ],
+    "rawNodes": [
+      {
+        "enabled": true,
+        "hittable": true,
+        "index": 3,
+        "type": "Button",
+        "depth": 1,
+        "identifier": "geometry-action",
+        "rect": {
+          "width": 220,
+          "x": 481,
+          "y": 314,
+          "height": 42
+        },
+        "nativePressTarget": {
+          "type": 9,
+          "identifier": "geometry-action",
+          "label": "Geometry action",
+          "rect": {
+            "height": 42,
+            "width": 220,
+            "y": 314,
+            "x": 481
+          },
+          "value": ""
+        },
+        "parentIndex": 0,
+        "label": "Geometry action"
+      }
+    ],
+    "strict": [
+      {
+        "target": {
+          "type": 9,
+          "identifier": "geometry-action",
+          "label": "Geometry action",
+          "rect": {
+            "height": 42,
+            "width": 220,
+            "y": 314,
+            "x": 481
+          },
+          "value": "",
+          "point": {
+            "x": 591,
+            "y": 335
+          }
+        },
+        "observation": {
+          "ms": 51.11162500000137,
+          "result": {
+            "ok": true,
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadiness": "ready",
+              "pressReadinessAppBundleId": "dev.e2e.readinessgeometry"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.004666624590754509
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 14.045583317056298,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 551.0, 813.0)"
+    },
+    {
+      "count": 1,
+      "event": "actionReceivedTap",
+      "ms": 9864.971333299764,
+      "orientation": 1
+    }
+  ],
+  "hostAttribution": "Host source denotes c7 host JavaScript content. This paired run used the current3c9 host dist with all629 JS files independently byte-equal to c7/verified17, and the explicit older615 native artifact built at17. No native625 binary was substituted."
+}

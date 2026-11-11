@@ -1,0 +1,136 @@
+{
+  "case": "headc7-missing-1",
+  "classification": "pass",
+  "explanation": "Observed requested behavior on generic fixture.",
+  "hostSource": "c7d640fa927be35c09ef37a64b5343a8d9b585ef",
+  "nativeBuiltFrom": "17a96733f87bc571f0c785eac99230691b3c5bf8",
+  "nativeFingerprint": "615de8dee67b5d299f4507c0d12f76c16fc98cc0df2259afd83bd573034f703b",
+  "nativeBinarySha256": "d3f10f6fd3edf59dcbc343d64ba4b94bf4d6bd3e769e78a8e03381fe5ed8b3a7",
+  "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "coldOpenMs": 2227.603208,
+  "nativeModeSetupMs": 3490.41725,
+  "coldTimingQualification": "Open/startup and native mode setup are measured separately from warmed press routes.",
+  "recordedSuccess": true,
+  "sessionClosed": true,
+  "mode": "missing",
+  "initialTarget": {
+    "index": 12,
+    "parentIndex": 11,
+    "type": "Other",
+    "role": "ReadinessVariants.OtherControl",
+    "subrole": "UIControl",
+    "label": "Volatile value target",
+    "value": "value-496838.730064208",
+    "identifier": "missing-target",
+    "rect": {
+      "x": 24,
+      "y": 220,
+      "width": 345,
+      "height": 40
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "ref": "e13",
+    "kind": "other"
+  },
+  "nativeObservation": {
+    "ms": 278.7840419999993,
+    "ok": true,
+    "nodeCount": 525,
+    "otherCount": 511,
+    "sameTypeCount": 511,
+    "firstRows": [
+      {
+        "type": "Other",
+        "identifier": "missing-target",
+        "label": "Volatile value target",
+        "value": "value-496838.858839083",
+        "rect": {
+          "y": 220,
+          "height": 40,
+          "x": 24,
+          "width": 345
+        },
+        "nativePressTarget": {
+          "identifier": "missing-target",
+          "value": "value-496838.858839083",
+          "type": 1,
+          "label": "Volatile value target",
+          "rect": {
+            "x": 24,
+            "height": 40,
+            "width": 345,
+            "y": 220
+          }
+        }
+      }
+    ],
+    "snapshotQuality": {
+      "state": "healthy",
+      "backend": "tree",
+      "timing": {
+        "acquisitionMs": 222.78404235839844,
+        "presentationMs": 0.5710124969482422
+      }
+    },
+    "rawBindingAvailable": true
+  },
+  "targetTapEvents": 0,
+  "otherTapEvents": 0,
+  "nativeBinaryUnchanged": true,
+  "samples": [],
+  "cli": {
+    "exitCode": 1,
+    "ms": 389.11304199999995,
+    "signal": null,
+    "response": {
+      "success": false,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Resolved target was not ready for input; nothing was dispatched",
+        "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref.",
+        "details": {
+          "reason": "target_not_ready",
+          "readiness": "missing",
+          "dispatched": "no"
+        }
+      }
+    },
+    "nativeCommands": [
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness",
+        "nativeDurationMs": 289.09499999999997
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "modeChanged",
+      "ms": 0.007958384230732918,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "appReady",
+      "ms": 0.5684583447873592,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "modeChanged",
+      "ms": 4578.364958346356,
+      "otherControlCount": 500,
+      "variant": "missing"
+    }
+  ]
+}
