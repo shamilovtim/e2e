@@ -1,0 +1,333 @@
+{
+  "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "scope": "Actual final-head ordinary SDK selector/ref operations. SDK error output is separate from successful verification-driver exit. Refusal cases explicitly release the persistent cover and observe actual fade completion plus1100ms grace. Actual client cancellation disclosure unknown is preserved; no API unsent claim is invented.",
+  "lifecycle": [
+    {
+      "case": "5cda-selector-deadline-1",
+      "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+      "route": "selector",
+      "scenario": "deadline",
+      "requestMs": 60014.823584,
+      "actualSDKOutputFields": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "target_not_ready",
+        "readiness": "blocked",
+        "dispatched": "no"
+      },
+      "driverExitCode": 0,
+      "cleanupExitCode": 0,
+      "completedTargetReadiness": 636,
+      "targetPhaseNativeTapAccepted": 0,
+      "finalCounters": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 4002.3623329999973
+      },
+      "publicTimeoutOverride": false,
+      "externalCallerSignal": false,
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "runtimeJSFiles": 633,
+      "runtimeCompleteFileSetVerified": true,
+      "nativeArtifactsVerified": 11,
+      "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "originalResultSHA256": "89f0aca680a3d0f89fb0e09bb8ba933d5df87d760c0c973209e0084f9d6bf62f",
+      "classificationValid": true,
+      "deadlineDurationValid": true,
+      "coverHeldUntilRefusal": true,
+      "explicitCoverReleaseSetupInput": true
+    },
+    {
+      "case": "5cda-ref-deadline-1",
+      "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+      "route": "ref",
+      "scenario": "deadline",
+      "requestMs": 60013.918125,
+      "actualSDKOutputFields": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "target_not_ready",
+        "readiness": "blocked",
+        "dispatched": "no"
+      },
+      "driverExitCode": 0,
+      "cleanupExitCode": 0,
+      "completedTargetReadiness": 630,
+      "targetPhaseNativeTapAccepted": 0,
+      "finalCounters": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 3900.651582999999
+      },
+      "publicTimeoutOverride": false,
+      "externalCallerSignal": false,
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "runtimeJSFiles": 633,
+      "runtimeCompleteFileSetVerified": true,
+      "nativeArtifactsVerified": 11,
+      "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "originalResultSHA256": "fd6c81b50e2158b12571ceec408709785706c5fedef90d1a34d4d12edadaac9e",
+      "classificationValid": true,
+      "deadlineDurationValid": true,
+      "coverHeldUntilRefusal": true,
+      "explicitCoverReleaseSetupInput": true
+    },
+    {
+      "case": "5cda-selector-ready-1",
+      "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+      "route": "selector",
+      "scenario": "ready",
+      "requestMs": 3144.180875,
+      "actualSDKOutputFields": {
+        "ok": true,
+        "x": 194,
+        "y": 384
+      },
+      "driverExitCode": 0,
+      "cleanupExitCode": 0,
+      "completedTargetReadiness": 30,
+      "targetPhaseNativeTapAccepted": 1,
+      "finalCounters": {
+        "underlying": 1,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 1189.790665999999
+      },
+      "publicTimeoutOverride": false,
+      "externalCallerSignal": false,
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "runtimeJSFiles": 633,
+      "runtimeCompleteFileSetVerified": true,
+      "nativeArtifactsVerified": 11,
+      "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "originalResultSHA256": "594b22cf0b8b4f465c2e42283509e2c3e9a4858e26dd4f4bee7a3bc62ba00f10",
+      "tapAfterFadeComplete": true
+    },
+    {
+      "case": "5cda-ref-ready-1",
+      "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+      "route": "ref",
+      "scenario": "ready",
+      "requestMs": 3095.409417,
+      "actualSDKOutputFields": {
+        "ok": true,
+        "x": 194,
+        "y": 384
+      },
+      "driverExitCode": 0,
+      "cleanupExitCode": 0,
+      "completedTargetReadiness": 30,
+      "targetPhaseNativeTapAccepted": 1,
+      "finalCounters": {
+        "underlying": 1,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 1196.0484589999996
+      },
+      "publicTimeoutOverride": false,
+      "externalCallerSignal": false,
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "runtimeJSFiles": 633,
+      "runtimeCompleteFileSetVerified": true,
+      "nativeArtifactsVerified": 11,
+      "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "originalResultSHA256": "8822e01efc1359c80ef7851fd26ac3673a6de09adbc93ad4e84c82131dd60f13",
+      "tapAfterFadeComplete": true
+    },
+    {
+      "case": "5cda-selector-cancel-1",
+      "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+      "route": "selector",
+      "scenario": "cancel",
+      "requestMs": 207.2330409999995,
+      "actualSDKOutputFields": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "request_canceled",
+        "readiness": null,
+        "dispatched": "unknown"
+      },
+      "driverExitCode": 0,
+      "cleanupExitCode": 0,
+      "completedTargetReadiness": 2,
+      "targetPhaseNativeTapAccepted": 0,
+      "finalCounters": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 4011.3003339999996
+      },
+      "publicTimeoutOverride": false,
+      "externalCallerSignal": true,
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "runtimeJSFiles": 633,
+      "runtimeCompleteFileSetVerified": true,
+      "nativeArtifactsVerified": 11,
+      "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "originalResultSHA256": "29cfb42c0ffbcb03f7cb4c13a3893b75aab4d5f3deb000881892ed73dab34ea7",
+      "classificationValid": true,
+      "deadlineDurationValid": true,
+      "coverHeldUntilRefusal": true,
+      "explicitCoverReleaseSetupInput": true,
+      "actualCallerReason": {
+        "name": "AbortError",
+        "message": "This operation was aborted"
+      },
+      "cancelAfterCompletedReadiness": 2
+    },
+    {
+      "case": "5cda-ref-cancel-1",
+      "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+      "route": "ref",
+      "scenario": "cancel",
+      "requestMs": 207.49533299999985,
+      "actualSDKOutputFields": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "request_canceled",
+        "readiness": null,
+        "dispatched": "unknown"
+      },
+      "driverExitCode": 0,
+      "cleanupExitCode": 0,
+      "completedTargetReadiness": 2,
+      "targetPhaseNativeTapAccepted": 0,
+      "finalCounters": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 4012.4856659999996
+      },
+      "publicTimeoutOverride": false,
+      "externalCallerSignal": true,
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "runtimeJSFiles": 633,
+      "runtimeCompleteFileSetVerified": true,
+      "nativeArtifactsVerified": 11,
+      "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "originalResultSHA256": "fca14a9a7cdbd7a24d07360ad1a797ef433888441f23bf06b8e1399a9e756dd4",
+      "classificationValid": true,
+      "deadlineDurationValid": true,
+      "coverHeldUntilRefusal": true,
+      "explicitCoverReleaseSetupInput": true,
+      "actualCallerReason": {
+        "name": "Error",
+        "message": "plain caller cancellation"
+      },
+      "cancelAfterCompletedReadiness": 2
+    }
+  ],
+  "knownOrigin": {
+    "case": "5cda-ipad-known-origin-2",
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "success": true,
+    "nativeViewportKind": "reported",
+    "publicViewportBeforePress": {
+      "width": 375,
+      "height": 611
+    },
+    "nativeWindowRects": [
+      {
+        "height": 611,
+        "x": 329,
+        "y": 325,
+        "width": 375
+      }
+    ],
+    "frameComparison": {
+      "publicVisibleRect": {
+        "x": 569,
+        "y": 415,
+        "width": 111,
+        "height": 42
+      },
+      "canonicalPoint": {
+        "x": 625,
+        "y": 436
+      },
+      "nativeSourceRect": {
+        "y": 415,
+        "width": 111,
+        "x": 569,
+        "height": 42
+      },
+      "nativeLiveElementRect": {
+        "width": 111,
+        "height": 42,
+        "x": 569,
+        "y": 415
+      },
+      "nativeRectsMatch": true,
+      "strictReadiness": "ready"
+    },
+    "refPoint": {
+      "x": 625,
+      "y": 436
+    },
+    "selectorPoint": {
+      "x": 625,
+      "y": 436
+    },
+    "intendedActionTaps": 2,
+    "otherInputEvents": 0
+  },
+  "unknownOrigin": {
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "success": true,
+    "viewportKind": "derived",
+    "nativeBindingPresent": true,
+    "trustedPublicViewportPresent": false,
+    "counters": [
+      0,
+      0,
+      0
+    ],
+    "nativeReadinessAcceptedCount": 0,
+    "nativeTapAcceptedCount": 0,
+    "producerPins": false,
+    "externalPressAbort": false,
+    "case": "5cda-natural-unknown-placed-1",
+    "refusals": [
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      },
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      }
+    ],
+    "refMs": 18.355374999999185,
+    "selectorMs": 410.0341669999998,
+    "recordStopReturned": true
+  },
+  "retainedFailedNativeDeadline": "9522-selector-deadline-diagnostic-1",
+  "exactConstructedAliasLimitation": "Historical exact alias placement was not reproduced; healthy placed-window and natural unknown-origin cases are separate evidence."
+}

@@ -1,0 +1,501 @@
+{
+  "sourceHead": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "finding": "A readiness-owned deadline that aborts an in-flight local Apple read can be wrapped by the transport as typed request_canceled. The readiness catch excludes AppErrors from the existing budget owner, losing the last observed blocked state.",
+  "scope": "Local built-in Apple runner native read transport. No kernel awaitWithSignal call is needed on this route.",
+  "classification": "Confirmed committed-source path, controlled same-boundary regression, and separately preserved actual952 natural60s native failure.",
+  "fix": "Delegate canonical request_canceled AppErrors to existing assertBudget only when the effective context signal is aborted; all non-AppErrors retain existing delegation. Unrelated typed backend AppErrors remain unchanged.",
+  "excerpts": [
+    {
+      "path": "packages/platform-apple/src/runtime-selector-query.ts",
+      "start": 65,
+      "end": 77,
+      "sourceSHA256": "9659b53d08e48379ecf0bf53f0e993822563db66ac3e84bf1be2a8dd72769ad1",
+      "lines": [
+        {
+          "line": 65,
+          "text": "    pressReadiness: async (input: PressReadinessInput): Promise<PressReadinessResult> => {"
+        },
+        {
+          "line": 66,
+          "text": "      const signal = input.signal"
+        },
+        {
+          "line": 67,
+          "text": "        ? AbortSignal.any([request.signal, input.signal])"
+        },
+        {
+          "line": 68,
+          "text": "        : request.signal;"
+        },
+        {
+          "line": 69,
+          "text": "      signal.throwIfAborted();"
+        },
+        {
+          "line": 70,
+          "text": "      if (!input.appBundleId)"
+        },
+        {
+          "line": 71,
+          "text": "        throw new AppError('INVALID_ARGS', 'Native press readiness requires an app bundle ID');"
+        },
+        {
+          "line": 72,
+          "text": "      const { queryAppleRunnerSelector } = await import('./core/runner-selector-query.ts');"
+        },
+        {
+          "line": 73,
+          "text": "      const data = await queryAppleRunnerSelector("
+        },
+        {
+          "line": 74,
+          "text": "        request.device,"
+        },
+        {
+          "line": 75,
+          "text": "        { authorizedTarget: input.authorizedTarget },"
+        },
+        {
+          "line": 76,
+          "text": "        input.appBundleId,"
+        },
+        {
+          "line": 77,
+          "text": "        { ...input.execution, signal },"
+        }
+      ]
+    },
+    {
+      "path": "packages/platform-apple/src/core/runner-selector-query.ts",
+      "start": 18,
+      "end": 27,
+      "sourceSHA256": "ddc6129f324e5fd6b5f5b7c908dbc10888176c210de3e514df027b70d9d6e66d",
+      "lines": [
+        {
+          "line": 18,
+          "text": "  const result = await runAppleRunnerCommand("
+        },
+        {
+          "line": 19,
+          "text": "    device,"
+        },
+        {
+          "line": 20,
+          "text": "    {"
+        },
+        {
+          "line": 21,
+          "text": "      command: 'authorizedTarget' in selector ? 'pressReadiness' : 'querySelector',"
+        },
+        {
+          "line": 22,
+          "text": "      ...('authorizedTarget' in selector"
+        },
+        {
+          "line": 23,
+          "text": "        ? { authorizedTarget: selector.authorizedTarget }"
+        },
+        {
+          "line": 24,
+          "text": "        : { selectorKey: selector.key, selectorValue: selector.value }),"
+        },
+        {
+          "line": 25,
+          "text": "      appBundleId,"
+        },
+        {
+          "line": 26,
+          "text": "    },"
+        },
+        {
+          "line": 27,
+          "text": "    options,"
+        }
+      ]
+    },
+    {
+      "path": "packages/apple-runner/src/runner-command-traits.ts",
+      "start": 79,
+      "end": 84,
+      "sourceSHA256": "34e65afd03c663989dce92f4a6975a024cca1564206563c5d2569d93d3e32da8",
+      "lines": [
+        {
+          "line": 79,
+          "text": "  desktopScroll: PREFLIGHT_SKIPPABLE_TOUCH_MUTATION_TRAITS,"
+        },
+        {
+          "line": 80,
+          "text": "  findText: READ_ONLY_TRAITS,"
+        },
+        {
+          "line": 81,
+          "text": "  querySelector: READ_ONLY_TRAITS,"
+        },
+        {
+          "line": 82,
+          "text": "  pressReadiness: READ_ONLY_TRAITS,"
+        },
+        {
+          "line": 83,
+          "text": "  readText: READ_ONLY_TRAITS,"
+        },
+        {
+          "line": 84,
+          "text": "  snapshot: READ_ONLY_TRAITS,"
+        }
+      ]
+    },
+    {
+      "path": "packages/apple-runner/src/runner-exchange.ts",
+      "start": 301,
+      "end": 314,
+      "sourceSHA256": "a84d53d5a96840af92519688473b55ef92377cedeff074f76ea5580b13e11b94",
+      "lines": [
+        {
+          "line": 301,
+          "text": "  try {"
+        },
+        {
+          "line": 302,
+          "text": "    return await withDiagnosticTimer("
+        },
+        {
+          "line": 303,
+          "text": "      'ios_runner_command_send',"
+        },
+        {
+          "line": 304,
+          "text": "      async () => {"
+        },
+        {
+          "line": 305,
+          "text": "        if (readOnlyCommand) {"
+        },
+        {
+          "line": 306,
+          "text": "          return await waitForRunner("
+        },
+        {
+          "line": 307,
+          "text": "            device,"
+        },
+        {
+          "line": 308,
+          "text": "            session.endpoint,"
+        },
+        {
+          "line": 309,
+          "text": "            runnerCommand,"
+        },
+        {
+          "line": 310,
+          "text": "            logPath,"
+        },
+        {
+          "line": 311,
+          "text": "            remainingMs,"
+        },
+        {
+          "line": 312,
+          "text": "            session,"
+        },
+        {
+          "line": 313,
+          "text": "            signal,"
+        },
+        {
+          "line": 314,
+          "text": "          );"
+        }
+      ]
+    },
+    {
+      "path": "packages/apple-runner/src/runner-startup-transport.ts",
+      "start": 147,
+      "end": 160,
+      "sourceSHA256": "b3fae4fabba11f9dbd1763e7275c4e5a2e96d72b827739f6b2b9526c16de538b",
+      "lines": [
+        {
+          "line": 147,
+          "text": "    );"
+        },
+        {
+          "line": 148,
+          "text": "  } catch (error) {"
+        },
+        {
+          "line": 149,
+          "text": "    if (signal?.aborted || isRequestCanceledError(error)) {"
+        },
+        {
+          "line": 150,
+          "text": "      throw canceledRunnerConnect(commandMayHaveBeenWritten);"
+        },
+        {
+          "line": 151,
+          "text": "    }"
+        },
+        {
+          "line": 152,
+          "text": "    if (isUsbmuxDeviceUnattachedError(error)) throw error;"
+        },
+        {
+          "line": 153,
+          "text": "    if (!lastError) {"
+        },
+        {
+          "line": 154,
+          "text": "      lastError = error;"
+        },
+        {
+          "line": 155,
+          "text": "    }"
+        },
+        {
+          "line": 156,
+          "text": "  }"
+        },
+        {
+          "line": 157,
+          "text": "  if (answered) return requireTokenEnforcingRunner(answered);"
+        },
+        {
+          "line": 158,
+          "text": ""
+        },
+        {
+          "line": 159,
+          "text": "  if (signal?.aborted) {"
+        },
+        {
+          "line": 160,
+          "text": "    throw canceledRunnerConnect(commandMayHaveBeenWritten);"
+        }
+      ]
+    },
+    {
+      "path": "packages/apple-runner/src/runner-startup-transport.ts",
+      "start": 188,
+      "end": 200,
+      "sourceSHA256": "b3fae4fabba11f9dbd1763e7275c4e5a2e96d72b827739f6b2b9526c16de538b",
+      "lines": [
+        {
+          "line": 188,
+          "text": "function canceledRunnerConnect(commandMayHaveBeenWritten: boolean): AppError {"
+        },
+        {
+          "line": 189,
+          "text": "  return createRequestCanceledError({ dispatched: commandMayHaveBeenWritten ? 'unknown' : 'no' });"
+        },
+        {
+          "line": 190,
+          "text": "}"
+        },
+        {
+          "line": 191,
+          "text": ""
+        },
+        {
+          "line": 192,
+          "text": "/**"
+        },
+        {
+          "line": 193,
+          "text": " * The cancellation one route reports. It keeps `dispatched: no` only when the failure it replaces"
+        },
+        {
+          "line": 194,
+          "text": " * proves nothing was written (a refused connect, or a cancel seen before the POST); an abort that"
+        },
+        {
+          "line": 195,
+          "text": " * interrupted the POST itself proves nothing, so the loop reads it as possibly written."
+        },
+        {
+          "line": 196,
+          "text": " */"
+        },
+        {
+          "line": 197,
+          "text": "function canceledRunnerAttempt(error: unknown, signal: AbortSignal | undefined): AppError {"
+        },
+        {
+          "line": 198,
+          "text": "  return createRequestCanceledError("
+        },
+        {
+          "line": 199,
+          "text": "    isProvablyUnwrittenBeforeCancel(error, signal) ? { dispatched: 'no' } : {},"
+        },
+        {
+          "line": 200,
+          "text": "  );"
+        }
+      ]
+    },
+    {
+      "path": "packages/apple-runner/src/runner-startup-transport.ts",
+      "start": 401,
+      "end": 411,
+      "sourceSHA256": "b3fae4fabba11f9dbd1763e7275c4e5a2e96d72b827739f6b2b9526c16de538b",
+      "lines": [
+        {
+          "line": 401,
+          "text": "  const remainingMs = params.attemptDeadline?.remainingMs() ?? params.timeoutMs;"
+        },
+        {
+          "line": 402,
+          "text": "  try {"
+        },
+        {
+          "line": 403,
+          "text": "    return await postRunnerCommandOverRoute(device, route, {"
+        },
+        {
+          "line": 404,
+          "text": "      endpoint: params.endpoint,"
+        },
+        {
+          "line": 405,
+          "text": "      command: params.command,"
+        },
+        {
+          "line": 406,
+          "text": "      timeoutMs: Math.min(RUNNER_CONNECT_REQUEST_TIMEOUT_MS, remainingMs),"
+        },
+        {
+          "line": 407,
+          "text": "      signal: params.signal,"
+        },
+        {
+          "line": 408,
+          "text": "    });"
+        },
+        {
+          "line": 409,
+          "text": "  } catch (error) {"
+        },
+        {
+          "line": 410,
+          "text": "    if (params.signal?.aborted || isRequestCanceledError(error)) {"
+        },
+        {
+          "line": 411,
+          "text": "      throw canceledRunnerAttempt(error, params.signal);"
+        }
+      ]
+    },
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+      "start": 94,
+      "end": 99,
+      "sourceSHA256": "26939488bc8432741aebdacf88ae06bf540ec26c72538db8e39ffb35146761f6",
+      "lines": [
+        {
+          "line": 94,
+          "text": "    assertBudget(context, deadline, state, deadlineSignal);"
+        },
+        {
+          "line": 95,
+          "text": "    return ready;"
+        },
+        {
+          "line": 96,
+          "text": "  } catch (error) {"
+        },
+        {
+          "line": 97,
+          "text": "    if (!(error instanceof AppError)) assertBudget(context, deadline, state, deadlineSignal, error);"
+        },
+        {
+          "line": 98,
+          "text": "    throw error;"
+        },
+        {
+          "line": 99,
+          "text": "  }"
+        }
+      ]
+    },
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+      "start": 143,
+      "end": 160,
+      "sourceSHA256": "26939488bc8432741aebdacf88ae06bf540ec26c72538db8e39ffb35146761f6",
+      "lines": [
+        {
+          "line": 143,
+          "text": "  context: BackendCommandContext,"
+        },
+        {
+          "line": 144,
+          "text": "  deadline: number,"
+        },
+        {
+          "line": 145,
+          "text": "  state: NativePressReadiness,"
+        },
+        {
+          "line": 146,
+          "text": "  deadlineSignal?: AbortSignal,"
+        },
+        {
+          "line": 147,
+          "text": "  cause?: unknown,"
+        },
+        {
+          "line": 148,
+          "text": "): void {"
+        },
+        {
+          "line": 149,
+          "text": "  if (context.signal?.aborted) {"
+        },
+        {
+          "line": 150,
+          "text": "    const reason: unknown = context.signal.reason;"
+        },
+        {
+          "line": 151,
+          "text": "    if (reason instanceof AppError) throw reason;"
+        },
+        {
+          "line": 152,
+          "text": "    if (reason !== deadlineSignal?.reason)"
+        },
+        {
+          "line": 153,
+          "text": "      throw createRequestCanceledError(undefined, cause ?? reason);"
+        },
+        {
+          "line": 154,
+          "text": "    throw refusal(state, cause ?? reason);"
+        },
+        {
+          "line": 155,
+          "text": "  }"
+        },
+        {
+          "line": 156,
+          "text": "  if (Date.now() >= deadline) throw refusal(state, cause);"
+        },
+        {
+          "line": 157,
+          "text": "}"
+        },
+        {
+          "line": 158,
+          "text": ""
+        },
+        {
+          "line": 159,
+          "text": "function refusal(state: string, cause?: unknown): AppError {"
+        },
+        {
+          "line": 160,
+          "text": "  return discloseDispatch("
+        }
+      ]
+    }
+  ]
+}

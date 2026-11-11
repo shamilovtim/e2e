@@ -1,0 +1,38 @@
+{
+  "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "runtimeFiles": 633,
+  "comparable7395ManifestFiles": 625,
+  "comparableRuntimeChangedFrom7395": [
+    "dist/src/press-readiness.js"
+  ],
+  "additionalUncomparedGeneratedEntries": [
+    "dist/src/internal/bin.js",
+    "dist/src/internal/companion-tunnel.js",
+    "dist/src/internal/daemon.js",
+    "dist/src/internal/png-worker.js",
+    "dist/src/internal/run-script-child.js",
+    "dist/src/internal/run-script-http-child.js",
+    "dist/src/internal/update-check-entry.js",
+    "dist/src/plugins/webdriver.js"
+  ],
+  "sourceChangedFrom7395": [
+    "packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+    "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts"
+  ],
+  "nativeInputChangedFromD9": [],
+  "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "artifacts": [
+    {
+      "kind": "production",
+      "entriesVerified": 11,
+      "xctestBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+    },
+    {
+      "kind": "unit",
+      "entriesVerified": 11,
+      "xctestBinarySha256": "b23f62bc31d22d2870241bbffe37a42b5294014798c291a91b02ab342675bf0f"
+    }
+  ],
+  "readyPathAttribution": "Existing assertBudget owner implementation changed; final-source timing/750 required; earlier7395 metrics retain source attribution."
+}

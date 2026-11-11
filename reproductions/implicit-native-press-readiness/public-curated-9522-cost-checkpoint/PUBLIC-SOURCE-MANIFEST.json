@@ -1,0 +1,343 @@
+{
+  "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "sourceTree": "337e192a5a865e6dc637b2ce614c61bbee7c9007",
+  "base": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "sourcePatch": {
+    "path": "source.patch",
+    "sha256": "d9ceb18bcfa2e2f8353549de2d8e3fac1a8ba2bbda9654687eab255834cc7874",
+    "bytes": 210464
+  },
+  "files": [
+    {
+      "path": "cases/d9-combined-natural-unknown-1/source/executed-driver.py",
+      "originalArchivedSha256": "36837c74ec91727c2b1349520da17cb962d4615fc04bd391e488f5a662842e66",
+      "publicSha256": "36837c74ec91727c2b1349520da17cb962d4615fc04bd391e488f5a662842e66",
+      "bytes": 8865,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-combined-natural-unknown-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "publicSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "bytes": 4308,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-tablet-placement-1/source/executed-driver.py",
+      "originalArchivedSha256": "5d84c113704419d9cd8c09971fb90552fe3d27c3dc2ebb96948c6f70b7beac48",
+      "publicSha256": "5d84c113704419d9cd8c09971fb90552fe3d27c3dc2ebb96948c6f70b7beac48",
+      "bytes": 8920,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-tablet-placement-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "bb456bcf6ca6a8685b4ac9b9ab139f7044a4df01d082f8ed09bd41b9683a3ac1",
+      "publicSha256": "bb456bcf6ca6a8685b4ac9b9ab139f7044a4df01d082f8ed09bd41b9683a3ac1",
+      "bytes": 3423,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-combined-ipad-placed-1/source/executed-driver.py",
+      "originalArchivedSha256": "5d84c113704419d9cd8c09971fb90552fe3d27c3dc2ebb96948c6f70b7beac48",
+      "publicSha256": "5d84c113704419d9cd8c09971fb90552fe3d27c3dc2ebb96948c6f70b7beac48",
+      "bytes": 8920,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-combined-ipad-placed-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "publicSha256": "1d14e3c9132859b0ef7e4236a9b699f8e67258f3c98c3d54f2fd0889e20a6332",
+      "bytes": 14103,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-combined-natural-unknown-placed-1/source/executed-driver.py",
+      "originalArchivedSha256": "5d84c113704419d9cd8c09971fb90552fe3d27c3dc2ebb96948c6f70b7beac48",
+      "publicSha256": "5d84c113704419d9cd8c09971fb90552fe3d27c3dc2ebb96948c6f70b7beac48",
+      "bytes": 8920,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-combined-natural-unknown-placed-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "publicSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "bytes": 4308,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-combined-fade750-1/source/executed-driver.py",
+      "originalArchivedSha256": "928d28fe430660072656b20b377dc527dc9218e24335e3808074dea475f5ec9c",
+      "publicSha256": "e2db36047d9361a2e5952149298a632339967e25f1aeb0c69bab078f0f5bc5be",
+      "bytes": 4567,
+      "normalization": "Generic owned-device/local input placeholders; original hash retained."
+    },
+    {
+      "path": "cases/d9-combined-fade750-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "publicSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "bytes": 3528,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-fade750-1/source/executed-driver.py",
+      "originalArchivedSha256": "4f439b956b293f641919fd6c4913340472365dc8680706c56dd20a49bc1da72b",
+      "publicSha256": "1c9db3466b179a95ce6d3e45c8c104389507c45d1f4d308be349cc14dd49eaf3",
+      "bytes": 4655,
+      "normalization": "Generic owned-device/local input placeholders; original hash retained."
+    },
+    {
+      "path": "cases/7395-fade750-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "publicSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "bytes": 3528,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-shared-current-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-shared-current-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-shared-current-2/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-shared-current-2/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-shared-caller1000-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-shared-caller1000-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-anonymous-current-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-anonymous-current-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-anonymous-current-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-anonymous-current-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-buttons-current-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-buttons-current-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-buttons-current-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-buttons-current-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-missing-current-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-missing-current-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/native-d9-combined-phone-1/source/executed-wrapper.py",
+      "originalArchivedSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+      "publicSha256": "27f9df020c32e4e851230dd161bd3cb441a9def72c61563b58295c6f08a926e9",
+      "bytes": 5374,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-fade750-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "cce5ee4ba72f033a218b2c33780460d484422257a1fcd09e355bea2628f30880",
+      "publicSha256": "d4ea556f8b2ee77c95c6f5e5e7aaedb33d88b3b91dcfe946a8bebd09d12a73cd",
+      "bytes": 6601,
+      "normalization": "Generic owned-device/local input placeholders; original hash retained."
+    },
+    {
+      "path": "cases/9522-fade750-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "publicSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "bytes": 3528,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-shared-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-shared-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-shared-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-shared-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-anonymous-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-anonymous-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-anonymous-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-anonymous-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-buttons-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/c267-buttons-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-buttons-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-buttons-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-shared-caller1000-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-shared-caller1000-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-missing-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-missing-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "qualification": "Exact source version is per-case.952 changes readiness TypeScript; it is not byte-identical7395. Native inputs/all11 production artifacts unchanged from actual d9 build; native7 ran d9. Earlier runtime enumerations cover selected chunks, not exhaustive emitted JS."
+}

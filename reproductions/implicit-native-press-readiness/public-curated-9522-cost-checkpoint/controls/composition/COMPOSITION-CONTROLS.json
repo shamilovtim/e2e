@@ -1,0 +1,62 @@
+{
+  "receipt": {
+    "reviewedSHA": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "reviewedStatusBefore": "",
+    "experimentBase": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "focusedSuite": "packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages-screen-origin.test.ts",
+    "observableBehavior": "Reported snapshot bindings survive strip/ref assignment and memory cloning; explicit unknown viewport refuses before readiness/rescue/input despite a plausible numeric binding.",
+    "controls": [
+      "Move viewport copy to referenced array immediately before native-target stripping.",
+      "Omit native-target evidence attachment after memory snapshot clone."
+    ],
+    "existingCoverageGap": "Old geometry fixture had no native descriptor, so strip could return the original array and no readinessbackend required cloned descriptor preservation.",
+    "runs": [
+      {
+        "phase": "green-before",
+        "passed": 19,
+        "failed": 0,
+        "success": true
+      },
+      {
+        "phase": "viewport-red",
+        "passed": 11,
+        "failed": 8,
+        "success": false
+      },
+      {
+        "phase": "green-middle",
+        "passed": 19,
+        "failed": 0,
+        "success": true
+      },
+      {
+        "phase": "native-red",
+        "passed": 18,
+        "failed": 1,
+        "success": false
+      },
+      {
+        "phase": "green-after",
+        "passed": 19,
+        "failed": 0,
+        "success": true
+      }
+    ],
+    "patches": [
+      {
+        "file": "composition-loss-viewport-before-strip.patch",
+        "sha256": "7573d5d46c58291d7702b38241059991a3a86a33ec6adb181009541089daee25"
+      },
+      {
+        "file": "composition-loss-native-clone.patch",
+        "sha256": "cbade1a3d5b9f27a38567d1adbe0300c3f91c8e39e8685dbf0b5767ec68331df"
+      }
+    ],
+    "reviewedSHAAfter": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "reviewedStatusAfter": "",
+    "experimentRemovalPending": false
+  },
+  "classification": "Expected isolated negative controls, not live product/native failures.",
+  "attribution": "Actual green19→viewport-copy-loss8fail+11pass→green19→native-clone-loss1fail+18pass→green19. Source restored clean at d9.",
+  "notRunByCurator": "No tests/build/native/device/media operations were performed by this preparation."
+}

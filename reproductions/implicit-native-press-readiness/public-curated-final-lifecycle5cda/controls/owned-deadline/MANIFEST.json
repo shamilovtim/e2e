@@ -1,0 +1,40 @@
+{
+  "candidatePatchSHA256": "851d9e946febff11d99d4da3ceffe75baa4f75186bed04872863779c0f277919",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2430,
+      "sha256": "cb54aba0864640d8ef5ea1fa878de1f55c1fc5ae59bafa626936d424fbf64fed"
+    },
+    {
+      "path": "ci-failure.json",
+      "bytes": 1177,
+      "sha256": "ca2b13c8375a942af2fa863b864a9997c8620daa5b83209191794a35690df54c"
+    },
+    {
+      "path": "failure-excerpts.md",
+      "bytes": 789,
+      "sha256": "92dc21129b3d458ed3e6ed8c1a85ed4893281b875912587b64658c15722d86cb"
+    },
+    {
+      "path": "mutation-controls.json",
+      "bytes": 1719,
+      "sha256": "4c711b4b1129e178210af5213c15559bfa5daa28143d88dfecf939125fd50b37"
+    },
+    {
+      "path": "source.patch",
+      "bytes": 8162,
+      "sha256": "851d9e946febff11d99d4da3ceffe75baa4f75186bed04872863779c0f277919"
+    },
+    {
+      "path": "targeted-coverage-summary.json",
+      "bytes": 1911,
+      "sha256": "f3f12435df540448340a11d1def6ed12531ee51b08deaa5c5ec98f47886853b8"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 6352,
+      "sha256": "d82836390bb654a08c8d3885847ca549f8f1a7b4e5a0c7cc7d23a04bb765ecc8"
+    }
+  ]
+}

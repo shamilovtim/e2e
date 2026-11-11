@@ -1,5 +1,9 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The final 5cda verification](public-curated-final-lifecycle5cda/README.md) records successful selector and saved-ref readiness, real 60-second deadlines, caller cancellation with zero observed late input, and known/unknown window-origin checks. Together with the [retained cost checkpoint](public-curated-9522-cost-checkpoint/README.md), it contains all 39 original recordings, including failures and setup attempts. All 6,615 video samples decoded without errors.
+
+**Runtime manifest correction:** older JavaScript inventories verified only their listed chunks; statements describing those inventories as the complete emitted runtime were too broad. Eight generated entrypoints were omitted. The new runs pin the complete 633-file head and 631-file baseline sets before execution. [Exact scope and historical limitations](public-curated-final-lifecycle5cda/RUNTIME-MANIFEST-SCOPE.md) are recorded without changing the historical bundles.
+
 [The ready-path cost investigation](readiness-cost-ad2-intermediate/README.md) preserves all 24 intermediate recordings, including failed probes and setup attempts. [The subsequent pre-integration revision](readiness-cost-cce5-pre-integration/README.md) preserves 16 recordings, the measured 329–347 ms added cost, the failed original one-second caller probe, and its exact historical gate. These datasets precede the merged geometry fix; they do not establish combined behavior.
 
 [The reported-authority test follow-up](followup-4399-reported-authority-2c30d54/README.md) proves the positive presenter handoff with an unknown destination and a real guard assertion; omitting the source fact fails. The exact-head gate passes with all runtime/native source inputs unchanged from the preceding review.

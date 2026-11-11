@@ -1,0 +1,38 @@
+{
+  "source": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "terminalCheckSnapshotFromParent": {
+    "success": 12,
+    "failure": 1,
+    "skipped": 2,
+    "neutral": 1
+  },
+  "coverageFailure": {
+    "pr": "https://github.com/callstack/agent-device/pull/4391",
+    "head": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "job": "https://github.com/callstack/agent-device/actions/runs/43105761211/job/130808537852",
+    "check": "Coverage",
+    "step": "Run coverage",
+    "command": "vitest run --coverage --allowOnly=false --project=!fuzz-worker && pnpm test:fuzz-worker",
+    "testFile": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+    "test": "a production result deadline preserves the last blocked native state",
+    "expected": {
+      "reason": "target_not_ready",
+      "readiness": "blocked",
+      "dispatched": "no"
+    },
+    "received": {
+      "reason": "target_not_ready",
+      "readiness": "native-read-failed",
+      "dispatched": "no"
+    },
+    "runCounts": {
+      "failed": 1,
+      "passed": 19564,
+      "skipped": 70
+    },
+    "laterCoverageAndCrapEnforcement": "Skipped because coverage test execution failed.",
+    "causation": "CI did not record the per-test event/clock sequence. Its precise cause is unproven. The same diagnostic mismatch is reproduced under a controlled legitimate deadline condition; this does not prove CI used that sequence."
+  },
+  "neutralReviewQualification": "Cubic review did not run; neutral status is not a positive review.",
+  "disposition": "D9 local exact gate remains a historical pass, but its CI coverage execution failed. Controlled owned-deadline bug was established and corrected later; the precise CI event/clock cause remains unproven. D9 is not designated final."
+}

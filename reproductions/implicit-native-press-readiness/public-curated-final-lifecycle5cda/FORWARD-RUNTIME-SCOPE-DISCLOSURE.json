@@ -1,0 +1,17 @@
+{
+  "historicalScope": "Old625/623 and earlier N-file manifests enumerate selected listed JavaScript chunks, not exhaustive all-emitted runtime. Listed file bytes/hash facts and actual outcomes remain as recorded. Do not rewrite frozen/published historical files.",
+  "boundaryGap": "Eight generated entrypoints were absent from the older625/623 selected inventories. The old full baseline eight-entry hashes were retrospective and are never represented as pre-run.",
+  "newProspectiveBoundary": {
+    "headSource": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+    "headManifest": "final-9522-runtime-js-manifest.json",
+    "headFiles": 633,
+    "baseSource": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+    "baseManifest": "base-c267-full-runtime-js-manifest.json",
+    "baseFiles": 631,
+    "rootIndependentVerification": "Actual dist.rglob *.js file-set equality, no symlinks, every listed hash verified before fresh replays at parent22:45 checkpoint. All eight generated entrypoints included."
+  },
+  "freshReplayRequirement": "Fresh three BASE and three HEAD modes, plus new750/original1s/missing, are required under the full prospective boundary. No old-baseline substitution for the new principal comparison.",
+  "perRunInputs": "Strengthened outside preflights pin complete runtime file set, actual CLI launcher/package/build-entry scripts, native all11 artifacts/xctestrun and fixture before execution. Frozen measurement wrapper d8b03 remains unchanged; only outer preflight is strengthened.",
+  "nativeHistoricalScope": "Prior root3×11 native artifact/xctestrun verification remains valid and unchanged; this correction concerns JavaScript enumeration scope.",
+  "publication": "Correct claims forward through new bundle/top navigation. Historical40 published clips/bundles remain byte-unchanged."
+}

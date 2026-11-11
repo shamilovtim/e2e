@@ -1,0 +1,66 @@
+{
+  "status": "passed selected-public-subset audit",
+  "scope": "Final lifecycle5cda15-recording append. Earlier236-file24-recording bundle remains byte-unchanged by curator; selected manifest digests/file count rechecked and parent independently audited originals.",
+  "textFilesChecked": 125,
+  "jsonKeyAudit": "Selected JSON recursively excludes actual process/device/session/request/state/diagnostic keys. Generic protocol declarations may occur in exact public source.",
+  "exactSourcePatchPathExceptions": [
+    {
+      "path": "source.patch",
+      "line": 3342,
+      "exactLine": "+          iosXctestrunFile: '/tmp/native.xctestrun',",
+      "qualification": "Generic public test placeholder only, no actual host path."
+    },
+    {
+      "path": "source.patch",
+      "line": 3343,
+      "exactLine": "+          traceLogPath: '/tmp/native-trace.log',",
+      "qualification": "Generic public test placeholder only, no actual host path."
+    },
+    {
+      "path": "source.patch",
+      "line": 3355,
+      "exactLine": "+        iosXctestrunFile: '/tmp/native.xctestrun',",
+      "qualification": "Generic public test placeholder only, no actual host path."
+    },
+    {
+      "path": "source.patch",
+      "line": 3356,
+      "exactLine": "+        traceLogPath: '/tmp/native-trace.log',",
+      "qualification": "Generic public test placeholder only, no actual host path."
+    }
+  ],
+  "visualReview": {
+    "reviewed": "All30 first/last endpoint PNGs across three contact sheets",
+    "contactSheets": [
+      "contact-sheets/page-1.png",
+      "contact-sheets/page-2.png",
+      "contact-sheets/page-3.png"
+    ],
+    "contactDimensions": [
+      [
+        1100,
+        1750
+      ],
+      [
+        1100,
+        1750
+      ],
+      [
+        1100,
+        1750
+      ]
+    ],
+    "findings": "Generic UIKit fixture/default simulator OS only. Individual interior frames were not visually reviewed.",
+    "orientation": "Track transform retained without adaptive rotation/crop/content edits."
+  },
+  "mediaMetadata": "All15 appended MP4s have one video/zero audio tracks and only generic com.apple.policy.screenrecording.1 track user-data.",
+  "proofAudit": "All three controlled packet manifests, exact immutable source-lineage deltas, public executed archives and39 case navigation links verified.",
+  "excluded": "Actual host/home paths, owned UUIDs/PIDs, request/session/socket/lease/token state, account/backend/config values, private app data/source, raw process logs and xcresult.",
+  "limitations": [
+    "Every yielded sample decoded; individual interior frames not visually reviewed.",
+    "Final natural unknown-origin clip is one static sample, not video-only policy/dispatch proof.",
+    "Cancellation API reports dispatched unknown; observed zero native tap/late input is a separate measured oracle.",
+    "Generic fixture source-to-binary mapping limits remain explicit.",
+    "Audit applies to this explicit whitelist, not omitted private raw artifacts."
+  ]
+}

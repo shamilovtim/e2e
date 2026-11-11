@@ -1,0 +1,155 @@
+{
+  "baseHead": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "patchFile": "codex-sdk4391-deadline-owned-signal-final.patch",
+  "patchSHA256": "851d9e946febff11d99d4da3ceffe75baa4f75186bed04872863779c0f277919",
+  "scope": {
+    "files": 2,
+    "insertions": 70,
+    "deletions": 16
+  },
+  "files": [
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+      "sha256": "acd85a245b37559af8c14e0f9da56e393d3ed6a05da030058f6896eee734dc15"
+    },
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+      "sha256": "06b04d7b229fbf21e1607461abbc43a9870cdd52eab433d3ab2c3ec9be6009f2"
+    }
+  ],
+  "ownInstallAndBuild": true,
+  "commands": {
+    "focused": "pnpm exec vitest run packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts --testNamePattern 'production result deadline|callerAbort' --maxWorkers=1",
+    "callerIdentity": "pnpm exec vitest run packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts --testNamePattern callerAbort --maxWorkers=1",
+    "fullFile": "pnpm exec vitest run packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts --maxWorkers=1",
+    "targetedCoverage": "pnpm exec vitest run packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts --coverage --allowOnly=false --project=unit-core --maxWorkers=1 --coverage.include=packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts --coverage.include=packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts"
+  },
+  "results": {
+    "focusedGreen": {
+      "passed": 2,
+      "filteredSkipped": 19
+    },
+    "actualD9RuntimeRed": {
+      "failed": 1,
+      "passed": 1,
+      "filteredSkipped": 19,
+      "oracle": "Known blocked then real budget abort and no input checks passed first; readiness expected blocked, actual native-read-failed."
+    },
+    "restoredGreen": {
+      "passed": 2,
+      "filteredSkipped": 19
+    },
+    "onlyReasonIdentityOmittedRed": {
+      "failed": 1,
+      "filteredSkipped": 20,
+      "oracle": "Earlier caller abort delayed throw until owned budget expired; caller preconditions and no input passed first; expected native-read-failed, actual blocked."
+    },
+    "restoredFullFile": {
+      "passed": 21
+    },
+    "targetedV8Coverage": {
+      "files": 2,
+      "passed": 49,
+      "coverageOwners": [
+        "command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts",
+        "command-runtime/src/commands/interaction/runtime/press-readiness.ts"
+      ],
+      "total": {
+        "lines": {
+          "total": 51,
+          "covered": 48,
+          "skipped": 0,
+          "pct": 94.11
+        },
+        "statements": {
+          "total": 58,
+          "covered": 53,
+          "skipped": 0,
+          "pct": 91.37
+        },
+        "functions": {
+          "total": 8,
+          "covered": 8,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 69,
+          "covered": 64,
+          "skipped": 0,
+          "pct": 92.75
+        },
+        "branchesTrue": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": "Unknown"
+        }
+      },
+      "configuredThresholdsUnchanged": {
+        "statements": 78,
+        "lines": 80
+      },
+      "scope": "Targeted owner instrumentation, not full-repository CI coverage."
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "formatCheck": "passed"
+  },
+  "sourceInvariants": {
+    "unconfirmedAmbiguousMissingLoopByteIdenticalToD9": true,
+    "failureTablePreconditionsAndNoInputBeforeErrorMatch": true,
+    "existingDeadlineAssertionsNotWeakened": true,
+    "productionTimeoutMsUnchanged": 150,
+    "nativeSourceChanged": false,
+    "mainSDKHeadAndStatusVerifiedUnchanged": true
+  },
+  "ciAttribution": "The same diagnostic mismatch is reproduced under controlled legitimate owned-signal expiry. The precise clock/event ordering from CI is not proven.",
+  "attribution": "Tests were run in an isolated checkout at named base plus exact recorded patch; this is not an exact-commit gate receipt. Author must match these bytes when applying and retain separate final-head gate/live evidence.",
+  "logs": {
+    "install": {
+      "localFileName": "codex-sdk4391-deadline-install.log",
+      "sha256": "a0279df8512f816053c6a0aef1571386cff28a4b26b73f597714bb22266c245b"
+    },
+    "build": {
+      "localFileName": "codex-sdk4391-deadline-build.log",
+      "sha256": "bd091bf4eac2e2117ce4ffd78f3ef4d6a0629440d5b7d2dd8d8e80a335620576"
+    },
+    "format": {
+      "localFileName": "codex-sdk4391-deadline-format-check.log",
+      "sha256": "fe329e6afba107b5f81d66db4bf0bf741c22ac6e96babd805d60551e9e80b24a"
+    },
+    "typecheck": {
+      "localFileName": "codex-sdk4391-deadline-typecheck.log",
+      "sha256": "4ebf8453b2e0bfd065d8d9fe6773d1c53218b822afba3fd93d1210bb53de63bb"
+    },
+    "lint": {
+      "localFileName": "codex-sdk4391-deadline-lint.log",
+      "sha256": "b2dff80d5fca1f1286fa77107660bc4380492aa10e2be93e185856f21c3993fd"
+    },
+    "focusedGreen": {
+      "localFileName": "codex-sdk4391-deadline-focused-green.log",
+      "sha256": "55b02dccc9ca429eba23c9d008e015c34e9fe17cab5dd8c8c4539c7c3f245c0b"
+    },
+    "oldRuntimeRed": {
+      "localFileName": "codex-sdk4391-deadline-old-runtime-red.log",
+      "sha256": "5110897c879afa745fd706676d3daade934b1556b7ce8f1ffca3320f6edff6c2"
+    },
+    "restoredGreen": {
+      "localFileName": "codex-sdk4391-deadline-restored-green.log",
+      "sha256": "4642905521b20d84d8b3f798c1ac2e643970ed6cf6b1eb881dd2201320f3ed5a"
+    },
+    "identityOmittedRed": {
+      "localFileName": "codex-sdk4391-deadline-identity-omitted-red.log",
+      "sha256": "e71bd4e3d79ae77db5a740327ee03c707289f1df85816741e918fb7180c73831"
+    },
+    "fullFile": {
+      "localFileName": "codex-sdk4391-deadline-fullfile-green.log",
+      "sha256": "c931086a1da6b02df0cbf1df01d8084e6bb405611570c2d0d2e5755f558af3ea"
+    },
+    "targetedCoverage": {
+      "localFileName": "codex-sdk4391-deadline-targeted-coverage.log",
+      "sha256": "b22073e9c82573edd355ccaeb2e39dfbb52d07dda2da872a24c6fcdbaba066dc"
+    }
+  }
+}

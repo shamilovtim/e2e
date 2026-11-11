@@ -1,0 +1,400 @@
+{
+  "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "status": "passed",
+  "exitCode": 0,
+  "exactCommit": true,
+  "checkoutChanged": false,
+  "initialFinalFingerprint": "a2944e4403837213d799c45a2728e0ed306cbe15dee9ecb6c2169f885bb5a5f8",
+  "resolvedBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+  "mergeBase": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "startedAt": "2026-11-11T23:14:39.139Z",
+  "finishedAt": "2026-11-11T23:18:32.194Z",
+  "runnablePassed": 15,
+  "unitPassed": 19217,
+  "unitExistingSkipped": 3,
+  "relatedPassed": 380,
+  "checks": [
+    {
+      "id": "format",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "format:check"
+      ],
+      "exitCode": 0,
+      "durationMs": 446,
+      "tests": []
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "durationMs": 1706,
+      "tests": []
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "durationMs": 465,
+      "tests": []
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:layering"
+      ],
+      "exitCode": 0,
+      "durationMs": 21974,
+      "tests": []
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:fallow",
+        "--base",
+        "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d"
+      ],
+      "exitCode": 0,
+      "durationMs": 3768,
+      "tests": []
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:native-dupes"
+      ],
+      "exitCode": 0,
+      "durationMs": 320,
+      "tests": []
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationMs": 4579,
+      "tests": []
+    },
+    {
+      "id": "ios-snapshot-differential",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "related",
+        "--run",
+        "--passWithNoTests",
+        "--project=!unit-core",
+        "--project=!apple-runner",
+        "--project=!fuzz-worker",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerSurfacePolicy.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+PrivateAXPresentation.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+CommandExecutionTests.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+ModelsTests.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift",
+        "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotAcquisitionTests.swift",
+        "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotCoordinateSpace.swift",
+        "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift",
+        "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/ConformanceTests.swift",
+        "apple/snapshot-presentation/Tests/AgentDeviceSnapshotPresentationTests/CoordinateSpaceTests.swift",
+        "contracts/fixtures/authorized-press-target.json",
+        "contracts/fixtures/runner-command-read-only.json",
+        "contracts/fixtures/runner-requests.json",
+        "contracts/fixtures/runner-surface-policy.json",
+        "docs/adr/0011-interaction-guarantee-contract.md",
+        "packages/apple-runner/src/__tests__/runner-command-traits.test.ts",
+        "packages/apple-runner/src/runner-command-traits.ts",
+        "packages/apple-runner/src/runner-contract.ts",
+        "packages/capture-kit/src/snapshot-state.ts",
+        "packages/capture-kit/src/snapshot/__tests__/ios-snapshot-runtime-press-readiness.test.ts",
+        "packages/command-runtime/src/command-runtime/runtime-factory.ts",
+        "packages/command-runtime/src/commands/capture/runtime/snapshot-unchanged.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/__tests__/test-utils/index.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/interactions.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages-screen-origin.test.ts",
+        "packages/contracts/src/backend.ts",
+        "packages/contracts/src/facades/capture.ts",
+        "packages/contracts/src/interaction-guarantees.ts",
+        "packages/contracts/src/platform-runtime-operations.ts",
+        "packages/contracts/src/platform-runtime-unavailable.ts",
+        "packages/contracts/src/runtime-operation-names.ts",
+        "packages/contracts/src/selector-observation-runtime.ts",
+        "packages/contracts/src/snapshot-private-evidence.ts",
+        "packages/daemon/src/core/interaction/internal/types.ts",
+        "packages/daemon/src/core/runtime-operation-effects.ts",
+        "packages/daemon/src/core/touch-runtime.ts",
+        "packages/daemon/src/execution/__tests__/interaction-get-runtime-fixture.ts",
+        "packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.test.ts",
+        "packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.ts",
+        "packages/daemon/src/execution/interaction/internal/interaction-runtime.ts",
+        "packages/daemon/src/execution/interaction/internal/interaction-touch-runtime.test.ts",
+        "packages/daemon/src/sessions/handlers/__tests__/install-source.test.ts",
+        "packages/kernel/src/snapshot.ts",
+        "packages/platform-android/src/runtime.ts",
+        "packages/platform-apple/src/__tests__/index-runner-requests.test.ts",
+        "packages/platform-apple/src/__tests__/runtime-selector-query.test.ts",
+        "packages/platform-apple/src/core/runner-selector-query.ts",
+        "packages/platform-apple/src/runner-demand.test.ts",
+        "packages/platform-apple/src/runner-demand.ts",
+        "packages/platform-apple/src/runner-interaction-facts.ts",
+        "packages/platform-apple/src/runner-runtime.test.ts",
+        "packages/platform-apple/src/runner-runtime.ts",
+        "packages/platform-apple/src/runtime-selector-query.ts",
+        "packages/platform-apple/src/runtime.test.ts",
+        "packages/platform-apple/src/runtime.ts",
+        "packages/platform-apple/src/snapshot-source/tree.test.ts",
+        "packages/platform-apple/src/snapshot-source/tree.ts",
+        "packages/platform-harmonyos/src/runtime.ts",
+        "packages/platform-web/src/runtime.ts",
+        "packages/provider-revyl/src/facts-runtime.test.ts",
+        "packages/provider-revyl/src/facts-runtime.ts",
+        "packages/selectors/src/interaction-error.ts",
+        "packages/test-kit/src/runtime-operation-facts.ts",
+        "src/__tests__/runner-read-only-registry-parity.test.ts",
+        "test/integration/interaction-contract/daemon-harness.ts",
+        "test/integration/interaction-contract/interaction-response-shape.test.ts",
+        "test/integration/interaction-contract/runtime-harness.ts",
+        "test/integration/interaction-contract/runtime-ref.contract.test.ts",
+        "test/integration/interaction-contract/runtime-ref.coverage.ts",
+        "test/integration/interaction-contract/runtime-selector.contract.test.ts",
+        "test/integration/interaction-contract/runtime-selector.coverage.ts",
+        "test/integration/provider-scenarios/fixtures.ts",
+        "test/integration/provider-scenarios/interaction-verify.test.ts",
+        "test/integration/provider-scenarios/ios-world.ts",
+        "test/integration/provider-scenarios/limrun-ios-snapshot-owner.test.ts",
+        "test/integration/provider-scenarios/press-selector-resolution.test.ts",
+        "test/integration/provider-scenarios/settle-observation.test.ts",
+        "test/integration/provider-scenarios/stale-ref-warning.test.ts",
+        "test/integration/provider-scenarios/versioned-refs.test.ts",
+        "website/docs/docs/commands.md"
+      ],
+      "exitCode": 0,
+      "durationMs": 39247,
+      "tests": [
+        {
+          "passed": 380,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:unit"
+      ],
+      "exitCode": 0,
+      "durationMs": 145757,
+      "tests": [
+        {
+          "passed": 19217,
+          "failed": 0,
+          "skipped": 3,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "deduplicated",
+      "reason": "covered by related tests"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "command-docs",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:command-docs"
+      ],
+      "exitCode": 0,
+      "durationMs": 927,
+      "tests": [
+        {
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "adr-citations",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:adr-citations"
+      ],
+      "exitCode": 0,
+      "durationMs": 820,
+      "tests": [
+        {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "docs-links",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:doc-links"
+      ],
+      "exitCode": 0,
+      "durationMs": 5372,
+      "tests": []
+    },
+    {
+      "id": "docs-prose",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:doc-prose"
+      ],
+      "exitCode": 0,
+      "durationMs": 548,
+      "tests": []
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:xctest-selection"
+      ],
+      "exitCode": 0,
+      "durationMs": 414,
+      "tests": []
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:packaged-runner-swift"
+      ],
+      "exitCode": 0,
+      "durationMs": 6412,
+      "tests": []
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ]
+}

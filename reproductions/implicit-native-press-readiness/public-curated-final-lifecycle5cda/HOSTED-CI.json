@@ -1,0 +1,143 @@
+{
+  "sourceHead": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "pr": "https://github.com/callstack/agent-device/pull/4391",
+  "observedAt": "2026-11-11T23:28:01.765557+00:00",
+  "state": "OPEN",
+  "mergeable": "MERGEABLE",
+  "terminalCheckCounts": {
+    "SKIPPED": 2,
+    "SUCCESS": 14
+  },
+  "checks": [
+    {
+      "name": "Bundle Size",
+      "workflow": "Size",
+      "status": "COMPLETED",
+      "conclusion": "SKIPPED",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118950955/job/130854166170"
+    },
+    {
+      "name": "Smoke Tests",
+      "workflow": "Android",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118950987/job/130854164380"
+    },
+    {
+      "name": "Smoke Tests (ios)",
+      "workflow": "Apple",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951197/job/130854166250"
+    },
+    {
+      "name": "Lint, Typecheck & Package",
+      "workflow": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951058/job/130854168247"
+    },
+    {
+      "name": "Prose, internal links, and heading anchors",
+      "workflow": "Docs",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951141/job/130854166001"
+    },
+    {
+      "name": "Smoke Tests",
+      "workflow": "Linux",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951237/job/130854166109"
+    },
+    {
+      "name": "Resolve native fingerprint",
+      "workflow": "Test App Build Cache",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951136/job/130854165106"
+    },
+    {
+      "name": "Smoke Tests (macos)",
+      "workflow": "Apple",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951197/job/130854165806"
+    },
+    {
+      "name": "matrix.name",
+      "workflow": "Test App Build Cache",
+      "status": "COMPLETED",
+      "conclusion": "SKIPPED",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951136/job/130854484543"
+    },
+    {
+      "name": "Smoke Tests",
+      "workflow": "Apple",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951197/job/130856206025"
+    },
+    {
+      "name": "Repo Guards & Compatibility",
+      "workflow": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951058/job/130854165796"
+    },
+    {
+      "name": "Command reference doc coverage",
+      "workflow": "Docs",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951141/job/130854167072"
+    },
+    {
+      "name": "Numeric Ranges",
+      "workflow": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951058/job/130854165776"
+    },
+    {
+      "name": "Coverage",
+      "workflow": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951058/job/130854165803"
+    },
+    {
+      "name": "Integration Tests",
+      "workflow": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/callstack/agent-device/actions/runs/43118951058/job/130854165839"
+    },
+    {
+      "name": "cubic · AI code reviewer",
+      "workflow": "",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "url": "https://www.cubic.dev/pr/callstack/agent-device/pull/4391"
+    }
+  ],
+  "review": {
+    "wholeComments": 12,
+    "formalReviews": 43,
+    "inlineComments": 75,
+    "reviewThreads": 38,
+    "unresolvedThreads": 0,
+    "paginationComplete": true,
+    "cubic": "Actual completed review: zero new issues across two files.",
+    "pendingReplies": {
+      "inline": "4543915730 fixed and automatically resolved; explicit evidence reply pending publication.",
+      "whole": [
+        "6801889431",
+        "6805593494",
+        "6808927375"
+      ]
+    }
+  },
+  "scope": "Remote CI and feedback checkpoint only. Current-source native matrix and final evidence replies remain separate pending work."
+}

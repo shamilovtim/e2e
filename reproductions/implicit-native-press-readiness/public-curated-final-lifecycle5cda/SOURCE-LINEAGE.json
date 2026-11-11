@@ -1,0 +1,42 @@
+{
+  "currentSource": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "exactImmutableCommitDeltas": [
+    {
+      "before": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "after": "ecbcefe62e24e3696e5a368987675970144944af",
+      "path": "source-lineage/d9-to-ecb-owned-deadline.patch",
+      "sha256": "851d9e946febff11d99d4da3ceffe75baa4f75186bed04872863779c0f277919",
+      "bytes": 8162
+    },
+    {
+      "before": "ecbcefe62e24e3696e5a368987675970144944af",
+      "after": "7395df404597e9e40f80a778149faabfe390847a",
+      "path": "source-lineage/ecb-to-7395-merged-guards.patch",
+      "sha256": "ff01ae3bd6d2f021180169b3c7a18601ff89c2a43056f5c3b1db465a908ddbdf",
+      "bytes": 1080
+    },
+    {
+      "before": "7395df404597e9e40f80a778149faabfe390847a",
+      "after": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+      "path": "source-lineage/7395-to-952-caller-cancel.patch",
+      "sha256": "70bc75cb21f4c37d41c175be3ac95440cd8ca08c10590cbcc40b9e0a64014ac3",
+      "bytes": 4630
+    },
+    {
+      "before": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+      "after": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+      "path": "source-lineage/952-to-5cda-typed-native.patch",
+      "sha256": "57ebe08e98e2ee696133bfdf998cc1be8f06afe77a4359f9860a987c1c805647",
+      "bytes": 5377
+    }
+  ],
+  "qualification": "Owned-deadline851 patch source is exactly ecb.7395 additionally changes guard flow by ff01.952 additionally changes existing assertBudget caller classification by70bc75. Neither7395 nor952 is called byte-equal851. Current full gate/live timings are separately attributed. Native input/artifact equality remains limited to native.5cda additionally includes exact57eb typed-native canonical-cancellation catch correction; unrelated typed transport errors preserve identity.",
+  "historical7395CI": {
+    "success": 14,
+    "skipped": 2,
+    "terminal": true,
+    "limit": "Valid caller-cancellation P2 was subsequently corrected in952; historical CI is not used as new952 CI evidence."
+  },
+  "currentHostedCI": "14 success,2 skipped; actual zero Cubic findings in provided terminal snapshot. Hosted status does not replace live controls."
+}

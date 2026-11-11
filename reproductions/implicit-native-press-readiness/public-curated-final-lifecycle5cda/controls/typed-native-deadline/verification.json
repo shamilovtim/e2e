@@ -1,0 +1,93 @@
+{
+  "baseHead": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "patchSHA256": "57ebe08e98e2ee696133bfdf998cc1be8f06afe77a4359f9860a987c1c805647",
+  "scope": {
+    "files": 2,
+    "insertions": 45,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+      "sha256": "7772f875ee54706aa997cd37b2ac76108b9a54dbd96aae7706fd4f79c07f94ab"
+    },
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+      "sha256": "4de501328690c9a530657992c2d6d419d6dbe329dd170742b5a79c66989a1cb4"
+    }
+  ],
+  "commands": {
+    "focused": "pnpm exec vitest run --project unit-core packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts -t 'production result deadline|unrelated typed native failure|callerAbort|cancelInRead|transportFailure'",
+    "fullFile": "pnpm exec vitest run --project unit-core packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+    "targetedCoverage": "pnpm exec vitest run packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts --coverage --allowOnly=false --project=unit-core --maxWorkers=1 --coverage.include=packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts --coverage.include=packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts"
+  },
+  "invariants": {
+    "onlyTwoExistingTSFilesModified": true,
+    "existingAssertBudgetBodyUnchanged": true,
+    "existingOwned150msTimerAndCutoffMinusOneRetained": true,
+    "genericCallerCutoffPlusOneAndTypedRequestCancelPreserved": true,
+    "independentTypedBackendFailurePreserved": true,
+    "nativeSourceAndProductionArtifactsUnchanged": true,
+    "successfulReadinessPollingAndDispatchCodeUnchanged": true,
+    "gatePolicyAndCoverageThresholdsUnchanged": true
+  },
+  "nativeAttribution": "A separate actual source952 natural default60s native diagnostic returned request_canceled with missing blocked state and zero target input, including after explicit overlay release. That evidence remains attributed to952 and is not a final-candidate live run.",
+  "validation": {
+    "ownInstallAndFinalSourceBuild": "passed",
+    "fullRepositoryFormat": "passed",
+    "restoredFullFile": {
+      "passed": 23
+    },
+    "targetedV8Coverage": {
+      "passed": 51,
+      "testFiles": 2,
+      "owners": [
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts"
+      ],
+      "total": {
+        "lines": {
+          "total": 56,
+          "covered": 53,
+          "skipped": 0,
+          "pct": 94.64
+        },
+        "statements": {
+          "total": 62,
+          "covered": 58,
+          "skipped": 0,
+          "pct": 93.54
+        },
+        "functions": {
+          "total": 8,
+          "covered": 8,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 76,
+          "covered": 70,
+          "skipped": 0,
+          "pct": 92.1
+        },
+        "branchesTrue": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": "Unknown"
+        }
+      },
+      "configuredThresholdsUnchanged": {
+        "statements": 78,
+        "lines": 80
+      },
+      "scope": "Targeted owner instrumentation only; not full-repository CI coverage."
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "formatCheck": "passed",
+    "fallowFinal": "passed: zero dead code, complexity and duplication findings",
+    "diffCheck": "passed"
+  },
+  "attribution": "Isolated source952 plus exact source.patch. Final committed-source gate and final live execution are separate evidence."
+}

@@ -1,0 +1,233 @@
+{
+  "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "base": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "comparison": "Fresh base-to-head pairs per mode, actual merged-geometry c267 against9522, identical frozen fixture and d8b03fc0 wrapper, portrait, three SDK refs plus one CLI each. Exact exhaustive emitted JavaScript set631/633, no symlinks, actual CLI launcher/package/build scripts and all11 native manifest artifacts/xctestrun/installed fixture pinned and archived before every run. No concurrent uploads/media/other heavy work. Three-sample descriptive medians; all raw variance retained.",
+  "pairs": [
+    {
+      "mode": "shared",
+      "base": {
+        "case": "c267-shared-fullpin-1",
+        "source": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "runtimeJSFiles": 631,
+        "rawRefMs": [
+          474.1138340000016,
+          470.51487500000076,
+          473.737000000001
+        ],
+        "medianMs": 473.737000000001,
+        "cliMs": 555.5502500000002,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "nativeSameTypeCount": 511,
+        "nativeNodeCount": 525,
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+        "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "runtimeCompleteFileSetVerified": true,
+        "runtimeSymlinksFound": false,
+        "nativeArtifactsVerified": 11,
+        "xctestrunSha256": "06dbcbaea48a5f93837581ccb56b8dfbb380e59dc4283e469dde211096cb214a",
+        "archivedBeforeRun": true,
+        "exitCode": 0,
+        "cleanupExitCode": 0,
+        "recording": {
+          "code": 0,
+          "signal": null
+        }
+      },
+      "head": {
+        "case": "9522-shared-fullpin-1",
+        "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+        "runtimeJSFiles": 633,
+        "rawRefMs": [
+          1078.9565410000005,
+          839.3252089999987,
+          843.1265000000003
+        ],
+        "medianMs": 843.1265000000003,
+        "cliMs": 895.649374999999,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "nativeSameTypeCount": 511,
+        "nativeNodeCount": 525,
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+        "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+        "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "runtimeCompleteFileSetVerified": true,
+        "runtimeSymlinksFound": false,
+        "nativeArtifactsVerified": 11,
+        "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+        "archivedBeforeRun": true,
+        "exitCode": 0,
+        "cleanupExitCode": 0,
+        "recording": {
+          "code": 0,
+          "signal": null
+        }
+      },
+      "addedMedianMs": 369.3894999999993
+    },
+    {
+      "mode": "anonymous",
+      "base": {
+        "case": "c267-anonymous-fullpin-1",
+        "source": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "runtimeJSFiles": 631,
+        "rawRefMs": [
+          721.1048330000003,
+          972.7654999999995,
+          975.8499580000007
+        ],
+        "medianMs": 972.7654999999995,
+        "cliMs": 976.479292,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "nativeSameTypeCount": 511,
+        "nativeNodeCount": 525,
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+        "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "runtimeCompleteFileSetVerified": true,
+        "runtimeSymlinksFound": false,
+        "nativeArtifactsVerified": 11,
+        "xctestrunSha256": "06dbcbaea48a5f93837581ccb56b8dfbb380e59dc4283e469dde211096cb214a",
+        "archivedBeforeRun": true,
+        "exitCode": 0,
+        "cleanupExitCode": 0,
+        "recording": {
+          "code": 0,
+          "signal": null
+        }
+      },
+      "head": {
+        "case": "9522-anonymous-fullpin-1",
+        "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+        "runtimeJSFiles": 633,
+        "rawRefMs": [
+          1073.2508340000004,
+          1300.610125000001,
+          1322.7542090000006
+        ],
+        "medianMs": 1300.610125000001,
+        "cliMs": 1383.2370840000003,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "nativeSameTypeCount": 511,
+        "nativeNodeCount": 525,
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+        "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+        "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "runtimeCompleteFileSetVerified": true,
+        "runtimeSymlinksFound": false,
+        "nativeArtifactsVerified": 11,
+        "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+        "archivedBeforeRun": true,
+        "exitCode": 0,
+        "cleanupExitCode": 0,
+        "recording": {
+          "code": 0,
+          "signal": null
+        }
+      },
+      "addedMedianMs": 327.84462500000154
+    },
+    {
+      "mode": "buttons",
+      "base": {
+        "case": "c267-buttons-fullpin-1",
+        "source": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "runtimeJSFiles": 631,
+        "rawRefMs": [
+          762.0484999999999,
+          958.9149170000001,
+          920.8444999999992
+        ],
+        "medianMs": 920.8444999999992,
+        "cliMs": 978.8939580000006,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "nativeSameTypeCount": 504,
+        "nativeNodeCount": 525,
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+        "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "runtimeCompleteFileSetVerified": true,
+        "runtimeSymlinksFound": false,
+        "nativeArtifactsVerified": 11,
+        "xctestrunSha256": "06dbcbaea48a5f93837581ccb56b8dfbb380e59dc4283e469dde211096cb214a",
+        "archivedBeforeRun": true,
+        "exitCode": 0,
+        "cleanupExitCode": 0,
+        "recording": {
+          "code": 0,
+          "signal": null
+        }
+      },
+      "head": {
+        "case": "9522-buttons-fullpin-1",
+        "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+        "runtimeJSFiles": 633,
+        "rawRefMs": [
+          1089.4212079999998,
+          1280.4317090000004,
+          1332.7219999999998
+        ],
+        "medianMs": 1280.4317090000004,
+        "cliMs": 1298.0587919999998,
+        "intendedTaps": 4,
+        "siblingTaps": 0,
+        "nativeSameTypeCount": 504,
+        "nativeNodeCount": 525,
+        "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+        "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+        "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+        "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+        "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "runtimeCompleteFileSetVerified": true,
+        "runtimeSymlinksFound": false,
+        "nativeArtifactsVerified": 11,
+        "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+        "archivedBeforeRun": true,
+        "exitCode": 0,
+        "cleanupExitCode": 0,
+        "recording": {
+          "code": 0,
+          "signal": null
+        }
+      },
+      "addedMedianMs": 359.58720900000117
+    }
+  ],
+  "caller1000": {
+    "case": "9522-shared-caller1000-fullpin-1",
+    "success": true,
+    "ms": 938.496000000001,
+    "reason": null,
+    "dispatched": null,
+    "cliMs": 1093.9828749999997,
+    "intendedTaps": 2,
+    "siblingTaps": 0,
+    "extraWarmup": false,
+    "interpretation": "One current successful caller-budget observation; this is not a latency/server-deadline guarantee. Earlier7395 one-second failure with delivery uncertainty remains retained."
+  },
+  "missing": {
+    "case": "9522-missing-fullpin-1",
+    "success": true,
+    "ms": 382.84312500000124,
+    "reason": "target_not_ready",
+    "readiness": "missing",
+    "dispatched": "no",
+    "intendedTaps": 0,
+    "siblingTaps": 0
+  }
+}

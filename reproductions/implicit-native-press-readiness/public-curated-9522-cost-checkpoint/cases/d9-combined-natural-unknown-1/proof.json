@@ -1,0 +1,341 @@
+{
+  "case": "d9-combined-natural-unknown-1",
+  "source": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "scope": "First24 cost/source checkpoint. Whole maintainer lifecycle matrix remains pending.",
+  "wrapperSuccess": false,
+  "wrapperExitCode": 0,
+  "runtimePinScope": "selected-chunks original manifest; native7 uses direct native runner",
+  "executedSources": [
+    {
+      "path": "cases/d9-combined-natural-unknown-1/source/executed-driver.py",
+      "originalArchivedSha256": "36837c74ec91727c2b1349520da17cb962d4615fc04bd391e488f5a662842e66",
+      "publicSha256": "36837c74ec91727c2b1349520da17cb962d4615fc04bd391e488f5a662842e66",
+      "bytes": 8865,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/d9-combined-natural-unknown-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "publicSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "bytes": 4308,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  },
+  "executionInputs": {
+    "head": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "kind": "unknown",
+    "mode": "unknown",
+    "sourceTree": "f20375f7d2a3bd49d4e8926b3b5c078f41acde1d",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+    "runtimeJSFiles": 625,
+    "wrapperSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+    "driverSha256": "36837c74ec91727c2b1349520da17cb962d4615fc04bd391e488f5a662842e66",
+    "archivedBeforeRun": true,
+    "warmRefRuns": 3,
+    "callerSignalBudgetMs": 15000,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "fab3b24ff4a96111b97ac3d4623259cf5554e39af68533f4ad6445993faa202f",
+    "sourceTreeManifestSha256": "873efb84865a052bf75c91c10c8a99b468b69a0d603d3e874f4e9299fcfc545e",
+    "observedFixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159"
+  },
+  "wrapperSummary": {
+    "phase": "d9-combined-natural-unknown-1",
+    "source": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": false,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {
+      "actionReceivedTap": 2
+    },
+    "frameComparison": null,
+    "error": null,
+    "recording": null
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing omitted."
+  },
+  "runtimeJsManifest": {
+    "path": "runtime/63fcbc23ce1d.json",
+    "sha256": "63fcbc23ce1dcb700081c6c9234f0bc65f6715ccb03e4cd9f8051012ce177a85",
+    "files": 625,
+    "head": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "scope": "selected-chunks original manifest; native7 uses direct native runner"
+  },
+  "originalResultSha256": "020cd2ec1d4d0024a58e8ffb3d3d4f940bcb6187800dfc219255f468cf07ddd7",
+  "observations": {
+    "phase": "d9-combined-natural-unknown-1",
+    "target": {
+      "index": 3,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Geometry action",
+      "identifier": "geometry-action",
+      "rect": {
+        "x": 240,
+        "y": 90,
+        "width": 220,
+        "height": 42
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e4",
+      "kind": "button"
+    },
+    "externalAbort": false,
+    "producerPins": false,
+    "sequence": [
+      "open",
+      "recordStart",
+      "snapshot",
+      "nativeCapture",
+      "refPress",
+      "selectorPress",
+      "repeatedSnapshot",
+      "recordStop",
+      "close"
+    ],
+    "counterBefore": 0,
+    "counterAfterRef": 1,
+    "counterAfterSelector": 2,
+    "refPress": {
+      "result": {
+        "x": 350,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e4 (350, 111)",
+        "referenceWidth": 1032,
+        "referenceHeight": 1376,
+        "targetKind": "ref",
+        "ref": "e4",
+        "refLabel": "Geometry action",
+        "selectorChain": [
+          "id=\"geometry-action\"",
+          "role=\"button\" label=\"Geometry action\"",
+          "label=\"Geometry action\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 532.7431669999987,
+      "nativeCommands": []
+    },
+    "selectorPress": {
+      "result": {
+        "x": 350,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=geometry-action (350, 111)",
+        "referenceWidth": 1032,
+        "referenceHeight": 1376,
+        "targetKind": "selector",
+        "selector": "id=geometry-action",
+        "selectorChain": [
+          "id=\"geometry-action\"",
+          "role=\"button\" label=\"Geometry action\"",
+          "label=\"Geometry action\""
+        ],
+        "refLabel": "Geometry action",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "ms": 431.9824579999986,
+      "nativeCommands": []
+    },
+    "sdkCapture": {
+      "viewport": {
+        "width": 1032,
+        "height": 1376
+      },
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 16,
+        "totalNodeCount": 16,
+        "reasons": [
+          "scroll-hidden-below"
+        ]
+      },
+      "nodeCount": 16
+    },
+    "separateNativeCapture": {
+      "snapshotViewport": {
+        "kind": "derived",
+        "rect": {
+          "height": 1376,
+          "x": 0,
+          "width": 1032,
+          "y": 0
+        }
+      },
+      "snapshotQuality": {
+        "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+        "backend": "private-ax",
+        "reasonCode": "deferred",
+        "timing": {
+          "presentationMs": 0.29599666595458984,
+          "acquisitionMs": 312.45100498199463
+        },
+        "state": "recovered"
+      },
+      "runnerMainThreadBusy": false
+    }
+  },
+  "originalClassificationSha256": "2ef4a1c9a6e7116c3622fc289071fec406af66b7ce8649268782af81a2d67e3e",
+  "originalClassificationSelected": {
+    "source": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "viewportKind": "derived",
+    "nativeBindingPresent": true,
+    "trustedPublicViewportPresent": true,
+    "counters": [
+      0,
+      1,
+      2
+    ],
+    "nativeReadinessAcceptedCount": 2,
+    "nativeTapAcceptedCount": 2,
+    "producerPins": false,
+    "externalPressAbort": false,
+    "unknownSetupEstablished": true,
+    "success": false,
+    "refusalDetails": [
+      {},
+      {}
+    ]
+  },
+  "classification": "unknown-origin-setup-not-established",
+  "derivedSetupConclusion": {
+    "source": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "classification": "unknown-origin-setup-not-established",
+    "originalWrapperExitCode": 0,
+    "outerQualificationExitCode": 1,
+    "reason": "Owned tablet app is fullscreen. The actual SDK capture has a reported trusted1032x1376 viewport; a later independent native diagnostic has derived authority. They are different captures. The successful intended SDK presses do not demonstrate bypass of unknown SDK capture authority.",
+    "actualSDKViewport": {
+      "width": 1032,
+      "height": 1376
+    },
+    "actualSDKTarget": {
+      "index": 3,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Geometry action",
+      "identifier": "geometry-action",
+      "rect": {
+        "x": 240,
+        "y": 90,
+        "width": 220,
+        "height": 42
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e4",
+      "kind": "button"
+    },
+    "counters": [
+      0,
+      1,
+      2
+    ],
+    "preservedOriginals": true,
+    "nextStep": "One coarse resize after observed fullscreen dimensions, then retry natural cold-record-start case. No source mutation or producer pin."
+  },
+  "qualification": "Raw historical unknownSetupEstablished flag is not accepted. Actual SDK trusted fullscreen capture and two intended actions; later independent derived native capture is different. Wrapper0/outer qualification1 preserved; not an unknown-origin bypass or refusal proof."
+}

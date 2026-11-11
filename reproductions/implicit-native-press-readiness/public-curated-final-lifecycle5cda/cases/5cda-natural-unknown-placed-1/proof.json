@@ -1,0 +1,391 @@
+{
+  "case": "5cda-natural-unknown-placed-1",
+  "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "wrapperSuccess": true,
+  "wrapperExitCode": 0,
+  "runtimePinScope": "exhaustive633 emitted JavaScript before execution",
+  "executedSources": [
+    {
+      "path": "cases/5cda-natural-unknown-placed-1/source/executed-driver.py",
+      "originalArchivedSha256": "3c9a14fd881fd4276d97bbc38f14b53028a808631bf2bd1b0e3c91ab16739297",
+      "publicSha256": "3c9a14fd881fd4276d97bbc38f14b53028a808631bf2bd1b0e3c91ab16739297",
+      "bytes": 11626,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/5cda-natural-unknown-placed-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "publicSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "bytes": 4308,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "executionInputs": {
+    "head": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "kind": "unknown",
+    "mode": "unknown",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "sourceTree": "6ab7041ca7f34c9bb6a0d84b8ef24ea58d1dc4d3",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+    "runtimeJSFiles": 633,
+    "wrapperSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+    "driverSha256": "3c9a14fd881fd4276d97bbc38f14b53028a808631bf2bd1b0e3c91ab16739297",
+    "archivedBeforeRun": true,
+    "runtimeCompleteFileSetVerified": true,
+    "runtimeSymlinksFound": false,
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "nativeCacheManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "runtimeLaunchInputs": [
+      {
+        "path": "bin/agent-device.mjs",
+        "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+      },
+      {
+        "path": "package.json",
+        "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f"
+      },
+      {
+        "path": "scripts/build-entries.ts",
+        "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+      },
+      {
+        "path": "scripts/build-xcuitest-apple.sh",
+        "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+      }
+    ],
+    "resolvedCLIEntry": "dist/src/internal/bin.js",
+    "nodeVersion": "v24.22.0",
+    "warmRefRuns": null,
+    "callerSignalBudgetMs": null,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "57ebe08e98e2ee696133bfdf998cc1be8f06afe77a4359f9860a987c1c805647",
+    "sourceTreeManifestSha256": "2903710c69a4c077bc8b0d27fc0fad1271861805cfeedd3ca1393269d61b32a4",
+    "observedFixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159"
+  },
+  "wrapperSummary": {
+    "phase": "5cda-natural-unknown-placed-1",
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {},
+    "frameComparison": null,
+    "error": null,
+    "recording": null
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing omitted."
+  },
+  "runtimeJsManifest": {
+    "path": "runtime/a35c432af6f5.json",
+    "sha256": "a35c432af6f5b75d9f69961b8ab7ea64c7d4dcbd44bce40635a5ee75ed320c46",
+    "files": 633,
+    "head": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "scope": "exhaustive633 emitted JavaScript before execution"
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  },
+  "originalResultSha256": "aa91c23608ba7da77efa2d7bb32528be9a9d0b337113c55aabe8616c964e3d9f",
+  "observations": {
+    "phase": "5cda-natural-unknown-placed-1",
+    "target": {
+      "depth": 1,
+      "enabled": true,
+      "type": "Button",
+      "hittable": true,
+      "parentIndex": 0,
+      "identifier": "geometry-action",
+      "rect": {
+        "height": 42,
+        "y": 90,
+        "width": 111,
+        "x": 240
+      },
+      "index": 3,
+      "label": "Geometry action",
+      "ref": "e4",
+      "kind": "button"
+    },
+    "externalAbort": false,
+    "producerPins": false,
+    "sequence": [
+      "open",
+      "recordStart",
+      "snapshot",
+      "nativeCapture",
+      "refPress",
+      "selectorPress",
+      "repeatedSnapshot",
+      "recordStop",
+      "close"
+    ],
+    "counterBefore": 0,
+    "counterAfterRef": 0,
+    "counterAfterSelector": 0,
+    "refPress": {
+      "ms": 18.355374999999185,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Ref @e4 has no established screen-coordinate origin",
+        "details": {
+          "reason": "window-origin-unknown",
+          "dispatched": "no"
+        }
+      },
+      "nativeCommands": []
+    },
+    "selectorPress": {
+      "ms": 410.0341669999998,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Selector id=geometry-action has no established screen-coordinate origin",
+        "details": {
+          "reason": "window-origin-unknown",
+          "dispatched": "no"
+        }
+      },
+      "nativeCommands": []
+    },
+    "sdkCapture": {
+      "snapshotQuality": {
+        "state": "recovered",
+        "backend": "private-ax",
+        "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+        "reasonCode": "deferred",
+        "timing": {
+          "acquisitionMs": 314.7209882736206,
+          "presentationMs": 0.2599954605102539
+        }
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 3,
+          "droppedNodeCount": 0
+        }
+      ],
+      "warnings": [
+        "Detected an overly complex or slow accessibility tree. Fell back to the private-ax snapshot backend. It is OK to continue; use --json to inspect snapshotQuality.reason if you need recovery details.",
+        "This snapshot cannot establish the window origin on screen. Coordinate-derived element interactions are unavailable until a capture measures the viewport.",
+        "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+      ],
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 16,
+        "totalNodeCount": 16,
+        "reasons": [
+          "scroll-hidden-below"
+        ]
+      },
+      "nodeCount": 16
+    },
+    "separateNativeCapture": {
+      "snapshotViewport": {
+        "rect": {
+          "height": 611,
+          "x": 0,
+          "y": 0,
+          "width": 375
+        },
+        "kind": "derived"
+      },
+      "snapshotQuality": {
+        "state": "recovered",
+        "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+        "backend": "private-ax",
+        "reasonCode": "deferred",
+        "timing": {
+          "presentationMs": 0.2690553665161133,
+          "acquisitionMs": 314.11194801330566
+        }
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 3,
+          "droppedNodeCount": 0
+        }
+      ],
+      "runnerMainThreadBusy": false
+    }
+  },
+  "classification": "pass-natural-unknown-origin-ref-and-selector-unsent",
+  "originOracle": {
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "success": true,
+    "viewportKind": "derived",
+    "nativeBindingPresent": true,
+    "trustedPublicViewportPresent": false,
+    "counters": [
+      0,
+      0,
+      0
+    ],
+    "nativeReadinessAcceptedCount": 0,
+    "nativeTapAcceptedCount": 0,
+    "producerPins": false,
+    "externalPressAbort": false,
+    "case": "5cda-natural-unknown-placed-1",
+    "refusals": [
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      },
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      }
+    ],
+    "refMs": 18.355374999999185,
+    "selectorMs": 410.0341669999998,
+    "recordStopReturned": true
+  },
+  "selectedPublicOutcome": {
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "success": true,
+    "viewportKind": "derived",
+    "nativeBindingPresent": true,
+    "trustedPublicViewportPresent": false,
+    "counters": [
+      0,
+      0,
+      0
+    ],
+    "nativeReadinessAcceptedCount": 0,
+    "nativeTapAcceptedCount": 0,
+    "producerPins": false,
+    "externalPressAbort": false,
+    "case": "5cda-natural-unknown-placed-1",
+    "refusals": [
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      },
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      }
+    ],
+    "refMs": 18.355374999999185,
+    "selectorMs": 410.0341669999998,
+    "recordStopReturned": true
+  },
+  "originalClassificationSha256": "6a799b8c01c2d1774ebe14bc2cf6ae6801f5a1035060dbbacbd1d13a3dadccd2",
+  "originalClassificationSelected": {
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "viewportKind": "derived",
+    "nativeBindingPresent": true,
+    "trustedPublicViewportPresent": false,
+    "counters": [
+      0,
+      0,
+      0
+    ],
+    "nativeReadinessAcceptedCount": 0,
+    "nativeTapAcceptedCount": 0,
+    "producerPins": false,
+    "externalPressAbort": false,
+    "unknownSetupEstablished": true,
+    "success": true,
+    "refusalDetails": [
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      },
+      {
+        "reason": "window-origin-unknown",
+        "dispatched": "no"
+      }
+    ]
+  },
+  "qualification": "Natural recording-start privateAX/deferred capture; trusted public viewport absent, separate native wire binding present/derived. Saved ref18.355ms and selector410.034ms typed window-origin-unknown/dispatched no, counters0/0/0 and zero accepted native readiness/tap. No producer pins or external press abort. SDK recordStop returned. One static sample cannot visually prove policy/dispatch; typed responses/counters/native markers are the oracles."
+}

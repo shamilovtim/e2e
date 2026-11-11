@@ -1,0 +1,30 @@
+{
+  "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "wrapperExitCode": 1,
+  "cleanupExitCode": 0,
+  "requestMs": 60016.271667,
+  "reason": "request_canceled",
+  "dispatched": "no",
+  "readiness": null,
+  "completedReadiness": 635,
+  "targetPhaseTapAccepted": 0,
+  "classificationValid": false,
+  "deadlineDurationValid": true,
+  "postReleaseCounts": {
+    "underlying": 0,
+    "overlay": 0
+  },
+  "lateObservation": {
+    "dismissalObserved": true,
+    "graceMs": 1100,
+    "actualElapsedMs": 3917.8925829999935
+  },
+  "failedOracles": [
+    "Strict cancellation/deadline output classification"
+  ],
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "attribution": "Actual natural default60s result-deadline failure at952; expected target_not_ready/readinessblocked/dispatchedno. Input safety remained zero through explicit release and post-fade grace. No caller signal or timeout override."
+}

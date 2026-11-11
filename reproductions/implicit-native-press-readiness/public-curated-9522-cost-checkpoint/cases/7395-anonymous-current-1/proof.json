@@ -1,0 +1,835 @@
+{
+  "case": "7395-anonymous-current-1",
+  "source": "7395df404597e9e40f80a778149faabfe390847a",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "scope": "First24 cost/source checkpoint. Whole maintainer lifecycle matrix remains pending.",
+  "wrapperSuccess": true,
+  "wrapperExitCode": 0,
+  "runtimePinScope": "selected-chunks original manifest; native7 uses direct native runner",
+  "executedSources": [
+    {
+      "path": "cases/7395-anonymous-current-1/source/executed-driver.py",
+      "originalArchivedSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "publicSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+      "bytes": 9047,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/7395-anonymous-current-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  },
+  "executionInputs": {
+    "head": "7395df404597e9e40f80a778149faabfe390847a",
+    "kind": "variant",
+    "mode": "anonymous",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "sourceTree": "a242fac7cb73317c23136a07ad636368aebd2694",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+    "runtimeJSFiles": 625,
+    "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+    "driverSha256": "20064f5e7b7ab6248fb0378da74970b1a8e2132bcce6718a65849ae41600e8ab",
+    "archivedBeforeRun": true,
+    "warmRefRuns": 3,
+    "callerSignalBudgetMs": 15000,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "ff01ae3bd6d2f021180169b3c7a18601ff89c2a43056f5c3b1db465a908ddbdf",
+    "sourceTreeManifestSha256": "b10a26f66a75a629499dea91d7ec4a45c83623bb565969eaada4da7d87840346"
+  },
+  "wrapperSummary": {
+    "phase": "7395-anonymous-current-1",
+    "source": "7395df404597e9e40f80a778149faabfe390847a",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [
+      1088.4278750000012,
+      1316.489125,
+      1357.4312919999993
+    ],
+    "medianMs": 1316.489125,
+    "cliMs": 1431.418667,
+    "targetTaps": 4,
+    "siblingTaps": 0,
+    "inputEvents": {
+      "controlReceivedTap": 4
+    },
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing omitted."
+  },
+  "runtimeJsManifest": {
+    "path": "runtime/6b27694c2139.json",
+    "sha256": "6b27694c213980d387b3b1ffa95267598545721d23e53972644e48c7c97de497",
+    "files": 625,
+    "head": "7395df404597e9e40f80a778149faabfe390847a",
+    "scope": "selected-chunks original manifest; native7 uses direct native runner"
+  },
+  "originalResultSha256": "dd86a6af689736ee3f65d09b95ac804e8048e4b66191a26fcc138085c3d906a0",
+  "observations": {
+    "phase": "7395-anonymous-current-1",
+    "mode": "anonymous",
+    "sdkSource": "7395df404597e9e40f80a778149faabfe390847a",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+    "coldOpenMs": 3133.7349999999997,
+    "nativeModeSetupMs": 1016.3741250000003,
+    "initialViewport": {
+      "width": 393,
+      "height": 852
+    },
+    "initialTarget": {
+      "index": 12,
+      "parentIndex": 11,
+      "type": "Other",
+      "role": "ReadinessVariants.OtherControl",
+      "subrole": "UIControl",
+      "value": "Shared icon value",
+      "rect": {
+        "x": 24,
+        "y": 220,
+        "width": 345,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 2,
+      "hittable": true,
+      "ref": "e13",
+      "kind": "other"
+    },
+    "nativeObservation": {
+      "ms": 255.22425000000112,
+      "ok": true,
+      "nodeCount": 525,
+      "otherCount": 511,
+      "sameTypeCount": 511,
+      "firstRows": [
+        {
+          "type": "Other",
+          "label": "Shared icon value",
+          "value": "Shared icon value",
+          "rect": {
+            "y": 220,
+            "height": 40,
+            "x": 24,
+            "width": 345
+          },
+          "nativePressTarget": {
+            "type": 1,
+            "value": "Shared icon value",
+            "rect": {
+              "y": 220,
+              "x": 24,
+              "width": 345,
+              "height": 40
+            }
+          }
+        }
+      ],
+      "snapshotQuality": {
+        "backend": "tree",
+        "timing": {
+          "acquisitionMs": 201.73203945159912,
+          "presentationMs": 0.5459785461425781
+        },
+        "state": "healthy"
+      },
+      "rawBindingAvailable": true
+    },
+    "targetTapEvents": 4,
+    "otherTapEvents": 0,
+    "nativeBinaryUnchanged": true,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "samples": [
+      {
+        "kind": "ref",
+        "target": {
+          "index": 12,
+          "parentIndex": 11,
+          "type": "Other",
+          "role": "ReadinessVariants.OtherControl",
+          "subrole": "UIControl",
+          "value": "Shared icon value",
+          "rect": {
+            "x": 24,
+            "y": 220,
+            "width": 345,
+            "height": 40
+          },
+          "enabled": true,
+          "depth": 2,
+          "hittable": true,
+          "ref": "e13",
+          "kind": "other"
+        },
+        "press": {
+          "x": 197,
+          "y": 240,
+          "message": "Tapped @e13 (197, 240)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 393,
+          "referenceHeight": 852,
+          "targetKind": "ref",
+          "ref": "e13",
+          "refLabel": "Shared icon value",
+          "selectorChain": [
+            "value=\"Shared icon value\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 1088.4278750000012,
+        "nativeEvents": [
+          {
+            "event": "modeChanged",
+            "ms": 0.019416678696870804,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "appReady",
+            "ms": 1.3158334186300635,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "modeChanged",
+            "ms": 5639.90833342541,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "controlReceivedTap",
+            "ms": 7189.84000000637,
+            "otherTaps": 0,
+            "row": 0,
+            "targetTaps": 1,
+            "variant": "anonymous"
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.228
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.915
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.349
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.5130000000000001
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 344.294
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 453.77299999999997
+          }
+        ]
+      },
+      {
+        "kind": "ref",
+        "target": {
+          "index": 12,
+          "parentIndex": 11,
+          "type": "Other",
+          "role": "ReadinessVariants.OtherControl",
+          "subrole": "UIControl",
+          "value": "Shared icon value",
+          "rect": {
+            "x": 24,
+            "y": 220,
+            "width": 345,
+            "height": 40
+          },
+          "enabled": true,
+          "depth": 2,
+          "hittable": true,
+          "ref": "e13",
+          "kind": "other"
+        },
+        "press": {
+          "x": 197,
+          "y": 240,
+          "message": "Tapped @e13 (197, 240)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 393,
+          "referenceHeight": 852,
+          "targetKind": "ref",
+          "ref": "e13",
+          "refLabel": "Shared icon value",
+          "selectorChain": [
+            "value=\"Shared icon value\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 1316.489125,
+        "nativeEvents": [
+          {
+            "event": "modeChanged",
+            "ms": 0.019416678696870804,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "appReady",
+            "ms": 1.3158334186300635,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "modeChanged",
+            "ms": 5639.90833342541,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "controlReceivedTap",
+            "ms": 7189.84000000637,
+            "otherTaps": 0,
+            "row": 0,
+            "targetTaps": 1,
+            "variant": "anonymous"
+          },
+          {
+            "event": "controlReceivedTap",
+            "ms": 8789.674500003457,
+            "otherTaps": 0,
+            "row": 0,
+            "targetTaps": 2,
+            "variant": "anonymous"
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.536
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.99
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.7309999999999999
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 2.369
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 404.486
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 452.71099999999996
+          }
+        ]
+      },
+      {
+        "kind": "ref",
+        "target": {
+          "index": 12,
+          "parentIndex": 11,
+          "type": "Other",
+          "role": "ReadinessVariants.OtherControl",
+          "subrole": "UIControl",
+          "value": "Shared icon value",
+          "rect": {
+            "x": 24,
+            "y": 220,
+            "width": 345,
+            "height": 40
+          },
+          "enabled": true,
+          "depth": 2,
+          "hittable": true,
+          "ref": "e13",
+          "kind": "other"
+        },
+        "press": {
+          "x": 197,
+          "y": 240,
+          "message": "Tapped @e13 (197, 240)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 393,
+          "referenceHeight": 852,
+          "targetKind": "ref",
+          "ref": "e13",
+          "refLabel": "Shared icon value",
+          "selectorChain": [
+            "value=\"Shared icon value\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 1357.4312919999993,
+        "nativeEvents": [
+          {
+            "event": "modeChanged",
+            "ms": 0.019416678696870804,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "appReady",
+            "ms": 1.3158334186300635,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "modeChanged",
+            "ms": 5639.90833342541,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "controlReceivedTap",
+            "ms": 7189.84000000637,
+            "otherTaps": 0,
+            "row": 0,
+            "targetTaps": 1,
+            "variant": "anonymous"
+          },
+          {
+            "event": "controlReceivedTap",
+            "ms": 8789.674500003457,
+            "otherTaps": 0,
+            "row": 0,
+            "targetTaps": 2,
+            "variant": "anonymous"
+          },
+          {
+            "event": "controlReceivedTap",
+            "ms": 10373.093458358198,
+            "otherTaps": 0,
+            "row": 0,
+            "targetTaps": 3,
+            "variant": "anonymous"
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 2.569
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 3.68
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 1.501
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 2.0669999999999997
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 382.90000000000003
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 449.909
+          }
+        ]
+      }
+    ],
+    "nativeEvents": [
+      {
+        "event": "modeChanged",
+        "ms": 0.019416678696870804,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "appReady",
+        "ms": 1.3158334186300635,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "modeChanged",
+        "ms": 5639.90833342541,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 7189.84000000637,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 1,
+        "variant": "anonymous"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 8789.674500003457,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 2,
+        "variant": "anonymous"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 10373.093458358198,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 3,
+        "variant": "anonymous"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 12089.736125082709,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 4,
+        "variant": "anonymous"
+      }
+    ],
+    "cli": {
+      "ms": 1431.418667,
+      "exitCode": 0,
+      "nativeEvents": [
+        {
+          "event": "modeChanged",
+          "ms": 0.019416678696870804,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "appReady",
+          "ms": 1.3158334186300635,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "modeChanged",
+          "ms": 5639.90833342541,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 7189.84000000637,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 1,
+          "variant": "anonymous"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 8789.674500003457,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 2,
+          "variant": "anonymous"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 10373.093458358198,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 3,
+          "variant": "anonymous"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 12089.736125082709,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 4,
+          "variant": "anonymous"
+        }
+      ],
+      "parsed": {
+        "success": true,
+        "data": {
+          "x": 197,
+          "y": 240,
+          "message": "Tapped @e13 (197, 240)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 393,
+          "referenceHeight": 852,
+          "targetKind": "ref",
+          "ref": "e13",
+          "refLabel": "Shared icon value",
+          "selectorChain": [
+            "value=\"Shared icon value\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        }
+      },
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.414
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 2.303
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.721
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 2.576
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 522.861
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 460.226
+        }
+      ]
+    }
+  },
+  "classification": "pass"
+}

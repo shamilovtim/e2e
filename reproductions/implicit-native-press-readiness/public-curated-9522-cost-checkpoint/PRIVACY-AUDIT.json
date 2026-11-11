@@ -1,0 +1,74 @@
+{
+  "status": "passed selected-public-subset audit",
+  "scope": "First24 checkpoint only. Historical bundles untouched. No actual host paths, owned device UUIDs, PIDs, request/session identifiers, credentials, raw process logs/state, account/backend config, private app source/data or xcresult included.",
+  "textFilesChecked": 156,
+  "jsonKeyAudit": "Selected proof JSON recursively excludes actual process/device/session/request/state/diagnostic keys. Generic protocol declarations may occur in public source.",
+  "exactSourcePatchPathExceptions": [
+    {
+      "path": "source.patch",
+      "line": 3301,
+      "exactLine": "+          iosXctestrunFile: '/tmp/native.xctestrun',",
+      "qualification": "Generic public test placeholder only; no actual host path."
+    },
+    {
+      "path": "source.patch",
+      "line": 3302,
+      "exactLine": "+          traceLogPath: '/tmp/native-trace.log',",
+      "qualification": "Generic public test placeholder only; no actual host path."
+    },
+    {
+      "path": "source.patch",
+      "line": 3314,
+      "exactLine": "+        iosXctestrunFile: '/tmp/native.xctestrun',",
+      "qualification": "Generic public test placeholder only; no actual host path."
+    },
+    {
+      "path": "source.patch",
+      "line": 3315,
+      "exactLine": "+        traceLogPath: '/tmp/native-trace.log',",
+      "qualification": "Generic public test placeholder only; no actual host path."
+    }
+  ],
+  "visualReview": {
+    "reviewed": "All48 first/last endpoints in five contact sheets",
+    "contactSheets": [
+      "contact-sheets/page-1.png",
+      "contact-sheets/page-2.png",
+      "contact-sheets/page-3.png",
+      "contact-sheets/page-4.png",
+      "contact-sheets/page-5.png"
+    ],
+    "contactDimensions": [
+      [
+        1100,
+        1750
+      ],
+      [
+        1100,
+        1750
+      ],
+      [
+        1100,
+        1750
+      ],
+      [
+        1100,
+        1750
+      ],
+      [
+        1100,
+        1400
+      ]
+    ],
+    "findings": "Generic UIKit fixture/default simulator OS only; no private app data observed. Every stream decoded, but interior frames were not individually visually reviewed.",
+    "orientation": "Track transform retained; no adaptive crop/rotation/content edits."
+  },
+  "mediaMetadata": "All24 one video/zero audio; track user-data reviewed as generic com.apple.policy.screenrecording.1 only.",
+  "sourcePolicy": "Executed source original/public hashes and explicit normalization preserved. Generic fixture source binary attribution limits are documented.",
+  "limitations": [
+    "Every yielded video sample decoded; interior frames not individually visually reviewed.",
+    "One natural unknown-origin recording is a static single sample.",
+    "Privacy audit is of this explicit public whitelist, not of omitted private raw artifacts.",
+    "Whole maintainer lifecycle matrix is pending outside this checkpoint."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "focusedGreen": {
+    "passed": 6,
+    "filteredSkipped": 17
+  },
+  "actual952RuntimeRed": {
+    "failed": 1,
+    "passed": 5,
+    "filteredSkipped": 17,
+    "oracle": "Canonical typed native abort after known blocked read and real owned timer; blocked-to-abort ordering, native-boundary rejection marker and zero input passed before matcher. Expected target_not_ready/readiness blocked; actual request_canceled. Raw-owned, caller and unrelated typed controls passed."
+  },
+  "restoredGreen": {
+    "passed": 6,
+    "filteredSkipped": 17
+  },
+  "onlyCanonicalPredicateRemovedRed": {
+    "failed": 1,
+    "passed": 5,
+    "filteredSkipped": 17,
+    "oracle": "An unrelated typed native failure after the owned timer lost native-transport-failed and backendCode1234 into target_not_ready. Actual abort, native rejection marker and zero input passed before matcher. Other five controls passed."
+  },
+  "restoredFullFile": {
+    "passed": 23
+  }
+}

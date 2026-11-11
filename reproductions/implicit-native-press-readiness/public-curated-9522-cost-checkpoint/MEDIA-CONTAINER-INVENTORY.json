@@ -1,0 +1,425 @@
+{
+  "method": "Python standard-library ISO BMFF track/atom inventory and exact review of each track udta value; no media transformation.",
+  "videos": [
+    {
+      "case": "7395-anonymous-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 16.391666666666666,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 15.983333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "7395-buttons-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 13.771666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.538333333333334
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "7395-fade750-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 3.861666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 2.9266666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "7395-missing-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 8.168333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 8.071666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "7395-shared-caller1000-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 9.591666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 9.338333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "7395-shared-current-2",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 12.215,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 11.961666666666666
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "9522-anonymous-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 14.231666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.993333333333334
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "9522-buttons-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 13.7,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.443333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "9522-fade750-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 4.51,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 3.525
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "9522-missing-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 12.913333333333334,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 12.431666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "9522-shared-caller1000-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 14.036666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.58
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "9522-shared-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 12.486666666666666,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 12.236666666666666
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "c267-anonymous-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 12.185,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 11.938333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "c267-anonymous-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 11.898333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 11.658333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "c267-buttons-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 13.52,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.268333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "c267-buttons-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 12.681666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 12.411666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "c267-shared-current-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 11.141666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 10.893333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "c267-shared-fullpin-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 11.958333333333334,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 11.656666666666666
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "d9-combined-fade750-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 4.048333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 3.098333333333333
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "d9-combined-ipad-placed-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 15.481666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 13.581666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "d9-combined-natural-unknown-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 1.9966666666666666,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 2.006666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "d9-combined-natural-unknown-placed-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 4.471666666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 0.06666666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "d9-tablet-placement-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 11.918333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 9.376666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "native-d9-combined-phone-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 40.66166666666667,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 40.855
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    }
+  ],
+  "audioTracks": 0,
+  "metadataReview": {
+    "perVideo": "One track udta/tagc value com.apple.policy.screenrecording.1",
+    "privateValueFindings": 0
+  },
+  "staticVideoQualification": {
+    "case": "d9-combined-natural-unknown-placed-1",
+    "decodedSamples": 1,
+    "movieDurationSeconds": 4.471666666666667,
+    "videoMediaDurationSeconds": 0.06666666666666667,
+    "limit": "Static one-sample recording; cannot visually establish policy/dispatch. Use separately selected typed responses, counters and command markers."
+  }
+}

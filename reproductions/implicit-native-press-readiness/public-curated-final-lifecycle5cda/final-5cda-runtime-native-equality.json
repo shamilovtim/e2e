@@ -1,0 +1,32 @@
+{
+  "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "sourceTree": "6ab7041ca7f34c9bb6a0d84b8ef24ea58d1dc4d3",
+  "exhaustiveRuntimeJSFiles": 633,
+  "completeFileSetEqual952": true,
+  "symlinksFound": false,
+  "all633ChangedFrom952": [
+    "dist/src/press-readiness.js"
+  ],
+  "readySourceBodiesEqual952": {
+    "guardPressReadiness": true,
+    "readyLoopAndRevalidationBeforeCatch": true,
+    "nativeBindingAndRevalidation": true,
+    "budgetOwner": true
+  },
+  "productionChange": "Existing canonical-cancellation predicate import plus catch-only recognition of owned typed native cancellation. Unrelated typed transport errors preserve identity.",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+  "nativeInputChangedFromD9": [],
+  "nativeArtifactSets": [
+    {
+      "kind": "production",
+      "verifiedEntries": 11,
+      "xctestBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+    },
+    {
+      "kind": "unit",
+      "verifiedEntries": 11,
+      "xctestBinarySha256": "b23f62bc31d22d2870241bbffe37a42b5294014798c291a91b02ab342675bf0f"
+    }
+  ]
+}

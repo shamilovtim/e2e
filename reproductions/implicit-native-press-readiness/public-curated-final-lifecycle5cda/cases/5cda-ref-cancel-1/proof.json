@@ -1,0 +1,455 @@
+{
+  "case": "5cda-ref-cancel-1",
+  "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "wrapperSuccess": true,
+  "wrapperExitCode": 0,
+  "runtimePinScope": "exhaustive633 emitted JavaScript before execution",
+  "executedSources": [
+    {
+      "path": "cases/5cda-ref-cancel-1/source/executed-driver.py",
+      "originalArchivedSha256": "3c9a14fd881fd4276d97bbc38f14b53028a808631bf2bd1b0e3c91ab16739297",
+      "publicSha256": "3c9a14fd881fd4276d97bbc38f14b53028a808631bf2bd1b0e3c91ab16739297",
+      "bytes": 11626,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/5cda-ref-cancel-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "publicSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+      "bytes": 11111,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "executionInputs": {
+    "head": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "kind": "lifecycle",
+    "mode": "ref-cancel",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "sourceTree": "6ab7041ca7f34c9bb6a0d84b8ef24ea58d1dc4d3",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+    "runtimeJSFiles": 633,
+    "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+    "driverSha256": "3c9a14fd881fd4276d97bbc38f14b53028a808631bf2bd1b0e3c91ab16739297",
+    "archivedBeforeRun": true,
+    "runtimeCompleteFileSetVerified": true,
+    "runtimeSymlinksFound": false,
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "nativeCacheManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "runtimeLaunchInputs": [
+      {
+        "path": "bin/agent-device.mjs",
+        "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+      },
+      {
+        "path": "package.json",
+        "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f"
+      },
+      {
+        "path": "scripts/build-entries.ts",
+        "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+      },
+      {
+        "path": "scripts/build-xcuitest-apple.sh",
+        "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+      }
+    ],
+    "resolvedCLIEntry": "dist/src/internal/bin.js",
+    "nodeVersion": "v24.22.0",
+    "warmRefRuns": null,
+    "callerSignalBudgetMs": null,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "57ebe08e98e2ee696133bfdf998cc1be8f06afe77a4359f9860a987c1c805647",
+    "sourceTreeManifestSha256": "2903710c69a4c077bc8b0d27fc0fad1271861805cfeedd3ca1393269d61b32a4",
+    "observedFixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2"
+  },
+  "wrapperSummary": {
+    "phase": "5cda-ref-cancel-1",
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [
+      207.49533299999985
+    ],
+    "medianMs": 207.49533299999985,
+    "cliMs": null,
+    "targetTaps": 0,
+    "siblingTaps": 0,
+    "inputEvents": {},
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing omitted."
+  },
+  "runtimeJsManifest": {
+    "path": "runtime/a35c432af6f5.json",
+    "sha256": "a35c432af6f5b75d9f69961b8ab7ea64c7d4dcbd44bce40635a5ee75ed320c46",
+    "files": 633,
+    "head": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "scope": "exhaustive633 emitted JavaScript before execution"
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  },
+  "originalResultSha256": "fca14a9a7cdbd7a24d07360ad1a797ef433888441f23bf06b8e1399a9e756dd4",
+  "observations": {
+    "phase": "5cda-ref-cancel-1",
+    "mode": "ref-cancel",
+    "route": "ref",
+    "scenario": "cancel",
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+    "target": {
+      "index": 7,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e8",
+      "kind": "button"
+    },
+    "coveredTarget": {
+      "index": 7,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e8",
+      "kind": "button"
+    },
+    "targetTapEvents": 0,
+    "otherTapEvents": 0,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "publicTimeoutOverride": false,
+    "externalCallerSignal": true,
+    "declaredDefaultClientEnvelopeMs": 90000,
+    "declaredOrdinaryDaemonResultPolicyMs": 60000,
+    "cancelAfterCompletedReadiness": 2,
+    "blockedPrecondition": "Only blocked readiness repeats; two completed target-phase reads precede cancellation.",
+    "actualCallerReason": {
+      "name": "Error",
+      "message": "plain caller cancellation"
+    },
+    "coveredEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.006291666068136692
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeOverlayOpened",
+        "ms": 3609.939083340578
+      }
+    ],
+    "completedReadiness": 2,
+    "targetPhaseTapAccepted": 0,
+    "requestPhaseEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.006291666068136692
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeOverlayOpened",
+        "ms": 3609.939083340578
+      }
+    ],
+    "classificationValid": true,
+    "deadlineDurationValid": true,
+    "targetPhaseZeroInput": true,
+    "coverHeldUntilRefusal": true,
+    "releaseAfterRefusal": {
+      "method": "client.interactions.press",
+      "ref": "@e3",
+      "result": {
+        "x": 194,
+        "y": 514,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e3 (194, 514)",
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e3",
+        "refLabel": "Close overlay",
+        "selectorChain": [
+          "id=\"Close overlay\"",
+          "role=\"button\" label=\"Close overlay\"",
+          "label=\"Close overlay\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      }
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 4012.4856659999996
+    },
+    "counts": {
+      "underlying": 0,
+      "overlay": 0
+    },
+    "resultLabel": "Underlying taps: 0\nOverlay touches: 0",
+    "failedOracles": [],
+    "samples": [
+      {
+        "kind": "ref",
+        "ms": 207.49533299999985,
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "request canceled",
+          "details": {
+            "reason": "request_canceled",
+            "dispatched": "unknown"
+          }
+        },
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 46.611
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 46.354
+          }
+        ]
+      }
+    ],
+    "nativeEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.006291666068136692
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeOverlayOpened",
+        "ms": 3609.939083340578
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeDismissBegin",
+        "ms": 4473.885583342053
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 7476.258125039749
+      }
+    ],
+    "request": {
+      "method": "client.interactions.press",
+      "arguments": {
+        "ref": "@e8"
+      },
+      "timeoutOverride": false,
+      "callerReason": "AbortController.abort(new Error)",
+      "startedAt": "2026-11-11T23:31:08.478Z",
+      "elapsedMs": 207.49533299999985,
+      "finishedAt": "2026-11-11T23:31:08.686Z",
+      "output": {
+        "ok": false,
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "request canceled",
+          "details": {
+            "reason": "request_canceled",
+            "dispatched": "unknown"
+          }
+        }
+      }
+    },
+    "targetPhaseNativeCommands": [
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness",
+        "nativeDurationMs": 46.611
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness",
+        "nativeDurationMs": 46.354
+      }
+    ]
+  },
+  "lifecycleOracle": {
+    "case": "5cda-ref-cancel-1",
+    "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+    "route": "ref",
+    "scenario": "cancel",
+    "requestMs": 207.49533299999985,
+    "actualSDKOutputFields": {
+      "ok": false,
+      "code": "COMMAND_FAILED",
+      "reason": "request_canceled",
+      "readiness": null,
+      "dispatched": "unknown"
+    },
+    "driverExitCode": 0,
+    "cleanupExitCode": 0,
+    "completedTargetReadiness": 2,
+    "targetPhaseNativeTapAccepted": 0,
+    "finalCounters": {
+      "underlying": 0,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 4012.4856659999996
+    },
+    "publicTimeoutOverride": false,
+    "externalCallerSignal": true,
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "runtimeJSFiles": 633,
+    "runtimeCompleteFileSetVerified": true,
+    "nativeArtifactsVerified": 11,
+    "wrapperSha256": "6c99f01087addda7ef8839e12a75012783b3306917ef3f8a994d1d4d13386767",
+    "originalResultSHA256": "fca14a9a7cdbd7a24d07360ad1a797ef433888441f23bf06b8e1399a9e756dd4",
+    "classificationValid": true,
+    "deadlineDurationValid": true,
+    "coverHeldUntilRefusal": true,
+    "explicitCoverReleaseSetupInput": true,
+    "actualCallerReason": {
+      "name": "Error",
+      "message": "plain caller cancellation"
+    },
+    "cancelAfterCompletedReadiness": 2
+  },
+  "classification": "pass-explicit-caller-cancellation-ref",
+  "qualification": "Explicit caller signal after two completed blocked readiness reads. API reports request_canceled/dispatched unknown; this is preserved, not upgraded to API no-send. Separately observed target-phase native tap0, explicit post-refusal cover release, actual fade completion plus1100ms grace and final counters0/0 show zero late input during the measured window."
+}

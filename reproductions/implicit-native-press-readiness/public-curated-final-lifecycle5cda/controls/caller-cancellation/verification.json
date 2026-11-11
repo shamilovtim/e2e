@@ -1,0 +1,93 @@
+{
+  "baseHead": "7395df404597e9e40f80a778149faabfe390847a",
+  "patchSHA256": "70bc75cb21f4c37d41c175be3ac95440cd8ca08c10590cbcc40b9e0a64014ac3",
+  "scope": {
+    "files": 2,
+    "insertions": 22,
+    "deletions": 13
+  },
+  "files": [
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+      "sha256": "26939488bc8432741aebdacf88ae06bf540ec26c72538db8e39ffb35146761f6"
+    },
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+      "sha256": "47945b52b823ec353d4b9d63307cd91f78385a775ceb881ba53f857e59ed7b8b"
+    }
+  ],
+  "commands": {
+    "focused": "pnpm exec vitest run --project unit-core packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts -t 'callerAbort|a production result deadline'",
+    "fullFile": "pnpm exec vitest run --project unit-core packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+    "targetedCoverage": "pnpm exec vitest run packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts --coverage --allowOnly=false --project=unit-core --maxWorkers=1 --coverage.include=packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts --coverage.include=packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts"
+  },
+  "invariants": {
+    "onlyTwoExistingTSFilesModified": true,
+    "noNewTestCases": true,
+    "originalOwnedDeadline150msAndCutoffMinusOneRetained": true,
+    "callerFirstSurvivesOwnedTimerAndAbsoluteCutoff": true,
+    "typedAppErrorPassthroughRetained": true,
+    "nativeProductionSourceUnchanged": true,
+    "readyPollingAndDispatchCodeUnchanged": true,
+    "sharedGatePolicyAndThresholdsUnchanged": true
+  },
+  "ciAttribution": "7395 terminal CI:14 SUCCESS and2 SKIPPED. This fixes new accepted Cubic review4543915730 in direct in-process generic caller-signal classification; typed SDK RPC cancellation was already distinct. Local controls do not claim new CI or live evidence.",
+  "validation": {
+    "ownInstallAndFinalSourceBuild": "passed",
+    "fullRepositoryFormat": "passed",
+    "restoredFullFile": {
+      "passed": 21
+    },
+    "targetedV8Coverage": {
+      "passed": 49,
+      "testFiles": 2,
+      "owners": [
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+        "packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.ts"
+      ],
+      "total": {
+        "lines": {
+          "total": 55,
+          "covered": 52,
+          "skipped": 0,
+          "pct": 94.54
+        },
+        "statements": {
+          "total": 62,
+          "covered": 58,
+          "skipped": 0,
+          "pct": 93.54
+        },
+        "functions": {
+          "total": 8,
+          "covered": 8,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 73,
+          "covered": 67,
+          "skipped": 0,
+          "pct": 91.78
+        },
+        "branchesTrue": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": "Unknown"
+        }
+      },
+      "configuredThresholdsUnchanged": {
+        "statements": 78,
+        "lines": 80
+      },
+      "scope": "Targeted owner instrumentation only; not full-repository CI coverage."
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "formatCheck": "passed",
+    "fallowFinal": "passed: zero dead-code, complexity, duplication findings",
+    "diffCheck": "passed"
+  },
+  "attribution": "Isolated source7395 plus exact source.patch; author final commit, exact gate, new CI and live proof are separate evidence."
+}

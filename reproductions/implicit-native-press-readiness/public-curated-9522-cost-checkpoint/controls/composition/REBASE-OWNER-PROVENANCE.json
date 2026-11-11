@@ -1,0 +1,23 @@
+{
+  "originalReviewedRebaseHead": "da16cba78f51097a5d81a22cd7a886946ebb8eb9",
+  "base": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "preservedOldHead": "cce5aa19e93cccc182a9610d63d50b638a89a1f3",
+  "preservedRef": "codex/proof-cce5-readiness",
+  "rebaseCommitCount": 24,
+  "droppedCommit": "Exact upstream b660429 cherry cce5aa1 skipped because already in main; startup test bytes equal new base.",
+  "fourOwners": [
+    "packages/contracts/src/snapshot-private-evidence.ts",
+    "packages/contracts/src/facades/capture.ts",
+    "packages/capture-kit/src/snapshot-state.ts",
+    "packages/command-runtime/src/command-runtime/runtime-factory.ts"
+  ],
+  "resolutions": {
+    "privateEvidence": "One existing WeakMap and merged evidence object retain viewport plus nativePressTargets; readSnapshotViewportEvidence stays module-private.",
+    "facade": "Exports both existing origin assertion/viewport attach/copy and native-target attach/read/copy. No test-only viewport reader export.",
+    "snapshotState": "copySnapshotViewportEvidence(data.nodes,nodes) runs after stripNativePressTargets returns the final published array.",
+    "memoryStore": "structuredClone snapshot once through cloneSnapshot, then reattach native target map and viewport evidence to that same cloned nodes array for constructor/get/set/list."
+  },
+  "originalRangeDiffSha256": "9992296243179ceb6969143d3cf2aee4b60fc914f46824c56b25fa46461085e6",
+  "originalPrivateReviewInputSha256": "84da73e412726c5367593dc99db5641da15fe36dc091f590778f7cb60b03d1f9",
+  "qualification": "Selected generic rebase facts only. The original review input pending/native status belongs to its earlier stage and is not represented as current execution proof."
+}

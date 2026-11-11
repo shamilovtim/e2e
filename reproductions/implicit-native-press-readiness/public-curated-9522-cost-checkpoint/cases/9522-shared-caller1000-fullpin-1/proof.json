@@ -1,0 +1,485 @@
+{
+  "case": "9522-shared-caller1000-fullpin-1",
+  "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "scope": "First24 cost/source checkpoint. Whole maintainer lifecycle matrix remains pending.",
+  "wrapperSuccess": true,
+  "wrapperExitCode": 0,
+  "runtimePinScope": "exhaustive emitted JavaScript before execution",
+  "executedSources": [
+    {
+      "path": "cases/9522-shared-caller1000-fullpin-1/source/executed-driver.py",
+      "originalArchivedSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "publicSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+      "bytes": 11183,
+      "normalization": "Byte-equal archived executed source."
+    },
+    {
+      "path": "cases/9522-shared-caller1000-fullpin-1/source/executed-wrapper.mjs",
+      "originalArchivedSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "publicSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+      "bytes": 12217,
+      "normalization": "Byte-equal archived executed source."
+    }
+  ],
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  },
+  "executionInputs": {
+    "head": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+    "kind": "variant",
+    "mode": "shared",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "sourceTree": "337e192a5a865e6dc637b2ce614c61bbee7c9007",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+    "runtimeJSFiles": 633,
+    "wrapperSha256": "d8b03fc0ec8dd09a1554309a4ec565dd507782bbed1fff4bdb4f44da1d19ac76",
+    "driverSha256": "45606e2ea673c5b524718d9fdee9e5c52171c8b71327a64104ef3b94a8ea10d0",
+    "archivedBeforeRun": true,
+    "runtimeCompleteFileSetVerified": true,
+    "runtimeSymlinksFound": false,
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "nativeCacheManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "runtimeLaunchInputs": [
+      {
+        "path": "bin/agent-device.mjs",
+        "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+      },
+      {
+        "path": "package.json",
+        "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f"
+      },
+      {
+        "path": "scripts/build-entries.ts",
+        "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+      },
+      {
+        "path": "scripts/build-xcuitest-apple.sh",
+        "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+      }
+    ],
+    "resolvedCLIEntry": "dist/src/internal/bin.js",
+    "nodeVersion": "v24.22.0",
+    "warmRefRuns": 1,
+    "callerSignalBudgetMs": 1000,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "70bc75cb21f4c37d41c175be3ac95440cd8ca08c10590cbcc40b9e0a64014ac3",
+    "sourceTreeManifestSha256": "c7d3c92e3f10a1481d3938d00ece3cac93a42e5dca890bc62086958130fbbfe1",
+    "observedFixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84"
+  },
+  "wrapperSummary": {
+    "phase": "9522-shared-caller1000-fullpin-1",
+    "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [
+      938.496000000001
+    ],
+    "medianMs": 938.496000000001,
+    "cliMs": 1093.9828749999997,
+    "targetTaps": 2,
+    "siblingTaps": 0,
+    "inputEvents": {
+      "controlReceivedTap": 2
+    },
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "nativeBuild": {
+    "sourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "sdkVersion": "27.2",
+    "destination": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "qualification": "Relative artifact hashes only; actual host paths, build environment and signing omitted."
+  },
+  "runtimeJsManifest": {
+    "path": "runtime/153016bab94a.json",
+    "sha256": "153016bab94a41fbeabd22dc35068c21c153b0f1a857aa5fa338d425eaeefa3b",
+    "files": 633,
+    "head": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+    "scope": "exhaustive emitted JavaScript before execution"
+  },
+  "originalResultSha256": "137cc5304a2a5bf8c089ca2c426fe73af3c461f41da6423f82d961613e04091b",
+  "observations": {
+    "phase": "9522-shared-caller1000-fullpin-1",
+    "mode": "shared",
+    "sdkSource": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+    "coldOpenMs": 3956.4857500000003,
+    "nativeModeSetupMs": 1105.419582999999,
+    "initialViewport": {
+      "width": 393,
+      "height": 852
+    },
+    "initialTarget": {
+      "index": 12,
+      "parentIndex": 11,
+      "type": "Other",
+      "role": "ReadinessVariants.OtherControl",
+      "subrole": "UIControl",
+      "label": "Shared row 000",
+      "identifier": "shared-row",
+      "rect": {
+        "x": 24,
+        "y": 220,
+        "width": 345,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 2,
+      "hittable": true,
+      "ref": "e13",
+      "kind": "other"
+    },
+    "nativeObservation": {
+      "ms": 328.46308300000055,
+      "ok": true,
+      "nodeCount": 525,
+      "otherCount": 511,
+      "sameTypeCount": 511,
+      "firstRows": [
+        {
+          "type": "Other",
+          "identifier": "shared-row",
+          "label": "Shared row 000",
+          "rect": {
+            "width": 345,
+            "y": 220,
+            "x": 24,
+            "height": 40
+          },
+          "nativePressTarget": {
+            "type": 1,
+            "identifier": "shared-row",
+            "label": "Shared row 000",
+            "rect": {
+              "y": 220,
+              "width": 345,
+              "x": 24,
+              "height": 40
+            }
+          }
+        }
+      ],
+      "snapshotQuality": {
+        "state": "healthy",
+        "backend": "tree",
+        "timing": {
+          "presentationMs": 0.7390975952148438,
+          "acquisitionMs": 269.08695697784424
+        }
+      },
+      "rawBindingAvailable": true
+    },
+    "targetTapEvents": 2,
+    "otherTapEvents": 0,
+    "nativeBinaryUnchanged": true,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "samples": [
+      {
+        "kind": "ref",
+        "target": {
+          "index": 12,
+          "parentIndex": 11,
+          "type": "Other",
+          "role": "ReadinessVariants.OtherControl",
+          "subrole": "UIControl",
+          "label": "Shared row 000",
+          "identifier": "shared-row",
+          "rect": {
+            "x": 24,
+            "y": 220,
+            "width": 345,
+            "height": 40
+          },
+          "enabled": true,
+          "depth": 2,
+          "hittable": true,
+          "ref": "e13",
+          "kind": "other"
+        },
+        "press": {
+          "x": 197,
+          "y": 240,
+          "message": "Tapped @e13 (197, 240)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 393,
+          "referenceHeight": 852,
+          "targetKind": "ref",
+          "ref": "e13",
+          "refLabel": "Shared row 000",
+          "selectorChain": [
+            "role=\"other\" label=\"Shared row 000\"",
+            "label=\"Shared row 000\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 938.496000000001,
+        "nativeEvents": [
+          {
+            "event": "modeChanged",
+            "ms": 0.02287491224706173,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "appReady",
+            "ms": 0.9718749206513166,
+            "otherControlCount": 500,
+            "variant": "anonymous"
+          },
+          {
+            "event": "modeChanged",
+            "ms": 5968.124208273366,
+            "otherControlCount": 500,
+            "variant": "shared"
+          },
+          {
+            "event": "controlReceivedTap",
+            "ms": 7516.064083320089,
+            "otherTaps": 0,
+            "row": 0,
+            "targetTaps": 1,
+            "variant": "shared"
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 440.358
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 479.243
+          }
+        ]
+      }
+    ],
+    "nativeEvents": [
+      {
+        "event": "modeChanged",
+        "ms": 0.02287491224706173,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "appReady",
+        "ms": 0.9718749206513166,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "modeChanged",
+        "ms": 5968.124208273366,
+        "otherControlCount": 500,
+        "variant": "shared"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 7516.064083320089,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 1,
+        "variant": "shared"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 8882.767249946482,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 2,
+        "variant": "shared"
+      }
+    ],
+    "cli": {
+      "ms": 1093.9828749999997,
+      "exitCode": 0,
+      "nativeEvents": [
+        {
+          "event": "modeChanged",
+          "ms": 0.02287491224706173,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "appReady",
+          "ms": 0.9718749206513166,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "modeChanged",
+          "ms": 5968.124208273366,
+          "otherControlCount": 500,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 7516.064083320089,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 1,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 8882.767249946482,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 2,
+          "variant": "shared"
+        }
+      ],
+      "parsed": {
+        "success": true,
+        "data": {
+          "x": 197,
+          "y": 240,
+          "message": "Tapped @e13 (197, 240)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 393,
+          "referenceHeight": 852,
+          "targetKind": "ref",
+          "ref": "e13",
+          "refLabel": "Shared row 000",
+          "selectorChain": [
+            "role=\"other\" label=\"Shared row 000\"",
+            "label=\"Shared row 000\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        }
+      },
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 476.071
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 492.457
+        }
+      ]
+    }
+  },
+  "classification": "pass-single-one-second-caller-observation",
+  "qualification": "938.496ms SDK call; separate ordinary CLI1093.983ms; two total intended actions, zero siblings. One observation only; no latency SLO or native server-deadline claim."
+}

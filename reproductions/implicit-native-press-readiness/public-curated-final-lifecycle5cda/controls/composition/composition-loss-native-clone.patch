@@ -1,0 +1,12 @@
+diff --git a/packages/command-runtime/src/command-runtime/runtime-factory.ts b/packages/command-runtime/src/command-runtime/runtime-factory.ts
+index 5848b45..a127c58 100644
+--- a/packages/command-runtime/src/command-runtime/runtime-factory.ts
++++ b/packages/command-runtime/src/command-runtime/runtime-factory.ts
+@@ -70,7 +70,6 @@ function cloneMetadata(metadata: Record<string, unknown>): Record<string, unknow
+ 
+ function cloneSnapshot(snapshot: NonNullable<CommandSessionRecord['snapshot']>) {
+   const cloned = structuredClone(snapshot);
+-  copySnapshotNativePressTargets(snapshot.nodes, cloned.nodes);
+   copySnapshotViewportEvidence(snapshot.nodes, cloned.nodes);
+   return cloned;
+ }

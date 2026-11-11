@@ -1,0 +1,25 @@
+{
+  "focusedGreen": {
+    "passed": 2,
+    "filteredSkipped": 19
+  },
+  "actual7395RuntimeRed": {
+    "failed": 1,
+    "passed": 1,
+    "filteredSkipped": 19,
+    "oracle": "Caller case established blocked read, actual abort ordering, delayed throw after timer, absolute cutoff crossed, zero input before matcher. Expected request_canceled; actual target_not_ready. Owned timer case passed."
+  },
+  "restoredGreen": {
+    "passed": 2,
+    "filteredSkipped": 19
+  },
+  "onlyReasonInequalityRemovedRed": {
+    "failed": 1,
+    "passed": 1,
+    "filteredSkipped": 19,
+    "oracle": "Owned result-deadline case established blocked read then actual abort and zero input before matcher. Expected target_not_ready/readiness blocked; actual request_canceled. Caller case passed."
+  },
+  "restoredFullFile": {
+    "passed": 21
+  }
+}

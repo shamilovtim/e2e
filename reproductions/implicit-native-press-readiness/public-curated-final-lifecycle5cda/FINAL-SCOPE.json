@@ -1,0 +1,27 @@
+{
+  "source": "5cda3dfcc789a1fbb8ef7b7902bf4cf49bac51d1",
+  "currentSourceTree": "6ab7041ca7f34c9bb6a0d84b8ef24ea58d1dc4d3",
+  "appendRecordings": 15,
+  "earlierRecordings": 24,
+  "combinedRecordings": 39,
+  "currentSourceRecordings": 14,
+  "retainedOld952FailureRecordingsInAppend": 1,
+  "currentHeadEvidence": {
+    "lifecycleCases": 6,
+    "knownOriginRoutes": 2,
+    "unknownOriginRoutes": 2,
+    "costModes": 3,
+    "fade750": true
+  },
+  "historicalScope": "Earlier d9/c267/7395/952 results retain exact source. Current native built-at d9; selected native7 is not full native suite.",
+  "allFailuresPreserved": [
+    "7395 original1s caller cancellation after intended input in unchanged earlier bundle",
+    "7395 SHA-preflight typo: no device run/no recording",
+    "d9 first fullscreen unknown setup qualification failure in unchanged earlier bundle",
+    "Old952 natural60s owned-deadline classification failure in this append",
+    "Final5cda first tablet fullscreen setup failure before target input in this append",
+    "Both d9 and5cda coarse placement recordings are setup only",
+    "D9 hosted Coverage failure and ecb static/diagnostic variants remain historical failures"
+  ],
+  "publicationStatus": "Root review required; no uploads by curator."
+}

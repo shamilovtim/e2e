@@ -1,0 +1,43 @@
+{
+  "review": {
+    "reviewedHead": "da16cba78f51097a5d81a22cd7a886946ebb8eb9",
+    "base": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+    "tree": "cb0e67314e61ef27e35886ef7ca7c5291d35dc9a",
+    "mode": "independent read-only composition review; no tests/build/device/source edits",
+    "checkoutCleanAndUnchanged": true,
+    "findings": [],
+    "conclusion": "No actionable production composition regression found in the four conflict owners or traced origin/readiness handoffs. Combined execution remains unverified.",
+    "verified": {
+      "sameWeakMap": "viewport and nativePressTargets share one evidence record; attachment merges existing fields. Native targets are keyed per final node index in the array-owned map.",
+      "assembly": "stripNativePressTargets wraps attachRefs; viewport copy executes afterward on the exact final nodes array (snapshot-state.ts105-115).",
+      "memoryClone": "cloneSnapshot structuredClone once, then copies native targets and viewport to cloned.nodes; constructor/get/set/list share cloneSessionRecord.",
+      "facade": "both evidence families exported; readSnapshotViewportEvidence remains module-private.",
+      "provider": "presentIosSnapshotAcquisition preserves original acquisition viewport and publishes trusted viewport onlyreported; byte-identical to merged base.",
+      "guard": "await origin guard is first runInteractionPipelineStages action, before visibility rescue and readiness.",
+      "freshGuard": "guardPressReadiness.revalidate calls reObserveTarget→resolveInteractionTarget→selector/ref pipeline→awaited origin guard. AppError window-origin-unknown is propagated and disclosed:no."
+    },
+    "mergedOwnersByteIdenticalToBase": [
+      "packages/capture-kit/src/snapshot/ios-snapshot-runtime.ts",
+      "packages/platform-apple/src/snapshot-presentation.ts",
+      "packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages.ts",
+      "packages/maestro/src/daemon-port/daemon-runtime-tap.ts",
+      "packages/daemon/src/execution/interaction/internal/find.ts"
+    ],
+    "testPlan": {
+      "assessment": "Extend existing screen-origin tests; this is necessary composition coverage, not a new test framework.",
+      "forceReplacement": "Put an actual numeric nativePressTarget descriptor on the raw action node before buildSnapshotState. Existing Group compaction then stripNativePressTargets must produce the final replacement array.",
+      "unknown": "Derived/missing cases must assert zero readPressReadiness calls as well as zero rescue/input, and preserve typed window-origin-unknown/dispatched:no after real memory-store cloning.",
+      "reported": "Use press selector and saved-ref routes with ready callback. Assert the callback receives exact numeric native descriptor/identity/globalrect and backend receives screen point591,335. Public nodes must not expose nativePressTarget.",
+      "nativeRefCaveat": "click with tapTarget takes the separate provider-native fast path and intentionally does not use readiness; retain its zero-input origin oracle but do not expect a readiness call there.",
+      "helper": "Existing createInteractionDevice helper currently does not accept/forward readPressReadiness; extend its test-only Pick/forwarder or use the existing readiness test setup. No production seam/export needed.",
+      "lossControls": "When heavy is authorized, remove/misorder viewport copy to prove unknown rejection detection; omit native-target clone copy or replace merged evidence to prove reported readiness binding detection."
+    },
+    "limitations": [
+      "Read-only source review only; no claim of combined execution, timing, or native proof.",
+      "Scope is rebase composition and its affected origin/readiness interactions; prior broad SDK reviews remain separate."
+    ]
+  },
+  "subsequentSource": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "subsequentTestOnlyLines": 27,
+  "sourceAndControlScope": "Review is read-only source assessment; focused/mutation executions are separate actual behavioral test controls, not live native/device proof."
+}

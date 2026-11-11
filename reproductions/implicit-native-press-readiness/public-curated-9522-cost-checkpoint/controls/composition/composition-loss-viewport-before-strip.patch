@@ -1,0 +1,29 @@
+diff --git a/packages/capture-kit/src/snapshot-state.ts b/packages/capture-kit/src/snapshot-state.ts
+index 6799901..2279711 100644
+--- a/packages/capture-kit/src/snapshot-state.ts
++++ b/packages/capture-kit/src/snapshot-state.ts
+@@ -102,17 +102,16 @@ export function buildSnapshotState(
+       : normalizedNodes;
+   const annotations = snapshotCaptureAnnotationsFrom(data);
+   const presentation = snapshotPresentationOptionsFromFlags(flags);
+-  const nodes = stripNativePressTargets(
+-    attachRefs(
+-      snapshotRaw
+-        ? scopedNodes
+-        : annotateCoveredSnapshotNodes(scopedNodes, overlayOptionsForBackend(data?.backend)),
+-      snapshotRefMinting(data),
+-    ),
++  const referencedNodes = attachRefs(
++    snapshotRaw
++      ? scopedNodes
++      : annotateCoveredSnapshotNodes(scopedNodes, overlayOptionsForBackend(data?.backend)),
++    snapshotRefMinting(data),
+   );
++  copySnapshotViewportEvidence(data.nodes, referencedNodes);
++  const nodes = stripNativePressTargets(referencedNodes);
+   const textInputGeometry = readSnapshotTextInputGeometry(data.nodes);
+   if (textInputGeometry) attachSnapshotTextInputGeometry(nodes, textInputGeometry);
+-  copySnapshotViewportEvidence(data.nodes, nodes);
+   return {
+     nodes,
+     truncated: data?.truncated,

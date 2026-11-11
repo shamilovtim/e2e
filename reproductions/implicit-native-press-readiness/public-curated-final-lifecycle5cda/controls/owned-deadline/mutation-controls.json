@@ -1,0 +1,38 @@
+{
+  "candidatePatchSHA256": "851d9e946febff11d99d4da3ceffe75baa4f75186bed04872863779c0f277919",
+  "ownedDeadlineCase": {
+    "clock": "Admission clock fixed to establish the first blocked response; then wall Date is held one tick before the absolute cutoff.",
+    "timer": "Actual production AbortSignal.timeout with unchanged 150 ms budget; clock is not advanced on abort.",
+    "preconditions": "Blocked event precedes real abort; zero input is asserted before the diagnostic match.",
+    "oldRuntime": {
+      "failed": 1,
+      "passed": 1,
+      "filteredSkipped": 19,
+      "oracle": "Known blocked then real budget abort and no input checks passed first; readiness expected blocked, actual native-read-failed."
+    },
+    "fixed": {
+      "passed": 2,
+      "filteredSkipped": 19
+    }
+  },
+  "callerFirstCase": {
+    "sequence": "Caller aborts after a blocked response; backend defers throwing by the same bounded 150 ms budget so the owned timer has also expired. Combined signal retains the earlier caller reason.",
+    "preconditions": "Blocked response, delayed caller throw, and zero input are asserted before the diagnostic match.",
+    "removeOnlyReasonIdentity": {
+      "failed": 1,
+      "filteredSkipped": 20,
+      "oracle": "Earlier caller abort delayed throw until owned budget expired; caller preconditions and no input passed first; expected native-read-failed, actual blocked."
+    }
+  },
+  "restore": {
+    "focused": {
+      "passed": 2,
+      "filteredSkipped": 19
+    },
+    "fullFile": {
+      "passed": 21
+    }
+  },
+  "existingTypedCancellationAndAbsoluteDeadline": "Original tests retained and full-file pass verified.",
+  "unconfirmedAmbiguousMissingLoop": "Byte-identical to base."
+}

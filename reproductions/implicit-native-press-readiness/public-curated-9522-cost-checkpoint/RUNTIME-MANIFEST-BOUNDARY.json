@@ -1,0 +1,44 @@
+{
+  "discovery": {
+    "head": {
+      "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+      "runtimeJSFiles": 633,
+      "previousManifestFiles": 625,
+      "previousComparableFilesChanged": [
+        "dist/src/press-readiness.js"
+      ],
+      "additionalEntryFilesNotInPriorManifest": [
+        "dist/src/internal/bin.js",
+        "dist/src/internal/companion-tunnel.js",
+        "dist/src/internal/daemon.js",
+        "dist/src/internal/png-worker.js",
+        "dist/src/internal/run-script-child.js",
+        "dist/src/internal/run-script-http-child.js",
+        "dist/src/internal/update-check-entry.js",
+        "dist/src/plugins/webdriver.js"
+      ],
+      "additionalEntriesPinnedNow": true,
+      "preRunQualification": "Full current head633 pin precedes all9522live runs; baseline631 pin follows earlier623-manifest runs and does not retroactively claim eight omitted entries were archived before those runs."
+    },
+    "base": {
+      "source": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "runtimeJSFiles": 631,
+      "previousManifestFiles": 623,
+      "previousComparableFilesChanged": [],
+      "additionalEntryFilesNotInPriorManifest": [
+        "dist/src/internal/bin.js",
+        "dist/src/internal/companion-tunnel.js",
+        "dist/src/internal/daemon.js",
+        "dist/src/internal/png-worker.js",
+        "dist/src/internal/run-script-child.js",
+        "dist/src/internal/run-script-http-child.js",
+        "dist/src/internal/update-check-entry.js",
+        "dist/src/plugins/webdriver.js"
+      ],
+      "additionalEntriesPinnedNow": true,
+      "preRunQualification": "Full current head633 pin precedes all9522live runs; baseline631 pin follows earlier623-manifest runs and does not retroactively claim eight omitted entries were archived before those runs."
+    }
+  },
+  "qualification": "Original625/head and623/base manifests remain selected comparable subsets, not exhaustive runtime. Final952 full633 inventory is prospective before new runs; old full631 baseline inventory was retrospective for earlier runs. Root now requires fresh3BASE+3HEAD under prospectively pinned631/633 inventories, plus fresh750/original1s/missing; no old eight-entry pre-run claim is fabricated.",
+  "publication": "This boundary qualifier must remain in final source/control/runtime provenance."
+}

@@ -1,0 +1,50 @@
+{
+  "source": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+  "parentSource": "7395df404597e9e40f80a778149faabfe390847a",
+  "status": "952 local exact gate passed; actual full-pinned cost/750/1s/missing checkpoint completed. Whole maintainer lifecycle matrix pending. Hosted CI status is not asserted by this bundle.",
+  "providedPatchSha256": "70bc75cb21f4c37d41c175be3ac95440cd8ca08c10590cbcc40b9e0a64014ac3",
+  "delta": {
+    "files": 2,
+    "added": 22,
+    "removed": 13,
+    "scope": "Existing TypeScript readiness owner and same caller test row only. Reuses existing assertBudget owner at three checks plus catch; no new function/state."
+  },
+  "behavior": "Typed AppError and nonowned caller canonical cancellation take precedence before absolute Date/owned-budget last-state classification. Ready-path intent is equivalent but implementation is not byte-identical7395.",
+  "independentCommittedSourceMatch": {
+    "commit": "95223a0d77987f68ed99c9ae2d4e54a8ef80607c",
+    "files": [
+      {
+        "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.ts",
+        "committedSHA256": "26939488bc8432741aebdacf88ae06bf540ec26c72538db8e39ffb35146761f6",
+        "verifiedCandidateSHA256": "26939488bc8432741aebdacf88ae06bf540ec26c72538db8e39ffb35146761f6",
+        "equal": true
+      },
+      {
+        "path": "packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts",
+        "committedSHA256": "47945b52b823ec353d4b9d63307cd91f78385a775ceb881ba53f857e59ed7b8b",
+        "verifiedCandidateSHA256": "47945b52b823ec353d4b9d63307cd91f78385a775ceb881ba53f857e59ed7b8b",
+        "equal": true
+      }
+    ],
+    "allMatch": true
+  },
+  "nativeAttribution": {
+    "fingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "actualBuildSource": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "unchanged": true
+  },
+  "historicalCI": {
+    "source": "7395df404597e9e40f80a778149faabfe390847a",
+    "success": 14,
+    "skipped": 2,
+    "qualification": "Valid Cubic P2 still required verified new push and proof reply. This green historical CI does not validate new952."
+  },
+  "localExactGate": {
+    "runnablePassed": 15,
+    "unitPassed": 19215,
+    "unitExistingSkipped": 3,
+    "relatedPassed": 380,
+    "fingerprint": "1d350d1a6296d5aa43f3119e6431601972d6861742211ddd3872edff376a6c85"
+  },
+  "runtimeBoundary": "Final633 prospective full runtime manifest; fresh c267631 full baseline replay required. No all-runtime claim for historical selected625/623."
+}

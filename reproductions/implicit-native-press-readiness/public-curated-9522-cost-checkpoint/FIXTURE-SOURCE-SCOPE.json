@@ -1,0 +1,51 @@
+{
+  "scope": "Generic published fixture source provided for inspection. Per-case execution inputs retain actual installed binary SHA256. This checkpoint does not reconstruct or establish a fresh source-to-binary mapping for each retained historical binary.",
+  "files": [
+    {
+      "path": "fixtures/geometry-v2/source/GeometryFixture.swift",
+      "bytes": 10305,
+      "sha256": "be5a926611ebcb7bae605ed2d1545748d8a8336fd247818264d7dbfd2ccd8c65"
+    },
+    {
+      "path": "fixtures/geometry-v2/source/Info.plist",
+      "bytes": 1104,
+      "sha256": "084f681cca102e443e4be18e488f79321d832d69a5645131da9b94e08abcad7e"
+    },
+    {
+      "path": "fixtures/geometry-v2/source/build.py",
+      "bytes": 653,
+      "sha256": "16bc111cf5661dce76ad841fc12e8058b18e3452f123feeb1e359ac4db8ee4b1"
+    },
+    {
+      "path": "fixtures/original-fade/source/Info.plist",
+      "bytes": 843,
+      "sha256": "b8701eb69beb67721f84fe743a8f51e897885c19ff8e6b6dd6613d63969ddbbd"
+    },
+    {
+      "path": "fixtures/original-fade/source/OverlayFixture.swift",
+      "bytes": 6787,
+      "sha256": "4ba6fb0e04317a1096ab5496dfeeec9d521ba5a59696e8052330ccff117bb9dd"
+    },
+    {
+      "path": "fixtures/original-fade/source/build.py",
+      "bytes": 650,
+      "sha256": "d419e8fec7fb003fe95f3540ad8f2b512dba7e18b87496f1b91d0900b5dab625"
+    },
+    {
+      "path": "fixtures/variants-v1.1/source/Info.plist",
+      "bytes": 1017,
+      "sha256": "ec72678f5da9906f5a985d97240d06c366dd5cacc6b9d6cf16f531c3755e30bf"
+    },
+    {
+      "path": "fixtures/variants-v1.1/source/ReadinessVariants.swift",
+      "bytes": 7574,
+      "sha256": "bffab8fd06e722f2fd6b4a88baf8091dee34e99ddd4fa12eb6dc5dcf985f8938"
+    },
+    {
+      "path": "fixtures/variants-v1.1/source/build.py",
+      "bytes": 659,
+      "sha256": "d4d04c224f179fc58f0f25d5f6df4e2ba63d79666266942e652023f36a747295"
+    }
+  ],
+  "geometryCoordinateQualification": "UIView app actionScreenFrame(to:nil) may be app-local after relaunch. Authoritative origin claims use native reported viewport/live window and corresponding actual SDK capture, not this app event field."
+}
