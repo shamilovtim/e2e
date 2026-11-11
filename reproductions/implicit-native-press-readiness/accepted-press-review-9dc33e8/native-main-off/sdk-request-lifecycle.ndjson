@@ -1,0 +1,10 @@
+{"ts": "2026-11-11T05:35:12.152Z", "kind": "request.started", "requestId": "f2ca91ca8745b129", "command": "open", "summary": "Started open"}
+{"ts": "2026-11-11T05:35:15.011Z", "kind": "request.finished", "requestId": "f2ca91ca8745b129", "command": "open", "status": "ok", "summary": "Finished open", "details": {"durationMs": 2859}}
+{"ts": "2026-11-11T05:35:21.786Z", "kind": "request.started", "requestId": "f2ba32611610baac", "command": "press", "summary": "Started press"}
+{"ts": "2026-11-11T05:35:22.764Z", "kind": "request.finished", "requestId": "f2ba32611610baac", "command": "press", "status": "ok", "summary": "Finished press", "details": {"durationMs": 978}}
+{"ts": "2026-11-11T05:35:22.782Z", "kind": "request.started", "requestId": "d6fd00ee56403aa6", "command": "open", "summary": "Started open"}
+{"ts": "2026-11-11T05:35:25.632Z", "kind": "request.finished", "requestId": "d6fd00ee56403aa6", "command": "open", "status": "ok", "summary": "Finished open", "details": {"durationMs": 2850}}
+{"ts": "2026-11-11T05:35:25.869Z", "kind": "request.started", "requestId": "a9f1303f16751c27", "command": "press", "summary": "Started press"}
+{"ts": "2026-11-11T05:35:26.519Z", "kind": "request.finished", "requestId": "a9f1303f16751c27", "command": "press", "status": "ok", "summary": "Finished press", "details": {"durationMs": 650}}
+{"ts": "2026-11-11T05:35:26.632Z", "kind": "request.started", "requestId": "47b41f9a5337d8d0", "command": "close", "summary": "Started close"}
+{"ts": "2026-11-11T05:35:26.642Z", "kind": "request.finished", "requestId": "47b41f9a5337d8d0", "command": "close", "status": "ok", "summary": "Finished close", "details": {"durationMs": 10}}

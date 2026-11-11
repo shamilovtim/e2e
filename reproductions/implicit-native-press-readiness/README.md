@@ -4,6 +4,8 @@ The original 70-video bundle below is frozen at SDK `f757b60` and mobile `31ceef
 
 [The mobile review append](mobile-review-c282cf9/README.md) records the matched current-SDK timeout failure on upstream and cancellation/recovery on mobile `c282cf9`, with five additional videos.
 
+[Accepted-input ordering evidence](accepted-press-review-9dc33e8/README.md) adds three real native cases and the comment-only mobile `9dc33e8` attribution. The parent file manifest covers the original bundle plus this current navigation README; each append has its own manifest.
+
 All application source, screenshots, videos and app event logs here are from constructed public UIKit fixtures. The patches contain generic upstream framework code. No production application data, source, configuration, backend address, account, device inventory, daemon state, token, lease or diagnostic archive is included. System-app smoke checks remain local and are not part of this bundle.
 
 The SDK fix checks the existing native hittability predicate before ordinary ref-based presses. Tests keep their existing tap calls. The separate framework fix forwards cancellation for pending presses. It does not add a public wait API.

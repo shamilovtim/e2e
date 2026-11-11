@@ -1,0 +1,181 @@
+{
+  "fileCountExcludingManifest": 35,
+  "totalBytesExcludingManifest": 5374256,
+  "files": [
+    {
+      "path": "COMMANDS.md",
+      "bytes": 1306,
+      "sha256": "9ac3f97a5eb4ed68cdd8b81f188b50f469afc307b54af0026f81318312c26316"
+    },
+    {
+      "path": "MATRIX.json",
+      "bytes": 1437,
+      "sha256": "c2d6603d4708d6bf68fb097cdf5c1942b002c615a1cbe0a8cb1507c5b0ff7b9d"
+    },
+    {
+      "path": "PUBLIC_AUDIT.json",
+      "bytes": 875,
+      "sha256": "80d45ee364b5c8b5beecf70cfce6d948e9831397095310dd3fc97d67ea61369e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3345,
+      "sha256": "fc33281ac4f99a4069f60f87b1d1148d94f3bbda851104bf39b683ae8714d8b1"
+    },
+    {
+      "path": "RUNTIME_EQUIVALENCE.json",
+      "bytes": 477,
+      "sha256": "99aa5746ebb827591ccbb045b80f4ff661385b1ffe2cae968736d45a8afb426c"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 1748,
+      "sha256": "f610beb2a8406eefd0d3c417ecfc2e1dfc487a8d5b97d498f182af63188e2444"
+    },
+    {
+      "path": "VIDEO_DECODE_VALIDATION.json",
+      "bytes": 1627,
+      "sha256": "aa5455146308c84ffb2062b540a3479abcf000b3047a34e54f5104bbb6e7774b"
+    },
+    {
+      "path": "fixture/OverlayFixture.swift",
+      "bytes": 6787,
+      "sha256": "4ba6fb0e04317a1096ab5496dfeeec9d521ba5a59696e8052330ccff117bb9dd"
+    },
+    {
+      "path": "native-c282-off/native-command-order.log",
+      "bytes": 770,
+      "sha256": "d1a0bcb6ee7a60b966578bedeb879a34f36bddd952d77aa9b2f24fc42b188bdb"
+    },
+    {
+      "path": "native-c282-off/new-native-events.json",
+      "bytes": 159,
+      "sha256": "8c78ead11dea30b2537b47c4d17f26c92eafd61e7d72fc87f336fb7010b6fc7f"
+    },
+    {
+      "path": "native-c282-off/old-native-events.json",
+      "bytes": 250,
+      "sha256": "8d571b54e966070c99627a08c5053928b385e76f2920fd071fc5743389aebdb9"
+    },
+    {
+      "path": "native-c282-off/result.json",
+      "bytes": 4237,
+      "sha256": "9214ba5ca2e7b4ece3565414dbd620b0f704d4bbd3e9e4ecdf89f511e34cc68b"
+    },
+    {
+      "path": "native-c282-off/sdk-request-lifecycle.ndjson",
+      "bytes": 1755,
+      "sha256": "a17e661732324b33a87cc828939976149680a6269e2c08cb66c109c57a158789"
+    },
+    {
+      "path": "native-c282-off/video.first.png",
+      "bytes": 258196,
+      "sha256": "4339d1f8de1c6dc7e6d909fdd6ea4d58d1620c3b01ce670d358e4a17b3d59b54"
+    },
+    {
+      "path": "native-c282-off/video.last.png",
+      "bytes": 233717,
+      "sha256": "6abc262836b083e54c7923c74716c2ceeff862b30c9cd0ee375ce5b268aed3e4"
+    },
+    {
+      "path": "native-c282-off/video.mp4",
+      "bytes": 1898243,
+      "sha256": "ae60528525a21e31710bb5a18f1b8c2d1f8353a58ef8255695e85ec4649100f0"
+    },
+    {
+      "path": "native-c282-on/native-command-order.log",
+      "bytes": 770,
+      "sha256": "f1c63f247ac94a80f299c465d812ea1693ab8482ac97f1a41011ff0558a1a639"
+    },
+    {
+      "path": "native-c282-on/new-native-events.json",
+      "bytes": 158,
+      "sha256": "0100b6e0a1ae199b7c4afd2e20ac6b4d5d996bc84a59bee48489a0587c5c8c33"
+    },
+    {
+      "path": "native-c282-on/old-native-events.json",
+      "bytes": 251,
+      "sha256": "4ec4826b966b8a990ef7326b85496302c71bcc2bc29555fc9d9cc4134ffd8904"
+    },
+    {
+      "path": "native-c282-on/result.json",
+      "bytes": 4122,
+      "sha256": "b509d65495f4b4a81bf695b15189e0f57f470551a90ec8b25f911a49cbd054a1"
+    },
+    {
+      "path": "native-c282-on/sdk-request-lifecycle.ndjson",
+      "bytes": 2436,
+      "sha256": "85fa111f06037acdcef35faf3863574e7f8414df96fc633235539dcde35ee384"
+    },
+    {
+      "path": "native-c282-on/video.first.png",
+      "bytes": 262190,
+      "sha256": "b08c37ead2a1996a3aefd54d33181c9e3944e432992f46643016e7e237de18a2"
+    },
+    {
+      "path": "native-c282-on/video.last.png",
+      "bytes": 239957,
+      "sha256": "ade4bc95ca846c92b32e8430f21a6fb417092c8a7b384f06c29f1c71191d5e2c"
+    },
+    {
+      "path": "native-c282-on/video.mp4",
+      "bytes": 133742,
+      "sha256": "c231f10e9a11f2e484ec755486f10d4f736006c388a331f5531c6bc392cb1e0f"
+    },
+    {
+      "path": "native-main-off/native-command-order.log",
+      "bytes": 770,
+      "sha256": "4aa538675be22aeae1d4feee2677d8725a473709c41aee08fa27e2997a8d7074"
+    },
+    {
+      "path": "native-main-off/new-native-events.json",
+      "bytes": 158,
+      "sha256": "725ae9d81aaae3446ac787aabce3273e63976c8b9d97026f2af0088fa48674b5"
+    },
+    {
+      "path": "native-main-off/old-native-events.json",
+      "bytes": 249,
+      "sha256": "0264b7bdc9c26f573d04d4a4e909aed8cf91c390910e12acc6afd3dc881ebf58"
+    },
+    {
+      "path": "native-main-off/result.json",
+      "bytes": 4476,
+      "sha256": "078be4269312d91829a36e1ec608ef01bdcee2ab852c3bbe2c5c7cd0307cefe9"
+    },
+    {
+      "path": "native-main-off/sdk-request-lifecycle.ndjson",
+      "bytes": 1673,
+      "sha256": "7d6e928c9b9835ab94d33c4ea9bc744c5b22d7ea7c19437ea5be1f70f583fb09"
+    },
+    {
+      "path": "native-main-off/video.first.png",
+      "bytes": 258196,
+      "sha256": "4339d1f8de1c6dc7e6d909fdd6ea4d58d1620c3b01ce670d358e4a17b3d59b54"
+    },
+    {
+      "path": "native-main-off/video.last.png",
+      "bytes": 233490,
+      "sha256": "c3f41d5df2a76c3297b3358f9d4090d1c7c85b3e5bef127bfb287ab1c24d08bb"
+    },
+    {
+      "path": "native-main-off/video.mp4",
+      "bytes": 1777624,
+      "sha256": "5cb2f605a6414f7f4ea5f35d40f95686928d15f5a49489882a01acbee8bdeb30"
+    },
+    {
+      "path": "native-probe.mjs",
+      "bytes": 7772,
+      "sha256": "c9cb1b30e6f39833b3b2d36d3e85b5d3377e652ae1ce9ae653f0acdeb4f9f613"
+    },
+    {
+      "path": "patches/mobile-cancellation.patch",
+      "bytes": 28791,
+      "sha256": "d7c4a173ee16765733b2f6dbcdcbf11f1f00e62c4fdbd667cd6b75b84cd688e9"
+    },
+    {
+      "path": "validate-video.swift",
+      "bytes": 2502,
+      "sha256": "a4f6c172ea9bcd19689b3be4a1b92bb56a584f9adc8851d788916891a8ea1df4"
+    }
+  ]
+}

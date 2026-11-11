@@ -1,0 +1,68 @@
+{
+  "decoder" : "Apple AVFoundation, exact first\/final sample timestamps, zero requested tolerance",
+  "videos" : [
+    {
+      "decoded" : true,
+      "frames" : [
+        {
+          "actualSeconds" : 0,
+          "frame" : "first",
+          "height" : 2556,
+          "requestedSeconds" : 0,
+          "width" : 1178
+        },
+        {
+          "actualSeconds" : 4.8650000000000002,
+          "frame" : "last",
+          "height" : 2556,
+          "requestedSeconds" : 4.878333333333333,
+          "width" : 1178
+        }
+      ],
+      "sampleCount" : 163,
+      "video" : "native-main-off\/video.mp4"
+    },
+    {
+      "decoded" : true,
+      "frames" : [
+        {
+          "actualSeconds" : 0,
+          "frame" : "first",
+          "height" : 2556,
+          "requestedSeconds" : 0,
+          "width" : 1178
+        },
+        {
+          "actualSeconds" : 6.666666666666667,
+          "frame" : "last",
+          "height" : 2556,
+          "requestedSeconds" : 6.6799999999999997,
+          "width" : 1178
+        }
+      ],
+      "sampleCount" : 161,
+      "video" : "native-c282-off\/video.mp4"
+    },
+    {
+      "decoded" : true,
+      "frames" : [
+        {
+          "actualSeconds" : 0,
+          "frame" : "first",
+          "height" : 2556,
+          "requestedSeconds" : 0,
+          "width" : 1178
+        },
+        {
+          "actualSeconds" : 1.7183333333333333,
+          "frame" : "last",
+          "height" : 2556,
+          "requestedSeconds" : 1.7916666666666667,
+          "width" : 1178
+        }
+      ],
+      "sampleCount" : 42,
+      "video" : "native-c282-on\/video.mp4"
+    }
+  ]
+}

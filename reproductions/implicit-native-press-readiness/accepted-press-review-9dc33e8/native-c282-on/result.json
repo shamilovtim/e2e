@@ -1,0 +1,170 @@
+{
+  "mobile": "c282cf9099c907adf581872d0cf57e74b70719ac",
+  "sdk": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+  "nativeFingerprint": "a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3",
+  "recording": true,
+  "qualitativeOnly": true,
+  "events": [
+    {
+      "event": "press-requested",
+      "at": 1794375418363,
+      "iso": "2026-11-11T05:36:58.363Z"
+    },
+    {
+      "event": "native-command-accepted",
+      "at": 1794375418409,
+      "iso": "2026-11-11T05:36:58.409Z",
+      "command": "sequence",
+      "commandId": "runner-28a28a17-0272-4116-bf49-ed565d7a234f",
+      "nativeEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.014791672583669424
+        }
+      ]
+    },
+    {
+      "event": "caller-aborted",
+      "at": 1794375418409,
+      "iso": "2026-11-11T05:36:58.409Z"
+    },
+    {
+      "event": "press-rejected",
+      "at": 1794375418410,
+      "iso": "2026-11-11T05:36:58.410Z",
+      "code": "CANCELLED"
+    },
+    {
+      "event": "recording-stop-requested",
+      "at": 1794375418410,
+      "iso": "2026-11-11T05:36:58.410Z"
+    },
+    {
+      "event": "recording-stop-completed",
+      "at": 1794375420363,
+      "iso": "2026-11-11T05:37:00.363Z"
+    },
+    {
+      "event": "end-attempt-requested",
+      "at": 1794375420363,
+      "iso": "2026-11-11T05:37:00.363Z"
+    },
+    {
+      "event": "end-attempt-completed",
+      "at": 1794375420363,
+      "iso": "2026-11-11T05:37:00.363Z"
+    },
+    {
+      "event": "next-attempt-requested",
+      "at": 1794375420363,
+      "iso": "2026-11-11T05:37:00.363Z"
+    },
+    {
+      "event": "next-attempt-started",
+      "at": 1794375420364,
+      "iso": "2026-11-11T05:37:00.364Z",
+      "oldNativeEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.014791672583669424
+        },
+        {
+          "count": 1,
+          "event": "underlyingReceivedTap",
+          "ms": 12931.19908333756
+        },
+        {
+          "count": 2,
+          "event": "underlyingReceivedTap",
+          "ms": 13281.183916667942
+        }
+      ],
+      "nativeCommandCompleted": true
+    },
+    {
+      "event": "next-app-open-requested",
+      "at": 1794375420364,
+      "iso": "2026-11-11T05:37:00.364Z"
+    },
+    {
+      "event": "next-app-open-completed",
+      "at": 1794375424245,
+      "iso": "2026-11-11T05:37:04.245Z",
+      "oldNativeEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.014791672583669424
+        },
+        {
+          "count": 1,
+          "event": "underlyingReceivedTap",
+          "ms": 12931.19908333756
+        },
+        {
+          "count": 2,
+          "event": "underlyingReceivedTap",
+          "ms": 13281.183916667942
+        }
+      ]
+    },
+    {
+      "event": "next-input-requested",
+      "at": 1794375424388,
+      "iso": "2026-11-11T05:37:04.388Z"
+    },
+    {
+      "event": "next-input-completed",
+      "at": 1794375425177,
+      "iso": "2026-11-11T05:37:05.177Z"
+    },
+    {
+      "event": "probe-completed",
+      "at": 1794375425253,
+      "iso": "2026-11-11T05:37:05.253Z",
+      "success": true,
+      "localAdmissionPrecededNativeCompletion": false,
+      "finalResult": "Underlying taps: 1\nOverlay touches: 0"
+    }
+  ],
+  "oldPid": 93366,
+  "newPid": 94733,
+  "accepted": {
+    "command": "sequence",
+    "commandId": "runner-28a28a17-0272-4116-bf49-ed565d7a234f"
+  },
+  "pressError": {
+    "code": "CANCELLED",
+    "message": "perform doubleTap cancelled"
+  },
+  "oldNativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.014791672583669424
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 12931.19908333756
+    },
+    {
+      "count": 2,
+      "event": "underlyingReceivedTap",
+      "ms": 13281.183916667942
+    }
+  ],
+  "newNativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.01712498487904668
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 912.5662499573082
+    }
+  ],
+  "localAdmissionPrecededNativeCompletion": false,
+  "nextAppReceivedOnlyOwnInput": true,
+  "finalResult": "Underlying taps: 1\nOverlay touches: 0",
+  "success": true
+}

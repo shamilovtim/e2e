@@ -1,0 +1,38 @@
+{
+  "scope": "Real native accepted double-tap cancellation; qualitative ordering only, not a performance benchmark",
+  "harnessSha256": "c9cb1b30e6f39833b3b2d36d3e85b5d3377e652ae1ce9ae653f0acdeb4f9f613",
+  "cases": [
+    {
+      "case": "native-main-off",
+      "mobile": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
+      "sdk": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+      "recording": false,
+      "success": true,
+      "localAdmissionPrecededNativeCompletion": false,
+      "newAppOnlyOwnTap": true,
+      "nativeSequenceCompletedAtEpochMs": 1794375322761.44,
+      "newAppReadyEventFileCreatedAfterNativeSequenceCompleted": true
+    },
+    {
+      "case": "native-c282-off",
+      "mobile": "c282cf9099c907adf581872d0cf57e74b70719ac",
+      "sdk": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+      "recording": false,
+      "success": true,
+      "localAdmissionPrecededNativeCompletion": true,
+      "newAppOnlyOwnTap": true,
+      "nativeSequenceCompletedAtEpochMs": 1794375354240.196,
+      "newAppReadyEventFileCreatedAfterNativeSequenceCompleted": true
+    },
+    {
+      "case": "native-c282-on",
+      "mobile": "c282cf9099c907adf581872d0cf57e74b70719ac",
+      "sdk": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+      "recording": true,
+      "success": true,
+      "localAdmissionPrecededNativeCompletion": false,
+      "newAppOnlyOwnTap": true,
+      "nativeSequenceCompletedAtEpochMs": 1794375419438.057
+    }
+  ]
+}

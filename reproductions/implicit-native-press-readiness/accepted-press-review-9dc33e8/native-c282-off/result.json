@@ -1,0 +1,164 @@
+{
+  "mobile": "c282cf9099c907adf581872d0cf57e74b70719ac",
+  "sdk": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+  "nativeFingerprint": "a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3",
+  "recording": false,
+  "qualitativeOnly": true,
+  "events": [
+    {
+      "event": "press-requested",
+      "at": 1794375353308,
+      "iso": "2026-11-11T05:35:53.308Z"
+    },
+    {
+      "event": "native-command-accepted",
+      "at": 1794375353434,
+      "iso": "2026-11-11T05:35:53.434Z",
+      "command": "sequence",
+      "commandId": "runner-da994e0c-884c-4315-94de-e02dadb5afcc",
+      "nativeEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.013958313502371311
+        }
+      ]
+    },
+    {
+      "event": "caller-aborted",
+      "at": 1794375353438,
+      "iso": "2026-11-11T05:35:53.438Z"
+    },
+    {
+      "event": "press-rejected",
+      "at": 1794375353443,
+      "iso": "2026-11-11T05:35:53.443Z",
+      "code": "CANCELLED"
+    },
+    {
+      "event": "end-attempt-requested",
+      "at": 1794375353445,
+      "iso": "2026-11-11T05:35:53.445Z"
+    },
+    {
+      "event": "end-attempt-completed",
+      "at": 1794375353446,
+      "iso": "2026-11-11T05:35:53.446Z"
+    },
+    {
+      "event": "next-attempt-requested",
+      "at": 1794375353447,
+      "iso": "2026-11-11T05:35:53.447Z"
+    },
+    {
+      "event": "next-attempt-started",
+      "at": 1794375353449,
+      "iso": "2026-11-11T05:35:53.449Z",
+      "oldNativeEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.013958313502371311
+        }
+      ],
+      "nativeCommandCompleted": false
+    },
+    {
+      "event": "next-app-open-requested",
+      "at": 1794375353449,
+      "iso": "2026-11-11T05:35:53.449Z"
+    },
+    {
+      "event": "next-app-open-completed",
+      "at": 1794375358271,
+      "iso": "2026-11-11T05:35:58.271Z",
+      "oldNativeEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.013958313502371311
+        },
+        {
+          "count": 1,
+          "event": "underlyingReceivedTap",
+          "ms": 10130.89141662931
+        },
+        {
+          "count": 2,
+          "event": "underlyingReceivedTap",
+          "ms": 10430.50433328608
+        }
+      ]
+    },
+    {
+      "event": "next-input-requested",
+      "at": 1794375358775,
+      "iso": "2026-11-11T05:35:58.775Z"
+    },
+    {
+      "event": "next-input-completed",
+      "at": 1794375359826,
+      "iso": "2026-11-11T05:35:59.826Z"
+    },
+    {
+      "event": "probe-completed",
+      "at": 1794375359935,
+      "iso": "2026-11-11T05:35:59.935Z",
+      "success": true,
+      "localAdmissionPrecededNativeCompletion": true,
+      "finalResult": "Underlying taps: 1\nOverlay touches: 0"
+    }
+  ],
+  "oldPid": 90026,
+  "newPid": 91271,
+  "accepted": {
+    "command": "sequence",
+    "commandId": "runner-da994e0c-884c-4315-94de-e02dadb5afcc"
+  },
+  "pressError": {
+    "code": "CANCELLED",
+    "message": "perform doubleTap cancelled"
+  },
+  "oldNativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.013958313502371311
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 10130.89141662931
+    },
+    {
+      "count": 2,
+      "event": "underlyingReceivedTap",
+      "ms": 10430.50433328608
+    }
+  ],
+  "newNativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.01591665204614401
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 1483.9970833272673
+    }
+  ],
+  "localAdmissionPrecededNativeCompletion": true,
+  "nextAppReceivedOnlyOwnInput": true,
+  "finalResult": "Underlying taps: 1\nOverlay touches: 0",
+  "success": true,
+  "nativeEventFiles": {
+    "oldPid": {
+      "birthtimeMs": 1794375343615.592,
+      "mtimeMs": 1794375354045.3438,
+      "birthISO": "2026-11-11T05:35:43.615592+00:00",
+      "note": "Original generic fixture writes this per-process file at appReady, then rewrites the same file as input is delivered."
+    },
+    "newPid": {
+      "birthtimeMs": 1794375358128.8528,
+      "mtimeMs": 1794375359612.5059,
+      "birthISO": "2026-11-11T05:35:58.128853+00:00",
+      "note": "Original generic fixture writes this per-process file at appReady, then rewrites the same file as input is delivered."
+    }
+  }
+}

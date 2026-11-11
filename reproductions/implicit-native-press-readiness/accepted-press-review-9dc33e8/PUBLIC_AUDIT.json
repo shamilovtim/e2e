@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "Constructed UIKit fixture application media/source and generic upstream framework patch only",
+  "textScanMatches": {
+    "privateApplicationData": 0,
+    "localHomePaths": 0,
+    "credentialValues": 0
+  },
+  "privatePatternsPublished": false,
+  "nativeVideos": 3,
+  "allNativeVideosDecoded": true,
+  "firstAndFinalFrameImages": 6,
+  "allIncludedFrameImagesVisuallyReviewed": true,
+  "frameReview": "All six show only constructed fixture controls/counters and ordinary simulator status UI",
+  "wholeRunnerLogsIncluded": false,
+  "selectedNativeMarkersOnly": true,
+  "daemonStateIncluded": false,
+  "tokensOrLeasesIncluded": false,
+  "wholeXcresultsOrDiagnosticExportsIncluded": false,
+  "symlinksIncluded": false,
+  "nativeCommandSetupFailures": 0,
+  "nativeCasesPassed": 3,
+  "controlledTransportSeamNotPublishedAsNativeEvidence": true
+}

@@ -1,0 +1,14 @@
+{"ts": "2026-11-11T05:36:41.959Z", "kind": "request.started", "requestId": "32ca81cdcdaedab9", "command": "open", "summary": "Started open"}
+{"ts": "2026-11-11T05:36:46.163Z", "kind": "request.finished", "requestId": "32ca81cdcdaedab9", "command": "open", "status": "ok", "summary": "Finished open", "details": {"durationMs": 4204}}
+{"ts": "2026-11-11T05:36:55.856Z", "kind": "request.started", "requestId": "26dcf2d7a0b868b7", "command": "record", "summary": "Started record"}
+{"ts": "2026-11-11T05:36:58.360Z", "kind": "request.finished", "requestId": "26dcf2d7a0b868b7", "command": "record", "status": "ok", "summary": "Finished record", "details": {"durationMs": 2504}}
+{"ts": "2026-11-11T05:36:58.388Z", "kind": "request.started", "requestId": "f2d6c4ebd393dac4", "command": "press", "summary": "Started press"}
+{"ts": "2026-11-11T05:36:58.424Z", "kind": "request.started", "requestId": "d8e5bfd9c27c6364", "command": "record", "summary": "Started record"}
+{"ts": "2026-11-11T05:36:59.566Z", "kind": "request.finished", "requestId": "f2d6c4ebd393dac4", "command": "press", "status": "error", "summary": "Failed press: COMMAND_FAILED", "details": {"durationMs": 1179, "code": "COMMAND_FAILED", "diagnosticId": "mwboslxv-39106b50"}}
+{"ts": "2026-11-11T05:37:00.362Z", "kind": "request.finished", "requestId": "d8e5bfd9c27c6364", "command": "record", "status": "ok", "summary": "Finished record", "details": {"durationMs": 1939}}
+{"ts": "2026-11-11T05:37:00.378Z", "kind": "request.started", "requestId": "842cce852606f0ee", "command": "open", "summary": "Started open"}
+{"ts": "2026-11-11T05:37:04.244Z", "kind": "request.finished", "requestId": "842cce852606f0ee", "command": "open", "status": "ok", "summary": "Finished open", "details": {"durationMs": 3867}}
+{"ts": "2026-11-11T05:37:04.400Z", "kind": "request.started", "requestId": "d3c0b663593be8b7", "command": "press", "summary": "Started press"}
+{"ts": "2026-11-11T05:37:05.177Z", "kind": "request.finished", "requestId": "d3c0b663593be8b7", "command": "press", "status": "ok", "summary": "Finished press", "details": {"durationMs": 777}}
+{"ts": "2026-11-11T05:37:05.268Z", "kind": "request.started", "requestId": "064c85a53d336b7a", "command": "close", "summary": "Started close"}
+{"ts": "2026-11-11T05:37:05.281Z", "kind": "request.finished", "requestId": "064c85a53d336b7a", "command": "close", "status": "ok", "summary": "Finished close", "details": {"durationMs": 13}}
