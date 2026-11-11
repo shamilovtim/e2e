@@ -1,0 +1,35 @@
+{
+  "command": {
+    "action": "events"
+  },
+  "ms": 196.89370800000324,
+  "result": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 0.8207083446905017,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 26.943458360619843
+    },
+    {
+      "event": "appReady",
+      "ms": 27.343499998096377,
+      "otherControlCount": 500
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 38528.838458354585,
+      "row": 0
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 39412.097458320204,
+      "row": 0
+    }
+  ]
+}

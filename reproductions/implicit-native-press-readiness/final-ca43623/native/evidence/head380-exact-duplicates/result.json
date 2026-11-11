@@ -1,0 +1,649 @@
+{
+  "phase": "head380-exact-duplicates",
+  "app": "dev.e2e.overlayreadinessvariants",
+  "open": {
+    "session": "codex-maintainer-head380-exact-duplicates",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-exact-duplicates/sessions/codex-maintainer-head380-exact-duplicates",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-exact-duplicates/sessions/codex-maintainer-head380-exact-duplicates/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-exact-duplicates/sessions/codex-maintainer-head380-exact-duplicates/requests/66a99848a6dd949b.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-exact-duplicates/sessions/codex-maintainer-head380-exact-duplicates/events.ndjson",
+    "appName": "dev.e2e.overlayreadinessvariants",
+    "appBundleId": "dev.e2e.overlayreadinessvariants",
+    "appId": "dev.e2e.overlayreadinessvariants",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 2777,
+      "measuredAt": "2026-11-11T05:39:30.393Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.overlayreadinessvariants",
+      "appBundleId": "dev.e2e.overlayreadinessvariants"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "name": "Codex Readiness Maintainer QA 20261111",
+      "identifiers": {
+        "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "deviceName": "Codex Readiness Maintainer QA 20261111",
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD"
+      },
+      "ios": {
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "simulatorSetPath": null
+      }
+    },
+    "snapshot": {
+      "nodes": [
+        {
+          "index": 0,
+          "type": "Application",
+          "role": "UIApplication",
+          "label": "OverlayFixture",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 852
+          },
+          "enabled": true,
+          "depth": 0,
+          "pid": 8881,
+          "hittable": false,
+          "ref": "e1",
+          "kind": "application"
+        },
+        {
+          "index": 1,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Overlay transition proof",
+          "rect": {
+            "x": 24,
+            "y": 80,
+            "width": 340,
+            "height": 40
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e2",
+          "kind": "text"
+        },
+        {
+          "index": 2,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Open fade overlay",
+          "identifier": "Open fade overlay",
+          "rect": {
+            "x": 24,
+            "y": 140,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e3",
+          "kind": "button"
+        },
+        {
+          "index": 3,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Open slow fade overlay",
+          "identifier": "Open slow fade overlay",
+          "rect": {
+            "x": 24,
+            "y": 200,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e4",
+          "kind": "button"
+        },
+        {
+          "index": 4,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Open native sheet",
+          "identifier": "Open native sheet",
+          "rect": {
+            "x": 24,
+            "y": 260,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e5",
+          "kind": "button"
+        },
+        {
+          "index": 5,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Duplicate action",
+          "identifier": "duplicate",
+          "rect": {
+            "x": 24,
+            "y": 360,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e6",
+          "kind": "button"
+        },
+        {
+          "index": 6,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Duplicate action",
+          "identifier": "duplicate",
+          "rect": {
+            "x": 24,
+            "y": 430,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e7",
+          "kind": "button"
+        },
+        {
+          "index": 7,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "rect": {
+            "x": 24,
+            "y": 580,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e8",
+          "kind": "button"
+        },
+        {
+          "index": 8,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Overlapping action",
+          "identifier": "overlap",
+          "rect": {
+            "x": 24,
+            "y": 650,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e9",
+          "kind": "button"
+        },
+        {
+          "index": 9,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Overlapping action",
+          "identifier": "overlap",
+          "rect": {
+            "x": 24,
+            "y": 650,
+            "width": 340,
+            "height": 48
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e10",
+          "kind": "button"
+        },
+        {
+          "index": 10,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Underlying taps: 0\nOverlay touches: 0",
+          "identifier": "results",
+          "rect": {
+            "x": 24,
+            "y": 730,
+            "width": 340,
+            "height": 100
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 8881,
+          "hittable": true,
+          "ref": "e11",
+          "kind": "text"
+        }
+      ],
+      "truncated": false,
+      "visibility": {
+        "partial": false,
+        "visibleNodeCount": 11,
+        "totalNodeCount": 11,
+        "reasons": []
+      },
+      "snapshotDiagnostics": {
+        "stats": {
+          "count": 1,
+          "p50Ms": 134,
+          "p95Ms": 134,
+          "maxMs": 134,
+          "slowThresholdMs": 1500,
+          "platform": "ios",
+          "backends": {
+            "simulator-ax-bridge": 1
+          }
+        }
+      },
+      "keyboard": {
+        "kind": "absent",
+        "treeBound": true
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "presentedSurface": "absent",
+      "appName": "dev.e2e.overlayreadinessvariants",
+      "appBundleId": "dev.e2e.overlayreadinessvariants",
+      "refsGeneration": 279890
+    },
+    "identifiers": {
+      "session": "codex-maintainer-head380-exact-duplicates",
+      "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "deviceName": "Codex Readiness Maintainer QA 20261111",
+      "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "appId": "dev.e2e.overlayreadinessvariants",
+      "appBundleId": "dev.e2e.overlayreadinessvariants"
+    }
+  },
+  "targets": [
+    {
+      "index": 8,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Overlapping action",
+      "identifier": "overlap",
+      "rect": {
+        "x": 24,
+        "y": 650,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 8881,
+      "hittable": true,
+      "ref": "e9",
+      "kind": "button"
+    },
+    {
+      "index": 9,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Overlapping action",
+      "identifier": "overlap",
+      "rect": {
+        "x": 24,
+        "y": 650,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 8881,
+      "hittable": true,
+      "ref": "e10",
+      "kind": "button"
+    }
+  ],
+  "nativeDiagnosticCapture": {
+    "nodes": [
+      {
+        "index": 0,
+        "rect": {
+          "width": 393,
+          "y": 0,
+          "x": 0,
+          "height": 852
+        },
+        "enabled": true,
+        "depth": 0,
+        "label": "OverlayFixture",
+        "type": "Application",
+        "hittable": false,
+        "ref": "e1",
+        "kind": "application"
+      },
+      {
+        "index": 1,
+        "rect": {
+          "width": 340,
+          "y": 80,
+          "x": 24,
+          "height": 40
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "label": "Overlay transition proof",
+        "type": "StaticText",
+        "hittable": true,
+        "ref": "e2",
+        "kind": "text"
+      },
+      {
+        "index": 2,
+        "rect": {
+          "width": 340,
+          "y": 140,
+          "x": 24,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "Open fade overlay",
+        "label": "Open fade overlay",
+        "type": "Button",
+        "hittable": true,
+        "ref": "e3",
+        "kind": "button"
+      },
+      {
+        "index": 3,
+        "rect": {
+          "y": 200,
+          "width": 340,
+          "x": 24,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "Open slow fade overlay",
+        "label": "Open slow fade overlay",
+        "type": "Button",
+        "hittable": true,
+        "ref": "e4",
+        "kind": "button"
+      },
+      {
+        "index": 4,
+        "rect": {
+          "y": 260,
+          "width": 340,
+          "x": 24,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "Open native sheet",
+        "label": "Open native sheet",
+        "type": "Button",
+        "hittable": true,
+        "ref": "e5",
+        "kind": "button"
+      },
+      {
+        "index": 5,
+        "rect": {
+          "y": 360,
+          "width": 340,
+          "x": 24,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "duplicate",
+        "label": "Duplicate action",
+        "type": "Button",
+        "hittable": true,
+        "ref": "e6",
+        "kind": "button"
+      },
+      {
+        "index": 6,
+        "rect": {
+          "y": 430,
+          "width": 340,
+          "x": 24,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "duplicate",
+        "label": "Duplicate action",
+        "type": "Button",
+        "hittable": true,
+        "ref": "e7",
+        "kind": "button"
+      },
+      {
+        "index": 7,
+        "rect": {
+          "y": 580,
+          "width": 340,
+          "x": 24,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "type": "Button",
+        "hittable": true,
+        "ref": "e8",
+        "kind": "button"
+      },
+      {
+        "index": 8,
+        "rect": {
+          "y": 650,
+          "width": 340,
+          "x": 24,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "overlap",
+        "label": "Overlapping action",
+        "type": "Button",
+        "hittable": true,
+        "ref": "e9",
+        "kind": "button"
+      },
+      {
+        "index": 9,
+        "rect": {
+          "width": 340,
+          "x": 24,
+          "y": 650,
+          "height": 48
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "overlap",
+        "label": "Overlapping action",
+        "type": "Button",
+        "hittable": true,
+        "ref": "e10",
+        "kind": "button"
+      },
+      {
+        "index": 10,
+        "rect": {
+          "width": 340,
+          "x": 24,
+          "y": 730,
+          "height": 100
+        },
+        "enabled": true,
+        "parentIndex": 0,
+        "depth": 1,
+        "identifier": "results",
+        "label": "Underlying taps: 0\nOverlay touches: 0",
+        "type": "StaticText",
+        "hittable": true,
+        "ref": "e11",
+        "kind": "text"
+      }
+    ],
+    "truncated": false,
+    "appName": "dev.e2e.overlayreadinessvariants",
+    "appBundleId": "dev.e2e.overlayreadinessvariants",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "presentedSurface": "unknown",
+    "visibility": {
+      "partial": false,
+      "visibleNodeCount": 11,
+      "totalNodeCount": 11,
+      "reasons": []
+    },
+    "snapshotQuality": {
+      "state": "recovered",
+      "backend": "private-ax",
+      "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+      "reasonCode": "requested-backend",
+      "customActions": {
+        "read": 9,
+        "candidates": 9,
+        "truncated": 0,
+        "blocked": false
+      },
+      "timing": {
+        "acquisitionMs": 1318.9630508422852,
+        "presentationMs": 0.16605854034423828
+      }
+    },
+    "snapshotDiagnostics": {
+      "stats": {
+        "count": 3,
+        "p50Ms": 134,
+        "p95Ms": 6222,
+        "maxMs": 6222,
+        "slowThresholdMs": 1500,
+        "platform": "ios",
+        "backends": {
+          "simulator-ax-bridge": 2,
+          "apple-runner": 1
+        }
+      }
+    },
+    "refsGeneration": 279892,
+    "identifiers": {
+      "session": "codex-maintainer-head380-exact-duplicates",
+      "appId": "dev.e2e.overlayreadinessvariants",
+      "appBundleId": "dev.e2e.overlayreadinessvariants"
+    }
+  },
+  "samples": [
+    {
+      "kind": "selector",
+      "target": {
+        "selector": "id=overlap"
+      },
+      "error": {
+        "code": "AMBIGUOUS_MATCH",
+        "message": "Selector matched 2 distinct actionable elements: id=overlap",
+        "details": {
+          "selector": "id=overlap",
+          "matches": 2,
+          "candidates": [
+            "@e9 [button] \"Overlapping action\"",
+            "@e10 [button] \"Overlapping action\""
+          ],
+          "dispatched": "no",
+          "refsGeneration": 279894,
+          "hint": "Multiple candidates matched. Narrow the query or pass an exact identifier.",
+          "diagnosticId": "mwbow1h5-7b282b6a",
+          "logPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-exact-duplicates/sessions/codex-maintainer-head380-exact-duplicates/requests/f6c40ccd6c6e5fda.ndjson",
+          "diagnosticsRecord": {
+            "session": "codex-maintainer-head380-exact-duplicates",
+            "requestId": "f6c40ccd6c6e5fda"
+          }
+        }
+      },
+      "ms": 73.74074999999903
+    },
+    {
+      "kind": "ref",
+      "target": {
+        "ref": "@e10"
+      },
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Resolved target was not ready for input; nothing was dispatched",
+        "details": {
+          "reason": "target_not_ready",
+          "readiness": "ambiguous",
+          "dispatched": "no",
+          "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref.",
+          "diagnosticId": "mwbow1l5-b07f0551",
+          "logPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-exact-duplicates/sessions/codex-maintainer-head380-exact-duplicates/requests/7fc23c9215a6efc5.ndjson",
+          "diagnosticsRecord": {
+            "session": "codex-maintainer-head380-exact-duplicates",
+            "requestId": "7fc23c9215a6efc5"
+          }
+        }
+      },
+      "ms": 120.87929199999962
+    }
+  ],
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.01733331009745598
+    }
+  ]
+}

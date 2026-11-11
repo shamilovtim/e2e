@@ -1,0 +1,18 @@
+{
+  "head": "befb65c17122a063e75d9c557a1f993aea5f5b9e",
+  "purpose": "Known-undispatched XCTest failures cannot be converted to successful taps by an unrelated changed capture.",
+  "boundary": "Real daemon interaction dispatcher with mocked native execution boundary and actual same-scope capture corroboration. Not native-device fault injection.",
+  "beforeFix": {
+    "knownNoCase": "failed: dispatcher returned success despite explicit dispatched:no",
+    "passed": 1,
+    "failed": 1,
+    "skipped": 21
+  },
+  "afterFix": {
+    "command": "pnpm exec vitest run packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.test.ts",
+    "passed": 24,
+    "failed": 0,
+    "cases": "Omitted/unknown delivery retain existing corroboration; known no-dispatch preserves typed failure, zero action history and zero corroboration captures."
+  },
+  "qualification": "The before-fix focused run preceded the additional unknown-delivery row and the final short test name; no claim that the complete before/after suites were identical."
+}

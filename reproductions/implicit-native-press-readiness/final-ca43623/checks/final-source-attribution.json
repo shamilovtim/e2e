@@ -1,0 +1,10 @@
+{
+  "liveSmokeHead": "befb65c17122a063e75d9c557a1f993aea5f5b9e",
+  "difference": "Only two test files differ from the live-smoke head: a snapshot-package helper uses the existing standardized-rectangle initializer, and the runner parity test lists the new internal read-only operation.",
+  "runtimeJavaScriptFiles": 629,
+  "runtimeJavaScriptMatchesLiveSmoke": true,
+  "nativeSourceFingerprint": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf",
+  "nativeInputsUnchanged": "Snapshot package Tests are excluded from shipped-native fingerprint inputs.",
+  "basis": "All 52 Swift package tests and all 3 runner registry parity tests passed on the final source. The exact-commit full gate receipt is separate.",
+  "sourceHead": "ca43623c9a17e54ac9fb1d006581021c7d8f1363"
+}

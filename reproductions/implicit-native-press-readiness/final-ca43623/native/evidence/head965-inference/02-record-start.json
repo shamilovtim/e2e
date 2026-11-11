@@ -1,0 +1,20 @@
+{
+  "command": {
+    "action": "record-start",
+    "name": "clipped-inference"
+  },
+  "ms": 2142.8815840000025,
+  "result": {
+    "recording": "started",
+    "outPath": "/tmp/codex-sdk-readiness-maintainer-20261111/evidence/head965-inference/clipped-inference.mp4",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-inference/sessions/codex-geometry-head965-inference",
+    "recordingBackend": "simctl recordVideo",
+    "recordingScope": "app",
+    "recordOnlySession": false,
+    "activeSessionApp": {
+      "bundleId": "dev.e2e.readinessmaintainer",
+      "name": "dev.e2e.readinessmaintainer"
+    },
+    "showTouches": false
+  }
+}

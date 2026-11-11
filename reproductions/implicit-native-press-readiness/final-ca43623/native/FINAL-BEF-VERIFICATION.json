@@ -1,0 +1,82 @@
+{
+  "commit": "befb65c17122a063e75d9c557a1f993aea5f5b9e",
+  "nativeSourceFingerprint": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf",
+  "nativeBinarySha256": "85cf43c9caa355947216667b08b018de0683269e52bc6003382f7388e5b6017f",
+  "publicSmokeHarnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+  "case": "fade750-1",
+  "exitCode": 0,
+  "smokeResult": {
+    "mode": "fade750-1",
+    "pid": 29913,
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "closeMs": 970.5255420000012,
+    "target": {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 29913,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "pressMs": 871.7907920000016,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true
+  },
+  "fadeDismissCompleteMs": 12974.269291677047,
+  "underlyingReceivedTapMs": 13138.380124990363,
+  "runtimeAttribution": "This final bef smoke uses freshly hashed bef JavaScript and the same 71f production native binary previously tested at a3. Matched timing and expanded functional evidence remain attributed to 380/3cac. No equality between bef and 380 JavaScript is claimed.",
+  "resources": "Owned session closed and daemon stopped cleanly; fresh owned phone is shut down and retained pending final CI/review cleanup. No active device, recording or decoding process remains."
+}

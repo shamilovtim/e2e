@@ -1,0 +1,338 @@
+{
+  "command": {
+    "action": "snapshot"
+  },
+  "ms": 1616.0807920000007,
+  "result": {
+    "nodes": [
+      {
+        "rect": {
+          "x": 0,
+          "height": 852,
+          "y": 0,
+          "width": 393
+        },
+        "index": 0,
+        "type": "Application",
+        "depth": 0,
+        "label": "GeometryFixture",
+        "hittable": false,
+        "enabled": true,
+        "ref": "e1",
+        "kind": "application"
+      },
+      {
+        "rect": {
+          "x": 24,
+          "height": 28,
+          "y": 45,
+          "width": 345
+        },
+        "parentIndex": 0,
+        "index": 1,
+        "type": "StaticText",
+        "depth": 1,
+        "label": "Readiness maintainer fixture",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e2",
+        "kind": "text"
+      },
+      {
+        "rect": {
+          "x": 24,
+          "height": 36,
+          "y": 82,
+          "width": 110
+        },
+        "parentIndex": 0,
+        "index": 2,
+        "type": "Button",
+        "identifier": "mode-clipped",
+        "depth": 1,
+        "label": "Clipped row",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e3",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "height": 36,
+          "width": 110,
+          "y": 82,
+          "x": 142
+        },
+        "parentIndex": 0,
+        "index": 3,
+        "type": "Button",
+        "identifier": "mode-large",
+        "depth": 1,
+        "label": "Large Other tree",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e4",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "height": 36,
+          "width": 110,
+          "y": 82,
+          "x": 260
+        },
+        "parentIndex": 0,
+        "index": 4,
+        "type": "Button",
+        "identifier": "mode-duplicates",
+        "depth": 1,
+        "label": "Duplicates",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e5",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "height": 36,
+          "width": 110,
+          "y": 124,
+          "x": 24
+        },
+        "parentIndex": 0,
+        "index": 5,
+        "type": "Button",
+        "identifier": "landscape",
+        "depth": 1,
+        "label": "Landscape",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e6",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 124,
+          "x": 142,
+          "height": 36,
+          "width": 110
+        },
+        "parentIndex": 0,
+        "index": 6,
+        "type": "Button",
+        "identifier": "portrait",
+        "depth": 1,
+        "label": "Portrait",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e7",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 180,
+          "x": 24,
+          "height": 220,
+          "width": 345
+        },
+        "parentIndex": 0,
+        "index": 7,
+        "type": "ScrollView",
+        "depth": 1,
+        "hiddenContentBelow": true,
+        "hittable": true,
+        "enabled": true,
+        "ref": "e8",
+        "kind": "scroll-area"
+      },
+      {
+        "rect": {
+          "y": 180,
+          "x": 24,
+          "height": 40,
+          "width": 345
+        },
+        "parentIndex": 7,
+        "index": 8,
+        "type": "Other",
+        "identifier": "other-000",
+        "depth": 2,
+        "label": "Other control 000",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e9",
+        "kind": "other"
+      },
+      {
+        "rect": {
+          "y": 222,
+          "x": 24,
+          "height": 40,
+          "width": 345
+        },
+        "parentIndex": 7,
+        "index": 9,
+        "type": "Other",
+        "identifier": "other-001",
+        "depth": 2,
+        "label": "Other control 001",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e10",
+        "kind": "other"
+      },
+      {
+        "rect": {
+          "y": 264,
+          "x": 24,
+          "height": 40,
+          "width": 345
+        },
+        "parentIndex": 7,
+        "index": 10,
+        "type": "Other",
+        "identifier": "other-002",
+        "depth": 2,
+        "label": "Other control 002",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e11",
+        "kind": "other"
+      },
+      {
+        "rect": {
+          "y": 306,
+          "x": 24,
+          "height": 40,
+          "width": 345
+        },
+        "parentIndex": 7,
+        "index": 11,
+        "type": "Other",
+        "identifier": "other-003",
+        "depth": 2,
+        "label": "Other control 003",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e12",
+        "kind": "other"
+      },
+      {
+        "rect": {
+          "y": 348,
+          "x": 24,
+          "height": 40,
+          "width": 345
+        },
+        "parentIndex": 7,
+        "index": 12,
+        "type": "Other",
+        "identifier": "other-004",
+        "depth": 2,
+        "label": "Other control 004",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e13",
+        "kind": "other"
+      },
+      {
+        "rect": {
+          "y": 390,
+          "x": 24,
+          "height": 10,
+          "width": 345
+        },
+        "parentIndex": 7,
+        "index": 13,
+        "type": "Other",
+        "identifier": "other-005",
+        "depth": 2,
+        "label": "Other control 005",
+        "hittable": true,
+        "enabled": true,
+        "ref": "e14",
+        "kind": "other"
+      },
+      {
+        "parentIndex": 0,
+        "rect": {
+          "height": 80,
+          "width": 345,
+          "y": 420,
+          "x": 24
+        },
+        "identifier": "results",
+        "enabled": true,
+        "depth": 1,
+        "label": "Mode: large\nOther controls: 500",
+        "index": 14,
+        "type": "StaticText",
+        "hittable": true,
+        "ref": "e15",
+        "kind": "text"
+      }
+    ],
+    "truncated": false,
+    "appName": "dev.e2e.readinessmaintainer",
+    "appBundleId": "dev.e2e.readinessmaintainer",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "presentedSurface": "unknown",
+    "visibility": {
+      "partial": true,
+      "visibleNodeCount": 15,
+      "totalNodeCount": 15,
+      "reasons": [
+        "scroll-hidden-below"
+      ]
+    },
+    "snapshotQuality": {
+      "state": "recovered",
+      "backend": "private-ax",
+      "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+      "reasonCode": "deferred",
+      "customActions": {
+        "read": 12,
+        "candidates": 507,
+        "truncated": 0,
+        "blocked": false
+      },
+      "timing": {
+        "acquisitionMs": 1568.3389902114868,
+        "presentationMs": 1.5560388565063477
+      }
+    },
+    "snapshotQualityNotes": [
+      {
+        "code": "regular-geometry-clipped",
+        "clippedNodeCount": 1,
+        "droppedNodeCount": 494
+      }
+    ],
+    "warnings": [
+      "Detected an overly complex or slow accessibility tree. Fell back to the private-ax snapshot backend. It is OK to continue; use --json to inspect snapshotQuality.reason if you need recovery details.",
+      "Custom actions were read for 12 of 507 merged elements, on-screen ones first; the remaining 495 were not read, so an absent actions list on those is not evidence that they have none. Scroll them into view and re-run to read them."
+    ],
+    "snapshotDiagnostics": {
+      "stats": {
+        "count": 5,
+        "p50Ms": 361,
+        "p95Ms": 6394,
+        "maxMs": 6394,
+        "slowThresholdMs": 1500,
+        "platform": "ios",
+        "backends": {
+          "apple-runner": 5
+        }
+      }
+    },
+    "refsGeneration": 602217,
+    "identifiers": {
+      "session": "codex-geometry-head965-inference",
+      "appId": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer"
+    }
+  }
+}

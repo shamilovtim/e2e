@@ -1,0 +1,44 @@
+{
+  "head": "ca43623c9a17e54ac9fb1d006581021c7d8f1363",
+  "guardRegression": {
+    "head": "a3ced6829d5fb889487f039c5525ac07de94e1d3",
+    "isolatedCheckoutBase": "a3ced6829d5fb889487f039c5525ac07de94e1d3",
+    "withoutFix": "Only the host press-readiness.ts guard was restored to965e77bc0462516aa535a8f3060cb4b465fe86b5 in a disposable checkout.",
+    "command": "pnpm exec vitest run --project unit-core packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts -t 'press waits for native readiness|unconfirmed missing'",
+    "withoutFixResult": {
+      "passed": 0,
+      "failed": 3,
+      "skipped": 17,
+      "observed": [
+        "canonical capture occurred inside blocked native polling",
+        "missing native target waited until enclosing deadline"
+      ]
+    },
+    "withFixResult": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 17
+    },
+    "cleanup": "Disposable checkout removed; reviewed checkout remains clean at recorded head."
+  },
+  "unsentCorroborationRegression": {
+    "withoutFix": "A known-no variant was added to the existing recorded-XCTest-failure conversation. With the old eligibility function, it falsely returned success after an unrelated changed capture; the original omitted-delivery variant still passed.",
+    "withFix": "Known-no returns the original recorded failure, records no action and requests no corroboration capture; omitted and unknown retain existing recovery.",
+    "command": "pnpm exec vitest run --project unit-core packages/daemon/src/execution/interaction/internal/interaction-ios-tap-outcome.test.ts",
+    "withFixPassed": 24,
+    "withFixFailed": 0,
+    "withoutFixResult": {
+      "passed": 1,
+      "failed": 1,
+      "skipped": 21,
+      "scope": "Selected original and known-no variants. Explicit unknown delivery was added afterward."
+    }
+  },
+  "finalCombinedFocused": {
+    "files": 5,
+    "passed": 103,
+    "failed": 0,
+    "sourceAttribution": "Runtime bytes committed in BEF and unchanged at final head."
+  },
+  "fallowCorrection": "The ready result exits native polling; the identical optional canonical recheck and absolute deadline assertion run after the loop, inside the same error scope. No threshold, budget or suppression changed."
+}

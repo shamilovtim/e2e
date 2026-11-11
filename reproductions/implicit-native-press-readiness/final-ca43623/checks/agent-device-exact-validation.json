@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "status": "passed",
+  "exitCode": 0,
+  "head": "ca43623c9a17e54ac9fb1d006581021c7d8f1363",
+  "sourceTree": "511a4cc389256beb82e23904412dfdaf10c77d30",
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "mergeBase": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "command": "pnpm check:affected --run --head ca43623c9a17e54ac9fb1d006581021c7d8f1363",
+  "exactCommit": true,
+  "checkoutChanged": false,
+  "startedAt": "2026-11-11T06:25:29.535Z",
+  "finishedAt": "2026-11-11T06:29:10.921Z",
+  "failOpen": false,
+  "checks": [
+    {
+      "id": "format",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "ios-snapshot-differential",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests)"
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 1322,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 17892,
+          "failed": 0,
+          "skipped": 1,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "deduplicated",
+      "reason": "covered by related tests"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests, Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests)"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests, Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "command-docs",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "adr-citations",
+      "status": "passed",
+      "exitCode": 0,
+      "tests": [
+        {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "docs-links",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "docs-prose",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests)"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ],
+  "nativeEvidence": {
+    "head": "ca43623c9a17e54ac9fb1d006581021c7d8f1363",
+    "sourceTree": "511a4cc389256beb82e23904412dfdaf10c77d30",
+    "finalNativeFingerprint": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf",
+    "finalNativeBinarySha256": "85cf43c9caa355947216667b08b018de0683269e52bc6003382f7388e5b6017f",
+    "selectedRunnerXCTests": {
+      "passed": 8,
+      "failed": 0,
+      "sourceAttribution": "Native71f unit artifact tested at a3ced68; all shipped native source and matcher fixtures remain unchanged at final head."
+    },
+    "snapshotPackageTests": {
+      "passed": 52,
+      "failed": 0,
+      "sourceAttribution": "Executed on clean exact source head ca43623c9a17e54ac9fb1d006581021c7d8f1363"
+    },
+    "finalOverlaySmoke": {
+      "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "case": "fade750-1",
+      "success": true,
+      "underlyingOverlayCounts": [
+        1,
+        0
+      ],
+      "dismissalCompleteMs": 12974.27,
+      "nativeUnderlyingTapMs": 13138.38,
+      "head": "befb65c17122a063e75d9c557a1f993aea5f5b9e"
+    },
+    "matchedNativeRuns": {
+      "sourceBase": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+      "sourceBaseNativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+      "measuredHead": "380c91b8210812f0f01ed4fcb1ed74265dfa76f9",
+      "measuredNativeFingerprint": "3cacb1000a69dd8a8e46f7d76274aa67ca8afe16ad9ff6ba0e2a6866cd379251",
+      "finalDelta": "After measured380: test-only matcher fixture cleanup, equivalent ready-loop restructuring, and a corroboration eligibility fix preserving known-unsent failures. Final JS was rebuilt and the identical public750ms harness passed at BEF. Native71f was separately built and tested; no final binary or JS byte equality with380 is claimed."
+    },
+    "readyPathMeasurements": [
+      {
+        "fixture": "clipped",
+        "warmRefSamples": 3,
+        "base": {
+          "refMs": [
+            367.54,
+            367.96,
+            362.47
+          ],
+          "refMedianMs": 367.54,
+          "cliExit": 0,
+          "cliMs": 489.29,
+          "intendedNativeTaps": 7
+        },
+        "head": {
+          "refMs": [
+            489.95,
+            462.53,
+            457.83
+          ],
+          "refMedianMs": 462.53,
+          "cliExit": 0,
+          "cliMs": 726.81,
+          "intendedNativeTaps": 7
+        }
+      },
+      {
+        "fixture": "large",
+        "warmRefSamples": 3,
+        "base": {
+          "refMs": [
+            561.38,
+            570.02,
+            546.81
+          ],
+          "refMedianMs": 561.38,
+          "cliExit": 0,
+          "cliMs": 815.44,
+          "intendedNativeTaps": 7
+        },
+        "head": {
+          "refMs": [
+            775.88,
+            800.51,
+            801.54
+          ],
+          "refMedianMs": 800.51,
+          "cliExit": 0,
+          "cliMs": 987.28,
+          "intendedNativeTaps": 7
+        }
+      },
+      {
+        "fixture": "landscape",
+        "warmRefSamples": 3,
+        "base": {
+          "refMs": [
+            360.44,
+            351.56,
+            355.61
+          ],
+          "refMedianMs": 355.61,
+          "cliExit": 0,
+          "cliMs": 534.01,
+          "intendedNativeTaps": 7
+        },
+        "head": {
+          "refMs": [
+            405.38,
+            519.52,
+            424.5
+          ],
+          "refMedianMs": 424.5,
+          "cliExit": 0,
+          "cliMs": 537.39,
+          "intendedNativeTaps": 7
+        }
+      }
+    ],
+    "unfilteredLargeTreeFailure": {
+      "head": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+      "controls": 500,
+      "nativeOtherCount": 512,
+      "callerObservationAbortMs": 15000,
+      "nativeActionCount": 0,
+      "publicError": {
+        "code": "COMMAND_FAILED",
+        "reason": "request_canceled",
+        "dispatched": "unknown"
+      },
+      "qualification": "Explicit observation cancellation, not a product deadline. Native enumeration had not completed."
+    },
+    "clippedControl": {
+      "nativeFullRect": [
+        24,
+        -150,
+        345,
+        400
+      ],
+      "publicVisibleRect": [
+        24,
+        180,
+        345,
+        70
+      ],
+      "canonicalPoint": [
+        197,
+        215
+      ],
+      "strictReadsBeforeCover": [
+        "ready",
+        "ready",
+        "ready"
+      ],
+      "strictReadsWithFullVisibleTailCovered": [
+        "blocked",
+        "blocked",
+        "blocked"
+      ],
+      "strictReadsAfterRemoval": [
+        "ready",
+        "ready",
+        "ready"
+      ],
+      "cancelPublicError": {
+        "code": "COMMAND_FAILED",
+        "reason": "request_canceled",
+        "dispatched": "unknown"
+      },
+      "rowOrCoverEventsBeforeAndAfterCanceledAttemptThroughRemoval": 0,
+      "freshRecoveryRowEvents": 1
+    },
+    "duplicates": {
+      "distinctBlockedAndHittable": "The blocked intended ref remained blocked; a separate ready ref activated only the unrelated control. Selector ambiguity refused before input.",
+      "exactOverlapping": "Native strict reads and ordinary ref reported ambiguous; native event log contained appReady only.",
+      "exactRefError": {
+        "code": "COMMAND_FAILED",
+        "reason": "target_not_ready",
+        "readiness": "ambiguous",
+        "dispatched": "no"
+      }
+    },
+    "placedWindow": {
+      "measuredHead": "380c91b",
+      "window": [
+        238,
+        220,
+        557,
+        821
+      ],
+      "publicSourceAndLiveRect": [
+        478,
+        310,
+        220,
+        42
+      ],
+      "sourceNativeType": 9,
+      "canonicalPoint": [
+        588,
+        331
+      ],
+      "producer": "private-AX requested-backend",
+      "strictReadyReads": 3,
+      "intendedNativeEvents": 1,
+      "limitation": "Healthy anchored observation only. Degraded unanchored viewport behavior remains tracked separately in issue4399."
+    },
+    "finalRuntimeAttribution": {
+      "measuredFinalSdkHead": "befb65c17122a063e75d9c557a1f993aea5f5b9e",
+      "publishedSourceHead": "ca43623c9a17e54ac9fb1d006581021c7d8f1363",
+      "delta": "Only two test files changed after verifiedBEF: the snapshot-package helper reuses standardized CGRect conversion, and the registry parity test explicitly classifies pressReadiness as an internal read. Shipped-native fingerprint and all629 SDK JS files remain identical to measuredBEF.",
+      "matchedSdkJsFiles": 629,
+      "differingSdkJsFiles": 0,
+      "comparisonAfterExactGateBuild": true,
+      "comparedSdkJsFilesAfterFinalCaBuild": 629,
+      "comparisonAfterAllFinalGateChecks": true
+    }
+  },
+  "runtimeByteAttribution": {
+    "measuredSdkHead": "befb65c17122a063e75d9c557a1f993aea5f5b9e",
+    "finalSourceHead": "ca43623c9a17e54ac9fb1d006581021c7d8f1363",
+    "measuredSdkJsFiles": 629,
+    "identicalAfterFinalGate": true,
+    "differingFiles": [],
+    "nativeSourceFingerprint": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf",
+    "nativeBinarySha256": "85cf43c9caa355947216667b08b018de0683269e52bc6003382f7388e5b6017f"
+  },
+  "privacyScope": "Curated check status, counts and standalone UIKit evidence only. Raw diagnostics, home paths, state, environment and private application data are excluded."
+}

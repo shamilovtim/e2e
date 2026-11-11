@@ -1,0 +1,117 @@
+{
+  "purpose": "Maintainer feedback 6784701926: generic UIKit clipped-row, large tree, duplicate safety, landscape and placed-window evidence. Existing frozen bundles are untouched.",
+  "attribution": {
+    "originalBase": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+    "intermediate": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+    "matchedCandidate": "380c91b8210812f0f01ed4fcb1ed74265dfa76f9",
+    "final": "befb65c17122a063e75d9c557a1f993aea5f5b9e",
+    "runtimeNote": "Matched performance, duplicate, clipped-cover and iPad cases ran at 380/3cac. Previous a3 differs from 380 only in three test/fixture files; production source and all 629 dist JS hashes were unchanged. The distinct 71f native binary separately passed eight native tests and a d006 smoke at a3. Final bef changes JavaScript guard/recovery behavior and is separately hashed and verified by one identical d006 750 ms smoke with the same 71f native binary; no bef/380 JS equality is claimed.",
+    "previousFinal": "a3ced6829d5fb889487f039c5525ac07de94e1d3"
+  },
+  "nativeFingerprints": {
+    "base5a": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+    "head965": "a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3",
+    "head380": "3cacb1000a69dd8a8e46f7d76274aa67ca8afe16ad9ff6ba0e2a6866cd379251",
+    "finalA3": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf",
+    "finalBef": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf"
+  },
+  "deviceScope": [
+    "Fresh owned iPhone 15 Pro, iOS 27.0",
+    "Fresh owned iPad Pro 13-inch (M5), iOS 27.0; one portrait placed-window ref only"
+  ],
+  "clippedRow": {
+    "rawNativeFrame": [
+      24,
+      -150,
+      345,
+      400
+    ],
+    "rawCenter": [
+      196.5,
+      50
+    ],
+    "visiblePublicFrame": [
+      24,
+      180,
+      345,
+      70
+    ],
+    "dispatchPoint": [
+      197,
+      215
+    ],
+    "nativeIsHittable": true,
+    "result": "Original 5a, 965 and 380 each delivered seven intended row 0 taps in the matched portrait phases, including a CLI press. No filler row received a tap. In this fixture, native isHittable does not require the center of the raw frame to lie inside the visible rectangle. This does not certify arbitrary points."
+  },
+  "largeTree": {
+    "fixtureOtherControls": 500,
+    "rawNativeOtherNodes": 512,
+    "rawNativeNodes": 527,
+    "base5a": "Seven intended taps on other-000. Ref median 561.38 ms, range 546.81\u2013570.02 ms.",
+    "intermediate965": "The first selector was explicitly canceled at 15002 ms while the native query was still enumerating. Zero taps; one query accepted and none completed by client return. This is not a natural request deadline measurement. Further failed trials were skipped.",
+    "candidate380": "Seven intended taps on other-000. Ref median 800.51 ms, range 775.88\u2013801.54 ms. One readiness call per ready press; the three native ref reads took 316, 327 and 334 ms. CLI exit 0 in 987.28 ms.",
+    "methodLimit": "Small sequential observations; no general performance claim or pass threshold."
+  },
+  "duplicates": {
+    "distinctFrames": "The intended blocked A remains blocked although a public selector read chooses hittable B. The ambiguous selector refuses input. An A ref is explicitly canceled after 2 s without any tap or cover event. A fresh B ref then delivers B only.",
+    "exactSameFrame": "Both bindings share type, identifier, label and rectangle (24,650,340,48). Native strict reads report ambiguous for each. The selector refuses AMBIGUOUS_MATCH with dispatched:no. The ref refuses target_not_ready, readiness:ambiguous and dispatched:no. No input events occur."
+  },
+  "clippedFullCover": {
+    "fixtureVersion": "Separate v1.1 bundle; the v1 latency binary is unchanged.",
+    "geometry": "The 400 pt Cell keeps its raw center at y=50 outside the visible 70 pt tail. A real UIView fully covers that tail. Before, covered and after snapshots and native reads are retained.",
+    "observed": "At 380, direct strict native reads report ready \u2192 blocked \u2192 ready. A 2 s caller cancellation while blocked delivers no input through the 750 ms fade removal and a 1.2 s observation. A fresh ref then delivers one row 0 tap; cover touches remain zero. Public cancellation retains the documented request_canceled / dispatched:unknown transport evidence. The 965 phase has the same pending-ref cancellation and recovery observations; its covered public read returned no target, so direct covered-state readiness samples were not obtained there.",
+    "claimLimit": "This case proves blocked state and cancellation/recovery. It does not measure implicit completion of a clipped fade."
+  },
+  "landscape": "Matched 5a, 965 and 380 selector/ref/CLI phases each deliver seven row 0 taps. The 380 CLI exits 0 in 537.39 ms. Individual times and native read counts are in LATENCY-SUMMARY.json.",
+  "iPadPlacedWindow": {
+    "window": [
+      238,
+      220,
+      557,
+      821
+    ],
+    "publicSourceAndLiveRect": [
+      478,
+      310,
+      220,
+      42
+    ],
+    "nativeType": 9,
+    "point": [
+      588,
+      331
+    ],
+    "capture": "Fresh state and runner; foreground:false open; customActions private-AX requested-backend capture; external recording. Direct source/live evidence precedes one ordinary ref.",
+    "observed": "Native ready three times; ordinary ref completed in 472.21 ms and delivered exactly one native action tap. This is a functional observation.",
+    "eventFieldNote": "The older geometry fixture key actionScreenFrame is window-local UIView.convert(to:nil), despite its name. It is not used as screen-space proof; direct native live/source frames provide that proof."
+  },
+  "finalSmoke": {
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "case": "fade750-1",
+    "result": "Final bef/71f exits 0 with underlying 1 / overlay 0. Fade completes at 12974.27 ms, then the tap arrives at 13138.38 ms. closeMs=970.53; pressMs=871.79."
+  },
+  "privacy": {
+    "includedVideos": 19,
+    "includedPNGs": 55,
+    "allOriginalVideosDecoded": 21,
+    "boundedVisualAudit": "All 55 included PNGs were inspected: every included video first/last frame and each standalone screenshot. Content is limited to generic UIKit fixtures, synthetic controls and default simulator OS. This is not full frame-by-frame video playback.",
+    "excluded": "Settings/window-setup captures, invalid diagnostic setups, leases/tokens, global diagnostics and full native logs/xcresults are omitted."
+  },
+  "invalidSetupsPreservedOutsideBundle": [
+    "head965-exact-duplicates",
+    "head965-exact-duplicates-2"
+  ],
+  "cleanup": {
+    "allOwnedSessionsClosed": true,
+    "allOwnedDaemonsStoppedClean": true,
+    "twoOwnedSimulatorsShutdownAndDeleted": true,
+    "unrelatedDevicesUntouched": true,
+    "finalSmokeOwnedPhoneShutdownRetainedPendingFinalCleanup": true
+  },
+  "limitations": [
+    "No physical-device, macOS, iPad landscape, Stage Manager or general multiwindow coverage claim.",
+    "Only eight selected native tests were run at each named candidate; no full native-suite claim.",
+    "No partial-center occlusion certification. Native hittability remains a necessary condition for the control.",
+    "The intermediate 965 failure used explicit caller cancellation after 15 s; no 60 s product timeout is claimed."
+  ]
+}

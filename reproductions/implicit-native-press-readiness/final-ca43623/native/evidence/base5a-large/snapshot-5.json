@@ -1,0 +1,352 @@
+{
+  "nodes": [
+    {
+      "index": 0,
+      "type": "Application",
+      "role": "UIApplication",
+      "label": "GeometryFixture",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852
+      },
+      "enabled": true,
+      "depth": 0,
+      "pid": 55215,
+      "hittable": false,
+      "ref": "e1",
+      "kind": "application"
+    },
+    {
+      "index": 1,
+      "parentIndex": 0,
+      "type": "StaticText",
+      "role": "UILabel",
+      "label": "Readiness maintainer fixture",
+      "rect": {
+        "x": 24,
+        "y": 45,
+        "width": 345,
+        "height": 28
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e2",
+      "kind": "text"
+    },
+    {
+      "index": 2,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Clipped row",
+      "identifier": "mode-clipped",
+      "rect": {
+        "x": 24,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e3",
+      "kind": "button"
+    },
+    {
+      "index": 3,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Large Other tree",
+      "identifier": "mode-large",
+      "rect": {
+        "x": 142,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e4",
+      "kind": "button"
+    },
+    {
+      "index": 4,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Duplicates",
+      "identifier": "mode-duplicates",
+      "rect": {
+        "x": 260,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e5",
+      "kind": "button"
+    },
+    {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Landscape",
+      "identifier": "landscape",
+      "rect": {
+        "x": 24,
+        "y": 124,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    {
+      "index": 6,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Portrait",
+      "identifier": "portrait",
+      "rect": {
+        "x": 142,
+        "y": 124,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e7",
+      "kind": "button"
+    },
+    {
+      "index": 7,
+      "parentIndex": 0,
+      "type": "ScrollView",
+      "role": "UIScrollView",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 345,
+        "height": 220
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "hiddenContentBelow": true,
+      "ref": "e8",
+      "kind": "scroll-area"
+    },
+    {
+      "index": 8,
+      "parentIndex": 7,
+      "type": "Other",
+      "role": "GeometryFixture.OtherControl",
+      "subrole": "UIControl",
+      "label": "Other control 000",
+      "identifier": "other-000",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 345,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e9",
+      "kind": "other"
+    },
+    {
+      "index": 9,
+      "parentIndex": 7,
+      "type": "Other",
+      "role": "GeometryFixture.OtherControl",
+      "subrole": "UIControl",
+      "label": "Other control 001",
+      "identifier": "other-001",
+      "rect": {
+        "x": 24,
+        "y": 222,
+        "width": 345,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e10",
+      "kind": "other"
+    },
+    {
+      "index": 10,
+      "parentIndex": 7,
+      "type": "Other",
+      "role": "GeometryFixture.OtherControl",
+      "subrole": "UIControl",
+      "label": "Other control 002",
+      "identifier": "other-002",
+      "rect": {
+        "x": 24,
+        "y": 264,
+        "width": 345,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e11",
+      "kind": "other"
+    },
+    {
+      "index": 11,
+      "parentIndex": 7,
+      "type": "Other",
+      "role": "GeometryFixture.OtherControl",
+      "subrole": "UIControl",
+      "label": "Other control 003",
+      "identifier": "other-003",
+      "rect": {
+        "x": 24,
+        "y": 306,
+        "width": 345,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e12",
+      "kind": "other"
+    },
+    {
+      "index": 12,
+      "parentIndex": 7,
+      "type": "Other",
+      "role": "GeometryFixture.OtherControl",
+      "subrole": "UIControl",
+      "label": "Other control 004",
+      "identifier": "other-004",
+      "rect": {
+        "x": 24,
+        "y": 348,
+        "width": 345,
+        "height": 40
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e13",
+      "kind": "other"
+    },
+    {
+      "index": 13,
+      "parentIndex": 7,
+      "type": "Other",
+      "role": "GeometryFixture.OtherControl",
+      "subrole": "UIControl",
+      "label": "Other control 005",
+      "identifier": "other-005",
+      "rect": {
+        "x": 24,
+        "y": 390,
+        "width": 345,
+        "height": 10
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e14",
+      "kind": "other"
+    },
+    {
+      "index": 14,
+      "parentIndex": 0,
+      "type": "StaticText",
+      "role": "UILabel",
+      "label": "Mode: large\nOther controls: 500",
+      "identifier": "results",
+      "rect": {
+        "x": 24,
+        "y": 420,
+        "width": 345,
+        "height": 80
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 55215,
+      "hittable": true,
+      "ref": "e15",
+      "kind": "text"
+    }
+  ],
+  "truncated": false,
+  "appName": "dev.e2e.readinessmaintainer",
+  "appBundleId": "dev.e2e.readinessmaintainer",
+  "keyboard": {
+    "kind": "absent",
+    "treeBound": true
+  },
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "presentedSurface": "absent",
+  "visibility": {
+    "partial": true,
+    "visibleNodeCount": 15,
+    "totalNodeCount": 15,
+    "reasons": [
+      "scroll-hidden-below"
+    ]
+  },
+  "snapshotQualityNotes": [
+    {
+      "code": "regular-geometry-clipped",
+      "clippedNodeCount": 1,
+      "droppedNodeCount": 494
+    }
+  ],
+  "snapshotDiagnostics": {
+    "stats": {
+      "count": 9,
+      "p50Ms": 148,
+      "p95Ms": 166,
+      "maxMs": 166,
+      "slowThresholdMs": 1500,
+      "platform": "ios",
+      "backends": {
+        "simulator-ax-bridge": 9
+      }
+    }
+  },
+  "refsGeneration": 763962,
+  "identifiers": {
+    "session": "codex-maintainer-base5a-large",
+    "appId": "dev.e2e.readinessmaintainer",
+    "appBundleId": "dev.e2e.readinessmaintainer"
+  }
+}

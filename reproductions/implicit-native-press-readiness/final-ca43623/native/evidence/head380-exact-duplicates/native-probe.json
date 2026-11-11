@@ -1,0 +1,710 @@
+{
+  "selected": {
+    "ms": 97.91725000000001,
+    "result": {
+      "error": {
+        "message": "selector matched multiple elements",
+        "code": "AMBIGUOUS_MATCH"
+      },
+      "ok": false
+    }
+  },
+  "raw": {
+    "ms": 73.12212500000001,
+    "result": {
+      "ok": true,
+      "data": {
+        "truncated": false,
+        "currentUptimeMs": 487780530.6935,
+        "nodes": [
+          {
+            "nativePressTarget": {
+              "rect": {
+                "y": 0,
+                "width": 393,
+                "x": 0,
+                "height": 852
+              },
+              "label": "OverlayFixture",
+              "type": 2
+            },
+            "label": "OverlayFixture",
+            "hittable": false,
+            "rect": {
+              "y": 0,
+              "width": 393,
+              "x": 0,
+              "height": 852
+            },
+            "index": 0,
+            "type": "Application",
+            "depth": 0,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "height": 852,
+                "x": 0,
+                "width": 393,
+                "y": 0
+              },
+              "type": 4
+            },
+            "label": "Overlay transition proof",
+            "hittable": true,
+            "rect": {
+              "y": 0,
+              "width": 393,
+              "x": 0,
+              "height": 852
+            },
+            "index": 1,
+            "type": "Window",
+            "parentIndex": 0,
+            "depth": 1,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "width": 393,
+                "x": 0,
+                "y": 0,
+                "height": 852
+              },
+              "type": 1
+            },
+            "label": "Overlay transition proof",
+            "hittable": true,
+            "rect": {
+              "y": 0,
+              "width": 393,
+              "x": 0,
+              "height": 852
+            },
+            "index": 2,
+            "type": "Other",
+            "parentIndex": 1,
+            "depth": 2,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "width": 393,
+                "x": 0,
+                "y": 0,
+                "height": 852
+              },
+              "type": 1
+            },
+            "label": "Overlay transition proof",
+            "hittable": true,
+            "rect": {
+              "y": 0,
+              "width": 393,
+              "x": 0,
+              "height": 852
+            },
+            "index": 3,
+            "type": "Other",
+            "parentIndex": 2,
+            "depth": 3,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "y": 0,
+                "height": 852,
+                "x": 0,
+                "width": 393
+              },
+              "type": 1
+            },
+            "label": "Overlay transition proof",
+            "hittable": true,
+            "rect": {
+              "y": 0,
+              "width": 393,
+              "x": 0,
+              "height": 852
+            },
+            "index": 4,
+            "type": "Other",
+            "parentIndex": 3,
+            "depth": 4,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "y": 80,
+                "width": 340,
+                "height": 40,
+                "x": 24
+              },
+              "label": "Overlay transition proof",
+              "type": 48
+            },
+            "label": "Overlay transition proof",
+            "hittable": true,
+            "rect": {
+              "y": 80,
+              "width": 340,
+              "x": 24,
+              "height": 40
+            },
+            "index": 5,
+            "type": "StaticText",
+            "parentIndex": 4,
+            "depth": 5,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "width": 340,
+                "height": 48,
+                "x": 24,
+                "y": 140
+              },
+              "identifier": "Open fade overlay",
+              "label": "Open fade overlay",
+              "type": 9
+            },
+            "label": "Open fade overlay",
+            "hittable": true,
+            "rect": {
+              "y": 140,
+              "width": 340,
+              "x": 24,
+              "height": 48
+            },
+            "index": 6,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "identifier": "Open fade overlay",
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "x": 131.66666666666669,
+                "width": 125,
+                "height": 18,
+                "y": 155
+              },
+              "label": "Open fade overlay",
+              "type": 48
+            },
+            "label": "Open fade overlay",
+            "hittable": true,
+            "rect": {
+              "y": 155,
+              "width": 125,
+              "x": 131.66666666666669,
+              "height": 18
+            },
+            "index": 7,
+            "type": "StaticText",
+            "parentIndex": 6,
+            "depth": 6,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "width": 340,
+                "y": 200,
+                "height": 48,
+                "x": 24
+              },
+              "identifier": "Open slow fade overlay",
+              "label": "Open slow fade overlay",
+              "type": 9
+            },
+            "label": "Open slow fade overlay",
+            "hittable": true,
+            "rect": {
+              "y": 200,
+              "width": 340,
+              "x": 24,
+              "height": 48
+            },
+            "index": 8,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "identifier": "Open slow fade overlay",
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "width": 160,
+                "height": 18,
+                "y": 215,
+                "x": 114
+              },
+              "label": "Open slow fade overlay",
+              "type": 48
+            },
+            "label": "Open slow fade overlay",
+            "hittable": true,
+            "rect": {
+              "y": 215,
+              "width": 160,
+              "x": 114,
+              "height": 18
+            },
+            "index": 9,
+            "type": "StaticText",
+            "parentIndex": 8,
+            "depth": 6,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "x": 24,
+                "width": 340,
+                "height": 48,
+                "y": 260
+              },
+              "identifier": "Open native sheet",
+              "label": "Open native sheet",
+              "type": 9
+            },
+            "label": "Open native sheet",
+            "hittable": true,
+            "rect": {
+              "y": 260,
+              "width": 340,
+              "x": 24,
+              "height": 48
+            },
+            "index": 10,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "identifier": "Open native sheet",
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "rect": {
+                "height": 18,
+                "width": 125,
+                "x": 131.66666666666669,
+                "y": 275
+              },
+              "label": "Open native sheet",
+              "type": 48
+            },
+            "label": "Open native sheet",
+            "hittable": true,
+            "rect": {
+              "width": 125,
+              "x": 131.66666666666669,
+              "y": 275,
+              "height": 18
+            },
+            "index": 11,
+            "type": "StaticText",
+            "parentIndex": 10,
+            "depth": 6,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 9,
+              "identifier": "duplicate",
+              "label": "Duplicate action",
+              "rect": {
+                "width": 340,
+                "height": 48,
+                "x": 24,
+                "y": 360
+              }
+            },
+            "label": "Duplicate action",
+            "hittable": true,
+            "rect": {
+              "y": 360,
+              "width": 340,
+              "height": 48,
+              "x": 24
+            },
+            "index": 12,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "identifier": "duplicate",
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Duplicate action",
+              "rect": {
+                "width": 111,
+                "height": 18,
+                "x": 138.66666666666669,
+                "y": 375
+              }
+            },
+            "label": "Duplicate action",
+            "hittable": true,
+            "rect": {
+              "y": 375,
+              "width": 111,
+              "height": 18,
+              "x": 138.66666666666669
+            },
+            "index": 13,
+            "type": "StaticText",
+            "parentIndex": 12,
+            "depth": 6,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 9,
+              "identifier": "duplicate",
+              "label": "Duplicate action",
+              "rect": {
+                "x": 24,
+                "y": 430,
+                "height": 48,
+                "width": 340
+              }
+            },
+            "label": "Duplicate action",
+            "hittable": true,
+            "rect": {
+              "y": 430,
+              "width": 340,
+              "height": 48,
+              "x": 24
+            },
+            "index": 14,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "identifier": "duplicate",
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Duplicate action",
+              "rect": {
+                "y": 445,
+                "height": 18,
+                "x": 138.66666666666669,
+                "width": 111
+              }
+            },
+            "label": "Duplicate action",
+            "hittable": true,
+            "rect": {
+              "y": 445,
+              "width": 111,
+              "height": 18,
+              "x": 138.66666666666669
+            },
+            "index": 15,
+            "type": "StaticText",
+            "parentIndex": 14,
+            "depth": 6,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 9,
+              "rect": {
+                "height": 48,
+                "width": 340,
+                "x": 24,
+                "y": 580
+              }
+            },
+            "hittable": true,
+            "rect": {
+              "y": 580,
+              "width": 340,
+              "height": 48,
+              "x": 24
+            },
+            "index": 16,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 9,
+              "identifier": "overlap",
+              "label": "Overlapping action",
+              "rect": {
+                "y": 650,
+                "width": 340,
+                "x": 24,
+                "height": 48
+              }
+            },
+            "label": "Overlapping action",
+            "hittable": true,
+            "rect": {
+              "y": 650,
+              "width": 340,
+              "height": 48,
+              "x": 24
+            },
+            "index": 17,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "identifier": "overlap",
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Overlapping action",
+              "rect": {
+                "x": 129,
+                "width": 130,
+                "height": 18,
+                "y": 665
+              }
+            },
+            "label": "Overlapping action",
+            "hittable": true,
+            "rect": {
+              "y": 665,
+              "width": 130,
+              "height": 18,
+              "x": 129
+            },
+            "index": 18,
+            "type": "StaticText",
+            "parentIndex": 17,
+            "depth": 6,
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 9,
+              "identifier": "overlap",
+              "label": "Overlapping action",
+              "rect": {
+                "width": 340,
+                "height": 48,
+                "y": 650,
+                "x": 24
+              }
+            },
+            "label": "Overlapping action",
+            "hittable": true,
+            "rect": {
+              "y": 650,
+              "width": 340,
+              "height": 48,
+              "x": 24
+            },
+            "index": 19,
+            "type": "Button",
+            "parentIndex": 4,
+            "depth": 5,
+            "identifier": "overlap",
+            "enabled": true
+          },
+          {
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Overlapping action",
+              "rect": {
+                "y": 665,
+                "height": 18,
+                "width": 130,
+                "x": 129
+              }
+            },
+            "parentIndex": 19,
+            "depth": 6,
+            "enabled": true,
+            "rect": {
+              "y": 665,
+              "width": 130,
+              "height": 18,
+              "x": 129
+            },
+            "type": "StaticText",
+            "label": "Overlapping action",
+            "hittable": true,
+            "index": 20
+          },
+          {
+            "nativePressTarget": {
+              "type": 48,
+              "identifier": "results",
+              "label": "Underlying taps: 0\nOverlay touches: 0",
+              "rect": {
+                "height": 100,
+                "x": 24,
+                "width": 340,
+                "y": 730
+              }
+            },
+            "parentIndex": 4,
+            "depth": 5,
+            "enabled": true,
+            "rect": {
+              "y": 730,
+              "width": 340,
+              "height": 100,
+              "x": 24
+            },
+            "identifier": "results",
+            "type": "StaticText",
+            "label": "Underlying taps: 0\nOverlay touches: 0",
+            "hittable": true,
+            "index": 21
+          }
+        ],
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "snapshotQuality": {
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 30.705928802490234,
+            "presentationMs": 0.048041343688964844
+          },
+          "state": "healthy"
+        },
+        "runnerMainThreadBusy": false,
+        "presentedSurface": "unknown"
+      }
+    }
+  },
+  "readinessCommand": "pressReadiness",
+  "strictTargets": [
+    {
+      "target": {
+        "type": 9,
+        "identifier": "overlap",
+        "label": "Overlapping action",
+        "rect": {
+          "y": 650,
+          "width": 340,
+          "x": 24,
+          "height": 48
+        },
+        "point": {
+          "x": 194,
+          "y": 674
+        }
+      },
+      "strict": [
+        {
+          "ms": 108.86045799999997,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ambiguous",
+              "currentUptimeMs": 487780643.87350005,
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        },
+        {
+          "ms": 104.44708400000002,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ambiguous",
+              "currentUptimeMs": 487780748.2621667,
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        },
+        {
+          "ms": 97.63683299999997,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ambiguous",
+              "currentUptimeMs": 487780846.064125,
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "target": {
+        "type": 9,
+        "identifier": "overlap",
+        "label": "Overlapping action",
+        "rect": {
+          "width": 340,
+          "height": 48,
+          "y": 650,
+          "x": 24
+        },
+        "point": {
+          "x": 194,
+          "y": 674
+        }
+      },
+      "strict": [
+        {
+          "ms": 96.47516700000006,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ambiguous",
+              "currentUptimeMs": 487780942.6327084,
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        },
+        {
+          "ms": 93.25750000000005,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ambiguous",
+              "currentUptimeMs": 487781035.8640417,
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        },
+        {
+          "ms": 109.50308299999995,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ambiguous",
+              "currentUptimeMs": 487781145.24333334,
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

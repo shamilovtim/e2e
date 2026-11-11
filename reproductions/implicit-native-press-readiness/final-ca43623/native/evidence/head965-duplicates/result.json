@@ -1,0 +1,917 @@
+{
+  "phase": "head965-duplicates",
+  "mode": "duplicates",
+  "sdkEntry": "/tmp/codex-sdk-readiness-benchmark965-20261111/dist/src/index.js",
+  "xctestrun": "/tmp/codex-sdk-implicit-readiness-20261110/.tmp/review-native-derived/Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-x86_64.xctestrun",
+  "openOptions": {
+    "app": "dev.e2e.readinessmaintainer",
+    "platform": "ios",
+    "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+    "relaunch": true,
+    "foreground": true
+  },
+  "samples": [
+    {
+      "kind": "selector",
+      "id": "duplicate-control",
+      "target": {
+        "selector": "id=duplicate-control"
+      },
+      "error": {
+        "code": "AMBIGUOUS_MATCH",
+        "message": "Selector matched 2 distinct actionable elements: id=duplicate-control",
+        "details": {
+          "selector": "id=duplicate-control",
+          "matches": 2,
+          "candidates": [
+            "@e8 [button] \"Duplicate action\"",
+            "@e9 [button] \"Duplicate action\""
+          ],
+          "dispatched": "no",
+          "refsGeneration": 364958,
+          "hint": "Multiple candidates matched. Narrow the query or pass an exact identifier.",
+          "diagnosticId": "mwbo45ja-e84a282a",
+          "logPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-duplicates/sessions/codex-maintainer-head965-duplicates/requests/d084e551b2bd31ec.ndjson",
+          "diagnosticsRecord": {
+            "session": "codex-maintainer-head965-duplicates",
+            "requestId": "d084e551b2bd31ec"
+          }
+        }
+      },
+      "ms": 37.547833999999966,
+      "native": {
+        "commands": [
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:17:57.384937-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-0b8a55ba-8917-42b6-b209-d01d3e2b3945",
+          "2026-11-11 00:17:57.385317-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-c65a9e70-e477-4835-ad62-3ae5c10b6b22",
+          "2026-11-11 00:17:57.386190-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-0b8a55ba-8917-42b6-b209-d01d3e2b3945 ok=1",
+          "2026-11-11 00:17:57.387151-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-c65a9e70-e477-4835-ad62-3ae5c10b6b22 ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 1.8137916340492666,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 10.152208327781409
+        },
+        {
+          "event": "appReady",
+          "ms": 10.367708338890225,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "duplicates",
+          "ms": 3934.4148749951273
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "duplicates",
+          "ms": 3936.260875023436,
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "target": {
+        "ref": "@e8"
+      },
+      "node": {
+        "index": 7,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Duplicate action",
+        "identifier": "duplicate-control",
+        "rect": {
+          "x": 24,
+          "y": 180,
+          "width": 345,
+          "height": 70
+        },
+        "enabled": true,
+        "depth": 1,
+        "pid": 59209,
+        "hittable": true,
+        "ref": "e8",
+        "kind": "button"
+      },
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "request canceled",
+        "details": {
+          "hint": "The request was canceled intentionally (explicit cancel or client disconnect) — no retry is needed unless the cancellation was unintended.",
+          "requestId": "dad26c7f8e3b089d",
+          "dispatched": "unknown",
+          "reason": "request_canceled"
+        }
+      },
+      "ms": 2001.8781660000004,
+      "native": {
+        "commands": [
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "appState",
+            "nativeMs": 3
+          },
+          {
+            "command": "appState",
+            "nativeMs": 3
+          },
+          {
+            "command": "appState",
+            "nativeMs": 5
+          },
+          {
+            "command": "querySelector",
+            "nativeMs": 216
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "querySelector",
+            "nativeMs": 217
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "querySelector",
+            "nativeMs": 222
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "querySelector",
+            "nativeMs": 243
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "querySelector",
+            "nativeMs": 247
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:17:57.708476-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-f6641a9b-750d-4af9-add9-69f0e3da1696",
+          "2026-11-11 00:17:57.708734-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-d7827f72-69d7-4591-92ad-0c3def31abdd",
+          "2026-11-11 00:17:57.710442-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-f6641a9b-750d-4af9-add9-69f0e3da1696 ok=1",
+          "2026-11-11 00:17:57.711981-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-d7827f72-69d7-4591-92ad-0c3def31abdd ok=1",
+          "2026-11-11 00:17:57.788474-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-5c76b701-593e-4352-8806-60e4d3b753bd",
+          "2026-11-11 00:17:57.788839-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-71ce6c82-de0e-4b06-ba0f-5b477f568869",
+          "2026-11-11 00:17:57.791085-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-5c76b701-593e-4352-8806-60e4d3b753bd ok=1",
+          "2026-11-11 00:17:57.793281-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-71ce6c82-de0e-4b06-ba0f-5b477f568869 ok=1",
+          "2026-11-11 00:17:57.818337-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=querySelector commandId=runner-5c70da30-5a1c-490e-8afd-58cb4f7cce2d",
+          "2026-11-11 00:17:58.034244-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=querySelector commandId=runner-5c70da30-5a1c-490e-8afd-58cb4f7cce2d ok=1",
+          "2026-11-11 00:17:58.088134-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-dd4c2760-58f3-489b-b3d1-98ef85e4b389",
+          "2026-11-11 00:17:58.088790-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-c632fe79-ab57-4749-b11d-7aa496bf1419",
+          "2026-11-11 00:17:58.089254-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-dd4c2760-58f3-489b-b3d1-98ef85e4b389 ok=1",
+          "2026-11-11 00:17:58.090169-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-c632fe79-ab57-4749-b11d-7aa496bf1419 ok=1",
+          "2026-11-11 00:17:58.117080-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=querySelector commandId=runner-7e39f1e9-8aad-403a-8d7c-90e5fd3d2035",
+          "2026-11-11 00:17:58.334716-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=querySelector commandId=runner-7e39f1e9-8aad-403a-8d7c-90e5fd3d2035 ok=1",
+          "2026-11-11 00:17:58.389321-0500 AgentDeviceRunnerUITests-Runner[59537:15775304] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-ddbcf081-4d03-44aa-bc5e-a97a56ecc351",
+          "2026-11-11 00:17:58.389924-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-81025b74-ded4-4789-8ee2-dc11f7ea65ed",
+          "2026-11-11 00:17:58.390323-0500 AgentDeviceRunnerUITests-Runner[59537:15775304] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-ddbcf081-4d03-44aa-bc5e-a97a56ecc351 ok=1",
+          "2026-11-11 00:17:58.391174-0500 AgentDeviceRunnerUITests-Runner[59537:15775304] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-81025b74-ded4-4789-8ee2-dc11f7ea65ed ok=1",
+          "2026-11-11 00:17:58.418795-0500 AgentDeviceRunnerUITests-Runner[59537:15775304] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=querySelector commandId=runner-dcde6f12-38c0-41f8-a7f0-8ef66ea60865",
+          "2026-11-11 00:17:58.640807-0500 AgentDeviceRunnerUITests-Runner[59537:15775304] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=querySelector commandId=runner-dcde6f12-38c0-41f8-a7f0-8ef66ea60865 ok=1",
+          "2026-11-11 00:17:58.695485-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-73f62d58-c322-428c-acbe-722c88f057c6",
+          "2026-11-11 00:17:58.696215-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-71297fc5-6f4c-49e8-83fc-2c0f4433b3da",
+          "2026-11-11 00:17:58.696609-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-73f62d58-c322-428c-acbe-722c88f057c6 ok=1",
+          "2026-11-11 00:17:58.697459-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-71297fc5-6f4c-49e8-83fc-2c0f4433b3da ok=1",
+          "2026-11-11 00:17:58.727972-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=querySelector commandId=runner-9f6fd05f-3abc-4b0e-b29c-7ef866ba4403",
+          "2026-11-11 00:17:58.970903-0500 AgentDeviceRunnerUITests-Runner[59537:15775304] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=querySelector commandId=runner-9f6fd05f-3abc-4b0e-b29c-7ef866ba4403 ok=1",
+          "2026-11-11 00:17:59.024664-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-b8b82a11-441b-4df1-a29e-0b00fe6689ab",
+          "2026-11-11 00:17:59.025530-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-16391134-3e49-45b5-94a5-9a3e507a71cb",
+          "2026-11-11 00:17:59.025807-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-b8b82a11-441b-4df1-a29e-0b00fe6689ab ok=1",
+          "2026-11-11 00:17:59.026817-0500 AgentDeviceRunnerUITests-Runner[59537:15775337] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-16391134-3e49-45b5-94a5-9a3e507a71cb ok=1",
+          "2026-11-11 00:17:59.056210-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=querySelector commandId=runner-8a714923-bb65-4230-b578-710fcda9672e",
+          "2026-11-11 00:17:59.303804-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=querySelector commandId=runner-8a714923-bb65-4230-b578-710fcda9672e ok=1",
+          "2026-11-11 00:17:59.359057-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-89d2651a-2730-47c5-ada5-9a49d3e68c07",
+          "2026-11-11 00:17:59.359888-0500 AgentDeviceRunnerUITests-Runner[59537:15775300] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-485a5f94-7dd2-4ea7-97e4-6356d01c9b5b",
+          "2026-11-11 00:17:59.360183-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-89d2651a-2730-47c5-ada5-9a49d3e68c07 ok=1",
+          "2026-11-11 00:17:59.361024-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-485a5f94-7dd2-4ea7-97e4-6356d01c9b5b ok=1",
+          "2026-11-11 00:17:59.390029-0500 AgentDeviceRunnerUITests-Runner[59537:15775300] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=querySelector commandId=runner-a046c6c9-a462-41f9-a17e-972770c3c3cd"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 1.8137916340492666,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 10.152208327781409
+        },
+        {
+          "event": "appReady",
+          "ms": 10.367708338890225,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "duplicates",
+          "ms": 3934.4148749951273
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "duplicates",
+          "ms": 3936.260875023436,
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "target": {
+        "ref": "@e9"
+      },
+      "node": {
+        "index": 8,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Duplicate action",
+        "identifier": "duplicate-control",
+        "rect": {
+          "x": 24,
+          "y": 290,
+          "width": 345,
+          "height": 70
+        },
+        "enabled": true,
+        "depth": 1,
+        "pid": 59209,
+        "hittable": true,
+        "ref": "e9",
+        "kind": "button"
+      },
+      "press": {
+        "x": 197,
+        "y": 325,
+        "message": "Tapped @e9 (197, 325)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e9",
+        "refLabel": "Duplicate action",
+        "selectorChain": [
+          "role=\"button\" label=\"Duplicate action\"",
+          "label=\"Duplicate action\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 577.472541000001,
+      "native": {
+        "commands": [
+          {
+            "command": "querySelector",
+            "nativeMs": 238
+          },
+          {
+            "command": "tap",
+            "nativeMs": 325
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:17:59.758156-0500 AgentDeviceRunnerUITests-Runner[59537:15775302] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=querySelector commandId=runner-0ba47064-3869-4082-95de-29b02287581d",
+          "2026-11-11 00:17:59.996992-0500 AgentDeviceRunnerUITests-Runner[59537:15775305] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=querySelector commandId=runner-0ba47064-3869-4082-95de-29b02287581d ok=1",
+          "2026-11-11 00:17:59.998861-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-3033ce0e-69ed-42d8-b899-5b6a5d41544a",
+          "2026-11-11 00:18:00.323311-0500 AgentDeviceRunnerUITests-Runner[59537:15775299] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-3033ce0e-69ed-42d8-b899-5b6a5d41544a ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 1.8137916340492666,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 10.152208327781409
+        },
+        {
+          "event": "appReady",
+          "ms": 10.367708338890225,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "duplicates",
+          "ms": 3934.4148749951273
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "duplicates",
+          "ms": 3936.260875023436,
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+        },
+        {
+          "event": "duplicateBReceivedTap",
+          "ms": 7063.922500004992
+        }
+      ]
+    }
+  ],
+  "open": {
+    "session": "codex-maintainer-head965-duplicates",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-duplicates/sessions/codex-maintainer-head965-duplicates",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-duplicates/sessions/codex-maintainer-head965-duplicates/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-duplicates/sessions/codex-maintainer-head965-duplicates/requests/54f791c5e2ca727c.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-duplicates/sessions/codex-maintainer-head965-duplicates/events.ndjson",
+    "appName": "dev.e2e.readinessmaintainer",
+    "appBundleId": "dev.e2e.readinessmaintainer",
+    "appId": "dev.e2e.readinessmaintainer",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 2393,
+      "measuredAt": "2026-11-11T05:17:53.198Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "name": "Codex Readiness Maintainer QA 20261111",
+      "identifiers": {
+        "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "deviceName": "Codex Readiness Maintainer QA 20261111",
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD"
+      },
+      "ios": {
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "simulatorSetPath": null
+      }
+    },
+    "snapshot": {
+      "nodes": [
+        {
+          "index": 0,
+          "type": "Application",
+          "role": "UIApplication",
+          "label": "GeometryFixture",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 852
+          },
+          "enabled": true,
+          "depth": 0,
+          "pid": 59209,
+          "hittable": false,
+          "ref": "e1",
+          "kind": "application"
+        },
+        {
+          "index": 1,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Readiness maintainer fixture",
+          "rect": {
+            "x": 24,
+            "y": 45,
+            "width": 345,
+            "height": 28
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e2",
+          "kind": "text"
+        },
+        {
+          "index": 2,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Clipped row",
+          "identifier": "mode-clipped",
+          "rect": {
+            "x": 24,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e3",
+          "kind": "button"
+        },
+        {
+          "index": 3,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Large Other tree",
+          "identifier": "mode-large",
+          "rect": {
+            "x": 142,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e4",
+          "kind": "button"
+        },
+        {
+          "index": 4,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Duplicates",
+          "identifier": "mode-duplicates",
+          "rect": {
+            "x": 260,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e5",
+          "kind": "button"
+        },
+        {
+          "index": 5,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Landscape",
+          "identifier": "landscape",
+          "rect": {
+            "x": 24,
+            "y": 124,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e6",
+          "kind": "button"
+        },
+        {
+          "index": 6,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Portrait",
+          "identifier": "portrait",
+          "rect": {
+            "x": 142,
+            "y": 124,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e7",
+          "kind": "button"
+        },
+        {
+          "index": 7,
+          "parentIndex": 0,
+          "type": "Table",
+          "role": "UITableView",
+          "rect": {
+            "x": 24,
+            "y": 180,
+            "width": 345,
+            "height": 220
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "hiddenContentAbove": true,
+          "hiddenContentBelow": true,
+          "ref": "e8",
+          "kind": "table"
+        },
+        {
+          "index": 8,
+          "parentIndex": 7,
+          "type": "Cell",
+          "role": "UITableViewCellAccessibilityElement",
+          "subrole": "UIAccessibilityElement",
+          "identifier": "clipped-row",
+          "rect": {
+            "x": 24,
+            "y": 180,
+            "width": 345,
+            "height": 70
+          },
+          "enabled": true,
+          "depth": 2,
+          "pid": 59209,
+          "hittable": true,
+          "label": "Visible tail of row 0",
+          "ref": "e9",
+          "kind": "cell"
+        },
+        {
+          "index": 9,
+          "parentIndex": 8,
+          "type": "StaticText",
+          "role": "UITableViewLabel",
+          "label": "Clipped row",
+          "rect": {
+            "x": 44,
+            "y": 180,
+            "width": 305,
+            "height": 70
+          },
+          "enabled": true,
+          "depth": 3,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e10",
+          "kind": "text"
+        },
+        {
+          "index": 10,
+          "parentIndex": 7,
+          "type": "Cell",
+          "role": "UITableViewCellAccessibilityElement",
+          "subrole": "UIAccessibilityElement",
+          "identifier": "filler-1",
+          "rect": {
+            "x": 24,
+            "y": 250,
+            "width": 345,
+            "height": 150
+          },
+          "enabled": true,
+          "depth": 2,
+          "pid": 59209,
+          "hittable": true,
+          "label": "Filler row 1",
+          "ref": "e11",
+          "kind": "cell"
+        },
+        {
+          "index": 11,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Mode: clipped\nOther controls: 500",
+          "identifier": "results",
+          "rect": {
+            "x": 24,
+            "y": 420,
+            "width": 345,
+            "height": 80
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 59209,
+          "hittable": true,
+          "ref": "e12",
+          "kind": "text"
+        }
+      ],
+      "truncated": false,
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 12,
+        "totalNodeCount": 12,
+        "reasons": [
+          "scroll-hidden-above",
+          "scroll-hidden-below"
+        ]
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 8,
+          "droppedNodeCount": 3
+        }
+      ],
+      "snapshotDiagnostics": {
+        "stats": {
+          "count": 1,
+          "p50Ms": 36,
+          "p95Ms": 36,
+          "maxMs": 36,
+          "slowThresholdMs": 1500,
+          "platform": "ios",
+          "backends": {
+            "simulator-ax-bridge": 1
+          }
+        }
+      },
+      "keyboard": {
+        "kind": "absent",
+        "treeBound": true
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "presentedSurface": "absent",
+      "appName": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer",
+      "refsGeneration": 364955
+    },
+    "identifiers": {
+      "session": "codex-maintainer-head965-duplicates",
+      "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "deviceName": "Codex Readiness Maintainer QA 20261111",
+      "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "appId": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer"
+    }
+  },
+  "initialNodes": [
+    {
+      "ref": "e1",
+      "type": "Application",
+      "label": "GeometryFixture",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852
+      }
+    },
+    {
+      "ref": "e2",
+      "type": "StaticText",
+      "label": "Readiness maintainer fixture",
+      "rect": {
+        "x": 24,
+        "y": 45,
+        "width": 345,
+        "height": 28
+      }
+    },
+    {
+      "ref": "e3",
+      "type": "Button",
+      "label": "Clipped row",
+      "identifier": "mode-clipped",
+      "rect": {
+        "x": 24,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      }
+    },
+    {
+      "ref": "e4",
+      "type": "Button",
+      "label": "Large Other tree",
+      "identifier": "mode-large",
+      "rect": {
+        "x": 142,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      }
+    },
+    {
+      "ref": "e5",
+      "type": "Button",
+      "label": "Duplicates",
+      "identifier": "mode-duplicates",
+      "rect": {
+        "x": 260,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      }
+    },
+    {
+      "ref": "e6",
+      "type": "Button",
+      "label": "Landscape",
+      "identifier": "landscape",
+      "rect": {
+        "x": 24,
+        "y": 124,
+        "width": 110,
+        "height": 36
+      }
+    },
+    {
+      "ref": "e7",
+      "type": "Button",
+      "label": "Portrait",
+      "identifier": "portrait",
+      "rect": {
+        "x": 142,
+        "y": 124,
+        "width": 110,
+        "height": 36
+      }
+    },
+    {
+      "ref": "e8",
+      "type": "Button",
+      "label": "Duplicate action",
+      "identifier": "duplicate-control",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 345,
+        "height": 70
+      }
+    },
+    {
+      "ref": "e9",
+      "type": "Button",
+      "label": "Duplicate action",
+      "identifier": "duplicate-control",
+      "rect": {
+        "x": 24,
+        "y": 290,
+        "width": 345,
+        "height": 70
+      }
+    },
+    {
+      "ref": "e10",
+      "type": "StaticText",
+      "label": "Mode: duplicates\nOther controls: 500",
+      "identifier": "results",
+      "rect": {
+        "x": 24,
+        "y": 420,
+        "width": 345,
+        "height": 80
+      }
+    }
+  ],
+  "duplicates": [
+    {
+      "index": 7,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Duplicate action",
+      "identifier": "duplicate-control",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 345,
+        "height": 70
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 59209,
+      "hittable": true,
+      "ref": "e8",
+      "kind": "button"
+    },
+    {
+      "index": 8,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Duplicate action",
+      "identifier": "duplicate-control",
+      "rect": {
+        "x": 24,
+        "y": 290,
+        "width": 345,
+        "height": 70
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 59209,
+      "hittable": true,
+      "ref": "e9",
+      "kind": "button"
+    }
+  ],
+  "finalScreenshot": {
+    "path": "/tmp/codex-sdk-readiness-maintainer-20261111/evidence/head965-duplicates/final.png",
+    "width": 393,
+    "height": 852,
+    "logicalWidth": 393,
+    "logicalHeight": 852,
+    "pixelDensity": 1,
+    "displayRotation": "portrait",
+    "identifiers": {
+      "session": "codex-maintainer-head965-duplicates"
+    }
+  },
+  "events": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 1.8137916340492666,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 10.152208327781409
+    },
+    {
+      "event": "appReady",
+      "ms": 10.367708338890225,
+      "otherControlCount": 500
+    },
+    {
+      "event": "modeChanged",
+      "mode": "duplicates",
+      "ms": 3934.4148749951273
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "duplicates",
+      "ms": 3936.260875023436,
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)"
+    },
+    {
+      "event": "duplicateBReceivedTap",
+      "ms": 7063.922500004992
+    }
+  ]
+}

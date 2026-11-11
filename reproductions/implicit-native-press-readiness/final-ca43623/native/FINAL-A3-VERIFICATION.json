@@ -1,0 +1,82 @@
+{
+  "commit": "a3ced6829d5fb889487f039c5525ac07de94e1d3",
+  "nativeSourceFingerprint": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf",
+  "nativeBinarySha256": "85cf43c9caa355947216667b08b018de0683269e52bc6003382f7388e5b6017f",
+  "unitTests": {
+    "selected": 8,
+    "failures": 0,
+    "testSeconds": 8.554
+  },
+  "publicSmokeHarnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+  "smokeResult": {
+    "mode": "fade750-1",
+    "pid": 66798,
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "closeMs": 1067.735208,
+    "target": {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 66798,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "pressMs": 926.264208999999,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true
+  },
+  "runtimeAttribution": "Matched performance and functional cases remain attributed to 380/3cac. Final 71f is a distinct native build and is separately tested here. Production source is unchanged from 380; three test/fixture files differ."
+}

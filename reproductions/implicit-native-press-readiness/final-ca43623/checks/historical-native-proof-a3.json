@@ -1,0 +1,200 @@
+{
+  "head": "a3ced6829d5fb889487f039c5525ac07de94e1d3",
+  "sourceTree": "83d2fc8b4704c036abf1a38eb7e62f2e1e3efc98",
+  "finalNativeFingerprint": "71f35007e956d0067d8c7fcf53e13ac320d16c1eefb6af6bd0372d1a306ec2bf",
+  "finalNativeBinarySha256": "85cf43c9caa355947216667b08b018de0683269e52bc6003382f7388e5b6017f",
+  "selectedRunnerXCTests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "snapshotPackageTests": {
+    "passed": 52,
+    "failed": 0,
+    "sourceAttribution": "380c91b; package source and tests unchanged at final head"
+  },
+  "finalOverlaySmoke": {
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "case": "fade750-1",
+    "success": true,
+    "underlyingOverlayCounts": [
+      1,
+      0
+    ],
+    "dismissalCompleteMs": 8843.6,
+    "nativeUnderlyingTapMs": 9108.54
+  },
+  "matchedNativeRuns": {
+    "sourceBase": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+    "sourceBaseNativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+    "measuredHead": "380c91b8210812f0f01ed4fcb1ed74265dfa76f9",
+    "measuredNativeFingerprint": "3cacb1000a69dd8a8e46f7d76274aa67ca8afe16ad9ff6ba0e2a6866cd379251",
+    "finalDelta": "Only matcher fixture/test point data changed after the measured head. Production source is unchanged; all629 SDK JS files match the measured hashes. Final native binaries are separately built and tested, not claimed byte-identical."
+  },
+  "readyPathMeasurements": [
+    {
+      "fixture": "clipped",
+      "warmRefSamples": 3,
+      "base": {
+        "refMs": [
+          367.54,
+          367.96,
+          362.47
+        ],
+        "refMedianMs": 367.54,
+        "cliExit": 0,
+        "cliMs": 489.29,
+        "intendedNativeTaps": 7
+      },
+      "head": {
+        "refMs": [
+          489.95,
+          462.53,
+          457.83
+        ],
+        "refMedianMs": 462.53,
+        "cliExit": 0,
+        "cliMs": 726.81,
+        "intendedNativeTaps": 7
+      }
+    },
+    {
+      "fixture": "large",
+      "warmRefSamples": 3,
+      "base": {
+        "refMs": [
+          561.38,
+          570.02,
+          546.81
+        ],
+        "refMedianMs": 561.38,
+        "cliExit": 0,
+        "cliMs": 815.44,
+        "intendedNativeTaps": 7
+      },
+      "head": {
+        "refMs": [
+          775.88,
+          800.51,
+          801.54
+        ],
+        "refMedianMs": 800.51,
+        "cliExit": 0,
+        "cliMs": 987.28,
+        "intendedNativeTaps": 7
+      }
+    },
+    {
+      "fixture": "landscape",
+      "warmRefSamples": 3,
+      "base": {
+        "refMs": [
+          360.44,
+          351.56,
+          355.61
+        ],
+        "refMedianMs": 355.61,
+        "cliExit": 0,
+        "cliMs": 534.01,
+        "intendedNativeTaps": 7
+      },
+      "head": {
+        "refMs": [
+          405.38,
+          519.52,
+          424.5
+        ],
+        "refMedianMs": 424.5,
+        "cliExit": 0,
+        "cliMs": 537.39,
+        "intendedNativeTaps": 7
+      }
+    }
+  ],
+  "unfilteredLargeTreeFailure": {
+    "head": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+    "controls": 500,
+    "nativeOtherCount": 512,
+    "callerObservationAbortMs": 15000,
+    "nativeActionCount": 0,
+    "publicError": {
+      "code": "COMMAND_FAILED",
+      "reason": "request_canceled",
+      "dispatched": "unknown"
+    },
+    "qualification": "Explicit observation cancellation, not a product deadline. Native enumeration had not completed."
+  },
+  "clippedControl": {
+    "nativeFullRect": [
+      24,
+      -150,
+      345,
+      400
+    ],
+    "publicVisibleRect": [
+      24,
+      180,
+      345,
+      70
+    ],
+    "canonicalPoint": [
+      197,
+      215
+    ],
+    "strictReadsBeforeCover": [
+      "ready",
+      "ready",
+      "ready"
+    ],
+    "strictReadsWithFullVisibleTailCovered": [
+      "blocked",
+      "blocked",
+      "blocked"
+    ],
+    "strictReadsAfterRemoval": [
+      "ready",
+      "ready",
+      "ready"
+    ],
+    "cancelPublicError": {
+      "code": "COMMAND_FAILED",
+      "reason": "request_canceled",
+      "dispatched": "unknown"
+    },
+    "rowOrCoverEventsBeforeAndAfterCanceledAttemptThroughRemoval": 0,
+    "freshRecoveryRowEvents": 1
+  },
+  "duplicates": {
+    "distinctBlockedAndHittable": "The blocked intended ref remained blocked; a separate ready ref activated only the unrelated control. Selector ambiguity refused before input.",
+    "exactOverlapping": "Native strict reads and ordinary ref reported ambiguous; native event log contained appReady only.",
+    "exactRefError": {
+      "code": "COMMAND_FAILED",
+      "reason": "target_not_ready",
+      "readiness": "ambiguous",
+      "dispatched": "no"
+    }
+  },
+  "placedWindow": {
+    "measuredHead": "380c91b",
+    "window": [
+      238,
+      220,
+      557,
+      821
+    ],
+    "publicSourceAndLiveRect": [
+      478,
+      310,
+      220,
+      42
+    ],
+    "sourceNativeType": 9,
+    "canonicalPoint": [
+      588,
+      331
+    ],
+    "producer": "private-AX requested-backend",
+    "strictReadyReads": 3,
+    "intendedNativeEvents": 1,
+    "limitation": "Healthy anchored observation only. Degraded unanchored viewport behavior remains tracked separately in issue4399."
+  }
+}

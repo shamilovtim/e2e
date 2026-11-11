@@ -1,0 +1,753 @@
+{
+  "selected": {
+    "ms": 178.81270899999998,
+    "result": {
+      "ok": true,
+      "data": {
+        "currentUptimeMs": 487641087.29895836,
+        "nodes": [
+          {
+            "label": "Duplicate action",
+            "hittable": true,
+            "rect": {
+              "width": 345,
+              "height": 70,
+              "x": 24,
+              "y": 290
+            },
+            "type": "Button",
+            "index": 0,
+            "enabled": true,
+            "depth": 0,
+            "identifier": "duplicate-control"
+          }
+        ],
+        "runnerMainThreadBusy": false,
+        "found": true,
+        "text": "Duplicate action"
+      }
+    }
+  },
+  "raw": {
+    "ms": 58.16983300000001,
+    "result": {
+      "ok": true,
+      "data": {
+        "runnerMainThreadBusy": false,
+        "keyboard": {
+          "treeBound": true,
+          "kind": "absent"
+        },
+        "truncated": false,
+        "currentUptimeMs": 487641146.2494167,
+        "nodes": [
+          {
+            "depth": 0,
+            "index": 0,
+            "rect": {
+              "height": 852,
+              "width": 393,
+              "x": 0,
+              "y": 0
+            },
+            "hittable": false,
+            "nativePressTarget": {
+              "label": "GeometryFixture",
+              "rect": {
+                "width": 393,
+                "x": 0,
+                "height": 852,
+                "y": 0
+              },
+              "type": 2
+            },
+            "enabled": true,
+            "label": "GeometryFixture",
+            "type": "Application"
+          },
+          {
+            "depth": 1,
+            "index": 1,
+            "rect": {
+              "height": 852,
+              "width": 393,
+              "x": 0,
+              "y": 0
+            },
+            "hittable": true,
+            "parentIndex": 0,
+            "nativePressTarget": {
+              "rect": {
+                "width": 393,
+                "y": 0,
+                "height": 852,
+                "x": 0
+              },
+              "type": 4
+            },
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "type": "Window"
+          },
+          {
+            "depth": 2,
+            "index": 2,
+            "rect": {
+              "height": 852,
+              "width": 393,
+              "x": 0,
+              "y": 0
+            },
+            "hittable": true,
+            "parentIndex": 1,
+            "nativePressTarget": {
+              "rect": {
+                "height": 852,
+                "x": 0,
+                "y": 0,
+                "width": 393
+              },
+              "type": 1
+            },
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "type": "Other"
+          },
+          {
+            "depth": 3,
+            "index": 3,
+            "rect": {
+              "height": 852,
+              "width": 393,
+              "x": 0,
+              "y": 0
+            },
+            "hittable": true,
+            "parentIndex": 2,
+            "nativePressTarget": {
+              "rect": {
+                "width": 393,
+                "x": 0,
+                "height": 852,
+                "y": 0
+              },
+              "type": 1
+            },
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "type": "Other"
+          },
+          {
+            "depth": 4,
+            "index": 4,
+            "rect": {
+              "height": 852,
+              "width": 393,
+              "x": 0,
+              "y": 0
+            },
+            "hittable": true,
+            "parentIndex": 3,
+            "nativePressTarget": {
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "height": 852,
+                "width": 393
+              },
+              "type": 1
+            },
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "type": "Other"
+          },
+          {
+            "depth": 5,
+            "index": 5,
+            "rect": {
+              "height": 28,
+              "width": 345,
+              "x": 24,
+              "y": 45
+            },
+            "hittable": true,
+            "parentIndex": 4,
+            "nativePressTarget": {
+              "label": "Readiness maintainer fixture",
+              "rect": {
+                "width": 345,
+                "height": 28,
+                "y": 45,
+                "x": 24
+              },
+              "type": 48
+            },
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "type": "StaticText"
+          },
+          {
+            "depth": 5,
+            "index": 6,
+            "rect": {
+              "height": 36,
+              "width": 110,
+              "x": 24,
+              "y": 82
+            },
+            "identifier": "mode-clipped",
+            "hittable": true,
+            "nativePressTarget": {
+              "label": "Clipped row",
+              "identifier": "mode-clipped",
+              "type": 9,
+              "rect": {
+                "y": 82,
+                "x": 24,
+                "width": 110,
+                "height": 36
+              }
+            },
+            "enabled": true,
+            "parentIndex": 4,
+            "label": "Clipped row",
+            "type": "Button"
+          },
+          {
+            "depth": 6,
+            "index": 7,
+            "rect": {
+              "height": 18,
+              "width": 82,
+              "x": 38,
+              "y": 91
+            },
+            "hittable": true,
+            "parentIndex": 6,
+            "nativePressTarget": {
+              "label": "Clipped row",
+              "rect": {
+                "height": 18,
+                "width": 82,
+                "y": 91,
+                "x": 38
+              },
+              "type": 48
+            },
+            "enabled": true,
+            "label": "Clipped row",
+            "type": "StaticText"
+          },
+          {
+            "depth": 5,
+            "index": 8,
+            "rect": {
+              "height": 36,
+              "width": 110,
+              "x": 142,
+              "y": 82
+            },
+            "identifier": "mode-large",
+            "hittable": true,
+            "nativePressTarget": {
+              "label": "Large Other tree",
+              "identifier": "mode-large",
+              "type": 9,
+              "rect": {
+                "y": 82,
+                "x": 142,
+                "width": 110,
+                "height": 36
+              }
+            },
+            "enabled": true,
+            "parentIndex": 4,
+            "label": "Large Other tree",
+            "type": "Button"
+          },
+          {
+            "depth": 6,
+            "index": 9,
+            "rect": {
+              "y": 91,
+              "height": 18,
+              "x": 142,
+              "width": 110
+            },
+            "hittable": true,
+            "parentIndex": 8,
+            "nativePressTarget": {
+              "label": "Large Other tree",
+              "rect": {
+                "x": 142,
+                "y": 91,
+                "width": 110,
+                "height": 18
+              },
+              "type": 48
+            },
+            "enabled": true,
+            "label": "Large Other tree",
+            "type": "StaticText"
+          },
+          {
+            "depth": 5,
+            "index": 10,
+            "rect": {
+              "height": 36,
+              "x": 260,
+              "y": 82,
+              "width": 110
+            },
+            "identifier": "mode-duplicates",
+            "hittable": true,
+            "nativePressTarget": {
+              "identifier": "mode-duplicates",
+              "type": 9,
+              "label": "Duplicates",
+              "rect": {
+                "y": 82,
+                "height": 36,
+                "width": 110,
+                "x": 260
+              }
+            },
+            "enabled": true,
+            "parentIndex": 4,
+            "label": "Duplicates",
+            "type": "Button"
+          },
+          {
+            "depth": 6,
+            "index": 11,
+            "rect": {
+              "height": 18,
+              "x": 278.6666666666667,
+              "y": 91,
+              "width": 73
+            },
+            "hittable": true,
+            "parentIndex": 10,
+            "enabled": true,
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Duplicates",
+              "rect": {
+                "height": 18,
+                "x": 278.6666666666667,
+                "y": 91,
+                "width": 73
+              }
+            },
+            "label": "Duplicates",
+            "type": "StaticText"
+          },
+          {
+            "depth": 5,
+            "index": 12,
+            "rect": {
+              "height": 36,
+              "x": 24,
+              "y": 124,
+              "width": 110
+            },
+            "identifier": "landscape",
+            "hittable": true,
+            "nativePressTarget": {
+              "identifier": "landscape",
+              "type": 9,
+              "label": "Landscape",
+              "rect": {
+                "y": 124,
+                "height": 36,
+                "x": 24,
+                "width": 110
+              }
+            },
+            "enabled": true,
+            "parentIndex": 4,
+            "label": "Landscape",
+            "type": "Button"
+          },
+          {
+            "depth": 6,
+            "index": 13,
+            "rect": {
+              "height": 18,
+              "x": 41.66666666666667,
+              "y": 133,
+              "width": 75
+            },
+            "hittable": true,
+            "parentIndex": 12,
+            "enabled": true,
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Landscape",
+              "rect": {
+                "y": 133,
+                "width": 75,
+                "x": 41.66666666666667,
+                "height": 18
+              }
+            },
+            "label": "Landscape",
+            "type": "StaticText"
+          },
+          {
+            "depth": 5,
+            "index": 14,
+            "rect": {
+              "height": 36,
+              "x": 142,
+              "y": 124,
+              "width": 110
+            },
+            "identifier": "portrait",
+            "hittable": true,
+            "nativePressTarget": {
+              "identifier": "portrait",
+              "type": 9,
+              "label": "Portrait",
+              "rect": {
+                "x": 142,
+                "width": 110,
+                "height": 36,
+                "y": 124
+              }
+            },
+            "enabled": true,
+            "parentIndex": 4,
+            "label": "Portrait",
+            "type": "Button"
+          },
+          {
+            "depth": 6,
+            "index": 15,
+            "rect": {
+              "height": 18,
+              "x": 171.66666666666669,
+              "y": 133,
+              "width": 51
+            },
+            "hittable": true,
+            "parentIndex": 14,
+            "enabled": true,
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Portrait",
+              "rect": {
+                "height": 18,
+                "y": 133,
+                "width": 51,
+                "x": 171.66666666666669
+              }
+            },
+            "label": "Portrait",
+            "type": "StaticText"
+          },
+          {
+            "depth": 5,
+            "index": 16,
+            "rect": {
+              "height": 220,
+              "x": 24,
+              "y": 180,
+              "width": 345
+            },
+            "hittable": true,
+            "parentIndex": 4,
+            "enabled": true,
+            "nativePressTarget": {
+              "type": 1,
+              "rect": {
+                "x": 24,
+                "y": 180,
+                "width": 345,
+                "height": 220
+              }
+            },
+            "label": "Duplicate action",
+            "type": "Other"
+          },
+          {
+            "depth": 6,
+            "index": 17,
+            "rect": {
+              "height": 70,
+              "x": 24,
+              "y": 180,
+              "width": 345
+            },
+            "identifier": "duplicate-control",
+            "hittable": true,
+            "nativePressTarget": {
+              "identifier": "duplicate-control",
+              "type": 9,
+              "label": "Duplicate action",
+              "rect": {
+                "width": 345,
+                "x": 24,
+                "height": 70,
+                "y": 180
+              }
+            },
+            "enabled": true,
+            "parentIndex": 16,
+            "label": "Duplicate action",
+            "type": "Button"
+          },
+          {
+            "depth": 7,
+            "index": 18,
+            "rect": {
+              "height": 18,
+              "x": 141,
+              "y": 206,
+              "width": 111
+            },
+            "hittable": true,
+            "parentIndex": 17,
+            "enabled": true,
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Duplicate action",
+              "rect": {
+                "height": 18,
+                "x": 141,
+                "y": 206,
+                "width": 111
+              }
+            },
+            "label": "Duplicate action",
+            "type": "StaticText"
+          },
+          {
+            "depth": 6,
+            "index": 19,
+            "hittable": true,
+            "rect": {
+              "height": 70,
+              "x": 24,
+              "y": 180,
+              "width": 345
+            },
+            "parentIndex": 16,
+            "nativePressTarget": {
+              "type": 1,
+              "rect": {
+                "height": 70,
+                "x": 24,
+                "y": 180,
+                "width": 345
+              }
+            },
+            "enabled": true,
+            "type": "Other"
+          },
+          {
+            "type": "Button",
+            "rect": {
+              "height": 70,
+              "x": 24,
+              "y": 290,
+              "width": 345
+            },
+            "hittable": true,
+            "nativePressTarget": {
+              "identifier": "duplicate-control",
+              "type": 9,
+              "label": "Duplicate action",
+              "rect": {
+                "height": 70,
+                "y": 290,
+                "width": 345,
+                "x": 24
+              }
+            },
+            "identifier": "duplicate-control",
+            "index": 20,
+            "parentIndex": 16,
+            "label": "Duplicate action",
+            "enabled": true,
+            "depth": 6
+          },
+          {
+            "type": "StaticText",
+            "rect": {
+              "x": 141,
+              "width": 111,
+              "height": 18,
+              "y": 316
+            },
+            "hittable": true,
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Duplicate action",
+              "rect": {
+                "y": 316,
+                "height": 18,
+                "x": 141,
+                "width": 111
+              }
+            },
+            "parentIndex": 20,
+            "index": 21,
+            "label": "Duplicate action",
+            "enabled": true,
+            "depth": 7
+          },
+          {
+            "type": "StaticText",
+            "rect": {
+              "x": 24,
+              "height": 80,
+              "y": 420,
+              "width": 345
+            },
+            "hittable": true,
+            "nativePressTarget": {
+              "label": "Mode: duplicates\nOther controls: 500",
+              "identifier": "results",
+              "type": 48,
+              "rect": {
+                "y": 420,
+                "x": 24,
+                "width": 345,
+                "height": 80
+              }
+            },
+            "identifier": "results",
+            "index": 22,
+            "parentIndex": 4,
+            "label": "Mode: duplicates\nOther controls: 500",
+            "enabled": true,
+            "depth": 5
+          }
+        ],
+        "snapshotQuality": {
+          "state": "healthy",
+          "timing": {
+            "presentationMs": 0.053048133850097656,
+            "acquisitionMs": 24.91593360900879
+          },
+          "backend": "tree"
+        },
+        "presentedSurface": "unknown"
+      }
+    }
+  },
+  "readinessCommand": "pressReadiness",
+  "strictTargets": [
+    {
+      "target": {
+        "identifier": "duplicate-control",
+        "type": 9,
+        "label": "Duplicate action",
+        "rect": {
+          "width": 345,
+          "x": 24,
+          "height": 70,
+          "y": 180
+        },
+        "point": {
+          "x": 196.5,
+          "y": 215
+        }
+      },
+      "strict": [
+        {
+          "ms": 100.065542,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "blocked",
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+              "currentUptimeMs": 487641250.46891665,
+              "runnerMainThreadBusy": false
+            }
+          }
+        },
+        {
+          "ms": 93.506459,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "currentUptimeMs": 487641344.0755,
+              "pressReadiness": "blocked",
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer"
+            },
+            "ok": true
+          }
+        },
+        {
+          "ms": 102.43683299999992,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadiness": "blocked",
+              "currentUptimeMs": 487641446.3010417,
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer"
+            },
+            "ok": true
+          }
+        }
+      ]
+    },
+    {
+      "target": {
+        "identifier": "duplicate-control",
+        "type": 9,
+        "label": "Duplicate action",
+        "rect": {
+          "height": 70,
+          "y": 290,
+          "width": 345,
+          "x": 24
+        },
+        "point": {
+          "x": 196.5,
+          "y": 325
+        }
+      },
+      "strict": [
+        {
+          "ms": 93.06041699999992,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ready",
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+              "currentUptimeMs": 487641539.60558337,
+              "runnerMainThreadBusy": false
+            }
+          }
+        },
+        {
+          "ms": 89.24262499999998,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "currentUptimeMs": 487641628.94241667,
+              "pressReadiness": "ready",
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer"
+            },
+            "ok": true
+          }
+        },
+        {
+          "ms": 85.88295899999991,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadiness": "ready",
+              "currentUptimeMs": 487641714.82112503,
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer"
+            },
+            "ok": true
+          }
+        }
+      ]
+    }
+  ]
+}

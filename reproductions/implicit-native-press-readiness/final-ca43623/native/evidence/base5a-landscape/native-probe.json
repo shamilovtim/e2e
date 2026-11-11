@@ -1,0 +1,628 @@
+{
+  "selected": {
+    "ms": 170.666125,
+    "result": {
+      "ok": true,
+      "data": {
+        "currentUptimeMs": 486566494.20487505,
+        "nodes": [
+          {
+            "index": 0,
+            "identifier": "clipped-row",
+            "rect": {
+              "x": 24,
+              "y": -150,
+              "width": 600,
+              "height": 400
+            },
+            "depth": 0,
+            "enabled": true,
+            "hittable": true,
+            "type": "Cell"
+          }
+        ],
+        "runnerMainThreadBusy": false,
+        "found": true,
+        "text": "clipped-row"
+      }
+    }
+  },
+  "raw": {
+    "ms": 65.939583,
+    "result": {
+      "ok": true,
+      "data": {
+        "truncated": false,
+        "currentUptimeMs": 486566562.73262507,
+        "runnerMainThreadBusy": false,
+        "nodes": [
+          {
+            "type": "Application",
+            "rect": {
+              "x": 0,
+              "height": 393,
+              "y": 0,
+              "width": 852
+            },
+            "index": 0,
+            "hittable": false,
+            "enabled": true,
+            "label": "GeometryFixture",
+            "depth": 0
+          },
+          {
+            "parentIndex": 0,
+            "type": "Window",
+            "rect": {
+              "x": 0,
+              "height": 393,
+              "y": 0,
+              "width": 852
+            },
+            "index": 1,
+            "hittable": true,
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "depth": 1
+          },
+          {
+            "parentIndex": 1,
+            "type": "Other",
+            "rect": {
+              "x": 0,
+              "height": 393,
+              "y": 0,
+              "width": 852
+            },
+            "index": 2,
+            "hittable": true,
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "depth": 2
+          },
+          {
+            "parentIndex": 2,
+            "type": "Other",
+            "rect": {
+              "x": 0,
+              "height": 393,
+              "y": 0,
+              "width": 852
+            },
+            "index": 3,
+            "hittable": true,
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "depth": 3
+          },
+          {
+            "parentIndex": 3,
+            "type": "Other",
+            "rect": {
+              "x": 0,
+              "height": 393,
+              "y": 0,
+              "width": 852
+            },
+            "index": 4,
+            "hittable": true,
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "depth": 4
+          },
+          {
+            "parentIndex": 4,
+            "type": "StaticText",
+            "rect": {
+              "x": 24,
+              "height": 28,
+              "y": 45,
+              "width": 804
+            },
+            "index": 5,
+            "hittable": true,
+            "enabled": true,
+            "label": "Readiness maintainer fixture",
+            "depth": 5
+          },
+          {
+            "identifier": "mode-clipped",
+            "parentIndex": 4,
+            "type": "Button",
+            "rect": {
+              "x": 24,
+              "height": 36,
+              "y": 82,
+              "width": 110
+            },
+            "index": 6,
+            "enabled": true,
+            "label": "Clipped row",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "parentIndex": 6,
+            "type": "StaticText",
+            "rect": {
+              "x": 38,
+              "height": 18,
+              "y": 91,
+              "width": 82
+            },
+            "index": 7,
+            "hittable": true,
+            "enabled": true,
+            "label": "Clipped row",
+            "depth": 6
+          },
+          {
+            "identifier": "mode-large",
+            "parentIndex": 4,
+            "type": "Button",
+            "rect": {
+              "x": 142,
+              "height": 36,
+              "y": 82,
+              "width": 110
+            },
+            "index": 8,
+            "enabled": true,
+            "label": "Large Other tree",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "parentIndex": 8,
+            "type": "StaticText",
+            "rect": {
+              "x": 142,
+              "height": 18,
+              "y": 91,
+              "width": 110
+            },
+            "index": 9,
+            "hittable": true,
+            "enabled": true,
+            "label": "Large Other tree",
+            "depth": 6
+          },
+          {
+            "identifier": "mode-duplicates",
+            "parentIndex": 4,
+            "type": "Button",
+            "rect": {
+              "x": 260,
+              "height": 36,
+              "y": 82,
+              "width": 110
+            },
+            "index": 10,
+            "enabled": true,
+            "label": "Duplicates",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "parentIndex": 10,
+            "type": "StaticText",
+            "rect": {
+              "x": 278.6666666666667,
+              "height": 18,
+              "y": 91,
+              "width": 73
+            },
+            "index": 11,
+            "hittable": true,
+            "enabled": true,
+            "label": "Duplicates",
+            "depth": 6
+          },
+          {
+            "identifier": "landscape",
+            "parentIndex": 4,
+            "type": "Button",
+            "rect": {
+              "x": 24,
+              "height": 36,
+              "y": 124,
+              "width": 110
+            },
+            "index": 12,
+            "enabled": true,
+            "label": "Landscape",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "parentIndex": 12,
+            "type": "StaticText",
+            "rect": {
+              "x": 41.66666666666667,
+              "height": 18,
+              "y": 133,
+              "width": 75
+            },
+            "index": 13,
+            "hittable": true,
+            "enabled": true,
+            "label": "Landscape",
+            "depth": 6
+          },
+          {
+            "identifier": "portrait",
+            "parentIndex": 4,
+            "type": "Button",
+            "rect": {
+              "x": 142,
+              "height": 36,
+              "y": 124,
+              "width": 110
+            },
+            "index": 14,
+            "enabled": true,
+            "label": "Portrait",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "parentIndex": 14,
+            "type": "StaticText",
+            "rect": {
+              "x": 171.66666666666669,
+              "height": 18,
+              "y": 133,
+              "width": 51
+            },
+            "index": 15,
+            "hittable": true,
+            "enabled": true,
+            "label": "Portrait",
+            "depth": 6
+          },
+          {
+            "parentIndex": 4,
+            "type": "Other",
+            "rect": {
+              "x": 24,
+              "height": 220,
+              "y": 180,
+              "width": 600
+            },
+            "index": 16,
+            "hittable": true,
+            "enabled": true,
+            "label": "Visible tail of row 0",
+            "depth": 5
+          },
+          {
+            "type": "Table",
+            "label": "Visible tail of row 0",
+            "rect": {
+              "x": 24,
+              "height": 220,
+              "y": 180,
+              "width": 600
+            },
+            "depth": 6,
+            "index": 17,
+            "parentIndex": 16,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "Cell",
+            "label": "Visible tail of row 0",
+            "rect": {
+              "x": 24,
+              "height": 400,
+              "y": -150,
+              "width": 600
+            },
+            "depth": 7,
+            "identifier": "clipped-row",
+            "index": 18,
+            "parentIndex": 17,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "x": 24,
+              "height": 400,
+              "y": -150,
+              "width": 600
+            },
+            "depth": 8,
+            "index": 19,
+            "parentIndex": 18,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "y": -150,
+              "width": 600,
+              "height": 400,
+              "x": 24
+            },
+            "depth": 9,
+            "index": 20,
+            "parentIndex": 19,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "StaticText",
+            "label": "Visible tail of row 0",
+            "rect": {
+              "y": 200,
+              "width": 300,
+              "height": 40,
+              "x": 71
+            },
+            "depth": 8,
+            "index": 21,
+            "parentIndex": 18,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "StaticText",
+            "label": "Clipped row",
+            "rect": {
+              "y": -150,
+              "width": 525,
+              "height": 400,
+              "x": 79
+            },
+            "depth": 8,
+            "index": 22,
+            "parentIndex": 18,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "Cell",
+            "label": "Visible tail of row 1",
+            "rect": {
+              "y": 250,
+              "width": 600,
+              "height": 400,
+              "x": 24
+            },
+            "depth": 7,
+            "identifier": "filler-1",
+            "index": 23,
+            "parentIndex": 17,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "y": 250,
+              "width": 600,
+              "height": 400,
+              "x": 24
+            },
+            "depth": 8,
+            "index": 24,
+            "parentIndex": 23,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "y": 250,
+              "width": 600,
+              "height": 400,
+              "x": 24
+            },
+            "depth": 9,
+            "index": 25,
+            "parentIndex": 24,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "StaticText",
+            "label": "Visible tail of row 1",
+            "rect": {
+              "y": 600,
+              "width": 300,
+              "height": 40,
+              "x": 71
+            },
+            "depth": 8,
+            "index": 26,
+            "parentIndex": 23,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "StaticText",
+            "label": "Filler row 1",
+            "rect": {
+              "y": 250,
+              "width": 525,
+              "height": 400,
+              "x": 79
+            },
+            "depth": 8,
+            "index": 27,
+            "parentIndex": 23,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "Cell",
+            "label": "Visible tail of row 2",
+            "rect": {
+              "y": 650,
+              "width": 600,
+              "height": 400,
+              "x": 24
+            },
+            "depth": 7,
+            "identifier": "filler-2",
+            "index": 28,
+            "parentIndex": 17,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "y": 650,
+              "width": 600,
+              "height": 400,
+              "x": 24
+            },
+            "depth": 8,
+            "index": 29,
+            "parentIndex": 28,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "y": 650,
+              "width": 600,
+              "height": 400,
+              "x": 24
+            },
+            "depth": 9,
+            "index": 30,
+            "parentIndex": 29,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "StaticText",
+            "label": "Visible tail of row 2",
+            "rect": {
+              "y": 1000,
+              "width": 300,
+              "height": 40,
+              "x": 71
+            },
+            "depth": 8,
+            "index": 31,
+            "parentIndex": 28,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "StaticText",
+            "label": "Filler row 2",
+            "rect": {
+              "y": 650,
+              "width": 525,
+              "height": 400,
+              "x": 79
+            },
+            "depth": 8,
+            "index": 32,
+            "parentIndex": 28,
+            "hittable": false,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "label": "Vertical scroll bar, 6 pages",
+            "rect": {
+              "y": 180,
+              "width": 30,
+              "height": 200,
+              "x": 591
+            },
+            "depth": 7,
+            "index": 33,
+            "value": "34%",
+            "hittable": true,
+            "parentIndex": 17,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "y": 236.33333333333331,
+              "width": 3,
+              "height": 36,
+              "x": 618
+            },
+            "depth": 8,
+            "index": 34,
+            "parentIndex": 33,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "label": "Horizontal scroll bar, 1 page",
+            "rect": {
+              "y": 347,
+              "width": 565,
+              "height": 30,
+              "x": 59
+            },
+            "depth": 7,
+            "index": 35,
+            "value": "0%",
+            "hittable": true,
+            "parentIndex": 17,
+            "enabled": true
+          },
+          {
+            "type": "Other",
+            "rect": {
+              "y": 374,
+              "width": 556,
+              "height": 3,
+              "x": 62
+            },
+            "depth": 8,
+            "index": 36,
+            "parentIndex": 35,
+            "hittable": true,
+            "enabled": true
+          },
+          {
+            "type": "StaticText",
+            "label": "Mode: clipped\nOther controls: 500",
+            "rect": {
+              "y": 180,
+              "width": 188,
+              "height": 80,
+              "x": 640
+            },
+            "depth": 5,
+            "identifier": "results",
+            "index": 37,
+            "parentIndex": 4,
+            "hittable": true,
+            "enabled": true
+          }
+        ],
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "snapshotQuality": {
+          "backend": "tree",
+          "state": "healthy",
+          "timing": {
+            "acquisitionMs": 33.66899490356445,
+            "presentationMs": 0.04208087921142578
+          }
+        },
+        "presentedSurface": "unknown"
+      }
+    }
+  }
+}

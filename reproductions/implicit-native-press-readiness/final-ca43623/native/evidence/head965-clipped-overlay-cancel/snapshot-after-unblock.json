@@ -1,0 +1,290 @@
+{
+  "nodes": [
+    {
+      "index": 0,
+      "type": "Application",
+      "role": "UIApplication",
+      "label": "GeometryFixture",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852
+      },
+      "enabled": true,
+      "depth": 0,
+      "pid": 71091,
+      "hittable": false,
+      "ref": "e1",
+      "kind": "application"
+    },
+    {
+      "index": 1,
+      "parentIndex": 0,
+      "type": "StaticText",
+      "role": "UILabel",
+      "label": "Clipped-row overlay fixture",
+      "rect": {
+        "x": 24,
+        "y": 45,
+        "width": 345,
+        "height": 28
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e2",
+      "kind": "text"
+    },
+    {
+      "index": 2,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Fade cover",
+      "identifier": "mode-clipped",
+      "rect": {
+        "x": 24,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e3",
+      "kind": "button"
+    },
+    {
+      "index": 3,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Large Other tree",
+      "identifier": "mode-large",
+      "rect": {
+        "x": 142,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e4",
+      "kind": "button"
+    },
+    {
+      "index": 4,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Cover row",
+      "identifier": "mode-duplicates",
+      "rect": {
+        "x": 260,
+        "y": 82,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e5",
+      "kind": "button"
+    },
+    {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Landscape",
+      "identifier": "landscape",
+      "rect": {
+        "x": 24,
+        "y": 124,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    {
+      "index": 6,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Portrait",
+      "identifier": "portrait",
+      "rect": {
+        "x": 142,
+        "y": 124,
+        "width": 110,
+        "height": 36
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e7",
+      "kind": "button"
+    },
+    {
+      "index": 7,
+      "parentIndex": 0,
+      "type": "Table",
+      "role": "UITableView",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 345,
+        "height": 220
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "hiddenContentAbove": true,
+      "hiddenContentBelow": true,
+      "ref": "e8",
+      "kind": "table"
+    },
+    {
+      "index": 8,
+      "parentIndex": 7,
+      "type": "Cell",
+      "role": "UITableViewCellAccessibilityElement",
+      "subrole": "UIAccessibilityElement",
+      "identifier": "clipped-row",
+      "rect": {
+        "x": 24,
+        "y": 180,
+        "width": 345,
+        "height": 70
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 71091,
+      "hittable": true,
+      "label": "Visible tail of row 0",
+      "ref": "e9",
+      "kind": "cell"
+    },
+    {
+      "index": 9,
+      "parentIndex": 8,
+      "type": "StaticText",
+      "role": "UITableViewLabel",
+      "label": "Clipped row",
+      "rect": {
+        "x": 44,
+        "y": 180,
+        "width": 305,
+        "height": 70
+      },
+      "enabled": true,
+      "depth": 3,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e10",
+      "kind": "text"
+    },
+    {
+      "index": 10,
+      "parentIndex": 7,
+      "type": "Cell",
+      "role": "UITableViewCellAccessibilityElement",
+      "subrole": "UIAccessibilityElement",
+      "identifier": "filler-1",
+      "rect": {
+        "x": 24,
+        "y": 250,
+        "width": 345,
+        "height": 150
+      },
+      "enabled": true,
+      "depth": 2,
+      "pid": 71091,
+      "hittable": true,
+      "label": "Filler row 1",
+      "ref": "e11",
+      "kind": "cell"
+    },
+    {
+      "index": 11,
+      "parentIndex": 0,
+      "type": "StaticText",
+      "role": "UILabel",
+      "label": "Mode: clipped\nOther controls: 500",
+      "identifier": "results",
+      "rect": {
+        "x": 24,
+        "y": 420,
+        "width": 345,
+        "height": 80
+      },
+      "enabled": true,
+      "depth": 1,
+      "pid": 71091,
+      "hittable": true,
+      "ref": "e12",
+      "kind": "text"
+    }
+  ],
+  "truncated": false,
+  "appName": "dev.e2e.readinessclipoverlay",
+  "appBundleId": "dev.e2e.readinessclipoverlay",
+  "keyboard": {
+    "kind": "absent",
+    "treeBound": true
+  },
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "presentedSurface": "absent",
+  "visibility": {
+    "partial": true,
+    "visibleNodeCount": 12,
+    "totalNodeCount": 12,
+    "reasons": [
+      "scroll-hidden-above",
+      "scroll-hidden-below"
+    ]
+  },
+  "snapshotQualityNotes": [
+    {
+      "code": "regular-geometry-clipped",
+      "clippedNodeCount": 8,
+      "droppedNodeCount": 3
+    }
+  ],
+  "snapshotDiagnostics": {
+    "stats": {
+      "count": 17,
+      "p50Ms": 35,
+      "p95Ms": 1651,
+      "maxMs": 1651,
+      "slowThresholdMs": 1500,
+      "platform": "ios",
+      "backends": {
+        "simulator-ax-bridge": 16,
+        "apple-runner": 1
+      }
+    }
+  },
+  "refsGeneration": 623987,
+  "identifiers": {
+    "session": "codex-maintainer-head965-clipped-overlay-cancel",
+    "appId": "dev.e2e.readinessclipoverlay",
+    "appBundleId": "dev.e2e.readinessclipoverlay"
+  }
+}

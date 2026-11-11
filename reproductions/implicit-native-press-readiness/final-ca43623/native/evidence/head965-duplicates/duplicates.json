@@ -1,0 +1,42 @@
+[
+  {
+    "index": 7,
+    "parentIndex": 0,
+    "type": "Button",
+    "role": "UIButton",
+    "label": "Duplicate action",
+    "identifier": "duplicate-control",
+    "rect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 1,
+    "pid": 59209,
+    "hittable": true,
+    "ref": "e8",
+    "kind": "button"
+  },
+  {
+    "index": 8,
+    "parentIndex": 0,
+    "type": "Button",
+    "role": "UIButton",
+    "label": "Duplicate action",
+    "identifier": "duplicate-control",
+    "rect": {
+      "x": 24,
+      "y": 290,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 1,
+    "pid": 59209,
+    "hittable": true,
+    "ref": "e9",
+    "kind": "button"
+  }
+]

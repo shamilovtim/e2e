@@ -1,0 +1,755 @@
+{
+  "selected": {
+    "ms": 159.042417,
+    "result": {
+      "ok": true,
+      "data": {
+        "text": "Geometry action",
+        "found": true,
+        "nodes": [
+          {
+            "depth": 0,
+            "index": 0,
+            "label": "Geometry action",
+            "type": "Button",
+            "enabled": true,
+            "hittable": true,
+            "rect": {
+              "width": 220,
+              "height": 42,
+              "x": 478,
+              "y": 310
+            },
+            "identifier": "geometry-action"
+          }
+        ],
+        "currentUptimeMs": 488346632.92600006,
+        "runnerMainThreadBusy": false
+      }
+    }
+  },
+  "raw": {
+    "ms": 1346.4183329999998,
+    "result": {
+      "ok": true,
+      "data": {
+        "nodes": [
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "",
+              "type": 2,
+              "label": "GeometryFixture",
+              "rect": {
+                "width": 557,
+                "x": 238,
+                "height": 821,
+                "y": 220
+              }
+            },
+            "hittable": false,
+            "type": "Application",
+            "label": "GeometryFixture",
+            "rect": {
+              "x": 238,
+              "height": 821,
+              "y": 220,
+              "width": 557
+            },
+            "enabled": true,
+            "index": 0,
+            "depth": 0
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "",
+              "type": 48,
+              "label": "Native geometry fixture",
+              "rect": {
+                "height": 30,
+                "y": 265,
+                "x": 262,
+                "width": 509
+              }
+            },
+            "hittable": true,
+            "type": "StaticText",
+            "label": "Native geometry fixture",
+            "rect": {
+              "x": 262,
+              "height": 30,
+              "y": 265,
+              "width": 509
+            },
+            "parentIndex": 0,
+            "enabled": true,
+            "index": 1,
+            "depth": 1
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "geometry-input",
+              "type": 49,
+              "label": "",
+              "rect": {
+                "x": 262,
+                "width": 200,
+                "height": 42,
+                "y": 310
+              }
+            },
+            "hittable": true,
+            "type": "TextField",
+            "rect": {
+              "x": 262,
+              "height": 42,
+              "y": 310,
+              "width": 200
+            },
+            "parentIndex": 0,
+            "placeholder": "Geometry input",
+            "enabled": true,
+            "index": 2,
+            "identifier": "geometry-input",
+            "depth": 1
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "geometry-action",
+              "type": 9,
+              "label": "Geometry action",
+              "rect": {
+                "width": 220,
+                "height": 42,
+                "x": 478,
+                "y": 310
+              }
+            },
+            "hittable": true,
+            "type": "Button",
+            "label": "Geometry action",
+            "rect": {
+              "x": 478,
+              "height": 42,
+              "y": 310,
+              "width": 220
+            },
+            "parentIndex": 0,
+            "enabled": true,
+            "index": 3,
+            "identifier": "geometry-action",
+            "depth": 1
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "",
+              "type": 48,
+              "label": "Geometry action",
+              "rect": {
+                "height": 18,
+                "x": 531,
+                "y": 322,
+                "width": 114
+              }
+            },
+            "hittable": true,
+            "type": "StaticText",
+            "label": "Geometry action",
+            "rect": {
+              "x": 531,
+              "height": 18,
+              "y": 322,
+              "width": 114
+            },
+            "parentIndex": 3,
+            "enabled": true,
+            "index": 4,
+            "depth": 2
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "landscape",
+              "type": 9,
+              "label": "Landscape",
+              "rect": {
+                "height": 36,
+                "y": 360,
+                "x": 262,
+                "width": 100
+              }
+            },
+            "hittable": true,
+            "type": "Button",
+            "label": "Landscape",
+            "rect": {
+              "x": 262,
+              "height": 36,
+              "y": 360,
+              "width": 100
+            },
+            "parentIndex": 0,
+            "enabled": true,
+            "index": 5,
+            "identifier": "landscape",
+            "depth": 1
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "",
+              "type": 48,
+              "label": "Landscape",
+              "rect": {
+                "height": 18,
+                "width": 75,
+                "x": 274.5,
+                "y": 369
+              }
+            },
+            "hittable": true,
+            "type": "StaticText",
+            "label": "Landscape",
+            "rect": {
+              "x": 274.5,
+              "height": 18,
+              "y": 369,
+              "width": 75
+            },
+            "parentIndex": 5,
+            "enabled": true,
+            "index": 6,
+            "depth": 2
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "portrait",
+              "type": 9,
+              "label": "Portrait",
+              "rect": {
+                "width": 100,
+                "height": 36,
+                "y": 360,
+                "x": 370
+              }
+            },
+            "hittable": true,
+            "type": "Button",
+            "label": "Portrait",
+            "rect": {
+              "x": 370,
+              "height": 36,
+              "y": 360,
+              "width": 100
+            },
+            "parentIndex": 0,
+            "enabled": true,
+            "index": 7,
+            "identifier": "portrait",
+            "depth": 1
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "",
+              "type": 48,
+              "label": "Portrait",
+              "rect": {
+                "y": 369,
+                "x": 394.5,
+                "width": 51,
+                "height": 18
+              }
+            },
+            "hittable": true,
+            "type": "StaticText",
+            "label": "Portrait",
+            "rect": {
+              "x": 394.5,
+              "height": 18,
+              "y": 369,
+              "width": 51
+            },
+            "parentIndex": 7,
+            "enabled": true,
+            "index": 8,
+            "depth": 2
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "hide-keyboard",
+              "type": 9,
+              "label": "Hide keyboard",
+              "rect": {
+                "height": 36,
+                "y": 360,
+                "width": 140,
+                "x": 478
+              }
+            },
+            "hittable": true,
+            "type": "Button",
+            "label": "Hide keyboard",
+            "rect": {
+              "x": 478,
+              "height": 36,
+              "y": 360,
+              "width": 140
+            },
+            "parentIndex": 0,
+            "enabled": true,
+            "index": 9,
+            "identifier": "hide-keyboard",
+            "depth": 1
+          },
+          {
+            "nativePressTarget": {
+              "value": "",
+              "identifier": "",
+              "type": 48,
+              "label": "Hide keyboard",
+              "rect": {
+                "x": 498,
+                "width": 100,
+                "height": 18,
+                "y": 369
+              }
+            },
+            "hittable": true,
+            "type": "StaticText",
+            "label": "Hide keyboard",
+            "rect": {
+              "x": 498,
+              "height": 18,
+              "y": 369,
+              "width": 100
+            },
+            "parentIndex": 9,
+            "enabled": true,
+            "index": 10,
+            "depth": 2
+          },
+          {
+            "nativePressTarget": {
+              "label": "",
+              "value": "",
+              "rect": {
+                "width": 350,
+                "y": 408,
+                "x": 262,
+                "height": 120
+              },
+              "identifier": "",
+              "type": 26
+            },
+            "hittable": true,
+            "type": "Table",
+            "rect": {
+              "width": 350,
+              "y": 408,
+              "height": 120,
+              "x": 262
+            },
+            "parentIndex": 0,
+            "enabled": true,
+            "index": 11,
+            "depth": 1
+          },
+          {
+            "nativePressTarget": {
+              "label": "",
+              "value": "",
+              "rect": {
+                "y": 408,
+                "height": 120,
+                "width": 350,
+                "x": 262
+              },
+              "identifier": "parent-row",
+              "type": 75
+            },
+            "hittable": true,
+            "type": "Cell",
+            "rect": {
+              "width": 350,
+              "y": 408,
+              "height": 120,
+              "x": 262
+            },
+            "parentIndex": 11,
+            "enabled": true,
+            "index": 12,
+            "identifier": "parent-row",
+            "depth": 2
+          },
+          {
+            "nativePressTarget": {
+              "label": "Parent row",
+              "value": "",
+              "rect": {
+                "y": 408,
+                "width": 318,
+                "height": 120,
+                "x": 278
+              },
+              "identifier": "",
+              "type": 48
+            },
+            "hittable": true,
+            "label": "Parent row",
+            "rect": {
+              "width": 318,
+              "y": 408,
+              "height": 120,
+              "x": 278
+            },
+            "type": "StaticText",
+            "parentIndex": 12,
+            "enabled": true,
+            "index": 13,
+            "depth": 3
+          },
+          {
+            "nativePressTarget": {
+              "label": "Child action",
+              "value": "",
+              "rect": {
+                "x": 500,
+                "width": 100,
+                "y": 443,
+                "height": 45
+              },
+              "identifier": "child-action",
+              "type": 9
+            },
+            "hittable": true,
+            "label": "Child action",
+            "rect": {
+              "width": 100,
+              "y": 443,
+              "height": 45,
+              "x": 500
+            },
+            "type": "Button",
+            "parentIndex": 12,
+            "enabled": true,
+            "index": 14,
+            "identifier": "child-action",
+            "depth": 3
+          },
+          {
+            "nativePressTarget": {
+              "label": "Child action",
+              "value": "",
+              "rect": {
+                "width": 82,
+                "x": 509,
+                "y": 456.5,
+                "height": 18
+              },
+              "identifier": "",
+              "type": 48
+            },
+            "hittable": true,
+            "label": "Child action",
+            "rect": {
+              "width": 82,
+              "y": 456.5,
+              "height": 18,
+              "x": 509
+            },
+            "type": "StaticText",
+            "parentIndex": 14,
+            "enabled": true,
+            "index": 15,
+            "depth": 4
+          },
+          {
+            "nativePressTarget": {
+              "label": "Vertical scroll bar, 1 page",
+              "value": "0%",
+              "rect": {
+                "y": 408,
+                "height": 120,
+                "x": 579,
+                "width": 30
+              },
+              "identifier": "",
+              "type": 1
+            },
+            "hittable": true,
+            "label": "Vertical scroll bar, 1 page",
+            "rect": {
+              "width": 30,
+              "y": 408,
+              "height": 120,
+              "x": 579
+            },
+            "type": "Other",
+            "parentIndex": 11,
+            "enabled": true,
+            "index": 16,
+            "depth": 2,
+            "value": "0%"
+          },
+          {
+            "nativePressTarget": {
+              "label": "Horizontal scroll bar, 1 page",
+              "value": "0%",
+              "rect": {
+                "y": 495,
+                "x": 262,
+                "height": 30,
+                "width": 350
+              },
+              "identifier": "",
+              "type": 1
+            },
+            "hittable": true,
+            "label": "Horizontal scroll bar, 1 page",
+            "rect": {
+              "width": 350,
+              "y": 495,
+              "height": 30,
+              "x": 262
+            },
+            "type": "Other",
+            "parentIndex": 11,
+            "enabled": true,
+            "index": 17,
+            "depth": 2,
+            "value": "0%"
+          },
+          {
+            "nativePressTarget": {
+              "label": "",
+              "value": "",
+              "rect": {
+                "y": 408,
+                "height": 95,
+                "x": 648,
+                "width": 123
+              },
+              "identifier": "results",
+              "type": 48
+            },
+            "hittable": true,
+            "type": "StaticText",
+            "rect": {
+              "width": 123,
+              "y": 408,
+              "height": 95,
+              "x": 648
+            },
+            "parentIndex": 0,
+            "enabled": true,
+            "index": 18,
+            "identifier": "results",
+            "depth": 1
+          },
+          {
+            "type": "Button",
+            "index": 19,
+            "enabled": true,
+            "nativePressTarget": {
+              "label": "Duplicate action",
+              "value": "",
+              "rect": {
+                "width": 166,
+                "x": 262,
+                "y": 540,
+                "height": 38
+              },
+              "identifier": "duplicate-action",
+              "type": 9
+            },
+            "identifier": "duplicate-action",
+            "rect": {
+              "width": 166,
+              "y": 540,
+              "height": 38,
+              "x": 262
+            },
+            "label": "Duplicate action",
+            "parentIndex": 0,
+            "depth": 1,
+            "hittable": true
+          },
+          {
+            "type": "StaticText",
+            "index": 20,
+            "enabled": true,
+            "nativePressTarget": {
+              "label": "Duplicate action",
+              "value": "",
+              "rect": {
+                "y": 550,
+                "x": 289.5,
+                "width": 111,
+                "height": 18
+              },
+              "identifier": "",
+              "type": 48
+            },
+            "rect": {
+              "width": 111,
+              "y": 550,
+              "height": 18,
+              "x": 289.5
+            },
+            "label": "Duplicate action",
+            "parentIndex": 19,
+            "depth": 2,
+            "hittable": true
+          },
+          {
+            "type": "Button",
+            "index": 21,
+            "enabled": true,
+            "nativePressTarget": {
+              "label": "Duplicate action",
+              "value": "",
+              "rect": {
+                "height": 38,
+                "y": 540,
+                "width": 166,
+                "x": 440
+              },
+              "identifier": "duplicate-action",
+              "type": 9
+            },
+            "identifier": "duplicate-action",
+            "rect": {
+              "width": 166,
+              "y": 540,
+              "height": 38,
+              "x": 440
+            },
+            "label": "Duplicate action",
+            "parentIndex": 0,
+            "depth": 1,
+            "hittable": true
+          },
+          {
+            "type": "StaticText",
+            "index": 22,
+            "enabled": true,
+            "nativePressTarget": {
+              "label": "Duplicate action",
+              "value": "",
+              "rect": {
+                "y": 550,
+                "width": 111,
+                "height": 18,
+                "x": 467.5
+              },
+              "identifier": "",
+              "type": 48
+            },
+            "rect": {
+              "width": 111,
+              "y": 550,
+              "height": 18,
+              "x": 467.5
+            },
+            "label": "Duplicate action",
+            "parentIndex": 21,
+            "depth": 2,
+            "hittable": true
+          }
+        ],
+        "truncated": false,
+        "runnerMainThreadBusy": false,
+        "currentUptimeMs": 488347981.01883334,
+        "snapshotQuality": {
+          "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+          "customActions": {
+            "candidates": 9,
+            "read": 9,
+            "blocked": false,
+            "truncated": 0
+          },
+          "reasonCode": "requested-backend",
+          "timing": {
+            "presentationMs": 0.12600421905517578,
+            "acquisitionMs": 1309.8289966583252
+          },
+          "state": "recovered",
+          "backend": "private-ax"
+        },
+        "presentedSurface": "unknown"
+      }
+    }
+  },
+  "readinessCommand": "pressReadiness",
+  "snapshotRequest": {
+    "command": "snapshot",
+    "interactiveOnly": true,
+    "customActions": true,
+    "raw": false
+  },
+  "strictTargets": [
+    {
+      "target": {
+        "value": "",
+        "identifier": "geometry-action",
+        "type": 9,
+        "label": "Geometry action",
+        "rect": {
+          "width": 220,
+          "height": 42,
+          "x": 478,
+          "y": 310
+        },
+        "point": {
+          "x": 588,
+          "y": 331
+        }
+      },
+      "strict": [
+        {
+          "ms": 63.122333000000026,
+          "result": {
+            "data": {
+              "pressReadiness": "ready",
+              "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+              "currentUptimeMs": 488348044.8045417,
+              "runnerMainThreadBusy": false
+            },
+            "ok": true
+          }
+        },
+        {
+          "ms": 58.307165999999825,
+          "result": {
+            "data": {
+              "pressReadiness": "ready",
+              "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+              "currentUptimeMs": 488348103.2739584,
+              "runnerMainThreadBusy": false
+            },
+            "ok": true
+          }
+        },
+        {
+          "ms": 54.349666999999954,
+          "result": {
+            "data": {
+              "pressReadiness": "ready",
+              "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+              "currentUptimeMs": 488348157.60850006,
+              "runnerMainThreadBusy": false
+            },
+            "ok": true
+          }
+        }
+      ]
+    }
+  ]
+}

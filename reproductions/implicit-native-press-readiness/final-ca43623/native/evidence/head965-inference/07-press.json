@@ -1,0 +1,31 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "selector": "id=mode-large"
+    },
+    "abortMs": 6000
+  },
+  "ms": 977.8447910000032,
+  "result": {
+    "x": 197,
+    "y": 100,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped id=mode-large (197, 100)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "selector",
+    "selector": "id=mode-large",
+    "selectorChain": [
+      "id=\"mode-large\"",
+      "role=\"button\" label=\"Large Other tree\"",
+      "label=\"Large Other tree\""
+    ],
+    "refLabel": "Large Other tree",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  }
+}

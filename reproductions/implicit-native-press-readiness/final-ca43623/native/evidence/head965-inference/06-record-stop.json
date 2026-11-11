@@ -1,0 +1,36 @@
+{
+  "command": {
+    "action": "record-stop"
+  },
+  "ms": 532.6343330000018,
+  "result": {
+    "recording": "stopped",
+    "outPath": "/tmp/codex-sdk-readiness-maintainer-20261111/evidence/head965-inference/clipped-inference.mp4",
+    "telemetryPath": "/tmp/codex-sdk-readiness-maintainer-20261111/evidence/head965-inference/clipped-inference.gesture-telemetry.json",
+    "artifacts": [
+      {
+        "field": "outPath",
+        "artifactType": "screen-recording",
+        "path": "/tmp/codex-sdk-readiness-maintainer-20261111/evidence/head965-inference/clipped-inference.mp4",
+        "fileName": "clipped-inference.mp4"
+      },
+      {
+        "field": "telemetryPath",
+        "artifactType": "screen-recording-telemetry",
+        "path": "/tmp/codex-sdk-readiness-maintainer-20261111/evidence/head965-inference/clipped-inference.gesture-telemetry.json",
+        "fileName": "clipped-inference.gesture-telemetry.json"
+      }
+    ],
+    "recordingBackend": "simctl recordVideo",
+    "recordingScope": "app",
+    "recordOnlySession": false,
+    "activeSessionApp": {
+      "bundleId": "dev.e2e.readinessmaintainer",
+      "name": "dev.e2e.readinessmaintainer"
+    },
+    "durationMs": 7570,
+    "recorder": "confirmed",
+    "nativePathDisposition": "retired",
+    "showTouches": false
+  }
+}

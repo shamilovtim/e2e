@@ -1,0 +1,404 @@
+{
+  "method": "AVFoundation compressed sample enumeration plus first/final requested sample image decoding. Actual decoded image timestamps are retained; static variable-frame-rate exports can return an earlier final image. This is not full frame-by-frame playback.",
+  "videos": [
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 9.705,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 10.056666666666667,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 28,
+      "video": "evidence/base5a-clipped/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 1178,
+          "requestedSeconds": 0,
+          "width": 2556
+        },
+        {
+          "actualSeconds": 4.235,
+          "frame": "last",
+          "height": 1178,
+          "requestedSeconds": 4.615,
+          "width": 2556
+        }
+      ],
+      "sampleCount": 35,
+      "video": "evidence/base5a-landscape/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 1.4333333333333333,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 7.848333333333334,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 7,
+      "video": "evidence/base5a-large/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 11.495,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 12.603333333333333,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 26,
+      "video": "evidence/head965-clipped/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 3.243333333333333,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 4.596666666666667,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 45,
+      "video": "evidence/head965-duplicates/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 5.7283333333333335,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 6.395,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 7,
+      "video": "evidence/head965-exact-duplicates-3/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 6.971666666666667,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 7.378333333333333,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 11,
+      "video": "evidence/head965-inference/clipped-inference.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 1178,
+          "requestedSeconds": 0,
+          "width": 2556
+        },
+        {
+          "actualSeconds": 4.843333333333334,
+          "frame": "last",
+          "height": 1178,
+          "requestedSeconds": 5.505,
+          "width": 2556
+        }
+      ],
+      "sampleCount": 38,
+      "video": "evidence/head965-landscape/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 0,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 15.388333333333334,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 5,
+      "video": "evidence/head965-large/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 5.34,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 5.928333333333334,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 87,
+      "video": "evidence/head380-clipped-overlay-cancel/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 6.68,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 7.306666666666667,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 26,
+      "video": "evidence/head380-clipped/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 3.2066666666666666,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 3.905,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 42,
+      "video": "evidence/head380-duplicates/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 0,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 7.415,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 5,
+      "video": "evidence/head380-exact-duplicates/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2752,
+          "requestedSeconds": 0,
+          "width": 2064
+        },
+        {
+          "actualSeconds": 6.878333333333333,
+          "frame": "last",
+          "height": 2752,
+          "requestedSeconds": 7.083333333333333,
+          "width": 2064
+        }
+      ],
+      "sampleCount": 37,
+      "video": "evidence/head380-ipad-placed-ref/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 1178,
+          "requestedSeconds": 0,
+          "width": 2556
+        },
+        {
+          "actualSeconds": 4.446666666666666,
+          "frame": "last",
+          "height": 1178,
+          "requestedSeconds": 4.925,
+          "width": 2556
+        }
+      ],
+      "sampleCount": 40,
+      "video": "evidence/head380-landscape/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 2.115,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 9.418333333333333,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 10,
+      "video": "evidence/head380-large/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 5.626666666666667,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 6.558333333333334,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 87,
+      "video": "evidence/head965-clipped-overlay-cancel/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 3.256666666666667,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 4.251666666666667,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 115,
+      "video": "final-a3-smoke/sdk-final/fade750-1/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 3.08,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 4.031666666666666,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 114,
+      "video": "final-bef-smoke/sdk-final/fade750-1/video.mp4"
+    }
+  ]
+}

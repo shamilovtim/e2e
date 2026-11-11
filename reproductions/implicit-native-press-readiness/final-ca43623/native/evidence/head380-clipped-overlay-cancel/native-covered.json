@@ -1,0 +1,1066 @@
+{
+  "selected": {
+    "ms": 52.436125000000004,
+    "result": {
+      "ok": true,
+      "data": {
+        "currentUptimeMs": 487864380.56795835,
+        "runnerMainThreadBusy": false,
+        "found": false,
+        "nodes": []
+      }
+    }
+  },
+  "raw": {
+    "ms": 61.518708000000004,
+    "result": {
+      "data": {
+        "runnerMainThreadBusy": false,
+        "truncated": false,
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "presentedSurface": "unknown",
+        "nodes": [
+          {
+            "type": "Application",
+            "enabled": true,
+            "index": 0,
+            "rect": {
+              "width": 393,
+              "y": 0,
+              "x": 0,
+              "height": 852
+            },
+            "label": "GeometryFixture",
+            "nativePressTarget": {
+              "type": 2,
+              "label": "GeometryFixture",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 393,
+                "height": 852
+              }
+            },
+            "hittable": false,
+            "depth": 0
+          },
+          {
+            "type": "Window",
+            "enabled": true,
+            "parentIndex": 0,
+            "index": 1,
+            "rect": {
+              "width": 393,
+              "y": 0,
+              "x": 0,
+              "height": 852
+            },
+            "label": "Clipped-row overlay fixture",
+            "nativePressTarget": {
+              "type": 4,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 393,
+                "height": 852
+              }
+            },
+            "hittable": true,
+            "depth": 1
+          },
+          {
+            "type": "Other",
+            "enabled": true,
+            "parentIndex": 1,
+            "index": 2,
+            "rect": {
+              "width": 393,
+              "y": 0,
+              "x": 0,
+              "height": 852
+            },
+            "label": "Clipped-row overlay fixture",
+            "nativePressTarget": {
+              "type": 1,
+              "rect": {
+                "y": 0,
+                "height": 852,
+                "x": 0,
+                "width": 393
+              }
+            },
+            "hittable": true,
+            "depth": 2
+          },
+          {
+            "type": "Other",
+            "enabled": true,
+            "parentIndex": 2,
+            "index": 3,
+            "rect": {
+              "width": 393,
+              "y": 0,
+              "x": 0,
+              "height": 852
+            },
+            "label": "Clipped-row overlay fixture",
+            "nativePressTarget": {
+              "type": 1,
+              "rect": {
+                "y": 0,
+                "height": 852,
+                "x": 0,
+                "width": 393
+              }
+            },
+            "hittable": true,
+            "depth": 3
+          },
+          {
+            "type": "Other",
+            "enabled": true,
+            "parentIndex": 3,
+            "index": 4,
+            "rect": {
+              "width": 393,
+              "y": 0,
+              "x": 0,
+              "height": 852
+            },
+            "label": "Clipped-row overlay fixture",
+            "nativePressTarget": {
+              "type": 1,
+              "rect": {
+                "x": 0,
+                "width": 393,
+                "y": 0,
+                "height": 852
+              }
+            },
+            "hittable": true,
+            "depth": 4
+          },
+          {
+            "type": "StaticText",
+            "enabled": true,
+            "parentIndex": 4,
+            "index": 5,
+            "rect": {
+              "width": 345,
+              "y": 45,
+              "x": 24,
+              "height": 28
+            },
+            "label": "Clipped-row overlay fixture",
+            "nativePressTarget": {
+              "type": 48,
+              "label": "Clipped-row overlay fixture",
+              "rect": {
+                "width": 345,
+                "y": 45,
+                "height": 28,
+                "x": 24
+              }
+            },
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "type": "Button",
+            "enabled": true,
+            "parentIndex": 4,
+            "index": 6,
+            "rect": {
+              "y": 82,
+              "width": 110,
+              "x": 24,
+              "height": 36
+            },
+            "identifier": "mode-clipped",
+            "label": "Fade cover",
+            "nativePressTarget": {
+              "label": "Fade cover",
+              "rect": {
+                "width": 110,
+                "y": 82,
+                "x": 24,
+                "height": 36
+              },
+              "type": 9,
+              "identifier": "mode-clipped"
+            },
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "type": "StaticText",
+            "enabled": true,
+            "parentIndex": 6,
+            "index": 7,
+            "rect": {
+              "x": 41,
+              "y": 91,
+              "width": 76,
+              "height": 18
+            },
+            "nativePressTarget": {
+              "rect": {
+                "y": 91,
+                "height": 18,
+                "x": 41,
+                "width": 76
+              },
+              "type": 48,
+              "label": "Fade cover"
+            },
+            "label": "Fade cover",
+            "hittable": true,
+            "depth": 6
+          },
+          {
+            "type": "Button",
+            "enabled": true,
+            "parentIndex": 4,
+            "index": 8,
+            "identifier": "mode-large",
+            "rect": {
+              "x": 142,
+              "y": 82,
+              "width": 110,
+              "height": 36
+            },
+            "nativePressTarget": {
+              "rect": {
+                "x": 142,
+                "y": 82,
+                "width": 110,
+                "height": 36
+              },
+              "type": 9,
+              "identifier": "mode-large",
+              "label": "Large Other tree"
+            },
+            "label": "Large Other tree",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "type": "StaticText",
+            "enabled": true,
+            "parentIndex": 8,
+            "index": 9,
+            "rect": {
+              "x": 142,
+              "y": 91,
+              "width": 110,
+              "height": 18
+            },
+            "nativePressTarget": {
+              "rect": {
+                "height": 18,
+                "x": 142,
+                "y": 91,
+                "width": 110
+              },
+              "type": 48,
+              "label": "Large Other tree"
+            },
+            "label": "Large Other tree",
+            "hittable": true,
+            "depth": 6
+          },
+          {
+            "type": "Button",
+            "enabled": true,
+            "parentIndex": 4,
+            "index": 10,
+            "identifier": "mode-duplicates",
+            "rect": {
+              "x": 260,
+              "y": 82,
+              "width": 110,
+              "height": 36
+            },
+            "nativePressTarget": {
+              "rect": {
+                "y": 82,
+                "x": 260,
+                "height": 36,
+                "width": 110
+              },
+              "type": 9,
+              "identifier": "mode-duplicates",
+              "label": "Cover row"
+            },
+            "label": "Cover row",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "type": "StaticText",
+            "enabled": true,
+            "parentIndex": 10,
+            "index": 11,
+            "rect": {
+              "x": 280,
+              "y": 91,
+              "width": 70,
+              "height": 18
+            },
+            "nativePressTarget": {
+              "rect": {
+                "y": 91,
+                "width": 70,
+                "x": 280,
+                "height": 18
+              },
+              "type": 48,
+              "label": "Cover row"
+            },
+            "label": "Cover row",
+            "hittable": true,
+            "depth": 6
+          },
+          {
+            "type": "Button",
+            "enabled": true,
+            "parentIndex": 4,
+            "index": 12,
+            "identifier": "landscape",
+            "rect": {
+              "x": 24,
+              "y": 124,
+              "width": 110,
+              "height": 36
+            },
+            "nativePressTarget": {
+              "rect": {
+                "y": 124,
+                "width": 110,
+                "x": 24,
+                "height": 36
+              },
+              "type": 9,
+              "identifier": "landscape",
+              "label": "Landscape"
+            },
+            "label": "Landscape",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "type": "StaticText",
+            "enabled": true,
+            "parentIndex": 12,
+            "index": 13,
+            "rect": {
+              "x": 41.66666666666667,
+              "y": 133,
+              "width": 75,
+              "height": 18
+            },
+            "nativePressTarget": {
+              "rect": {
+                "x": 41.66666666666667,
+                "y": 133,
+                "width": 75,
+                "height": 18
+              },
+              "type": 48,
+              "label": "Landscape"
+            },
+            "label": "Landscape",
+            "hittable": true,
+            "depth": 6
+          },
+          {
+            "type": "Button",
+            "enabled": true,
+            "parentIndex": 4,
+            "index": 14,
+            "identifier": "portrait",
+            "rect": {
+              "x": 142,
+              "y": 124,
+              "width": 110,
+              "height": 36
+            },
+            "nativePressTarget": {
+              "rect": {
+                "x": 142,
+                "y": 124,
+                "width": 110,
+                "height": 36
+              },
+              "type": 9,
+              "identifier": "portrait",
+              "label": "Portrait"
+            },
+            "label": "Portrait",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "type": "StaticText",
+            "enabled": true,
+            "parentIndex": 14,
+            "index": 15,
+            "rect": {
+              "x": 171.66666666666669,
+              "y": 133,
+              "width": 51,
+              "height": 18
+            },
+            "nativePressTarget": {
+              "rect": {
+                "height": 18,
+                "x": 171.66666666666669,
+                "y": 133,
+                "width": 51
+              },
+              "type": 48,
+              "label": "Portrait"
+            },
+            "label": "Portrait",
+            "hittable": true,
+            "depth": 6
+          },
+          {
+            "type": "Other",
+            "enabled": true,
+            "parentIndex": 4,
+            "index": 16,
+            "rect": {
+              "x": 24,
+              "y": 180,
+              "width": 345,
+              "height": 220
+            },
+            "nativePressTarget": {
+              "rect": {
+                "x": 24,
+                "height": 220,
+                "width": 345,
+                "y": 180
+              },
+              "type": 1
+            },
+            "label": "Visible tail of row 0",
+            "hittable": true,
+            "depth": 5
+          },
+          {
+            "type": "Other",
+            "enabled": true,
+            "parentIndex": 16,
+            "index": 17,
+            "rect": {
+              "x": 24,
+              "y": 180,
+              "width": 345,
+              "height": 70
+            },
+            "nativePressTarget": {
+              "rect": {
+                "x": 24,
+                "y": 180,
+                "height": 70,
+                "width": 345
+              },
+              "type": 1
+            },
+            "hittable": true,
+            "depth": 6
+          },
+          {
+            "type": "Table",
+            "enabled": true,
+            "parentIndex": 16,
+            "index": 18,
+            "rect": {
+              "y": 180,
+              "width": 345,
+              "height": 220,
+              "x": 24
+            },
+            "label": "Visible tail of row 0",
+            "nativePressTarget": {
+              "type": 26,
+              "rect": {
+                "x": 24,
+                "y": 180,
+                "width": 345,
+                "height": 220
+              }
+            },
+            "hittable": true,
+            "depth": 6
+          },
+          {
+            "type": "Cell",
+            "enabled": true,
+            "parentIndex": 18,
+            "index": 19,
+            "identifier": "clipped-row",
+            "rect": {
+              "width": 345,
+              "y": -150,
+              "height": 400,
+              "x": 24
+            },
+            "label": "Visible tail of row 0",
+            "nativePressTarget": {
+              "rect": {
+                "x": 24,
+                "width": 345,
+                "y": -150,
+                "height": 400
+              },
+              "type": 75,
+              "identifier": "clipped-row"
+            },
+            "hittable": true,
+            "depth": 7
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "Other",
+            "index": 20,
+            "parentIndex": 19,
+            "nativePressTarget": {
+              "rect": {
+                "y": -150,
+                "width": 345,
+                "height": 400,
+                "x": 24
+              },
+              "type": 1
+            },
+            "rect": {
+              "width": 345,
+              "y": -150,
+              "height": 400,
+              "x": 24
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 9,
+            "enabled": true,
+            "type": "Other",
+            "index": 21,
+            "parentIndex": 20,
+            "nativePressTarget": {
+              "rect": {
+                "x": 24,
+                "width": 345,
+                "height": 400,
+                "y": -150
+              },
+              "type": 1
+            },
+            "rect": {
+              "width": 345,
+              "y": -150,
+              "height": 400,
+              "x": 24
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "StaticText",
+            "index": 22,
+            "parentIndex": 19,
+            "nativePressTarget": {
+              "label": "Visible tail of row 0",
+              "rect": {
+                "x": 36,
+                "height": 40,
+                "width": 300,
+                "y": 200
+              },
+              "type": 48
+            },
+            "label": "Visible tail of row 0",
+            "rect": {
+              "width": 300,
+              "y": 200,
+              "height": 40,
+              "x": 36
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "StaticText",
+            "index": 23,
+            "parentIndex": 19,
+            "nativePressTarget": {
+              "label": "Clipped row",
+              "rect": {
+                "y": -150,
+                "height": 400,
+                "x": 44,
+                "width": 305
+              },
+              "type": 48
+            },
+            "label": "Clipped row",
+            "rect": {
+              "width": 305,
+              "y": -150,
+              "height": 400,
+              "x": 44
+            }
+          },
+          {
+            "identifier": "filler-1",
+            "hittable": true,
+            "depth": 7,
+            "type": "Cell",
+            "enabled": true,
+            "index": 24,
+            "parentIndex": 18,
+            "nativePressTarget": {
+              "rect": {
+                "y": 250,
+                "width": 345,
+                "height": 400,
+                "x": 24
+              },
+              "type": 75,
+              "identifier": "filler-1"
+            },
+            "label": "Visible tail of row 1",
+            "rect": {
+              "width": 345,
+              "y": 250,
+              "height": 400,
+              "x": 24
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "Other",
+            "index": 25,
+            "parentIndex": 24,
+            "nativePressTarget": {
+              "rect": {
+                "y": 250,
+                "height": 400,
+                "x": 24,
+                "width": 345
+              },
+              "type": 1
+            },
+            "rect": {
+              "width": 345,
+              "y": 250,
+              "height": 400,
+              "x": 24
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 9,
+            "enabled": true,
+            "type": "Other",
+            "index": 26,
+            "parentIndex": 25,
+            "nativePressTarget": {
+              "rect": {
+                "width": 345,
+                "height": 400,
+                "y": 250,
+                "x": 24
+              },
+              "type": 1
+            },
+            "rect": {
+              "width": 345,
+              "y": 250,
+              "height": 400,
+              "x": 24
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "StaticText",
+            "index": 27,
+            "parentIndex": 24,
+            "nativePressTarget": {
+              "label": "Visible tail of row 1",
+              "rect": {
+                "width": 300,
+                "height": 40,
+                "x": 36,
+                "y": 600
+              },
+              "type": 48
+            },
+            "label": "Visible tail of row 1",
+            "rect": {
+              "width": 300,
+              "y": 600,
+              "height": 40,
+              "x": 36
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "StaticText",
+            "index": 28,
+            "parentIndex": 24,
+            "nativePressTarget": {
+              "label": "Filler row 1",
+              "rect": {
+                "y": 250,
+                "width": 305,
+                "x": 44,
+                "height": 400
+              },
+              "type": 48
+            },
+            "label": "Filler row 1",
+            "rect": {
+              "width": 305,
+              "y": 250,
+              "height": 400,
+              "x": 44
+            }
+          },
+          {
+            "identifier": "filler-2",
+            "hittable": true,
+            "depth": 7,
+            "type": "Cell",
+            "enabled": true,
+            "index": 29,
+            "parentIndex": 18,
+            "nativePressTarget": {
+              "rect": {
+                "height": 400,
+                "width": 345,
+                "x": 24,
+                "y": 650
+              },
+              "type": 75,
+              "identifier": "filler-2"
+            },
+            "label": "Filler row 2",
+            "rect": {
+              "width": 345,
+              "y": 650,
+              "height": 400,
+              "x": 24
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "Other",
+            "index": 30,
+            "parentIndex": 29,
+            "nativePressTarget": {
+              "type": 1,
+              "rect": {
+                "width": 345,
+                "y": -150,
+                "height": 400,
+                "x": 24
+              }
+            },
+            "rect": {
+              "width": 345,
+              "height": 400,
+              "y": -150,
+              "x": 24
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 9,
+            "enabled": true,
+            "type": "Other",
+            "index": 31,
+            "parentIndex": 30,
+            "nativePressTarget": {
+              "rect": {
+                "height": 400,
+                "x": 24,
+                "width": 345,
+                "y": -150
+              },
+              "type": 1
+            },
+            "rect": {
+              "y": -150,
+              "x": 24,
+              "height": 400,
+              "width": 345
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "StaticText",
+            "index": 32,
+            "parentIndex": 29,
+            "nativePressTarget": {
+              "label": "Filler row 2",
+              "rect": {
+                "y": -150,
+                "width": 305,
+                "x": 24,
+                "height": 400
+              },
+              "type": 48
+            },
+            "label": "Filler row 2",
+            "rect": {
+              "y": -150,
+              "x": 24,
+              "height": 400,
+              "width": 305
+            }
+          },
+          {
+            "hittable": false,
+            "depth": 8,
+            "enabled": true,
+            "type": "StaticText",
+            "index": 33,
+            "parentIndex": 29,
+            "nativePressTarget": {
+              "label": "Visible tail of row 2",
+              "rect": {
+                "x": 24,
+                "y": -150,
+                "width": 300,
+                "height": 40
+              },
+              "type": 48
+            },
+            "label": "Visible tail of row 2",
+            "rect": {
+              "y": -150,
+              "x": 24,
+              "height": 40,
+              "width": 300
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 7,
+            "value": "34%",
+            "type": "Other",
+            "enabled": true,
+            "index": 34,
+            "parentIndex": 18,
+            "nativePressTarget": {
+              "value": "34%",
+              "label": "Vertical scroll bar, 6 pages",
+              "rect": {
+                "width": 30,
+                "y": 180,
+                "height": 220,
+                "x": 336
+              },
+              "type": 1
+            },
+            "label": "Vertical scroll bar, 6 pages",
+            "rect": {
+              "y": 180,
+              "x": 336,
+              "height": 220,
+              "width": 30
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "Other",
+            "index": 35,
+            "parentIndex": 34,
+            "nativePressTarget": {
+              "rect": {
+                "width": 3,
+                "y": 241.66666666666669,
+                "height": 39.333333333333314,
+                "x": 363
+              },
+              "type": 1
+            },
+            "rect": {
+              "y": 241.66666666666669,
+              "x": 363,
+              "height": 39.333333333333314,
+              "width": 3
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 7,
+            "value": "0%",
+            "type": "Other",
+            "enabled": true,
+            "index": 36,
+            "parentIndex": 18,
+            "nativePressTarget": {
+              "value": "0%",
+              "label": "Horizontal scroll bar, 1 page",
+              "rect": {
+                "x": 24,
+                "width": 345,
+                "height": 30,
+                "y": 367
+              },
+              "type": 1
+            },
+            "label": "Horizontal scroll bar, 1 page",
+            "rect": {
+              "y": 367,
+              "x": 24,
+              "height": 30,
+              "width": 345
+            }
+          },
+          {
+            "hittable": true,
+            "depth": 8,
+            "enabled": true,
+            "type": "Other",
+            "index": 37,
+            "parentIndex": 36,
+            "nativePressTarget": {
+              "rect": {
+                "height": 3,
+                "x": 27,
+                "y": 394,
+                "width": 336
+              },
+              "type": 1
+            },
+            "rect": {
+              "y": 394,
+              "x": 27,
+              "height": 3,
+              "width": 336
+            }
+          },
+          {
+            "identifier": "results",
+            "hittable": true,
+            "depth": 5,
+            "type": "StaticText",
+            "enabled": true,
+            "index": 38,
+            "parentIndex": 4,
+            "nativePressTarget": {
+              "label": "Mode: clipped\nOther controls: 500",
+              "identifier": "results",
+              "rect": {
+                "x": 24,
+                "y": 420,
+                "width": 345,
+                "height": 80
+              },
+              "type": 48
+            },
+            "label": "Mode: clipped\nOther controls: 500",
+            "rect": {
+              "y": 420,
+              "x": 24,
+              "height": 80,
+              "width": 345
+            }
+          }
+        ],
+        "snapshotQuality": {
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 32.19199180603027,
+            "presentationMs": 0.047087669372558594
+          },
+          "state": "healthy"
+        },
+        "currentUptimeMs": 487864443.731625
+      },
+      "ok": true
+    }
+  },
+  "readinessCommand": "pressReadiness",
+  "strictTargets": [
+    {
+      "target": {
+        "rect": {
+          "x": 24,
+          "width": 345,
+          "y": -150,
+          "height": 400
+        },
+        "type": 75,
+        "identifier": "clipped-row",
+        "point": {
+          "x": 197,
+          "y": 215
+        }
+      },
+      "strict": [
+        {
+          "ms": 68.531292,
+          "result": {
+            "ok": true,
+            "data": {
+              "currentUptimeMs": 487864512.43483335,
+              "runnerMainThreadBusy": false,
+              "pressReadiness": "blocked",
+              "pressReadinessAppBundleId": "dev.e2e.readinessclipoverlay"
+            }
+          }
+        },
+        {
+          "ms": 66.17754099999996,
+          "result": {
+            "data": {
+              "pressReadinessAppBundleId": "dev.e2e.readinessclipoverlay",
+              "pressReadiness": "blocked",
+              "currentUptimeMs": 487864579.06012505,
+              "runnerMainThreadBusy": false
+            },
+            "ok": true
+          }
+        },
+        {
+          "ms": 65.91333299999997,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadinessAppBundleId": "dev.e2e.readinessclipoverlay",
+              "currentUptimeMs": 487864644.886875,
+              "runnerMainThreadBusy": false,
+              "pressReadiness": "blocked"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

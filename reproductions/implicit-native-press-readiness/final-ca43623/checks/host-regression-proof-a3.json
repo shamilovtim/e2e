@@ -1,0 +1,21 @@
+{
+  "head": "a3ced6829d5fb889487f039c5525ac07de94e1d3",
+  "isolatedCheckoutBase": "a3ced6829d5fb889487f039c5525ac07de94e1d3",
+  "withoutFix": "Only the host press-readiness.ts guard was restored to965e77bc0462516aa535a8f3060cb4b465fe86b5 in a disposable checkout.",
+  "command": "pnpm exec vitest run --project unit-core packages/command-runtime/src/commands/interaction/runtime/press-readiness.test.ts -t 'press waits for native readiness|unconfirmed missing'",
+  "withoutFixResult": {
+    "passed": 0,
+    "failed": 3,
+    "skipped": 17,
+    "observed": [
+      "canonical capture occurred inside blocked native polling",
+      "missing native target waited until enclosing deadline"
+    ]
+  },
+  "withFixResult": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 17
+  },
+  "cleanup": "Disposable checkout removed; reviewed checkout remains clean at recorded head."
+}

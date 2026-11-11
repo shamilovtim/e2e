@@ -1,0 +1,393 @@
+{
+  "phase": "head380-ipad-placed-ref",
+  "app": "dev.e2e.readinessgeometry",
+  "openOptions": {
+    "app": "dev.e2e.readinessgeometry",
+    "platform": "ios",
+    "udid": "3C02ABAC-069D-43C5-8EE9-C3FA3BD1947E",
+    "relaunch": true,
+    "foreground": false
+  },
+  "snapshotOptions": {
+    "interactiveOnly": true,
+    "customActions": true
+  },
+  "observationAbortMs": 8000,
+  "open": {
+    "session": "codex-maintainer-head380-ipad-placed-ref",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-ipad-placed-ref/sessions/codex-maintainer-head380-ipad-placed-ref",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-ipad-placed-ref/sessions/codex-maintainer-head380-ipad-placed-ref/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-ipad-placed-ref/sessions/codex-maintainer-head380-ipad-placed-ref/requests/80f5e8c3deecefaf.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head380-ipad-placed-ref/sessions/codex-maintainer-head380-ipad-placed-ref/events.ndjson",
+    "appName": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry",
+    "appId": "dev.e2e.readinessgeometry",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 2856,
+      "measuredAt": "2026-11-11T05:48:56.496Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "3C02ABAC-069D-43C5-8EE9-C3FA3BD1947E",
+      "name": "Codex Readiness Numeric iPad QA 20261111",
+      "identifiers": {
+        "deviceId": "3C02ABAC-069D-43C5-8EE9-C3FA3BD1947E",
+        "deviceName": "Codex Readiness Numeric iPad QA 20261111",
+        "udid": "3C02ABAC-069D-43C5-8EE9-C3FA3BD1947E"
+      },
+      "ios": {
+        "udid": "3C02ABAC-069D-43C5-8EE9-C3FA3BD1947E",
+        "simulatorSetPath": null
+      }
+    },
+    "identifiers": {
+      "session": "codex-maintainer-head380-ipad-placed-ref",
+      "deviceId": "3C02ABAC-069D-43C5-8EE9-C3FA3BD1947E",
+      "deviceName": "Codex Readiness Numeric iPad QA 20261111",
+      "udid": "3C02ABAC-069D-43C5-8EE9-C3FA3BD1947E",
+      "appId": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  },
+  "snapshot": {
+    "nodes": [
+      {
+        "enabled": true,
+        "rect": {
+          "y": 220,
+          "width": 557,
+          "x": 238,
+          "height": 821
+        },
+        "hittable": false,
+        "depth": 0,
+        "label": "GeometryFixture",
+        "index": 0,
+        "type": "Application",
+        "ref": "e1",
+        "kind": "application"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "y": 265,
+          "width": 509,
+          "x": 262,
+          "height": 30
+        },
+        "hittable": true,
+        "depth": 1,
+        "label": "Native geometry fixture",
+        "parentIndex": 0,
+        "index": 1,
+        "type": "StaticText",
+        "ref": "e2",
+        "kind": "text"
+      },
+      {
+        "placeholder": "Geometry input",
+        "enabled": true,
+        "rect": {
+          "y": 310,
+          "width": 200,
+          "height": 42,
+          "x": 262
+        },
+        "hittable": true,
+        "depth": 1,
+        "identifier": "geometry-input",
+        "parentIndex": 0,
+        "index": 2,
+        "type": "TextField",
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "width": 220,
+          "x": 478,
+          "height": 42,
+          "y": 310
+        },
+        "hittable": true,
+        "depth": 1,
+        "identifier": "geometry-action",
+        "label": "Geometry action",
+        "parentIndex": 0,
+        "index": 3,
+        "type": "Button",
+        "ref": "e4",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "width": 100,
+          "x": 262,
+          "height": 36,
+          "y": 360
+        },
+        "hittable": true,
+        "depth": 1,
+        "identifier": "landscape",
+        "label": "Landscape",
+        "parentIndex": 0,
+        "index": 4,
+        "type": "Button",
+        "ref": "e5",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "width": 100,
+          "x": 370,
+          "height": 36,
+          "y": 360
+        },
+        "hittable": true,
+        "depth": 1,
+        "identifier": "portrait",
+        "label": "Portrait",
+        "parentIndex": 0,
+        "index": 5,
+        "type": "Button",
+        "ref": "e6",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "width": 140,
+          "x": 478,
+          "height": 36,
+          "y": 360
+        },
+        "hittable": true,
+        "depth": 1,
+        "identifier": "hide-keyboard",
+        "label": "Hide keyboard",
+        "parentIndex": 0,
+        "index": 6,
+        "type": "Button",
+        "ref": "e7",
+        "kind": "button"
+      },
+      {
+        "index": 7,
+        "rect": {
+          "width": 350,
+          "x": 262,
+          "height": 120,
+          "y": 408
+        },
+        "hittable": true,
+        "depth": 1,
+        "parentIndex": 0,
+        "enabled": true,
+        "type": "Table",
+        "hiddenContentBelow": true,
+        "ref": "e8",
+        "kind": "table"
+      },
+      {
+        "index": 8,
+        "rect": {
+          "width": 350,
+          "x": 262,
+          "height": 120,
+          "y": 408
+        },
+        "hittable": true,
+        "depth": 2,
+        "identifier": "parent-row",
+        "parentIndex": 7,
+        "enabled": true,
+        "type": "Cell",
+        "label": "Parent row",
+        "ref": "e9",
+        "kind": "cell"
+      },
+      {
+        "enabled": true,
+        "rect": {
+          "width": 100,
+          "y": 443,
+          "height": 45,
+          "x": 500
+        },
+        "hittable": true,
+        "depth": 3,
+        "identifier": "child-action",
+        "label": "Child action",
+        "parentIndex": 8,
+        "index": 9,
+        "type": "Button",
+        "ref": "e10",
+        "kind": "button"
+      },
+      {
+        "type": "StaticText",
+        "rect": {
+          "height": 95,
+          "y": 408,
+          "width": 123,
+          "x": 648
+        },
+        "hittable": true,
+        "depth": 1,
+        "identifier": "results",
+        "parentIndex": 0,
+        "enabled": true,
+        "index": 10,
+        "ref": "e11",
+        "kind": "text"
+      },
+      {
+        "type": "Button",
+        "index": 11,
+        "enabled": true,
+        "identifier": "duplicate-action",
+        "label": "Duplicate action",
+        "rect": {
+          "height": 38,
+          "y": 540,
+          "width": 166,
+          "x": 262
+        },
+        "parentIndex": 0,
+        "depth": 1,
+        "hittable": true,
+        "ref": "e12",
+        "kind": "button"
+      },
+      {
+        "type": "Button",
+        "index": 12,
+        "enabled": true,
+        "identifier": "duplicate-action",
+        "label": "Duplicate action",
+        "rect": {
+          "height": 38,
+          "y": 540,
+          "width": 166,
+          "x": 440
+        },
+        "parentIndex": 0,
+        "depth": 1,
+        "hittable": true,
+        "ref": "e13",
+        "kind": "button"
+      }
+    ],
+    "truncated": false,
+    "appName": "dev.e2e.readinessgeometry",
+    "appBundleId": "dev.e2e.readinessgeometry",
+    "viewport": {
+      "width": 557,
+      "height": 821
+    },
+    "presentedSurface": "unknown",
+    "visibility": {
+      "partial": true,
+      "visibleNodeCount": 13,
+      "totalNodeCount": 13,
+      "reasons": [
+        "scroll-hidden-below"
+      ]
+    },
+    "snapshotQuality": {
+      "state": "recovered",
+      "backend": "private-ax",
+      "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+      "reasonCode": "requested-backend",
+      "customActions": {
+        "read": 9,
+        "candidates": 9,
+        "truncated": 0,
+        "blocked": false
+      },
+      "timing": {
+        "acquisitionMs": 1293.524980545044,
+        "presentationMs": 0.1800060272216797
+      }
+    },
+    "snapshotDiagnostics": {
+      "stats": {
+        "count": 2,
+        "p50Ms": 1340,
+        "p95Ms": 2822,
+        "maxMs": 2822,
+        "slowThresholdMs": 1500,
+        "platform": "ios",
+        "backends": {
+          "apple-runner": 2
+        }
+      }
+    },
+    "refsGeneration": 428967,
+    "identifiers": {
+      "session": "codex-maintainer-head380-ipad-placed-ref",
+      "appId": "dev.e2e.readinessgeometry",
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  },
+  "target": {
+    "ref": "@e4"
+  },
+  "press": {
+    "x": 588,
+    "y": 331,
+    "message": "Tapped @e4 (588, 331)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 557,
+    "referenceHeight": 821,
+    "targetKind": "ref",
+    "ref": "e4",
+    "refLabel": "Geometry action",
+    "selectorChain": [
+      "id=\"geometry-action\"",
+      "role=\"button\" label=\"Geometry action\"",
+      "label=\"Geometry action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 472.2122080000008,
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.00883336178958416
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 23.98966666078195,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 557.0, 821.0)"
+    },
+    {
+      "count": 1,
+      "event": "actionReceivedTap",
+      "ms": 9650.928875023965,
+      "orientation": 1
+    }
+  ]
+}

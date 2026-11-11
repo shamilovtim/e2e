@@ -1,0 +1,31 @@
+{
+  "command": {
+    "action": "press",
+    "target": {
+      "ref": "@e10"
+    },
+    "abortMs": 6000
+  },
+  "ms": 645.1893750000017,
+  "result": {
+    "x": 197,
+    "y": 215,
+    "message": "Tapped @e10 (197, 215)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e10",
+    "refLabel": "Visible tail of row 0",
+    "selectorChain": [
+      "id=\"clipped-row\"",
+      "role=\"cell\" label=\"Visible tail of row 0\"",
+      "label=\"Visible tail of row 0\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  }
+}

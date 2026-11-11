@@ -1,0 +1,373 @@
+{
+  "command": {
+    "action": "open"
+  },
+  "ms": 9042.318083999999,
+  "result": {
+    "session": "codex-geometry-head965-inference",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-inference/sessions/codex-geometry-head965-inference",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-inference/sessions/codex-geometry-head965-inference/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-inference/sessions/codex-geometry-head965-inference/requests/6d97ce675c28f9e4.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-inference/sessions/codex-geometry-head965-inference/events.ndjson",
+    "appName": "dev.e2e.readinessmaintainer",
+    "appBundleId": "dev.e2e.readinessmaintainer",
+    "appId": "dev.e2e.readinessmaintainer",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 1498,
+      "measuredAt": "2026-11-11T05:13:29.625Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "name": "Codex Readiness Maintainer QA 20261111",
+      "identifiers": {
+        "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "deviceName": "Codex Readiness Maintainer QA 20261111",
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD"
+      },
+      "ios": {
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "simulatorSetPath": null
+      }
+    },
+    "snapshot": {
+      "nodes": [
+        {
+          "index": 0,
+          "label": "GeometryFixture",
+          "rect": {
+            "height": 852,
+            "width": 393,
+            "y": 0,
+            "x": 0
+          },
+          "type": "Application",
+          "hittable": false,
+          "depth": 0,
+          "enabled": true,
+          "ref": "e1",
+          "kind": "application"
+        },
+        {
+          "type": "Window",
+          "label": "Readiness maintainer fixture",
+          "rect": {
+            "x": 0,
+            "height": 852,
+            "y": 0,
+            "width": 393
+          },
+          "index": 1,
+          "parentIndex": 0,
+          "hittable": true,
+          "depth": 1,
+          "enabled": true,
+          "ref": "e2",
+          "kind": "window"
+        },
+        {
+          "type": "Other",
+          "label": "Readiness maintainer fixture",
+          "rect": {
+            "x": 0,
+            "height": 852,
+            "y": 0,
+            "width": 393
+          },
+          "index": 2,
+          "parentIndex": 1,
+          "hittable": true,
+          "depth": 2,
+          "enabled": true,
+          "ref": "e3",
+          "kind": "other"
+        },
+        {
+          "type": "Button",
+          "label": "Clipped row",
+          "rect": {
+            "x": 24,
+            "height": 36,
+            "y": 82,
+            "width": 110
+          },
+          "index": 3,
+          "parentIndex": 2,
+          "identifier": "mode-clipped",
+          "hittable": true,
+          "depth": 3,
+          "enabled": true,
+          "ref": "e4",
+          "kind": "button"
+        },
+        {
+          "type": "Button",
+          "label": "Large Other tree",
+          "rect": {
+            "x": 142,
+            "height": 36,
+            "y": 82,
+            "width": 110
+          },
+          "index": 4,
+          "parentIndex": 2,
+          "identifier": "mode-large",
+          "hittable": true,
+          "depth": 3,
+          "enabled": true,
+          "ref": "e5",
+          "kind": "button"
+        },
+        {
+          "type": "Button",
+          "label": "Duplicates",
+          "rect": {
+            "x": 260,
+            "height": 36,
+            "y": 82,
+            "width": 110
+          },
+          "index": 5,
+          "parentIndex": 2,
+          "identifier": "mode-duplicates",
+          "hittable": true,
+          "depth": 3,
+          "enabled": true,
+          "ref": "e6",
+          "kind": "button"
+        },
+        {
+          "identifier": "landscape",
+          "enabled": true,
+          "depth": 3,
+          "parentIndex": 2,
+          "index": 6,
+          "hittable": true,
+          "type": "Button",
+          "label": "Landscape",
+          "rect": {
+            "x": 24,
+            "height": 36,
+            "y": 124,
+            "width": 110
+          },
+          "ref": "e7",
+          "kind": "button"
+        },
+        {
+          "identifier": "portrait",
+          "enabled": true,
+          "depth": 3,
+          "parentIndex": 2,
+          "index": 7,
+          "hittable": true,
+          "type": "Button",
+          "label": "Portrait",
+          "rect": {
+            "y": 124,
+            "height": 36,
+            "width": 110,
+            "x": 142
+          },
+          "ref": "e8",
+          "kind": "button"
+        },
+        {
+          "rect": {
+            "width": 345,
+            "height": 220,
+            "x": 24,
+            "y": 180
+          },
+          "hiddenContentBelow": true,
+          "depth": 4,
+          "parentIndex": 2,
+          "index": 8,
+          "hittable": true,
+          "type": "Table",
+          "label": "Visible tail of row 0",
+          "enabled": true,
+          "hiddenContentAbove": true,
+          "ref": "e9",
+          "kind": "table"
+        },
+        {
+          "identifier": "clipped-row",
+          "enabled": true,
+          "depth": 5,
+          "parentIndex": 8,
+          "index": 9,
+          "hittable": true,
+          "type": "Cell",
+          "label": "Visible tail of row 0",
+          "rect": {
+            "width": 345,
+            "height": 70,
+            "x": 24,
+            "y": 180
+          },
+          "ref": "e10",
+          "kind": "cell"
+        },
+        {
+          "rect": {
+            "width": 300,
+            "height": 40,
+            "x": 36,
+            "y": 200
+          },
+          "depth": 6,
+          "parentIndex": 9,
+          "index": 10,
+          "hittable": true,
+          "type": "StaticText",
+          "label": "Visible tail of row 0",
+          "enabled": true,
+          "ref": "e11",
+          "kind": "text"
+        },
+        {
+          "rect": {
+            "width": 305,
+            "height": 70,
+            "x": 44,
+            "y": 180
+          },
+          "depth": 6,
+          "parentIndex": 9,
+          "index": 11,
+          "hittable": true,
+          "type": "StaticText",
+          "label": "Clipped row",
+          "enabled": true,
+          "ref": "e12",
+          "kind": "text"
+        },
+        {
+          "identifier": "filler-1",
+          "enabled": true,
+          "depth": 5,
+          "parentIndex": 8,
+          "index": 12,
+          "hittable": true,
+          "type": "Cell",
+          "label": "Visible tail of row 1",
+          "rect": {
+            "width": 345,
+            "height": 150,
+            "x": 24,
+            "y": 250
+          },
+          "ref": "e13",
+          "kind": "cell"
+        },
+        {
+          "rect": {
+            "width": 305,
+            "height": 150,
+            "x": 44,
+            "y": 250
+          },
+          "depth": 6,
+          "parentIndex": 12,
+          "index": 13,
+          "hittable": true,
+          "type": "StaticText",
+          "label": "Filler row 1",
+          "enabled": true,
+          "ref": "e14",
+          "kind": "text"
+        },
+        {
+          "identifier": "results",
+          "enabled": true,
+          "depth": 3,
+          "parentIndex": 2,
+          "index": 14,
+          "hittable": true,
+          "type": "StaticText",
+          "label": "Mode: clipped\nOther controls: 500",
+          "rect": {
+            "width": 345,
+            "height": 80,
+            "x": 24,
+            "y": 420
+          },
+          "ref": "e15",
+          "kind": "text"
+        }
+      ],
+      "truncated": false,
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 15,
+        "totalNodeCount": 15,
+        "reasons": [
+          "scroll-hidden-above",
+          "scroll-hidden-below"
+        ]
+      },
+      "snapshotQuality": {
+        "state": "healthy",
+        "backend": "tree",
+        "timing": {
+          "acquisitionMs": 53.28094959259033,
+          "presentationMs": 0.2130270004272461
+        }
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 6,
+          "droppedNodeCount": 3
+        }
+      ],
+      "warnings": [
+        "Simulator AX snapshot unavailable (circuit-disabled); used XCTest for this app generation."
+      ],
+      "snapshotDiagnostics": {
+        "stats": {
+          "count": 2,
+          "p50Ms": 112,
+          "p95Ms": 6394,
+          "maxMs": 6394,
+          "slowThresholdMs": 1500,
+          "platform": "ios",
+          "backends": {
+            "apple-runner": 2
+          }
+        }
+      },
+      "keyboard": {
+        "kind": "absent",
+        "treeBound": true
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "presentedSurface": "unknown",
+      "appName": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer",
+      "refsGeneration": 602214
+    },
+    "identifiers": {
+      "session": "codex-geometry-head965-inference",
+      "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "deviceName": "Codex Readiness Maintainer QA 20261111",
+      "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "appId": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer"
+    }
+  }
+}

@@ -1,0 +1,1326 @@
+{
+  "phase": "base5a-landscape",
+  "mode": "landscape",
+  "sdkEntry": "/tmp/codex-sdk-readiness-benchmark5a-20261111/dist/src/index.js",
+  "xctestrun": "/tmp/codex-sdk-readiness-benchmark5a-20261111/.tmp/native-derived/Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-x86_64.xctestrun",
+  "openOptions": {
+    "app": "dev.e2e.readinessmaintainer",
+    "platform": "ios",
+    "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+    "relaunch": true,
+    "foreground": true
+  },
+  "samples": [
+    {
+      "kind": "selector",
+      "id": "clipped-row",
+      "target": {
+        "selector": "id=clipped-row"
+      },
+      "press": {
+        "x": 324,
+        "y": 215,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=clipped-row (324, 215)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=clipped-row",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "refLabel": "Visible tail of row 0",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "ms": 690.7603339999987,
+      "native": {
+        "commands": [
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 3
+          },
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "tap",
+            "nativeMs": 339
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:19:19.231004-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-dd2d441c-1522-4036-89b4-9e2cbbd21575",
+          "2026-11-11 00:19:19.231360-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-190f2e3d-f4f5-444f-8160-e61795f0599e",
+          "2026-11-11 00:19:19.232731-0500 AgentDeviceRunnerUITests-Runner[64169:15790040] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-dd2d441c-1522-4036-89b4-9e2cbbd21575 ok=1",
+          "2026-11-11 00:19:19.234234-0500 AgentDeviceRunnerUITests-Runner[64169:15790040] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-190f2e3d-f4f5-444f-8160-e61795f0599e ok=1",
+          "2026-11-11 00:19:19.389260-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-6862222a-a480-4ac6-815e-fbe6f9f91871",
+          "2026-11-11 00:19:19.390043-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-0cbf66e8-9959-4706-8da6-832c3037d570",
+          "2026-11-11 00:19:19.390603-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-6862222a-a480-4ac6-815e-fbe6f9f91871 ok=1",
+          "2026-11-11 00:19:19.392020-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-0cbf66e8-9959-4706-8da6-832c3037d570 ok=1",
+          "2026-11-11 00:19:19.508723-0500 AgentDeviceRunnerUITests-Runner[64169:15789581] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-5c01d9b5-7c14-4084-bf7e-a54bfe19e41f",
+          "2026-11-11 00:19:19.509688-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-8330a95b-ca23-4d4d-8d8a-87afbac40406",
+          "2026-11-11 00:19:19.510678-0500 AgentDeviceRunnerUITests-Runner[64169:15789581] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-5c01d9b5-7c14-4084-bf7e-a54bfe19e41f ok=1",
+          "2026-11-11 00:19:19.511983-0500 AgentDeviceRunnerUITests-Runner[64169:15789581] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-8330a95b-ca23-4d4d-8d8a-87afbac40406 ok=1",
+          "2026-11-11 00:19:19.565600-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-8b20efec-de5c-4cb8-8165-69b53d06b99c",
+          "2026-11-11 00:19:19.904810-0500 AgentDeviceRunnerUITests-Runner[64169:15789576] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-8b20efec-de5c-4cb8-8165-69b53d06b99c ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 2.158624993171543,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 11.926541686989367
+        },
+        {
+          "event": "appReady",
+          "ms": 12.179958343040198,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 5497.778583317995
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5500.425583333708,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+        },
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 5915.3277083532885,
+          "orientation": 3,
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5915.810875012539,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 6929.690291697625,
+          "row": 0
+        }
+      ]
+    },
+    {
+      "kind": "selector",
+      "id": "clipped-row",
+      "target": {
+        "selector": "id=clipped-row"
+      },
+      "press": {
+        "x": 324,
+        "y": 215,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=clipped-row (324, 215)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=clipped-row",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "refLabel": "Visible tail of row 0",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "ms": 423.0444580000003,
+      "native": {
+        "commands": [
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "appState",
+            "nativeMs": 2
+          },
+          {
+            "command": "tap",
+            "nativeMs": 343
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:19:20.099958-0500 AgentDeviceRunnerUITests-Runner[64169:15789581] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-4a8e1671-bb53-49d7-9ce2-905e634d5e0c",
+          "2026-11-11 00:19:20.100285-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-fd9501b5-52ce-4a7a-8bec-3278dd5becea",
+          "2026-11-11 00:19:20.101468-0500 AgentDeviceRunnerUITests-Runner[64169:15789581] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-4a8e1671-bb53-49d7-9ce2-905e634d5e0c ok=1",
+          "2026-11-11 00:19:20.102931-0500 AgentDeviceRunnerUITests-Runner[64169:15789581] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-fd9501b5-52ce-4a7a-8bec-3278dd5becea ok=1",
+          "2026-11-11 00:19:20.163292-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-66562c40-45ed-4270-861f-73a8b37e991d",
+          "2026-11-11 00:19:20.506895-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-66562c40-45ed-4270-861f-73a8b37e991d ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 2.158624993171543,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 11.926541686989367
+        },
+        {
+          "event": "appReady",
+          "ms": 12.179958343040198,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 5497.778583317995
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5500.425583333708,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+        },
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 5915.3277083532885,
+          "orientation": 3,
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5915.810875012539,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 6929.690291697625,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 7530.123500037007,
+          "row": 0
+        }
+      ]
+    },
+    {
+      "kind": "selector",
+      "id": "clipped-row",
+      "target": {
+        "selector": "id=clipped-row"
+      },
+      "press": {
+        "x": 324,
+        "y": 215,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=clipped-row (324, 215)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=clipped-row",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "refLabel": "Visible tail of row 0",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "ms": 406.6414999999997,
+      "native": {
+        "commands": [
+          {
+            "command": "appState",
+            "nativeMs": 1
+          },
+          {
+            "command": "appState",
+            "nativeMs": 3
+          },
+          {
+            "command": "tap",
+            "nativeMs": 346
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:19:20.699244-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-7e988a4b-7e5e-4bcd-8a4e-7ae15e8ca97a",
+          "2026-11-11 00:19:20.699994-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-737991a9-88a4-4d79-b770-1255ae70dd8e",
+          "2026-11-11 00:19:20.700877-0500 AgentDeviceRunnerUITests-Runner[64169:15789576] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-7e988a4b-7e5e-4bcd-8a4e-7ae15e8ca97a ok=1",
+          "2026-11-11 00:19:20.702167-0500 AgentDeviceRunnerUITests-Runner[64169:15789576] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-737991a9-88a4-4d79-b770-1255ae70dd8e ok=1",
+          "2026-11-11 00:19:20.742400-0500 AgentDeviceRunnerUITests-Runner[64169:15789576] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-9105a251-dbc6-4dab-a9be-1fb8a28811da",
+          "2026-11-11 00:19:21.088488-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-9105a251-dbc6-4dab-a9be-1fb8a28811da ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 2.158624993171543,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 11.926541686989367
+        },
+        {
+          "event": "appReady",
+          "ms": 12.179958343040198,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 5497.778583317995
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5500.425583333708,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+        },
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 5915.3277083532885,
+          "orientation": 3,
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5915.810875012539,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 6929.690291697625,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 7530.123500037007,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 8112.884625035804,
+          "row": 0
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "id": "clipped-row",
+      "target": {
+        "ref": "@e9"
+      },
+      "press": {
+        "x": 324,
+        "y": 215,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e9 (324, 215)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "ref",
+        "ref": "e9",
+        "refLabel": "Visible tail of row 0",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 360.4417919999996,
+      "native": {
+        "commands": [
+          {
+            "command": "tap",
+            "nativeMs": 344
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:19:21.343777-0500 AgentDeviceRunnerUITests-Runner[64169:15789579] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-3e743159-698e-4f88-be2c-62fc82ad52f0",
+          "2026-11-11 00:19:21.687977-0500 AgentDeviceRunnerUITests-Runner[64169:15789582] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-3e743159-698e-4f88-be2c-62fc82ad52f0 ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 2.158624993171543,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 11.926541686989367
+        },
+        {
+          "event": "appReady",
+          "ms": 12.179958343040198,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 5497.778583317995
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5500.425583333708,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+        },
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 5915.3277083532885,
+          "orientation": 3,
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5915.810875012539,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 6929.690291697625,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 7530.123500037007,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 8112.884625035804,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 8696.220333338715,
+          "row": 0
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "id": "clipped-row",
+      "target": {
+        "ref": "@e9"
+      },
+      "press": {
+        "x": 324,
+        "y": 215,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e9 (324, 215)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "ref",
+        "ref": "e9",
+        "refLabel": "Visible tail of row 0",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 351.55954100000054,
+      "native": {
+        "commands": [
+          {
+            "command": "tap",
+            "nativeMs": 336
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:19:21.920122-0500 AgentDeviceRunnerUITests-Runner[64169:15789576] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-2b57cab9-7dad-49c0-bac6-771e2b86b496",
+          "2026-11-11 00:19:22.256152-0500 AgentDeviceRunnerUITests-Runner[64169:15789578] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-2b57cab9-7dad-49c0-bac6-771e2b86b496 ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 2.158624993171543,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 11.926541686989367
+        },
+        {
+          "event": "appReady",
+          "ms": 12.179958343040198,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 5497.778583317995
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5500.425583333708,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+        },
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 5915.3277083532885,
+          "orientation": 3,
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5915.810875012539,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 6929.690291697625,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 7530.123500037007,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 8112.884625035804,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 8696.220333338715,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 9279.566416691523,
+          "row": 0
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "id": "clipped-row",
+      "target": {
+        "ref": "@e9"
+      },
+      "press": {
+        "x": 324,
+        "y": 215,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e9 (324, 215)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "ref",
+        "ref": "e9",
+        "refLabel": "Visible tail of row 0",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 355.6058329999996,
+      "native": {
+        "commands": [
+          {
+            "command": "tap",
+            "nativeMs": 343
+          }
+        ],
+        "markers": [
+          "2026-11-11 00:19:22.515916-0500 AgentDeviceRunnerUITests-Runner[64169:15789581] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-d8b9b4bf-ba0f-46a7-a0e5-104210e76f53",
+          "2026-11-11 00:19:22.858808-0500 AgentDeviceRunnerUITests-Runner[64169:15789578] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-d8b9b4bf-ba0f-46a7-a0e5-104210e76f53 ok=1"
+        ]
+      },
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 2.158624993171543,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 11.926541686989367
+        },
+        {
+          "event": "appReady",
+          "ms": 12.179958343040198,
+          "otherControlCount": 500
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 5497.778583317995
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5500.425583333708,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+        },
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 5915.3277083532885,
+          "orientation": 3,
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        },
+        {
+          "event": "fixtureGeometry",
+          "mode": "clipped",
+          "ms": 5915.810875012539,
+          "rawCenterY": 50,
+          "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+          "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+          "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 6929.690291697625,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 7530.123500037007,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 8112.884625035804,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 8696.220333338715,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 9279.566416691523,
+          "row": 0
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 9879.590416676365,
+          "row": 0
+        }
+      ]
+    }
+  ],
+  "open": {
+    "session": "codex-maintainer-base5a-landscape",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-maintainer-20261111/state-base5a-landscape/sessions/codex-maintainer-base5a-landscape",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-base5a-landscape/sessions/codex-maintainer-base5a-landscape/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-base5a-landscape/sessions/codex-maintainer-base5a-landscape/requests/5f1cf7b7a96ac50a.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-base5a-landscape/sessions/codex-maintainer-base5a-landscape/events.ndjson",
+    "appName": "dev.e2e.readinessmaintainer",
+    "appBundleId": "dev.e2e.readinessmaintainer",
+    "appId": "dev.e2e.readinessmaintainer",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 2411,
+      "measuredAt": "2026-11-11T05:19:13.000Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "name": "Codex Readiness Maintainer QA 20261111",
+      "identifiers": {
+        "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "deviceName": "Codex Readiness Maintainer QA 20261111",
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD"
+      },
+      "ios": {
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "simulatorSetPath": null
+      }
+    },
+    "snapshot": {
+      "nodes": [
+        {
+          "index": 0,
+          "type": "Application",
+          "role": "UIApplication",
+          "label": "GeometryFixture",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 852
+          },
+          "enabled": true,
+          "depth": 0,
+          "pid": 63745,
+          "hittable": false,
+          "ref": "e1",
+          "kind": "application"
+        },
+        {
+          "index": 1,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Readiness maintainer fixture",
+          "rect": {
+            "x": 24,
+            "y": 45,
+            "width": 345,
+            "height": 28
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e2",
+          "kind": "text"
+        },
+        {
+          "index": 2,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Clipped row",
+          "identifier": "mode-clipped",
+          "rect": {
+            "x": 24,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e3",
+          "kind": "button"
+        },
+        {
+          "index": 3,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Large Other tree",
+          "identifier": "mode-large",
+          "rect": {
+            "x": 142,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e4",
+          "kind": "button"
+        },
+        {
+          "index": 4,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Duplicates",
+          "identifier": "mode-duplicates",
+          "rect": {
+            "x": 260,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e5",
+          "kind": "button"
+        },
+        {
+          "index": 5,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Landscape",
+          "identifier": "landscape",
+          "rect": {
+            "x": 24,
+            "y": 124,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e6",
+          "kind": "button"
+        },
+        {
+          "index": 6,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Portrait",
+          "identifier": "portrait",
+          "rect": {
+            "x": 142,
+            "y": 124,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e7",
+          "kind": "button"
+        },
+        {
+          "index": 7,
+          "parentIndex": 0,
+          "type": "Table",
+          "role": "UITableView",
+          "rect": {
+            "x": 24,
+            "y": 180,
+            "width": 345,
+            "height": 220
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "hiddenContentAbove": true,
+          "hiddenContentBelow": true,
+          "ref": "e8",
+          "kind": "table"
+        },
+        {
+          "index": 8,
+          "parentIndex": 7,
+          "type": "Cell",
+          "role": "UITableViewCellAccessibilityElement",
+          "subrole": "UIAccessibilityElement",
+          "identifier": "clipped-row",
+          "rect": {
+            "x": 24,
+            "y": 180,
+            "width": 345,
+            "height": 70
+          },
+          "enabled": true,
+          "depth": 2,
+          "pid": 63745,
+          "hittable": true,
+          "label": "Visible tail of row 0",
+          "ref": "e9",
+          "kind": "cell"
+        },
+        {
+          "index": 9,
+          "parentIndex": 8,
+          "type": "StaticText",
+          "role": "UITableViewLabel",
+          "label": "Clipped row",
+          "rect": {
+            "x": 44,
+            "y": 180,
+            "width": 305,
+            "height": 70
+          },
+          "enabled": true,
+          "depth": 3,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e10",
+          "kind": "text"
+        },
+        {
+          "index": 10,
+          "parentIndex": 7,
+          "type": "Cell",
+          "role": "UITableViewCellAccessibilityElement",
+          "subrole": "UIAccessibilityElement",
+          "identifier": "filler-1",
+          "rect": {
+            "x": 24,
+            "y": 250,
+            "width": 345,
+            "height": 150
+          },
+          "enabled": true,
+          "depth": 2,
+          "pid": 63745,
+          "hittable": true,
+          "label": "Filler row 1",
+          "ref": "e11",
+          "kind": "cell"
+        },
+        {
+          "index": 11,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Mode: clipped\nOther controls: 500",
+          "identifier": "results",
+          "rect": {
+            "x": 24,
+            "y": 420,
+            "width": 345,
+            "height": 80
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 63745,
+          "hittable": true,
+          "ref": "e12",
+          "kind": "text"
+        }
+      ],
+      "truncated": false,
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 12,
+        "totalNodeCount": 12,
+        "reasons": [
+          "scroll-hidden-above",
+          "scroll-hidden-below"
+        ]
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 8,
+          "droppedNodeCount": 3
+        }
+      ],
+      "snapshotDiagnostics": {
+        "stats": {
+          "count": 1,
+          "p50Ms": 56,
+          "p95Ms": 56,
+          "maxMs": 56,
+          "slowThresholdMs": 1500,
+          "platform": "ios",
+          "backends": {
+            "simulator-ax-bridge": 1
+          }
+        }
+      },
+      "keyboard": {
+        "kind": "absent",
+        "treeBound": true
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "presentedSurface": "absent",
+      "appName": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer",
+      "refsGeneration": 584585
+    },
+    "identifiers": {
+      "session": "codex-maintainer-base5a-landscape",
+      "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "deviceName": "Codex Readiness Maintainer QA 20261111",
+      "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "appId": "dev.e2e.readinessmaintainer",
+      "appBundleId": "dev.e2e.readinessmaintainer"
+    }
+  },
+  "initialNodes": [
+    {
+      "ref": "e1",
+      "type": "Application",
+      "label": "GeometryFixture",
+      "rect": {
+        "height": 390.19996913928713,
+        "x": 0,
+        "y": 0.9186448599403434,
+        "width": 852
+      }
+    },
+    {
+      "ref": "e2",
+      "type": "Window",
+      "label": "Readiness maintainer fixture",
+      "rect": {
+        "height": 390.19996913928713,
+        "x": 0,
+        "y": 0.9186448599403434,
+        "width": 852
+      }
+    },
+    {
+      "ref": "e3",
+      "type": "Other",
+      "label": "Readiness maintainer fixture",
+      "rect": {
+        "height": 390.19996913928713,
+        "y": 0.9186448599403434,
+        "width": 852,
+        "x": 0
+      }
+    },
+    {
+      "ref": "e4",
+      "type": "Button",
+      "label": "Clipped row",
+      "identifier": "mode-clipped",
+      "rect": {
+        "height": 36,
+        "y": 82,
+        "width": 110,
+        "x": 24
+      }
+    },
+    {
+      "ref": "e5",
+      "type": "Button",
+      "label": "Large Other tree",
+      "identifier": "mode-large",
+      "rect": {
+        "height": 36,
+        "y": 82,
+        "width": 110,
+        "x": 142
+      }
+    },
+    {
+      "ref": "e6",
+      "type": "Button",
+      "label": "Duplicates",
+      "identifier": "mode-duplicates",
+      "rect": {
+        "height": 36,
+        "y": 82,
+        "width": 110,
+        "x": 260
+      }
+    },
+    {
+      "ref": "e7",
+      "type": "Button",
+      "label": "Landscape",
+      "identifier": "landscape",
+      "rect": {
+        "height": 36,
+        "y": 124,
+        "width": 110,
+        "x": 24
+      }
+    },
+    {
+      "ref": "e8",
+      "type": "Button",
+      "label": "Portrait",
+      "identifier": "portrait",
+      "rect": {
+        "height": 36,
+        "y": 124,
+        "width": 110,
+        "x": 142
+      }
+    },
+    {
+      "ref": "e9",
+      "type": "Table",
+      "label": "Visible tail of row 0",
+      "rect": {
+        "height": 200,
+        "y": 180,
+        "width": 600,
+        "x": 24
+      }
+    },
+    {
+      "ref": "e10",
+      "type": "Cell",
+      "label": "Visible tail of row 0",
+      "identifier": "clipped-row",
+      "rect": {
+        "height": 70,
+        "y": 180,
+        "width": 600,
+        "x": 24
+      }
+    },
+    {
+      "ref": "e11",
+      "type": "StaticText",
+      "label": "Visible tail of row 0",
+      "rect": {
+        "height": 40,
+        "y": 200,
+        "width": 300,
+        "x": 71
+      }
+    },
+    {
+      "ref": "e12",
+      "type": "StaticText",
+      "label": "Clipped row",
+      "rect": {
+        "height": 70,
+        "y": 180,
+        "width": 525,
+        "x": 79
+      }
+    },
+    {
+      "ref": "e13",
+      "type": "Cell",
+      "label": "Visible tail of row 1",
+      "identifier": "filler-1",
+      "rect": {
+        "x": 24,
+        "y": 250,
+        "width": 600,
+        "height": 130
+      }
+    },
+    {
+      "ref": "e14",
+      "type": "StaticText",
+      "label": "Filler row 1",
+      "rect": {
+        "x": 79,
+        "y": 250,
+        "width": 525,
+        "height": 130
+      }
+    },
+    {
+      "ref": "e15",
+      "type": "StaticText",
+      "label": "Mode: clipped\nOther controls: 500",
+      "identifier": "results",
+      "rect": {
+        "height": 80,
+        "y": 180,
+        "width": 188,
+        "x": 640
+      }
+    }
+  ],
+  "cli": {
+    "output": "{\n  \"success\": true,\n  \"data\": {\n    \"x\": 324,\n    \"y\": 215,\n    \"runnerMainThreadBusy\": false,\n    \"message\": \"Tapped id=clipped-row (324, 215)\",\n    \"referenceWidth\": 852,\n    \"referenceHeight\": 393,\n    \"targetKind\": \"selector\",\n    \"selector\": \"id=clipped-row\",\n    \"selectorChain\": [\n      \"id=\\\"clipped-row\\\"\",\n      \"role=\\\"cell\\\" label=\\\"Visible tail of row 0\\\"\",\n      \"label=\\\"Visible tail of row 0\\\"\"\n    ],\n    \"refLabel\": \"Visible tail of row 0\",\n    \"resolution\": {\n      \"source\": \"runtime\",\n      \"phase\": \"pre-action\",\n      \"kind\": \"unique\"\n    }\n  }\n}\n",
+    "exitCode": 0,
+    "ms": 534.007540999999
+  },
+  "finalScreenshot": {
+    "path": "/tmp/codex-sdk-readiness-maintainer-20261111/evidence/base5a-landscape/final.png",
+    "width": 852,
+    "height": 393,
+    "logicalWidth": 852,
+    "logicalHeight": 393,
+    "pixelDensity": 1,
+    "displayRotation": "landscape-left",
+    "identifiers": {
+      "session": "codex-maintainer-base5a-landscape"
+    }
+  },
+  "events": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 2.158624993171543,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 11.926541686989367
+    },
+    {
+      "event": "appReady",
+      "ms": 12.179958343040198,
+      "otherControlCount": 500
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 5497.778583317995
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 5500.425583333708,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+    },
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 5915.3277083532885,
+      "orientation": 3,
+      "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 5915.810875012539,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 600.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 600.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 600.0, 70.0)"
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 6929.690291697625,
+      "row": 0
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 7530.123500037007,
+      "row": 0
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 8112.884625035804,
+      "row": 0
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 8696.220333338715,
+      "row": 0
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 9279.566416691523,
+      "row": 0
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 9879.590416676365,
+      "row": 0
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 10562.9362083273,
+      "row": 0
+    }
+  ]
+}

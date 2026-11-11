@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sourceHead": "ca43623c9a17e54ac9fb1d006581021c7d8f1363",
+  "sourcePatchSha256": "44611cde64bfca49ea909159791d1c14f1de83e5464ab323a6a6dc8c1c4e5896",
+  "sourceFiles": 86,
+  "sourceGrossLines": 2497,
+  "nativeFilesVerifiedAgainstFrozenManifest": 223,
+  "nativeHashMismatches": 0,
+  "textFindingCount": 0,
+  "symlinkCount": 0,
+  "videos": 19,
+  "includedPngs": 55,
+  "mediaAudit": "Nineteen videos decoded and all 55 included frames/screenshots visually audited before staging. All media hashes remain identical to the frozen native manifest. No full frame-by-frame playback claim.",
+  "scope": "Generic standalone UIKit fixtures and generic upstream framework code only. No private application source or data, credentials, environment, daemon state, device inventory, leases or diagnostic archives.",
+  "sourceAttribution": "Matched geometry/performance at380; final JavaScript smoke atBEF. Finalca differs fromBEF in two test files only; all629 generated JavaScript files and shipped native fingerprint remain identical. Exact validation is recorded separately."
+}

@@ -1,0 +1,548 @@
+{
+  "method": "Three observations per successful kind, with individual values and median/range. Ref capture occurs outside the measured call; selector capture is included. The first portrait clipped selector includes native startup. External simctl recording avoids SDK warmup capture. Intermediate 965 large-tree testing stops after the first explicit 15000 ms caller cancellation, with no completed-latency statistic for that failure.",
+  "rows": [
+    {
+      "phase": "base5a-clipped",
+      "case": "clipped",
+      "runtime": "base5a",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            5895.894540999999,
+            551.7194579999996,
+            415.21500000000015
+          ],
+          "completedMedianMs": 551.7194579999996,
+          "completedRangeMs": [
+            415.21500000000015,
+            5895.894540999999
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 0,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": [],
+          "firstSampleIncludesNativeStartup": true
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            367.53862499999923,
+            367.9599590000016,
+            362.47333400000025
+          ],
+          "completedMedianMs": 367.53862499999923,
+          "completedRangeMs": [
+            362.47333400000025,
+            367.9599590000016
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 0,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 489.2885419999984
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 7,
+        "otherReceivedTap": 0,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "base5a-large",
+      "case": "large",
+      "runtime": "base5a",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            745.8840840000012,
+            685.3230830000011,
+            721.4145829999998
+          ],
+          "completedMedianMs": 721.4145829999998,
+          "completedRangeMs": [
+            685.3230830000011,
+            745.8840840000012
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 0,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": []
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            561.3825830000005,
+            570.0153750000009,
+            546.8062920000011
+          ],
+          "completedMedianMs": 561.3825830000005,
+          "completedRangeMs": [
+            546.8062920000011,
+            570.0153750000009
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 0,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 815.4431670000013
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 0,
+        "otherReceivedTap": 7,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "base5a-landscape",
+      "case": "landscape",
+      "runtime": "base5a",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            690.7603339999987,
+            423.0444580000003,
+            406.6414999999997
+          ],
+          "completedMedianMs": 423.0444580000003,
+          "completedRangeMs": [
+            406.6414999999997,
+            690.7603339999987
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 0,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": []
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            360.4417919999996,
+            351.55954100000054,
+            355.6058329999996
+          ],
+          "completedMedianMs": 355.6058329999996,
+          "completedRangeMs": [
+            351.55954100000054,
+            360.4417919999996
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 0,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 534.007540999999
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 7,
+        "otherReceivedTap": 0,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "head965-clipped",
+      "case": "clipped",
+      "runtime": "head965",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            6378.6434580000005,
+            607.3385409999992,
+            548.181208
+          ],
+          "completedMedianMs": 607.3385409999992,
+          "completedRangeMs": [
+            548.181208,
+            6378.6434580000005
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            373,
+            185,
+            154
+          ],
+          "errors": [],
+          "firstSampleIncludesNativeStartup": true
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            519.6801670000004,
+            545.6634579999991,
+            683.6807090000002
+          ],
+          "completedMedianMs": 545.6634579999991,
+          "completedRangeMs": [
+            519.6801670000004,
+            683.6807090000002
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            162,
+            179,
+            279
+          ],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 891.6621670000022
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 7,
+        "otherReceivedTap": 0,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "head965-large",
+      "case": "large",
+      "runtime": "head965",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 1,
+          "completed": 0,
+          "individualMs": [
+            15002.037209
+          ],
+          "completedMedianMs": null,
+          "completedRangeMs": null,
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 1,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": [
+            {
+              "code": "COMMAND_FAILED",
+              "message": "request canceled",
+              "details": {
+                "hint": "The request was canceled intentionally (explicit cancel or client disconnect) \u2014 no retry is needed unless the cancellation was unintended.",
+                "requestId": "2208959900acde28",
+                "dispatched": "unknown",
+                "reason": "request_canceled"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "ref",
+          "observed": 0,
+          "completed": 0,
+          "individualMs": [],
+          "completedMedianMs": null,
+          "completedRangeMs": null,
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 0,
+          "nativeReadCompletedByReturn": 0,
+          "nativeReadMs": [],
+          "errors": []
+        }
+      ],
+      "cli": {},
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 0,
+        "otherReceivedTap": 0,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "head965-landscape",
+      "case": "landscape",
+      "runtime": "head965",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            898.682084,
+            584.4937919999993,
+            545.5573750000003
+          ],
+          "completedMedianMs": 584.4937919999993,
+          "completedRangeMs": [
+            545.5573750000003,
+            898.682084
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            166,
+            161,
+            154
+          ],
+          "errors": []
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            493.0803329999999,
+            474.4707500000004,
+            473.53749999999854
+          ],
+          "completedMedianMs": 474.4707500000004,
+          "completedRangeMs": [
+            473.53749999999854,
+            493.0803329999999
+          ],
+          "nativeReadCommand": "querySelector",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            144,
+            132,
+            131
+          ],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 574.0494589999998
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 7,
+        "otherReceivedTap": 0,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "head380-clipped",
+      "case": "clipped",
+      "runtime": "head380",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            1900.2709999999988,
+            513.1681250000001,
+            587.9559170000011
+          ],
+          "completedMedianMs": 587.9559170000011,
+          "completedRangeMs": [
+            513.1681250000001,
+            1900.2709999999988
+          ],
+          "nativeReadCommand": "pressReadiness",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            211,
+            85,
+            105
+          ],
+          "errors": [],
+          "firstSampleIncludesNativeStartup": true
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            489.94829200000095,
+            462.53220800000054,
+            457.8289999999979
+          ],
+          "completedMedianMs": 462.53220800000054,
+          "completedRangeMs": [
+            457.8289999999979,
+            489.94829200000095
+          ],
+          "nativeReadCommand": "pressReadiness",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            89,
+            89,
+            87
+          ],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 726.8116669999981
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 7,
+        "otherReceivedTap": 0,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "head380-large",
+      "case": "large",
+      "runtime": "head380",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            1271.091125,
+            900.3854170000013,
+            911.590083000001
+          ],
+          "completedMedianMs": 911.590083000001,
+          "completedRangeMs": [
+            900.3854170000013,
+            1271.091125
+          ],
+          "nativeReadCommand": "pressReadiness",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            325,
+            336,
+            335
+          ],
+          "errors": []
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            775.878666999999,
+            800.510542,
+            801.5357919999988
+          ],
+          "completedMedianMs": 800.510542,
+          "completedRangeMs": [
+            775.878666999999,
+            801.5357919999988
+          ],
+          "nativeReadCommand": "pressReadiness",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            316,
+            327,
+            334
+          ],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 987.282416
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 0,
+        "otherReceivedTap": 7,
+        "fillerRowReceivedTap": 0
+      }
+    },
+    {
+      "phase": "head380-landscape",
+      "case": "landscape",
+      "runtime": "head380",
+      "samples": [
+        {
+          "kind": "selector",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            771.2096669999992,
+            480.0593749999989,
+            461.0282499999994
+          ],
+          "completedMedianMs": 480.0593749999989,
+          "completedRangeMs": [
+            461.0282499999994,
+            771.2096669999992
+          ],
+          "nativeReadCommand": "pressReadiness",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            67,
+            70,
+            64
+          ],
+          "errors": []
+        },
+        {
+          "kind": "ref",
+          "observed": 3,
+          "completed": 3,
+          "individualMs": [
+            405.38466700000026,
+            519.5172920000005,
+            424.49595899999986
+          ],
+          "completedMedianMs": 424.49595899999986,
+          "completedRangeMs": [
+            405.38466700000026,
+            519.5172920000005
+          ],
+          "nativeReadCommand": "pressReadiness",
+          "nativeReadAccepted": 3,
+          "nativeReadCompletedByReturn": 3,
+          "nativeReadMs": [
+            57,
+            170,
+            66
+          ],
+          "errors": []
+        }
+      ],
+      "cli": {
+        "exitCode": 0,
+        "ms": 537.3857910000006
+      },
+      "deliveredEvents": {
+        "clippedRowReceivedTap": 7,
+        "otherReceivedTap": 0,
+        "fillerRowReceivedTap": 0
+      }
+    }
+  ]
+}

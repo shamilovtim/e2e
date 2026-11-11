@@ -1,0 +1,917 @@
+{
+  "phase": "head965-clipped-overlay-cancel",
+  "mode": "cancel",
+  "app": "dev.e2e.readinessclipoverlay",
+  "fadeDurationMs": 750,
+  "open": {
+    "session": "codex-maintainer-head965-clipped-overlay-cancel",
+    "sessionStateDir": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-clipped-overlay-cancel/sessions/codex-maintainer-head965-clipped-overlay-cancel",
+    "runnerLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-clipped-overlay-cancel/sessions/codex-maintainer-head965-clipped-overlay-cancel/runner.log",
+    "requestLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-clipped-overlay-cancel/sessions/codex-maintainer-head965-clipped-overlay-cancel/requests/c764e51411b81c49.ndjson",
+    "eventLogPath": "/tmp/codex-sdk-readiness-maintainer-20261111/state-head965-clipped-overlay-cancel/sessions/codex-maintainer-head965-clipped-overlay-cancel/events.ndjson",
+    "appName": "dev.e2e.readinessclipoverlay",
+    "appBundleId": "dev.e2e.readinessclipoverlay",
+    "appId": "dev.e2e.readinessclipoverlay",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 2641,
+      "measuredAt": "2026-11-11T05:29:01.946Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "dev.e2e.readinessclipoverlay",
+      "appBundleId": "dev.e2e.readinessclipoverlay"
+    },
+    "device": {
+      "platform": "ios",
+      "target": "mobile",
+      "id": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "name": "Codex Readiness Maintainer QA 20261111",
+      "identifiers": {
+        "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "deviceName": "Codex Readiness Maintainer QA 20261111",
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD"
+      },
+      "ios": {
+        "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+        "simulatorSetPath": null
+      }
+    },
+    "snapshot": {
+      "nodes": [
+        {
+          "index": 0,
+          "type": "Application",
+          "role": "UIApplication",
+          "label": "GeometryFixture",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 852
+          },
+          "enabled": true,
+          "depth": 0,
+          "pid": 71091,
+          "hittable": false,
+          "ref": "e1",
+          "kind": "application"
+        },
+        {
+          "index": 1,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Clipped-row overlay fixture",
+          "rect": {
+            "x": 24,
+            "y": 45,
+            "width": 345,
+            "height": 28
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e2",
+          "kind": "text"
+        },
+        {
+          "index": 2,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Fade cover",
+          "identifier": "mode-clipped",
+          "rect": {
+            "x": 24,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e3",
+          "kind": "button"
+        },
+        {
+          "index": 3,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Large Other tree",
+          "identifier": "mode-large",
+          "rect": {
+            "x": 142,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e4",
+          "kind": "button"
+        },
+        {
+          "index": 4,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Cover row",
+          "identifier": "mode-duplicates",
+          "rect": {
+            "x": 260,
+            "y": 82,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e5",
+          "kind": "button"
+        },
+        {
+          "index": 5,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Landscape",
+          "identifier": "landscape",
+          "rect": {
+            "x": 24,
+            "y": 124,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e6",
+          "kind": "button"
+        },
+        {
+          "index": 6,
+          "parentIndex": 0,
+          "type": "Button",
+          "role": "UIButton",
+          "label": "Portrait",
+          "identifier": "portrait",
+          "rect": {
+            "x": 142,
+            "y": 124,
+            "width": 110,
+            "height": 36
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e7",
+          "kind": "button"
+        },
+        {
+          "index": 7,
+          "parentIndex": 0,
+          "type": "Table",
+          "role": "UITableView",
+          "rect": {
+            "x": 24,
+            "y": 180,
+            "width": 345,
+            "height": 220
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "hiddenContentAbove": true,
+          "hiddenContentBelow": true,
+          "ref": "e8",
+          "kind": "table"
+        },
+        {
+          "index": 8,
+          "parentIndex": 7,
+          "type": "Cell",
+          "role": "UITableViewCellAccessibilityElement",
+          "subrole": "UIAccessibilityElement",
+          "identifier": "clipped-row",
+          "rect": {
+            "x": 24,
+            "y": 180,
+            "width": 345,
+            "height": 70
+          },
+          "enabled": true,
+          "depth": 2,
+          "pid": 71091,
+          "hittable": true,
+          "label": "Visible tail of row 0",
+          "ref": "e9",
+          "kind": "cell"
+        },
+        {
+          "index": 9,
+          "parentIndex": 8,
+          "type": "StaticText",
+          "role": "UITableViewLabel",
+          "label": "Clipped row",
+          "rect": {
+            "x": 44,
+            "y": 180,
+            "width": 305,
+            "height": 70
+          },
+          "enabled": true,
+          "depth": 3,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e10",
+          "kind": "text"
+        },
+        {
+          "index": 10,
+          "parentIndex": 7,
+          "type": "Cell",
+          "role": "UITableViewCellAccessibilityElement",
+          "subrole": "UIAccessibilityElement",
+          "identifier": "filler-1",
+          "rect": {
+            "x": 24,
+            "y": 250,
+            "width": 345,
+            "height": 150
+          },
+          "enabled": true,
+          "depth": 2,
+          "pid": 71091,
+          "hittable": true,
+          "label": "Filler row 1",
+          "ref": "e11",
+          "kind": "cell"
+        },
+        {
+          "index": 11,
+          "parentIndex": 0,
+          "type": "StaticText",
+          "role": "UILabel",
+          "label": "Mode: clipped\nOther controls: 500",
+          "identifier": "results",
+          "rect": {
+            "x": 24,
+            "y": 420,
+            "width": 345,
+            "height": 80
+          },
+          "enabled": true,
+          "depth": 1,
+          "pid": 71091,
+          "hittable": true,
+          "ref": "e12",
+          "kind": "text"
+        }
+      ],
+      "truncated": false,
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 12,
+        "totalNodeCount": 12,
+        "reasons": [
+          "scroll-hidden-above",
+          "scroll-hidden-below"
+        ]
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 8,
+          "droppedNodeCount": 3
+        }
+      ],
+      "snapshotDiagnostics": {
+        "stats": {
+          "count": 1,
+          "p50Ms": 35,
+          "p95Ms": 35,
+          "maxMs": 35,
+          "slowThresholdMs": 1500,
+          "platform": "ios",
+          "backends": {
+            "simulator-ax-bridge": 1
+          }
+        }
+      },
+      "keyboard": {
+        "kind": "absent",
+        "treeBound": true
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "presentedSurface": "absent",
+      "appName": "dev.e2e.readinessclipoverlay",
+      "appBundleId": "dev.e2e.readinessclipoverlay",
+      "refsGeneration": 623971
+    },
+    "identifiers": {
+      "session": "codex-maintainer-head965-clipped-overlay-cancel",
+      "deviceId": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "deviceName": "Codex Readiness Maintainer QA 20261111",
+      "udid": "6B9D0875-A708-4B60-9FEF-50C53A3356BD",
+      "appId": "dev.e2e.readinessclipoverlay",
+      "appBundleId": "dev.e2e.readinessclipoverlay"
+    }
+  },
+  "nativeDiagnosticCapture": {
+    "nodes": [
+      {
+        "label": "GeometryFixture",
+        "depth": 0,
+        "index": 0,
+        "type": "Application",
+        "rect": {
+          "width": 393,
+          "height": 852,
+          "x": 0,
+          "y": 0
+        },
+        "enabled": true,
+        "hittable": false,
+        "ref": "e1",
+        "kind": "application"
+      },
+      {
+        "enabled": true,
+        "type": "StaticText",
+        "hittable": true,
+        "depth": 1,
+        "index": 1,
+        "label": "Clipped-row overlay fixture",
+        "parentIndex": 0,
+        "rect": {
+          "width": 345,
+          "height": 28,
+          "x": 24,
+          "y": 45
+        },
+        "ref": "e2",
+        "kind": "text"
+      },
+      {
+        "rect": {
+          "width": 110,
+          "height": 36,
+          "x": 24,
+          "y": 82
+        },
+        "enabled": true,
+        "type": "Button",
+        "hittable": true,
+        "depth": 1,
+        "index": 2,
+        "label": "Fade cover",
+        "parentIndex": 0,
+        "identifier": "mode-clipped",
+        "ref": "e3",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 82,
+          "width": 110,
+          "height": 36,
+          "x": 142
+        },
+        "enabled": true,
+        "type": "Button",
+        "hittable": true,
+        "depth": 1,
+        "index": 3,
+        "label": "Large Other tree",
+        "parentIndex": 0,
+        "identifier": "mode-large",
+        "ref": "e4",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 82,
+          "width": 110,
+          "height": 36,
+          "x": 260
+        },
+        "enabled": true,
+        "type": "Button",
+        "hittable": true,
+        "depth": 1,
+        "index": 4,
+        "label": "Cover row",
+        "parentIndex": 0,
+        "identifier": "mode-duplicates",
+        "ref": "e5",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 124,
+          "width": 110,
+          "height": 36,
+          "x": 24
+        },
+        "enabled": true,
+        "type": "Button",
+        "hittable": true,
+        "depth": 1,
+        "index": 5,
+        "label": "Landscape",
+        "parentIndex": 0,
+        "identifier": "landscape",
+        "ref": "e6",
+        "kind": "button"
+      },
+      {
+        "rect": {
+          "y": 124,
+          "width": 110,
+          "height": 36,
+          "x": 142
+        },
+        "enabled": true,
+        "type": "Button",
+        "hittable": true,
+        "depth": 1,
+        "index": 6,
+        "label": "Portrait",
+        "parentIndex": 0,
+        "identifier": "portrait",
+        "ref": "e7",
+        "kind": "button"
+      },
+      {
+        "enabled": true,
+        "type": "Table",
+        "hittable": true,
+        "depth": 1,
+        "index": 7,
+        "hiddenContentBelow": true,
+        "parentIndex": 0,
+        "rect": {
+          "y": 180,
+          "width": 345,
+          "height": 220,
+          "x": 24
+        },
+        "hiddenContentAbove": true,
+        "ref": "e8",
+        "kind": "table"
+      },
+      {
+        "rect": {
+          "y": 180,
+          "width": 345,
+          "height": 70,
+          "x": 24
+        },
+        "enabled": true,
+        "type": "Cell",
+        "hittable": true,
+        "depth": 2,
+        "index": 8,
+        "parentIndex": 7,
+        "identifier": "clipped-row",
+        "label": "Visible tail of row 0",
+        "ref": "e9",
+        "kind": "cell"
+      },
+      {
+        "enabled": true,
+        "type": "StaticText",
+        "hittable": true,
+        "depth": 3,
+        "index": 9,
+        "label": "Clipped row",
+        "parentIndex": 8,
+        "rect": {
+          "y": 180,
+          "width": 305,
+          "height": 70,
+          "x": 44
+        },
+        "ref": "e10",
+        "kind": "text"
+      },
+      {
+        "identifier": "filler-1",
+        "enabled": true,
+        "type": "Cell",
+        "hittable": true,
+        "depth": 2,
+        "index": 10,
+        "parentIndex": 7,
+        "rect": {
+          "y": 250,
+          "width": 345,
+          "x": 24,
+          "height": 150
+        },
+        "label": "Filler row 1",
+        "ref": "e11",
+        "kind": "cell"
+      },
+      {
+        "identifier": "results",
+        "enabled": true,
+        "type": "StaticText",
+        "hittable": true,
+        "depth": 1,
+        "index": 11,
+        "label": "Mode: clipped\nOther controls: 500",
+        "parentIndex": 0,
+        "rect": {
+          "y": 420,
+          "width": 345,
+          "x": 24,
+          "height": 80
+        },
+        "ref": "e12",
+        "kind": "text"
+      }
+    ],
+    "truncated": false,
+    "appName": "dev.e2e.readinessclipoverlay",
+    "appBundleId": "dev.e2e.readinessclipoverlay",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "presentedSurface": "unknown",
+    "visibility": {
+      "partial": true,
+      "visibleNodeCount": 12,
+      "totalNodeCount": 12,
+      "reasons": [
+        "scroll-hidden-above",
+        "scroll-hidden-below"
+      ]
+    },
+    "snapshotQuality": {
+      "state": "recovered",
+      "backend": "private-ax",
+      "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+      "reasonCode": "requested-backend",
+      "customActions": {
+        "read": 12,
+        "candidates": 13,
+        "truncated": 0,
+        "blocked": false
+      },
+      "timing": {
+        "acquisitionMs": 1599.7810363769531,
+        "presentationMs": 0.22101402282714844
+      }
+    },
+    "snapshotQualityNotes": [
+      {
+        "code": "regular-geometry-clipped",
+        "clippedNodeCount": 8,
+        "droppedNodeCount": 3
+      }
+    ],
+    "warnings": [
+      "Custom actions were read for 12 of 13 merged elements, on-screen ones first; the remaining 1 were not read, so an absent actions list on those is not evidence that they have none. Scroll them into view and re-run to read them."
+    ],
+    "snapshotDiagnostics": {
+      "stats": {
+        "count": 3,
+        "p50Ms": 40,
+        "p95Ms": 1651,
+        "maxMs": 1651,
+        "slowThresholdMs": 1500,
+        "platform": "ios",
+        "backends": {
+          "simulator-ax-bridge": 2,
+          "apple-runner": 1
+        }
+      }
+    },
+    "refsGeneration": 623973,
+    "identifiers": {
+      "session": "codex-maintainer-head965-clipped-overlay-cancel",
+      "appId": "dev.e2e.readinessclipoverlay",
+      "appBundleId": "dev.e2e.readinessclipoverlay"
+    }
+  },
+  "before": {
+    "index": 8,
+    "parentIndex": 7,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "identifier": "clipped-row",
+    "rect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 2,
+    "pid": 71091,
+    "hittable": true,
+    "label": "Visible tail of row 0",
+    "ref": "e9",
+    "kind": "cell"
+  },
+  "covered": {
+    "index": 8,
+    "parentIndex": 7,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "identifier": "clipped-row",
+    "rect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 2,
+    "pid": 71091,
+    "hittable": true,
+    "label": "Visible tail of row 0",
+    "ref": "e9",
+    "kind": "cell"
+  },
+  "pendingError": {
+    "code": "COMMAND_FAILED",
+    "message": "request canceled",
+    "details": {
+      "hint": "The request was canceled intentionally (explicit cancel or client disconnect) — no retry is needed unless the cancellation was unintended.",
+      "requestId": "46deedc12155664b",
+      "dispatched": "unknown",
+      "reason": "request_canceled"
+    }
+  },
+  "pendingMs": 2001.724166,
+  "eventsAfterCancel": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 1.9957500044256449,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 13.850916642695665
+    },
+    {
+      "event": "appReady",
+      "ms": 14.096874976530671,
+      "otherControlCount": 500
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 6672.059166652616
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 6675.088749965653,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+    },
+    {
+      "coverWindowLocal": "(24.0, 180.0, 345.0, 70.0)",
+      "event": "clippedCoverInstalled",
+      "ms": 6677.190166665241
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 6677.47724999208,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+    }
+  ],
+  "dismiss": {
+    "x": 79,
+    "y": 100,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped id=mode-clipped (79, 100)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "selector",
+    "selector": "id=mode-clipped",
+    "selectorChain": [
+      "id=\"mode-clipped\"",
+      "role=\"button\" label=\"Fade cover\"",
+      "label=\"Fade cover\""
+    ],
+    "refLabel": "Fade cover",
+    "resolution": {
+      "source": "runtime",
+      "phase": "pre-action",
+      "kind": "unique"
+    }
+  },
+  "eventsAfterUnblockObservation": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 1.9957500044256449,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 13.850916642695665
+    },
+    {
+      "event": "appReady",
+      "ms": 14.096874976530671,
+      "otherControlCount": 500
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 6672.059166652616
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 6675.088749965653,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+    },
+    {
+      "coverWindowLocal": "(24.0, 180.0, 345.0, 70.0)",
+      "event": "clippedCoverInstalled",
+      "ms": 6677.190166665241
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 6677.47724999208,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeDismissBegin",
+      "ms": 9636.814083321951
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 10389.233791676816
+    }
+  ],
+  "target": {
+    "index": 8,
+    "parentIndex": 7,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "identifier": "clipped-row",
+    "rect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 2,
+    "pid": 71091,
+    "hittable": true,
+    "label": "Visible tail of row 0",
+    "ref": "e9",
+    "kind": "cell"
+  },
+  "press": {
+    "x": 197,
+    "y": 215,
+    "message": "Tapped @e9 (197, 215)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e9",
+    "refLabel": "Visible tail of row 0",
+    "selectorChain": [
+      "id=\"clipped-row\"",
+      "role=\"cell\" label=\"Visible tail of row 0\"",
+      "label=\"Visible tail of row 0\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 509.9657499999994,
+  "after": {
+    "index": 8,
+    "parentIndex": 7,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "identifier": "clipped-row",
+    "rect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 2,
+    "pid": 71091,
+    "hittable": true,
+    "label": "Visible tail of row 0",
+    "ref": "e9",
+    "kind": "cell"
+  },
+  "events": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 1.9957500044256449,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 13.850916642695665
+    },
+    {
+      "event": "appReady",
+      "ms": 14.096874976530671,
+      "otherControlCount": 500
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 6672.059166652616
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 6675.088749965653,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+    },
+    {
+      "coverWindowLocal": "(24.0, 180.0, 345.0, 70.0)",
+      "event": "clippedCoverInstalled",
+      "ms": 6677.190166665241
+    },
+    {
+      "event": "fixtureGeometry",
+      "mode": "clipped",
+      "ms": 6677.47724999208,
+      "rawCenterY": 50,
+      "targetWindowLocal": "(24.0, -150.0, 345.0, 400.0)",
+      "viewportWindowLocal": "(24.0, 180.0, 345.0, 220.0)",
+      "visibleIntersectionWindowLocal": "(24.0, 180.0, 345.0, 70.0)"
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeDismissBegin",
+      "ms": 9636.814083321951
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 10389.233791676816
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 11804.041166673414,
+      "row": 0
+    }
+  ]
+}
