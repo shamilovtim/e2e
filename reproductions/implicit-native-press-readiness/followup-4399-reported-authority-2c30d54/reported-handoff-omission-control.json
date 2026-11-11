@@ -1,0 +1,27 @@
+{
+  "baseHead": "16763e010f3491b6845cce1ae19d010c56ac2476",
+  "candidatePatchSHA256": "88e5e930bb7344e504816add0d303cf9d7402733088227dc0e1c4a59910e9c5c",
+  "ownFrozenInstall": true,
+  "ownBuild": true,
+  "command": "pnpm exec vitest run packages/platform-apple/src/snapshot-presentation.test.ts --testNamePattern 'reported runner viewport retains screen authority through the wire reader and presenter' --maxWorkers=2",
+  "baseline": {
+    "passed": 1,
+    "filteredSkipped": 32
+  },
+  "mutation": {
+    "edit": "Remove only attachSnapshotViewportEvidence(presentation.nodes, viewportEvidence) from actual Apple runner presenter.",
+    "failed": 1,
+    "filteredSkipped": 32,
+    "failure": "assert.doesNotReject received actual guard refusal: Captured action has no established screen-coordinate origin",
+    "oracle": "Explicit missing destination remains unknown when the source presenter loses authority; wire classification and public global rectangle assertions passed first."
+  },
+  "restored": {
+    "passed": 1,
+    "filteredSkipped": 32,
+    "testAndPresenterByteEqualToImplementation": true
+  },
+  "implementationUnchanged": true,
+  "committedHead": "2c30d548499e615061b77ec527d7842ae40398d0",
+  "candidateSourceEqualsCommittedSource": true,
+  "ownControlCheckoutRemoved": true
+}

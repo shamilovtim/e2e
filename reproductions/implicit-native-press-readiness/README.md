@@ -1,5 +1,7 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The reported-authority test follow-up](followup-4399-reported-authority-2c30d54/README.md) proves the positive presenter handoff with an unknown destination and a real guard assertion; omitting the source fact fails. The exact-head gate passes with all runtime/native source inputs unchanged from the preceding review.
+
 [The #4439 review follow-up](followup-4399-review-16763e0/README.md) adds the provider authority handoff, nine behavioral provider controls, the exact new gate and strengthened native payload test. All five review findings have explicit dispositions. The original five videos retain their earlier source attribution.
 
 [The mobile signal-coverage follow-up](mobile-signal-coverage-d45a6e1/README.md) closes all optional review coverage gaps with tests only: eight omitted-signal controls and the device-fixture late-input control fail as intended, then the restored 524-test mobile suite and full repository checks pass.
