@@ -1,0 +1,25 @@
+{
+  "source": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "classification": "Expected negative controls; not product test failures or live-device results.",
+  "observations": [
+    {
+      "mutation": "Captured-target origin guard disabled in an isolated copy",
+      "failed": 15,
+      "passed": 12,
+      "behavior": "Actual wrong backend point (350,111) and unguarded find/focus/type/gesture behavior were detected."
+    },
+    {
+      "mutation": "Only clone-copy propagation removed in an isolated copy",
+      "failed": 4,
+      "passed": 6,
+      "behavior": "Saved-ref/native-ref clone preservation regressions were detected."
+    },
+    {
+      "mutation": "Original reviewed implementation restored",
+      "passed": 27,
+      "failed": 0
+    }
+  ],
+  "attribution": "Root reports actual mutation executions in isolated copies with unchanged tests. Raw mutant logs/source copies remain private and are not included; no independent mutation rerun was performed by curation.",
+  "historicalStaticGateFailures": "Source owner corrected rename/complexity and eager-loader/help issues without weakening policy or test expectations before the passing exact gate."
+}

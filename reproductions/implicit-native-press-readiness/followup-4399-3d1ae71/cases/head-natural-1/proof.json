@@ -1,0 +1,497 @@
+{
+  "case": "head-natural-1",
+  "classification": "pass-safe-refusal",
+  "sourceRole": "head",
+  "sourceAttribution": "Source owner and parent independently identify this phase as authentic paired host+production native; actual capture/action/counter facts are retained below.",
+  "records": [
+    {
+      "artifact": "classification.json",
+      "originalArtifactSha256": "4059d29961df0e80a6bc70c0867608de642a65ff531e53ef45adecc5807c221f"
+    },
+    {
+      "artifact": "cold-record-start.gesture-telemetry.json",
+      "originalArtifactSha256": "7deb327f1f076c5f71846c75c49b516c37c1fa46008d3c0871e34cca2f44b8f3"
+    },
+    {
+      "artifact": "result.json",
+      "originalArtifactSha256": "356ec7cff36c96a1fd6803269d4b92ad46ea57caea790509da6c76d36e414da2"
+    }
+  ],
+  "qualification": "Natural missing-viewport case was not observed; actual unknown-origin case used derived viewport on candidate. Simple selector used snapshot-derived resolution in the natural case; no independent native-selector route is claimed there. Fixture UIView actionScreenFrame(to:nil) becomes app-local after relaunch and is not a screen-coordinate authority. The healthy native reported capture and actual baseline synthesized reference establish the placed-window origin.",
+  "actualClassification": {
+    "classification": "natural-record-start-deferred-head-typed-no-input",
+    "sdkCommit": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "nativeSourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584",
+    "externalAbort": false,
+    "producerPins": false,
+    "queriesBackendTimeoutObserved": true,
+    "deferredPolicyObserved": true,
+    "nativeViewport": {
+      "kind": "derived",
+      "rect": {
+        "width": 375,
+        "x": 0,
+        "height": 611,
+        "y": 0
+      }
+    },
+    "trustedPublicViewportPresent": false,
+    "snapshotNodeCount": 16,
+    "snapshotQuality": {
+      "state": "recovered",
+      "backend": "private-ax",
+      "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+      "reasonCode": "deferred",
+      "timing": {
+        "acquisitionMs": 311.54704093933105,
+        "presentationMs": 0.24199485778808594
+      }
+    },
+    "capturedTarget": {
+      "x": 240,
+      "height": 42,
+      "y": 90,
+      "width": 111
+    },
+    "refOutcome": {
+      "code": "COMMAND_FAILED",
+      "reason": "window-origin-unknown",
+      "dispatched": "no"
+    },
+    "selectorOutcome": {
+      "code": "COMMAND_FAILED",
+      "reason": "window-origin-unknown",
+      "dispatched": "no"
+    },
+    "counters": [
+      0,
+      0,
+      0
+    ],
+    "nativeTapAcceptedCount": 0,
+    "nativeSynthesizedTapCount": 0,
+    "remainingErrors": []
+  },
+  "hostSource": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "explanation": "Natural first cold recording-start produced readable private-AX/deferred capture with actual derived origin metadata. Public viewport omitted and origin warning retained; actual ref and selector both refused typed COMMAND_FAILED/window-origin-unknown/dispatched=no, counters 0→0→0. This observed refusal does not imply every safe independent selector must refuse.",
+  "actualSequence": [
+    "open",
+    "recordStart",
+    "snapshot",
+    "nativeCapture",
+    "refPress",
+    "selectorPress",
+    "repeatedSnapshot",
+    "recordStop",
+    "close"
+  ],
+  "externalAbort": false,
+  "producerPins": false,
+  "counterBefore": 0,
+  "counterAfterRef": 0,
+  "counterAfterSelector": 0,
+  "target": {
+    "index": 3,
+    "depth": 1,
+    "label": "Geometry action",
+    "parentIndex": 0,
+    "type": "Button",
+    "identifier": "geometry-action",
+    "rect": {
+      "x": 240,
+      "height": 42,
+      "y": 90,
+      "width": 111
+    },
+    "hittable": true,
+    "enabled": true,
+    "ref": "e4",
+    "kind": "button"
+  },
+  "publicSnapshotNodeCount": 16,
+  "publicViewportPresent": false,
+  "observations": {
+    "recordStart": {
+      "ms": 6359.887209,
+      "selectedResult": {
+        "recording": "started",
+        "recordingBackend": "simctl recordVideo",
+        "recordingScope": "app",
+        "recordOnlySession": false,
+        "showTouches": false,
+        "activeSessionApp": {
+          "bundleId": "dev.e2e.readinessgeometry",
+          "name": "dev.e2e.readinessgeometry"
+        }
+      }
+    },
+    "snapshot": {
+      "ms": 989.6732080000002,
+      "selectedResult": {
+        "snapshotQuality": {
+          "state": "recovered",
+          "backend": "private-ax",
+          "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+          "reasonCode": "deferred",
+          "timing": {
+            "acquisitionMs": 311.54704093933105,
+            "presentationMs": 0.24199485778808594
+          }
+        },
+        "snapshotQualityNotes": [
+          {
+            "code": "regular-geometry-clipped",
+            "clippedNodeCount": 3,
+            "droppedNodeCount": 0
+          }
+        ],
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 2,
+            "p50Ms": 379,
+            "p95Ms": 388,
+            "maxMs": 388,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "apple-runner": 2
+            }
+          }
+        },
+        "warnings": [
+          "Detected an overly complex or slow accessibility tree. Fell back to the private-ax snapshot backend. It is OK to continue; use --json to inspect snapshotQuality.reason if you need recovery details.",
+          "This snapshot cannot establish the window origin on screen. Coordinate-derived element interactions are unavailable until a capture measures the viewport.",
+          "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+        ],
+        "presentedSurface": "unknown",
+        "visibility": {
+          "partial": true,
+          "visibleNodeCount": 16,
+          "totalNodeCount": 16,
+          "reasons": [
+            "scroll-hidden-below"
+          ]
+        },
+        "truncated": false,
+        "genericTargets": [
+          {
+            "index": 2,
+            "depth": 1,
+            "placeholder": "Geometry input",
+            "parentIndex": 0,
+            "identifier": "geometry-input",
+            "type": "TextField",
+            "rect": {
+              "x": 24,
+              "height": 42,
+              "y": 90,
+              "width": 200
+            },
+            "hittable": true,
+            "enabled": true,
+            "password": false,
+            "editable": true,
+            "ref": "e3",
+            "kind": "text-field"
+          },
+          {
+            "index": 3,
+            "depth": 1,
+            "label": "Geometry action",
+            "parentIndex": 0,
+            "type": "Button",
+            "identifier": "geometry-action",
+            "rect": {
+              "x": 240,
+              "height": 42,
+              "y": 90,
+              "width": 111
+            },
+            "hittable": true,
+            "enabled": true,
+            "ref": "e4",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    "nativeCapture": {
+      "ms": 374.47462500000074,
+      "selectedResult": {
+        "runnerMainThreadBusy": false,
+        "snapshotViewport": {
+          "kind": "derived",
+          "rect": {
+            "width": 375,
+            "x": 0,
+            "height": 611,
+            "y": 0
+          }
+        },
+        "snapshotQuality": {
+          "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+          "timing": {
+            "acquisitionMs": 312.10100650787354,
+            "presentationMs": 0.3249645233154297
+          },
+          "state": "recovered",
+          "backend": "private-ax",
+          "reasonCode": "deferred"
+        },
+        "snapshotQualityNotes": [
+          {
+            "clippedNodeCount": 3,
+            "droppedNodeCount": 0,
+            "code": "regular-geometry-clipped"
+          }
+        ],
+        "presentedSurface": "unknown",
+        "truncated": false,
+        "ok": true,
+        "genericTargets": [
+          {
+            "hittable": true,
+            "parentIndex": 0,
+            "enabled": true,
+            "type": "TextField",
+            "index": 2,
+            "rect": {
+              "height": 42,
+              "width": 200,
+              "x": 24,
+              "y": 90
+            },
+            "depth": 1,
+            "placeholder": "Geometry input",
+            "identifier": "geometry-input"
+          },
+          {
+            "hittable": true,
+            "parentIndex": 0,
+            "enabled": true,
+            "type": "Button",
+            "index": 3,
+            "rect": {
+              "height": 42,
+              "width": 111,
+              "x": 240,
+              "y": 90
+            },
+            "label": "Geometry action",
+            "depth": 1,
+            "identifier": "geometry-action"
+          }
+        ]
+      }
+    },
+    "refPress": {
+      "ms": 13.064833000000363,
+      "error": {
+        "message": "Ref @e4 has no established screen-coordinate origin",
+        "code": "COMMAND_FAILED",
+        "details": {
+          "reason": "window-origin-unknown",
+          "dispatched": "no",
+          "hint": "Take a fresh snapshot after the accessibility channel recovers, or use screenshot to choose screen coordinates."
+        }
+      }
+    },
+    "selectorPress": {
+      "ms": 390.53170800000044,
+      "error": {
+        "message": "Selector id=geometry-action has no established screen-coordinate origin",
+        "code": "COMMAND_FAILED",
+        "details": {
+          "reason": "window-origin-unknown",
+          "dispatched": "no",
+          "hint": "Take a fresh snapshot after the accessibility channel recovers, or use screenshot to choose screen coordinates."
+        }
+      }
+    },
+    "repeatedSnapshot": {
+      "ms": 384.5313330000008,
+      "selectedResult": {
+        "snapshotQuality": {
+          "state": "recovered",
+          "backend": "private-ax",
+          "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+          "reasonCode": "deferred",
+          "timing": {
+            "acquisitionMs": 308.22300910949707,
+            "presentationMs": 0.3050565719604492
+          }
+        },
+        "snapshotQualityNotes": [
+          {
+            "code": "regular-geometry-clipped",
+            "clippedNodeCount": 3,
+            "droppedNodeCount": 0
+          }
+        ],
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 4,
+            "p50Ms": 379,
+            "p95Ms": 388,
+            "maxMs": 388,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "apple-runner": 4
+            }
+          }
+        },
+        "warnings": [
+          "This snapshot cannot establish the window origin on screen. Coordinate-derived element interactions are unavailable until a capture measures the viewport.",
+          "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+        ],
+        "presentedSurface": "unknown",
+        "visibility": {
+          "partial": true,
+          "visibleNodeCount": 16,
+          "totalNodeCount": 16,
+          "reasons": [
+            "scroll-hidden-below"
+          ]
+        },
+        "truncated": false,
+        "genericTargets": [
+          {
+            "hittable": true,
+            "parentIndex": 0,
+            "enabled": true,
+            "type": "TextField",
+            "index": 2,
+            "rect": {
+              "width": 200,
+              "height": 42,
+              "x": 24,
+              "y": 90
+            },
+            "depth": 1,
+            "placeholder": "Geometry input",
+            "identifier": "geometry-input",
+            "password": false,
+            "editable": true,
+            "ref": "e3",
+            "kind": "text-field"
+          },
+          {
+            "hittable": true,
+            "parentIndex": 0,
+            "enabled": true,
+            "type": "Button",
+            "index": 3,
+            "label": "Geometry action",
+            "rect": {
+              "width": 111,
+              "height": 42,
+              "x": 240,
+              "y": 90
+            },
+            "depth": 1,
+            "identifier": "geometry-action",
+            "ref": "e4",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    "recordStop": {
+      "ms": 459.4443339999998,
+      "selectedResult": {
+        "recording": "stopped",
+        "recordingBackend": "simctl recordVideo",
+        "recordingScope": "app",
+        "recordOnlySession": false,
+        "showTouches": false,
+        "recorder": "confirmed",
+        "nativePathDisposition": "retired",
+        "durationMs": 2945,
+        "activeSessionApp": {
+          "bundleId": "dev.e2e.readinessgeometry",
+          "name": "dev.e2e.readinessgeometry"
+        }
+      }
+    }
+  },
+  "fixtureEvents": {
+    "eventsBefore": [
+      {
+        "event": "appReady",
+        "ms": 0.006499933078885078
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 16.934458282776177,
+        "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+      }
+    ],
+    "eventsAfterRef": [
+      {
+        "event": "appReady",
+        "ms": 0.006499933078885078
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 16.934458282776177,
+        "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+      }
+    ],
+    "eventsAfterSelector": [
+      {
+        "event": "appReady",
+        "ms": 0.006499933078885078
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 16.934458282776177,
+        "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+      }
+    ],
+    "finalEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.006499933078885078
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 16.934458282776177,
+        "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+      }
+    ]
+  },
+  "closeObserved": true,
+  "nativeArtifactRole": "head-production",
+  "artifactAttribution": "Actual paired host/native phase identified by source owner and root; separate manifest retains the exact source fingerprints and binary hashes. Missing authority fields in baseline observations remain absent.",
+  "nativeMarkerFacts": {
+    "case": "head-natural-1",
+    "queriesBackendTimeoutObserved": true,
+    "deferredPolicyObserved": true,
+    "nativeTapAcceptedCount": 0,
+    "nativeSynthesizedTapCount": 0,
+    "privateRunnerTranscriptSha256": "eaf25beec99aa18db5bab15e8df8ac9a18e71a208153d3466bc7b3ef366e65c6",
+    "privateSelectedMarkerArtifactSha256": "ec63044fcdd4d22f2eda99bee1fa2839e1c1d217c8408c31a104569fb29012ce",
+    "scope": "Counts/boolean facts only; raw policy/process lines and identifiers are excluded."
+  },
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true,
+    "limitation": "This original SDK recording contains one static decoded video sample. It cannot visually establish dispatch or policy. Typed responses, actual fixture counters and sanitized native transcript counts supply the behavioral oracles."
+  }
+}

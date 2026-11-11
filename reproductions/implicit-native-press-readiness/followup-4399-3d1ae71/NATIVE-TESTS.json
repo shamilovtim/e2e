@@ -1,0 +1,17 @@
+{
+  "source": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "selection": "One existing payload-stamping method only; not a full native-suite result.",
+  "method": "testSnapshotViewportAuthoritySurvivesOutcomeStamping",
+  "passed": 1,
+  "failed": 0,
+  "skipped": 0,
+  "result": "Passed",
+  "runtime": {
+    "model": "iPhone 15 Pro",
+    "osVersion": "27.0",
+    "platform": "iOS Simulator"
+  },
+  "nativeSourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584",
+  "artifactRole": "head-unit",
+  "cleanup": "Author reports owned phone cleaned and shutdown after this selection."
+}

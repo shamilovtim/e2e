@@ -1,0 +1,21 @@
+{
+  "status": "passed for curated candidate; root independent publication audit separate",
+  "textFilesChecked": 37,
+  "binaryMediaFilesChecked": 16,
+  "privateValueFindings": [],
+  "jsonPrivateStateFindings": [],
+  "sourceVocabulary": "Generic source declares standard protocol/header names without actual credentials or private state values. No path-literal exception was needed.",
+  "media": {
+    "videos": 5,
+    "originalBytesUnchanged": true,
+    "decodedVideoSamples": 873,
+    "decodeErrors": 0,
+    "audioTracks": 0,
+    "reviewedGenericMetadataTag": "com.apple.policy.screenrecording.1",
+    "endpointsInspected": 10,
+    "contactSheetsInspected": 1,
+    "visualScope": "All endpoints reviewed; every interior frame was not visually inspected. Two natural clips are static one-sample recordings and cannot visually establish behavior."
+  },
+  "excluded": "Raw policy/process logs, transport/state, private app/account data/source/configuration, host paths, device/process/socket/session identifiers, credentials, inventories and xcresult.",
+  "published": false
+}

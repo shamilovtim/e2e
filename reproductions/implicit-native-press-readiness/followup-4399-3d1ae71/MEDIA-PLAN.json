@@ -1,0 +1,48 @@
+{
+  "status": "Completed for every actual recording",
+  "actualRecordings": 5,
+  "videos": [
+    {
+      "case": "baseline-healthy",
+      "path": "cases/baseline-healthy/video.mp4",
+      "originalFilename": "setup-and-control.mp4",
+      "bytes": 25709418,
+      "sha256": "63bb7ed812532caa17bbb9073b69fe541e22d4747da15263b375b52bd1e211a4",
+      "status": "Original byte-unchanged; full stream decoded; endpoints inspected"
+    },
+    {
+      "case": "baseline-natural-1",
+      "path": "cases/baseline-natural-1/video.mp4",
+      "originalFilename": "cold-record-start.mp4",
+      "bytes": 142538,
+      "sha256": "75af15db2d023b04246d21d368f1533562641b8986ffba6ba0ffc22dea5fda87",
+      "status": "Original byte-unchanged; full stream decoded; endpoints inspected"
+    },
+    {
+      "case": "head-fullscreen-setup",
+      "path": "cases/head-fullscreen-setup/video.mp4",
+      "originalFilename": "setup.mp4",
+      "bytes": 16618713,
+      "sha256": "31a18dae2e3b0006eb64fc23b3f26c05e86f7977b85182464398206ba27bdcee",
+      "status": "Original byte-unchanged; full stream decoded; endpoints inspected"
+    },
+    {
+      "case": "head-healthy-placed",
+      "path": "cases/head-healthy-placed/video.mp4",
+      "originalFilename": "control.mp4",
+      "bytes": 13372019,
+      "sha256": "b53ff4c6bd51a13d260fafb859dfe30771161b9e3fa222c4c04f9fa5a5fe96db",
+      "status": "Original byte-unchanged; full stream decoded; endpoints inspected"
+    },
+    {
+      "case": "head-natural-1",
+      "path": "cases/head-natural-1/video.mp4",
+      "originalFilename": "cold-record-start.mp4",
+      "bytes": 144103,
+      "sha256": "cd14dd5941edda5178e857156188055e730d4a23b8a633920d85972900602821",
+      "status": "Original byte-unchanged; full stream decoded; endpoints inspected"
+    }
+  ],
+  "setupAndFailures": "Initial placed-window resize/setup and fullscreen setup animations are retained. Baseline natural wrong-tap is reproduced product bug; no observational abort or setup failure occurred.",
+  "publication": "Root alone publishes after independent review."
+}

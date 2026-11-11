@@ -1,5 +1,7 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The separate deferred-AX window-origin fix](followup-4399-3d1ae71/README.md) records the authentic baseline wrong taps, typed unsent candidate refusals, healthy placed/full-screen controls and all five recordings. Its [rebased-head validation](followup-4399-rebase-1a0c8ec/README.md) preserves the original native attribution. This is issue #4399, separate from the readiness fix in #4391.
+
 [The secure-binding and documentation review follow-up](review-7ab3d23/README.md) records the new secure regression, exact-head gate, and byte-identical native/runtime inputs for the d3 recordings.
 
 [The web assertion review follow-up](web-timeout-82076ff/README.md) proves the revised assertion catches a half-budget regression and records full local/CI validation.

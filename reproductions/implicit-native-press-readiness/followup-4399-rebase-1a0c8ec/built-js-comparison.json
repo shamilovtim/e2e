@@ -1,0 +1,73 @@
+{
+  "oldHead": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "newHead": "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+  "oldCount": 631,
+  "newCount": 631,
+  "identicalCount": 619,
+  "changed": [
+    {
+      "path": "dist/src/cli-help.js",
+      "oldSHA256": "4906beae4fba2a9bc45fb669377c447db274b5c2bfae37d8c1ca8d76ef581fb4",
+      "newSHA256": "38d0b0c88a9a20e8f0000f2d63ffecab7027f97a5bc74a6537618b17f1afd6c5"
+    },
+    {
+      "path": "dist/src/network-traffic.js",
+      "oldSHA256": "fdd9316c4e8ee862d43bd2e09f6572382be9d35e77d69b5c9f50e2e80a053a8e",
+      "newSHA256": "9c221639e78c257d321faa70a8810ae87236c6d21c907567bdb8f10d45f421c7"
+    },
+    {
+      "path": "dist/src/proxy.js",
+      "oldSHA256": "2e73bb7363d69ba2d731e96349047e28f911989aa6bbf22fe2fdc4b5ff0938df",
+      "newSHA256": "2fcdd5e67f3d43e4aab9b3c845726091b65c5959c9fc11853ccaf8c5839b6efd"
+    },
+    {
+      "path": "dist/src/sdk-device.js",
+      "oldSHA256": "398aa5b696ac4f62f418c6276d55aa129f3fe8fba4f6554f930a207c17c1df88",
+      "newSHA256": "68eeb7047d3393ce7cb5efc9dc0581ab25282276e8a418d5f1481bd6185794dc"
+    },
+    {
+      "path": "dist/src/selector-runtime.js",
+      "oldSHA256": "be8aec18abe4dc29dda37a44877ea98b89e1e133f7302992a2694986c23144ad",
+      "newSHA256": "6ead7cf97abb129621e769fd70c6b8e29acaaa8241e82010672bea13e22e78cf"
+    },
+    {
+      "path": "dist/src/server-startup.js",
+      "oldSHA256": "3f46eb5d1d36a0c441f0cb2cd4ec220e9ec2b99b4cbb07d4212e24dfded979d4",
+      "newSHA256": "068238bd745fd0bc28522aa567b51d8bfdb225e655d3f56b08e6ef8646a40624"
+    },
+    {
+      "path": "dist/src/session-tenant-scope.js",
+      "oldSHA256": "47d26d05f415570150ac604ca2dee914cdd4a649207ee7f49d8732f36c93cbcf",
+      "newSHA256": "889b58880cc851499f90c2bbea9f9b6421fc761f89cf42505837bb58527aad9c"
+    },
+    {
+      "path": "dist/src/snapshot-runtime-binding.js",
+      "oldSHA256": "6da64ceef925c9652102135d7449be04d359e31620028018939fdaf9c6a1e1e7",
+      "newSHA256": "a435916dd844fb2ca22be6a5e013b77699c9a49027e45e330d58c6ec72fcbd29"
+    },
+    {
+      "path": "dist/src/snapshot-runtime.js",
+      "oldSHA256": "f4de4285065cec4b48b1c5afd09c49f58cc0b940edd1c48061c779c7badec5f1",
+      "newSHA256": "85af330a67660ea414de8be9b766a12f1baba6f6be9ca2cd509e7404fa249a22"
+    },
+    {
+      "path": "dist/src/snapshot2.js",
+      "oldSHA256": "f7f888a17528148ffcae44508a0d4598f622420acc91a62be986a350059b2664",
+      "newSHA256": "1e8f4d582fc5165302184263c07cd516c39f663b6ed25284803f326866482a1f"
+    },
+    {
+      "path": "dist/src/src2.js",
+      "oldSHA256": "f6b78076886a5ff1de6ac6841ffafbfac82f20061aa2cea1fef300a8b1f4629e",
+      "newSHA256": "3559223a6b538fc8f078c9f67ff7cf6fa1b68a04fa5fbb81244f166801dae447"
+    },
+    {
+      "path": "dist/src/src3.js",
+      "oldSHA256": "d36546cdc7434258eb8bdfb5106f45b7708f463dc02641c48f25c34171046fad",
+      "newSHA256": "57ba42cf98b32006be3ec94bfc3ff0a0b6bf8b2db5582a6f7577dacd4323c10d"
+    }
+  ],
+  "added": [],
+  "removed": [],
+  "allOldHashesRetainedIn": "head-built-js-manifest.json",
+  "allNewHashes": "head-rebased-built-js-manifest.json"
+}

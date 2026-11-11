@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "path": "fixture/source/GeometryFixture.swift",
+      "sha256": "be5a926611ebcb7bae605ed2d1545748d8a8336fd247818264d7dbfd2ccd8c65",
+      "bytes": 10305,
+      "normalization": "Byte-equal generic source; no modifications."
+    },
+    {
+      "path": "fixture/source/Info.plist",
+      "sha256": "084f681cca102e443e4be18e488f79321d832d69a5645131da9b94e08abcad7e",
+      "bytes": 1104,
+      "normalization": "Byte-equal generic source; no modifications."
+    },
+    {
+      "path": "fixture/source/build.py",
+      "sha256": "16bc111cf5661dce76ad841fc12e8058b18e3452f123feeb1e359ac4db8ee4b1",
+      "bytes": 653,
+      "normalization": "Byte-equal generic source; no modifications."
+    },
+    {
+      "path": "harness/capture-native.mjs",
+      "sha256": "0a5d8e9c18969415395d30c786d31e0d3608cb7a342004a51e468e68a02d49d0",
+      "bytes": 1023,
+      "normalization": "Byte-equal generic source; no modifications."
+    },
+    {
+      "path": "harness/cold-record-start.mjs",
+      "sha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "bytes": 4308,
+      "normalization": "Byte-equal generic source; no modifications."
+    },
+    {
+      "path": "harness/session.mjs",
+      "sha256": "5cdbfd9a5bbda108ce99f2b348685970f1b761ddd8d31ad4ec6861cdc9110a57",
+      "bytes": 2803,
+      "normalization": "Byte-equal generic source; no modifications."
+    }
+  ],
+  "fixture": "Unchanged generic GeometryFixture v2, independently compiled in this proof root; source and own build-output hashes are in fixture-build-manifest.json.",
+  "harness": "Observational session and ordinary native capture only; actual capture-native uses interactiveOnly=true, customActions=false, raw=false. No forced backend/metadata or fixture-counter result synthesis.",
+  "qualification": "Harness source is included for review. A planned action or harness capability is not a completed live result.",
+  "mediaTools": [
+    {
+      "path": "DecodeVideo.swift",
+      "sha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f",
+      "bytes": 2287
+    },
+    {
+      "path": "CreateContactSheets.js",
+      "sha256": "7c21148d21bea6aed2d9b887b87f0a360bfeb1d12fbd8f19d8a3efc6c54d9bdf",
+      "bytes": 1813
+    },
+    {
+      "path": "InspectMediaContainer.py",
+      "sha256": "46f0c19c96899012c544f0859190b6ceec341363fce988b63267cf195dfdc754",
+      "bytes": 2715
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+{
+  "case": "head-fullscreen-setup",
+  "classification": "pass-positive-control",
+  "sourceRole": "head",
+  "sourceAttribution": "Actual per-case classification source and native fingerprint retained alongside the separate build manifests.",
+  "records": [
+    {
+      "artifact": "01-open.json",
+      "originalArtifactSha256": "4874b290a9b699e882ba55ef83bf03797a4a938f5195861f2d91f946715c5aab",
+      "command": {
+        "action": "open",
+        "foreground": false
+      },
+      "ms": 2629.2636669999993,
+      "selectedResult": {}
+    },
+    {
+      "artifact": "02-press.json",
+      "originalArtifactSha256": "3b7bdec24d6a87c642f4a12e356fdae6ac2c030830495063942ad2b308bafcc0",
+      "command": {
+        "action": "press",
+        "target": {
+          "x": 381,
+          "y": 357
+        }
+      },
+      "ms": 4382.572667,
+      "selectedResult": {
+        "x": 381,
+        "y": 357,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped (381, 357)"
+      }
+    },
+    {
+      "artifact": "03-snapshot.json",
+      "originalArtifactSha256": "4884803396f2d0cba065877cc85ff715c38eca890ec610bd893db4ffdc0add08",
+      "command": {
+        "action": "snapshot",
+        "options": {
+          "customActions": false
+        }
+      },
+      "ms": 474.96983399999954,
+      "selectedResult": {
+        "warnings": [
+          "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+        ],
+        "viewport": {
+          "width": 375,
+          "height": 611
+        },
+        "snapshotQuality": {
+          "state": "healthy",
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 28.836965560913086,
+            "presentationMs": 0.11098384857177734
+          }
+        },
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 2,
+            "p50Ms": 100,
+            "p95Ms": 156,
+            "maxMs": 156,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "apple-runner": 2
+            }
+          }
+        },
+        "presentedSurface": "unknown",
+        "truncated": false,
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "genericTargets": [
+          {
+            "enabled": true,
+            "type": "TextField",
+            "placeholder": "Geometry input",
+            "depth": 3,
+            "parentIndex": 2,
+            "hittable": true,
+            "rect": {
+              "x": 353,
+              "y": 415,
+              "width": 200,
+              "height": 42
+            },
+            "index": 3,
+            "identifier": "geometry-input",
+            "password": false,
+            "editable": true,
+            "ref": "e4",
+            "kind": "text-field"
+          },
+          {
+            "enabled": true,
+            "type": "Button",
+            "depth": 3,
+            "parentIndex": 2,
+            "hittable": true,
+            "rect": {
+              "x": 569,
+              "y": 415,
+              "width": 111,
+              "height": 42
+            },
+            "index": 4,
+            "identifier": "geometry-action",
+            "label": "Geometry action",
+            "ref": "e5",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    {
+      "artifact": "04-press.json",
+      "originalArtifactSha256": "3297de23dae2187bc6fbcf2a20e82e0b3fb95a5cb4d37ff05dc46534ef81afd1",
+      "command": {
+        "action": "press",
+        "target": {
+          "x": 433,
+          "y": 357
+        }
+      },
+      "ms": 407.8755830000009,
+      "selectedResult": {
+        "x": 433,
+        "y": 357,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped (433, 357)"
+      }
+    },
+    {
+      "artifact": "05-snapshot.json",
+      "originalArtifactSha256": "72be3e16f50311f42fcfa39ac0ff4e4d33231203f5b45b60791127c2a7e463f4",
+      "command": {
+        "action": "snapshot",
+        "options": {
+          "customActions": false
+        }
+      },
+      "ms": 87.53083299999707,
+      "selectedResult": {
+        "warnings": [
+          "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+        ],
+        "viewport": {
+          "width": 888.8815480468963,
+          "height": 1209.355227177893
+        },
+        "snapshotQuality": {
+          "state": "healthy",
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 27.91297435760498,
+            "presentationMs": 0.11098384857177734
+          }
+        },
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 3,
+            "p50Ms": 100,
+            "p95Ms": 156,
+            "maxMs": 156,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "apple-runner": 3
+            }
+          }
+        },
+        "presentedSurface": "unknown",
+        "truncated": false,
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "genericTargets": [
+          {
+            "enabled": true,
+            "type": "TextField",
+            "rect": {
+              "width": 152.33185587127684,
+              "height": 42,
+              "x": 71.66814412872316,
+              "y": 90
+            },
+            "parentIndex": 2,
+            "placeholder": "Geometry input",
+            "identifier": "geometry-input",
+            "index": 3,
+            "depth": 3,
+            "hittable": true,
+            "password": false,
+            "editable": true,
+            "ref": "e4",
+            "kind": "text-field"
+          },
+          {
+            "enabled": true,
+            "type": "Button",
+            "rect": {
+              "width": 220,
+              "height": 42,
+              "x": 240,
+              "y": 90
+            },
+            "parentIndex": 2,
+            "identifier": "geometry-action",
+            "index": 4,
+            "label": "Geometry action",
+            "depth": 3,
+            "hittable": true,
+            "ref": "e5",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    {
+      "artifact": "06-snapshot.json",
+      "originalArtifactSha256": "71369b9444cc3ce1f040ff8632e3034d8e28de9c0023c9002e9391942e8f7bff",
+      "command": {
+        "action": "snapshot",
+        "options": {
+          "customActions": false
+        }
+      },
+      "ms": 53.08441599999787,
+      "selectedResult": {
+        "viewport": {
+          "width": 1032,
+          "height": 1376
+        },
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 4,
+            "p50Ms": 77,
+            "p95Ms": 156,
+            "maxMs": 156,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "apple-runner": 3,
+              "simulator-ax-bridge": 1
+            }
+          }
+        },
+        "presentedSurface": "absent",
+        "truncated": false,
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "genericTargets": [
+          {
+            "index": 2,
+            "parentIndex": 0,
+            "type": "TextField",
+            "role": "UITextField",
+            "value": "Geometry input",
+            "placeholder": "Geometry input",
+            "identifier": "geometry-input",
+            "rect": {
+              "x": 24,
+              "y": 90,
+              "width": 200,
+              "height": 42
+            },
+            "enabled": true,
+            "depth": 1,
+            "password": false,
+            "editable": true,
+            "hittable": true,
+            "ref": "e3",
+            "kind": "text-field"
+          },
+          {
+            "index": 3,
+            "parentIndex": 0,
+            "type": "Button",
+            "role": "UIButton",
+            "label": "Geometry action",
+            "identifier": "geometry-action",
+            "rect": {
+              "x": 240,
+              "y": 90,
+              "width": 220,
+              "height": 42
+            },
+            "enabled": true,
+            "depth": 1,
+            "hittable": true,
+            "ref": "e4",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    {
+      "artifact": "07-events.json",
+      "originalArtifactSha256": "15c0c2ce65e6a260c6ee4a989f7cfcbac39f6262b103b5061c805f7a33fdba32",
+      "command": {
+        "action": "events"
+      },
+      "ms": 225.02008300000307,
+      "fixtureEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.005541718564927578
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 15.617458382621408,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 20970.08962498512,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+        }
+      ]
+    },
+    {
+      "artifact": "07-native-capture.json",
+      "originalArtifactSha256": "5bbc4f7dd65ac7f98d26462ad523ea3984587ac7a758c597346f2789fdfd075c"
+    },
+    {
+      "artifact": "08-press.json",
+      "originalArtifactSha256": "37a58cb69b552ec4967a74b8b27671aaf7cbcdb9fbcfa597d00e7377d4153a9e",
+      "command": {
+        "action": "press",
+        "target": {
+          "ref": "@e4"
+        }
+      },
+      "ms": 357.25904199999786,
+      "selectedResult": {
+        "x": 350,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e4 (350, 111)"
+      }
+    },
+    {
+      "artifact": "09-events.json",
+      "originalArtifactSha256": "9d3827a8f80589d918fe732b860abdb13d31640987bf5c699ee2cd9ba8a02aad",
+      "command": {
+        "action": "events"
+      },
+      "ms": 115.06549999999697,
+      "fixtureEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.005541718564927578
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 15.617458382621408,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 20970.08962498512,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+        },
+        {
+          "count": 1,
+          "event": "actionReceivedTap",
+          "ms": 32885.69533335976,
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "artifact": "10-press.json",
+      "originalArtifactSha256": "ac6d62a13e844a4bb9abe9d92cae48c5c2752b874de12d50bfd3e5d9de06c1c3",
+      "command": {
+        "action": "press",
+        "target": {
+          "selector": "id=geometry-action"
+        }
+      },
+      "ms": 382.1434999999983,
+      "selectedResult": {
+        "x": 350,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=geometry-action (350, 111)"
+      }
+    },
+    {
+      "artifact": "11-events.json",
+      "originalArtifactSha256": "8ddf314fa7191e2608ab80772199abd2411ac4494fdff977ef8673e813b1f2b3",
+      "command": {
+        "action": "events"
+      },
+      "ms": 106.73525000000518,
+      "fixtureEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.005541718564927578
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 15.617458382621408,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 20970.08962498512,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+        },
+        {
+          "count": 1,
+          "event": "actionReceivedTap",
+          "ms": 32885.69533335976,
+          "orientation": 1
+        },
+        {
+          "count": 2,
+          "event": "actionReceivedTap",
+          "ms": 33385.665499954484,
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "artifact": "12-snapshot.json",
+      "originalArtifactSha256": "1aff10a7091a06b4386a72ddece1d7bbd9038cca8579cbe9f7f59f1114b7f0f4",
+      "command": {
+        "action": "snapshot",
+        "options": {
+          "customActions": true
+        }
+      },
+      "ms": 1640.7452919999996,
+      "selectedResult": {
+        "warnings": [
+          "Custom actions were read for 12 of 13 merged elements, on-screen ones first; the remaining 1 were not read, so an absent actions list on those is not evidence that they have none. Scroll them into view and re-run to read them."
+        ],
+        "viewport": {
+          "width": 1032,
+          "height": 1376
+        },
+        "snapshotQuality": {
+          "state": "recovered",
+          "backend": "private-ax",
+          "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+          "reasonCode": "requested-backend",
+          "customActions": {
+            "read": 12,
+            "candidates": 13,
+            "truncated": 0,
+            "blocked": false
+          },
+          "timing": {
+            "acquisitionMs": 1580.8980464935303,
+            "presentationMs": 0.13399124145507812
+          }
+        },
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 6,
+            "p50Ms": 77,
+            "p95Ms": 1628,
+            "maxMs": 1628,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "apple-runner": 4,
+              "simulator-ax-bridge": 2
+            }
+          }
+        },
+        "presentedSurface": "unknown",
+        "truncated": false,
+        "genericTargets": [
+          {
+            "type": "TextField",
+            "index": 2,
+            "rect": {
+              "x": 24,
+              "height": 42,
+              "y": 90,
+              "width": 200
+            },
+            "depth": 1,
+            "placeholder": "Geometry input",
+            "identifier": "geometry-input",
+            "enabled": true,
+            "parentIndex": 0,
+            "hittable": true,
+            "password": false,
+            "editable": true,
+            "ref": "e3",
+            "kind": "text-field"
+          },
+          {
+            "type": "Button",
+            "index": 3,
+            "rect": {
+              "x": 240,
+              "height": 42,
+              "y": 90,
+              "width": 220
+            },
+            "depth": 1,
+            "enabled": true,
+            "identifier": "geometry-action",
+            "parentIndex": 0,
+            "label": "Geometry action",
+            "hittable": true,
+            "ref": "e4",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    {
+      "artifact": "13-press.json",
+      "originalArtifactSha256": "78b0851ae14fa267635593a60b943e3e3bea9fb15eefb1edf214b5ba6d3be2fe",
+      "command": {
+        "action": "press",
+        "target": {
+          "ref": "@e4"
+        }
+      },
+      "ms": 406.1875,
+      "selectedResult": {
+        "x": 350,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e4 (350, 111)"
+      }
+    },
+    {
+      "artifact": "14-events.json",
+      "originalArtifactSha256": "c981b21f2149594adfa2576703f01084c012ea0f58d51b756ac8ff55aab87b19",
+      "command": {
+        "action": "events"
+      },
+      "ms": 179.32016600000497,
+      "fixtureEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.005541718564927578
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 15.617458382621408,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 20970.08962498512,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+        },
+        {
+          "count": 1,
+          "event": "actionReceivedTap",
+          "ms": 32885.69533335976,
+          "orientation": 1
+        },
+        {
+          "count": 2,
+          "event": "actionReceivedTap",
+          "ms": 33385.665499954484,
+          "orientation": 1
+        },
+        {
+          "count": 3,
+          "event": "actionReceivedTap",
+          "ms": 66685.63416670077,
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "artifact": "15-close.json",
+      "originalArtifactSha256": "62107a181fbbf77e1f2c705bc37257340b0d538d9bcf794ac8396fcaa8504e64",
+      "command": {
+        "action": "close"
+      },
+      "ms": 14.182874999998603,
+      "selectedResult": {}
+    },
+    {
+      "artifact": "classification.json",
+      "originalArtifactSha256": "fe8a9d0bf08b846cd8e02341d51788001261ffabfe33260efe7eaf5e8663935f"
+    }
+  ],
+  "qualification": "Natural missing-viewport case was not observed; actual unknown-origin case used derived viewport on candidate. Simple selector used snapshot-derived resolution in the natural case; no independent native-selector route is claimed there. Fixture UIView actionScreenFrame(to:nil) becomes app-local after relaunch and is not a screen-coordinate authority. The healthy native reported capture and actual baseline synthesized reference establish the placed-window origin.",
+  "actualClassification": {
+    "classification": "fullscreen-known-origin-positive-head",
+    "sdkCommit": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "recording": "external simctl only, no SDK recording-start",
+    "setup": "two screenshot-guided raw presses expanded green control then maximized; intermediate animation capture retained",
+    "nativeReportedViewport": {
+      "kind": "reported",
+      "rect": {
+        "height": 1376,
+        "y": 0,
+        "x": 0,
+        "width": 1032
+      }
+    },
+    "nativeQuality": {
+      "timing": {
+        "acquisitionMs": 27.639031410217285,
+        "presentationMs": 0.11706352233886719
+      },
+      "backend": "tree",
+      "state": "healthy"
+    },
+    "publicViewport": {
+      "width": 1032,
+      "height": 1376
+    },
+    "publicTarget": {
+      "x": 240,
+      "y": 90,
+      "width": 220,
+      "height": 42
+    },
+    "refDispatch": {
+      "x": 350,
+      "y": 111,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e4 (350, 111)",
+      "referenceWidth": 1032,
+      "referenceHeight": 1376,
+      "targetKind": "ref",
+      "ref": "e4",
+      "refLabel": "Geometry action",
+      "selectorChain": [
+        "id=\"geometry-action\"",
+        "role=\"button\" label=\"Geometry action\"",
+        "label=\"Geometry action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "selectorDispatch": {
+      "x": 350,
+      "y": 111,
+      "message": "Tapped id=geometry-action (350, 111)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 1032,
+      "referenceHeight": 1376,
+      "targetKind": "selector",
+      "selector": "id=geometry-action",
+      "selectorChain": [
+        "id=\"geometry-action\"",
+        "role=\"button\" label=\"Geometry action\"",
+        "label=\"Geometry action\""
+      ],
+      "refLabel": "Geometry action",
+      "resolution": {
+        "source": "runtime",
+        "phase": "pre-action",
+        "kind": "unique"
+      }
+    },
+    "counters": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "requestedCustomActionsPositive": {
+      "quality": {
+        "state": "recovered",
+        "backend": "private-ax",
+        "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+        "reasonCode": "requested-backend",
+        "customActions": {
+          "read": 12,
+          "candidates": 13,
+          "truncated": 0,
+          "blocked": false
+        },
+        "timing": {
+          "acquisitionMs": 1580.8980464935303,
+          "presentationMs": 0.13399124145507812
+        }
+      },
+      "viewport": {
+        "width": 1032,
+        "height": 1376
+      },
+      "refDispatch": {
+        "x": 350,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e4 (350, 111)",
+        "referenceWidth": 1032,
+        "referenceHeight": 1376,
+        "targetKind": "ref",
+        "ref": "e4",
+        "refLabel": "Geometry action",
+        "selectorChain": [
+          "id=\"geometry-action\"",
+          "role=\"button\" label=\"Geometry action\"",
+          "label=\"Geometry action\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "classification": "requested-backend private-ax with known authority, not natural deferred proof"
+    },
+    "abort": false,
+    "producerPins": false
+  },
+  "hostSource": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "nativeArtifactRole": "head-production",
+  "artifactAttribution": "Actual paired host/native phase identified by source owner and root; separate manifest retains the exact source fingerprints and binary hashes. Missing authority fields in baseline observations remain absent.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

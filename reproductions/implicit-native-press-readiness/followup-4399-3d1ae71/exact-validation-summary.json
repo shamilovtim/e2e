@@ -1,0 +1,171 @@
+{
+  "source": {
+    "head": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "tree": "185ab608a47f4b238fdf397760061a697326fbb0",
+    "base": "a8774f3632eb432a1dadbde8627da30586f9ee39"
+  },
+  "status": "passed",
+  "exactCommit": true,
+  "checkoutChanged": false,
+  "initial": {
+    "head": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "clean": true,
+    "fingerprint": "b311cf1ac1ed722b4eed4c14274e1c4264185eb5b417fcd7c37633ad1e5cc937"
+  },
+  "final": {
+    "head": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "clean": true,
+    "fingerprint": "b311cf1ac1ed722b4eed4c14274e1c4264185eb5b417fcd7c37633ad1e5cc937"
+  },
+  "checks": [
+    {
+      "id": "format",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "tests": [
+        {
+          "passed": 370,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "passed",
+      "tests": [
+        {
+          "passed": 19072,
+          "failed": 0,
+          "skipped": 3,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "deduplicated",
+      "reason": "covered by related tests"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "adr-citations",
+      "status": "passed",
+      "tests": [
+        {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "tests": []
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ],
+  "rawReceiptSha256": "331ef51e7f16aaaf30476015302573820696af838b8f17a3ed0d69c97ed44973"
+}

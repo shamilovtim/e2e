@@ -1,0 +1,204 @@
+{
+  "basis": "Source range review plus emitted-code anchors. Dependent chunks are identified explicitly; this is not a compiler-generated module graph.",
+  "files": [
+    {
+      "builtFile": "dist/src/cli-help.js",
+      "owners": [
+        {
+          "path": "src/commands/schema/cli-help.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "31ac1620ae1c9d8850266b4b6ef17b28307cb6c3c9f6ab014b3e2b701669d723",
+          "newSHA256": "04edc108c14c28a89aa47fb09ee475739e0bc517f38c9fefe3dd28b6fb808fd5"
+        }
+      ],
+      "changeScope": "direct upstream help change",
+      "emittedCodeAnchorsChecked": [
+        "each workspace uses its own browser"
+      ]
+    },
+    {
+      "builtFile": "dist/src/network-traffic.js",
+      "owners": [
+        {
+          "path": "packages/capture-kit/src/network-traffic.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "cc895712306c5b7de37477047f948a53ab86a6a6f25cdccd7b3751b201bb18c4",
+          "newSHA256": "1cf14c3ebf60ad240677946aabf3a2aae2cd3bea4e943294f33e4e2912d22a51"
+        }
+      ],
+      "changeScope": "direct upstream network merge bounds",
+      "emittedCodeAnchorsChecked": [
+        "maxEntries",
+        "entries.slice"
+      ]
+    },
+    {
+      "builtFile": "dist/src/proxy.js",
+      "owners": [
+        {
+          "path": "packages/proxy/src/daemon-proxy.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "ba0b2d9dcc5914cfef4d7b3cbda82a78b90d200b2168c93fe0350167ab5bef66",
+          "newSHA256": "de220ddc0e9bebd0dde84474b62fe7a9d60b5d99deeaf8906d89e9cd34894485"
+        }
+      ],
+      "changeScope": "direct upstream forwarded upload scheme restriction",
+      "emittedCodeAnchorsChecked": [
+        "x-forwarded-proto"
+      ]
+    },
+    {
+      "builtFile": "dist/src/sdk-device.js",
+      "owners": [
+        {
+          "path": "packages/kernel/src/device.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "5d14ae2482508b4f9e7f6694e608873d1567c6ed71796088687e5451c40a96c0",
+          "newSHA256": "ae5cc0c42b274c23c9d19bc2ad76ea9b3e81b5331e4a52188826feca9a158d00"
+        }
+      ],
+      "changeScope": "direct upstream workspace web session identity",
+      "emittedCodeAnchorsChecked": [
+        "web_session_name_invalid",
+        "w_"
+      ]
+    },
+    {
+      "builtFile": "dist/src/selector-runtime.js",
+      "owners": [
+        {
+          "path": "packages/daemon/src/execution/selector-runtime-backend.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "2b8bcb979c1dce7e152be872520483a05acdbd954d885e00f2a1fdc888f31e7e",
+          "newSHA256": "b93a340379e01ec97ab456cecc435ee7fe12f9d41bdb1fce359f87e48cc941a7"
+        }
+      ],
+      "changeScope": "direct upstream required bound selector operations",
+      "emittedCodeAnchorsChecked": [
+        "captureSnapshot",
+        "readText"
+      ]
+    },
+    {
+      "builtFile": "dist/src/server-startup.js",
+      "owners": [
+        {
+          "path": "packages/daemon/src/server/upload-http.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "51442f65e1328338e5c1b6b1f7ceb5e5282460fe674f494757b8dae7d74dc3c7",
+          "newSHA256": "7afd96043c9009fce3e70fbe5279dc5e1883a6abf52214e7b2a3feb945110734"
+        }
+      ],
+      "changeScope": "direct upstream forwarded upload scheme restriction",
+      "emittedCodeAnchorsChecked": [
+        "x-forwarded-proto"
+      ]
+    },
+    {
+      "builtFile": "dist/src/session-tenant-scope.js",
+      "owners": [
+        {
+          "path": "packages/daemon/src/core/session-tenant-scope.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "1d527f111585905510c8a3cc9a101927f64a5adabac4d9673cb778bfc4bd8cf9",
+          "newSHA256": "80c15bd21c360d58a42966ee40d86d68f8aa457038816320248cd7df10e60152"
+        }
+      ],
+      "changeScope": "direct upstream workspace web session identity",
+      "emittedCodeAnchorsChecked": [
+        "request_web_session_missing",
+        "workspace"
+      ]
+    },
+    {
+      "builtFile": "dist/src/snapshot-runtime-binding.js",
+      "owners": [
+        {
+          "path": "packages/daemon/src/core/snapshot-session.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "0ebc51835a57a74817ccfd38a86980e19283e12f732219f47e6cf0bb78d6a59a",
+          "newSHA256": "85948fdf56aafdc40b36936ba1075afed9ecf88fc2f9955b17925b7ff6b636e9"
+        }
+      ],
+      "changeScope": "direct upstream resolveSessionAtAddress extraction",
+      "emittedCodeAnchorsChecked": [
+        "explicit-session-resolution"
+      ]
+    },
+    {
+      "builtFile": "dist/src/snapshot-runtime.js",
+      "owners": [
+        {
+          "path": "packages/daemon/src/sessions/snapshot-runtime.ts",
+          "sourceIdenticalAcrossRebase": true,
+          "oldSHA256": "b834f34ce1b9e98e6849272bbd3dc3d2147802fa8b317692b11942cc8af0ef05",
+          "newSHA256": "b834f34ce1b9e98e6849272bbd3dc3d2147802fa8b317692b11942cc8af0ef05"
+        }
+      ],
+      "changeScope": "dependent generated chunk; owning source unchanged, imports rebuilt session-binding chunk",
+      "emittedCodeAnchorsChecked": [
+        "snapshot-runtime-binding.js"
+      ]
+    },
+    {
+      "builtFile": "dist/src/snapshot2.js",
+      "owners": [
+        {
+          "path": "packages/daemon/src/execution/wait-runtime.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "80c0645d98c45a7cf2255b9234f233f0ab5ae644cce42bf3ff7031c4f284c193",
+          "newSHA256": "0f71e3df72e6387809392bb13c18e7d3cf63c3cd08a1224b74d9f77a3fecae85"
+        },
+        {
+          "path": "packages/daemon/src/sessions/handlers/snapshot.ts",
+          "sourceIdenticalAcrossRebase": true,
+          "oldSHA256": "aa41a7c27fcdab6b6519af07749a358855957da43370c553e115995d0e3893c4",
+          "newSHA256": "aa41a7c27fcdab6b6519af07749a358855957da43370c553e115995d0e3893c4"
+        }
+      ],
+      "changeScope": "upstream duration-wait implementation bundled with snapshot command handlers",
+      "emittedCodeAnchorsChecked": [
+        "waitedMs",
+        "snapshot-runtime-binding.js"
+      ]
+    },
+    {
+      "builtFile": "dist/src/src2.js",
+      "owners": [
+        {
+          "path": "packages/daemon/src/server/request-execution-scope.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "a051385b4010b170fa4a1c91a567b84ac07fb59575f98bb060ff727cf163c461",
+          "newSHA256": "bfa845b0b6dda0025007132b906d1dd978c32bf11c4b9eb8468fa4d51a142f6a"
+        },
+        {
+          "path": "src/daemon.ts",
+          "sourceIdenticalAcrossRebase": true,
+          "oldSHA256": "ad149ab990a888811cceda31ebf0f56598beeafbf5af91fc92607886b1080246",
+          "newSHA256": "ad149ab990a888811cceda31ebf0f56598beeafbf5af91fc92607886b1080246"
+        }
+      ],
+      "changeScope": "upstream web session scope composed in daemon entry chunk",
+      "emittedCodeAnchorsChecked": [
+        "webSession",
+        "session-tenant-scope.js"
+      ]
+    },
+    {
+      "builtFile": "dist/src/src3.js",
+      "owners": [
+        {
+          "path": "packages/command-surface/src/capture/snapshot.ts",
+          "sourceIdenticalAcrossRebase": false,
+          "oldSHA256": "1e2edbd8de918b5eb305df57e502568a9d74d0312665f2e9666495c634632caa",
+          "newSHA256": "9bff41185d6223ec96d234cfbfc4e0d2603a531b262a73b8a7b7a716e7053bd0"
+        }
+      ],
+      "changeScope": "combined command facet chunk carries preserved upstream HarmonyOS clause and unchanged iOS origin clause",
+      "emittedCodeAnchorsChecked": [
+        "visibility-only",
+        "window-origin-unknown"
+      ]
+    }
+  ]
+}

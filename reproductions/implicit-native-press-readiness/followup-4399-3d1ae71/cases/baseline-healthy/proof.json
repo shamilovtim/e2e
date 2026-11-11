@@ -1,0 +1,1127 @@
+{
+  "case": "baseline-healthy",
+  "classification": "pass-positive-control",
+  "sourceRole": "baseline",
+  "sourceAttribution": "Actual per-case classification source and native fingerprint retained alongside the separate build manifests.",
+  "records": [
+    {
+      "artifact": "01-open.json",
+      "originalArtifactSha256": "28a8074bfed31bc056d38061e38578d34db8a99bcf652e813a9e332365f4b25a",
+      "command": {
+        "action": "open",
+        "relaunch": true,
+        "foreground": false
+      },
+      "ms": 2986.2697080000016,
+      "selectedResult": {}
+    },
+    {
+      "artifact": "02-snapshot.json",
+      "originalArtifactSha256": "e4567229e5044d5cbcf92dd06f97cae624f1569a0fef726f7026a91daedc7124",
+      "command": {
+        "action": "snapshot",
+        "options": {
+          "customActions": false
+        }
+      },
+      "ms": 141.38212500000373,
+      "selectedResult": {
+        "viewport": {
+          "width": 1032,
+          "height": 1376
+        },
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 1,
+            "p50Ms": 98,
+            "p95Ms": 98,
+            "maxMs": 98,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "simulator-ax-bridge": 1
+            }
+          }
+        },
+        "presentedSurface": "absent",
+        "truncated": false,
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "genericTargets": [
+          {
+            "index": 2,
+            "parentIndex": 0,
+            "type": "TextField",
+            "role": "UITextField",
+            "value": "Geometry input",
+            "placeholder": "Geometry input",
+            "identifier": "geometry-input",
+            "rect": {
+              "x": 24,
+              "y": 90,
+              "width": 200,
+              "height": 42
+            },
+            "enabled": true,
+            "depth": 1,
+            "password": false,
+            "editable": true,
+            "hittable": true,
+            "ref": "e3",
+            "kind": "text-field"
+          },
+          {
+            "index": 3,
+            "parentIndex": 0,
+            "type": "Button",
+            "role": "UIButton",
+            "label": "Geometry action",
+            "identifier": "geometry-action",
+            "rect": {
+              "x": 240,
+              "y": 90,
+              "width": 220,
+              "height": 42
+            },
+            "enabled": true,
+            "depth": 1,
+            "hittable": true,
+            "ref": "e4",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    {
+      "artifact": "03-snapshot.json",
+      "originalArtifactSha256": "0b873ad96ab935f0d2a8a97a5f711da8a3c7f9c7460c02dd4e8ea9de43717a11",
+      "command": {
+        "action": "snapshot",
+        "options": {
+          "customActions": false
+        }
+      },
+      "ms": 825.4222080000036,
+      "selectedResult": {
+        "warnings": [
+          "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+        ],
+        "viewport": {
+          "width": 375,
+          "height": 611
+        },
+        "snapshotQuality": {
+          "state": "healthy",
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 33.85007381439209,
+            "presentationMs": 0.1569986343383789
+          }
+        },
+        "snapshotDiagnostics": {
+          "stats": {
+            "count": 2,
+            "p50Ms": 98,
+            "p95Ms": 807,
+            "maxMs": 807,
+            "slowThresholdMs": 1500,
+            "platform": "ios",
+            "backends": {
+              "simulator-ax-bridge": 1,
+              "apple-runner": 1
+            }
+          }
+        },
+        "presentedSurface": "unknown",
+        "truncated": false,
+        "keyboard": {
+          "kind": "absent",
+          "treeBound": true
+        },
+        "genericTargets": [
+          {
+            "hittable": true,
+            "type": "TextField",
+            "index": 3,
+            "placeholder": "Geometry input",
+            "identifier": "geometry-input",
+            "enabled": true,
+            "parentIndex": 2,
+            "depth": 3,
+            "rect": {
+              "x": 353,
+              "y": 415,
+              "width": 200,
+              "height": 42
+            },
+            "password": false,
+            "editable": true,
+            "ref": "e4",
+            "kind": "text-field"
+          },
+          {
+            "hittable": true,
+            "type": "Button",
+            "index": 4,
+            "enabled": true,
+            "identifier": "geometry-action",
+            "label": "Geometry action",
+            "parentIndex": 2,
+            "depth": 3,
+            "rect": {
+              "x": 569,
+              "y": 415,
+              "width": 111,
+              "height": 42
+            },
+            "ref": "e5",
+            "kind": "button"
+          }
+        ]
+      }
+    },
+    {
+      "artifact": "03-window-setup-pan.json",
+      "originalArtifactSha256": "26e6ed084cc70f0c4ac62f5d8c63493f1c9c442a0cd4ac228636373226619647",
+      "setupInput": {
+        "x": 1022,
+        "y": 1366,
+        "dx": -400,
+        "dy": -450,
+        "durationMs": 900
+      },
+      "ms": 1767.916083,
+      "selectedResult": {
+        "kind": "pan",
+        "durationMs": 900,
+        "pointerCount": 1,
+        "from": {
+          "x": 1022,
+          "y": 1366
+        },
+        "to": {
+          "x": 622,
+          "y": 916
+        },
+        "runnerMainThreadBusy": false,
+        "message": "Panned (1022, 1366) by (-400, -450)",
+        "executionProfile": "timed-pan",
+        "timing": {
+          "executionProfile": "timed-pan",
+          "gestureDurationMs": 900
+        }
+      }
+    },
+    {
+      "artifact": "04-press.json",
+      "originalArtifactSha256": "611f8c72c14072d2725ef068af78bfe0fd05acfd3791b7e8e2c67f2b5c288ddf",
+      "command": {
+        "action": "press",
+        "target": {
+          "ref": "@e5"
+        }
+      },
+      "ms": 442.12362499997835,
+      "selectedResult": {
+        "x": 625,
+        "y": 436,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e5 (625, 436)"
+      }
+    },
+    {
+      "artifact": "05-events.json",
+      "originalArtifactSha256": "048dcd6bb8d4f3cc857e83017a4df95cbd2f1ced3e9f3cd5663656e7b21162b1",
+      "command": {
+        "action": "events"
+      },
+      "ms": 120.96745799999917,
+      "fixtureEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.010166666470468044
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 21.439708420075476,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190349.6518334141,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 996.0, 1355.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190381.16891670506,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 955.0, 1332.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190389.35012510046,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 940.0, 1324.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190406.75370837562,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 925.0, 1315.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190424.16658333968,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 910.0, 1307.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190441.39262509998,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 897.5, 1298.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190459.4203750603,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 889.5, 1289.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190480.19825003576,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 863.0, 1280.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190496.8613750534,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 847.0, 1271.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190518.8655416714,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 831.0, 1253.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190545.16987502575,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 798.0, 1221.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190557.82824999187,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 781.0, 1203.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190576.96845836472,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 764.0, 1194.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190600.18862504512,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 748.0, 1184.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190616.19029170834,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 731.0, 1152.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190628.73745837715,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 697.0, 1114.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190644.92912509013,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 680.0, 1095.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190673.7114583375,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 663.0, 1076.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190689.92058339063,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 646.0, 1056.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190706.69504173566,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 629.0, 1037.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190723.35029172245,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 612.0, 1018.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190739.62520842906,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 595.0, 999.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190756.61579170264,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 578.0, 980.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190773.53654173203,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 562.0, 961.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190789.67891668435,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 545.0, 943.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190806.30833341274,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 528.0, 924.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190823.12258332968,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 512.0, 905.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190839.682833408,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 495.0, 887.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 215.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190856.35158338118,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 479.0, 869.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 199.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190872.98050010577,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 463.0, 851.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 183.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190889.5080833463,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 447.0, 833.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 167.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190917.55037510302,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 431.0, 815.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 152.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190933.93625004683,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 416.0, 797.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 137.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190951.3895000564,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 401.0, 780.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 122.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190967.50675002113,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 386.0, 763.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190983.75000001397,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 747.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191000.0575000886,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 731.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191018.5132083716,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 715.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191033.83412503172,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 699.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191049.58666674793,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 685.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191066.2892917171,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 670.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191083.2056667423,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 657.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191099.67912500724,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 644.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191116.57312500756,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 632.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191133.0694167409,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 621.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191149.8421666911,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+        },
+        {
+          "count": 1,
+          "event": "actionReceivedTap",
+          "ms": 228335.9887500992,
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "artifact": "06-press.json",
+      "originalArtifactSha256": "8275a39cb9ea8fdc4f912155412fe758e09589c7d29a54ec984a22098e220714",
+      "command": {
+        "action": "press",
+        "target": {
+          "selector": "id=geometry-action"
+        }
+      },
+      "ms": 545.0720420000143,
+      "selectedResult": {
+        "x": 625,
+        "y": 436,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=geometry-action (625, 436)"
+      }
+    },
+    {
+      "artifact": "07-events.json",
+      "originalArtifactSha256": "b91e22b19340d22d85cef052c832d8b9ad84ddc13d31840d943a351eaebd08bb",
+      "command": {
+        "action": "events"
+      },
+      "ms": 162.0580829999817,
+      "fixtureEvents": [
+        {
+          "event": "appReady",
+          "ms": 0.010166666470468044
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 21.439708420075476,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190349.6518334141,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 996.0, 1355.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190381.16891670506,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 955.0, 1332.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190389.35012510046,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 940.0, 1324.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190406.75370837562,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 925.0, 1315.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190424.16658333968,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 910.0, 1307.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190441.39262509998,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 897.5, 1298.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190459.4203750603,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 889.5, 1289.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190480.19825003576,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 863.0, 1280.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190496.8613750534,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 847.0, 1271.5)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190518.8655416714,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 831.0, 1253.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190545.16987502575,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 798.0, 1221.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190557.82824999187,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 781.0, 1203.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190576.96845836472,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 764.0, 1194.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190600.18862504512,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 748.0, 1184.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190616.19029170834,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 731.0, 1152.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190628.73745837715,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 697.0, 1114.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190644.92912509013,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 680.0, 1095.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190673.7114583375,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 663.0, 1076.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190689.92058339063,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 646.0, 1056.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190706.69504173566,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 629.0, 1037.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190723.35029172245,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 612.0, 1018.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190739.62520842906,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 595.0, 999.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190756.61579170264,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 578.0, 980.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190773.53654173203,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 562.0, 961.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190789.67891668435,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 545.0, 943.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190806.30833341274,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 528.0, 924.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190823.12258332968,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 512.0, 905.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190839.682833408,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 495.0, 887.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 215.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190856.35158338118,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 479.0, 869.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 199.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190872.98050010577,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 463.0, 851.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 183.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190889.5080833463,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 447.0, 833.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 167.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190917.55037510302,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 431.0, 815.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 152.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190933.93625004683,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 416.0, 797.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 137.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190951.3895000564,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 401.0, 780.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 122.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190967.50675002113,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 386.0, 763.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 190983.75000001397,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 747.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191000.0575000886,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 731.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191018.5132083716,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 715.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191033.83412503172,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 699.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191049.58666674793,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 685.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191066.2892917171,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 670.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191083.2056667423,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 657.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191099.67912500724,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 644.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191116.57312500756,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 632.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191133.0694167409,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 621.0)"
+        },
+        {
+          "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 1,
+          "ms": 191149.8421666911,
+          "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+          "viewBounds": "(0.0, 0.0, 375.0, 611.0)"
+        },
+        {
+          "count": 1,
+          "event": "actionReceivedTap",
+          "ms": 228335.9887500992,
+          "orientation": 1
+        },
+        {
+          "count": 2,
+          "event": "actionReceivedTap",
+          "ms": 245619.2387084011,
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "artifact": "08-close.json",
+      "originalArtifactSha256": "8860df6f947a5e3d2a160f987422a1637e5677a074f7962fd77be8bf1d83450c",
+      "command": {
+        "action": "close"
+      },
+      "ms": 24.167124999978114,
+      "selectedResult": {}
+    },
+    {
+      "artifact": "classification.json",
+      "originalArtifactSha256": "b8a7791927fed0abca61b362f26d45a17a6345a4f5de860f011c9532bd50b51c"
+    }
+  ],
+  "qualification": "Natural missing-viewport case was not observed; actual unknown-origin case used derived viewport on candidate. Simple selector used snapshot-derived resolution in the natural case; no independent native-selector route is claimed there. Fixture UIView actionScreenFrame(to:nil) becomes app-local after relaunch and is not a screen-coordinate authority. The healthy native reported capture and actual baseline synthesized reference establish the placed-window origin.",
+  "actualClassification": {
+    "classification": "healthy baseline only; no deferred claim",
+    "window": {
+      "height": 611,
+      "width": 375,
+      "y": 325,
+      "x": 329
+    },
+    "producer": {
+      "state": "healthy",
+      "backend": "tree",
+      "timing": {
+        "acquisitionMs": 33.85007381439209,
+        "presentationMs": 0.1569986343383789
+      }
+    },
+    "action": {
+      "hittable": true,
+      "type": "Button",
+      "index": 4,
+      "enabled": true,
+      "identifier": "geometry-action",
+      "label": "Geometry action",
+      "parentIndex": 2,
+      "depth": 3,
+      "rect": {
+        "x": 569,
+        "y": 415,
+        "width": 111,
+        "height": 42
+      },
+      "ref": "e5",
+      "kind": "button"
+    },
+    "nativeActions": [
+      {
+        "count": 1,
+        "event": "actionReceivedTap",
+        "ms": 228335.9887500992,
+        "orientation": 1
+      },
+      {
+        "count": 2,
+        "event": "actionReceivedTap",
+        "ms": 245619.2387084011,
+        "orientation": 1
+      }
+    ],
+    "source": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+    "nativeSourceFingerprint": "7ba8868484ea7d1d7474ec142094a798cd0243e828b9687c048e78d673c80ac1",
+    "video": "setup-and-control.mp4",
+    "setup": "one raw native resize pan; no exact-origin tuning"
+  },
+  "hostSource": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+  "nativeArtifactRole": "baseline-production",
+  "artifactAttribution": "Actual paired host/native phase identified by source owner and root; separate manifest retains the exact source fingerprints and binary hashes. Missing authority fields in baseline observations remain absent.",
+  "media": {
+    "video": "video.mp4",
+    "decodeReceipt": "DECODE-RECEIPT.json",
+    "firstPng": "video.first.png",
+    "lastPng": "video.last.png",
+    "originalBytesUnchanged": true
+  }
+}

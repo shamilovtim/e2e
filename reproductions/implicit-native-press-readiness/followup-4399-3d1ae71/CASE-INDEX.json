@@ -1,0 +1,44 @@
+{
+  "head": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "base": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+  "cases": [
+    {
+      "case": "baseline-healthy",
+      "classification": "pass-positive-control",
+      "proof": "cases/baseline-healthy/proof.json",
+      "video": "cases/baseline-healthy/video.mp4"
+    },
+    {
+      "case": "baseline-natural-1",
+      "classification": "reproduced-product-bug",
+      "proof": "cases/baseline-natural-1/proof.json",
+      "video": "cases/baseline-natural-1/video.mp4"
+    },
+    {
+      "case": "head-fullscreen-setup",
+      "classification": "pass-positive-control",
+      "proof": "cases/head-fullscreen-setup/proof.json",
+      "video": "cases/head-fullscreen-setup/video.mp4"
+    },
+    {
+      "case": "head-healthy-placed",
+      "classification": "pass-positive-control",
+      "proof": "cases/head-healthy-placed/proof.json",
+      "video": "cases/head-healthy-placed/video.mp4"
+    },
+    {
+      "case": "head-natural-1",
+      "classification": "pass-safe-refusal",
+      "proof": "cases/head-natural-1/proof.json",
+      "video": "cases/head-natural-1/video.mp4"
+    }
+  ],
+  "externalAborts": 0,
+  "setupFailures": 0,
+  "limitations": [
+    "Natural native missing viewport was not observed; natural unknown-origin coverage used native derived viewport.",
+    "Baseline protocol did not emit snapshotViewport; its actual native dispatch reference and natural timeout/deferred diagnostics establish the lost-origin comparison.",
+    "Simple selector in the natural degraded case used snapshot-derived resolution and was refused; no claim that an independent native selector route ran in that case.",
+    "Generic fixture UIView actionScreenFrame(to:nil) becomes app-local after relaunch; authoritative healthy native capture and actual synthesized dispatch reference establish the observed placed window origin."
+  ]
+}

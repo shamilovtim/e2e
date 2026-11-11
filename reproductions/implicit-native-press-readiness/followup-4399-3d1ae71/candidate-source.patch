@@ -1,0 +1,1171 @@
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+AXSnapshotFallback.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+AXSnapshotFallback.swift
+index ad05f5c..e9f2fc5 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+AXSnapshotFallback.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+AXSnapshotFallback.swift
+@@ -274,7 +274,8 @@ extension RunnerTests {
+   }
+ 
+   /// The app's reported viewport when XCTest can read it, else the bridge's own root frame declared
+-  /// `.derived`, which cannot anchor a rotation: rotated system surfaces then stay as reported (#2612).
++  /// `.derived`, which cannot establish a screen origin or anchor a rotation. The wire retains this
++  /// uncertainty, so local coordinates cannot authorize input (#4399).
+   private func privateAXSnapshotViewport(
+     app: XCUIApplication,
+     bundleId: String?,
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
+index d02f0f9..4c639f8 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift
+@@ -501,6 +501,7 @@ struct DataPayload: Codable {
+   var qualityPayload: SnapshotQualityPayload? = nil
+   var snapshotQuality: SnapshotQuality?
+   var snapshotQualityNotes: [SnapshotQualityNote]? = nil
++  var snapshotViewport: SnapshotViewportPayload?
+   /// Set when the capture describes an in-place system surface, not the app itself (#2438).
+   var systemSurface: SystemSurfaceProvenancePayload?
+   /// Whether this capture read a modal presentation over the app's own content (#3565). The runner's
+@@ -645,6 +646,30 @@ struct SnapshotQualityPayload: Codable {
+   }
+ }
+ 
++/// Preserves the acquisition's viewport authority across the runner boundary.
++struct SnapshotViewportPayload: Codable {
++  let kind: String
++  let rect: SnapshotRect?
++  let reason: String?
++
++  init(_ viewport: SnapshotViewport) {
++    switch viewport {
++    case .reported(let box, _):
++      kind = "reported"
++      rect = SnapshotRect(box.rect)
++      reason = nil
++    case .derived(let box):
++      kind = "derived"
++      rect = SnapshotRect(box.rect)
++      reason = nil
++    case .missing(let missingReason):
++      kind = "missing"
++      rect = nil
++      reason = missingReason == .invalid ? "invalid" : "not-provided"
++    }
++  }
++}
++
+ /// A runner failure the session-loss retry may recover from by re-resolving the target.
+ enum RetryableResponseFailure: Equatable {
+   case targetAppUnavailable
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotCapturePlan.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotCapturePlan.swift
+index d6fb413..ebfcc5a 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotCapturePlan.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotCapturePlan.swift
+@@ -98,7 +98,11 @@ extension RunnerTests {
+     acquired acquisition: SnapshotAcquisition
+   ) -> SnapshotBackendCapture {
+     SnapshotBackendCapture(
+-      payload: DataPayload(nodes: result.nodes, truncated: result.truncated),
++      payload: DataPayload(
++        nodes: result.nodes,
++        truncated: result.truncated,
++        snapshotViewport: SnapshotViewportPayload(acquisition.viewport)
++      ),
+       effectiveDepth: result.effectiveDepth,
+       customActions: result.customActions,
+       qualityPayload: result.qualityNodes.map {
+@@ -625,6 +629,7 @@ extension RunnerTests {
+       },
+       snapshotQuality: quality,
+       snapshotQualityNotes: capture.qualityNotes.isEmpty ? nil : capture.qualityNotes,
++      snapshotViewport: payload.snapshotViewport,
+       presentedSurface: capture.presentedSurface,
+       keyboard: capture.keyboardBand,
+       runnerFatal: payload.runnerFatal,
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanTests.swift
+index 388bb94..e4b0b9c 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanTests.swift
+@@ -373,6 +373,35 @@ extension RunnerTests {
+     XCTAssertNil(payload.snapshotQuality?.timing)
+   }
+ 
++  func testSnapshotViewportAuthoritySurvivesOutcomeStamping() throws {
++    let box = CGRect(x: 0, y: 0, width: 551, height: 813)
++    let options = PresentationOptions(interactiveOnly: false, depth: nil, scope: nil, raw: true)
++    let cases: [(SnapshotViewport, String, String?)] = [
++      (.reported(box: box), "reported", nil),
++      (.derived(box: box), "derived", nil),
++      (.missing(reason: .notProvided), "missing", "not-provided"),
++    ]
++    for (viewport, kind, reason) in cases {
++      let acquisition = SnapshotAcquisition(
++        hint: SnapshotPresentation.captureHint(for: options),
++        nodes: [], truncated: false, effectiveDepth: nil, viewport: viewport
++      )
++      let presented = SnapshotPresentation.presentRaw(acquisition, options: options)
++      let payload = stampedSnapshotPayload(
++        Self.makeSnapshotBackendCapture(from: presented, acquired: acquisition),
++        backend: .privateAX, state: .recovered, reason: nil
++      )
++      let encoded = try XCTUnwrap(
++        JSONSerialization.jsonObject(with: JSONEncoder().encode(payload)) as? [String: Any]
++      )
++      let evidence = try XCTUnwrap(encoded["snapshotViewport"] as? [String: Any])
++      XCTAssertEqual(evidence["kind"] as? String, kind)
++      XCTAssertEqual(evidence["reason"] as? String, reason)
++      XCTAssertEqual((evidence["rect"] as? [String: Any])?["width"] as? Double,
++                     kind == "missing" ? nil : 551)
++    }
++  }
++
+   /// The raw plan is derived from what each backend can actually serve, not from a second
+   /// hand-maintained list. Non-vacuity: flipping `querySweep.supportsRawProjection` to true adds it
+   /// to the plan and fails the first two assertions — which is exactly the shape of #1797 D4, a
+diff --git a/apple/runner/README.md b/apple/runner/README.md
+index 895b8bb..d9dca31 100644
+--- a/apple/runner/README.md
++++ b/apple/runner/README.md
+@@ -106,6 +106,10 @@ Probe work that outlives its slice belongs to the capture that started it, so th
+ Every bounded main-thread dispatch that outlives its slice counts as occupying the main thread.
+ Thus, if a viewport read takes too long, the plan skips the sweep instead of queueing it.
+ 
++Private-AX fallback keeps the viewport authority it acquired.
++When a penalty suppresses the XCTest viewport read, its root-derived box does not establish a screen origin.
++The payload carries that uncertainty without a new probe or a changed channel budget.
++
+ A failure that XCTest records ends `testCommand` when the main-thread block that recorded it returns, whatever `continueAfterFailure` says.
+ Mute XCTest's AX-server rejection in both fetch wordings, so XCTest does not record it.
+ Then the runner session continues and keeps its per-bundle penalty and depth memory.
+@@ -114,6 +118,9 @@ Then the runner session continues and keeps its per-bundle penalty and depth mem
+ 
+ `XCUIElement.frame` and the app-anchored `XCUICoordinate` use screen space on a placed iPad window.
+ `XCUIElementSnapshot.frame` uses window content space.
++Capture-plan responses retain `reported`, `derived`, or `missing` viewport evidence through outcome stamping.
++Only `reported` establishes the screen origin for capture-derived input.
++An unanchored capture remains readable, but its element mutations refuse with `window-origin-unknown` and `dispatched: no`.
+ The text-entry probe owns one screen box, `ResolvedTextEntryInput.frameOnScreen`.
+ A command reads the vector from the resolved window's box once, when it builds its target.
+ The readiness retap reads the vector again on its own branch.
+diff --git a/apple/runner/RUNNER_PROTOCOL.md b/apple/runner/RUNNER_PROTOCOL.md
+index c5a9e91..eb0e877 100644
+--- a/apple/runner/RUNNER_PROTOCOL.md
++++ b/apple/runner/RUNNER_PROTOCOL.md
+@@ -166,6 +166,12 @@ Successful and failed responses use the same top-level envelope:
+ 
+ `data` is command-specific. Common fields include snapshot nodes, text lookup results, gesture timing, visibility metadata, and screenshot or recording output details.
+ 
++Capture-plan snapshots carry `snapshotViewport`, the acquisition's declared viewport evidence.
++Its shape is `{kind: "reported" | "derived", rect: {x, y, width, height}}` or
++`{kind: "missing", reason: "not-provided" | "invalid"}`.
++`derived` and `missing` establish no screen origin.
++A root box used to validate presented nodes does not upgrade this evidence.
++
+ ## Maintenance Rules
+ 
+ - Treat the TypeScript and Swift wire models as a single contract.
+diff --git a/apple/snapshot-presentation/README.md b/apple/snapshot-presentation/README.md
+index 88d079f..a949b31 100644
+--- a/apple/snapshot-presentation/README.md
++++ b/apple/snapshot-presentation/README.md
+@@ -113,6 +113,13 @@ In the runner, the viewport is a declared fact, not a rectangle.
+ - `missing(reason)`.
+ 
+ Only `reported` carries an orientation, so only `reported` can anchor a rotation.
++Only `reported` establishes a screen origin for coordinates derived from this capture.
++The runner carries the acquisition's viewport evidence across the wire.
++The host can validate a locally presented tree against its root when acquisition evidence is missing.
++That validation box does not establish a screen origin or a public screen viewport.
++Capture-private viewport evidence survives compaction, session storage, and session cloning.
++Coordinate-derived mutations refuse `derived` or `missing` authority with `window-origin-unknown` and `dispatched: no`.
++Read-only observations remain available.
+ If the viewport has no box, presentation skips the clip.
+ If the viewport has no box, a node whose actionability depends on containment has no wire `hittable`.
+ Disabled or degenerate nodes stay `false`.
+@@ -158,7 +165,8 @@ The capture publishes reported geometry when no space can be named:
+ - The platform did not report an interface orientation.
+ - The app frame is too close to square to tell it from its own quarter turn.
+ 
+-Consumers fail open on that geometry.
++Consumers fail open on rotation they cannot name.
++An explicitly unknown screen origin does not authorize coordinate-derived input.
+ 
+ `SnapshotCoordinateSpace.swift` holds one rotation table that capture shares with synthesized dispatch.
+ Both languages replay it against `contracts/fixtures/window-coordinate-space.json`.
+diff --git a/docs/adr/0004-ios-snapshot-backend-strategy.md b/docs/adr/0004-ios-snapshot-backend-strategy.md
+index 2bb3813..f85fe95 100644
+--- a/docs/adr/0004-ios-snapshot-backend-strategy.md
++++ b/docs/adr/0004-ios-snapshot-backend-strategy.md
+@@ -51,8 +51,13 @@ The fold cuts screens under a modal only where the producer states containment.
+ **Geometry.** One published capture publishes one space: the app's orientation space.
+ The producer settles it in one pass after acquisition, because a merged tree carries no axis that a downstream reader could use.
+ A window declares its subtree's space from its own box. Other nodes inherit it from the window above them.
+-If no space can be named, the capture publishes reported geometry, and consumers fail open.
++If no rotation can be named, the capture publishes reported geometry, and consumers fail open on rotation.
+ A placed iPad window publishes screen space in points, because its viewport, its screenshot, and the digitizer use that space.
++The acquisition's `reported`, `derived`, or `missing` viewport evidence survives the runner boundary and capture transformations.
++Only `reported` establishes the screen origin for capture-derived input.
++A root-derived validation box preserves readable fallback trees but cannot upgrade unknown origin evidence.
++Element mutations, mutating find, Maestro selector geometry, and snapshot-derived gesture bounds refuse an unknown origin with `window-origin-unknown` and `dispatched: no` before input.
++Independent native queries and authored screen coordinates retain their own authorities.
+ 
+ **System surfaces.** `contracts/fixtures/ios-system-surface-hosts.json` is the closed registry of system hosts that present UI out of the app's process.
+ Observe and operate a registered host in place. Never activate it. `open` refuses to launch it.
+diff --git a/docs/adr/0011-interaction-guarantee-contract.md b/docs/adr/0011-interaction-guarantee-contract.md
+index ed88537..4769a00 100644
+--- a/docs/adr/0011-interaction-guarantee-contract.md
++++ b/docs/adr/0011-interaction-guarantee-contract.md
+@@ -14,6 +14,7 @@ Completed process history is in git history.
+ - Prove every non-waived cell through a tagged contract scenario.
+ - Delegation-on-error does not prove success-path parity.
+ - On the native-ref path, before `tapTarget`/`fillTarget`, check offscreen, occlusion, and non-hittable against the node from the daemon snapshot.
++- Explicitly unanchored capture geometry cannot authorize input. Check its viewport authority before point resolution, visibility rescue, or native-ref dispatch. Mutating find, Maestro selector coordinates, and snapshot-derived gesture bounds use the same check.
+ - The Apple runner does not resend a mutating command whose first send may have run.
+ - Multiple mutating selector matches collapse only if they form one ancestor–descendant chain and every member resolves to the same actionable node. Otherwise, the mutation fails with `AMBIGUOUS_MATCH`. Maestro's explicit expected-point/non-hittable compatibility path stays separate.
+ - Keep synthesized iOS gesture policy outside the element dispatch-path matrix.
+diff --git a/packages/capture-kit/src/snapshot-state.ts b/packages/capture-kit/src/snapshot-state.ts
+index 63010b6..e2386e8 100644
+--- a/packages/capture-kit/src/snapshot-state.ts
++++ b/packages/capture-kit/src/snapshot-state.ts
+@@ -1,5 +1,6 @@
+ import type { CommandFlags } from '@agent-device/contracts/command';
+ import {
++  copySnapshotViewportEvidence,
+   readSnapshotOcclusionContextEvidence,
+   readSnapshotTextInputGeometry,
+   attachSnapshotTextInputGeometry,
+@@ -108,6 +109,7 @@ export function buildSnapshotState(
+   );
+   const textInputGeometry = readSnapshotTextInputGeometry(data.nodes);
+   if (textInputGeometry) attachSnapshotTextInputGeometry(nodes, textInputGeometry);
++  copySnapshotViewportEvidence(data.nodes, nodes);
+   return {
+     nodes,
+     truncated: data?.truncated,
+diff --git a/packages/command-runtime/src/command-runtime/runtime-factory.ts b/packages/command-runtime/src/command-runtime/runtime-factory.ts
+index b5069c4..cdbc044 100644
+--- a/packages/command-runtime/src/command-runtime/runtime-factory.ts
++++ b/packages/command-runtime/src/command-runtime/runtime-factory.ts
+@@ -5,6 +5,7 @@ import type {
+   CommandSessionStore,
+ } from '@agent-device/contracts/runtime-contract';
+ import { restrictedCommandPolicy } from '@agent-device/contracts/command-policy';
++import { copySnapshotViewportEvidence } from '@agent-device/contracts/capture';
+ 
+ /**
+  * Assembles an in-process runtime from its backend, artifact adapter, session store, policy and
+@@ -49,9 +50,11 @@ function cloneSessionRecord(
+   record: CommandSessionRecord | undefined,
+ ): CommandSessionRecord | undefined {
+   if (!record) return undefined;
++  const snapshot = record.snapshot ? structuredClone(record.snapshot) : undefined;
++  if (snapshot) copySnapshotViewportEvidence(record.snapshot?.nodes, snapshot.nodes);
+   return {
+     ...record,
+-    ...(record.snapshot ? { snapshot: structuredClone(record.snapshot) } : {}),
++    ...(snapshot ? { snapshot } : {}),
+     ...(record.metadata ? { metadata: cloneMetadata(record.metadata) } : {}),
+   };
+ }
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages-screen-origin.test.ts b/packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages-screen-origin.test.ts
+new file mode 100644
+index 0000000..7205ab9
+--- /dev/null
++++ b/packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages-screen-origin.test.ts
+@@ -0,0 +1,170 @@
++import assert from 'node:assert/strict';
++import { test } from 'vitest';
++import { AppError } from '@agent-device/kernel/errors';
++import type { IosViewportEvidence } from '@agent-device/contracts/ios-snapshot';
++import type { Point, RawSnapshotNode } from '@agent-device/kernel/snapshot';
++import { attachSnapshotViewportEvidence } from '@agent-device/contracts/capture';
++import { buildSnapshotState } from '@agent-device/capture-kit/snapshot-state';
++import { snapshotViewportSizeFrom } from '@agent-device/kernel/rect';
++import { createInteractionDevice } from './__tests__/test-utils/index.ts';
++import { ref, selector } from './selector-read-utils.ts';
++
++function geometrySnapshot(kind: IosViewportEvidence['kind']) {
++  const screenRoot = { x: 241, y: 224, width: 551, height: 813 };
++  const root = kind === 'reported' ? screenRoot : { ...screenRoot, x: 0, y: 0 };
++  const nodes: RawSnapshotNode[] = [
++    { index: 0, depth: 0, type: 'Application', rect: root },
++    { index: 1, depth: 1, parentIndex: 0, type: 'Group', rect: root, hittable: false },
++    {
++      index: 2,
++      depth: 2,
++      parentIndex: 1,
++      type: 'Button',
++      identifier: 'geometry-action',
++      label: 'Geometry action',
++      rect: { x: root.x + 240, y: root.y + 90, width: 220, height: 42 },
++      hittable: true,
++    },
++  ];
++  attachSnapshotViewportEvidence(
++    nodes,
++    kind === 'missing' ? { kind, reason: 'not-provided' } : { kind, rect: root },
++  );
++  return buildSnapshotState(
++    {
++      nodes,
++      backend: 'xctest',
++      producer: 'apple-runner',
++      // A plausible stored/public viewport cannot upgrade this capture's explicit uncertainty.
++      viewport: snapshotViewportSizeFrom(screenRoot),
++    },
++    undefined,
++  );
++}
++
++function originRefusal(error: unknown): boolean {
++  assert.ok(error instanceof AppError);
++  assert.equal(error.code, 'COMMAND_FAILED');
++  assert.equal(error.details?.reason, 'window-origin-unknown');
++  assert.equal(error.details?.dispatched, 'no');
++  return true;
++}
++
++for (const kind of ['derived', 'missing'] as const) {
++  for (const route of ['selector', 'ref', 'native-ref'] as const) {
++    test(`${route} refuses ${kind} screen authority after compaction and memory-session cloning`, async () => {
++      const calls: unknown[] = [];
++      const snapshot = geometrySnapshot(kind);
++      const device = createInteractionDevice(snapshot, {
++        tap: async (_context, point) => {
++          calls.push(point);
++        },
++        tapTarget:
++          route === 'native-ref'
++            ? async (_context, target) => {
++                calls.push(target);
++              }
++            : undefined,
++        confirmOffscreenTargetVisible: async () => {
++          calls.push('visibility rescue');
++          return { x: 481, y: 314, width: 220, height: 42 };
++        },
++      });
++      // This command writes through createMemorySessionStore.set; the ref action reads its clone.
++      const observed = await device.capture.snapshot({ session: 'default' });
++      const target = observed.nodes.find((node) => node.identifier === 'geometry-action');
++      assert.ok(target?.ref);
++      const actionTarget =
++        route === 'selector' ? selector('id=geometry-action') : ref(`@${target.ref}`);
++      const failure = await device.interactions.click(actionTarget, { session: 'default' }).then(
++        () => undefined,
++        (error: unknown) => error,
++      );
++      assert.deepEqual(calls, []);
++      originRefusal(failure);
++    });
++  }
++}
++
++test('reported screen geometry still activates the resolved selector and saved ref', async () => {
++  const taps: Point[] = [];
++  const device = createInteractionDevice(geometrySnapshot('reported'), {
++    tap: async (_context, point) => {
++      taps.push(point);
++    },
++  });
++  const observed = await device.capture.snapshot({ session: 'default' });
++  const target = observed.nodes.find((node) => node.identifier === 'geometry-action');
++  assert.ok(target?.ref);
++  await device.interactions.press(selector('id=geometry-action'), { session: 'default' });
++  await device.interactions.press(ref(`@${target.ref}`), { session: 'default' });
++  assert.deepEqual(taps, [
++    { x: 591, y: 335 },
++    { x: 591, y: 335 },
++  ]);
++});
++
++test('unknown capture authority refuses before an offscreen rescue can replace geometry', async () => {
++  const snapshot = geometrySnapshot('derived');
++  const target = snapshot.nodes.find((node) => node.identifier === 'geometry-action');
++  assert.ok(target?.rect);
++  target.rect = { ...target.rect, y: -100 };
++  const calls: string[] = [];
++  const device = createInteractionDevice(snapshot, {
++    tap: async () => {
++      calls.push('tap');
++    },
++    confirmOffscreenTargetVisible: async () => {
++      calls.push('rescue');
++      return { x: 481, y: 314, width: 220, height: 42 };
++    },
++  });
++  const failure = await device.interactions
++    .press(selector('id=geometry-action'), { session: 'default' })
++    .then(
++      () => undefined,
++      (error: unknown) => error,
++    );
++  assert.deepEqual(calls, []);
++  originRefusal(failure);
++});
++
++test('snapshot-derived gesture bounds refuse unknown origin before input', async () => {
++  const calls: string[] = [];
++  const device = createInteractionDevice(geometrySnapshot('derived'), {
++    performGesture: async () => {
++      calls.push('gesture');
++    },
++  });
++  // The local point fits the inferred box, so only screen authority can stop unsafe input.
++  const failure = await device.interactions
++    .gesture({
++      gesture: { intent: 'pan', origin: { x: 350, y: 111 }, delta: { x: 10, y: 0 } },
++      session: 'default',
++    })
++    .then(
++      () => undefined,
++      (error: unknown) => error,
++    );
++  assert.deepEqual(calls, []);
++  originRefusal(failure);
++});
++
++test('authored screen points and independently measured native gesture bounds remain usable', async () => {
++  const calls: string[] = [];
++  const device = createInteractionDevice(geometrySnapshot('derived'), {
++    tap: async () => {
++      calls.push('tap');
++    },
++    resolveGestureViewport: async () => ({ x: 0, y: 0, width: 1032, height: 1376 }),
++    performGesture: async () => {
++      calls.push('gesture');
++    },
++  });
++  await device.interactions.press({ kind: 'point', x: 591, y: 335 }, { session: 'default' });
++  await device.interactions.gesture({
++    gesture: { intent: 'pan', origin: { x: 591, y: 335 }, delta: { x: 10, y: 0 } },
++    session: 'default',
++  });
++  assert.deepEqual(calls, ['tap', 'gesture']);
++});
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages.ts b/packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages.ts
+index 9497c36..c783efb 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages.ts
+@@ -1,4 +1,5 @@
+ import { AppError, discloseDispatch } from '@agent-device/kernel/errors';
++import { assertSnapshotScreenOrigin } from '@agent-device/contracts/capture';
+ import type {
+   Point,
+   SnapshotAddressableNode,
+@@ -80,6 +81,7 @@ export async function runInteractionPipelineStages<TPoint extends Point | null>(
+   hooks: SelectorPipelineHooks;
+   resolveTapPoint: (node: SnapshotAddressableNode) => TPoint;
+ }): Promise<{ node: SnapshotAddressableNode; tapPoint: TPoint }> {
++  await assertSnapshotScreenOrigin(params.nodes, params.label);
+   const target = await runNodePipelineStages(
+     params.policy,
+     params.nodes,
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/viewport.ts b/packages/command-runtime/src/commands/interaction/runtime/viewport.ts
+index 3be6654..2c36dc5 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/viewport.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/viewport.ts
+@@ -2,11 +2,13 @@ import { AppError } from '@agent-device/kernel/errors';
+ import type { Rect, SnapshotNode } from '@agent-device/kernel/snapshot';
+ import type { SnapshotState } from '@agent-device/contracts/snapshot-model';
+ import { createSnapshotVisibility } from '@agent-device/contracts/snapshot';
++import { assertSnapshotScreenOrigin } from '@agent-device/contracts/capture';
+ 
+-export function resolveVisibleSnapshotViewport(
++export async function resolveVisibleSnapshotViewport(
+   nodes: SnapshotState['nodes'],
+   action: string,
+-): Rect {
++): Promise<Rect> {
++  await assertSnapshotScreenOrigin(nodes, action);
+   const visibility = createSnapshotVisibility(nodes);
+   const visibleRects = nodes
+     .filter(visibility.isVisibleInEffectiveViewport)
+diff --git a/packages/command-surface/src/capture/snapshot.ts b/packages/command-surface/src/capture/snapshot.ts
+index ee3c5f6..07a733d 100644
+--- a/packages/command-surface/src/capture/snapshot.ts
++++ b/packages/command-surface/src/capture/snapshot.ts
+@@ -75,7 +75,7 @@ export const snapshotCommandFacet = defineCommandFacet({
+   name: SNAPSHOT_COMMAND_NAME,
+   text: {
+     summary: 'Capture or diff the accessibility tree',
+-    cliDetail: `Scoped output (--scope) renders every returned ref with its ref generation pin (@eN~s<refsGeneration>) and one Refs generation line, so a pasted ref targets the ref frame that issued it; --json keeps plain refs plus the response-level refsGeneration, and --raw keeps byte-for-byte output. Regular iOS snapshots clip overflowing elements to their visible area and omit fully outside elements. --json reports clipping counts in snapshotQualityNotes with code regular-geometry-clipped; --raw retains reported frames. --observe-only is local iOS snapshot-only: an already-ready compatible runner reads the session app without activation or foreground repair, refuses unavailable observation or a readable system alert over the app, and reports XCUIApplication state rather than verified foreground ownership (#2696). Regular targetActivation disclosure stays unchanged (#2682, #2694). Repeated equivalent unfiltered Android snapshots return a compact unchanged acknowledgement. Use --force-full to re-emit the tree; --json and --raw retain full output. Android Appium JSON snapshots publish a display viewport only when measurements before and after the tree agree, independent of tree extent or keyboard content resizing. On Android, JSON value carries field content rather than static labels; saved selectors and replay scripts using value= for static labels must use label= instead; a reported showing hint means value is empty, and text equal to the placeholder is preserved when hint state is unknown. HarmonyOS reads the on-screen keyboard's own system window and publishes the keyboard field of --json output: the field carries a band rect only when the window table proves that rect smaller than the display, current builds state visibility only, and a failed window probe publishes unmeasurable, never a guessed band. For iOS raw-coordinate fallback after a no-op ref press, inspect rects with snapshot -i --json, press the rect center, then verify with diff snapshot -i or snapshot --diff. iOS backend capability contract: ${snapshotBackendCapabilityHelp}.`,
++    cliDetail: `Scoped output (--scope) renders every returned ref with its ref generation pin (@eN~s<refsGeneration>) and one Refs generation line, so a pasted ref targets the ref frame that issued it; --json keeps plain refs plus the response-level refsGeneration, and --raw keeps byte-for-byte output. Regular iOS snapshots clip overflowing elements to their visible area and omit fully outside elements. --json reports clipping counts in snapshotQualityNotes with code regular-geometry-clipped; --raw retains reported frames. --observe-only is local iOS snapshot-only: an already-ready compatible runner reads the session app without activation or foreground repair, refuses unavailable observation or a readable system alert over the app, and reports XCUIApplication state rather than verified foreground ownership (#2696). Regular targetActivation disclosure stays unchanged (#2682, #2694). Repeated equivalent unfiltered Android snapshots return a compact unchanged acknowledgement. Use --force-full to re-emit the tree; --json and --raw retain full output. Android Appium JSON snapshots publish a display viewport only when measurements before and after the tree agree, independent of tree extent or keyboard content resizing. On Android, JSON value carries field content rather than static labels; saved selectors and replay scripts using value= for static labels must use label= instead; a reported showing hint means value is empty, and text equal to the placeholder is preserved when hint state is unknown. HarmonyOS reads the on-screen keyboard's own system window and publishes the keyboard field of --json output: the field carries a band rect only when the window table proves that rect smaller than the display, current builds state visibility only, and a failed window probe publishes unmeasurable, never a guessed band. When an iOS snapshot reports a screen viewport, inspect rects with snapshot -i --json and press the intended control's center, then verify with diff snapshot -i or snapshot --diff. When a fallback cannot establish the screen origin, the snapshot warns and omits viewport; coordinate-derived element actions refuse with window-origin-unknown before input. Use a plain screenshot to choose screen coordinates. iOS backend capability contract: ${snapshotBackendCapabilityHelp}.`,
+   },
+   metadata: snapshotCommandMetadata,
+   run: (client, input) => client.capture.snapshot(input),
+diff --git a/packages/contracts/src/facades/capture.ts b/packages/contracts/src/facades/capture.ts
+index 9247964..002f83a 100644
+--- a/packages/contracts/src/facades/capture.ts
++++ b/packages/contracts/src/facades/capture.ts
+@@ -64,6 +64,10 @@ export type {
+   ScreenshotResultData,
+ } from '../snapshot-types.ts';
+ export {
++  assertSnapshotScreenOrigin,
++  attachSnapshotViewportEvidence,
++  readSnapshotViewportEvidence,
++  copySnapshotViewportEvidence,
+   attachSnapshotTextInputGeometry,
+   readSnapshotTextInputGeometry,
+   attachSnapshotClickabilityEvidence,
+diff --git a/packages/contracts/src/snapshot-private-evidence.ts b/packages/contracts/src/snapshot-private-evidence.ts
+index 9cfce23..2ccf143 100644
+--- a/packages/contracts/src/snapshot-private-evidence.ts
++++ b/packages/contracts/src/snapshot-private-evidence.ts
+@@ -1,4 +1,5 @@
+ import type { RawSnapshotNode, Rect } from '@agent-device/kernel/snapshot';
++import type { IosViewportEvidence } from './ios-snapshot.ts';
+ 
+ /**
+  * Capture-local clickability facts for consumers that reproduce Maestro's private
+@@ -32,6 +33,7 @@ export type SnapshotOcclusionContextEvidence = {
+ export type SnapshotTextInputGeometry = Readonly<{ rects: readonly Rect[] }>;
+ 
+ type SnapshotPrivateEvidence = {
++  viewport?: IosViewportEvidence;
+   textInputGeometry?: SnapshotTextInputGeometry;
+   clickability?: SnapshotClickabilityEvidence;
+   occlusionContext?: SnapshotOcclusionContextEvidence;
+@@ -39,6 +41,43 @@ type SnapshotPrivateEvidence = {
+ 
+ const privateEvidenceBySnapshotObject = new WeakMap<object, SnapshotPrivateEvidence>();
+ 
++/** Refuses coordinate-derived input when the capture could not establish its screen origin. */
++export async function assertSnapshotScreenOrigin(owner: object, label: string): Promise<void> {
++  const viewport = readSnapshotViewportEvidence(owner);
++  if (viewport && viewport.kind !== 'reported') {
++    const { AppError, discloseDispatch } = await import('@agent-device/kernel/errors');
++    throw discloseDispatch(
++      new AppError('COMMAND_FAILED', `${label} has no established screen-coordinate origin`, {
++        reason: 'window-origin-unknown',
++        hint: 'Take a fresh snapshot after the accessibility channel recovers, or use screenshot to choose screen coordinates.',
++      }),
++      'no',
++    );
++  }
++}
++
++/** The producer's viewport authority for this exact capture, retained outside public node data. */
++export function attachSnapshotViewportEvidence<T extends object>(
++  owner: T,
++  viewport: IosViewportEvidence,
++): T {
++  return attachSnapshotPrivateEvidence(owner, { viewport });
++}
++
++export function readSnapshotViewportEvidence(
++  owner: object | null | undefined,
++): IosViewportEvidence | undefined {
++  return owner ? privateEvidenceBySnapshotObject.get(owner)?.viewport : undefined;
++}
++
++export function copySnapshotViewportEvidence<T extends object>(
++  source: object | null | undefined,
++  target: T,
++): T {
++  const viewport = readSnapshotViewportEvidence(source);
++  return viewport ? attachSnapshotViewportEvidence(target, viewport) : target;
++}
++
+ function attachSnapshotPrivateEvidence<T extends object>(
+   owner: T,
+   evidence: SnapshotPrivateEvidence,
+diff --git a/packages/daemon/src/execution/interaction/internal/__tests__/find-keyboard-occlusion.test.ts b/packages/daemon/src/execution/interaction/internal/__tests__/find-keyboard-occlusion.test.ts
+index 627e005..b07ddc8 100644
+--- a/packages/daemon/src/execution/interaction/internal/__tests__/find-keyboard-occlusion.test.ts
++++ b/packages/daemon/src/execution/interaction/internal/__tests__/find-keyboard-occlusion.test.ts
+@@ -8,6 +8,7 @@ import {
+ } from './find-touch-runtime-fixture.ts';
+ import { mockTypeText } from '../../../__tests__/interaction-get-runtime-fixture.ts';
+ import { refFrameState } from '../../../../core/ref-frame.ts';
++import { attachSnapshotViewportEvidence } from '@agent-device/contracts/capture';
+ 
+ vi.mock('../../../../core/snapshot-interactor-capture.ts', async () => {
+   const fixture = await import('../../../../__tests__/support/legacy-snapshot-capture-fixture.ts');
+@@ -18,6 +19,72 @@ beforeEach(() => {
+   resetFindTouchRuntimeFixture();
+ });
+ 
++test.each(['focus', 'type'] as const)(
++  'find %s refuses unanchored capture geometry before focus or typing',
++  async (action) => {
++    const rect = { x: 0, y: 0, width: 551, height: 813 };
++    const nodes = attachSnapshotViewportEvidence(
++      [
++        { index: 0, type: 'Application', rect },
++        {
++          index: 1,
++          parentIndex: 0,
++          type: 'TextField',
++          label: 'Form',
++          rect: { x: 24, y: 90, width: 200, height: 42 },
++          hittable: true,
++          enabled: true,
++        },
++      ],
++      { kind: 'derived', rect },
++    );
++    const { response, session } = await runFindClickScenario({
++      positionals: ['Form', action, ...(action === 'type' ? ['hello'] : [])],
++      nodes,
++    });
++    expect(mockFocusPoint).not.toHaveBeenCalled();
++    expect(mockTypeText).not.toHaveBeenCalled();
++    expect(response).toMatchObject({
++      ok: false,
++      error: {
++        code: 'COMMAND_FAILED',
++        details: {
++          reason: 'window-origin-unknown',
++          dispatched: 'no',
++        },
++      },
++    });
++    expect(refFrameState(session)).toBe('active');
++  },
++);
++
++test('find focus retains usable reported screen geometry', async () => {
++  const rect = { x: 241, y: 224, width: 551, height: 813 };
++  const nodes = attachSnapshotViewportEvidence(
++    [
++      { index: 0, type: 'Application', rect },
++      {
++        index: 1,
++        parentIndex: 0,
++        type: 'TextField',
++        label: 'Form',
++        rect: { x: 265, y: 314, width: 200, height: 42 },
++        hittable: true,
++        enabled: true,
++      },
++    ],
++    { kind: 'reported', rect },
++  );
++  const { response } = await runFindClickScenario({ positionals: ['Form', 'focus'], nodes });
++  expect(response.ok).toBe(true);
++  expect(mockFocusPoint).toHaveBeenCalledTimes(1);
++  expect(mockFocusPoint).toHaveBeenCalledWith(
++    expect.objectContaining({
++      point: { x: 365, y: 335 },
++    }),
++  );
++});
++
+ function keyboardTree(targetRect?: SnapshotState['nodes'][number]['rect']): SnapshotState {
+   return keyboardCoveredTabBarSnapshot(targetRect ? { targetRect } : {});
+ }
+diff --git a/packages/daemon/src/execution/interaction/internal/find.ts b/packages/daemon/src/execution/interaction/internal/find.ts
+index 7369149..57901f7 100644
+--- a/packages/daemon/src/execution/interaction/internal/find.ts
++++ b/packages/daemon/src/execution/interaction/internal/find.ts
+@@ -4,6 +4,7 @@ import type {
+   SurfaceScopedNodes,
+ } from '@agent-device/contracts/interaction';
+ import { surfaceScopedNodes } from '@agent-device/capture-kit/snapshot-baseline';
++import { assertSnapshotScreenOrigin } from '@agent-device/contracts/capture';
+ import {
+   isReadOnlyFindAction,
+   checkFindArgs,
+@@ -436,6 +437,7 @@ async function dispatchFocusForFindMatch(
+   // The same touch-point and keyboard decisions the acting paths run (#2589/#2622/#3734): this seam
+   // dispatches the point itself instead of re-entering the interaction leaf, so they have to run here.
+   try {
++    await assertSnapshotScreenOrigin(match.tree.nodes, `Ref ${targetRef}`);
+     coords = resolveNodeTouchPoint(target, match.tree.nodes, {
+       invalidMessage: `Ref ${targetRef} has no usable bounds`,
+       blockedTargetLabel: `Ref ${targetRef}`,
+diff --git a/packages/maestro/src/daemon-port/__tests__/daemon-runtime-port-screen-origin.test.ts b/packages/maestro/src/daemon-port/__tests__/daemon-runtime-port-screen-origin.test.ts
+new file mode 100644
+index 0000000..ce75b34
+--- /dev/null
++++ b/packages/maestro/src/daemon-port/__tests__/daemon-runtime-port-screen-origin.test.ts
+@@ -0,0 +1,209 @@
++import { expect, test } from 'vitest';
++import { attachSnapshotViewportEvidence } from '@agent-device/contracts/capture';
++import type { MaestroSelector } from '@agent-device/maestro';
++import { createDaemonMaestroRuntimePort } from '../daemon-runtime-port.ts';
++import type { MaestroDaemonOperationRequest } from '../daemon-runtime-public-operation.ts';
++import {
++  makeDependencies,
++  makeRuntimeEnvelope,
++  makeSnapshot,
++} from './daemon-runtime-port-fixtures.ts';
++
++function geometrySnapshot(kind: 'reported' | 'derived') {
++  const rect = { x: 0, y: 0, width: 551, height: 813 };
++  const snapshot = makeSnapshot([
++    { index: 0, type: 'Application', rect },
++    { index: 1, parentIndex: 0, type: 'Other', identifier: 'container', rect },
++    {
++      index: 2,
++      parentIndex: 1,
++      type: 'Button',
++      identifier: 'geometry-action',
++      label: 'Geometry action',
++      rect: { x: 240, y: 90, width: 220, height: 42 },
++      hittable: true,
++    },
++  ]);
++  attachSnapshotViewportEvidence(snapshot.nodes, { kind, rect });
++  return snapshot;
++}
++
++const selectors: MaestroSelector[] = [
++  { id: 'geometry-action', index: 0 },
++  { id: 'geometry-action', text: 'Geometry action' },
++  { id: 'geometry-action', childOf: { id: 'container' } },
++];
++
++test.each(selectors)(
++  'selector-derived Maestro coordinates refuse unknown origin: %j',
++  async (selector) => {
++    const requests: MaestroDaemonOperationRequest[] = [];
++    const snapshot = geometrySnapshot('derived');
++    const port = createDaemonMaestroRuntimePort({
++      ...makeRuntimeEnvelope({ flags: { platform: 'ios', replayBackend: 'maestro' } }),
++      platform: 'ios',
++      dependencies: makeDependencies(),
++      invoke: async (request) => {
++        requests.push(request);
++        return { ok: true, data: request.command === 'snapshot' ? snapshot : {} };
++      },
++    });
++    await expect(
++      port.execute({
++        command: { kind: 'tapOn', source: { line: 2 }, target: { space: 'target', selector } },
++        generation: 0,
++        env: {},
++        invalidateObservation() {},
++      }),
++    ).rejects.toMatchObject({
++      code: 'COMMAND_FAILED',
++      details: {
++        reason: 'window-origin-unknown',
++        dispatched: 'no',
++      },
++    });
++    expect(requests.map(({ command }) => command)).toEqual(['snapshot']);
++  },
++);
++
++test.each(selectors)(
++  'the same Maestro selector activates reported screen geometry: %j',
++  async (selector) => {
++    const requests: MaestroDaemonOperationRequest[] = [];
++    const snapshot = geometrySnapshot('reported');
++    const port = createDaemonMaestroRuntimePort({
++      ...makeRuntimeEnvelope({ flags: { platform: 'ios', replayBackend: 'maestro' } }),
++      platform: 'ios',
++      dependencies: makeDependencies(),
++      invoke: async (request) => {
++        requests.push(request);
++        return { ok: true, data: request.command === 'snapshot' ? snapshot : {} };
++      },
++    });
++    await port.execute({
++      command: { kind: 'tapOn', source: { line: 2 }, target: { space: 'target', selector } },
++      generation: 0,
++      env: {},
++      invalidateObservation() {},
++    });
++    expect(requests.map(({ command }) => command)).toEqual(['snapshot', 'click']);
++    expect(requests[1]?.positionals).toEqual(['350', '111']);
++  },
++);
++
++test('an atomic selector miss cannot fall back to coordinates from a newly unanchored capture', async () => {
++  const requests: MaestroDaemonOperationRequest[] = [];
++  let captures = 0;
++  const port = createDaemonMaestroRuntimePort({
++    ...makeRuntimeEnvelope({ flags: { platform: 'ios', replayBackend: 'maestro' } }),
++    platform: 'ios',
++    dependencies: makeDependencies(),
++    invoke: async (request) => {
++      requests.push(request);
++      if (request.command === 'snapshot') {
++        return { ok: true, data: geometrySnapshot(++captures === 1 ? 'reported' : 'derived') };
++      }
++      return { ok: false, error: { code: 'ELEMENT_NOT_FOUND', message: 'native selector miss' } };
++    },
++  });
++  await expect(
++    port.execute({
++      command: {
++        kind: 'tapOn',
++        source: { line: 2 },
++        target: { space: 'target', selector: { id: 'geometry-action' } },
++      },
++      generation: 0,
++      env: {},
++      invalidateObservation() {},
++    }),
++  ).rejects.toMatchObject({
++    code: 'COMMAND_FAILED',
++    details: {
++      reason: 'window-origin-unknown',
++      dispatched: 'no',
++    },
++  });
++  expect(requests.map(({ command }) => command)).toEqual(['snapshot', 'click', 'snapshot']);
++  expect(requests[1]?.positionals).toEqual(['id="geometry-action"']);
++});
++
++test('Maestro read-only observation of unanchored nodes remains available', async () => {
++  const snapshot = geometrySnapshot('derived');
++  const requests: MaestroDaemonOperationRequest[] = [];
++  const port = createDaemonMaestroRuntimePort({
++    ...makeRuntimeEnvelope({ flags: { platform: 'ios', replayBackend: 'maestro' } }),
++    platform: 'ios',
++    dependencies: makeDependencies(),
++    invoke: async (request) => {
++      requests.push(request);
++      return { ok: true, data: snapshot };
++    },
++  });
++  await expect(
++    port.observe({
++      condition: { kind: 'visible', selector: { id: 'geometry-action' } },
++      timeoutMs: 0,
++      generation: 0,
++      env: {},
++    }),
++  ).resolves.toMatchObject({ matched: true });
++  expect(requests.map(({ command }) => command)).toEqual(['snapshot']);
++});
++
++test('Maestro authored absolute points do not consume snapshot geometry', async () => {
++  const requests: MaestroDaemonOperationRequest[] = [];
++  const port = createDaemonMaestroRuntimePort({
++    ...makeRuntimeEnvelope({ flags: { platform: 'ios', replayBackend: 'maestro' } }),
++    platform: 'ios',
++    dependencies: makeDependencies(),
++    invoke: async (request) => {
++      requests.push(request);
++      return { ok: true, data: {} };
++    },
++  });
++  await port.execute({
++    command: { kind: 'tapOn', source: { line: 2 }, target: { space: 'absolute', x: 591, y: 335 } },
++    generation: 0,
++    env: {},
++    invalidateObservation() {},
++  });
++  expect(requests.map(({ command }) => command)).toEqual(['click']);
++  expect(requests[0]?.positionals).toEqual(['591', '335']);
++});
++
++test('Maestro scrollUntilVisible refuses a gesture derived from an unanchored container', async () => {
++  const snapshot = geometrySnapshot('derived');
++  snapshot.nodes[1] = { ...snapshot.nodes[1]!, type: 'ScrollView' };
++  const requests: MaestroDaemonOperationRequest[] = [];
++  const port = createDaemonMaestroRuntimePort({
++    ...makeRuntimeEnvelope({ flags: { platform: 'ios', replayBackend: 'maestro' } }),
++    platform: 'ios',
++    dependencies: makeDependencies(),
++    invoke: async (request) => {
++      requests.push(request);
++      return { ok: true, data: snapshot };
++    },
++  });
++  await expect(
++    port.execute({
++      command: {
++        kind: 'scrollUntilVisible',
++        source: { line: 2 },
++        element: { id: 'not-visible-yet' },
++        direction: 'down',
++        timeout: 2_000,
++      },
++      generation: 0,
++      env: {},
++      invalidateObservation() {},
++    }),
++  ).rejects.toMatchObject({
++    code: 'COMMAND_FAILED',
++    details: {
++      reason: 'window-origin-unknown',
++      dispatched: 'no',
++    },
++  });
++  expect(requests.map(({ command }) => command)).toEqual(['snapshot']);
++});
+diff --git a/packages/maestro/src/daemon-port/daemon-runtime-port.ts b/packages/maestro/src/daemon-port/daemon-runtime-port.ts
+index 2012aa2..44ae555 100644
+--- a/packages/maestro/src/daemon-port/daemon-runtime-port.ts
++++ b/packages/maestro/src/daemon-port/daemon-runtime-port.ts
+@@ -10,6 +10,7 @@ import {
+ } from '@agent-device/maestro';
+ import { registerDiagnosticSensitiveValue } from '@agent-device/host-kit/diagnostics';
+ import { AppError } from '@agent-device/kernel/errors';
++import { assertSnapshotScreenOrigin } from '@agent-device/contracts/capture';
+ import { stripUndefined } from '@agent-device/kernel/record';
+ import { executeRunScriptFile } from './run-script-execution.ts';
+ import { captureMaestroComparisonScreenshot } from './maestro-comparison-screenshot.ts';
+@@ -300,6 +301,7 @@ function createDaemonMaestroRuntimeParts(options: CreateDaemonMaestroRuntimeOper
+             input.durationMs,
+             platform,
+           );
++          if (gesture) await assertSnapshotScreenOrigin(snapshot.nodes, 'Maestro scroll target');
+           await invokeMutation(
+             gesture
+               ? { kind: 'swipe', ...gesture }
+diff --git a/packages/maestro/src/daemon-port/daemon-runtime-tap.ts b/packages/maestro/src/daemon-port/daemon-runtime-tap.ts
+index 38f0893..1ebf721 100644
+--- a/packages/maestro/src/daemon-port/daemon-runtime-tap.ts
++++ b/packages/maestro/src/daemon-port/daemon-runtime-tap.ts
+@@ -1,4 +1,5 @@
+ import { AppError, asAppError } from '@agent-device/kernel/errors';
++import { assertSnapshotScreenOrigin } from '@agent-device/contracts/capture';
+ import { INTERACTION_ERROR_REASONS } from '@agent-device/selectors/interaction-error';
+ import type { Rect } from '@agent-device/kernel/snapshot';
+ import {
+@@ -51,6 +52,7 @@ export async function resolveDaemonMaestroTarget(params: {
+       { context, snapshot: snapshots.capture, dependencies: options.dependencies },
+       deadline,
+     );
++    await assertSnapshotScreenOrigin(currentSnapshot.nodes, 'Maestro selector target');
+     const match = resolveTypedMaestroTarget({
+       query: input,
+       context,
+diff --git a/packages/platform-apple/src/interactor.ts b/packages/platform-apple/src/interactor.ts
+index 2dd07b2..d8899e3 100644
+--- a/packages/platform-apple/src/interactor.ts
++++ b/packages/platform-apple/src/interactor.ts
+@@ -398,6 +398,11 @@ function assertReportedRunnerSnapshotNodes(
+  */
+ function runnerSnapshotWarnings(result: AppleRunnerSnapshotResult): string[] {
+   const warnings: string[] = [];
++  if (result.viewportEvidence && result.viewportEvidence.kind !== 'reported') {
++    warnings.push(
++      'This snapshot cannot establish the window origin on screen. Coordinate-derived element interactions are unavailable until a capture measures the viewport.',
++    );
++  }
+   if (!result.quality && result.message) warnings.push(result.message);
+   if (result.systemSurface)
+     warnings.push(iosSystemSurfaceDisclosure(result.systemSurface.bundleId));
+diff --git a/packages/platform-apple/src/snapshot-presentation.test.ts b/packages/platform-apple/src/snapshot-presentation.test.ts
+index 189ea62..057bac0 100644
+--- a/packages/platform-apple/src/snapshot-presentation.test.ts
++++ b/packages/platform-apple/src/snapshot-presentation.test.ts
+@@ -6,9 +6,70 @@ import type { RawSnapshotNode } from '@agent-device/kernel/snapshot';
+ import type { IosSystemSurfaceProvenance } from '@agent-device/contracts/ios-system-surface';
+ import type { AppleRunnerSnapshotResult } from './snapshot-presentation.ts';
+ import { presentAppleRunnerSnapshot, readAppleSnapshotResult } from './snapshot-presentation.ts';
++import { readSnapshotViewportEvidence } from '@agent-device/contracts/capture';
+ 
+ const NO_VIEWPORT_ROOT = { index: 0, type: 'Application', label: 'App' };
+ 
++test.each([
++  { kind: 'derived', rect: { x: 0, y: 0, width: 551, height: 813 } },
++  { kind: 'missing', reason: 'not-provided' },
++  { kind: 'reported', rect: { x: 0, y: 0, width: 0, height: 813 } },
++  null,
++])(
++  'explicit unknown viewport stays observable without gaining screen authority: %j',
++  (snapshotViewport) => {
++    const read = readAppleSnapshotResult(
++      {
++        snapshotViewport,
++        nodes: [
++          { index: 0, type: 'Application', rect: { x: 0, y: 0, width: 551, height: 813 } },
++          {
++            index: 1,
++            parentIndex: 0,
++            type: 'Button',
++            identifier: 'action',
++            rect: { x: 240, y: 90, width: 220, height: 42 },
++            hittable: true,
++          },
++        ],
++      },
++      IOS_SIMULATOR,
++    );
++    const presented = presentAppleRunnerSnapshot('device-1', undefined, read);
++    assert.equal(
++      presented.nodes.some((node) => node.identifier === 'action'),
++      true,
++    );
++    assert.equal(presented.viewport, undefined);
++    assert.deepEqual(readSnapshotViewportEvidence(presented.nodes), read.viewportEvidence);
++    assert.notEqual(readSnapshotViewportEvidence(presented.nodes)?.kind, 'reported');
++  },
++);
++
++test('reported runner viewport retains screen authority through the wire reader and presenter', () => {
++  const rect = { x: 241, y: 224, width: 551, height: 813 };
++  const read = readAppleSnapshotResult(
++    {
++      snapshotViewport: { kind: 'reported', rect },
++      nodes: [
++        { index: 0, type: 'Application', rect },
++        {
++          index: 1,
++          parentIndex: 0,
++          type: 'Button',
++          identifier: 'action',
++          rect: { x: 481, y: 314, width: 220, height: 42 },
++          hittable: true,
++        },
++      ],
++    },
++    IOS_SIMULATOR,
++  );
++  const presented = presentAppleRunnerSnapshot('device-1', undefined, read);
++  assert.deepEqual(presented.viewport, { width: 551, height: 813 });
++  assert.deepEqual(readSnapshotViewportEvidence(presented.nodes), { kind: 'reported', rect });
++});
++
+ function presentSparse(overrides: Partial<AppleRunnerSnapshotResult> = {}) {
+   return () =>
+     presentAppleRunnerSnapshot('device-1', undefined, {
+diff --git a/packages/platform-apple/src/snapshot-presentation.ts b/packages/platform-apple/src/snapshot-presentation.ts
+index 7ae7d70..0afddd9 100644
+--- a/packages/platform-apple/src/snapshot-presentation.ts
++++ b/packages/platform-apple/src/snapshot-presentation.ts
+@@ -28,10 +28,11 @@ import {
+   readPresentedSurfaceFact,
+   readSnapshotKeyboardBandFact,
+ } from '@agent-device/kernel/record';
+-import { snapshotViewportSizeFrom } from '@agent-device/kernel/rect';
++import { isPositiveFiniteRect, snapshotViewportSizeFrom } from '@agent-device/kernel/rect';
+ import type {
+   PresentedSurface,
+   RawSnapshotNode,
++  Rect,
+   SnapshotKeyboardBandFact,
+   SnapshotQualityVerdict,
+   SnapshotQualityNote,
+@@ -44,7 +45,11 @@ import {
+   type IosSystemSurfaceProvenance,
+ } from '@agent-device/contracts/ios-system-surface';
+ import { TARGET_ACTIVATION_WIRE_KEY, readTargetActivationFact } from './target-activation.ts';
+-import { readSnapshotObservation, readSnapshotQualityNotes } from '@agent-device/contracts/capture';
++import {
++  attachSnapshotViewportEvidence,
++  readSnapshotObservation,
++  readSnapshotQualityNotes,
++} from '@agent-device/contracts/capture';
+ 
+ export type AppleRunnerSnapshotResult = Readonly<{
+   nodes?: RawSnapshotNode[];
+@@ -65,6 +70,7 @@ export type AppleRunnerSnapshotResult = Readonly<{
+   /** Foreground repair this capture's own command had to perform (#2682). */
+   targetActivation?: IosTargetActivation;
+   observation?: IosSnapshotObservation;
++  viewportEvidence?: IosViewportEvidence;
+ }>;
+ 
+ export function readAppleSnapshotResult(
+@@ -100,6 +106,9 @@ export function readAppleSnapshotResult(
+     ...(presentedSurface ? { presentedSurface } : {}),
+     ...(targetActivation ? { targetActivation } : {}),
+     ...(observation ? { observation } : {}),
++    ...(result.snapshotViewport === undefined
++      ? {}
++      : { viewportEvidence: readRunnerViewportEvidence(result.snapshotViewport) }),
+     message:
+       typeof result.message === 'string' && result.message.trim().length > 0
+         ? result.message
+@@ -107,6 +116,24 @@ export function readAppleSnapshotResult(
+   };
+ }
+ 
++function readRunnerViewportEvidence(value: unknown): IosViewportEvidence {
++  if (isRecord(value)) {
++    if (
++      (value.kind === 'reported' || value.kind === 'derived') &&
++      isPositiveFiniteRect(value.rect as Rect | undefined)
++    ) {
++      return { kind: value.kind, rect: value.rect as Rect };
++    }
++    if (
++      value.kind === 'missing' &&
++      (value.reason === 'not-provided' || value.reason === 'invalid')
++    ) {
++      return { kind: 'missing', reason: value.reason };
++    }
++  }
++  return { kind: 'missing', reason: 'invalid' };
++}
++
+ function readSystemSurfaceProvenance(value: unknown): IosSystemSurfaceProvenance | undefined {
+   if (!isRecord(value) || typeof value.bundleId !== 'string') return undefined;
+   // The shared registry is the authority for both fields: an unknown bundle id is dropped rather
+@@ -123,9 +150,9 @@ function readSystemSurfaceProvenance(value: unknown): IosSystemSurfaceProvenance
+  * on tvOS is the screen every `XCUIApplication` rect is measured on — and it is published through the
+  * same guard every other producer passes, so an unusable box stays absent instead of reaching a
+  * reader as zero. A raw projection and a runner-declared failure publish no box: neither had a
+- * viewport checked against its tree, so the roots alone would be a guess. This is the host-side owner
+- * ADR 0004 gives the viewport question; the runner itself never grows a second wire key for a fact
+- * the host already derives from the payload's roots.
++ * viewport checked against its tree, so the roots alone would be a guess. The runner's explicit
++ * acquisition evidence owns screen authority. A root-derived validation box cannot upgrade an
++ * unknown screen origin, even when the local tree has valid geometry.
+  */
+ export type AppleRunnerSnapshotPresentation = Readonly<{
+   nodes: RawSnapshotNode[];
+@@ -138,7 +165,8 @@ export function presentAppleRunnerSnapshot(
+   result: AppleRunnerSnapshotResult,
+ ): AppleRunnerSnapshotPresentation {
+   const nodes = result.nodes ?? [];
+-  const viewportEvidence = runnerViewportEvidence(nodes, result.qualityPayload?.nodes);
++  const { authority: viewportEvidence, validation: validationViewport } =
++    runnerViewportEvidence(result);
+   if (result.runnerFatal === true || (nodes.length === 0 && result.qualityPayload === undefined)) {
+     return { nodes };
+   }
+@@ -166,7 +194,7 @@ export function presentAppleRunnerSnapshot(
+     },
+     validation: {
+       presentationKey: buildIosSnapshotPresentationKey(request),
+-      viewport: viewportEvidence,
++      viewport: validationViewport,
+       hittability: { kind: 'available' },
+       lineage: { targetId: deviceId },
+       residue: [],
+@@ -177,7 +205,11 @@ export function presentAppleRunnerSnapshot(
+     // The engine returns the box its regular projection validated this payload against and no box
+     // for raw — deriving it here would only repeat that rule (#3182).
+     const presentation = presentIosRunnerSnapshot(input, request);
+-    const validatedViewport = snapshotViewportSizeFrom(presentation.validatedViewport);
++    attachSnapshotViewportEvidence(presentation.nodes, viewportEvidence);
++    const validatedViewport =
++      viewportEvidence.kind === 'reported'
++        ? snapshotViewportSizeFrom(presentation.validatedViewport)
++        : undefined;
+     return {
+       nodes: presentation.nodes,
+       ...(validatedViewport ? { viewport: validatedViewport } : {}),
+@@ -259,19 +291,22 @@ function readQualityPayload(
+   return { nodes: value.nodes as RawSnapshotNode[], truncated: value.truncated, scope: null };
+ }
+ 
+-function runnerViewportEvidence(
+-  nodes: readonly RawSnapshotNode[],
+-  qualityNodes: readonly RawSnapshotNode[] | undefined,
+-): IosViewportEvidence {
+-  return (
+-    resolveIosViewportEvidenceFromRoots(rootNodes(qualityNodes), {
++function runnerViewportEvidence(result: AppleRunnerSnapshotResult): {
++  authority: IosViewportEvidence;
++  validation: IosViewportEvidence;
++} {
++  const roots = resolveIosViewportEvidenceFromRoots(rootNodes(result.qualityPayload?.nodes), {
++    fallbackToLargestRoot: true,
++  }) ??
++    resolveIosViewportEvidenceFromRoots(rootNodes(result.nodes), {
+       fallbackToLargestRoot: true,
+-    }) ??
+-    resolveIosViewportEvidenceFromRoots(rootNodes(nodes), { fallbackToLargestRoot: true }) ?? {
++    }) ?? {
+       kind: 'missing',
+       reason: 'not-provided',
+-    }
+-  );
++    };
++  const authority = result.viewportEvidence ?? roots;
++  // A local root can validate a readable tree, but cannot establish a missing screen origin.
++  return { authority, validation: authority.kind === 'missing' ? roots : authority };
+ }
+ 
+ function rootNodes(nodes: readonly RawSnapshotNode[] | undefined): readonly RawSnapshotNode[] {

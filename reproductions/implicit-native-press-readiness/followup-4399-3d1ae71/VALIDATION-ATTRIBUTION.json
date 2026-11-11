@@ -1,0 +1,18 @@
+{
+  "source": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "exactGate": {
+    "status": "passed",
+    "unitPassed": 19072,
+    "unitExistingSkipped": 3,
+    "relatedPassed": 370,
+    "receipt": "exact-validation-summary.json",
+    "qualification": "Do not add source-equivalent or mutant checks to exact-gate totals; skipped/parked lanes retain receipt attribution."
+  },
+  "additionalSourceEquivalentChecks": {
+    "focusedPassed": 1011,
+    "behavioralChecksIncludedInFocused": 59,
+    "portableSwiftGoldenPassed": 51,
+    "attribution": "Root-reported completed checks on reviewed source-equivalent contents; separate from exact gate."
+  },
+  "independentReview": "Root reports full and narrow async-owner reviews clear."
+}

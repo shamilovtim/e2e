@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "reviewer": "root independent publication review",
+  "originalCuratedFiles": 56,
+  "allCuratedChecksumRowsVerified": true,
+  "exactSourcePatchVerifiedAgainstGitRange": true,
+  "originalVideosByteCompared": 5,
+  "curatedTextFilesPrivacyScanned": 40,
+  "privateValueFindings": [],
+  "videoDecodeReceipt": {
+    "videos": 5,
+    "samples": 873,
+    "errors": 0
+  },
+  "visualReview": {
+    "contactSheets": 1,
+    "endpointsShownOnContactSheet": 10,
+    "additionalFullSizeEndpoints": 2,
+    "scope": "Generic native fixture and dedicated simulator default OS; no claim of every interior frame visual inspection."
+  },
+  "staticNaturalClipQualification": "One decoded sample each; responses, counters and native markers establish behavior, not the video alone.",
+  "liveEvidenceSource": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "sourceBase": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+  "sourceRebase": "Separate exact-head rebase evidence; native recordings are not relabeled."
+}

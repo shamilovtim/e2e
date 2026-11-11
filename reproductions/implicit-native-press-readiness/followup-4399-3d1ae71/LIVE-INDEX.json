@@ -1,0 +1,494 @@
+{
+  "head": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "base": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+  "phases": [
+    {
+      "phase": "baseline-healthy",
+      "classification": {
+        "classification": "healthy baseline only; no deferred claim",
+        "window": {
+          "height": 611,
+          "width": 375,
+          "y": 325,
+          "x": 329
+        },
+        "producer": {
+          "state": "healthy",
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 33.85007381439209,
+            "presentationMs": 0.1569986343383789
+          }
+        },
+        "action": {
+          "hittable": true,
+          "type": "Button",
+          "index": 4,
+          "enabled": true,
+          "identifier": "geometry-action",
+          "label": "Geometry action",
+          "parentIndex": 2,
+          "depth": 3,
+          "rect": {
+            "x": 569,
+            "y": 415,
+            "width": 111,
+            "height": 42
+          },
+          "ref": "e5",
+          "kind": "button"
+        },
+        "nativeActions": [
+          {
+            "count": 1,
+            "event": "actionReceivedTap",
+            "ms": 228335.9887500992,
+            "orientation": 1
+          },
+          {
+            "count": 2,
+            "event": "actionReceivedTap",
+            "ms": 245619.2387084011,
+            "orientation": 1
+          }
+        ],
+        "source": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+        "nativeSourceFingerprint": "7ba8868484ea7d1d7474ec142094a798cd0243e828b9687c048e78d673c80ac1",
+        "video": "setup-and-control.mp4",
+        "setup": "one raw native resize pan; no exact-origin tuning"
+      },
+      "recording": {
+        "path": "cases/baseline-healthy/video.mp4",
+        "originalFilename": "setup-and-control.mp4",
+        "bytes": 25709418,
+        "sha256": "63bb7ed812532caa17bbb9073b69fe541e22d4747da15263b375b52bd1e211a4"
+      },
+      "classificationArtifactSha256": "b8a7791927fed0abca61b362f26d45a17a6345a4f5de860f011c9532bd50b51c"
+    },
+    {
+      "phase": "baseline-natural-1",
+      "classification": {
+        "classification": "natural-record-start-deferred-baseline-unsafe-input",
+        "sdkCommit": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+        "nativeCommit": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+        "externalAbort": false,
+        "producerPins": false,
+        "queriesBackendTimeoutObserved": true,
+        "deferredPolicyObserved": true,
+        "nativeWireViewportKind": "not emitted by baseline protocol",
+        "capturedViewport": {
+          "width": 375,
+          "height": 611
+        },
+        "snapshotQuality": {
+          "state": "recovered",
+          "backend": "private-ax",
+          "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+          "reasonCode": "deferred",
+          "timing": {
+            "acquisitionMs": 306.1380386352539,
+            "presentationMs": 0.12803077697753906
+          }
+        },
+        "capturedTarget": {
+          "y": 90,
+          "height": 42,
+          "width": 111,
+          "x": 240
+        },
+        "healthySameWindowScreenTarget": {
+          "x": 569,
+          "y": 415,
+          "width": 111,
+          "height": 42
+        },
+        "nativeDispatchWindowReference": {
+          "x": 329,
+          "y": 325,
+          "width": 375,
+          "height": 611
+        },
+        "refDispatch": {
+          "result": {
+            "x": 296,
+            "y": 111,
+            "message": "Tapped @e4 (296, 111)",
+            "runnerMainThreadBusy": false,
+            "referenceWidth": 375,
+            "referenceHeight": 611,
+            "targetKind": "ref",
+            "ref": "e4",
+            "refLabel": "Geometry action",
+            "selectorChain": [
+              "id=\"geometry-action\"",
+              "role=\"button\" label=\"Geometry action\"",
+              "label=\"Geometry action\""
+            ],
+            "resolution": {
+              "source": "ref",
+              "phase": "pre-action",
+              "kind": "exact"
+            }
+          },
+          "ms": 377.6876660000016
+        },
+        "selectorDispatch": {
+          "result": {
+            "x": 296,
+            "y": 111,
+            "message": "Tapped id=geometry-action (296, 111)",
+            "runnerMainThreadBusy": false,
+            "referenceWidth": 375,
+            "referenceHeight": 611,
+            "targetKind": "selector",
+            "selector": "id=geometry-action",
+            "selectorChain": [
+              "id=\"geometry-action\"",
+              "role=\"button\" label=\"Geometry action\"",
+              "label=\"Geometry action\""
+            ],
+            "refLabel": "Geometry action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            }
+          },
+          "ms": 751.3042499999992
+        },
+        "counters": [
+          0,
+          0,
+          0
+        ],
+        "nativeTapAcceptedCount": 2,
+        "nativeSynthesizedTapCount": 2,
+        "remainingErrors": []
+      },
+      "recording": {
+        "path": "cases/baseline-natural-1/video.mp4",
+        "originalFilename": "cold-record-start.mp4",
+        "bytes": 142538,
+        "sha256": "75af15db2d023b04246d21d368f1533562641b8986ffba6ba0ffc22dea5fda87"
+      },
+      "classificationArtifactSha256": "923d586a3cc10ef096f1e0828a9f004725dac416ddf9a13c700f423701e0ca2c"
+    },
+    {
+      "phase": "head-fullscreen-setup",
+      "classification": {
+        "classification": "fullscreen-known-origin-positive-head",
+        "sdkCommit": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+        "recording": "external simctl only, no SDK recording-start",
+        "setup": "two screenshot-guided raw presses expanded green control then maximized; intermediate animation capture retained",
+        "nativeReportedViewport": {
+          "kind": "reported",
+          "rect": {
+            "height": 1376,
+            "y": 0,
+            "x": 0,
+            "width": 1032
+          }
+        },
+        "nativeQuality": {
+          "timing": {
+            "acquisitionMs": 27.639031410217285,
+            "presentationMs": 0.11706352233886719
+          },
+          "backend": "tree",
+          "state": "healthy"
+        },
+        "publicViewport": {
+          "width": 1032,
+          "height": 1376
+        },
+        "publicTarget": {
+          "x": 240,
+          "y": 90,
+          "width": 220,
+          "height": 42
+        },
+        "refDispatch": {
+          "x": 350,
+          "y": 111,
+          "runnerMainThreadBusy": false,
+          "message": "Tapped @e4 (350, 111)",
+          "referenceWidth": 1032,
+          "referenceHeight": 1376,
+          "targetKind": "ref",
+          "ref": "e4",
+          "refLabel": "Geometry action",
+          "selectorChain": [
+            "id=\"geometry-action\"",
+            "role=\"button\" label=\"Geometry action\"",
+            "label=\"Geometry action\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "selectorDispatch": {
+          "x": 350,
+          "y": 111,
+          "message": "Tapped id=geometry-action (350, 111)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 1032,
+          "referenceHeight": 1376,
+          "targetKind": "selector",
+          "selector": "id=geometry-action",
+          "selectorChain": [
+            "id=\"geometry-action\"",
+            "role=\"button\" label=\"Geometry action\"",
+            "label=\"Geometry action\""
+          ],
+          "refLabel": "Geometry action",
+          "resolution": {
+            "source": "runtime",
+            "phase": "pre-action",
+            "kind": "unique"
+          }
+        },
+        "counters": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "requestedCustomActionsPositive": {
+          "quality": {
+            "state": "recovered",
+            "backend": "private-ax",
+            "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+            "reasonCode": "requested-backend",
+            "customActions": {
+              "read": 12,
+              "candidates": 13,
+              "truncated": 0,
+              "blocked": false
+            },
+            "timing": {
+              "acquisitionMs": 1580.8980464935303,
+              "presentationMs": 0.13399124145507812
+            }
+          },
+          "viewport": {
+            "width": 1032,
+            "height": 1376
+          },
+          "refDispatch": {
+            "x": 350,
+            "y": 111,
+            "runnerMainThreadBusy": false,
+            "message": "Tapped @e4 (350, 111)",
+            "referenceWidth": 1032,
+            "referenceHeight": 1376,
+            "targetKind": "ref",
+            "ref": "e4",
+            "refLabel": "Geometry action",
+            "selectorChain": [
+              "id=\"geometry-action\"",
+              "role=\"button\" label=\"Geometry action\"",
+              "label=\"Geometry action\""
+            ],
+            "resolution": {
+              "source": "ref",
+              "phase": "pre-action",
+              "kind": "exact"
+            }
+          },
+          "classification": "requested-backend private-ax with known authority, not natural deferred proof"
+        },
+        "abort": false,
+        "producerPins": false
+      },
+      "recording": {
+        "path": "cases/head-fullscreen-setup/video.mp4",
+        "originalFilename": "setup.mp4",
+        "bytes": 16618713,
+        "sha256": "31a18dae2e3b0006eb64fc23b3f26c05e86f7977b85182464398206ba27bdcee"
+      },
+      "classificationArtifactSha256": "fe8a9d0bf08b846cd8e02341d51788001261ffabfe33260efe7eaf5e8663935f"
+    },
+    {
+      "phase": "head-healthy-placed",
+      "classification": {
+        "classification": "healthy-reported-nonzero-origin-head-positive",
+        "sdkCommit": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+        "recording": "external simctl only, no SDK recording-start",
+        "nativeViewport": {
+          "rect": {
+            "y": 325,
+            "x": 329,
+            "width": 375,
+            "height": 611
+          },
+          "kind": "reported"
+        },
+        "snapshotQuality": {
+          "state": "healthy",
+          "backend": "tree",
+          "timing": {
+            "acquisitionMs": 31.796932220458984,
+            "presentationMs": 0.1150369644165039
+          }
+        },
+        "snapshotTarget": {
+          "y": 415,
+          "x": 569,
+          "width": 111,
+          "height": 42
+        },
+        "dispatches": [
+          {
+            "x": 625,
+            "y": 436,
+            "runnerMainThreadBusy": false,
+            "message": "Tapped @e5 (625, 436)",
+            "referenceWidth": 375,
+            "referenceHeight": 611,
+            "targetKind": "ref",
+            "ref": "e5",
+            "refLabel": "Geometry action",
+            "selectorChain": [
+              "id=\"geometry-action\"",
+              "role=\"button\" label=\"Geometry action\"",
+              "label=\"Geometry action\""
+            ],
+            "resolution": {
+              "source": "ref",
+              "phase": "pre-action",
+              "kind": "exact"
+            }
+          },
+          {
+            "x": 625,
+            "y": 436,
+            "message": "Tapped id=geometry-action (625, 436)",
+            "runnerMainThreadBusy": false,
+            "referenceWidth": 375,
+            "referenceHeight": 611,
+            "targetKind": "selector",
+            "selector": "id=geometry-action",
+            "selectorChain": [
+              "id=\"geometry-action\"",
+              "role=\"button\" label=\"Geometry action\"",
+              "label=\"Geometry action\""
+            ],
+            "refLabel": "Geometry action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            }
+          }
+        ],
+        "counters": [
+          0,
+          1,
+          2
+        ]
+      },
+      "recording": {
+        "path": "cases/head-healthy-placed/video.mp4",
+        "originalFilename": "control.mp4",
+        "bytes": 13372019,
+        "sha256": "b53ff4c6bd51a13d260fafb859dfe30771161b9e3fa222c4c04f9fa5a5fe96db"
+      },
+      "classificationArtifactSha256": "74c4ac3d51b930a475bf340566d70775b73d1cc6c6f3b2a5a67fb21f0d263e3d"
+    },
+    {
+      "phase": "head-natural-1",
+      "classification": {
+        "classification": "natural-record-start-deferred-head-typed-no-input",
+        "sdkCommit": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+        "nativeSourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584",
+        "externalAbort": false,
+        "producerPins": false,
+        "queriesBackendTimeoutObserved": true,
+        "deferredPolicyObserved": true,
+        "nativeViewport": {
+          "kind": "derived",
+          "rect": {
+            "width": 375,
+            "x": 0,
+            "height": 611,
+            "y": 0
+          }
+        },
+        "trustedPublicViewportPresent": false,
+        "snapshotNodeCount": 16,
+        "snapshotQuality": {
+          "state": "recovered",
+          "backend": "private-ax",
+          "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+          "reasonCode": "deferred",
+          "timing": {
+            "acquisitionMs": 311.54704093933105,
+            "presentationMs": 0.24199485778808594
+          }
+        },
+        "capturedTarget": {
+          "x": 240,
+          "height": 42,
+          "y": 90,
+          "width": 111
+        },
+        "refOutcome": {
+          "code": "COMMAND_FAILED",
+          "reason": "window-origin-unknown",
+          "dispatched": "no"
+        },
+        "selectorOutcome": {
+          "code": "COMMAND_FAILED",
+          "reason": "window-origin-unknown",
+          "dispatched": "no"
+        },
+        "counters": [
+          0,
+          0,
+          0
+        ],
+        "nativeTapAcceptedCount": 0,
+        "nativeSynthesizedTapCount": 0,
+        "remainingErrors": []
+      },
+      "recording": {
+        "path": "cases/head-natural-1/video.mp4",
+        "originalFilename": "cold-record-start.mp4",
+        "bytes": 144103,
+        "sha256": "cd14dd5941edda5178e857156188055e730d4a23b8a633920d85972900602821"
+      },
+      "classificationArtifactSha256": "4059d29961df0e80a6bc70c0867608de642a65ff531e53ef45adecc5807c221f"
+    }
+  ],
+  "limitations": [
+    "Natural native missing viewport was not observed; natural unknown-origin coverage used native derived viewport.",
+    "Baseline protocol did not emit snapshotViewport; its actual native dispatch reference and natural timeout/deferred diagnostics establish the lost-origin comparison.",
+    "Simple selector in the natural degraded case used snapshot-derived resolution and was refused; no claim that an independent native selector route ran in that case.",
+    "Generic fixture UIView actionScreenFrame(to:nil) becomes app-local after relaunch; authoritative healthy native capture and actual synthesized dispatch reference establish the observed placed window origin."
+  ],
+  "attempts": {
+    "unitPayload": 1,
+    "healthyBaseline": 1,
+    "naturalBaseline": 1,
+    "naturalHead": 1,
+    "healthyHead": 1,
+    "fullscreenSetup": 1
+  },
+  "externalAborts": 0,
+  "setupFailures": 0,
+  "cleanup": {
+    "phone": "payload test runner stopped; simulator shutdown",
+    "ipad": "each daemon stopped --clean, external recorders stopped, simulator shutdown requested"
+  },
+  "sourceEditsAfterExactGate": false,
+  "originalPrivateIndexSha256": "3fd7fe8132f7fcd782d101c14c2da7d66bf58426aa257d057d26726fbf740c44",
+  "scope": "Selected generic final classifications and original recording hashes only. Raw process/policy lines, state, screenshots and logs remain outside this subset.",
+  "finalCleanupRootVerified": {
+    "ownedPhone": "shutdown",
+    "ownedIpad": "shutdown",
+    "ownedDaemonsAndRecorders": "stopped"
+  },
+  "mediaLimitation": "Natural baseline/head SDK recordings each contain one static video sample; behavioral proof uses typed responses, counters and sanitized native marker counts. All original recording bytes are retained."
+}

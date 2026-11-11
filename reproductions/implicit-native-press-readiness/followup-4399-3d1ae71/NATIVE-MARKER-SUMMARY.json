@@ -1,0 +1,29 @@
+{
+  "sourceRoles": {
+    "baseline-natural-1": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+    "head-natural-1": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b"
+  },
+  "cases": [
+    {
+      "case": "baseline-natural-1",
+      "queriesBackendTimeoutObserved": true,
+      "deferredPolicyObserved": true,
+      "nativeTapAcceptedCount": 2,
+      "nativeSynthesizedTapCount": 2,
+      "privateRunnerTranscriptSha256": "eb5e8ff7e7ef34da59e0a6d489d56e09971c21ce81d390325fc1cf89d9c6f5b1",
+      "privateSelectedMarkerArtifactSha256": "37130a0b2dcb14ccfd3133e1261db4fb22f3a5d9c73e3cc1fc9afd31bb9f543b",
+      "scope": "Counts/boolean facts only; raw policy/process lines and identifiers are excluded."
+    },
+    {
+      "case": "head-natural-1",
+      "queriesBackendTimeoutObserved": true,
+      "deferredPolicyObserved": true,
+      "nativeTapAcceptedCount": 0,
+      "nativeSynthesizedTapCount": 0,
+      "privateRunnerTranscriptSha256": "eaf25beec99aa18db5bab15e8df8ac9a18e71a208153d3466bc7b3ef366e65c6",
+      "privateSelectedMarkerArtifactSha256": "ec63044fcdd4d22f2eda99bee1fa2839e1c1d217c8408c31a104569fb29012ce",
+      "scope": "Counts/boolean facts only; raw policy/process lines and identifiers are excluded."
+    }
+  ],
+  "qualification": "Sanitized actual phase-runner transcript counts, independently matched to source-owner classifications. No policy or backend was forced."
+}

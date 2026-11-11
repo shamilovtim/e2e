@@ -1,0 +1,96 @@
+{
+  "head": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "baseline": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+  "builds": [
+    {
+      "role": "head-production",
+      "sourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584",
+      "unitTestsIncluded": false,
+      "destination": "generic/platform=iOS Simulator",
+      "xcode": "27.2",
+      "sdkVersion": "27.2",
+      "files": [
+        {
+          "path": "Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-arm64.xctestrun",
+          "size": 6003,
+          "sha256": "c848fdc11b81f8877acaa9287f54bb69f185d774558c5751cc97b2cc6120425f"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 58752,
+          "sha256": "be09a988df49ceb76cd6f4902ced7de80cdeba58210e296b36b72ec8ee5a0c88"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 95264,
+          "sha256": "21878d5b5fab5ed7db09127e329db5b3d82da4f7da06417af95c76a37d638a1a"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 5162032,
+          "sha256": "e032d503d095374a012254563e1cf23d90246e45212f5c36974e9e5942cc8ece"
+        }
+      ]
+    },
+    {
+      "role": "head-unit",
+      "sourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584",
+      "unitTestsIncluded": true,
+      "destination": "generic/platform=iOS Simulator",
+      "xcode": "27.2",
+      "sdkVersion": "27.2",
+      "files": [
+        {
+          "path": "Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-arm64.xctestrun",
+          "size": 5970,
+          "sha256": "64d5185343166e7132f5ff71aa0a6b32be8ce8b2a4dc606348889df184d4b7f6"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 188304,
+          "sha256": "674fd5e9aca548b663fcff41d4e98d68904df980242b57338a2705646b8f6c89"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 95248,
+          "sha256": "60bfe9ece72cf49e11652459c52056cdda19df70d83f7a1bb2f21d9669d63e61"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 12935280,
+          "sha256": "43fb93dbab556fad10f520571ab2660d1d70d06b963081227f9609a8e90439b0"
+        }
+      ]
+    },
+    {
+      "role": "baseline-production",
+      "sourceFingerprint": "7ba8868484ea7d1d7474ec142094a798cd0243e828b9687c048e78d673c80ac1",
+      "unitTestsIncluded": false,
+      "destination": "generic/platform=iOS Simulator",
+      "xcode": "27.2",
+      "sdkVersion": "27.2",
+      "files": [
+        {
+          "path": "Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-arm64.xctestrun",
+          "size": 5997,
+          "sha256": "251dd71dafadd128526ab6f82d47e725d61657c25b3d2730f1f4e1e3f3d5e75b"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 58768,
+          "sha256": "3bc7cffc5af2be4171dcc2318ca6936bd30e7af247bf4145a1ca95548a0d67a9"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 95264,
+          "sha256": "294ee9cc832c8c229a65d1aca675a9c883a94f6e92a0a399b07dc6cb687124ac"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 5094800,
+          "sha256": "98ac7f24ffeaa148331981f7d4e6d0e12280d72a6b41143ebe2d3667282f0994"
+        }
+      ]
+    }
+  ]
+}

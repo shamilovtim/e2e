@@ -1,0 +1,161 @@
+{
+  "method": "Existing Apple AVFoundation AVAssetReader decoder with uncompressed BGRA output. Every yielded video sample had an image buffer; each reader completed. First/last PNGs preserve track preferredTransform. No adaptive rotation, cropping or content edits.",
+  "videos": 5,
+  "samples": 873,
+  "decodeErrors": 0,
+  "allOriginalRecordingBytesUnchanged": true,
+  "cases": [
+    {
+      "video": "cases/baseline-healthy/video.mp4",
+      "decodedVideoSamples": 334,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 249.44833333333332,
+      "case": "baseline-healthy",
+      "originalRecordingFilename": "setup-and-control.mp4",
+      "videoSha256": "63bb7ed812532caa17bbb9073b69fe541e22d4747da15263b375b52bd1e211a4",
+      "videoBytes": 25709418,
+      "originalRecordingByteUnchanged": true,
+      "firstPngSha256": "6ecc15b7a95387da9a9e603519b19af146eea3e85500ce4e8a6072c98ea2fa58",
+      "lastPngSha256": "709006df4fd49f412345b60c8fccf7b1f8283613f76ab8bc9490260d3bf0865e",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "video": "cases/baseline-natural-1/video.mp4",
+      "decodedVideoSamples": 1,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 0,
+      "case": "baseline-natural-1",
+      "originalRecordingFilename": "cold-record-start.mp4",
+      "videoSha256": "75af15db2d023b04246d21d368f1533562641b8986ffba6ba0ffc22dea5fda87",
+      "videoBytes": 142538,
+      "originalRecordingByteUnchanged": true,
+      "firstPngSha256": "955396d76c7232e21bf6be1e12b9e18bc09169441c63a1651909ee5adbf6275a",
+      "lastPngSha256": "955396d76c7232e21bf6be1e12b9e18bc09169441c63a1651909ee5adbf6275a",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "video": "cases/head-fullscreen-setup/video.mp4",
+      "decodedVideoSamples": 381,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 81.48833333333333,
+      "case": "head-fullscreen-setup",
+      "originalRecordingFilename": "setup.mp4",
+      "videoSha256": "31a18dae2e3b0006eb64fc23b3f26c05e86f7977b85182464398206ba27bdcee",
+      "videoBytes": 16618713,
+      "originalRecordingByteUnchanged": true,
+      "firstPngSha256": "cc5930386064f446eb9d497199420bd5a9f61c7ee17859d3b6ac6ab6b53893e3",
+      "lastPngSha256": "a40ce3bb1076e860712b219ce7041759c03080cf147de41a74436ab728b78e5f",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "video": "cases/head-healthy-placed/video.mp4",
+      "decodedVideoSamples": 156,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 29.578333333333333,
+      "case": "head-healthy-placed",
+      "originalRecordingFilename": "control.mp4",
+      "videoSha256": "b53ff4c6bd51a13d260fafb859dfe30771161b9e3fa222c4c04f9fa5a5fe96db",
+      "videoBytes": 13372019,
+      "originalRecordingByteUnchanged": true,
+      "firstPngSha256": "a8c31458b88fbe13811f3db34f70ef7f0fcb2053140612883d860437d307c323",
+      "lastPngSha256": "f3d6dd96da07e09bcc3408b1078bdfdec2d506840bb53aa6d406420cdfd46cfe",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "video": "cases/head-natural-1/video.mp4",
+      "decodedVideoSamples": 1,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2064,
+        2752
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2064,
+        2752
+      ],
+      "lastSampleSeconds": 0,
+      "case": "head-natural-1",
+      "originalRecordingFilename": "cold-record-start.mp4",
+      "videoSha256": "cd14dd5941edda5178e857156188055e730d4a23b8a633920d85972900602821",
+      "videoBytes": 144103,
+      "originalRecordingByteUnchanged": true,
+      "firstPngSha256": "cba0ddad07af174d866e955f2329d926ac1c3893e0e48425bd45a8d98f1d1b4a",
+      "lastPngSha256": "cba0ddad07af174d866e955f2329d926ac1c3893e0e48425bd45a8d98f1d1b4a",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5",
+      "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    }
+  ],
+  "containerAudit": "MEDIA-CONTAINER-INVENTORY.json",
+  "visualReview": {
+    "endpointPngs": 10,
+    "contactSheets": 1,
+    "allEndpointsInspected": true,
+    "scope": "Every first/last decoded endpoint inspected; not every interior frame was visually reviewed.",
+    "content": "Generic UIKit fixtures and default dedicated simulator OS/Springboard. No private app/account content observed.",
+    "orientation": "Track preferred transform retained; no adaptive rotation/crop/content edits."
+  },
+  "staticNaturalClipLimitation": {
+    "baseline-natural-1": {
+      "decodedSamples": 1,
+      "movieDurationSeconds": 2.945,
+      "mediaTrackDurationSeconds": 0.06666666666666667
+    },
+    "head-natural-1": {
+      "decodedSamples": 1,
+      "movieDurationSeconds": 2.8433333333333333,
+      "mediaTrackDurationSeconds": 0.06666666666666667
+    },
+    "meaning": "Original natural SDK recordings are static one-sample clips; they do not visually prove dispatch, policy or input suppression. Typed results, counters and sanitized native transcript markers establish those oracles."
+  }
+}

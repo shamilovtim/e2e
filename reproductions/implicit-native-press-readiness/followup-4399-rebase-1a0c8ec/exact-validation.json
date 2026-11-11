@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "base": "b6fa2ecb583137866d267f56b2597c4f633412d6",
+  "head": "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+  "tree": "7f6402656f5ec3313b6f24aa41474fdcc9891fc7",
+  "command": "pnpm check:affected --run --head 1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+  "status": "passed",
+  "exitCode": 0,
+  "exactCommit": true,
+  "checkoutChanged": false,
+  "cleanInitialAndFinal": true,
+  "initialFingerprint": "ea86c7dfda99355a656a352e9b65f77e99ded5459313f3b02680ce6adcea724a",
+  "finalFingerprint": "ea86c7dfda99355a656a352e9b65f77e99ded5459313f3b02680ce6adcea724a",
+  "changedFileCount": 25,
+  "scope": {
+    "files": 25,
+    "insertions": 718,
+    "deletions": 26
+  },
+  "results": [
+    {
+      "id": "format",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 546,
+      "tests": []
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 2016,
+      "tests": []
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 8729,
+      "tests": []
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 23253,
+      "tests": []
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 3889,
+      "tests": []
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 317,
+      "tests": []
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4402,
+      "tests": []
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 40502,
+      "tests": [
+        {
+          "passed": 373,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 159708,
+      "tests": [
+        {
+          "passed": 19086,
+          "failed": 0,
+          "skipped": 3,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "deduplicated",
+      "reason": "covered by related tests"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "adr-citations",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 1119,
+      "tests": [
+        {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 499,
+      "tests": []
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 7085,
+      "tests": []
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ],
+  "rawReceiptSHA256": "9f73f01826d074e5bcea9ef8c14a3b1da80daa66cdd2ab56a65f6f16e1906e13",
+  "sourcePatchSHA256": "246a9dfdea7724e26b360451e086dfcaafde89e9b79d3131e3565e28cbc4f5c5",
+  "rangeDiffSHA256": "81adefd2f5eaaa31f9ad1dc56d10cd699bff7da139d32281b361a8023b84ae89",
+  "rebase": {
+    "oldBase": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+    "oldHead": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "newBase": "b6fa2ecb583137866d267f56b2597c4f633412d6",
+    "newHead": "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+    "fixFilesIdentical": 24,
+    "onlyFixFileDifference": "packages/command-surface/src/capture/snapshot.ts",
+    "difference": "Preserved upstream HarmonyOS visibility wording alongside unchanged iOS origin clauses.",
+    "sourceComparisons": [
+      {
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+AXSnapshotFallback.swift",
+        "identical": true,
+        "oldSHA256": "667bcefea4f13c70eaa4835050f7a21c141320efc471bc00739916684bd810c2",
+        "newSHA256": "667bcefea4f13c70eaa4835050f7a21c141320efc471bc00739916684bd810c2"
+      },
+      {
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift",
+        "identical": true,
+        "oldSHA256": "700059b917935049180e29429b43acc68e7531f2e40d3ccc1f2e0882234fe59f",
+        "newSHA256": "700059b917935049180e29429b43acc68e7531f2e40d3ccc1f2e0882234fe59f"
+      },
+      {
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotCapturePlan.swift",
+        "identical": true,
+        "oldSHA256": "091bc21b095f5280d41f5c84f4d84a74b5f0a76304e1065d3f7f45299d099f11",
+        "newSHA256": "091bc21b095f5280d41f5c84f4d84a74b5f0a76304e1065d3f7f45299d099f11"
+      },
+      {
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanTests.swift",
+        "identical": true,
+        "oldSHA256": "350e6add5c465672c3763bc012c25cc78dbdbc768c9a6d6a55149c780b2d903e",
+        "newSHA256": "350e6add5c465672c3763bc012c25cc78dbdbc768c9a6d6a55149c780b2d903e"
+      },
+      {
+        "path": "apple/runner/README.md",
+        "identical": true,
+        "oldSHA256": "3111ceed9479dec1476e850041be3bb4d3723b74a54bbc2360f9e532c6f12f34",
+        "newSHA256": "3111ceed9479dec1476e850041be3bb4d3723b74a54bbc2360f9e532c6f12f34"
+      },
+      {
+        "path": "apple/runner/RUNNER_PROTOCOL.md",
+        "identical": true,
+        "oldSHA256": "3f6be35f72b4b6e5e37400a44c51f7beb87ea3989900e1de556c3d1b68d8ce22",
+        "newSHA256": "3f6be35f72b4b6e5e37400a44c51f7beb87ea3989900e1de556c3d1b68d8ce22"
+      },
+      {
+        "path": "apple/snapshot-presentation/README.md",
+        "identical": true,
+        "oldSHA256": "291b9745982daff8962bfae068f8fc66ee7f91aadcba76e8e2fea47ce36f7b46",
+        "newSHA256": "291b9745982daff8962bfae068f8fc66ee7f91aadcba76e8e2fea47ce36f7b46"
+      },
+      {
+        "path": "docs/adr/0004-ios-snapshot-backend-strategy.md",
+        "identical": true,
+        "oldSHA256": "dc0bb08bb91f6c62811dc07fae27bad0a182bcbb833c9a1298f5ddf3bf660523",
+        "newSHA256": "dc0bb08bb91f6c62811dc07fae27bad0a182bcbb833c9a1298f5ddf3bf660523"
+      },
+      {
+        "path": "docs/adr/0011-interaction-guarantee-contract.md",
+        "identical": true,
+        "oldSHA256": "94e24398d9d3e13fc54e8dddb5cd21e5dba2cce4c64ec1acfeb2706895b8df60",
+        "newSHA256": "94e24398d9d3e13fc54e8dddb5cd21e5dba2cce4c64ec1acfeb2706895b8df60"
+      },
+      {
+        "path": "packages/capture-kit/src/snapshot-state.ts",
+        "identical": true,
+        "oldSHA256": "d19a6f6054a2e2d01506924b8a99f409bc674950ad8204d49a2ed43a4f9476e9",
+        "newSHA256": "d19a6f6054a2e2d01506924b8a99f409bc674950ad8204d49a2ed43a4f9476e9"
+      },
+      {
+        "path": "packages/command-runtime/src/command-runtime/runtime-factory.ts",
+        "identical": true,
+        "oldSHA256": "67dd296870b7e7fb4a638f6b2983c68a12d80b8cf730e4ef221a166c5e0a0064",
+        "newSHA256": "67dd296870b7e7fb4a638f6b2983c68a12d80b8cf730e4ef221a166c5e0a0064"
+      },
+      {
+        "path": "packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages-screen-origin.test.ts",
+        "identical": true,
+        "oldSHA256": "93e87b395b6f57d19020a46066d997a4f80df13be94c6e90953acac1effc9099",
+        "newSHA256": "93e87b395b6f57d19020a46066d997a4f80df13be94c6e90953acac1effc9099"
+      },
+      {
+        "path": "packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages.ts",
+        "identical": true,
+        "oldSHA256": "b574ab42aca96a4d557d246d3600c395aaa4edd1d836e24fd7a21568b0dc698e",
+        "newSHA256": "b574ab42aca96a4d557d246d3600c395aaa4edd1d836e24fd7a21568b0dc698e"
+      },
+      {
+        "path": "packages/command-runtime/src/commands/interaction/runtime/viewport.ts",
+        "identical": true,
+        "oldSHA256": "d5ec1b0f5969d8732881bb8151b1d228615fc80edd0d0731943be46cba37be2d",
+        "newSHA256": "d5ec1b0f5969d8732881bb8151b1d228615fc80edd0d0731943be46cba37be2d"
+      },
+      {
+        "path": "packages/command-surface/src/capture/snapshot.ts",
+        "identical": false,
+        "oldSHA256": "1e2edbd8de918b5eb305df57e502568a9d74d0312665f2e9666495c634632caa",
+        "newSHA256": "9bff41185d6223ec96d234cfbfc4e0d2603a531b262a73b8a7b7a716e7053bd0"
+      },
+      {
+        "path": "packages/contracts/src/facades/capture.ts",
+        "identical": true,
+        "oldSHA256": "af830fa8d0a1181274e6513dcb00491c0a370886ca192c9b0da4486e83360b5e",
+        "newSHA256": "af830fa8d0a1181274e6513dcb00491c0a370886ca192c9b0da4486e83360b5e"
+      },
+      {
+        "path": "packages/contracts/src/snapshot-private-evidence.ts",
+        "identical": true,
+        "oldSHA256": "c9872eb4e6cbbfd284314a560b029dfb297996ed563109df76292fba264564b8",
+        "newSHA256": "c9872eb4e6cbbfd284314a560b029dfb297996ed563109df76292fba264564b8"
+      },
+      {
+        "path": "packages/daemon/src/execution/interaction/internal/__tests__/find-keyboard-occlusion.test.ts",
+        "identical": true,
+        "oldSHA256": "385ff7390fca9dbd7288dd077d06200473d53ce14d3f6d79dc8b4045952864fe",
+        "newSHA256": "385ff7390fca9dbd7288dd077d06200473d53ce14d3f6d79dc8b4045952864fe"
+      },
+      {
+        "path": "packages/daemon/src/execution/interaction/internal/find.ts",
+        "identical": true,
+        "oldSHA256": "56770eb1d4fe82104e294d1cfb652c17aaefbaadb59bd3c5e94ea87194194d09",
+        "newSHA256": "56770eb1d4fe82104e294d1cfb652c17aaefbaadb59bd3c5e94ea87194194d09"
+      },
+      {
+        "path": "packages/maestro/src/daemon-port/__tests__/daemon-runtime-port-screen-origin.test.ts",
+        "identical": true,
+        "oldSHA256": "be860219c012852f535e5d26beb3f54feff09315f23e48efc9bc21022a623261",
+        "newSHA256": "be860219c012852f535e5d26beb3f54feff09315f23e48efc9bc21022a623261"
+      },
+      {
+        "path": "packages/maestro/src/daemon-port/daemon-runtime-port.ts",
+        "identical": true,
+        "oldSHA256": "209075a70872017f6133e6a660092eecab2a4d53383476b09f156451cdf9f9e4",
+        "newSHA256": "209075a70872017f6133e6a660092eecab2a4d53383476b09f156451cdf9f9e4"
+      },
+      {
+        "path": "packages/maestro/src/daemon-port/daemon-runtime-tap.ts",
+        "identical": true,
+        "oldSHA256": "bf58804746871f66e210e99bccb62206c9e12c13447eefce1359eb957e4338bb",
+        "newSHA256": "bf58804746871f66e210e99bccb62206c9e12c13447eefce1359eb957e4338bb"
+      },
+      {
+        "path": "packages/platform-apple/src/interactor.ts",
+        "identical": true,
+        "oldSHA256": "a90591442e154bf66a0e7812a9fb8f7110722bcf6e01a5b49284e0890b47f4af",
+        "newSHA256": "a90591442e154bf66a0e7812a9fb8f7110722bcf6e01a5b49284e0890b47f4af"
+      },
+      {
+        "path": "packages/platform-apple/src/snapshot-presentation.test.ts",
+        "identical": true,
+        "oldSHA256": "5fb1f707f4fe727efe29cbaeaf6ce62a1233781cb4f06e837a805fd54c9b7024",
+        "newSHA256": "5fb1f707f4fe727efe29cbaeaf6ce62a1233781cb4f06e837a805fd54c9b7024"
+      },
+      {
+        "path": "packages/platform-apple/src/snapshot-presentation.ts",
+        "identical": true,
+        "oldSHA256": "d109546faf163a1308c2d49c2510774dc735a3ac5283ea002712f31adeeb1894",
+        "newSHA256": "d109546faf163a1308c2d49c2510774dc735a3ac5283ea002712f31adeeb1894"
+      }
+    ]
+  },
+  "builtJavaScript": {
+    "oldHead": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "newHead": "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+    "oldCount": 631,
+    "newCount": 631,
+    "identicalCount": 619,
+    "changed": [
+      {
+        "path": "dist/src/cli-help.js",
+        "oldSHA256": "4906beae4fba2a9bc45fb669377c447db274b5c2bfae37d8c1ca8d76ef581fb4",
+        "newSHA256": "38d0b0c88a9a20e8f0000f2d63ffecab7027f97a5bc74a6537618b17f1afd6c5"
+      },
+      {
+        "path": "dist/src/network-traffic.js",
+        "oldSHA256": "fdd9316c4e8ee862d43bd2e09f6572382be9d35e77d69b5c9f50e2e80a053a8e",
+        "newSHA256": "9c221639e78c257d321faa70a8810ae87236c6d21c907567bdb8f10d45f421c7"
+      },
+      {
+        "path": "dist/src/proxy.js",
+        "oldSHA256": "2e73bb7363d69ba2d731e96349047e28f911989aa6bbf22fe2fdc4b5ff0938df",
+        "newSHA256": "2fcdd5e67f3d43e4aab9b3c845726091b65c5959c9fc11853ccaf8c5839b6efd"
+      },
+      {
+        "path": "dist/src/sdk-device.js",
+        "oldSHA256": "398aa5b696ac4f62f418c6276d55aa129f3fe8fba4f6554f930a207c17c1df88",
+        "newSHA256": "68eeb7047d3393ce7cb5efc9dc0581ab25282276e8a418d5f1481bd6185794dc"
+      },
+      {
+        "path": "dist/src/selector-runtime.js",
+        "oldSHA256": "be8aec18abe4dc29dda37a44877ea98b89e1e133f7302992a2694986c23144ad",
+        "newSHA256": "6ead7cf97abb129621e769fd70c6b8e29acaaa8241e82010672bea13e22e78cf"
+      },
+      {
+        "path": "dist/src/server-startup.js",
+        "oldSHA256": "3f46eb5d1d36a0c441f0cb2cd4ec220e9ec2b99b4cbb07d4212e24dfded979d4",
+        "newSHA256": "068238bd745fd0bc28522aa567b51d8bfdb225e655d3f56b08e6ef8646a40624"
+      },
+      {
+        "path": "dist/src/session-tenant-scope.js",
+        "oldSHA256": "47d26d05f415570150ac604ca2dee914cdd4a649207ee7f49d8732f36c93cbcf",
+        "newSHA256": "889b58880cc851499f90c2bbea9f9b6421fc761f89cf42505837bb58527aad9c"
+      },
+      {
+        "path": "dist/src/snapshot-runtime-binding.js",
+        "oldSHA256": "6da64ceef925c9652102135d7449be04d359e31620028018939fdaf9c6a1e1e7",
+        "newSHA256": "a435916dd844fb2ca22be6a5e013b77699c9a49027e45e330d58c6ec72fcbd29"
+      },
+      {
+        "path": "dist/src/snapshot-runtime.js",
+        "oldSHA256": "f4de4285065cec4b48b1c5afd09c49f58cc0b940edd1c48061c779c7badec5f1",
+        "newSHA256": "85af330a67660ea414de8be9b766a12f1baba6f6be9ca2cd509e7404fa249a22"
+      },
+      {
+        "path": "dist/src/snapshot2.js",
+        "oldSHA256": "f7f888a17528148ffcae44508a0d4598f622420acc91a62be986a350059b2664",
+        "newSHA256": "1e8f4d582fc5165302184263c07cd516c39f663b6ed25284803f326866482a1f"
+      },
+      {
+        "path": "dist/src/src2.js",
+        "oldSHA256": "f6b78076886a5ff1de6ac6841ffafbfac82f20061aa2cea1fef300a8b1f4629e",
+        "newSHA256": "3559223a6b538fc8f078c9f67ff7cf6fa1b68a04fa5fbb81244f166801dae447"
+      },
+      {
+        "path": "dist/src/src3.js",
+        "oldSHA256": "d36546cdc7434258eb8bdfb5106f45b7708f463dc02641c48f25c34171046fad",
+        "newSHA256": "57ba42cf98b32006be3ec94bfc3ff0a0b6bf8b2db5582a6f7577dacd4323c10d"
+      }
+    ],
+    "added": [],
+    "removed": [],
+    "allOldHashesRetainedIn": "head-built-js-manifest.json",
+    "allNewHashes": "head-rebased-built-js-manifest.json"
+  },
+  "nativeSource": {
+    "runnerTree": "e0ce0aa722fc7cb73b831f5bb0ca8d75c703a593",
+    "snapshotPresentationTree": "c55c5881e5ca0057fe4a9743176ec79fbbca8000",
+    "identicalBetweenHeads": [
+      "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+      "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57"
+    ],
+    "priorHeadSourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584"
+  },
+  "priorNativeArtifacts": [
+    {
+      "role": "head-production",
+      "sourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584",
+      "unitTestsIncluded": false,
+      "destination": "generic/platform=iOS Simulator",
+      "xcode": "27.2",
+      "sdkVersion": "27.2",
+      "files": [
+        {
+          "path": "Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-arm64.xctestrun",
+          "size": 6003,
+          "sha256": "c848fdc11b81f8877acaa9287f54bb69f185d774558c5751cc97b2cc6120425f"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 58752,
+          "sha256": "be09a988df49ceb76cd6f4902ced7de80cdeba58210e296b36b72ec8ee5a0c88"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 95264,
+          "sha256": "21878d5b5fab5ed7db09127e329db5b3d82da4f7da06417af95c76a37d638a1a"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 5162032,
+          "sha256": "e032d503d095374a012254563e1cf23d90246e45212f5c36974e9e5942cc8ece"
+        }
+      ],
+      "hashesRecheckedAfterRebase": true,
+      "buildAndLiveProofHead": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b"
+    },
+    {
+      "role": "head-unit",
+      "sourceFingerprint": "3834114e0b445692cc1f8052d266fbacec8fac8c6d421a0ad65e6c0389718584",
+      "unitTestsIncluded": true,
+      "destination": "generic/platform=iOS Simulator",
+      "xcode": "27.2",
+      "sdkVersion": "27.2",
+      "files": [
+        {
+          "path": "Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-arm64.xctestrun",
+          "size": 5970,
+          "sha256": "64d5185343166e7132f5ff71aa0a6b32be8ce8b2a4dc606348889df184d4b7f6"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 188304,
+          "sha256": "674fd5e9aca548b663fcff41d4e98d68904df980242b57338a2705646b8f6c89"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 95248,
+          "sha256": "60bfe9ece72cf49e11652459c52056cdda19df70d83f7a1bb2f21d9669d63e61"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 12935280,
+          "sha256": "43fb93dbab556fad10f520571ab2660d1d70d06b963081227f9609a8e90439b0"
+        }
+      ],
+      "hashesRecheckedAfterRebase": true,
+      "buildAndLiveProofHead": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b"
+    },
+    {
+      "role": "baseline-production",
+      "sourceFingerprint": "7ba8868484ea7d1d7474ec142094a798cd0243e828b9687c048e78d673c80ac1",
+      "unitTestsIncluded": false,
+      "destination": "generic/platform=iOS Simulator",
+      "xcode": "27.2",
+      "sdkVersion": "27.2",
+      "files": [
+        {
+          "path": "Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-arm64.xctestrun",
+          "size": 5997,
+          "sha256": "251dd71dafadd128526ab6f82d47e725d61657c25b3d2730f1f4e1e3f3d5e75b"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 58768,
+          "sha256": "3bc7cffc5af2be4171dcc2318ca6936bd30e7af247bf4145a1ca95548a0d67a9"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 95264,
+          "sha256": "294ee9cc832c8c229a65d1aca675a9c883a94f6e92a0a399b07dc6cb687124ac"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 5094800,
+          "sha256": "98ac7f24ffeaa148331981f7d4e6d0e12280d72a6b41143ebe2d3667282f0994"
+        }
+      ],
+      "hashesRecheckedAfterRebase": true,
+      "buildAndLiveProofHead": "a8774f3632eb432a1dadbde8627da30586f9ee39"
+    }
+  ],
+  "liveProof": {
+    "naturalDeferredAttempts": {
+      "baseline": 1,
+      "fixed": 1
+    },
+    "sameObservedWindow": {
+      "x": 329,
+      "y": 325,
+      "width": 375,
+      "height": 611
+    },
+    "healthyControl": "Both baseline and fixed captured-ref/selector taps advanced action counters at screen point625,436.",
+    "fullscreenControl": "Fixed reported viewport0,0,1032,1376; ref/selector advanced counters, and known-origin privateAX requested-backend remained usable.",
+    "attribution": "Live recordings and native builds remain attributed to original fixed commit3d1ae71; no new simulator run was performed at rebased head1a0c8ecc.",
+    "limit": "Natural unknown-origin capture was derived, not missing; missing-authority behavior has regression coverage.",
+    "baselineCommit": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+    "fixedCommit": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+    "baselineOutcome": "Two wrong taps accepted and synthesized; action counter stayed zero.",
+    "fixedOutcome": "Derived viewport preserved; readable capture without trusted viewport; ref and selector returned window-origin-unknown/dispatched:no; zero native taps; counter stayed zero."
+  }
+}

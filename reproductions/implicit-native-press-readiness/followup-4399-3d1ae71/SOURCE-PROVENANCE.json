@@ -1,0 +1,46 @@
+{
+  "head": "3d1ae71e00ec75fa7e59e7c2624ec55b3f249b2b",
+  "tree": "185ab608a47f4b238fdf397760061a697326fbb0",
+  "base": "a8774f3632eb432a1dadbde8627da30586f9ee39",
+  "sourceCleanAtPreparation": true,
+  "patch": {
+    "path": "candidate-source.patch",
+    "sha256": "e1ca455696ee51c4b734b1a1d975df4705b8a9a520b66356ae93dd5e01814f7d",
+    "bytes": 58407,
+    "files": 25,
+    "added": 718,
+    "removed": 26
+  },
+  "headAndBaselineHostJsFilesEach": 631,
+  "nativeAttribution": "Separate production/native baselines and candidate artifacts are listed in native-build-manifests.json. Authentic baseline uses old host plus old native, not mixed artifacts.",
+  "sourceScope": "Preserve existing native reported/derived/missing origin authority through payload stamping and real in-memory dataset cloning. Unknown capture remains readable with warning and without authoritative viewport; captured-target mutators refuse typed window-origin-unknown/dispatched=no. Independent raw/native viewport and read-only routes remain. No new query/probe/retry/cache/public API.",
+  "liveQualification": "These are source/build facts, not a claim that any particular naturally deferred live case has occurred. Baseline sourceKind fields remain absent when absent in actual data.",
+  "checks": [
+    {
+      "path": "exact-validation-summary.json",
+      "bytes": 4371,
+      "sha256": "3baf4c590a17e40aecd398fc1f051b04a356938dbcaf74a4097cd564db7fb828"
+    },
+    {
+      "path": "head-built-js-manifest.json",
+      "bytes": 102420,
+      "sha256": "4d236c404ed2df5ef0651b54be075054f6ecff603683600b16da508e0cff16ef"
+    },
+    {
+      "path": "baseline-built-js-manifest.json",
+      "bytes": 102423,
+      "sha256": "77b3c27ed79620ffdef8bffe8eda9db325831c18ac01713fb28e9ea71f2be2dd"
+    },
+    {
+      "path": "native-build-manifests.json",
+      "bytes": 4140,
+      "sha256": "90d04f37486dc1f989a90c850dade9917f7153a7a1fb81ebf463c24ab33c600f"
+    },
+    {
+      "path": "fixture-build-manifest.json",
+      "bytes": 829,
+      "sha256": "c6495196f5a34550a71e3a11d0296fad81112313c473f86721b36118e9c192e4"
+    }
+  ],
+  "runtimeScopeFrozen": "All live/native/media evidence in this subset belongs to 3d1ae71 candidate or genuine a877 baseline. A later rebase and exact gate must be separately attributed; this subset is not relabeled to a new head."
+}

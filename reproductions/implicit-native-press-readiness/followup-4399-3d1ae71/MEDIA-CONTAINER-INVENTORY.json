@@ -1,0 +1,96 @@
+{
+  "method": "ISO BMFF atom inventory with Python standard library, followed by inspection of each track user-data atom. No video transformation.",
+  "videos": [
+    {
+      "case": "baseline-healthy",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 279.1383333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 249.465
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "baseline-natural-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 2.945,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 0.06666666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "head-fullscreen-setup",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 103.7,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 81.505
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "head-healthy-placed",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 55.36,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 29.595
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    },
+    {
+      "case": "head-natural-1",
+      "method": "ISO BMFF atom inventory using Python standard library; no media transformation",
+      "movieDurationSeconds": 2.8433333333333333,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "tracks": [
+        {
+          "handler": "vide",
+          "mediaDurationSeconds": 0.06666666666666667
+        }
+      ],
+      "metadataContainerCount": 1,
+      "metadataContainers": [
+        "/moov/trak/udta"
+      ]
+    }
+  ],
+  "metadataReview": {
+    "eachVideo": "One track udta/tagc value: com.apple.policy.screenrecording.1",
+    "otherReviewedMetadataContainers": 0,
+    "privateMetadataFindings": 0
+  },
+  "audioTracks": 0
+}
