@@ -1,0 +1,2105 @@
+[
+  {
+    "mode": "none",
+    "repeat": 1,
+    "pid": 73544,
+    "closeMs": 941.9632919999999,
+    "pressMs": 341.0976249999994,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e3 (194, 514)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "none",
+    "repeat": 2,
+    "pid": 74300,
+    "closeMs": 946.0764580000014,
+    "pressMs": 344.4107920000006,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "none",
+    "repeat": 3,
+    "pid": 75057,
+    "closeMs": 906.989375000001,
+    "pressMs": 334.333125000001,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settle150",
+    "repeat": 1,
+    "pid": 75812,
+    "closeMs": 1206.2984169999982,
+    "pressMs": 338.8005000000012,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 262,
+      "captures": 2,
+      "quietMs": 150,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350431
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 262,
+        "captures": 2,
+        "quietMs": 150,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350431
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settle150",
+    "repeat": 2,
+    "pid": 76664,
+    "closeMs": 1170.6320419999975,
+    "pressMs": 340.68883300000016,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 253,
+      "captures": 2,
+      "quietMs": 150,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350439
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e3 (194, 514)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 253,
+        "captures": 2,
+        "quietMs": 150,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350439
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settle150",
+    "repeat": 3,
+    "pid": 77554,
+    "closeMs": 1166.5900409999958,
+    "pressMs": 337.0068749999991,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 260,
+      "captures": 2,
+      "quietMs": 150,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350447
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 260,
+        "captures": 2,
+        "quietMs": 150,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350447
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settleDefault",
+    "repeat": 1,
+    "pid": 78418,
+    "closeMs": 1346.275834,
+    "pressMs": 338.87199999999575,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 408,
+      "captures": 2,
+      "quietMs": 300,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350455
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 408,
+        "captures": 2,
+        "quietMs": 300,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350455
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settleDefault",
+    "repeat": 2,
+    "pid": 79272,
+    "closeMs": 1349.7567920000001,
+    "pressMs": 328.08158399999957,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 395,
+      "captures": 2,
+      "quietMs": 300,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350463
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e3 (194, 514)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 395,
+        "captures": 2,
+        "quietMs": 300,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350463
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settleDefault",
+    "repeat": 3,
+    "pid": 80138,
+    "closeMs": 1306.280749999998,
+    "pressMs": 339.88933299999917,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 403,
+      "captures": 2,
+      "quietMs": 300,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350471
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 403,
+        "captures": 2,
+        "quietMs": 300,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350471
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settle1000",
+    "repeat": 1,
+    "pid": 81038,
+    "closeMs": 1967.719124999996,
+    "pressMs": 332.01800000000367,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 1074,
+      "captures": 4,
+      "quietMs": 1000,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350481
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 1074,
+        "captures": 4,
+        "quietMs": 1000,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350481
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settle1000",
+    "repeat": 2,
+    "pid": 82056,
+    "closeMs": 2021.5584579999995,
+    "pressMs": 332.0224589999998,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 1090,
+      "captures": 4,
+      "quietMs": 1000,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350491
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e3 (194, 514)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 1090,
+        "captures": 4,
+        "quietMs": 1000,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350491
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "settle1000",
+    "repeat": 3,
+    "pid": 83074,
+    "closeMs": 2010.3285000000033,
+    "pressMs": 336.28641600000265,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 1076,
+      "captures": 4,
+      "quietMs": 1000,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350501
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e3 (194, 514)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "settle": {
+        "settled": true,
+        "waitedMs": 1076,
+        "captures": 4,
+        "quietMs": 1000,
+        "timeoutMs": 10000,
+        "diff": {
+          "summary": {
+            "additions": 0,
+            "removals": 2,
+            "unchanged": 7
+          },
+          "lines": [
+            {
+              "kind": "removed",
+              "text": "@e2 [text] \"Fade duration: 0.75 s\""
+            },
+            {
+              "kind": "removed",
+              "text": "@e3 [button] \"Close overlay\""
+            }
+          ]
+        },
+        "tail": [
+          {
+            "ref": "e2",
+            "role": "text",
+            "label": "Overlay transition proof"
+          },
+          {
+            "ref": "e3",
+            "role": "button",
+            "label": "Open fade overlay"
+          },
+          {
+            "ref": "e4",
+            "role": "button",
+            "label": "Open slow fade overlay"
+          },
+          {
+            "ref": "e5",
+            "role": "button",
+            "label": "Open native sheet"
+          },
+          {
+            "ref": "e6",
+            "role": "button",
+            "label": "Underlying action"
+          },
+          {
+            "ref": "e7",
+            "role": "text",
+            "label": "Underlying taps: 0\nOverlay touches: 0"
+          }
+        ],
+        "refsGeneration": 350501
+      },
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "mode": "nativeSheet",
+    "repeat": 1,
+    "pid": 84115,
+    "closeMs": 922.1024579999998,
+    "pressMs": 898.8622080000005,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "presented",
+      "afterClose": "presented",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "close": {
+      "x": 194,
+      "y": 193,
+      "message": "Tapped @e2 (194, 193)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e2",
+      "refLabel": "Close sheet",
+      "selectorChain": [
+        "role=\"button\" label=\"Close sheet\"",
+        "label=\"Close sheet\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "live": {
+      "selector": "id=\"Underlying action\"",
+      "node": {
+        "index": 8,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Underlying action",
+        "identifier": "Underlying action",
+        "rect": {
+          "x": 24,
+          "y": 360,
+          "width": 340,
+          "height": 48
+        },
+        "enabled": true,
+        "depth": 1,
+        "pid": 85128,
+        "hittable": true,
+        "ref": "e9",
+        "kind": "button"
+      }
+    },
+    "liveMs": 52.022375000000466,
+    "mode": "getAttrs",
+    "repeat": 1,
+    "pid": 85128,
+    "closeMs": 906.4902499999994,
+    "pressMs": 337.8979580000005,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "message": "Tapped @e6 (194, 384)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  },
+  {
+    "nativeBefore": {
+      "elapsedMs": 115.71187499999996,
+      "ok": true,
+      "found": true,
+      "nodes": [
+        {
+          "type": "Button",
+          "label": "Underlying action",
+          "hittable": true,
+          "rect": {
+            "x": 24,
+            "height": 48,
+            "y": 360,
+            "width": 340
+          }
+        }
+      ]
+    },
+    "nativeCovered": {
+      "elapsedMs": 55.20854099999997,
+      "ok": true,
+      "found": false,
+      "nodes": []
+    },
+    "nativeCompleted": {
+      "elapsedMs": 86.44766600000003,
+      "ok": true,
+      "found": true,
+      "nodes": [
+        {
+          "type": "Button",
+          "label": "Underlying action",
+          "hittable": true,
+          "rect": {
+            "x": 24,
+            "y": 360,
+            "height": 48,
+            "width": 340
+          }
+        }
+      ]
+    },
+    "live": {
+      "elapsedMs": 52.39766700000018,
+      "ok": true,
+      "found": false,
+      "nodes": []
+    },
+    "liveMs": 54.02604100000008,
+    "mode": "nativeQuery",
+    "repeat": 1,
+    "pid": 86199,
+    "closeMs": 893.7885419999998,
+    "pressMs": 328.42195900000024,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "target": {
+      "ref": "e6",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "hittable": true
+    },
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    }
+  }
+]

@@ -1,0 +1,557 @@
+[
+  {
+    "mode": "none",
+    "repeat": 1,
+    "pid": 73544,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 941.9632919999999,
+    "pressMs": 341.0976249999994,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": null,
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 320.4489583731629
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 752.6350833359174
+      }
+    ]
+  },
+  {
+    "mode": "none",
+    "repeat": 2,
+    "pid": 74300,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 946.0764580000014,
+    "pressMs": 344.4107920000006,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": null,
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 317.63504166156054
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 753.1866666977294
+      }
+    ]
+  },
+  {
+    "mode": "none",
+    "repeat": 3,
+    "pid": 75057,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 906.989375000001,
+    "pressMs": 334.333125000001,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": null,
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 300.31216668430716
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 752.7542500174604
+      }
+    ]
+  },
+  {
+    "mode": "settle150",
+    "repeat": 1,
+    "pid": 75812,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 1206.2984169999982,
+    "pressMs": 338.8005000000012,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 262,
+      "quietMs": 150,
+      "captures": 2
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 573.1128333718516
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 752.8781250002794
+      }
+    ]
+  },
+  {
+    "mode": "settle150",
+    "repeat": 2,
+    "pid": 76664,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 1170.6320419999975,
+    "pressMs": 340.68883300000016,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 253,
+      "quietMs": 150,
+      "captures": 2
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 550.1127083553001
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 752.5210833409801
+      }
+    ]
+  },
+  {
+    "mode": "settle150",
+    "repeat": 3,
+    "pid": 77554,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 1166.5900409999958,
+    "pressMs": 337.0068749999991,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 260,
+      "quietMs": 150,
+      "captures": 2
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 559.947416651994
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 752.6216250262223
+      }
+    ]
+  },
+  {
+    "mode": "settleDefault",
+    "repeat": 1,
+    "pid": 78418,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 1346.275834,
+    "pressMs": 338.87199999999575,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 408,
+      "quietMs": 300,
+      "captures": 2
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 716.860958316829
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 766.7369582923129
+      }
+    ]
+  },
+  {
+    "mode": "settleDefault",
+    "repeat": 2,
+    "pid": 79272,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 1349.7567920000001,
+    "pressMs": 328.08158399999957,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 395,
+      "quietMs": 300,
+      "captures": 2
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 667.0908333035186
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 766.6980416397564
+      }
+    ]
+  },
+  {
+    "mode": "settleDefault",
+    "repeat": 3,
+    "pid": 80138,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 1306.280749999998,
+    "pressMs": 339.88933299999917,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 403,
+      "quietMs": 300,
+      "captures": 2
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 703.1845833407715
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 766.8661249917932
+      }
+    ]
+  },
+  {
+    "mode": "settle1000",
+    "repeat": 1,
+    "pid": 81038,
+    "success": true,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "closeMs": 1967.719124999996,
+    "pressMs": 332.01800000000367,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 1074,
+      "quietMs": 1000,
+      "captures": 4
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 754.983208316844
+      },
+      {
+        "event": "underlyingReceivedTap",
+        "ms": 1433.2949166418985
+      }
+    ]
+  },
+  {
+    "mode": "settle1000",
+    "repeat": 2,
+    "pid": 82056,
+    "success": true,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "closeMs": 2021.5584579999995,
+    "pressMs": 332.0224589999998,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 1090,
+      "quietMs": 1000,
+      "captures": 4
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 752.4422917049378
+      },
+      {
+        "event": "underlyingReceivedTap",
+        "ms": 1466.6356249945238
+      }
+    ]
+  },
+  {
+    "mode": "settle1000",
+    "repeat": 3,
+    "pid": 83074,
+    "success": true,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "closeMs": 2010.3285000000033,
+    "pressMs": 336.28641600000265,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": {
+      "settled": true,
+      "waitedMs": 1076,
+      "quietMs": 1000,
+      "captures": 4
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 751.6934582963586
+      },
+      {
+        "event": "underlyingReceivedTap",
+        "ms": 1466.72254166333
+      }
+    ]
+  },
+  {
+    "mode": "nativeSheet",
+    "repeat": 1,
+    "pid": 84115,
+    "success": true,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "closeMs": 922.1024579999998,
+    "pressMs": 898.8622080000005,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "presented",
+      "afterClose": "presented",
+      "completed": "absent"
+    },
+    "settle": null,
+    "eventsRelativeToDismissalMs": []
+  },
+  {
+    "mode": "getAttrs",
+    "repeat": 1,
+    "pid": 85128,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 906.4902499999994,
+    "pressMs": 337.8979580000005,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": null,
+    "live": {
+      "selector": "id=\"Underlying action\"",
+      "node": {
+        "index": 8,
+        "parentIndex": 0,
+        "type": "Button",
+        "role": "UIButton",
+        "label": "Underlying action",
+        "identifier": "Underlying action",
+        "rect": {
+          "x": 24,
+          "y": 360,
+          "width": 340,
+          "height": 48
+        },
+        "enabled": true,
+        "depth": 1,
+        "pid": 85128,
+        "hittable": true,
+        "ref": "e9",
+        "kind": "button"
+      }
+    },
+    "liveMs": 52.022375000000466,
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 350.1774166361429
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 752.9867916600779
+      }
+    ]
+  },
+  {
+    "mode": "nativeQuery",
+    "repeat": 1,
+    "pid": 86199,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 893.7885419999998,
+    "pressMs": 328.42195900000024,
+    "presentedSurface": {
+      "initial": "absent",
+      "beforeClose": "absent",
+      "afterClose": "absent",
+      "completed": "absent"
+    },
+    "settle": null,
+    "live": {
+      "elapsedMs": 52.39766700000018,
+      "ok": true,
+      "found": false,
+      "nodes": []
+    },
+    "liveMs": 54.02604100000008,
+    "nativeBefore": {
+      "elapsedMs": 115.71187499999996,
+      "ok": true,
+      "found": true,
+      "nodes": [
+        {
+          "type": "Button",
+          "label": "Underlying action",
+          "hittable": true,
+          "rect": {
+            "x": 24,
+            "height": 48,
+            "y": 360,
+            "width": 340
+          }
+        }
+      ]
+    },
+    "nativeCovered": {
+      "elapsedMs": 55.20854099999997,
+      "ok": true,
+      "found": false,
+      "nodes": []
+    },
+    "nativeCompleted": {
+      "elapsedMs": 86.44766600000003,
+      "ok": true,
+      "found": true,
+      "nodes": [
+        {
+          "type": "Button",
+          "label": "Underlying action",
+          "hittable": true,
+          "rect": {
+            "x": 24,
+            "y": 360,
+            "height": 48,
+            "width": 340
+          }
+        }
+      ]
+    },
+    "eventsRelativeToDismissalMs": [
+      {
+        "event": "fadeDismissBegin",
+        "ms": 0.0
+      },
+      {
+        "event": "overlayReceivedTouch",
+        "ms": 342.29541663080454
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 754.0860416484065
+      }
+    ]
+  }
+]
