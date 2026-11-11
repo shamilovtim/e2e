@@ -1,5 +1,7 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The secure-binding and documentation review follow-up](review-7ab3d23/README.md) records the new secure regression, exact-head gate, and byte-identical native/runtime inputs for the d3 recordings.
+
 [The web assertion review follow-up](web-timeout-82076ff/README.md) proves the revised assertion catches a half-budget regression and records full local/CI validation.
 
 [The mobile cancellation review follow-up](mobile-central-e15c058/README.md) centralizes all eight press routes and proves the existing cancellation test detects a missing central signal.

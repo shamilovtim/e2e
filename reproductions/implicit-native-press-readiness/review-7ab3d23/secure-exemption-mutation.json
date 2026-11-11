@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "reviewedHead": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "patchInputSha256": "cff4b6d7d351126dedfbb25c4b06693c0f7afaa02abd80dde241c5f8b2be3dd7",
+  "command": "pnpm exec vitest run --project unit-core packages/command-runtime/src/commands/interaction/runtime/press-readiness-binding.test.ts --reporter=json",
+  "mutation": "Remove the canonical SecureTextField value exemption from the production matcher.",
+  "independentInstall": true,
+  "independentBuild": true,
+  "runs": [
+    {
+      "phase": "green-before",
+      "exitCode": 0,
+      "passed": 22,
+      "failed": 0,
+      "total": 22,
+      "failingTests": []
+    },
+    {
+      "phase": "red",
+      "exitCode": 1,
+      "passed": 21,
+      "failed": 1,
+      "total": 22,
+      "failingTests": [
+        "canonical secure input bindings ignore masked value changes"
+      ]
+    },
+    {
+      "phase": "green-restored",
+      "exitCode": 0,
+      "passed": 22,
+      "failed": 0,
+      "total": 22,
+      "failingTests": []
+    }
+  ],
+  "sourceRestored": true,
+  "exactCommitEvidence": false,
+  "scope": "Isolated mutation on reviewed source plus approved uncommitted test/documentation patch.",
+  "reviewedCheckoutPreserved": true,
+  "disposableCheckoutRemoved": true
+}
