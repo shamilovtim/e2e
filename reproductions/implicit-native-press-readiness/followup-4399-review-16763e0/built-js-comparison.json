@@ -1,0 +1,23 @@
+{
+  "oldHead": "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+  "newHead": "16763e010f3491b6845cce1ae19d010c56ac2476",
+  "oldFiles": 631,
+  "newFiles": 631,
+  "identical": 629,
+  "added": [],
+  "removed": [],
+  "changed": [
+    {
+      "path": "dist/src/ios-snapshot-runtime.js",
+      "oldSHA256": "824a5cecd7dec6a19c9314b224535d3a4deb2a0bf54d5f1d9f6a46d1e485e2fe",
+      "newSHA256": "acc6b2b3667aa9080bf0d388f73f3b57358bcb41a9fbcd861e2701f248930431",
+      "owner": "packages/capture-kit/src/snapshot/ios-snapshot-runtime.ts"
+    },
+    {
+      "path": "dist/src/src3.js",
+      "oldSHA256": "57ba42cf98b32006be3ec94bfc3ff0a0b6bf8b2db5582a6f7577dacd4323c10d",
+      "newSHA256": "6b6471666555efe26e95705fa604cc3bc5d91dcf6f5163d0bc3032274ab1dc31",
+      "owner": "packages/command-surface/src/capture/snapshot.ts"
+    }
+  ]
+}

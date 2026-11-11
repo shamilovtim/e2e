@@ -1,0 +1,26 @@
+{
+  "implementationHead": "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+  "patchSHA256": "d69699cc7447579c597fc3c6a29e58a7c9ab94f2e2c317bd702bae0328faf891",
+  "command": "pnpm exec vitest run packages/command-runtime/src/commands/interaction/runtime/target-visibility-stages-screen-origin.test.ts --testNamePattern '^provider ' --maxWorkers=2",
+  "ownFrozenInstall": true,
+  "ownBuild": true,
+  "baseline": {
+    "passed": 9,
+    "filteredSkipped": 10
+  },
+  "mutation": {
+    "edit": "Remove only attachSnapshotViewportEvidence(nodes, acquired.acquisition.viewport) from provider acquisition presenter.",
+    "failed": 6,
+    "passed": 3,
+    "filteredSkipped": 10,
+    "oracle": "Zero-backend-input assertion failed before any public viewport assertion. Selector/ref dispatched local point350,111; native-ref reached backend ref dispatch."
+  },
+  "restored": {
+    "passed": 9,
+    "filteredSkipped": 10,
+    "candidateFilesByteEqual": 7
+  },
+  "implementationSourceUnchanged": true,
+  "attribution": "Isolated control ran on the reviewed formatted candidate at1a0c8ecc plus recorded patchSHA256. Only reported-positive recipient assertions were strengthened afterward; final69focused tests passed. Provider production code and all unknown zero-input assertions are unchanged.",
+  "ownControlCheckoutRemoved": true
+}

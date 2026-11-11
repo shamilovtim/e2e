@@ -1,0 +1,53 @@
+{
+  "sourceHead": "16763e010f3491b6845cce1ae19d010c56ac2476",
+  "nativeSourceFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+  "unitTestsIncluded": true,
+  "buildDestination": "generic/platform=iOS Simulator",
+  "build": "passed, fresh unique unit-enabled build",
+  "method": "AgentDeviceRunnerUITests/RunnerTests/testSnapshotViewportAuthoritySurvivesOutcomeStamping",
+  "execution": "test-without-building on an explicitly owned phone simulator",
+  "passed": 1,
+  "failed": 0,
+  "skipped": 0,
+  "assertedRect": {
+    "x": 241,
+    "y": 224,
+    "width": 551,
+    "height": 813
+  },
+  "cases": [
+    "reported",
+    "derived",
+    "missing"
+  ],
+  "missingRectAbsent": true,
+  "nativeDeltaFromPriorHead": [
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SnapshotCapturePlanTests.swift"
+  ],
+  "productionNativeSourceUnchanged": true,
+  "unitSourceSHA256": "2f12ac9f9faba6b516a73398bf46266752e2781c384829d4d827b31426b0b882",
+  "files": [
+    {
+      "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+      "bytes": 188352,
+      "sha256": "5abbc4ccbfcfce107ebbb49daf4a390df825170afa775c84911dbfd1b91c0a51"
+    },
+    {
+      "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+      "bytes": 95264,
+      "sha256": "06d4e3c634f9f989880496f9464bfa75f0dd58424668feedc9c97dc2ecbb13d5"
+    },
+    {
+      "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+      "bytes": 12939584,
+      "sha256": "fe41842cf990cba3d4e15103d1831dcd78bc271a138058d5a08cc834943c4fb6"
+    },
+    {
+      "path": "Build/Products/AgentDeviceRunner_AgentDeviceRunnerUITests_iphonesimulator27.2-arm64.xctestrun",
+      "bytes": 6009,
+      "sha256": "db87384f3f997e647910720244ffcef6f9e3da41d59b4ad15ff5973899c46cde"
+    }
+  ],
+  "cleanup": "own runner termination attempted; owned phone shut down",
+  "attribution": "Fresh unit-enabled build and strengthened method executed on candidate later committed byte-for-byte at16763e0. Original natural deferred recordings and production build remain attributed to3d1ae71; no new natural deferred device run occurred."
+}

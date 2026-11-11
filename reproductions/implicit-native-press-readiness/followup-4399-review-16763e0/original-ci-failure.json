@@ -1,0 +1,21 @@
+{
+  "pr": 4439,
+  "head": "1a0c8ecc887a2c40a469f66d78e07e9d76afbf57",
+  "check": "Repo Guards & Compatibility",
+  "jobUrl": "https://github.com/callstack/agent-device/actions/runs/43071685927/job/130700983736",
+  "step": "Check for production-unused exports",
+  "gateCommand": "node --experimental-strip-types scripts/gate/run.ts production-exports",
+  "scriptCommand": "pnpm run check:production-exports",
+  "underlyingCommand": "fallow dead-code --config fallow-production-exports.json --production --unused-exports --fail-on-issues",
+  "exitCode": 1,
+  "failureType": "unused production facade export",
+  "reportedIssues": 1,
+  "path": "packages/contracts/src/facades/capture.ts",
+  "line": 69,
+  "symbol": "readSnapshotViewportEvidence",
+  "usage": "Production assertion and copy functions read evidence inside their owning module; the facade reader was consumed only by tests.",
+  "acceptedFix": "Remove reader facade export and make owning reader module-private. Replace test metadata inspection with awaited typed guard rejection and reported positive outcomes.",
+  "runtimeAndNativeGuardBodiesChanged": false,
+  "status": "Corrected at16763e0; same production-export gate passes at clean commit.",
+  "fixedHead": "16763e010f3491b6845cce1ae19d010c56ac2476"
+}

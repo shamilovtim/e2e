@@ -1,0 +1,206 @@
+{
+  "head": "16763e010f3491b6845cce1ae19d010c56ac2476",
+  "tree": "2900e4c2f8d0218b091da4ae7b1da4bbb0ae07ca",
+  "base": "b6fa2ecb583137866d267f56b2597c4f633412d6",
+  "command": "pnpm check:affected --run --head 16763e010f3491b6845cce1ae19d010c56ac2476",
+  "status": "passed",
+  "exactCommit": true,
+  "cleanInitialAndFinal": true,
+  "checkoutChanged": false,
+  "checkoutFingerprint": "46aa5e7cd6eaabfb1ce763c96e154e1a2b52994604b97144cd76afd5e1d8e25e",
+  "rawReceiptSHA256": "c550b61fced5beac5c958a380226f8ad51dfbe3075e526c6a96847ad080ba341",
+  "results": [
+    {
+      "id": "format",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 597,
+      "tests": []
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 1955,
+      "tests": []
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 434,
+      "tests": []
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 24840,
+      "tests": []
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4392,
+      "tests": []
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 397,
+      "tests": []
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 5504,
+      "tests": []
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 38837,
+      "tests": [
+        {
+          "passed": 373,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 143694,
+      "tests": [
+        {
+          "passed": 19096,
+          "failed": 0,
+          "skipped": 3,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "deduplicated",
+      "reason": "covered by related tests"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "adr-citations",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 823,
+      "tests": [
+        {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 404,
+      "tests": []
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 6544,
+      "tests": []
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ],
+  "standaloneProductionExports": {
+    "command": "pnpm gate production-exports",
+    "head": "16763e010f3491b6845cce1ae19d010c56ac2476",
+    "cleanBeforeAndAfter": true,
+    "exitCode": 0,
+    "issues": 0,
+    "logSHA256": "52279d6c5e054da23aad1397f16b8fd2c544177cd8379f606e29b3730e48f617"
+  },
+  "focused": {
+    "command": "pnpm exec vitest run target-visibility-stages-screen-origin.test.ts daemon-runtime-port-screen-origin.test.ts snapshot-presentation.test.ts find-keyboard-occlusion.test.ts --maxWorkers=2",
+    "files": 4,
+    "passed": 69,
+    "failed": 0
+  },
+  "scope": {
+    "files": 26,
+    "insertions": 823,
+    "deletions": 29
+  },
+  "ciAttribution": "Prior PR head1a0c8ecc had13successful checks,2skips,and1production-export failure. New-head GitHub checks must run after publication."
+}

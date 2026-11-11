@@ -1,0 +1,30 @@
+{
+  "sourceHead": "16763e010f3491b6845cce1ae19d010c56ac2476",
+  "items": [
+    {
+      "commentUrl": "https://github.com/callstack/agent-device/pull/4439#discussion_r4541430952",
+      "disposition": "accepted",
+      "reason": "Fixed in `16763e0` at the provider presentation owner: the published node array now retains its original acquisition viewport evidence, and only reported authority publishes a trusted viewport. Nine provider cases exercise selector/ref/native-ref input through presentation, snapshot construction, and real memory-session cloning. Derived and raw-missing captures refuse before backend input; reported captures reach the declared screen point or observed ref recipient. An isolated removal of only the evidence handoff makes all six unknown-origin input cases fail for unsafe backend dispatch."
+    },
+    {
+      "commentUrl": "https://github.com/callstack/agent-device/pull/4439#discussion_r4541430962",
+      "disposition": "accepted",
+      "reason": "Fixed in `16763e0`. The payload test uses origin (241,224) and independently asserts x, y, width, and height for both reported and derived evidence, plus absent rect for missing evidence. The strengthened method passed on a freshly built unit-enabled runner."
+    },
+    {
+      "commentUrl": "https://github.com/callstack/agent-device/pull/4439#discussion_r4541430970",
+      "disposition": "declined",
+      "reason": "This atomic selector route consumes capture-derived coordinates: [projectSelectorClick](https://github.com/callstack/agent-device/blob/1a0c8ecc887a2c40a469f66d78e07e9d76afbf57/packages/maestro/src/daemon-port/daemon-runtime-public-operation.ts#L313) always sends expectedTapPoint with coordinate fallback enabled. The Apple adapter forwards that point as x/y. Native execution [chooses expectedPoint as touchPoint](https://github.com/callstack/agent-device/blob/1a0c8ecc887a2c40a469f66d78e07e9d76afbf57/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests%2BCommandExecution.swift#L101) and [uses coordinate input when expectedPoint is present](https://github.com/callstack/agent-device/blob/1a0c8ecc887a2c40a469f66d78e07e9d76afbf57/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests%2BCommandExecution.swift#L133), including after a native selector match. Removing the guard would allow an unknown local point to reach that input path. Independent native-selector operations without a captured expected point remain unchanged, so this guard is retained."
+    },
+    {
+      "commentUrl": "https://github.com/callstack/agent-device/pull/4439#discussion_r4541430977",
+      "disposition": "accepted",
+      "reason": "Fixed in `16763e0`. The wire cases now compare against explicit expected evidence for derived, both missing reasons, malformed reported geometry, and null. The presenter then proves readable nodes and absent trusted viewport, followed by an awaited real guard rejection with window-origin-unknown/dispatched:no. The reported case checks guard success. The test-only facade reader export was removed."
+    },
+    {
+      "commentUrl": "https://github.com/callstack/agent-device/pull/4439#discussion_r4541430985",
+      "disposition": "accepted",
+      "reason": "Fixed in `16763e0`. The help now states the viewport omission and typed pre-input refusal while saying the snapshot may warn about the unavailable origin. It no longer promises a warning for every raw/legacy capture without explicit wire evidence."
+    }
+  ]
+}
