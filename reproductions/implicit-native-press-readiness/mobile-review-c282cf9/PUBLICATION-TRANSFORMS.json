@@ -1,0 +1,15 @@
+{
+  "originalEvidencePreservedLocally": true,
+  "changes": [
+    {
+      "path": "PUBLIC_AUDIT.json",
+      "reason": "Expanded visual audit wording after all11images were inspected."
+    },
+    {
+      "path": "main-timeout/trace.md",
+      "reason": "Removed two Markdown hard-break trailing-space sequences for repository whitespace checks; observed text and results unchanged."
+    }
+  ],
+  "sourcePatchAdded": true,
+  "mediaBytesUnchanged": true
+}

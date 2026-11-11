@@ -2,6 +2,8 @@
 
 The original 70-video bundle below is frozen at SDK `f757b60` and mobile `31ceef3`. [The SDK review-round append](review-965e77b/README.md) records the later coordinate fix, additional native checks and qualified limitations. Original results and hashes retain their original source attribution.
 
+[The mobile review append](mobile-review-c282cf9/README.md) records the matched current-SDK timeout failure on upstream and cancellation/recovery on mobile `c282cf9`, with five additional videos.
+
 All application source, screenshots, videos and app event logs here are from constructed public UIKit fixtures. The patches contain generic upstream framework code. No production application data, source, configuration, backend address, account, device inventory, daemon state, token, lease or diagnostic archive is included. System-app smoke checks remain local and are not part of this bundle.
 
 The SDK fix checks the existing native hittability predicate before ordinary ref-based presses. Tests keep their existing tap calls. The separate framework fix forwards cancellation for pending presses. It does not add a public wait API.

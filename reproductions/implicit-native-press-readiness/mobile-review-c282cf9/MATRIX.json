@@ -1,0 +1,63 @@
+{
+  "frameworkBase": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
+  "companionHead": "c282cf9099c907adf581872d0cf57e74b70719ac",
+  "sdkHead": "965e77bc0462516aa535a8f3060cb4b465fe86b5",
+  "nativeSourceFingerprint": "a55f494d33fd59f188ce6e7d8734aabf83d3491042f52bb448d8815031facca3",
+  "nativeBinarySha256": "379ea9c40596308d7ad04f03753cf39725dff82588c9d72140ae8ff853ee2b15",
+  "sdkHarnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+  "fixtureSourceSha256": "4ba6fb0e04317a1096ab5496dfeeec9d521ba5a59696e8052330ccff117bb9dd",
+  "fixtureBundleId": "dev.e2e.overlay1563",
+  "sdkPackagePinnedByCompanion": "0.21.36",
+  "nativeVerificationSdk": "separate unreleased source candidate 965e77b, same build and native assets for main and fixed",
+  "cases": {
+    "sdk-current-750ms": {
+      "exitCode": 0,
+      "underlying": 1,
+      "overlay": 0,
+      "scope": "Ordinary sequence smoke of current built965. Close RPC exceeded fade duration; not new blocked-poll timing evidence."
+    },
+    "main-timeout": {
+      "exitCode": 1,
+      "tapFailureMs": 502,
+      "underlyingAfterFade": 1,
+      "overlayAfterFade": 0
+    },
+    "fixed-timeout": {
+      "exitCode": 0,
+      "underlyingAfterFade": 0,
+      "overlayAfterFade": 0
+    },
+    "fixed-first-attempt": {
+      "exitCode": 0,
+      "underlying": 0,
+      "overlay": 0
+    },
+    "fixed-next-attempt": {
+      "exitCode": 0,
+      "underlying": 1,
+      "overlay": 0
+    }
+  },
+  "checks": {
+    "mobileUnitTests": 523,
+    "focusedUnitTests": 246,
+    "typecheck": "passed",
+    "build": "passed",
+    "lint": "passed",
+    "docsMdxPages": 75,
+    "docsAnchors": 1074,
+    "metadata": "passed"
+  },
+  "cleanup": {
+    "ownedSimulatorDeleted": true,
+    "ownedDaemonsCleanStopped": true,
+    "userDevicesUntouched": true
+  },
+  "mobileDistSupportSha256": "14fc3a4c4390ec6bf2819aa441effcf9cba08c2b319dc60640867fb064eb5356",
+  "baseMobileDistSupportSha256": "f9cba3a241584cd166bd2e2d3acf1435959d790a9971e13dc86abd7bd7551f31",
+  "sdkRuntimeFiles": {
+    "dist/src/index.js": "e037338cead2d3f2f4fbd1e5840bc6e12ddf55c2297d4a7f8046b9e5e9735fee",
+    "dist/src/args.js": "9d0fb39fd70c92af4fba40edc5d9066c1cf0d9f7d9bca1dc9fc17240998314f1",
+    "dist/src/press-readiness.js": "217d8186cc444d9cfc706ec2ad5398ae0fb5484ea962be67b4aaeb4fe18d7e0b"
+  }
+}

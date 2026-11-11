@@ -1,0 +1,19 @@
+{"version":1,"ts":"2026-11-11T05:04:40.761Z","kind":"request.started","requestId":"114a80fec77f2eba","command":"press","summary":"Started press"}
+{"version":1,"ts":"2026-11-11T05:04:41.378Z","kind":"action.recorded","requestId":"114a80fec77f2eba","command":"press","summary":"Tapped @e5","details":{"command":"press","positionals":["<arg>"],"ref":"e5","targetLabel":"@e5","selectorChainLength":3,"x":102,"y":224}}
+{"version":1,"ts":"2026-11-11T05:04:41.379Z","kind":"request.finished","requestId":"114a80fec77f2eba","command":"press","status":"ok","summary":"Finished press","details":{"durationMs":618}}
+{"version":1,"ts":"2026-11-11T05:04:42.458Z","kind":"request.started","requestId":"7993c18426072809","command":"press","summary":"Started press"}
+{"version":1,"ts":"2026-11-11T05:04:43.092Z","kind":"action.recorded","requestId":"7993c18426072809","command":"press","summary":"Tapped @e3","details":{"command":"press","positionals":["<arg>"],"ref":"e3","targetLabel":"@e3","selectorChainLength":3,"x":136,"y":514}}
+{"version":1,"ts":"2026-11-11T05:04:43.092Z","kind":"request.finished","requestId":"7993c18426072809","command":"press","status":"ok","summary":"Finished press","details":{"durationMs":634}}
+{"version":1,"ts":"2026-11-11T05:04:43.168Z","kind":"request.started","requestId":"097e375b70015ca5","command":"press","summary":"Started press"}
+{"version":1,"ts":"2026-11-11T05:04:44.025Z","kind":"request.finished","requestId":"097e375b70015ca5","command":"press","status":"error","summary":"Failed press: COMMAND_FAILED","details":{"durationMs":857,"code":"COMMAND_FAILED"}}
+{"version":1,"ts":"2026-11-11T05:04:49.929Z","kind":"request.started","requestId":"e5c0003deb2d1501","command":"press","summary":"Started press"}
+{"version":1,"ts":"2026-11-11T05:04:50.479Z","kind":"action.recorded","requestId":"e5c0003deb2d1501","command":"press","summary":"Tapped @e9","details":{"command":"press","positionals":["<arg>"],"ref":"e9","targetLabel":"@e9","selectorChainLength":3,"x":267,"y":384}}
+{"version":1,"ts":"2026-11-11T05:04:50.479Z","kind":"request.finished","requestId":"e5c0003deb2d1501","command":"press","status":"ok","summary":"Finished press","details":{"durationMs":550}}
+{"version":1,"ts":"2026-11-11T05:04:56.762Z","kind":"request.started","requestId":"8db4c93de0efd692","command":"press","summary":"Started press"}
+{"version":1,"ts":"2026-11-11T05:04:57.288Z","kind":"action.recorded","requestId":"8db4c93de0efd692","command":"press","summary":"Tapped @e5","details":{"command":"press","positionals":["<arg>"],"ref":"e5","targetLabel":"@e5","selectorChainLength":3,"x":102,"y":224}}
+{"version":1,"ts":"2026-11-11T05:04:57.289Z","kind":"request.finished","requestId":"8db4c93de0efd692","command":"press","status":"ok","summary":"Finished press","details":{"durationMs":527}}
+{"version":1,"ts":"2026-11-11T05:04:58.338Z","kind":"request.started","requestId":"734fe7a3b89e75ac","command":"press","summary":"Started press"}
+{"version":1,"ts":"2026-11-11T05:04:58.867Z","kind":"action.recorded","requestId":"734fe7a3b89e75ac","command":"press","summary":"Tapped @e3","details":{"command":"press","positionals":["<arg>"],"ref":"e3","targetLabel":"@e3","selectorChainLength":3,"x":136,"y":514}}
+{"version":1,"ts":"2026-11-11T05:04:58.867Z","kind":"request.finished","requestId":"734fe7a3b89e75ac","command":"press","status":"ok","summary":"Finished press","details":{"durationMs":529}}
+{"version":1,"ts":"2026-11-11T05:04:58.909Z","kind":"request.started","requestId":"774c8a17b360b2fb","command":"press","summary":"Started press"}
+{"version":1,"ts":"2026-11-11T05:04:59.474Z","kind":"request.finished","requestId":"774c8a17b360b2fb","command":"press","status":"error","summary":"Failed press: COMMAND_FAILED","details":{"durationMs":565,"code":"COMMAND_FAILED"}}

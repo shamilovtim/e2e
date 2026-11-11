@@ -1,0 +1,110 @@
+{
+  "decoder": "Apple AVFoundation, exact first/final sample timestamps, zero requested tolerance",
+  "videos": [
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 7.666666666666667,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 7.68,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 200,
+      "video": "fixed-first-attempt/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 4.733333333333333,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 4.745,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 110,
+      "video": "fixed-next-attempt/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 9.575,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 10.818333333333333,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 299,
+      "video": "fixed-timeout/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 15.868333333333334,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 16.203333333333333,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 332,
+      "video": "main-timeout/video.mp4"
+    },
+    {
+      "decoded": true,
+      "frames": [
+        {
+          "actualSeconds": 0,
+          "frame": "first",
+          "height": 2556,
+          "requestedSeconds": 0,
+          "width": 1178
+        },
+        {
+          "actualSeconds": 6.483333333333333,
+          "frame": "last",
+          "height": 2556,
+          "requestedSeconds": 7.581666666666667,
+          "width": 1178
+        }
+      ],
+      "sampleCount": 107,
+      "video": "sdk-current-750ms/video.mp4"
+    }
+  ]
+}
