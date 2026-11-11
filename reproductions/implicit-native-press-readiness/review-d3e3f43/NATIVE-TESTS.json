@@ -1,0 +1,105 @@
+{
+  "source": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "sourceTree": "6d83ac4fc56dbf233dc0a94221d87e2f9bba3804",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "productionBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "unitBinarySha256": "4b22f62da576c813f64d685f77abda0db4f71d5e8abc4003ed73ac64552a5f7a",
+  "selection": "Ten selected native methods, 10 passed, 0 failed, 0 skipped. This is not a full native-suite result. Includes retained-query/value-view/prefix coverage through the selected parity test.",
+  "result": {
+    "source": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+    "passed": [
+      {
+        "name": "testAuthorizedPressTargetMatchesGoldenParityTable",
+        "seconds": 0.028
+      },
+      {
+        "name": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+        "seconds": 0.115
+      },
+      {
+        "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether",
+        "seconds": 0.11
+      },
+      {
+        "name": "testEveryRunnerRequestFieldHasAProductionRequest",
+        "seconds": 0.11
+      },
+      {
+        "name": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+        "seconds": 0.097
+      },
+      {
+        "name": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+        "seconds": 0.107
+      },
+      {
+        "name": "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+        "seconds": 0.11
+      },
+      {
+        "name": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+        "seconds": 7.296
+      },
+      {
+        "name": "testReadinessDistinguishesRawInputContentsFromItsPlaceholder",
+        "seconds": 10.291
+      },
+      {
+        "name": "testSnapshotPresentationPreservesCurrentWireShape",
+        "seconds": 0.127
+      }
+    ],
+    "failed": 0,
+    "skipped": 0
+  },
+  "historicalBuildReceiptQualification": "native-builds.json and exact-head-validation.json retain their original compiled-only/pending-live wording; this file and individual case proofs supply the subsequent execution receipts.",
+  "liveGenericProofSummary": {
+    "matched500Controls": "Anonymous/button/shared each delivered four intended and zero sibling inputs; measured added warm-ref median cost approximately 0.52-0.60 seconds, no latency-target claim. See COMPARISONS.json.",
+    "missing": "Actual CLI refusal target_not_ready/missing/dispatched=no in 586.12 ms; zero input and pressReadiness only.",
+    "phoneGeometry": "Portrait/landscape clipped geometry, distinct blocked/ready duplicates, exact same-frame ambiguity and unchanged d006 750ms fade passed. Blocked duplicate caller cancellation is qualified, not a product timeout.",
+    "inputValues": "Three actual SDK empty-field focus routes passed: guest selector/accessibility, native private AX ref/unmarked raw and guest raw-format ref/accessibility. Corrected qualified fixture setup completed nine native value checks, including both reported-value stale directions. Captured actual bindings unchanged; no raw-or-live or placeholder-equivalence identity.",
+    "preExistingFillDefect": "Original value attempt remains red: ordinary fill appended Different text to actual Geometry input, while reporting before empty, after Geometry inputDifferent text, verification unconfirmed. Text-entry source is byte-equal baseline 5a to d3. One explicit fixture clear qualified the subsequent readiness proof; no fill-fix claim.",
+    "placedIpad": {
+      "case": "viewd3-ipad-placed-1",
+      "nativeWindow": {
+        "x": 235,
+        "y": 216,
+        "width": 563,
+        "height": 830
+      },
+      "publicSourceLiveTarget": {
+        "x": 475,
+        "y": 306,
+        "width": 220,
+        "height": 42
+      },
+      "strictReadiness": "ready",
+      "intendedActions": 1,
+      "aliasActions": 0,
+      "qualification": "Placed-window coordinate proof only; no constructed extra-alias-candidate claim."
+    },
+    "actualRunnerTreeRef": {
+      "case": "viewd3-ipad-tree-ref-1",
+      "actualSdkCaptureQuality": {
+        "state": "healthy",
+        "backend": "tree"
+      },
+      "actualBinding": "Unmarked native raw-empty authorization descriptor sent unchanged",
+      "emptyInputFocusEvents": 1,
+      "focused": true,
+      "keyboardKeys": 9
+    },
+    "exactOriginAlias": "NOT RUN at d3. Fullscreen alias setup failed, resize1 qualified actual origin (235,216), resize2 stopped before pan on changed viewport; every recording is retained. Historical 2a9 constructed-alias evidence is not a d3 pass.",
+    "recordings": {
+      "actualCount": 17,
+      "scope": "Includes all failure/setup attempts",
+      "mediaStatus": "Pending scheduled full-stream decode, endpoint export/review and root independent audit. No actual media is supplied by this text summary."
+    },
+    "cleanup": {
+      "ownedPhone": "shutdown",
+      "ownedIpad": "shutdown",
+      "ownedDaemons": "stopped",
+      "sessions": "closed"
+    }
+  }
+}

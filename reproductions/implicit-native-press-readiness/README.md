@@ -1,5 +1,7 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The d3e3f43 source and native review follow-up](review-d3e3f43/README.md) records the exact gate, fresh native tests and actual live results, including measured latency and setup limitations. Its full recording append is pending audit.
+
 [The intermediate whole-review investigation](intermediate-2a9-review/README.md) preserves 18 recordings, its exact source/gate, the actual guest-input failure, passed native AX/tree controls, and the remaining 500-control latency regression. It is not final-fix evidence.
 
 [The rejected AX-bound experiment](rejected-633-ax-bound/README.md) preserves seven recordings and its unchanged safety checks; measured latency did not improve.

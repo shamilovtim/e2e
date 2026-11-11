@@ -1,0 +1,38 @@
+{
+  "head": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "sourceTree": "6d83ac4fc56dbf233dc0a94221d87e2f9bba3804",
+  "selectedNativeTests": {
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "fullNativeSuite": false
+  },
+  "liveChecks": {
+    "guestSelectorEmptyInput": "passed; actual accessibility valueSource observed",
+    "privateAxSdkRefEmptyInput": "passed; raw valueSource absent",
+    "guestRawFormatSdkRefEmptyInput": "passed; accessibility marker, not inferred tree",
+    "actualNativeTreeSdkRefEmptyInput": "passed; observed healthy/tree backend, one focus event, focused true, keyboard keys",
+    "nativeValueChecks": "9 passed; raw stale-content both directions and stale reported-value both directions; unchanged AX string is not proof of unchanged raw contents",
+    "fiveHundredControls": "all three modes, three warm refs and one CLI, four intended inputs and zero sibling inputs each",
+    "liveMissingCli": {
+      "ms": 586.1184159999993,
+      "reason": "target_not_ready",
+      "readiness": "missing",
+      "dispatched": "no",
+      "targetInputs": 0,
+      "siblingInputs": 0,
+      "nativeTap": false
+    },
+    "clippedPortraitAndLandscape": "passed; raw/live full frames equal, clipped visible height70 versus full height400, one intended input",
+    "duplicates": "passed; exact ambiguity refuses input, distinct blocked/ready controls retained; blocked observation caller-canceled with dispatched unknown",
+    "unchanged750msFade": "passed; underlying1/overlay0, harnessd0062ebf unchanged",
+    "placedWindow": "passed; observed window235,216,563,830; target475,306,220,42 equals native source/live; strictready, one intended action"
+  },
+  "limits": [
+    "Measured added warm median cost520.96-597.00ms versus actual5a; no latency-target claim.",
+    "Exact-origin241,224 constructed alias case was not run at d3; fullscreen/resize setup attempts retained. Earlier2a9 alias proof stays attributed to2a9.",
+    "Pre-existing fill replacement bug when actual text equals placeholder is separate; sourceTextEntry.swift unchanged5a to d3. Corrected probe uses explicit fixture clear before subsequent setup.",
+    "Full videos and all failed/setup recordings are being decoded and audited for a separate native append; no media-completeness claim at this publication.",
+    "CI-only and parked platform/coverage lanes retain their exact gate receipt statuses."
+  ]
+}
