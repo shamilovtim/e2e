@@ -1,0 +1,36 @@
+{
+  "mode": "overlapping-ambiguous",
+  "pid": 13814,
+  "capturedTargetCount": 2,
+  "target": {
+    "index": 9,
+    "parentIndex": 0,
+    "type": "Button",
+    "role": "UIButton",
+    "label": "Overlapping action",
+    "identifier": "overlap",
+    "rect": {
+      "x": 24,
+      "y": 650,
+      "width": 340,
+      "height": 48
+    },
+    "enabled": true,
+    "depth": 1,
+    "pid": 13814,
+    "hittable": true,
+    "ref": "e10",
+    "kind": "button"
+  },
+  "error": {
+    "message": "Resolved target was not ready for input; nothing was dispatched",
+    "code": "COMMAND_FAILED",
+    "details": {
+      "reason": "target_not_ready",
+      "readiness": "ambiguous",
+      "dispatched": "no",
+      "hint": "Inspect the current surface and retry when the intended control is available."
+    }
+  },
+  "success": true
+}

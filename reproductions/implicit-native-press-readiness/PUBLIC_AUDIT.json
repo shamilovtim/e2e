@@ -1,0 +1,22 @@
+{
+  "status": "PASS for staged constructed-fixture whitelist; final isolated-source-base and gate receipts pending.",
+  "scope": "Text/source/configuration and artifact provenance audit. Only constructed UIKit fixture media is staged.",
+  "excluded": [
+    "Production-app code, names, bundle identifiers, addresses, configuration, screenshots and README files",
+    "System-app smoke media and snapshots",
+    "Daemon state, tokens, leases and environment files",
+    "Whole xcresults, exported diagnostics and global simulator/device inventory",
+    "Private source paths and local dependency trees"
+  ],
+  "textFindings": [],
+  "unexpectedStateFiles": [],
+  "mediaProvenance": "All staged video paths are copied from explicitly named constructed-fixture evidence directories; no general screenshot/media directory was scanned or copied.",
+  "mediaDecode": "Existing old receipts are local; full staged decode receipt will be added after broad gate CPU work is idle.",
+  "counts": {
+    "filesBeforeAuditAndManifest": 268,
+    "videos": 67,
+    "bytesBeforeAuditAndManifest": 51500184
+  },
+  "environmentNote": "Portable harnesses name explicit build/device input variables. No environment values, dumps or files are included.",
+  "unexpectedEnvironmentFiles": []
+}

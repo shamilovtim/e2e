@@ -1,0 +1,59 @@
+{
+  "mode": "switch",
+  "target": {
+    "enabled": true,
+    "label": "Toggle readiness",
+    "identifier": "readiness-toggle",
+    "rect": {
+      "x": 24,
+      "width": 63,
+      "y": 360,
+      "height": 28
+    },
+    "hittable": true,
+    "value": "0",
+    "index": 5,
+    "depth": 1,
+    "parentIndex": 0,
+    "type": "Switch",
+    "checked": false,
+    "ref": "e6",
+    "kind": "switch"
+  },
+  "press": {
+    "x": 56,
+    "y": 374,
+    "message": "Tapped @e6 (56, 374)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e6",
+    "refLabel": "Toggle readiness",
+    "selectorChain": [
+      "id=\"readiness-toggle\"",
+      "role=\"switch\" label=\"Toggle readiness\"",
+      "label=\"Toggle readiness\"",
+      "value=\"0\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 410.5708340000001,
+  "result": "Underlying taps: 0\nOverlay touches: 0",
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.006999995093792677
+    },
+    {
+      "event": "switchChanged",
+      "isOn": true,
+      "ms": 2574.5545416721143
+    }
+  ],
+  "success": true
+}

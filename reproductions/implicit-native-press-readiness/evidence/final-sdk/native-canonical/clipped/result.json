@@ -1,0 +1,56 @@
+{
+  "mode": "clipped",
+  "target": {
+    "rect": {
+      "height": 48,
+      "x": 0,
+      "y": 360,
+      "width": 240
+    },
+    "index": 5,
+    "enabled": true,
+    "parentIndex": 0,
+    "identifier": "Clipped action",
+    "type": "Button",
+    "label": "Clipped action",
+    "depth": 1,
+    "hittable": true,
+    "ref": "e6",
+    "kind": "button"
+  },
+  "press": {
+    "x": 120,
+    "y": 384,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e6 (120, 384)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e6",
+    "refLabel": "Clipped action",
+    "selectorChain": [
+      "id=\"Clipped action\"",
+      "role=\"button\" label=\"Clipped action\"",
+      "label=\"Clipped action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 471.1196660000005,
+  "result": "Underlying taps: 1\nOverlay touches: 0",
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.007291615474969149
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 2975.4208749509417
+    }
+  ],
+  "success": true
+}

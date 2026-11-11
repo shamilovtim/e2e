@@ -1,0 +1,101 @@
+{
+  "mode": "moving-child",
+  "pid": 45248,
+  "close": {
+    "x": 194,
+    "y": 514,
+    "message": "Tapped @e3 (194, 514)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e3",
+    "refLabel": "Close overlay",
+    "selectorChain": [
+      "id=\"Close overlay\"",
+      "role=\"button\" label=\"Close overlay\"",
+      "label=\"Close overlay\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "target": {
+    "index": 7,
+    "parentIndex": 6,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "rect": {
+      "x": 24,
+      "y": 430,
+      "width": 340,
+      "height": 120
+    },
+    "enabled": true,
+    "depth": 2,
+    "pid": 45248,
+    "hittable": true,
+    "label": "Parent row",
+    "ref": "e8",
+    "kind": "cell"
+  },
+  "press": {
+    "x": 194,
+    "y": 522,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e8 (194, 522)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e8",
+    "refLabel": "Parent row",
+    "selectorChain": [
+      "role=\"cell\" label=\"Parent row\"",
+      "label=\"Parent row\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 919.666541999999,
+  "result": "Underlying taps: 1\nOverlay touches: 0",
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.008374976459890604
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeOverlayOpened",
+      "ms": 1841.0086249932647
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeDismissBegin",
+      "ms": 2921.6517499880865
+    },
+    {
+      "event": "childMoved",
+      "ms": 3236.873874964658
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 3674.5246250065975
+    },
+    {
+      "event": "parentReceivedTap",
+      "ms": 3888.9012499712408
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 3889.7193750017323
+    }
+  ],
+  "success": true
+}

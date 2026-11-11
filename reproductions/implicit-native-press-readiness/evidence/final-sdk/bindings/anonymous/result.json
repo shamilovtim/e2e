@@ -1,0 +1,67 @@
+{
+  "mode": "anonymous",
+  "pid": 72404,
+  "close": {
+    "x": 194,
+    "y": 514,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e3 (194, 514)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e3",
+    "refLabel": "Close overlay",
+    "selectorChain": [
+      "id=\"Close overlay\"",
+      "role=\"button\" label=\"Close overlay\"",
+      "label=\"Close overlay\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "closeMs": 1102.992624999999,
+  "capturedTargetCount": 1,
+  "target": {
+    "index": 7,
+    "parentIndex": 0,
+    "type": "Button",
+    "role": "UIButton",
+    "rect": {
+      "x": 24,
+      "y": 580,
+      "width": 340,
+      "height": 48
+    },
+    "enabled": true,
+    "depth": 1,
+    "pid": 72404,
+    "hittable": true,
+    "ref": "e8",
+    "kind": "button"
+  },
+  "press": {
+    "x": 194,
+    "y": 604,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e8 (194, 604)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e8",
+    "refLabel": "Overlapping action",
+    "selectorChain": [
+      "role=\"button\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 904.1659170000003,
+  "result": "Underlying taps: 1\nOverlay touches: 0",
+  "success": true
+}

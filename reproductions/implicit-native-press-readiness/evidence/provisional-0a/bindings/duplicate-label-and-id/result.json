@@ -1,0 +1,70 @@
+{
+  "mode": "duplicate-label-and-id",
+  "pid": 12479,
+  "close": {
+    "x": 194,
+    "y": 514,
+    "message": "Tapped @e3 (194, 514)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e3",
+    "refLabel": "Close overlay",
+    "selectorChain": [
+      "id=\"Close overlay\"",
+      "role=\"button\" label=\"Close overlay\"",
+      "label=\"Close overlay\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "closeMs": 1043.8317909999996,
+  "capturedTargetCount": 1,
+  "target": {
+    "index": 6,
+    "parentIndex": 0,
+    "type": "Button",
+    "role": "UIButton",
+    "label": "Duplicate action",
+    "identifier": "duplicate",
+    "rect": {
+      "x": 24,
+      "y": 430,
+      "width": 340,
+      "height": 48
+    },
+    "enabled": true,
+    "depth": 1,
+    "pid": 12479,
+    "hittable": true,
+    "ref": "e7",
+    "kind": "button"
+  },
+  "press": {
+    "x": 194,
+    "y": 454,
+    "message": "Tapped @e7 (194, 454)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e7",
+    "refLabel": "Duplicate action",
+    "selectorChain": [
+      "role=\"button\" label=\"Duplicate action\"",
+      "label=\"Duplicate action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 973.8345419999987,
+  "result": "Underlying taps: 1\nOverlay touches: 0",
+  "success": true
+}

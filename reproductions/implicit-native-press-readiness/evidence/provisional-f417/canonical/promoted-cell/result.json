@@ -1,0 +1,62 @@
+{
+  "mode": "promoted-cell",
+  "pid": 44829,
+  "target": {
+    "index": 7,
+    "parentIndex": 6,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "rect": {
+      "x": 24,
+      "y": 430,
+      "width": 340,
+      "height": 120
+    },
+    "enabled": true,
+    "depth": 2,
+    "pid": 44829,
+    "hittable": true,
+    "label": "Parent row",
+    "ref": "e8",
+    "kind": "cell"
+  },
+  "press": {
+    "x": 194,
+    "y": 490,
+    "message": "Tapped @e8 (194, 490)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e8",
+    "refLabel": "Parent row",
+    "selectorChain": [
+      "role=\"cell\" label=\"Parent row\"",
+      "label=\"Parent row\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 381.4107920000006,
+  "result": "Underlying taps: 1\nOverlay touches: 0",
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.00941671896725893
+    },
+    {
+      "event": "parentReceivedTap",
+      "ms": 1777.270041697193
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 1778.1093750381842
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,60 @@
+{
+  "mode": "slider",
+  "pid": 64223,
+  "target": {
+    "index": 6,
+    "parentIndex": 0,
+    "type": "Slider",
+    "role": "UISlider",
+    "label": "Slider readiness",
+    "value": "50%",
+    "identifier": "readiness-slider",
+    "rect": {
+      "x": 24,
+      "y": 430,
+      "width": 340,
+      "height": 48
+    },
+    "enabled": true,
+    "depth": 1,
+    "pid": 64223,
+    "hittable": true,
+    "ref": "e7",
+    "kind": "slider"
+  },
+  "press": {
+    "x": 194,
+    "y": 454,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e7 (194, 454)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e7",
+    "refLabel": "Slider readiness",
+    "selectorChain": [
+      "id=\"readiness-slider\"",
+      "role=\"slider\" label=\"Slider readiness\"",
+      "label=\"Slider readiness\"",
+      "value=\"50%\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 375.738417,
+  "result": "Underlying taps: 0\nOverlay touches: 0",
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.006458372808992863
+    },
+    {
+      "event": "sliderReceivedTouch",
+      "ms": 1245.4260417143814
+    }
+  ],
+  "success": true
+}

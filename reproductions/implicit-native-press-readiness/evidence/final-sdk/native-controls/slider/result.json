@@ -1,0 +1,57 @@
+{
+  "mode": "slider",
+  "target": {
+    "enabled": true,
+    "label": "Slider readiness",
+    "identifier": "readiness-slider",
+    "rect": {
+      "x": 24,
+      "width": 340,
+      "y": 430,
+      "height": 48
+    },
+    "hittable": true,
+    "value": "50%",
+    "index": 6,
+    "depth": 1,
+    "parentIndex": 0,
+    "type": "Slider",
+    "ref": "e7",
+    "kind": "slider"
+  },
+  "press": {
+    "x": 194,
+    "y": 454,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e7 (194, 454)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e7",
+    "refLabel": "Slider readiness",
+    "selectorChain": [
+      "id=\"readiness-slider\"",
+      "role=\"slider\" label=\"Slider readiness\"",
+      "label=\"Slider readiness\"",
+      "value=\"50%\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 428.05520799999886,
+  "result": "Underlying taps: 0\nOverlay touches: 0",
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.008000002708286047
+    },
+    {
+      "event": "sliderReceivedTouch",
+      "ms": 7353.707166679669
+    }
+  ],
+  "success": true
+}

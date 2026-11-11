@@ -1,0 +1,67 @@
+{
+  "mode": "none",
+  "repeat": 1,
+  "pid": 73544,
+  "closeMs": 941.9632919999999,
+  "pressMs": 341.0976249999994,
+  "result": "Underlying taps: 0\nOverlay touches: 1",
+  "success": false,
+  "presentedSurface": {
+    "initial": "absent",
+    "beforeClose": "absent",
+    "afterClose": "absent",
+    "completed": "absent"
+  },
+  "target": {
+    "ref": "e6",
+    "rect": {
+      "x": 24,
+      "y": 360,
+      "width": 340,
+      "height": 48
+    },
+    "hittable": true
+  },
+  "close": {
+    "x": 194,
+    "y": 514,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e3 (194, 514)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e3",
+    "refLabel": "Close overlay",
+    "selectorChain": [
+      "id=\"Close overlay\"",
+      "role=\"button\" label=\"Close overlay\"",
+      "label=\"Close overlay\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "press": {
+    "x": 194,
+    "y": 384,
+    "message": "Tapped @e6 (194, 384)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e6",
+    "refLabel": "Underlying action",
+    "selectorChain": [
+      "id=\"Underlying action\"",
+      "role=\"button\" label=\"Underlying action\"",
+      "label=\"Underlying action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  }
+}

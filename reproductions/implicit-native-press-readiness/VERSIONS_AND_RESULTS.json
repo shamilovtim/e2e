@@ -1,0 +1,85 @@
+{
+  "status": "Final functional proofs staged; isolated source-base proof and exact-head gate receipt will be added before publication.",
+  "sdkFinal": {
+    "commit": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad",
+    "sourceFingerprint": "46e30d36c1e88cb4e339d088da08a73cd36abcece7ed4acbc2bd8449e82475ca",
+    "packageVersion": "0.21.37-dev"
+  },
+  "sdkPublishedBaseline": {
+    "version": "0.21.36",
+    "note": "Published-package runtime evidence only. This does not claim a source-main runtime run."
+  },
+  "sdkSourceBase": {
+    "commit": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+    "status": "Pending isolated same-command runtime proof"
+  },
+  "frameworkBase": {
+    "commit": "d8b694ffa48b04c94d70a11cc280267f1ea9a100",
+    "version": "0.23.0",
+    "mobileVersion": "0.12.6",
+    "note": "Built checkout versions, not claims about the contents of published framework packages."
+  },
+  "frameworkFix": {
+    "commit": "31ceef35325ffbc14ef02cc1fd0893baf4e0b4c0",
+    "sdkUsed": "f2bc18d45c9ed697e5b06af29e403bb4825bc5ad"
+  },
+  "provisionalEvidence": {
+    "provisional-0a": "0a3d684c04489ac318bba67eb4d290b5807445db",
+    "provisional-f417": "f4172a10891be412f44badd132c9e8d998eccb50",
+    "note": "Superseded implementations. These results are not attributed to the final candidate."
+  },
+  "device": {
+    "model": "iPhone 15 Pro Simulator",
+    "osVersion": "27.0"
+  },
+  "fixtures": {
+    "overlay-original": "4ba6fb0e04317a1096ab5496dfeeec9d521ba5a59696e8052330ccff117bb9dd",
+    "bindings": "7b354b6e7f00d494fc45ecaa425f1ef5a058c4b66df8f639d60b7fa92baca953",
+    "canonical": "c5dc494793465a419da8308ca76e9fa66162d3f5d00c826bd05a5a4a3128fbb2",
+    "controls": "afeb8149e78abcc9f9431c5cae299cc457db237284efa7b1c232522d1c9da5b8"
+  },
+  "functionalResults": {
+    "sdkOriginal": {
+      "passed": 6,
+      "cases": [
+        "750ms fade x3",
+        "3000ms fade",
+        "UIKit pageSheet",
+        "unblocked action"
+      ]
+    },
+    "sdkBindings": {
+      "passed": 3,
+      "cases": [
+        "duplicate label and identifier, second ref",
+        "anonymous button ref",
+        "identical overlapping matches refused unsent"
+      ]
+    },
+    "frameworkMainOrdinary": {
+      "passed": 3
+    },
+    "frameworkMainTimeout": {
+      "failed": 1,
+      "classification": "Bug: 500ms step fails while request continues3071ms and later delivers input."
+    },
+    "frameworkFixedTimeout": {
+      "passed": 3,
+      "cases": [
+        "timeout followed by full native fade completion, zero input",
+        "pending press reaches deadline",
+        "immediate next attempt receives only its own input"
+      ]
+    },
+    "nativeUnitSubset": {
+      "passed": 6,
+      "failed": 0,
+      "setupNote": "The first runner launch failed before any selected tests connected. The unchanged unit build passed all6 after restarting the owned simulator."
+    }
+  },
+  "producerCoverage": {
+    "bridge": "Actual diagnostics: simulator-ax-bridge. Clipped button, moving interactive child, UISwitch and UISlider passed.",
+    "native": "Actual diagnostics: apple-runner via existing public customActions:true capture. Clipped button, UISwitch, UISlider and Cell stored refs passed. This capture is slower than750ms; its moving-child case is ready-control coverage, not proof of a blocked point changing.",
+    "tree": "Native XCTest regression covers pre-presentation label/type provenance. Unsupported JS preferredBackend probe was not counted as producer coverage."
+  }
+}

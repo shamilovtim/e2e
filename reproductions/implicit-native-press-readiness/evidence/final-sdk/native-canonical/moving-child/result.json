@@ -1,0 +1,97 @@
+{
+  "mode": "moving-child",
+  "close": {
+    "x": 194,
+    "y": 514,
+    "message": "Tapped @e3 (194, 514)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e3",
+    "refLabel": "Close overlay",
+    "selectorChain": [
+      "id=\"Close overlay\"",
+      "role=\"button\" label=\"Close overlay\"",
+      "label=\"Close overlay\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "target": {
+    "enabled": true,
+    "index": 7,
+    "rect": {
+      "height": 120,
+      "x": 24,
+      "y": 430,
+      "width": 340
+    },
+    "parentIndex": 6,
+    "type": "Cell",
+    "depth": 2,
+    "hittable": true,
+    "label": "Parent row",
+    "ref": "e8",
+    "kind": "cell"
+  },
+  "press": {
+    "x": 194,
+    "y": 522,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e8 (194, 522)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e8",
+    "refLabel": "Parent row",
+    "selectorChain": [
+      "role=\"cell\" label=\"Parent row\"",
+      "label=\"Parent row\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 428.1530419999999,
+  "result": "Underlying taps: 1\nOverlay touches: 0",
+  "events": [
+    {
+      "event": "appReady",
+      "ms": 0.008999952115118504
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeOverlayOpened",
+      "ms": 1765.0651666335762
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeDismissBegin",
+      "ms": 3728.26962498948
+    },
+    {
+      "event": "childMoved",
+      "ms": 4043.884791666642
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 4480.480624944903
+    },
+    {
+      "event": "parentReceivedTap",
+      "ms": 5378.713916637935
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 5379.4301666202955
+    }
+  ],
+  "success": true
+}

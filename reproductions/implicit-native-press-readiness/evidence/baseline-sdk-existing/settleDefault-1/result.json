@@ -1,0 +1,181 @@
+{
+  "mode": "settleDefault",
+  "repeat": 1,
+  "pid": 78418,
+  "closeMs": 1346.275834,
+  "pressMs": 338.87199999999575,
+  "result": "Underlying taps: 0\nOverlay touches: 1",
+  "success": false,
+  "presentedSurface": {
+    "initial": "absent",
+    "beforeClose": "absent",
+    "afterClose": "absent",
+    "completed": "absent"
+  },
+  "target": {
+    "ref": "e6",
+    "rect": {
+      "x": 24,
+      "y": 360,
+      "width": 340,
+      "height": 48
+    },
+    "hittable": true
+  },
+  "settle": {
+    "settled": true,
+    "waitedMs": 408,
+    "captures": 2,
+    "quietMs": 300,
+    "timeoutMs": 10000,
+    "diff": {
+      "summary": {
+        "additions": 0,
+        "removals": 2,
+        "unchanged": 7
+      },
+      "lines": [
+        {
+          "kind": "removed",
+          "text": "@e2 [text] \"Fade duration: 0.75 s\""
+        },
+        {
+          "kind": "removed",
+          "text": "@e3 [button] \"Close overlay\""
+        }
+      ]
+    },
+    "tail": [
+      {
+        "ref": "e2",
+        "role": "text",
+        "label": "Overlay transition proof"
+      },
+      {
+        "ref": "e3",
+        "role": "button",
+        "label": "Open fade overlay"
+      },
+      {
+        "ref": "e4",
+        "role": "button",
+        "label": "Open slow fade overlay"
+      },
+      {
+        "ref": "e5",
+        "role": "button",
+        "label": "Open native sheet"
+      },
+      {
+        "ref": "e6",
+        "role": "button",
+        "label": "Underlying action"
+      },
+      {
+        "ref": "e7",
+        "role": "text",
+        "label": "Underlying taps: 0\nOverlay touches: 0"
+      }
+    ],
+    "refsGeneration": 350455
+  },
+  "close": {
+    "x": 194,
+    "y": 514,
+    "message": "Tapped @e3 (194, 514)",
+    "runnerMainThreadBusy": false,
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e3",
+    "refLabel": "Close overlay",
+    "selectorChain": [
+      "id=\"Close overlay\"",
+      "role=\"button\" label=\"Close overlay\"",
+      "label=\"Close overlay\""
+    ],
+    "settle": {
+      "settled": true,
+      "waitedMs": 408,
+      "captures": 2,
+      "quietMs": 300,
+      "timeoutMs": 10000,
+      "diff": {
+        "summary": {
+          "additions": 0,
+          "removals": 2,
+          "unchanged": 7
+        },
+        "lines": [
+          {
+            "kind": "removed",
+            "text": "@e2 [text] \"Fade duration: 0.75 s\""
+          },
+          {
+            "kind": "removed",
+            "text": "@e3 [button] \"Close overlay\""
+          }
+        ]
+      },
+      "tail": [
+        {
+          "ref": "e2",
+          "role": "text",
+          "label": "Overlay transition proof"
+        },
+        {
+          "ref": "e3",
+          "role": "button",
+          "label": "Open fade overlay"
+        },
+        {
+          "ref": "e4",
+          "role": "button",
+          "label": "Open slow fade overlay"
+        },
+        {
+          "ref": "e5",
+          "role": "button",
+          "label": "Open native sheet"
+        },
+        {
+          "ref": "e6",
+          "role": "button",
+          "label": "Underlying action"
+        },
+        {
+          "ref": "e7",
+          "role": "text",
+          "label": "Underlying taps: 0\nOverlay touches: 0"
+        }
+      ],
+      "refsGeneration": 350455
+    },
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "press": {
+    "x": 194,
+    "y": 384,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e6 (194, 384)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e6",
+    "refLabel": "Underlying action",
+    "selectorChain": [
+      "id=\"Underlying action\"",
+      "role=\"button\" label=\"Underlying action\"",
+      "label=\"Underlying action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  }
+}

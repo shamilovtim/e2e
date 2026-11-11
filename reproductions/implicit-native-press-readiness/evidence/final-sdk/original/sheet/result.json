@@ -1,0 +1,69 @@
+{
+  "mode": "sheet",
+  "pid": 70641,
+  "close": {
+    "x": 194,
+    "y": 193,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e2 (194, 193)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e2",
+    "refLabel": "Close sheet",
+    "selectorChain": [
+      "role=\"button\" label=\"Close sheet\"",
+      "label=\"Close sheet\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "closeMs": 1315.7186250000013,
+  "target": {
+    "index": 5,
+    "parentIndex": 0,
+    "type": "Button",
+    "role": "UIButton",
+    "label": "Underlying action",
+    "identifier": "Underlying action",
+    "rect": {
+      "x": 24,
+      "y": 360,
+      "width": 340,
+      "height": 48
+    },
+    "enabled": true,
+    "depth": 1,
+    "pid": 70641,
+    "hittable": true,
+    "ref": "e6",
+    "kind": "button"
+  },
+  "press": {
+    "x": 194,
+    "y": 384,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e6 (194, 384)",
+    "referenceWidth": 393,
+    "referenceHeight": 852,
+    "targetKind": "ref",
+    "ref": "e6",
+    "refLabel": "Underlying action",
+    "selectorChain": [
+      "id=\"Underlying action\"",
+      "role=\"button\" label=\"Underlying action\"",
+      "label=\"Underlying action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "pressMs": 971.2658749999973,
+  "result": "Underlying taps: 1\nOverlay touches: 0",
+  "success": true
+}
