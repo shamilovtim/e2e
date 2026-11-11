@@ -1,6 +1,10 @@
 # Implicit native press readiness: constructed UIKit evidence
 
-[The d3e3f43 source and native review follow-up](review-d3e3f43/README.md) records the exact gate, fresh native tests and actual live results, including measured latency and setup limitations. Its full recording append is pending audit.
+[The web assertion review follow-up](web-timeout-82076ff/README.md) proves the revised assertion catches a half-budget regression and records full local/CI validation.
+
+[The mobile cancellation review follow-up](mobile-central-e15c058/README.md) centralizes all eight press routes and proves the existing cancellation test detects a missing central signal.
+
+[The d3e3f43 source and native review follow-up](review-d3e3f43/README.md) records the exact gate, fresh native tests and actual live results, including measured latency and setup limitations. All 17 new recordings passed full-stream decoding and privacy review; its native append includes every failed and setup attempt.
 
 [The intermediate whole-review investigation](intermediate-2a9-review/README.md) preserves 18 recordings, its exact source/gate, the actual guest-input failure, passed native AX/tree controls, and the remaining 500-control latency regression. It is not final-fix evidence.
 

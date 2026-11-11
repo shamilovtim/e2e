@@ -1,0 +1,89 @@
+{
+  "cases": [
+    {
+      "case": "viewd3-anonymous-1",
+      "classification": "setup-failure",
+      "explanation": "Stopped before measured input: inherited landscape geometry did not contain the expected portrait first-row frame. Zero input. Later portrait orientation was established through the actual SDK orientation command and qualified separately."
+    },
+    {
+      "case": "viewd3-anonymous-2",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture."
+    },
+    {
+      "case": "viewd3-buttons-2",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture."
+    },
+    {
+      "case": "viewd3-clipped-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture."
+    },
+    {
+      "case": "viewd3-duplicates-1",
+      "classification": "pass-with-qualified-caller-cancellation",
+      "explanation": "Strict blocked/ready siblings, typed selector ambiguity, intentionally 1500ms caller-canceled blocked-ref observation with dispatched unknown, and one ready sibling input. Not a product timeout claim."
+    },
+    {
+      "case": "viewd3-exact-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture."
+    },
+    {
+      "case": "viewd3-ipad-alias-1",
+      "classification": "setup-failure",
+      "explanation": "Native window geometry did not satisfy the harness prerequisite. Stopped without an alias/extra-candidate passing claim; recording retained."
+    },
+    {
+      "case": "viewd3-ipad-placed-1",
+      "classification": "pass",
+      "explanation": "Observed native window (235,216,563,830); public, source and live target frames all (475,306,220,42), strict ready, actual SDK ref delivered one intended and zero alias actions. This is a placed-window coordinate proof, not a constructed extra-alias-candidate proof."
+    },
+    {
+      "case": "viewd3-ipad-resize-1",
+      "classification": "qualified-setup-only",
+      "explanation": "Actual window resize setup recorded native window geometry. No alias or target-input claim is made by this setup."
+    },
+    {
+      "case": "viewd3-ipad-resize-2",
+      "classification": "setup-failure",
+      "explanation": "Window resize stopped before pan because the observed viewport changed; fullscreen grip coordinates were not reused. Failure recording retained; no alias or target-input claim."
+    },
+    {
+      "case": "viewd3-ipad-tree-ref-1",
+      "classification": "pass",
+      "explanation": "Actual SDK ref capture observed healthy/tree backend on the placed window. Unmarked native raw-empty authorization focused the empty input exactly once; focused=true and nine keyboard keys observed. The producer is established by this actual capture, not by raw format alone."
+    },
+    {
+      "case": "viewd3-landscape-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture."
+    },
+    {
+      "case": "viewd3-missing-2",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture."
+    },
+    {
+      "case": "viewd3-shared-2",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture."
+    },
+    {
+      "case": "viewd3-values-1",
+      "classification": "pre-existing-fill-regression-with-readiness-passes",
+      "explanation": "Red attempt retained. All three actual SDK focus routes and seven completed native value checks passed, then SDK fill appended Different text to actual Geometry input contents. It reported before empty, after Geometry inputDifferent text and verification unconfirmed. The readiness change does not fix ordinary literal-placeholder fill replacement; source is byte-equal to the 5a baseline."
+    },
+    {
+      "case": "viewd3-values-2",
+      "classification": "pass-after-qualified-fixture-setup",
+      "explanation": "All three actual SDK focus routes and nine native value checks passed after one explicit fixture clear before different-text fill. Original captured bindings were sent unchanged. This qualified setup does not claim the independent fill replacement defect is fixed."
+    },
+    {
+      "case": "viewd3-fade750-1",
+      "classification": "pass",
+      "explanation": "Unchanged d006 750ms generic fade harness: one underlying action and zero overlay touches; recording closed cleanly."
+    }
+  ]
+}

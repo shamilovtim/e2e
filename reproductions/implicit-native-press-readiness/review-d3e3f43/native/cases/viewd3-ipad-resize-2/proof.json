@@ -1,0 +1,17 @@
+{
+  "case": "viewd3-ipad-resize-2",
+  "classification": "setup-failure",
+  "explanation": "Window resize stopped before pan because the observed viewport changed; fullscreen grip coordinates were not reused. Failure recording retained; no alias or target-input claim.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": false,
+  "recording": null,
+  "sessionClosed": null,
+  "windows": [],
+  "recordingExit": 0,
+  "artifactQualification": "Setup result does not contain native artifact/fixture hashes; none are invented here.",
+  "error": {
+    "message": "Observed viewport changed; do not reuse fullscreen grip coordinates"
+  },
+  "samples": [],
+  "nativeEvents": []
+}

@@ -1,0 +1,14 @@
+{
+  "classification": "Qualified orientation setup, no measured input",
+  "orientation": {
+    "action": "orientation",
+    "orientation": "portrait",
+    "message": "Rotated to portrait"
+  },
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "success": true,
+  "qualification": "Actual SDK orientation command was separate qualified setup after the retained wrong-orientation failure. No measured target input in this setup."
+}

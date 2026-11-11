@@ -1,0 +1,14 @@
+{
+  "source": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "executedNativeScope": "Ten selected native tests plus the individually recorded generic live cases. Not a full native suite.",
+  "exactOriginAlias": "NOT RUN at d3. The attempted alias case stopped at fullscreen setup; later resize setups did not establish the required exact (241,224) origin. The final (235,216) placed-window case proves coordinate correctness only.",
+  "historicalAlias": "The prior 2a9 constructed alias proof belongs only to its original source/artifact; it is not transplanted onto d3.",
+  "cleanup": {
+    "ownedPhone": "shutdown",
+    "ownedIpad": "shutdown",
+    "ownedDaemons": "stopped",
+    "sessions": "closed"
+  },
+  "cleanupAttribution": "Root reports final owned-device/session cleanup complete; no curation device operation performed.",
+  "publication": "Root is sole publisher. This directory is a candidate subset."
+}

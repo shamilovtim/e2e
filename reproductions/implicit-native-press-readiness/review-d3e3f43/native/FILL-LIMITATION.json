@@ -1,0 +1,10 @@
+{
+  "file": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+TextEntry.swift",
+  "source5aEqualsD3": true,
+  "currentUpstreamEqualsD3": false,
+  "sha256": "b73c9fa5aaef9bf04da09e9614f5e8fa94d8dab369617fad3a4e361152649bde",
+  "classification": "Pre-existing fill replacement limitation for literal-placeholder contents; excluded from readiness change.",
+  "actualFailedCase": "viewd3-values-1",
+  "correctedSetupCase": "viewd3-values-2",
+  "qualification": "Baseline 5a and d3 ordinary fill source is byte-equal. Current upstream differs because of a masked-field clear route; inspection does not establish an upstream fix for this ordinary literal-placeholder field. No current-upstream byte-equality or same-fix claim."
+}

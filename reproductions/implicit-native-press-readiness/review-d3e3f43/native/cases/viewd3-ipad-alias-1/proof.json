@@ -1,0 +1,47 @@
+{
+  "case": "viewd3-ipad-alias-1",
+  "classification": "setup-failure",
+  "explanation": "Native window geometry did not satisfy the harness prerequisite. Stopped without an alias/extra-candidate passing claim; recording retained.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": false,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "nativeBuiltFrom": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "nativeBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "mode": "alias",
+  "coldOpenMs": 5422.653375,
+  "nativeWindowRects": [
+    {
+      "width": 1032,
+      "y": 0,
+      "height": 1376,
+      "x": 0
+    }
+  ],
+  "focusRoutes": [],
+  "setup": [],
+  "staleValueReads": [],
+  "error": {
+    "message": "Alias setup requires independently observed native window origin241,224; no extra-candidate claim made"
+  },
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.011916621588170528
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 35.154916637111455,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "case": "viewd3-shared-2",
+  "classification": "pass",
+  "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "nativeBuiltFrom": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "nativeBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+  "mode": "shared",
+  "coldOpenMs": 2291.9540420000003,
+  "nativeModeSetupMs": 3288.9561249999997,
+  "initialTarget": {
+    "index": 12,
+    "parentIndex": 11,
+    "type": "Other",
+    "role": "ReadinessVariants.OtherControl",
+    "subrole": "UIControl",
+    "label": "Shared row 000",
+    "identifier": "shared-row",
+    "rect": {
+      "x": 24,
+      "y": 220,
+      "width": 345,
+      "height": 40
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "ref": "e13",
+    "kind": "other"
+  },
+  "nativeObservation": {
+    "ms": 257.9177500000005,
+    "ok": true,
+    "nodeCount": 525,
+    "otherCount": 511,
+    "sameTypeCount": 511,
+    "firstRows": [
+      {
+        "type": "Other",
+        "identifier": "shared-row",
+        "label": "Shared row 000",
+        "rect": {
+          "y": 220,
+          "width": 345,
+          "height": 40,
+          "x": 24
+        },
+        "nativePressTarget": {
+          "identifier": "shared-row",
+          "label": "Shared row 000",
+          "rect": {
+            "x": 24,
+            "width": 345,
+            "height": 40,
+            "y": 220
+          },
+          "type": 1
+        }
+      }
+    ],
+    "snapshotQuality": {
+      "timing": {
+        "acquisitionMs": 206.99191093444824,
+        "presentationMs": 0.5539655685424805
+      },
+      "state": "healthy",
+      "backend": "tree"
+    },
+    "rawBindingAvailable": true
+  },
+  "targetTapEvents": 4,
+  "otherTapEvents": 0,
+  "nativeBinaryUnchanged": true,
+  "samples": [
+    {
+      "kind": "ref",
+      "target": {
+        "index": 12,
+        "parentIndex": 11,
+        "type": "Other",
+        "role": "ReadinessVariants.OtherControl",
+        "subrole": "UIControl",
+        "label": "Shared row 000",
+        "identifier": "shared-row",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "width": 345,
+          "height": 40
+        },
+        "enabled": true,
+        "depth": 2,
+        "hittable": true,
+        "ref": "e13",
+        "kind": "other"
+      },
+      "press": {
+        "x": 197,
+        "y": 240,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e13 (197, 240)",
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared row 000",
+        "selectorChain": [
+          "role=\"other\" label=\"Shared row 000\"",
+          "label=\"Shared row 000\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 1314.9492920000002,
+      "nativeEvents": [
+        {
+          "event": "modeChanged",
+          "ms": 0.014791672583669424,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "appReady",
+          "ms": 0.996791641227901,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "modeChanged",
+          "ms": 4285.89408332482,
+          "otherControlCount": 500,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 6067.30624998454,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 1,
+          "variant": "shared"
+        }
+      ],
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.717
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 2.399
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.095
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.167
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 570.787
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 443.397
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "target": {
+        "index": 12,
+        "parentIndex": 11,
+        "type": "Other",
+        "role": "ReadinessVariants.OtherControl",
+        "subrole": "UIControl",
+        "label": "Shared row 000",
+        "identifier": "shared-row",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "width": 345,
+          "height": 40
+        },
+        "enabled": true,
+        "depth": 2,
+        "hittable": true,
+        "ref": "e13",
+        "kind": "other"
+      },
+      "press": {
+        "x": 197,
+        "y": 240,
+        "message": "Tapped @e13 (197, 240)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared row 000",
+        "selectorChain": [
+          "role=\"other\" label=\"Shared row 000\"",
+          "label=\"Shared row 000\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 1049.5457499999993,
+      "nativeEvents": [
+        {
+          "event": "modeChanged",
+          "ms": 0.014791672583669424,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "appReady",
+          "ms": 0.996791641227901,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "modeChanged",
+          "ms": 4285.89408332482,
+          "otherControlCount": 500,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 6067.30624998454,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 1,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 7333.786291652359,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 2,
+          "variant": "shared"
+        }
+      ],
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 591.722
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 440.948
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "target": {
+        "index": 12,
+        "parentIndex": 11,
+        "type": "Other",
+        "role": "ReadinessVariants.OtherControl",
+        "subrole": "UIControl",
+        "label": "Shared row 000",
+        "identifier": "shared-row",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "width": 345,
+          "height": 40
+        },
+        "enabled": true,
+        "depth": 2,
+        "hittable": true,
+        "ref": "e13",
+        "kind": "other"
+      },
+      "press": {
+        "x": 197,
+        "y": 240,
+        "message": "Tapped @e13 (197, 240)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared row 000",
+        "selectorChain": [
+          "role=\"other\" label=\"Shared row 000\"",
+          "label=\"Shared row 000\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 1042.0843750000004,
+      "nativeEvents": [
+        {
+          "event": "modeChanged",
+          "ms": 0.014791672583669424,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "appReady",
+          "ms": 0.996791641227901,
+          "otherControlCount": 500,
+          "variant": "anonymous"
+        },
+        {
+          "event": "modeChanged",
+          "ms": 4285.89408332482,
+          "otherControlCount": 500,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 6067.30624998454,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 1,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 7333.786291652359,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 2,
+          "variant": "shared"
+        },
+        {
+          "event": "controlReceivedTap",
+          "ms": 8566.990791645367,
+          "otherTaps": 0,
+          "row": 0,
+          "targetTaps": 3,
+          "variant": "shared"
+        }
+      ],
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 576.1500000000001
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 448.621
+        }
+      ]
+    }
+  ],
+  "cli": {
+    "exitCode": 0,
+    "ms": 1108.744834000001,
+    "parsed": {
+      "success": true,
+      "data": {
+        "x": 197,
+        "y": 240,
+        "message": "Tapped @e13 (197, 240)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared row 000",
+        "selectorChain": [
+          "role=\"other\" label=\"Shared row 000\"",
+          "label=\"Shared row 000\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      }
+    },
+    "nativeEvents": [
+      {
+        "event": "modeChanged",
+        "ms": 0.014791672583669424,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "appReady",
+        "ms": 0.996791641227901,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "modeChanged",
+        "ms": 4285.89408332482,
+        "otherControlCount": 500,
+        "variant": "shared"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 6067.30624998454,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 1,
+        "variant": "shared"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 7333.786291652359,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 2,
+        "variant": "shared"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 8566.990791645367,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 3,
+        "variant": "shared"
+      },
+      {
+        "event": "controlReceivedTap",
+        "ms": 9867.009499983396,
+        "otherTaps": 0,
+        "row": 0,
+        "targetTaps": 4,
+        "variant": "shared"
+      }
+    ],
+    "nativeCommands": [
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness",
+        "nativeDurationMs": 574.518
+      },
+      {
+        "phase": "accepted",
+        "command": "tap"
+      },
+      {
+        "phase": "completed",
+        "command": "tap",
+        "nativeDurationMs": 443.214
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "modeChanged",
+      "ms": 0.014791672583669424,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "appReady",
+      "ms": 0.996791641227901,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "modeChanged",
+      "ms": 4285.89408332482,
+      "otherControlCount": 500,
+      "variant": "shared"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 6067.30624998454,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 1,
+      "variant": "shared"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 7333.786291652359,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 2,
+      "variant": "shared"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 8566.990791645367,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 3,
+      "variant": "shared"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 9867.009499983396,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 4,
+      "variant": "shared"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "case": "viewd3-clipped-1",
+  "classification": "pass",
+  "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "nativeBuiltFrom": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "nativeBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "fixtureBinarySha256": "fabcc12f1ecde84783f97cfdf90b1761a4f9a7690e8e854a0d0c6fc86506e10f",
+  "mode": "clipped",
+  "coldOpenMs": 2835.6192499999997,
+  "target": {
+    "index": 8,
+    "parentIndex": 7,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "identifier": "clipped-row",
+    "rect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "label": "Visible tail of row 0",
+    "ref": "e9",
+    "kind": "cell"
+  },
+  "frameComparison": {
+    "publicVisibleRect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "canonicalPoint": {
+      "x": 197,
+      "y": 215
+    },
+    "nativeSourceRect": {
+      "height": 400,
+      "width": 345,
+      "x": 24,
+      "y": -150
+    },
+    "nativeLiveElementRect": {
+      "x": 24,
+      "width": 345,
+      "height": 400,
+      "y": -150
+    },
+    "nativeRectsMatch": true,
+    "strictReadiness": "ready"
+  },
+  "actualInputPoint": {
+    "x": 197,
+    "y": 215
+  },
+  "nativeBinaryUnchanged": true,
+  "samples": [
+    {
+      "label": "frame-ref",
+      "target": {
+        "ref": "@e9"
+      },
+      "press": {
+        "x": 197,
+        "y": 215,
+        "message": "Tapped @e9 (197, 215)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e9",
+        "refLabel": "Visible tail of row 0",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 457.3653749999994,
+      "events": [
+        {
+          "event": "geometryChanged",
+          "mode": "clipped",
+          "ms": 2.019124978687614,
+          "orientation": 0,
+          "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+        },
+        {
+          "event": "modeChanged",
+          "mode": "clipped",
+          "ms": 11.34770835051313
+        },
+        {
+          "event": "appReady",
+          "ms": 11.57354167662561,
+          "otherControlCount": 500
+        },
+        {
+          "event": "clippedRowReceivedTap",
+          "ms": 6111.480874998961,
+          "row": 0
+        }
+      ],
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 91.88000000000001
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 336.924
+        }
+      ]
+    }
+  ],
+  "nativeGeometryObservations": {
+    "liveElementRead": {
+      "ms": 128.88316600000144,
+      "result": {
+        "data": {
+          "nodes": [
+            {
+              "hittable": true,
+              "index": 0,
+              "identifier": "clipped-row",
+              "enabled": true,
+              "rect": {
+                "x": 24,
+                "width": 345,
+                "height": 400,
+                "y": -150
+              },
+              "type": "Cell",
+              "depth": 0
+            }
+          ],
+          "found": true,
+          "runnerMainThreadBusy": false,
+          "text": "clipped-row"
+        },
+        "ok": true
+      }
+    },
+    "rawSnapshotQuality": {
+      "state": "healthy",
+      "timing": {
+        "acquisitionMs": 30.64894676208496,
+        "presentationMs": 0.050067901611328125
+      },
+      "backend": "tree"
+    },
+    "rawWindowRects": [
+      {
+        "y": 0,
+        "width": 393,
+        "x": 0,
+        "height": 852
+      }
+    ],
+    "nativeWindowTreeQuality": {
+      "state": "healthy",
+      "timing": {
+        "acquisitionMs": 30.64894676208496,
+        "presentationMs": 0.050067901611328125
+      },
+      "backend": "tree"
+    },
+    "sourceRootRects": [
+      {
+        "x": 0,
+        "width": 393,
+        "y": 0,
+        "height": 852
+      }
+    ],
+    "rawNodes": [
+      {
+        "nativePressTarget": {
+          "type": 75,
+          "rect": {
+            "height": 400,
+            "width": 345,
+            "x": 24,
+            "y": -150
+          },
+          "identifier": "clipped-row"
+        },
+        "type": "Cell",
+        "depth": 7,
+        "enabled": true,
+        "identifier": "clipped-row",
+        "label": "Visible tail of row 0",
+        "parentIndex": 17,
+        "hittable": true,
+        "index": 18,
+        "rect": {
+          "width": 345,
+          "x": 24,
+          "height": 400,
+          "y": -150
+        }
+      }
+    ],
+    "strict": [
+      {
+        "target": {
+          "type": 75,
+          "rect": {
+            "height": 400,
+            "width": 345,
+            "x": 24,
+            "y": -150
+          },
+          "identifier": "clipped-row",
+          "point": {
+            "x": 197,
+            "y": 215
+          }
+        },
+        "observation": {
+          "ms": 84.03212500000154,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+              "pressReadiness": "ready"
+            },
+            "ok": true
+          }
+        }
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 2.019124978687614,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 11.34770835051313
+    },
+    {
+      "event": "appReady",
+      "ms": 11.57354167662561,
+      "otherControlCount": 500
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 6111.480874998961,
+      "row": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "head": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "patchSha256": "9640e424ab950161a40ec965ce20549678a38f5087ffdcdbfaa495647890c916",
+  "patchBytes": 196156,
+  "baseApplyCheck": "passed",
+  "headReverseApplyCheck": "passed",
+  "categoryMatchCounts": {
+    "privateAppContext": 0,
+    "absoluteHomePaths": 0,
+    "credentialMarkers": 0
+  },
+  "privacyScope": "Preliminary text scan only. No literal private search patterns, raw logs, environment, state, or home paths are included; final publication privacy review is separate.",
+  "sourceScope": {
+    "files": 87,
+    "added": 2533,
+    "removed": 115,
+    "gross": 2648,
+    "note": "One coherent readiness fix with explicit producer value views, retained-query identity ownership and regressions; no thresholds, suppressions or coverage cuts."
+  }
+}

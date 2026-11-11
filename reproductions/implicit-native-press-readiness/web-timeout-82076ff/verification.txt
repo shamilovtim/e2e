@@ -1,0 +1,28 @@
+PR #1690 review verification
+Source head: 82076ff06ae6927ccc29ebbea321ee513ee40310
+Reviewed assertion patch SHA-256: 96b9bde766384a23c88caa739081c4c2f8bc15ff4f2113a9fdf65eae48997efc
+
+Independent control at 70d7f9b7:
+- Only mutation: evaluateHandle timeout becomes Math.max(1, Math.floor(remaining() / 2)).
+- Original assertion: 83 passed.
+- Revised assertion: 82 passed, 1 failed at the >1500 ms bound.
+  AssertionError: expected 1000 to be greater than 1500
+- Diagnostic prefix check passed before the failing numeric assertion.
+- Production source restored and rebuilt; revised target passed.
+- Control checkout restored clean.
+
+Final PR worktree:
+- pnpm check: passed.
+- pnpm --filter @e2e-dev/web test: 75 files passed; 784 passed, 1 existing skip.
+- git diff --check: passed.
+- Existing integration test only; no production or API changes.
+
+Remote verification:
+- Source head 82076ff06ae6927ccc29ebbea321ee513ee40310 matches the PR.
+- CI terminal: 21 passed, 6 workflow skips, 0 failures, 0 pending.
+- Fresh automated review: 0 issues across 1 file.
+- No unresolved review threads or unacknowledged PR comments.
+- Earlier formal CHANGES_REQUESTED review awaits maintainer re-review.
+- PR body, whole-review reply and issue follow-up updated.
+- No individual review request, label retry, merge, release, CI rerun, or stored credential/config change.
+- Both worktrees are clean; local heavy work is finished.

@@ -1,0 +1,38 @@
+{
+  "status": "passed for curated candidate; root independent publication audit remains separate",
+  "textFilesChecked": 69,
+  "binaryMediaFilesChecked": 55,
+  "forbiddenValueFindings": [],
+  "jsonPrivateStateFindings": [],
+  "sourceException": {
+    "scope": "Exactly two generic temporary test-fixture literals, four lines total, in the authored candidate patch. No broad path exemption; exact authored patch hash preserved.",
+    "matchedSourceLines": 4
+  },
+  "sourceVocabulary": "Public generic source declares standard protocol/header names; these are declarations without actual secret or private state values. JSON proof objects contain selected generic facts only.",
+  "media": {
+    "originalRecordings": 17,
+    "allOriginalBytesUnchanged": true,
+    "fullStreamDecoded": true,
+    "videoSamples": 3339,
+    "decodeErrors": 0,
+    "audioTracks": 0,
+    "assetMetadataItems": 0,
+    "endpointPngsInspected": 34,
+    "contactSheetsInspected": 4,
+    "visualScope": "All first/last endpoints inspected; full streams decoded. Every interior frame was not visually inspected.",
+    "observedEndpointContent": "Generic UIKit fixtures and default dedicated simulator OS; no private product/account content observed."
+  },
+  "excluded": "Raw transport/state, process/runner logs, headers/token values, private app/account source/configuration, host paths, device identifiers, process/socket/session values, inventories and xcresult.",
+  "published": true,
+  "rootIndependentAudit": {
+    "status": "passed",
+    "files": 127,
+    "symlinks": 0,
+    "hashAndWhitelistErrors": 0,
+    "privatePatternFindings": [],
+    "decodeReceiptsVerified": 17,
+    "contactSheetsReviewed": 4,
+    "endpointPngsReviewed": 34,
+    "visualScope": "All first/last endpoints; interior frames fully decoded, not individually visually reviewed."
+  }
+}

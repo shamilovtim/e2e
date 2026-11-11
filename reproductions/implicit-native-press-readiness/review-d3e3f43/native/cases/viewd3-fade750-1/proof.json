@@ -1,0 +1,110 @@
+{
+  "case": "viewd3-fade750-1",
+  "classification": "pass",
+  "explanation": "Unchanged d006 750ms generic fade harness: one underlying action and zero overlay touches; recording closed cleanly.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeBuiltFrom": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "nativeBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+  "fixtureAttribution": "Retained original generic fade fixture. The unchanged d006 harness does not collect a fixture digest at runtime; attribution is the previously inspected owned-device fixture hash.",
+  "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+  "result": {
+    "mode": "fade750-1",
+    "close": {
+      "x": 194,
+      "y": 514,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e3 (194, 514)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "closeMs": 1037.2110420000008,
+    "target": {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "pressMs": 964.9774579999994,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true
+  },
+  "recording": {
+    "lifecycle": "completed",
+    "stopRecorderObservation": "confirmed"
+  },
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.011541647836565971
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeOverlayOpened",
+      "ms": 7241.515666653868
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeDismissBegin",
+      "ms": 8315.351208322681
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 9072.725583333522
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 9345.622083346825
+    }
+  ],
+  "recordingQualification": "Selected actual SDK recording-resource facts. Original harness result does not supply a recorder exit code; none is asserted. The unchanged original recording also fully decoded."
+}

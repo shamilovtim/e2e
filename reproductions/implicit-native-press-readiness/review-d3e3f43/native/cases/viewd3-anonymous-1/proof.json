@@ -1,0 +1,43 @@
+{
+  "case": "viewd3-anonymous-1",
+  "classification": "setup-failure",
+  "explanation": "Stopped before measured input: inherited landscape geometry did not contain the expected portrait first-row frame. Zero input. Later portrait orientation was established through the actual SDK orientation command and qualified separately.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": false,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "nativeBuiltFrom": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "nativeBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+  "mode": "anonymous",
+  "coldOpenMs": 2014.4520420000001,
+  "nativeModeSetupMs": 3197.2577080000005,
+  "harnessError": {
+    "message": "Expected exactly one first-row Other by actual frame; got 0"
+  },
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "modeChanged",
+      "ms": 0.00866665504872799,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "appReady",
+      "ms": 0.6058333092369139,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "modeChanged",
+      "ms": 4254.741750017274,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    }
+  ]
+}

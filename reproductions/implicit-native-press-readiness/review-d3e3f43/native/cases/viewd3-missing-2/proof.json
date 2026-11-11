@@ -1,0 +1,155 @@
+{
+  "case": "viewd3-missing-2",
+  "classification": "pass",
+  "explanation": "Requested generic-fixture behavior observed on the stated source, native artifact and fixture.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "nativeBuiltFrom": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "nativeBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+  "mode": "missing",
+  "coldOpenMs": 2256.539417,
+  "nativeModeSetupMs": 3601.291292,
+  "initialTarget": {
+    "index": 12,
+    "parentIndex": 11,
+    "type": "Other",
+    "role": "ReadinessVariants.OtherControl",
+    "subrole": "UIControl",
+    "label": "Volatile value target",
+    "value": "value-523390.183981250",
+    "identifier": "missing-target",
+    "rect": {
+      "x": 24,
+      "y": 220,
+      "width": 345,
+      "height": 40
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "ref": "e13",
+    "kind": "other"
+  },
+  "nativeObservation": {
+    "ms": 277.46095799999966,
+    "ok": true,
+    "nodeCount": 525,
+    "otherCount": 511,
+    "sameTypeCount": 511,
+    "firstRows": [
+      {
+        "type": "Other",
+        "identifier": "missing-target",
+        "label": "Volatile value target",
+        "value": "value-523390.309388250",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "width": 345,
+          "height": 40
+        },
+        "nativePressTarget": {
+          "identifier": "missing-target",
+          "type": 1,
+          "label": "Volatile value target",
+          "value": "value-523390.309388250",
+          "rect": {
+            "width": 345,
+            "x": 24,
+            "y": 220,
+            "height": 40
+          }
+        }
+      }
+    ],
+    "snapshotQuality": {
+      "timing": {
+        "acquisitionMs": 226.98700428009033,
+        "presentationMs": 0.4709959030151367
+      },
+      "state": "healthy",
+      "backend": "tree"
+    },
+    "rawBindingAvailable": true
+  },
+  "targetTapEvents": 0,
+  "otherTapEvents": 0,
+  "nativeBinaryUnchanged": true,
+  "samples": [],
+  "cli": {
+    "exitCode": 1,
+    "ms": 586.1184159999993,
+    "signal": null,
+    "parsed": {
+      "success": false,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Resolved target was not ready for input; nothing was dispatched",
+        "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref.",
+        "details": {
+          "reason": "target_not_ready",
+          "readiness": "missing",
+          "dispatched": "no"
+        }
+      }
+    },
+    "nativeEvents": [
+      {
+        "event": "modeChanged",
+        "ms": 0.014833349268883467,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "appReady",
+        "ms": 0.7440000190399587,
+        "otherControlCount": 500,
+        "variant": "anonymous"
+      },
+      {
+        "event": "modeChanged",
+        "ms": 4552.939166664146,
+        "otherControlCount": 500,
+        "variant": "missing"
+      }
+    ],
+    "nativeCommands": [
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness",
+        "nativeDurationMs": 504.66200000000003
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "modeChanged",
+      "ms": 0.014833349268883467,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "appReady",
+      "ms": 0.7440000190399587,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "modeChanged",
+      "ms": 4552.939166664146,
+      "otherControlCount": 500,
+      "variant": "missing"
+    }
+  ]
+}

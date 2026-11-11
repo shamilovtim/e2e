@@ -1,0 +1,11 @@
+--- a/packages/mobile/src/support.ts
++++ b/packages/mobile/src/support.ts
+@@ -54,7 +54,7 @@
+    * wait expires, including its existing acknowledgement allowance.
+    */
+   press(client: AgentDeviceClient, options: PressOptions): Promise<unknown> {
+-    return this.send((signal) => client.interactions.press({ ...options, signal }));
++    return this.send((signal) => client.interactions.press({ ...options }));
+   }
+ 
+   /**

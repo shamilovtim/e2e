@@ -1,0 +1,241 @@
+{
+  "case": "viewd3-ipad-tree-ref-1",
+  "classification": "pass",
+  "explanation": "Actual SDK ref capture observed healthy/tree backend on the placed window. Unmarked native raw-empty authorization focused the empty input exactly once; focused=true and nine keyboard keys observed. The producer is established by this actual capture, not by raw format alone.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "nativeBuiltFrom": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "nativeFingerprint": "7938c697fc985a32b3522f9c4431f82252468a265ef672f504404d0d865647ad",
+  "nativeBinarySha256": "d2c004bdd1732e0b0c84b1cccdb5ae2483be3208960946a8e324d35cb39742e1",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "mode": "tree-ref",
+  "scope": "Actual runner-tree SDK ref via naturally windowed guest-bridge fallback; native backend must be observed, not inferred from raw format.",
+  "coldOpenMs": 4748.84675,
+  "nativeBinaryUnchanged": true,
+  "focusRoutes": [
+    {
+      "label": "actual-runner-tree-ref",
+      "sdkCaptureQuality": {
+        "state": "healthy",
+        "backend": "tree",
+        "timing": {
+          "acquisitionMs": 50.78995227813721,
+          "presentationMs": 0.5140304565429688
+        }
+      },
+      "sdkCaptureWarnings": [
+        "Simulator AX snapshot unavailable (app-window-not-full-screen); used XCTest for this capture, while the app window did not fill the screen; the runner republishes a windowed capture in screen space."
+      ],
+      "sdkCaptureDiagnostics": {
+        "stats": {
+          "count": 4,
+          "p50Ms": 218,
+          "p95Ms": 5447,
+          "maxMs": 5447,
+          "slowThresholdMs": 1500,
+          "platform": "ios",
+          "backends": {
+            "apple-runner": 4
+          }
+        }
+      },
+      "publicField": {
+        "enabled": true,
+        "depth": 5,
+        "type": "TextField",
+        "index": 6,
+        "placeholder": "Geometry input",
+        "rect": {
+          "width": 200,
+          "y": 306,
+          "x": 259,
+          "height": 42
+        },
+        "hittable": true,
+        "parentIndex": 4,
+        "identifier": "geometry-input",
+        "password": false,
+        "editable": true,
+        "ref": "e7",
+        "kind": "text-field"
+      },
+      "captureOptions": {
+        "interactiveOnly": true,
+        "raw": true
+      },
+      "nativeSource": {
+        "raw": true,
+        "node": {
+          "enabled": true,
+          "depth": 5,
+          "type": "TextField",
+          "index": 6,
+          "nativePressTarget": {
+            "rect": {
+              "y": 306,
+              "height": 42,
+              "width": 200,
+              "x": 259
+            },
+            "type": 49,
+            "identifier": "geometry-input"
+          },
+          "placeholder": "Geometry input",
+          "rect": {
+            "x": 259,
+            "height": 42,
+            "y": 306,
+            "width": 200
+          },
+          "hittable": true,
+          "parentIndex": 4,
+          "identifier": "geometry-input"
+        },
+        "quality": {
+          "timing": {
+            "acquisitionMs": 49.30603504180908,
+            "presentationMs": 0.06401538848876953
+          },
+          "state": "healthy",
+          "backend": "tree"
+        },
+        "binding": {
+          "rect": {
+            "y": 306,
+            "height": 42,
+            "width": 200,
+            "x": 259
+          },
+          "type": 49,
+          "identifier": "geometry-input"
+        }
+      },
+      "press": {
+        "x": 359,
+        "y": 327,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e7 (359, 327)",
+        "referenceWidth": 563,
+        "referenceHeight": 830,
+        "targetKind": "ref",
+        "ref": "e7",
+        "refLabel": "geometry-input",
+        "selectorChain": [
+          "id=\"geometry-input\"",
+          "text=\"geometry-input\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 591.2378339999977,
+      "actualSdkAuthorizedTarget": {
+        "type": 49,
+        "identifier": "geometry-input",
+        "rect": {
+          "height": 42,
+          "x": 259,
+          "y": 306,
+          "width": 200
+        }
+      },
+      "actualProducerObservations": [],
+      "events": [
+        {
+          "actualText": "",
+          "event": "inputFocusBegan",
+          "length": 0,
+          "ms": 11739.897624996956
+        }
+      ],
+      "afterField": {
+        "hittable": true,
+        "type": "TextField",
+        "parentIndex": 0,
+        "identifier": "geometry-input",
+        "index": 2,
+        "enabled": true,
+        "focused": true,
+        "depth": 1,
+        "rect": {
+          "y": 306,
+          "x": 259,
+          "width": 200,
+          "height": 42
+        },
+        "placeholder": "Geometry input",
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      "keyboardKeys": 9
+    }
+  ],
+  "setup": [
+    {
+      "label": "End editing before ordinary focus proof",
+      "id": "hide-keyboard",
+      "result": {
+        "x": 545,
+        "y": 374,
+        "message": "Tapped id=hide-keyboard (545, 374)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 563,
+        "referenceHeight": 830,
+        "targetKind": "selector",
+        "selector": "id=hide-keyboard",
+        "selectorChain": [
+          "id=\"hide-keyboard\"",
+          "role=\"button\" label=\"Hide keyboard\"",
+          "label=\"Hide keyboard\""
+        ],
+        "refLabel": "Hide keyboard",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "event": "keyboardDismissRequested",
+          "ms": 9213.9989999705
+        }
+      ]
+    }
+  ],
+  "staleValueReads": [],
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.006833288352936506
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 20.291958295274526,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 563.0, 830.0)"
+    },
+    {
+      "event": "keyboardDismissRequested",
+      "ms": 9213.9989999705
+    },
+    {
+      "actualText": "",
+      "event": "inputFocusBegan",
+      "length": 0,
+      "ms": 11739.897624996956
+    }
+  ]
+}

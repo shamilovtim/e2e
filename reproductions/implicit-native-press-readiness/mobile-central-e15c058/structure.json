@@ -1,0 +1,55 @@
+{
+  "node": "v24.22.0",
+  "pnpm": "12.3.4",
+  "candidate_patch_sha256": "b1e6a4ca88ef369ff51354eb692e27f7c9398c91f71405a835a7c409dc2b73ab",
+  "isolated_source_matches_review_worktree": true,
+  "raw_sdk_press": [
+    [
+      "packages/mobile/src/support.ts",
+      57,
+      "return this.send((signal) => client.interactions.press({ ...options, signal }));"
+    ]
+  ],
+  "central_helper_uses": [
+    [
+      "packages/mobile/src/surface.ts",
+      1458,
+      "return input.press(client, { ...this.actionTarget(target, true), ...settle });"
+    ],
+    [
+      "packages/mobile/src/surface.ts",
+      1465,
+      "return input.press(client, { ...this.actionTarget(target), ...settle });"
+    ],
+    [
+      "packages/mobile/src/surface.ts",
+      1467,
+      "return input.press(client, { ...this.actionTarget(target), count: 2, ...settle });"
+    ],
+    [
+      "packages/mobile/src/surface.ts",
+      1492,
+      "return input.press(client, { ...this.actionTarget(target, true), ...settle });"
+    ],
+    [
+      "packages/mobile/src/surface.ts",
+      1555,
+      "await input.press(client, { ...this.actionTarget(entry), ...settle });"
+    ],
+    [
+      "packages/mobile/src/surface.ts",
+      1698,
+      "await this.command('keyboard.dismiss', (client) => input.press(client, centreOf(button.rect!)), signal);"
+    ],
+    [
+      "packages/mobile/src/actions.ts",
+      71,
+      "return input.press(client, { ...at, ...settle });"
+    ],
+    [
+      "packages/mobile/src/actions.ts",
+      73,
+      "return input.press(client, { ...at, count: 2, ...settle });"
+    ]
+  ]
+}

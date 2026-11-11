@@ -1,0 +1,22 @@
+{
+  "case": "viewd3-ipad-resize-1",
+  "classification": "qualified-setup-only",
+  "explanation": "Actual window resize setup recorded native window geometry. No alias or target-input claim is made by this setup.",
+  "hostSource": "d3e3f43c3cef72e0740b1b57e9da6e5da49c7e46",
+  "recordedSuccess": true,
+  "recording": null,
+  "sessionClosed": null,
+  "windows": [
+    {
+      "x": 235,
+      "y": 216,
+      "height": 830,
+      "width": 563
+    }
+  ],
+  "recordingExit": 0,
+  "artifactQualification": "Setup result does not contain native artifact/fixture hashes; none are invented here.",
+  "error": null,
+  "samples": [],
+  "nativeEvents": []
+}

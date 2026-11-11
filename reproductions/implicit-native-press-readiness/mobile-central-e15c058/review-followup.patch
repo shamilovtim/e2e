@@ -1,0 +1,270 @@
+diff --git a/docs/reference/mobile.mdx b/docs/reference/mobile.mdx
+index 797e4bea..9a4286e8 100644
+--- a/docs/reference/mobile.mdx
++++ b/docs/reference/mobile.mdx
+@@ -365,7 +365,7 @@ keyboard tip.
+ 
+ Input already sent to the device may still finish.
+ Other commands can outlive their caller's timeout; the next attempt waits for
+-their SDK requests to settle.
++them to finish.
+ </Note>
+ 
+ #### Capabilities
+diff --git a/packages/mobile/src/actions.ts b/packages/mobile/src/actions.ts
+index 92ccdcf1..d28fa6a0 100644
+--- a/packages/mobile/src/actions.ts
++++ b/packages/mobile/src/actions.ts
+@@ -2,7 +2,7 @@
+ 
+ import type { LocatorActionKind, PointerAction, PointerActionKind, ViewportPoint } from 'e2e/engine';
+ import type { AgentDeviceClient } from './options.ts';
+-import { unsupported } from './support.ts';
++import { unsupported, type InputBudget } from './support.ts';
+ 
+ /**
+  * The action kinds a device honors, declared so the harness offers exactly
+@@ -63,28 +63,32 @@ export function pointerInteraction(
+   action: PointerAction,
+   settle: Record<string, unknown>,
+   stabilization: Record<string, unknown>,
+-  signal: AbortSignal,
++  input: InputBudget,
+ ): Promise<unknown> {
+   const at = { x: point.x, y: point.y };
+   switch (action.kind) {
+     case 'tap':
+-      return client.interactions.press({ ...at, ...settle, signal });
++      return input.press(client, { ...at, ...settle });
+     case 'doubleTap':
+-      return client.interactions.press({ ...at, count: 2, ...settle, signal });
++      return input.press(client, { ...at, count: 2, ...settle });
+     case 'longPress':
+-      return client.interactions.longPress({ ...at, ...settle, durationMs: action.durationMs ?? DEFAULT_LONG_PRESS_MS });
++      return input.send(
++        () => client.interactions.longPress({ ...at, ...settle, durationMs: action.durationMs ?? DEFAULT_LONG_PRESS_MS }),
++        action.durationMs ?? DEFAULT_LONG_PRESS_MS,
++      );
+     case 'swipeTo': {
+       const to = { x: action.target.x, y: action.target.y };
+-      if (action.durationMs !== undefined) {
+-        return client.interactions.pan({
++      const durationMs = action.durationMs;
++      if (durationMs !== undefined) {
++        return input.send(() => client.interactions.pan({
+           x: at.x,
+           y: at.y,
+           dx: to.x - at.x,
+           dy: to.y - at.y,
+-          durationMs: action.durationMs,
+-        });
++          durationMs,
++        }), durationMs);
+       }
+-      return client.interactions.swipe({ from: at, to, ...stabilization });
++      return input.send(() => client.interactions.swipe({ from: at, to, ...stabilization }));
+     }
+     case 'secondaryTap':
+     case 'hover':
+diff --git a/packages/mobile/src/device.ts b/packages/mobile/src/device.ts
+index 2fa5d5a3..8f18ecb7 100644
+--- a/packages/mobile/src/device.ts
++++ b/packages/mobile/src/device.ts
+@@ -316,7 +316,7 @@ export function createDeviceFixture(surface: AgentDeviceSurface, context: Engine
+       await surface.screenCommand('device.alert', (client) => client.command.alert({ ...surface.selection(), action }), context.signal);
+     },
+     async dismissKeyboard() {
+-      await surface.dismissKeyboard(context.signal, surface.inputBudget('device.dismissKeyboard', context.timeouts.action, context.signal));
++      await surface.dismissKeyboard(context.signal, surface.inputBudget('device.dismissKeyboard', { timeoutMs: context.timeouts.action, signal: context.signal }));
+     },
+     async clipboard() {
+       const result = await surface.command(
+diff --git a/packages/mobile/src/engine.ts b/packages/mobile/src/engine.ts
+index e8051b15..eb4892bf 100644
+--- a/packages/mobile/src/engine.ts
++++ b/packages/mobile/src/engine.ts
+@@ -34,28 +34,28 @@ export function buildEngine(surface: AgentDeviceSurface): EngineHandle {
+     dispose: (context) => surface.dispose(context),
+     // The harness signal does not abort at an operation's budget, so each
+     // operation enforces its own; see InputBudget in support.ts.
+-    observe: (operation, options) => surface.observe(operation, options, surface.inputBudget('observe', operation.timeoutMs, operation.signal)),
+-    locate: (expression, operation) => surface.locate(expression, operation, surface.inputBudget('locate', operation.timeoutMs, operation.signal)),
+-    perform: (ref, action, operation) => surface.perform(ref, action, operation, surface.inputBudget(action.kind, operation.timeoutMs, operation.signal)),
++    observe: (operation, options) => surface.observe(operation, options, surface.inputBudget('observe', operation)),
++    locate: (expression, operation) => surface.locate(expression, operation, surface.inputBudget('locate', operation)),
++    perform: (ref, action, operation) => surface.perform(ref, action, operation, surface.inputBudget(action.kind, operation)),
+     actions: DEVICE_ACTIONS,
+-    performAt: (point, action, operation) => surface.performAt(point, action, operation, surface.inputBudget(action.kind, operation.timeoutMs, operation.signal)),
++    performAt: (point, action, operation) => surface.performAt(point, action, operation, surface.inputBudget(action.kind, operation)),
+     pointerActions: DEVICE_POINTER_ACTIONS,
+     keyboard: {
+-      type: (text, keyboardOptions, operation) => surface.typeText(text, keyboardOptions, operation, surface.inputBudget('type', operation.timeoutMs, operation.signal)),
+-      press: (key, operation) => surface.pressFocusedKey(key, operation, surface.inputBudget('press', operation.timeoutMs, operation.signal)),
+-      dismiss: (operation) => surface.dismissKeyboard(operation.signal, surface.inputBudget('keyboard dismiss', operation.timeoutMs, operation.signal)),
++      type: (text, keyboardOptions, operation) => surface.typeText(text, keyboardOptions, operation, surface.inputBudget('type', operation)),
++      press: (key, operation) => surface.pressFocusedKey(key, operation, surface.inputBudget('press', operation)),
++      dismiss: (operation) => surface.dismissKeyboard(operation.signal, surface.inputBudget('keyboard dismiss', operation)),
+     },
+     validateApp: (app, info) => validateApp(app, info, surface.options.platform),
+     // No `open`: a device app has no URL to open, so the runner serves
+     // `app.open()` with `restart`, the fresh launch of the pinned app, which
+     // is also the device's "recreate the context".
+     session: {
+-      back: (operation) => surface.back(operation, surface.inputBudget('back', operation.timeoutMs, operation.signal)),
++      back: (operation) => surface.back(operation, surface.inputBudget('back', operation)),
+       restart: (operation) => surface.restart(operation),
+       reset: (operation) => surface.reset(operation),
+     },
+     artifacts: {
+-      screenshot: (label, operation) => surface.screenshot(label, operation, surface.inputBudget('screenshot', operation.timeoutMs, operation.signal)),
++      screenshot: (label, operation) => surface.screenshot(label, operation, surface.inputBudget('screenshot', operation)),
+       startVideo: (operation) => surface.startVideo(operation),
+       stopVideo: (operation) => surface.stopVideo(operation),
+     },
+diff --git a/packages/mobile/src/support.ts b/packages/mobile/src/support.ts
+index fe81096d..87697ff8 100644
+--- a/packages/mobile/src/support.ts
++++ b/packages/mobile/src/support.ts
+@@ -1,7 +1,8 @@
+ /** Shared helpers for the agent-device engine: error constructors, filenames, PNG headers, gestures, the screen location and size. */
+ 
+-import type { CaptureScreenshotResult } from 'agent-device';
++import type { CaptureScreenshotResult, PressOptions } from 'agent-device';
+ import { EngineError, withTimeout, type Momentum, type ScrollDirection, type ViewportSize } from 'e2e/engine';
++import type { AgentDeviceClient } from './options.ts';
+ 
+ export interface Point {
+   readonly x: number;
+@@ -48,6 +49,14 @@ export class InputBudget {
+     this.endsAt = Date.now() + timeoutMs;
+   }
+ 
++  /**
++   * Press requests receive caller cancellation and are cancelled when this
++   * wait expires, including its existing acknowledgement allowance.
++   */
++  press(client: AgentDeviceClient, options: PressOptions): Promise<unknown> {
++    return this.send((signal) => client.interactions.press({ ...options, signal }));
++  }
++
+   /**
+    * Sends one input with what is left of the budget. With none left it sends
+    * nothing: `OPERATION_TIMEOUT`, or `ACTION_MAY_HAVE_COMMITTED` once an
+@@ -55,8 +64,6 @@ export class InputBudget {
+    * at least as long as the budget left could only be cut off mid-gesture, so
+    * it is refused unsent. An input that does not answer in time may have
+    * landed, so it is `ACTION_MAY_HAVE_COMMITTED` and the runner never repeats it.
+-   * Press requests receive caller cancellation and are cancelled when this
+-   * wait expires, including its existing acknowledgement allowance.
+    */
+   send<T>(dispatch: (signal: AbortSignal) => Promise<T>, holdMs = 0): Promise<T> {
+     const remaining = this.remainingMs();
+diff --git a/packages/mobile/src/surface.ts b/packages/mobile/src/surface.ts
+index 81842912..a9b41816 100644
+--- a/packages/mobile/src/surface.ts
++++ b/packages/mobile/src/surface.ts
+@@ -573,8 +573,8 @@ export class AgentDeviceSurface {
+   }
+ 
+   /** The budget and cancellation signal shared by one operation's inputs. */
+-  inputBudget(label: string, timeoutMs: number, signal: AbortSignal): InputBudget {
+-    return new InputBudget(label, timeoutMs, (pending) => this.track(pending), signal);
++  inputBudget(label: string, operation: Pick<OperationContext, 'timeoutMs' | 'signal'>): InputBudget {
++    return new InputBudget(label, operation.timeoutMs, (pending) => this.track(pending), operation.signal);
+   }
+ 
+   /** Registers one device command as in flight until it settles. */
+@@ -1455,16 +1455,16 @@ export class AgentDeviceSurface {
+       }
+       switch (action.kind) {
+         case 'tap':
+-          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target, true), ...settle, signal }));
++          return input.press(client, { ...this.actionTarget(target, true), ...settle });
+         case 'focus':
+           // A touch surface focuses by tapping, and a tap on anything but an
+           // editable field activates it; focus is offered for fields only.
+           if (target.node.role !== 'textbox') {
+             throw unsupported(`agent-device can only focus editable fields; node ${target.id} is ${target.node.role ?? 'unknown'}`);
+           }
+-          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target), ...settle, signal }));
++          return input.press(client, { ...this.actionTarget(target), ...settle });
+         case 'doubleTap':
+-          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target), count: 2, ...settle, signal }));
++          return input.press(client, { ...this.actionTarget(target), count: 2, ...settle });
+         case 'longPress':
+           return input.send(
+             () => client.interactions.longPress({ ...this.actionTarget(target), ...settle, durationMs: action.durationMs ?? DEFAULT_LONG_PRESS_MS }),
+@@ -1489,7 +1489,7 @@ export class AgentDeviceSurface {
+             throw unsupported(`agent-device cannot read whether node ${target.id} is checked; tap it instead`);
+           }
+           if (checked === wanted) return undefined;
+-          return input.send((signal) => client.interactions.press({ ...this.actionTarget(target, true), ...settle, signal }));
++          return input.press(client, { ...this.actionTarget(target, true), ...settle });
+         }
+         case 'press':
+           return this.pressKey(client, target, action.key, settle, input);
+@@ -1552,7 +1552,7 @@ export class AgentDeviceSurface {
+     // A key reaches the field through the soft keyboard, which is up only
+     // while the field holds focus.
+     if (entry.node.role === 'textbox' && entry.node.states?.focused !== true) {
+-      await input.send((requestSignal) => client.interactions.press({ ...this.actionTarget(entry), ...settle, signal: requestSignal }));
++      await input.press(client, { ...this.actionTarget(entry), ...settle });
+     }
+     if (enter) return input.send(() => client.command.keyboard({ action: 'enter' }));
+     return input.send(() => client.interactions.type({ text: parsed.key.kind === 'char' ? parsed.key.char : ' ' }));
+@@ -1566,8 +1566,7 @@ export class AgentDeviceSurface {
+   async performAt(point: ViewportPoint, action: PointerAction, operation: OperationContext, input: InputBudget): Promise<void> {
+     const settle = operation.origin === 'test' ? {} : this.settleOptions;
+     const before = this.latestScreen;
+-    const holdMs = action.kind === 'longPress' ? (action.durationMs ?? DEFAULT_LONG_PRESS_MS) : action.kind === 'swipeTo' ? action.durationMs : undefined;
+-    await this.command(`${action.kind} at point`, (client) => input.send((signal) => pointerInteraction(client, point, action, settle, gestureStabilization(operation), signal), holdMs), operation.signal);
++    await this.command(`${action.kind} at point`, (client) => pointerInteraction(client, point, action, settle, gestureStabilization(operation), input), operation.signal);
+     if (action.kind === 'swipeTo') this.noteGesture(operation);
+     this.markAction(before);
+   }
+@@ -1696,7 +1695,7 @@ export class AgentDeviceSurface {
+     const tipTop = tip.rect.y;
+     const button = nodes.find((node) => node.label === 'Continue' && node.rect !== undefined && node.rect.y > tipTop);
+     if (button?.rect === undefined) return raw;
+-    await this.command('keyboard.dismiss', (client) => input.send((requestSignal) => client.interactions.press({ ...centreOf(button.rect!), signal: requestSignal })), signal);
++    await this.command('keyboard.dismiss', (client) => input.press(client, centreOf(button.rect!)), signal);
+     return await this.snapshot(signal, false, input);
+   }
+ 
+diff --git a/packages/mobile/tests/unit/engine.test.ts b/packages/mobile/tests/unit/engine.test.ts
+index 50c5cd3c..fdaff0a5 100644
+--- a/packages/mobile/tests/unit/engine.test.ts
++++ b/packages/mobile/tests/unit/engine.test.ts
+@@ -3353,7 +3353,7 @@ describe('deterministic actions', () => {
+     const search = await observed(h, 'Search');
+     if (action === 'Enter') await h.engine.perform!(search.ref, { kind: 'press', key: 'Enter' }, test());
+     else if (action === 'focused Enter') await h.engine.keyboard!.press('Enter', test());
+-    else await h.surface.dismissKeyboard(test().signal, h.surface.inputBudget('keyboard dismiss', test().timeoutMs, test().signal));
++    else await h.surface.dismissKeyboard(test().signal, h.surface.inputBudget('keyboard dismiss', test()));
+     h.fake.respond('capture.snapshot', () => ({ ...SETTINGS_SNAPSHOT, keyboard: { kind: 'absent' } }));
+     const stale = await observed(h, 'About');
+     h.fake.respond('capture.snapshot', () => ({
+diff --git a/packages/mobile/tests/unit/support.test.ts b/packages/mobile/tests/unit/support.test.ts
+index 31ad904d..b7871d2a 100644
+--- a/packages/mobile/tests/unit/support.test.ts
++++ b/packages/mobile/tests/unit/support.test.ts
+@@ -122,7 +122,7 @@ it.each(['press', 'type'] as const)('preserves the acknowledgement allowance for
+   const budget = new InputBudget(command, 100, (pending) => pending, new AbortController().signal);
+   try {
+     if (command === 'press') {
+-      await expect(budget.send((signal) => client.interactions.press({ x: 20, y: 20, signal }))).resolves.toBeDefined();
++      await expect(budget.press(client, { x: 20, y: 20 })).resolves.toBeDefined();
+     } else {
+       await expect(budget.send((signal) => client.interactions.type({ text: 'hello', signal }))).rejects.toMatchObject({ code: 'UNSUPPORTED_OPERATION', message: 'Typing is unavailable' });
+     }
+@@ -157,8 +157,8 @@ it('keeps caller cancellation on later inputs from the same operation', async ()
+   });
+   const budget = new InputBudget('tap', 30000, (pending) => pending, controller.signal);
+   try {
+-    await budget.send((signal) => client.interactions.press({ x: 20, y: 20, signal }));
+-    const second = budget.send((signal) => client.interactions.press({ x: 30, y: 30, signal }));
++    await budget.press(client, { x: 20, y: 20 });
++    const second = budget.press(client, { x: 30, y: 30 });
+     const canceled = expect(second).rejects.toMatchObject({ details: { reason: 'request_canceled' } });
+     await started;
+     controller.abort();

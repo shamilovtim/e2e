@@ -1,0 +1,27 @@
+{
+  "commit": "e15c05852c35de4067f691d0776629fb207c4d0c",
+  "base": "a4f0be54b13af13c3e0507b22830d98ad95bf2b4",
+  "installed_sdk": "0.21.36",
+  "verified_files": {
+    "docs/reference/mobile.mdx": "6f6acd69770636d002e1bc67f39105fe1cbc7873f5e48f51b0bf4ff58e51d035",
+    "packages/mobile/src/actions.ts": "63ae34ace59dc3a294ae5fc66522111ed0a2d617c1e3eec3e6f083471f8feb1f",
+    "packages/mobile/src/device.ts": "d59c1200c7677e6fbdabe4d9b8c4c5147f9e232dae2885d55b8f2229857d9b63",
+    "packages/mobile/src/engine.ts": "85a25382d9db75fd9bb4593f3a311a7008ed749b4a96f9d8b09cacbbee53cd67",
+    "packages/mobile/src/support.ts": "72b849751e329c2bb2b1cf37c02187f9d2b9c3b8b2220cffc64d33a9e14205e0",
+    "packages/mobile/src/surface.ts": "dde07b9cc4d1777a685125aa490c54d5db993ba7772b7055ceb1184df2a567c9",
+    "packages/mobile/tests/unit/engine.test.ts": "96048d5501c828acb48d5cfb57b6211bae3947428402b71014ee7a0351b10257",
+    "packages/mobile/tests/unit/support.test.ts": "3c10b830c47935ce7291ebae6474a90856ac7696c791cde27a9eb6933b52a81d"
+  },
+  "verification": {
+    "frozen_install": 0,
+    "build_e2e": 0,
+    "build_mobile": 0,
+    "caller_abort_candidate": 0,
+    "only_central_signal_omission": 1,
+    "caller_abort_restored": 0,
+    "mobile_test": "523 passed",
+    "full_pnpm_check": 0
+  },
+  "review_reply": "https://github.com/e2e-inc/e2e/pull/1685#issuecomment-6800581988",
+  "new_native_run": false
+}

@@ -1,0 +1,10 @@
+{
+  "base": "a4f0be54b13af13c3e0507b22830d98ad95bf2b4",
+  "review_patch_sha256": "0f3448da073985465de76954b8ec401384b968605dd4939e709500bb0d97b50d",
+  "candidate_sha256": "72b849751e329c2bb2b1cf37c02187f9d2b9c3b8b2220cffc64d33a9e14205e0",
+  "mutation_sha256": "9bb31ee83090a9d8e8b33eae4f82cc81be0719ce9c08d6b9dedc9d786499e0a5",
+  "only_replacement": [
+    "client.interactions.press({ ...options, signal })",
+    "client.interactions.press({ ...options })"
+  ]
+}

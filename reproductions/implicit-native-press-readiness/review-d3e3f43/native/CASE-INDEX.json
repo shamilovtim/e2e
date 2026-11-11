@@ -1,0 +1,32 @@
+{
+  "count": 17,
+  "cases": [
+    "viewd3-anonymous-1",
+    "viewd3-anonymous-2",
+    "viewd3-buttons-2",
+    "viewd3-clipped-1",
+    "viewd3-duplicates-1",
+    "viewd3-exact-1",
+    "viewd3-ipad-alias-1",
+    "viewd3-ipad-placed-1",
+    "viewd3-ipad-resize-1",
+    "viewd3-ipad-resize-2",
+    "viewd3-ipad-tree-ref-1",
+    "viewd3-landscape-1",
+    "viewd3-missing-2",
+    "viewd3-shared-2",
+    "viewd3-values-1",
+    "viewd3-values-2",
+    "viewd3-fade750-1"
+  ],
+  "status": "Final curated candidate; root is sole publisher",
+  "mediaStatus": "All 17 original recordings copied byte-unchanged, fully decoded with zero errors; all 34 endpoints exported and inspected on four contact sheets.",
+  "classificationCounts": {
+    "pass": 10,
+    "qualified-setup-only": 1,
+    "setup-failure": 3,
+    "pass-after-qualified-fixture-setup": 1,
+    "pass-with-qualified-caller-cancellation": 1,
+    "pre-existing-fill-regression-with-readiness-passes": 1
+  }
+}
