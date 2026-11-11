@@ -1,5 +1,7 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The final SDK review follow-up](review-17a9673/README.md) records source `17a9673`, its passed exact gate, fresh production/unit native builds, nine selected native tests and a new unchanged-harness overlay video.
+
 [The final SDK review evidence](final-ca43623/README.md) records source `ca43623`, its exact-commit gate, bounded native-only polling, the large-tree query correction, clipped and duplicate controls, and 19 additional generic fixture videos. Older runs retain their original source attribution.
 
 The original 70-video bundle below is frozen at SDK `f757b60` and mobile `31ceef3`. [The SDK review-round append](review-965e77b/README.md) records the later coordinate fix, additional native checks and qualified limitations. Original results and hashes retain their original source attribution.

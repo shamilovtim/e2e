@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "path": "PUBLIC_AUDIT.json",
+      "bytes": 725,
+      "sha256": "aea49bf04d79854cb068abbbfd1dce5877f9a67cd484987c65d7dad7e2c7aea6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3077,
+      "sha256": "186588dfe3cea99657f1a70f1d7b86ca3dcbce438646a9d42c6edba7ce0e0f2f"
+    },
+    {
+      "path": "checks/agent-device-exact-validation.json",
+      "bytes": 5199,
+      "sha256": "19317a6b219fe5851306a44271e16c3ea7304926b101d8b37382ad327d03185b"
+    },
+    {
+      "path": "checks/source-patch-audit.json",
+      "bytes": 611,
+      "sha256": "55eb8948f714a1022ecacb65abec8f70efe4d644ff7519f387a76b061a68c8e3"
+    },
+    {
+      "path": "native/NATIVE-VERIFICATION.json",
+      "bytes": 3574,
+      "sha256": "0cc5d43fbc579f3aaf4223aa111639b9d0a7bb33b742cf2d8436984623239e31"
+    },
+    {
+      "path": "native/PUBLIC-AUDIT.json",
+      "bytes": 408,
+      "sha256": "fa94277ebf7e6cf057e8c36fa631e76898698d6513361a37259b073c2c8265ec"
+    },
+    {
+      "path": "native/PUBLIC_FILES.json",
+      "bytes": 1931,
+      "sha256": "8ce0be54d79fba169a8ddb6a10ec9f2e0c0a995bf3791762eda2c6c540a348d9"
+    },
+    {
+      "path": "native/README.md",
+      "bytes": 1729,
+      "sha256": "38d277a387b08474ec93e7f0659923d145ba8218372a32481fd718d74349a7eb"
+    },
+    {
+      "path": "native/SOURCE-PROVENANCE.json",
+      "bytes": 86717,
+      "sha256": "f62e1115de2887f74fa2bdaabb4ca48f7cb4c8f2fb87e39668316c1f8c69d61a"
+    },
+    {
+      "path": "native/VIDEO-DECODE.json",
+      "bytes": 305,
+      "sha256": "a7a9956e3daf3d33579647de4b3d9c1c54362e14949eb7f8f310acf9c57c72ba"
+    },
+    {
+      "path": "native/harness/DecodeVideo.swift",
+      "bytes": 2287,
+      "sha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f"
+    },
+    {
+      "path": "native/harness/sdk-acceptance.mjs",
+      "bytes": 3528,
+      "sha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599"
+    },
+    {
+      "path": "native/smoke/fade750-1/native-events.json",
+      "bytes": 434,
+      "sha256": "b96d5d1953cabab35f5fbbf4d976cbf7014cd1e0436f998b467bf7fca34e98dc"
+    },
+    {
+      "path": "native/smoke/fade750-1/result.json",
+      "bytes": 1561,
+      "sha256": "145e5a43afcaaaac30bdd38150fdf4b137bbf932cccfe0dc88b90c09d8f8cbfc"
+    },
+    {
+      "path": "native/smoke/fade750-1/video.first.png",
+      "bytes": 261524,
+      "sha256": "08983c311438368494ab90a19c74d7ca06645320e06e2defd975dee0f656cd60"
+    },
+    {
+      "path": "native/smoke/fade750-1/video.last.png",
+      "bytes": 233310,
+      "sha256": "5b26d1ff0a3b1dc32134ab3a1fe48ab597a57d5054a459722873b8cf3bdcfef8"
+    },
+    {
+      "path": "native/smoke/fade750-1/video.mp4",
+      "bytes": 482816,
+      "sha256": "13fb5e5896d7784b2d896118b77456f653b4c99aef5f54104bc4ca4f7dcf7b4d"
+    },
+    {
+      "path": "patches/agent-device.patch",
+      "bytes": 184486,
+      "sha256": "c1c2b4facd6f7abf65faa28fb2ad4c4cca084b49e6a10dda466c31f19357c080"
+    }
+  ]
+}

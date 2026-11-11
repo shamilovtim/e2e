@@ -1,0 +1,104 @@
+{
+  "sourceHead": "17a96733f87bc571f0c785eac99230691b3c5bf8",
+  "nativeSourceFingerprint": "615de8dee67b5d299f4507c0d12f76c16fc98cc0df2259afd83bd573034f703b",
+  "builds": {
+    "production": {
+      "exitCode": 0,
+      "sourceFingerprint": "615de8dee67b5d299f4507c0d12f76c16fc98cc0df2259afd83bd573034f703b",
+      "xctestBinarySha256": "d3f10f6fd3edf59dcbc343d64ba4b94bf4d6bd3e769e78a8e03381fe5ed8b3a7"
+    },
+    "unitEnabled": {
+      "exitCode": 0,
+      "sourceFingerprint": "615de8dee67b5d299f4507c0d12f76c16fc98cc0df2259afd83bd573034f703b",
+      "xctestBinarySha256": "ff460ff4a4b75ea5a2a4ff4676cdccd4cd122862b2eea60a6c9c2511fe904f8f"
+    }
+  },
+  "device": {
+    "type": "iPhone 15 Pro simulator",
+    "runtime": "iOS 27.0",
+    "ownership": "Dedicated generic fixture device"
+  },
+  "nativeTests": {
+    "selected": 9,
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "originalReadinessSelection": {
+      "selected": 8,
+      "passed": 8
+    },
+    "additionalChangedCommandTableTest": {
+      "selected": 1,
+      "passed": 1,
+      "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether"
+    },
+    "cases": [
+      {
+        "name": "testAuthorizedPressTargetMatchesGoldenParityTable",
+        "result": "Passed"
+      },
+      {
+        "name": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+        "result": "Passed"
+      },
+      {
+        "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether",
+        "result": "Passed"
+      },
+      {
+        "name": "testEveryRunnerRequestFieldHasAProductionRequest",
+        "result": "Passed"
+      },
+      {
+        "name": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+        "result": "Passed"
+      },
+      {
+        "name": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+        "result": "Passed"
+      },
+      {
+        "name": "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+        "result": "Passed"
+      },
+      {
+        "name": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+        "result": "Passed"
+      },
+      {
+        "name": "testSnapshotPresentationPreservesCurrentWireShape",
+        "result": "Passed"
+      }
+    ],
+    "secureFieldCoverage": "The golden-parity table includes type50, secure value is never required or duplicated.",
+    "scope": "Nine selected existing XCTest methods, not a full native-suite claim."
+  },
+  "liveSmoke": {
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+    "case": "fade750-1",
+    "exitCode": 0,
+    "success": true,
+    "underlyingTaps": 1,
+    "overlayTouches": 0,
+    "fadeDismissCompleteMs": 7028.46333332127,
+    "underlyingTapMs": 7225.104166660458,
+    "tapAfterCompletionMs": 196.64083333918825,
+    "nativeArtifact": "production",
+    "sourceHead": "17a96733f87bc571f0c785eac99230691b3c5bf8"
+  },
+  "runtimeAttribution": {
+    "sourceStatusBeforeAndAfter": "clean",
+    "builtJavaScriptFiles": 629,
+    "unchangedDuringVerification": true,
+    "qualification": "Current source JavaScript and new native artifacts were verified directly. No equality with historical BEF runtime is claimed. Matched performance and extended geometry evidence remain attributed to their original measured revisions."
+  },
+  "cleanup": {
+    "sessionClosedByHarness": true,
+    "daemonStopped": true,
+    "daemonMode": "graceful",
+    "clean": true,
+    "cleanupConfidence": "known",
+    "ownedPhone": "shutdown and retained pending final CI/review cleanup",
+    "otherDevicesTouched": false
+  }
+}
