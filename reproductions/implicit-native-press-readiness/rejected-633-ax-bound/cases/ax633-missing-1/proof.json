@@ -1,0 +1,134 @@
+{
+  "case": "ax633-missing-1",
+  "hostSource": "633d3e696ce6e163eea732481aaefeff208018a8",
+  "nativeBuiltFrom": "633d3e696ce6e163eea732481aaefeff208018a8",
+  "nativeFingerprint": "a68ace119cab2a065c018f9bcb5ba4c2f1fbf18c0bad86fb84ef2521f96e0a6b",
+  "nativeBinarySha256": "a8ce421f07559aee98b5df910639b6326b232d6308f1e9391bdee22c7a861ff8",
+  "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+  "classification": "prototype-correctness-pass; rejected optimization",
+  "prototypeQualification": "No exact gate at633d; all final identity/frame/value/exists/count/hittability checks remain. Guest input producer bug remains known and was not retested by these completed routes.",
+  "mode": "missing",
+  "success": true,
+  "coldOpenMs": 2119.603833,
+  "nativeModeSetupMs": 3514.012,
+  "initialTarget": {
+    "index": 12,
+    "parentIndex": 11,
+    "type": "Other",
+    "role": "ReadinessVariants.OtherControl",
+    "subrole": "UIControl",
+    "label": "Volatile value target",
+    "value": "value-506296.049440083",
+    "identifier": "missing-target",
+    "rect": {
+      "x": 24,
+      "y": 220,
+      "width": 345,
+      "height": 40
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "ref": "e13",
+    "kind": "other"
+  },
+  "nativeObservation": {
+    "ms": 251.98541699999987,
+    "ok": true,
+    "nodeCount": 525,
+    "otherCount": 511,
+    "sameTypeCount": 511,
+    "firstRows": [
+      {
+        "type": "Other",
+        "identifier": "missing-target",
+        "label": "Volatile value target",
+        "value": "value-506296.174069667",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "height": 40,
+          "width": 345
+        },
+        "nativePressTarget": {
+          "value": "value-506296.174069667",
+          "type": 1,
+          "rect": {
+            "x": 24,
+            "width": 345,
+            "height": 40,
+            "y": 220
+          },
+          "label": "Volatile value target",
+          "identifier": "missing-target"
+        }
+      }
+    ],
+    "snapshotQuality": {
+      "state": "healthy",
+      "backend": "tree",
+      "timing": {
+        "presentationMs": 0.4260540008544922,
+        "acquisitionMs": 196.66993618011475
+      }
+    },
+    "rawBindingAvailable": true
+  },
+  "nativeBinaryUnchanged": true,
+  "targetTapEvents": 0,
+  "otherTapEvents": 0,
+  "events": [
+    {
+      "event": "modeChanged",
+      "ms": 0.009541632607579231,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "appReady",
+      "ms": 0.853499979712069,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "modeChanged",
+      "ms": 4553.327124973293,
+      "otherControlCount": 500,
+      "variant": "missing"
+    }
+  ],
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "samples": [],
+  "cli": {
+    "exitCode": 1,
+    "ms": 908.7552080000005,
+    "parsed": {
+      "success": false,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Resolved target was not ready for input; nothing was dispatched",
+        "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref.",
+        "details": {
+          "reason": "target_not_ready",
+          "readiness": "missing",
+          "dispatched": "no"
+        }
+      }
+    },
+    "nativeCommands": [
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness",
+        "nativeDurationMs": 814.954
+      }
+    ]
+  }
+}

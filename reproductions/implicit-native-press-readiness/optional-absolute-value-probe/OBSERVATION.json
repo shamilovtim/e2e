@@ -1,0 +1,81 @@
+{
+  "status": "UNKNOWN: optional fact absent on actual-empty state",
+  "scope": "One bounded optional AbsoluteValue request for the same allowlisted generic geometry-input snapshot element, type49. No further attributes or states tried.",
+  "actualInputState": "empty; independent fixture clear event and native raw capture agree",
+  "optionalFacts": [
+    {
+      "attributePresent": 0,
+      "guestValue": "Geometry input",
+      "identifier": "geometry-input",
+      "placeholder": "Geometry input",
+      "readSucceeded": 1,
+      "sameSnapshotElementPresent": 1,
+      "vocabularySupported": true
+    }
+  ],
+  "nativeRawField": {
+    "identifier": "geometry-input",
+    "nativePressTarget": {
+      "identifier": "geometry-input",
+      "type": 49,
+      "rect": {
+        "x": 24,
+        "y": 90,
+        "width": 200,
+        "height": 42
+      }
+    },
+    "placeholder": "Geometry input",
+    "parentIndex": 4,
+    "enabled": true,
+    "type": "TextField",
+    "rect": {
+      "height": 42,
+      "x": 24,
+      "y": 90,
+      "width": 200
+    },
+    "depth": 5,
+    "hittable": true,
+    "index": 6
+  },
+  "nativeRawQuality": {
+    "backend": "tree",
+    "timing": {
+      "presentationMs": 0.06008148193359375,
+      "acquisitionMs": 24.633049964904785
+    },
+    "state": "healthy"
+  },
+  "fixtureEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.0038750004023313522
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 3,
+      "ms": 13.20441666757688,
+      "screenBounds": "(0.0, 0.0, 852.0, 393.0)",
+      "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+    },
+    {
+      "actualText": "",
+      "event": "setupClearActualText",
+      "length": 0,
+      "ms": 7066.3770833052695
+    },
+    {
+      "event": "inputChanged",
+      "ms": 7066.7103749583475,
+      "text": ""
+    }
+  ],
+  "notRun": [
+    "actual text equal to placeholder",
+    "other actual text",
+    "clear after nonempty text"
+  ],
+  "qualification": "Vocabulary supported and snapshot read succeeded, but optional attribute was absent. Absence is not empty, not proof of a raw API, and not a claim that every state/runtime is unsupported. Source-aware value handling is a separate fix."
+}

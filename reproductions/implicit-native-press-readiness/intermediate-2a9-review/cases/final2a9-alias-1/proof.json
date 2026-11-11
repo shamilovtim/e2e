@@ -1,0 +1,47 @@
+{
+  "case": "final2a9-alias-1",
+  "classification": "setup-failure",
+  "explanation": "Window opened maximized at origin zero after fixture installation. Stopped before alias input; no placed-window claim.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "recordedSuccess": false,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "alias",
+  "coldOpenMs": 2801.815666,
+  "nativeWindowRects": [
+    {
+      "height": 1376,
+      "width": 1032,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "focusRoutes": [],
+  "setup": [],
+  "staleValueReads": [],
+  "error": {
+    "message": "Alias setup requires independently observed native window origin241,224; no extra-candidate claim made"
+  },
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.00741670373827219
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 21.630583330988884,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 1032.0, 1376.0)"
+    }
+  ]
+}

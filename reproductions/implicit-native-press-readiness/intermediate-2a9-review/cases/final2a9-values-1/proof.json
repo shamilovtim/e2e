@@ -1,0 +1,108 @@
+{
+  "case": "final2a9-values-1",
+  "classification": "product-regression",
+  "explanation": "Ordinary empty-field selector is refused missing/no-dispatch. Actual SDK guest simulator bridge authorizes displayed placeholder text while native readiness verifies raw empty input contents.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "recordedSuccess": false,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "values",
+  "coldOpenMs": 1896.892083,
+  "focusRoutes": [],
+  "setup": [
+    {
+      "label": "Rotate generic input fixture to the reproduced failing orientation",
+      "id": "landscape",
+      "result": {
+        "x": 74,
+        "y": 158,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=landscape (74, 158)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=landscape",
+        "selectorChain": [
+          "id=\"landscape\"",
+          "role=\"button\" label=\"Landscape\"",
+          "label=\"Landscape\""
+        ],
+        "refLabel": "Landscape",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": []
+    },
+    {
+      "label": "End editing before ordinary focus proof",
+      "id": "hide-keyboard",
+      "result": {
+        "x": 310,
+        "y": 158,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=hide-keyboard (310, 158)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=hide-keyboard",
+        "selectorChain": [
+          "id=\"hide-keyboard\"",
+          "role=\"button\" label=\"Hide keyboard\"",
+          "label=\"Hide keyboard\""
+        ],
+        "refLabel": "Hide keyboard",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "event": "keyboardDismissRequested",
+          "ms": 6326.174375019036
+        }
+      ]
+    }
+  ],
+  "staleValueReads": [],
+  "error": {
+    "code": "COMMAND_FAILED",
+    "message": "Resolved target was not ready for input; nothing was dispatched",
+    "details": {
+      "reason": "target_not_ready",
+      "readiness": "missing",
+      "dispatched": "no",
+      "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref."
+    }
+  },
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.004291650839149952
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 3,
+      "ms": 12.124458327889442,
+      "screenBounds": "(0.0, 0.0, 852.0, 393.0)",
+      "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+    },
+    {
+      "event": "keyboardDismissRequested",
+      "ms": 6326.174375019036
+    }
+  ]
+}

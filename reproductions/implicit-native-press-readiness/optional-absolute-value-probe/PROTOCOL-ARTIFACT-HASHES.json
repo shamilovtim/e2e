@@ -1,0 +1,6 @@
+{
+  "protocol": "Four-byte big-endian frame length plus JSON describe envelope. Original required vocabulary and original response unchanged apart from diagnostic sourceVersion. Optional selected facts emitted only on separate stderr.",
+  "requestJsonArtifactSha256": "a08c19e40ab33e0fc82430f66720b8a2f83860c6c88cfd64bde3a5e1de4a5b6f",
+  "responseJsonArtifactSha256": "0a96b2cf9cf5d8d9e4f680d438d44a7d39919d87906a7cabc5234cc2136871db",
+  "qualification": "Canonical private JSON artifact hashes, not a claim of separately captured raw wire bytes. Private process/generation identifiers and full tree are omitted."
+}

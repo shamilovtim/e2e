@@ -1,0 +1,503 @@
+{
+  "case": "final2a9-buttons-1",
+  "classification": "pass",
+  "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "buttons",
+  "coldOpenMs": 2118.1509579999997,
+  "nativeModeSetupMs": 3486.0265000000004,
+  "initialTarget": {
+    "index": 12,
+    "parentIndex": 11,
+    "type": "Button",
+    "role": "ReadinessVariants.OtherControl",
+    "subrole": "UIControl",
+    "rect": {
+      "x": 24,
+      "y": 220,
+      "width": 345,
+      "height": 40
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "ref": "e13",
+    "kind": "button"
+  },
+  "nativeObservation": {
+    "ms": 230.21954199999982,
+    "ok": true,
+    "nodeCount": 525,
+    "otherCount": 11,
+    "sameTypeCount": 504,
+    "firstRows": [
+      {
+        "type": "Button",
+        "rect": {
+          "y": 220,
+          "x": 24,
+          "width": 345,
+          "height": 40
+        },
+        "nativePressTarget": {
+          "type": 9,
+          "rect": {
+            "y": 220,
+            "height": 40,
+            "x": 24,
+            "width": 345
+          }
+        }
+      }
+    ],
+    "snapshotQuality": {
+      "timing": {
+        "presentationMs": 0.370025634765625,
+        "acquisitionMs": 177.02996730804443
+      },
+      "state": "healthy",
+      "backend": "tree"
+    },
+    "rawBindingAvailable": true
+  },
+  "targetTapEvents": 4,
+  "otherTapEvents": 0,
+  "nativeBinaryUnchanged": true,
+  "samples": [
+    {
+      "kind": "ref",
+      "target": {
+        "index": 12,
+        "parentIndex": 11,
+        "type": "Button",
+        "role": "ReadinessVariants.OtherControl",
+        "subrole": "UIControl",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "width": 345,
+          "height": 40
+        },
+        "enabled": true,
+        "depth": 2,
+        "hittable": true,
+        "ref": "e13",
+        "kind": "button"
+      },
+      "press": {
+        "x": 197,
+        "y": 240,
+        "message": "Tapped @e13 (197, 240)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared ID",
+        "selectorChain": [
+          "role=\"button\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 1474.5448749999996,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.463
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 4.708
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.355
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.65
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 747.223
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 425.769
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "target": {
+        "index": 12,
+        "parentIndex": 11,
+        "type": "Button",
+        "role": "ReadinessVariants.OtherControl",
+        "subrole": "UIControl",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "width": 345,
+          "height": 40
+        },
+        "enabled": true,
+        "depth": 2,
+        "hittable": true,
+        "ref": "e13",
+        "kind": "button"
+      },
+      "press": {
+        "x": 197,
+        "y": 240,
+        "message": "Tapped @e13 (197, 240)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared ID",
+        "selectorChain": [
+          "role=\"button\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 1708.1649589999997,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 3.153
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 4.125
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.434
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 2.101
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 740.88
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 422.93399999999997
+        }
+      ]
+    },
+    {
+      "kind": "ref",
+      "target": {
+        "index": 12,
+        "parentIndex": 11,
+        "type": "Button",
+        "role": "ReadinessVariants.OtherControl",
+        "subrole": "UIControl",
+        "rect": {
+          "x": 24,
+          "y": 220,
+          "width": 345,
+          "height": 40
+        },
+        "enabled": true,
+        "depth": 2,
+        "hittable": true,
+        "ref": "e13",
+        "kind": "button"
+      },
+      "press": {
+        "x": 197,
+        "y": 240,
+        "message": "Tapped @e13 (197, 240)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared ID",
+        "selectorChain": [
+          "role=\"button\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 1747.368957999999,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 3.391
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 4.218999999999999
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.658
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 2.202
+        },
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 749.249
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 424.33500000000004
+        }
+      ]
+    }
+  ],
+  "cli": {
+    "exitCode": 0,
+    "ms": 1741.7411250000005,
+    "parsed": {
+      "success": true,
+      "data": {
+        "x": 197,
+        "y": 240,
+        "message": "Tapped @e13 (197, 240)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e13",
+        "refLabel": "Shared ID",
+        "selectorChain": [
+          "role=\"button\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      }
+    },
+    "nativeCommands": [
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "completed",
+        "command": "appState",
+        "nativeDurationMs": 2.528
+      },
+      {
+        "phase": "completed",
+        "command": "appState",
+        "nativeDurationMs": 4.093
+      },
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "completed",
+        "command": "appState",
+        "nativeDurationMs": 1.596
+      },
+      {
+        "phase": "completed",
+        "command": "appState",
+        "nativeDurationMs": 2.091
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness",
+        "nativeDurationMs": 764.563
+      },
+      {
+        "phase": "accepted",
+        "command": "tap"
+      },
+      {
+        "phase": "completed",
+        "command": "tap",
+        "nativeDurationMs": 428.081
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "modeChanged",
+      "ms": 0.008375034667551517,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "appReady",
+      "ms": 0.8371666772291064,
+      "otherControlCount": 500,
+      "variant": "anonymous"
+    },
+    {
+      "event": "modeChanged",
+      "ms": 4500.185125041753,
+      "otherControlCount": 500,
+      "variant": "buttons"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 6416.663291689474,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 1,
+      "variant": "buttons"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 8349.862083385233,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 2,
+      "variant": "buttons"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 10299.845375004224,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 3,
+      "variant": "buttons"
+    },
+    {
+      "event": "controlReceivedTap",
+      "ms": 12233.200916671194,
+      "otherTaps": 0,
+      "row": 0,
+      "targetTaps": 4,
+      "variant": "buttons"
+    }
+  ]
+}

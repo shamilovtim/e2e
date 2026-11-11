@@ -1,0 +1,203 @@
+{
+  "case": "final2a9-input-boundary-probe-1",
+  "classification": "product-regression",
+  "explanation": "Ordinary empty-field selector is refused missing/no-dispatch. Actual SDK guest simulator bridge authorizes displayed placeholder text while native readiness verifies raw empty input contents.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "recordedSuccess": null,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "live": {
+    "data": {
+      "found": true,
+      "runnerMainThreadBusy": false,
+      "text": "Geometry input",
+      "nodes": [
+        {
+          "enabled": true,
+          "identifier": "geometry-input",
+          "depth": 0,
+          "index": 0,
+          "rect": {
+            "x": 24,
+            "y": 90,
+            "width": 200,
+            "height": 42
+          },
+          "type": "TextField",
+          "value": "Geometry input",
+          "hittable": true
+        }
+      ]
+    },
+    "ok": true
+  },
+  "captures": [
+    {
+      "raw": false,
+      "quality": {
+        "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+        "timing": {
+          "presentationMs": 0.20205974578857422,
+          "acquisitionMs": 1672.937035560608
+        },
+        "state": "recovered",
+        "customActions": {
+          "blocked": false,
+          "read": 12,
+          "candidates": 12,
+          "truncated": 0
+        },
+        "backend": "private-ax",
+        "reasonCode": "requested-backend"
+      },
+      "node": {
+        "hittable": true,
+        "enabled": true,
+        "identifier": "geometry-input",
+        "depth": 1,
+        "index": 2,
+        "rect": {
+          "width": 200,
+          "y": 90,
+          "x": 24,
+          "height": 42
+        },
+        "parentIndex": 0,
+        "type": "TextField",
+        "placeholder": "Geometry input",
+        "nativePressTarget": {
+          "identifier": "geometry-input",
+          "label": "",
+          "type": 49,
+          "rect": {
+            "y": 90,
+            "x": 24,
+            "width": 200,
+            "height": 42
+          },
+          "value": ""
+        }
+      },
+      "target": {
+        "identifier": "geometry-input",
+        "label": "",
+        "type": 49,
+        "rect": {
+          "y": 90,
+          "x": 24,
+          "width": 200,
+          "height": 42
+        },
+        "value": ""
+      },
+      "readiness": {
+        "data": {
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "runnerMainThreadBusy": false,
+          "pressReadiness": "ready"
+        },
+        "ok": true
+      }
+    },
+    {
+      "raw": true,
+      "quality": {
+        "backend": "tree",
+        "timing": {
+          "acquisitionMs": 24.165987968444824,
+          "presentationMs": 0.04696846008300781
+        },
+        "state": "healthy"
+      },
+      "node": {
+        "nativePressTarget": {
+          "identifier": "geometry-input",
+          "type": 49,
+          "rect": {
+            "y": 90,
+            "x": 24,
+            "height": 42,
+            "width": 200
+          }
+        },
+        "identifier": "geometry-input",
+        "type": "TextField",
+        "hittable": true,
+        "depth": 5,
+        "parentIndex": 4,
+        "rect": {
+          "height": 42,
+          "width": 200,
+          "x": 24,
+          "y": 90
+        },
+        "placeholder": "Geometry input",
+        "enabled": true,
+        "index": 6
+      },
+      "target": {
+        "identifier": "geometry-input",
+        "type": 49,
+        "rect": {
+          "y": 90,
+          "x": 24,
+          "height": 42,
+          "width": 200
+        }
+      },
+      "readiness": {
+        "data": {
+          "pressReadiness": "ready",
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "runnerMainThreadBusy": false
+        },
+        "ok": true
+      }
+    }
+  ],
+  "observationCompleted": true,
+  "after": {
+    "field": {
+      "index": 2,
+      "parentIndex": 0,
+      "type": "TextField",
+      "role": "UITextField",
+      "value": "Geometry input",
+      "placeholder": "Geometry input",
+      "identifier": "geometry-input",
+      "rect": {
+        "x": 24,
+        "y": 90,
+        "width": 200,
+        "height": 42
+      },
+      "enabled": true,
+      "depth": 1,
+      "password": false,
+      "editable": true,
+      "hittable": true,
+      "ref": "e3",
+      "kind": "text-field"
+    },
+    "keys": 0
+  },
+  "selectorError": {
+    "code": "COMMAND_FAILED",
+    "message": "Resolved target was not ready for input; nothing was dispatched",
+    "details": {
+      "reason": "target_not_ready",
+      "readiness": "missing",
+      "dispatched": "no",
+      "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref."
+    }
+  },
+  "samples": [],
+  "nativeEvents": []
+}

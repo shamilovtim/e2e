@@ -1,0 +1,78 @@
+{
+  "candidateSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "qualification": "Actual stored5a baseline versus2a9, same frozen v1.1 fixture and owned phone, serial n3 warm refs plus one CLI. Cold open/native setup stay separate. Real added762-906ms is a performance regression; correctness work continues and no performance gate excuses a bug.",
+  "cases": [
+    {
+      "mode": "anonymous",
+      "baselineSource": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+      "baselineNativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+      "baselineNativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+      "sameFixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+      "baselineWarmRefMs": [
+        743.6324999999997,
+        976.8661669999992,
+        975.6574170000004
+      ],
+      "candidateWarmRefMs": [
+        1613.045083,
+        1873.6429590000007,
+        1826.633084000001
+      ],
+      "baselineMedianMs": 975.6574170000004,
+      "candidateMedianMs": 1826.633084000001,
+      "addedMedianMs": 850.9756670000006,
+      "baselineCliMs": 983.341375,
+      "candidateCliMs": 1830.4537500000006,
+      "targetInputsEach": 4,
+      "siblingInputsEach": 0
+    },
+    {
+      "mode": "buttons",
+      "baselineSource": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+      "baselineNativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+      "baselineNativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+      "sameFixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+      "baselineWarmRefMs": [
+        731.4179999999997,
+        948.0645409999997,
+        946.1382080000003
+      ],
+      "candidateWarmRefMs": [
+        1474.5448749999996,
+        1708.1649589999997,
+        1747.368957999999
+      ],
+      "baselineMedianMs": 946.1382080000003,
+      "candidateMedianMs": 1708.1649589999997,
+      "addedMedianMs": 762.0267509999994,
+      "baselineCliMs": 978.8113749999993,
+      "candidateCliMs": 1741.7411250000005,
+      "targetInputsEach": 4,
+      "siblingInputsEach": 0
+    },
+    {
+      "mode": "shared",
+      "baselineSource": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+      "baselineNativeFingerprint": "b8fdeef044fbf1b3abbd41c5ee66325b6a20d4b2caab6452fa5c2667c9c1746d",
+      "baselineNativeBinarySha256": "a241ca7b01840910be83f9771b7161c4c837b07b664234d5e4de3372e003ec9c",
+      "sameFixtureBinarySha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+      "baselineWarmRefMs": [
+        744.4282499999999,
+        452.5437499999998,
+        450.78750000000036
+      ],
+      "candidateWarmRefMs": [
+        1708.7157500000003,
+        1347.3732920000002,
+        1358.9034999999985
+      ],
+      "baselineMedianMs": 452.5437499999998,
+      "candidateMedianMs": 1358.9034999999985,
+      "addedMedianMs": 906.3597499999987,
+      "baselineCliMs": 530.672790999999,
+      "candidateCliMs": 1446.525334,
+      "targetInputsEach": 4,
+      "siblingInputsEach": 0
+    }
+  ]
+}

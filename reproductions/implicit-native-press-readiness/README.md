@@ -1,5 +1,11 @@
 # Implicit native press readiness: constructed UIKit evidence
 
+[The intermediate whole-review investigation](intermediate-2a9-review/README.md) preserves 18 recordings, its exact source/gate, the actual guest-input failure, passed native AX/tree controls, and the remaining 500-control latency regression. It is not final-fix evidence.
+
+[The rejected AX-bound experiment](rejected-633-ax-bound/README.md) preserves seven recordings and its unchanged safety checks; measured latency did not improve.
+
+[The optional AbsoluteValue probe](optional-absolute-value-probe/README.md) preserves one bounded diagnostic recording. The optional fact was absent on an independently empty input, so its result is unknown; no fallback or support claim follows.
+
 [The query-attributes prototype investigation](prototype-3c9-query-attributes/README.md) adds matched 500-control measurements, fast missing-binding refusals, and all 25 additional recordings. It explicitly records the rejected prototype’s placed-window and input-value regressions; it is not final-fix evidence. Setup recordings can show default simulator Springboard or Settings.
 
 [The fixture-only final review](fixture-review-c7d640f/README.md) records SDK source `c7d640f`, its clean exact gate and that revision’s native golden-data recheck, with unchanged verified runtime artifacts.

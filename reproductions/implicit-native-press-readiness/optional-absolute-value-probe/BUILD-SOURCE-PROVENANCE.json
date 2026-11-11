@@ -1,0 +1,54 @@
+{
+  "sdkSourceUnchanged": "633d3e696ce6e163eea732481aaefeff208018a8",
+  "sourceVersion": "agent-device-simulator-ax-absolute-value-diagnostic",
+  "protocolVersion": 1,
+  "originalRequiredVocabularyChanged": false,
+  "diagnosticSpecificVersionPreventsOrdinarySdkAdoption": true,
+  "sourceFiles": [
+    {
+      "path": "ForegroundApplicationGeometry.h",
+      "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+    },
+    {
+      "path": "SnapshotBridge.m",
+      "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+    },
+    {
+      "path": "SnapshotBridgeCapture.h",
+      "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+    },
+    {
+      "path": "SnapshotBridgeCapture.m",
+      "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+    },
+    {
+      "path": "SnapshotBridgeRequest.h",
+      "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+    },
+    {
+      "path": "SnapshotBridgeRequest.m",
+      "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+    },
+    {
+      "path": "SnapshotBridgeRuntime.h",
+      "sha256": "aa4e8c25636b2498984e47fc40f0fd664f8e3e02be462dc849e34b9ba7545dd8"
+    },
+    {
+      "path": "SnapshotBridgeRuntime.m",
+      "sha256": "189b1873ac7f3f50336ee878159ba564db6f66e8a88b2d7f883cba9fc2ce316f"
+    },
+    {
+      "path": "SnapshotBridgeSurfaceHosts.h",
+      "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+    },
+    {
+      "path": "SnapshotBridgeSurfaceHosts.m",
+      "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+    }
+  ],
+  "originalReviewedPatchSha256": "1ef2bcce019c9ef57aa35988cfaa211d42a13d0f83b63d46fd136685b173d062",
+  "publicHeaderNormalizedPatchSha256": "1cc0b744da9b2fea1606bf0c0506f9f217819fcfe5a1af627a894f949a34fc85",
+  "binarySha256": "049acb1e8c2e7b2fd9ed89126db8184cd665082336c9c2aff7d7f876979c8cad",
+  "build": "passed; canonical iphonesimulator clang -arch arm64 -mios-simulator-version-min=15.0 -fobjc-arc -Wall -Wextra, Foundation/CoreGraphics, same five production m files. No SDK/global cache binary replaced.",
+  "nativeComparisonFingerprint": "a68ace119cab2a065c018f9bcb5ba4c2f1fbf18c0bad86fb84ef2521f96e0a6b"
+}

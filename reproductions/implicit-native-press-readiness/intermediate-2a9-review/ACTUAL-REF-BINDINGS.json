@@ -1,0 +1,37 @@
+{
+  "source": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "actualSdkTargets": [
+    {
+      "command": "pressReadiness",
+      "authorizedTarget": {
+        "value": "",
+        "label": "",
+        "type": 49,
+        "rect": {
+          "y": 90,
+          "width": 200,
+          "height": 42,
+          "x": 24
+        },
+        "identifier": "geometry-input"
+      },
+      "appBundleId": "dev.e2e.readinessgeometry"
+    },
+    {
+      "command": "pressReadiness",
+      "authorizedTarget": {
+        "type": 49,
+        "identifier": "geometry-input",
+        "value": "Geometry input",
+        "rect": {
+          "x": 24,
+          "y": 90,
+          "width": 200,
+          "height": 42
+        }
+      },
+      "appBundleId": "dev.e2e.readinessgeometry"
+    }
+  ],
+  "qualification": "First actual SDK private AX ref has raw-empty value and succeeds. Second actual SDK raw-format ref still uses guest simulator bridge and has displayed placeholder value, then refuses missing. Direct native tree comparison captures separately return raw-empty. A later independently observed healthy/tree SDK ref on the placed iPad succeeds."
+}

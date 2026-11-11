@@ -1,0 +1,1347 @@
+{
+  "case": "final2a9-values-ref-subset-3",
+  "classification": "product-regression-with-independent-passes",
+  "explanation": "Raw-format SDK ref still came from guest simulator bridge and authorized displayed placeholder text; missing/no-dispatch. This is not a native-tree ref failure. Private AX ref focus passed. In subset 3, all six independent raw-value reads passed; the run remains red.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "recordedSuccess": false,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "values",
+  "scope": "Independent captured-ref/raw-value subset only. Ordinary-selector focus is a separately recorded2a9 regression and is excluded here, not marked passed.",
+  "coldOpenMs": 1943.1445830000002,
+  "nativeBinaryUnchanged": true,
+  "focusRoutes": [
+    {
+      "label": "actual-private-AX-ref",
+      "publicField": {
+        "hittable": true,
+        "depth": 1,
+        "type": "TextField",
+        "parentIndex": 0,
+        "rect": {
+          "width": 200,
+          "y": 90,
+          "x": 24,
+          "height": 42
+        },
+        "index": 2,
+        "enabled": true,
+        "placeholder": "Geometry input",
+        "identifier": "geometry-input",
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      "captureOptions": {
+        "interactiveOnly": true,
+        "customActions": true
+      },
+      "nativeSource": {
+        "raw": false,
+        "node": {
+          "index": 2,
+          "depth": 1,
+          "type": "TextField",
+          "hittable": true,
+          "rect": {
+            "x": 24,
+            "height": 42,
+            "y": 90,
+            "width": 200
+          },
+          "parentIndex": 0,
+          "identifier": "geometry-input",
+          "enabled": true,
+          "nativePressTarget": {
+            "label": "",
+            "rect": {
+              "x": 24,
+              "width": 200,
+              "height": 42,
+              "y": 90
+            },
+            "type": 49,
+            "value": "",
+            "identifier": "geometry-input"
+          },
+          "placeholder": "Geometry input"
+        },
+        "quality": {
+          "reasonCode": "requested-backend",
+          "state": "recovered",
+          "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+          "customActions": {
+            "blocked": false,
+            "read": 12,
+            "truncated": 0,
+            "candidates": 12
+          },
+          "timing": {
+            "presentationMs": 0.12600421905517578,
+            "acquisitionMs": 1631.235957145691
+          },
+          "backend": "private-ax"
+        },
+        "binding": {
+          "label": "",
+          "rect": {
+            "x": 24,
+            "width": 200,
+            "height": 42,
+            "y": 90
+          },
+          "type": 49,
+          "value": "",
+          "identifier": "geometry-input"
+        }
+      },
+      "press": {
+        "x": 124,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e3 (124, 111)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "ref",
+        "ref": "e3",
+        "refLabel": "geometry-input",
+        "selectorChain": [
+          "id=\"geometry-input\"",
+          "text=\"geometry-input\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 484.753917,
+      "events": [
+        {
+          "actualText": "",
+          "event": "inputFocusBegan",
+          "length": 0,
+          "ms": 10375.593333330471
+        }
+      ],
+      "afterField": {
+        "hittable": true,
+        "depth": 1,
+        "type": "TextField",
+        "focused": true,
+        "parentIndex": 0,
+        "index": 2,
+        "rect": {
+          "x": 24,
+          "height": 42,
+          "y": 90,
+          "width": 200
+        },
+        "enabled": true,
+        "placeholder": "Geometry input",
+        "identifier": "geometry-input",
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      "keyboardKeys": 35
+    },
+    {
+      "label": "raw-format-guest-bridge-ref",
+      "publicField": {
+        "index": 6,
+        "parentIndex": 4,
+        "type": "TextField",
+        "role": "UITextField",
+        "value": "Geometry input",
+        "placeholder": "Geometry input",
+        "identifier": "geometry-input",
+        "rect": {
+          "x": 24,
+          "y": 90,
+          "width": 200,
+          "height": 42
+        },
+        "enabled": true,
+        "depth": 5,
+        "password": false,
+        "editable": true,
+        "hittable": true,
+        "ref": "e7",
+        "kind": "text-field"
+      },
+      "captureOptions": {
+        "interactiveOnly": true,
+        "raw": true
+      },
+      "nativeSource": {
+        "raw": true,
+        "node": {
+          "type": "TextField",
+          "enabled": true,
+          "depth": 5,
+          "placeholder": "Geometry input",
+          "index": 6,
+          "nativePressTarget": {
+            "type": 49,
+            "rect": {
+              "y": 90,
+              "x": 24,
+              "width": 200,
+              "height": 42
+            },
+            "identifier": "geometry-input"
+          },
+          "hittable": true,
+          "parentIndex": 4,
+          "rect": {
+            "width": 200,
+            "x": 24,
+            "y": 90,
+            "height": 42
+          },
+          "identifier": "geometry-input"
+        },
+        "quality": {
+          "state": "healthy",
+          "timing": {
+            "presentationMs": 0.05507469177246094,
+            "acquisitionMs": 29.025912284851074
+          },
+          "backend": "tree"
+        },
+        "binding": {
+          "type": 49,
+          "rect": {
+            "y": 90,
+            "x": 24,
+            "width": 200,
+            "height": 42
+          },
+          "identifier": "geometry-input"
+        }
+      },
+      "ms": 124.15650000000096,
+      "events": [],
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Resolved target was not ready for input; nothing was dispatched",
+        "details": {
+          "reason": "target_not_ready",
+          "readiness": "missing",
+          "dispatched": "no",
+          "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref."
+        }
+      },
+      "historicalHarnessLabel": "actual-tree-ref",
+      "sdkCaptureProducer": "simulator-ax-bridge; raw format does not force runner tree",
+      "nativeSourceQualification": "Separate direct native tree comparison capture; not the actual SDK ref acquisition producer."
+    }
+  ],
+  "setup": [
+    {
+      "label": "Rotate generic input fixture to the reproduced failing orientation",
+      "id": "landscape",
+      "result": {
+        "x": 74,
+        "y": 158,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=landscape (74, 158)",
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "selector",
+        "selector": "id=landscape",
+        "selectorChain": [
+          "id=\"landscape\"",
+          "role=\"button\" label=\"Landscape\"",
+          "label=\"Landscape\""
+        ],
+        "refLabel": "Landscape",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 3,
+          "ms": 5449.429916625377,
+          "screenBounds": "(0.0, 0.0, 852.0, 393.0)",
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        }
+      ]
+    },
+    {
+      "label": "End editing before ordinary focus proof",
+      "id": "hide-keyboard",
+      "result": {
+        "x": 310,
+        "y": 158,
+        "message": "Tapped id=hide-keyboard (310, 158)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=hide-keyboard",
+        "selectorChain": [
+          "id=\"hide-keyboard\"",
+          "role=\"button\" label=\"Hide keyboard\"",
+          "label=\"Hide keyboard\""
+        ],
+        "refLabel": "Hide keyboard",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "event": "keyboardDismissRequested",
+          "ms": 6249.001124990173
+        }
+      ]
+    },
+    {
+      "label": "End editing before ordinary focus proof",
+      "id": "hide-keyboard",
+      "result": {
+        "x": 310,
+        "y": 158,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=hide-keyboard (310, 158)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=hide-keyboard",
+        "selectorChain": [
+          "id=\"hide-keyboard\"",
+          "role=\"button\" label=\"Hide keyboard\"",
+          "label=\"Hide keyboard\""
+        ],
+        "refLabel": "Hide keyboard",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "actualText": "",
+          "event": "inputFocusEnded",
+          "length": 0,
+          "ms": 12980.335625004955
+        },
+        {
+          "event": "keyboardDismissRequested",
+          "ms": 12981.210833298974
+        }
+      ]
+    },
+    {
+      "label": "End empty-field editing before explicit content setup",
+      "id": "hide-keyboard",
+      "result": {
+        "x": 310,
+        "y": 158,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=hide-keyboard (310, 158)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=hide-keyboard",
+        "selectorChain": [
+          "id=\"hide-keyboard\"",
+          "role=\"button\" label=\"Hide keyboard\"",
+          "label=\"Hide keyboard\""
+        ],
+        "refLabel": "Hide keyboard",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "event": "keyboardDismissRequested",
+          "ms": 14083.741083333734
+        }
+      ]
+    },
+    {
+      "label": "Set real input contents exactly equal to placeholder text",
+      "id": "setup-set-actual-text",
+      "result": {
+        "x": 124,
+        "y": 206,
+        "message": "Tapped id=setup-set-actual-text (124, 206)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=setup-set-actual-text",
+        "selectorChain": [
+          "id=\"setup-set-actual-text\"",
+          "role=\"button\" label=\"Set actual placeholder text\"",
+          "label=\"Set actual placeholder text\""
+        ],
+        "refLabel": "Set actual placeholder text",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "actualText": "Geometry input",
+          "event": "setupSetActualText",
+          "length": 14,
+          "ms": 14799.485124996863
+        },
+        {
+          "event": "inputChanged",
+          "ms": 14800.148833310232,
+          "text": "Geometry input"
+        }
+      ]
+    },
+    {
+      "label": "Clear actual contents through qualified fixture setup",
+      "id": "setup-clear-actual-text",
+      "result": {
+        "x": 303,
+        "y": 206,
+        "message": "Tapped id=setup-clear-actual-text (303, 206)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=setup-clear-actual-text",
+        "selectorChain": [
+          "id=\"setup-clear-actual-text\"",
+          "role=\"button\" label=\"Clear actual text\"",
+          "label=\"Clear actual text\""
+        ],
+        "refLabel": "Clear actual text",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "actualText": "",
+          "event": "setupClearActualText",
+          "length": 0,
+          "ms": 17932.509750011377
+        },
+        {
+          "event": "inputChanged",
+          "ms": 17933.143250003923,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "label": "Set actual placeholder text after capturing empty bindings",
+      "id": "setup-set-actual-text",
+      "result": {
+        "x": 124,
+        "y": 206,
+        "message": "Tapped id=setup-set-actual-text (124, 206)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=setup-set-actual-text",
+        "selectorChain": [
+          "id=\"setup-set-actual-text\"",
+          "role=\"button\" label=\"Set actual placeholder text\"",
+          "label=\"Set actual placeholder text\""
+        ],
+        "refLabel": "Set actual placeholder text",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "actualText": "Geometry input",
+          "event": "setupSetActualText",
+          "length": 14,
+          "ms": 21115.72941666236
+        },
+        {
+          "event": "inputChanged",
+          "ms": 21116.282333328854,
+          "text": "Geometry input"
+        }
+      ]
+    }
+  ],
+  "staleValueReads": [
+    {
+      "label": "Actual text equal to placeholder remains actual nonempty contents",
+      "captured": {
+        "raw": false,
+        "node": {
+          "index": 2,
+          "parentIndex": 0,
+          "type": "TextField",
+          "identifier": "geometry-input",
+          "rect": {
+            "width": 200,
+            "height": 42,
+            "x": 24,
+            "y": 90
+          },
+          "hittable": true,
+          "value": "Geometry input",
+          "enabled": true,
+          "nativePressTarget": {
+            "type": 49,
+            "value": "Geometry input",
+            "identifier": "geometry-input",
+            "label": "",
+            "rect": {
+              "width": 200,
+              "height": 42,
+              "y": 90,
+              "x": 24
+            }
+          },
+          "placeholder": "Geometry input",
+          "depth": 1
+        },
+        "quality": {
+          "state": "recovered",
+          "timing": {
+            "acquisitionMs": 1671.152949333191,
+            "presentationMs": 0.2199411392211914
+          },
+          "backend": "private-ax",
+          "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+          "reasonCode": "requested-backend",
+          "customActions": {
+            "truncated": 0,
+            "blocked": false,
+            "read": 12,
+            "candidates": 12
+          }
+        },
+        "binding": {
+          "type": 49,
+          "value": "Geometry input",
+          "identifier": "geometry-input",
+          "label": "",
+          "rect": {
+            "width": 200,
+            "height": 42,
+            "y": 90,
+            "x": 24
+          }
+        }
+      },
+      "response": {
+        "data": {
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "runnerMainThreadBusy": false,
+          "pressReadiness": "ready"
+        },
+        "ok": true
+      },
+      "ms": 134.3352500000001,
+      "events": []
+    },
+    {
+      "label": "Actual text equal to placeholder remains actual nonempty contents",
+      "captured": {
+        "raw": true,
+        "node": {
+          "type": "TextField",
+          "enabled": true,
+          "depth": 5,
+          "label": "Geometry input",
+          "index": 6,
+          "placeholder": "Geometry input",
+          "nativePressTarget": {
+            "value": "Geometry input",
+            "type": 49,
+            "identifier": "geometry-input",
+            "rect": {
+              "width": 200,
+              "x": 24,
+              "height": 42,
+              "y": 90
+            }
+          },
+          "value": "Geometry input",
+          "hittable": true,
+          "parentIndex": 4,
+          "rect": {
+            "height": 42,
+            "x": 24,
+            "y": 90,
+            "width": 200
+          },
+          "identifier": "geometry-input"
+        },
+        "quality": {
+          "state": "healthy",
+          "timing": {
+            "presentationMs": 0.053048133850097656,
+            "acquisitionMs": 28.66804599761963
+          },
+          "backend": "tree"
+        },
+        "binding": {
+          "value": "Geometry input",
+          "type": 49,
+          "identifier": "geometry-input",
+          "rect": {
+            "width": 200,
+            "x": 24,
+            "height": 42,
+            "y": 90
+          }
+        }
+      },
+      "response": {
+        "data": {
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "runnerMainThreadBusy": false,
+          "pressReadiness": "ready"
+        },
+        "ok": true
+      },
+      "ms": 142.7049169999991,
+      "events": []
+    },
+    {
+      "label": "Old real-text binding after actual contents clear",
+      "captured": {
+        "raw": false,
+        "node": {
+          "index": 2,
+          "parentIndex": 0,
+          "type": "TextField",
+          "identifier": "geometry-input",
+          "rect": {
+            "width": 200,
+            "height": 42,
+            "x": 24,
+            "y": 90
+          },
+          "hittable": true,
+          "value": "Geometry input",
+          "enabled": true,
+          "nativePressTarget": {
+            "type": 49,
+            "value": "Geometry input",
+            "identifier": "geometry-input",
+            "label": "",
+            "rect": {
+              "width": 200,
+              "height": 42,
+              "y": 90,
+              "x": 24
+            }
+          },
+          "placeholder": "Geometry input",
+          "depth": 1
+        },
+        "quality": {
+          "state": "recovered",
+          "timing": {
+            "acquisitionMs": 1671.152949333191,
+            "presentationMs": 0.2199411392211914
+          },
+          "backend": "private-ax",
+          "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+          "reasonCode": "requested-backend",
+          "customActions": {
+            "truncated": 0,
+            "blocked": false,
+            "read": 12,
+            "candidates": 12
+          }
+        },
+        "binding": {
+          "type": 49,
+          "value": "Geometry input",
+          "identifier": "geometry-input",
+          "label": "",
+          "rect": {
+            "width": 200,
+            "height": 42,
+            "y": 90,
+            "x": 24
+          }
+        }
+      },
+      "response": {
+        "data": {
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "pressReadiness": "missing",
+          "runnerMainThreadBusy": false
+        },
+        "ok": true
+      },
+      "ms": 111.69337499999892,
+      "events": []
+    },
+    {
+      "label": "Old real-text binding after actual contents clear",
+      "captured": {
+        "raw": true,
+        "node": {
+          "type": "TextField",
+          "enabled": true,
+          "depth": 5,
+          "label": "Geometry input",
+          "index": 6,
+          "placeholder": "Geometry input",
+          "nativePressTarget": {
+            "value": "Geometry input",
+            "type": 49,
+            "identifier": "geometry-input",
+            "rect": {
+              "width": 200,
+              "x": 24,
+              "height": 42,
+              "y": 90
+            }
+          },
+          "value": "Geometry input",
+          "hittable": true,
+          "parentIndex": 4,
+          "rect": {
+            "height": 42,
+            "x": 24,
+            "y": 90,
+            "width": 200
+          },
+          "identifier": "geometry-input"
+        },
+        "quality": {
+          "state": "healthy",
+          "timing": {
+            "presentationMs": 0.053048133850097656,
+            "acquisitionMs": 28.66804599761963
+          },
+          "backend": "tree"
+        },
+        "binding": {
+          "value": "Geometry input",
+          "type": 49,
+          "identifier": "geometry-input",
+          "rect": {
+            "width": 200,
+            "x": 24,
+            "height": 42,
+            "y": 90
+          }
+        }
+      },
+      "response": {
+        "ok": true,
+        "data": {
+          "runnerMainThreadBusy": false,
+          "pressReadiness": "missing",
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry"
+        }
+      },
+      "ms": 126.62658299999748,
+      "events": []
+    },
+    {
+      "label": "Old empty binding after real placeholder-text input",
+      "captured": {
+        "raw": false,
+        "node": {
+          "identifier": "geometry-input",
+          "enabled": true,
+          "depth": 1,
+          "placeholder": "Geometry input",
+          "index": 2,
+          "nativePressTarget": {
+            "label": "",
+            "value": "",
+            "type": 49,
+            "rect": {
+              "x": 24,
+              "width": 200,
+              "y": 90,
+              "height": 42
+            },
+            "identifier": "geometry-input"
+          },
+          "hittable": true,
+          "parentIndex": 0,
+          "rect": {
+            "height": 42,
+            "width": 200,
+            "x": 24,
+            "y": 90
+          },
+          "type": "TextField"
+        },
+        "quality": {
+          "backend": "private-ax",
+          "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+          "customActions": {
+            "candidates": 12,
+            "blocked": false,
+            "read": 12,
+            "truncated": 0
+          },
+          "timing": {
+            "acquisitionMs": 1642.0930624008179,
+            "presentationMs": 0.20599365234375
+          },
+          "state": "recovered",
+          "reasonCode": "requested-backend"
+        },
+        "binding": {
+          "label": "",
+          "value": "",
+          "type": 49,
+          "rect": {
+            "x": 24,
+            "width": 200,
+            "y": 90,
+            "height": 42
+          },
+          "identifier": "geometry-input"
+        }
+      },
+      "response": {
+        "data": {
+          "pressReadiness": "missing",
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "runnerMainThreadBusy": false
+        },
+        "ok": true
+      },
+      "ms": 122.58683400000155,
+      "events": []
+    },
+    {
+      "label": "Old empty binding after real placeholder-text input",
+      "captured": {
+        "raw": true,
+        "node": {
+          "index": 6,
+          "parentIndex": 4,
+          "type": "TextField",
+          "identifier": "geometry-input",
+          "rect": {
+            "height": 42,
+            "x": 24,
+            "y": 90,
+            "width": 200
+          },
+          "hittable": true,
+          "enabled": true,
+          "nativePressTarget": {
+            "type": 49,
+            "identifier": "geometry-input",
+            "rect": {
+              "height": 42,
+              "x": 24,
+              "width": 200,
+              "y": 90
+            }
+          },
+          "placeholder": "Geometry input",
+          "depth": 5
+        },
+        "quality": {
+          "state": "healthy",
+          "timing": {
+            "presentationMs": 0.053048133850097656,
+            "acquisitionMs": 29.476046562194824
+          },
+          "backend": "tree"
+        },
+        "binding": {
+          "type": 49,
+          "identifier": "geometry-input",
+          "rect": {
+            "height": 42,
+            "x": 24,
+            "width": 200,
+            "y": 90
+          }
+        }
+      },
+      "response": {
+        "data": {
+          "pressReadiness": "missing",
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "runnerMainThreadBusy": false
+        },
+        "ok": true
+      },
+      "ms": 125.81620800000019,
+      "events": []
+    }
+  ],
+  "actualPlaceholderTextBindings": [
+    {
+      "raw": false,
+      "node": {
+        "index": 2,
+        "parentIndex": 0,
+        "type": "TextField",
+        "identifier": "geometry-input",
+        "rect": {
+          "width": 200,
+          "height": 42,
+          "x": 24,
+          "y": 90
+        },
+        "hittable": true,
+        "value": "Geometry input",
+        "enabled": true,
+        "nativePressTarget": {
+          "type": 49,
+          "value": "Geometry input",
+          "identifier": "geometry-input",
+          "label": "",
+          "rect": {
+            "width": 200,
+            "height": 42,
+            "y": 90,
+            "x": 24
+          }
+        },
+        "placeholder": "Geometry input",
+        "depth": 1
+      },
+      "quality": {
+        "state": "recovered",
+        "timing": {
+          "acquisitionMs": 1671.152949333191,
+          "presentationMs": 0.2199411392211914
+        },
+        "backend": "private-ax",
+        "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+        "reasonCode": "requested-backend",
+        "customActions": {
+          "truncated": 0,
+          "blocked": false,
+          "read": 12,
+          "candidates": 12
+        }
+      },
+      "binding": {
+        "type": 49,
+        "value": "Geometry input",
+        "identifier": "geometry-input",
+        "label": "",
+        "rect": {
+          "width": 200,
+          "height": 42,
+          "y": 90,
+          "x": 24
+        }
+      }
+    },
+    {
+      "raw": true,
+      "node": {
+        "type": "TextField",
+        "enabled": true,
+        "depth": 5,
+        "label": "Geometry input",
+        "index": 6,
+        "placeholder": "Geometry input",
+        "nativePressTarget": {
+          "value": "Geometry input",
+          "type": 49,
+          "identifier": "geometry-input",
+          "rect": {
+            "width": 200,
+            "x": 24,
+            "height": 42,
+            "y": 90
+          }
+        },
+        "value": "Geometry input",
+        "hittable": true,
+        "parentIndex": 4,
+        "rect": {
+          "height": 42,
+          "x": 24,
+          "y": 90,
+          "width": 200
+        },
+        "identifier": "geometry-input"
+      },
+      "quality": {
+        "state": "healthy",
+        "timing": {
+          "presentationMs": 0.053048133850097656,
+          "acquisitionMs": 28.66804599761963
+        },
+        "backend": "tree"
+      },
+      "binding": {
+        "value": "Geometry input",
+        "type": 49,
+        "identifier": "geometry-input",
+        "rect": {
+          "width": 200,
+          "x": 24,
+          "height": 42,
+          "y": 90
+        }
+      }
+    }
+  ],
+  "liveAccessorAfterClear": {
+    "ok": true,
+    "data": {
+      "nodes": [
+        {
+          "enabled": true,
+          "identifier": "geometry-input",
+          "depth": 0,
+          "index": 0,
+          "value": "Geometry input",
+          "hittable": true,
+          "rect": {
+            "y": 90,
+            "x": 24,
+            "width": 200,
+            "height": 42
+          },
+          "type": "TextField"
+        }
+      ],
+      "text": "Geometry input",
+      "found": true,
+      "runnerMainThreadBusy": false
+    }
+  },
+  "emptyBindingsAfterClear": [
+    {
+      "raw": false,
+      "node": {
+        "identifier": "geometry-input",
+        "enabled": true,
+        "depth": 1,
+        "placeholder": "Geometry input",
+        "index": 2,
+        "nativePressTarget": {
+          "label": "",
+          "value": "",
+          "type": 49,
+          "rect": {
+            "x": 24,
+            "width": 200,
+            "y": 90,
+            "height": 42
+          },
+          "identifier": "geometry-input"
+        },
+        "hittable": true,
+        "parentIndex": 0,
+        "rect": {
+          "height": 42,
+          "width": 200,
+          "x": 24,
+          "y": 90
+        },
+        "type": "TextField"
+      },
+      "quality": {
+        "backend": "private-ax",
+        "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+        "customActions": {
+          "candidates": 12,
+          "blocked": false,
+          "read": 12,
+          "truncated": 0
+        },
+        "timing": {
+          "acquisitionMs": 1642.0930624008179,
+          "presentationMs": 0.20599365234375
+        },
+        "state": "recovered",
+        "reasonCode": "requested-backend"
+      },
+      "binding": {
+        "label": "",
+        "value": "",
+        "type": 49,
+        "rect": {
+          "x": 24,
+          "width": 200,
+          "y": 90,
+          "height": 42
+        },
+        "identifier": "geometry-input"
+      }
+    },
+    {
+      "raw": true,
+      "node": {
+        "index": 6,
+        "parentIndex": 4,
+        "type": "TextField",
+        "identifier": "geometry-input",
+        "rect": {
+          "height": 42,
+          "x": 24,
+          "y": 90,
+          "width": 200
+        },
+        "hittable": true,
+        "enabled": true,
+        "nativePressTarget": {
+          "type": 49,
+          "identifier": "geometry-input",
+          "rect": {
+            "height": 42,
+            "x": 24,
+            "width": 200,
+            "y": 90
+          }
+        },
+        "placeholder": "Geometry input",
+        "depth": 5
+      },
+      "quality": {
+        "state": "healthy",
+        "timing": {
+          "presentationMs": 0.053048133850097656,
+          "acquisitionMs": 29.476046562194824
+        },
+        "backend": "tree"
+      },
+      "binding": {
+        "type": 49,
+        "identifier": "geometry-input",
+        "rect": {
+          "height": 42,
+          "x": 24,
+          "width": 200,
+          "y": 90
+        }
+      }
+    }
+  ],
+  "realTextAfterReverse": [
+    {
+      "raw": false,
+      "node": {
+        "identifier": "geometry-input",
+        "enabled": true,
+        "depth": 1,
+        "placeholder": "Geometry input",
+        "index": 2,
+        "nativePressTarget": {
+          "value": "Geometry input",
+          "type": 49,
+          "identifier": "geometry-input",
+          "label": "",
+          "rect": {
+            "y": 90,
+            "x": 24,
+            "width": 200,
+            "height": 42
+          }
+        },
+        "value": "Geometry input",
+        "hittable": true,
+        "parentIndex": 0,
+        "rect": {
+          "y": 90,
+          "width": 200,
+          "height": 42,
+          "x": 24
+        },
+        "type": "TextField"
+      },
+      "quality": {
+        "state": "recovered",
+        "timing": {
+          "acquisitionMs": 1638.411045074463,
+          "presentationMs": 0.2321004867553711
+        },
+        "backend": "private-ax",
+        "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+        "reasonCode": "requested-backend",
+        "customActions": {
+          "truncated": 0,
+          "blocked": false,
+          "read": 12,
+          "candidates": 12
+        }
+      },
+      "binding": {
+        "value": "Geometry input",
+        "type": 49,
+        "identifier": "geometry-input",
+        "label": "",
+        "rect": {
+          "y": 90,
+          "x": 24,
+          "width": 200,
+          "height": 42
+        }
+      }
+    },
+    {
+      "raw": true,
+      "node": {
+        "index": 6,
+        "parentIndex": 4,
+        "type": "TextField",
+        "identifier": "geometry-input",
+        "rect": {
+          "y": 90,
+          "width": 200,
+          "height": 42,
+          "x": 24
+        },
+        "hittable": true,
+        "label": "Geometry input",
+        "value": "Geometry input",
+        "enabled": true,
+        "nativePressTarget": {
+          "rect": {
+            "y": 90,
+            "width": 200,
+            "height": 42,
+            "x": 24
+          },
+          "type": 49,
+          "identifier": "geometry-input",
+          "value": "Geometry input"
+        },
+        "placeholder": "Geometry input",
+        "depth": 5
+      },
+      "quality": {
+        "state": "healthy",
+        "timing": {
+          "presentationMs": 0.051021575927734375,
+          "acquisitionMs": 27.800917625427246
+        },
+        "backend": "tree"
+      },
+      "binding": {
+        "rect": {
+          "y": 90,
+          "width": 200,
+          "height": 42,
+          "x": 24
+        },
+        "type": 49,
+        "identifier": "geometry-input",
+        "value": "Geometry input"
+      }
+    }
+  ],
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.004083325620740652
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 129.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 12.791083310730755,
+      "screenBounds": "(0.0, 0.0, 393.0, 852.0)",
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 3,
+      "ms": 5449.429916625377,
+      "screenBounds": "(0.0, 0.0, 852.0, 393.0)",
+      "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+    },
+    {
+      "event": "keyboardDismissRequested",
+      "ms": 6249.001124990173
+    },
+    {
+      "actualText": "",
+      "event": "inputFocusBegan",
+      "length": 0,
+      "ms": 10375.593333330471
+    },
+    {
+      "actualText": "",
+      "event": "inputFocusEnded",
+      "length": 0,
+      "ms": 12980.335625004955
+    },
+    {
+      "event": "keyboardDismissRequested",
+      "ms": 12981.210833298974
+    },
+    {
+      "event": "keyboardDismissRequested",
+      "ms": 14083.741083333734
+    },
+    {
+      "actualText": "Geometry input",
+      "event": "setupSetActualText",
+      "length": 14,
+      "ms": 14799.485124996863
+    },
+    {
+      "event": "inputChanged",
+      "ms": 14800.148833310232,
+      "text": "Geometry input"
+    },
+    {
+      "actualText": "",
+      "event": "setupClearActualText",
+      "length": 0,
+      "ms": 17932.509750011377
+    },
+    {
+      "event": "inputChanged",
+      "ms": 17933.143250003923,
+      "text": ""
+    },
+    {
+      "actualText": "Geometry input",
+      "event": "setupSetActualText",
+      "length": 14,
+      "ms": 21115.72941666236
+    },
+    {
+      "event": "inputChanged",
+      "ms": 21116.282333328854,
+      "text": "Geometry input"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source": "633d3e696ce6e163eea732481aaefeff208018a8",
+  "passed": [
+    {
+      "name": "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "seconds": 0.024
+    },
+    {
+      "name": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+      "seconds": 0.127
+    },
+    {
+      "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether",
+      "seconds": 0.106
+    },
+    {
+      "name": "testEveryRunnerRequestFieldHasAProductionRequest",
+      "seconds": 0.118
+    },
+    {
+      "name": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+      "seconds": 0.099
+    },
+    {
+      "name": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "seconds": 0.129
+    },
+    {
+      "name": "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+      "seconds": 0.122
+    },
+    {
+      "name": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+      "seconds": 5.545
+    },
+    {
+      "name": "testReadinessDistinguishesRawInputContentsFromItsPlaceholder",
+      "seconds": 7.795
+    },
+    {
+      "name": "testSnapshotPresentationPreservesCurrentWireShape",
+      "seconds": 0.022
+    }
+  ],
+  "failed": 0,
+  "skipped": 0
+}

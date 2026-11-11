@@ -1,0 +1,94 @@
+{
+  "cases": [
+    {
+      "case": "final2a9-alias-1",
+      "classification": "setup-failure",
+      "explanation": "Window opened maximized at origin zero after fixture installation. Stopped before alias input; no placed-window claim."
+    },
+    {
+      "case": "final2a9-alias-2",
+      "classification": "pass",
+      "explanation": "Real native positive window origin, intended and alias full captured/live frames, identical native identity, strict ready, one intended and zero alias actions. Production prefilter count is inferred from constructed geometry/source, not directly logged."
+    },
+    {
+      "case": "final2a9-anonymous-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained."
+    },
+    {
+      "case": "final2a9-buttons-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained."
+    },
+    {
+      "case": "final2a9-clipped-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained."
+    },
+    {
+      "case": "final2a9-duplicates-1",
+      "classification": "pass-with-qualified-caller-cancellation",
+      "explanation": "Strict blocked/ready duplicates, selector ambiguity, intentionally caller-canceled blocked ref with dispatched unknown, then one ready sibling input. Not labeled a product timeout."
+    },
+    {
+      "case": "final2a9-exact-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained."
+    },
+    {
+      "case": "final2a9-input-boundary-probe-1",
+      "classification": "product-regression",
+      "explanation": "Ordinary empty-field selector is refused missing/no-dispatch. Actual SDK guest simulator bridge authorizes displayed placeholder text while native readiness verifies raw empty input contents."
+    },
+    {
+      "case": "final2a9-input-boundary-probe-2",
+      "classification": "product-regression",
+      "explanation": "Ordinary empty-field selector is refused missing/no-dispatch. Actual SDK guest simulator bridge authorizes displayed placeholder text while native readiness verifies raw empty input contents."
+    },
+    {
+      "case": "final2a9-ipad-tree-ref-1",
+      "classification": "pass",
+      "explanation": "Actual SDK runner-tree backend observed healthy/tree through naturally placed-window fallback; one empty-field focus event, focused true, keyboard visible. Raw format alone is not used as producer evidence."
+    },
+    {
+      "case": "final2a9-landscape-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained."
+    },
+    {
+      "case": "final2a9-missing-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained."
+    },
+    {
+      "case": "final2a9-shared-1",
+      "classification": "pass",
+      "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained."
+    },
+    {
+      "case": "final2a9-values-1",
+      "classification": "product-regression",
+      "explanation": "Ordinary empty-field selector is refused missing/no-dispatch. Actual SDK guest simulator bridge authorizes displayed placeholder text while native readiness verifies raw empty input contents."
+    },
+    {
+      "case": "final2a9-values-ref-subset-1",
+      "classification": "harness-setup-failure",
+      "explanation": "Private AX ref focus passed, then SDK rejected mutually exclusive raw/actions flags before the next ref was dispatched. QA capture flags were corrected in later attempts."
+    },
+    {
+      "case": "final2a9-values-ref-subset-2",
+      "classification": "product-regression-with-independent-passes",
+      "explanation": "Raw-format SDK ref still came from guest simulator bridge and authorized displayed placeholder text; missing/no-dispatch. This is not a native-tree ref failure. Private AX ref focus passed. In subset 3, all six independent raw-value reads passed; the run remains red."
+    },
+    {
+      "case": "final2a9-values-ref-subset-3",
+      "classification": "product-regression-with-independent-passes",
+      "explanation": "Raw-format SDK ref still came from guest simulator bridge and authorized displayed placeholder text; missing/no-dispatch. This is not a native-tree ref failure. Private AX ref focus passed. In subset 3, all six independent raw-value reads passed; the run remains red."
+    },
+    {
+      "case": "final2a9-fade750-1",
+      "classification": "pass",
+      "explanation": null
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "source": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "productionBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "unitArtifact": {
+    "tests": [
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+      "testEveryCommandDeclaresEveryRunnerSideDecisionTogether",
+      "testEveryRunnerRequestFieldHasAProductionRequest",
+      "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+      "testSnapshotPresentationPreservesCurrentWireShape",
+      "testReadinessDistinguishesRawInputContentsFromItsPlaceholder"
+    ],
+    "fingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+    "binarySha256": "102570855db3c4a595662b2b3364a284f59ee1903e24a91f5545a9f457c71014"
+  },
+  "result": {
+    "source": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+    "passed": [
+      {
+        "name": "testAuthorizedPressTargetMatchesGoldenParityTable",
+        "seconds": 0.024
+      },
+      {
+        "name": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+        "seconds": 0.123
+      },
+      {
+        "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether",
+        "seconds": 0.128
+      },
+      {
+        "name": "testEveryRunnerRequestFieldHasAProductionRequest",
+        "seconds": 0.137
+      },
+      {
+        "name": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+        "seconds": 0.115
+      },
+      {
+        "name": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+        "seconds": 0.129
+      },
+      {
+        "name": "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+        "seconds": 0.138
+      },
+      {
+        "name": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+        "seconds": 6.214
+      },
+      {
+        "name": "testReadinessDistinguishesRawInputContentsFromItsPlaceholder",
+        "seconds": 8.222
+      },
+      {
+        "name": "testSnapshotPresentationPreservesCurrentWireShape",
+        "seconds": 0.015
+      }
+    ],
+    "failed": 0,
+    "skipped": 0,
+    "exitCode": 0
+  },
+  "selection": "Original eight plus command-table bookkeeping and raw-input placeholder distinction;10 passed,0failed,0skipped. Not a full native-suite claim.",
+  "originalEight": {
+    "passed": 8,
+    "cases": [
+      "testAuthorizedPressTargetMatchesGoldenParityTable",
+      "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+      "testEveryRunnerRequestFieldHasAProductionRequest",
+      "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+      "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+      "testProductionRunnerRequestsDecodeWithoutDroppingAKey",
+      "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+      "testSnapshotPresentationPreservesCurrentWireShape"
+    ]
+  },
+  "commandTable": {
+    "passed": 1,
+    "name": "testEveryCommandDeclaresEveryRunnerSideDecisionTogether"
+  },
+  "rawInputContents": {
+    "passed": 1,
+    "name": "testReadinessDistinguishesRawInputContentsFromItsPlaceholder"
+  }
+}

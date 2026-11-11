@@ -1,0 +1,20 @@
+{
+  "cases": [
+    "ax633-anonymous-1",
+    "ax633-buttons-1",
+    "ax633-clipped-1",
+    "ax633-duplicates-1",
+    "ax633-landscape-1",
+    "ax633-missing-1",
+    "ax633-shared-1"
+  ],
+  "count": 7,
+  "notRun": [
+    "exact same-frame overlap controls",
+    "raw-input stale-value controls",
+    "placed alias",
+    "actual removal probe",
+    "retained AX-handle freshness within a single query"
+  ],
+  "mediaStatus": "All original recordings fully decoded without errors; first/last PNGs exported and reviewed."
+}

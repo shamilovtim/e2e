@@ -1,0 +1,9 @@
+{
+  "head": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "tree": "129141d2dac031930b21a5b8b809d7798ea28c9e",
+  "base": "5a836c05d5abfe3daa7556af4a1906a1e1029e17",
+  "sourcePatch": "checks/intermediate-source.patch",
+  "patchSha256": "5f8058bdd9cbd2bfb944d39a3dc62299259899ba5edb459c0a77570f12a59193",
+  "reverseApplyCheck": "passed using an isolated index at the attributed head",
+  "status": "Intermediate source; gate and native10 pass, but actual guest inputs still fail and measured overhead is +762\u2013906ms. Not a final fix."
+}

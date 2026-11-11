@@ -1,0 +1,67 @@
+{
+  "source": "633d3e696ce6e163eea732481aaefeff208018a8",
+  "disposition": "Rejected optimization: no material measured benefit; not adopted. No exact gate at this prototype.",
+  "native10": "passed10,failed0,skipped0",
+  "measured": [
+    {
+      "mode": "anonymous",
+      "refsMs": [
+        1334.871541999999,
+        1851.5355,
+        1854.6420829999988
+      ],
+      "medianMs": 1851.5355,
+      "cliMs": 1893.5119169999998,
+      "success": true,
+      "targetInputs": 4,
+      "siblingInputs": 0
+    },
+    {
+      "mode": "buttons",
+      "refsMs": [
+        1489.9850419999993,
+        1720.8767499999994,
+        1716.6839580000014
+      ],
+      "medianMs": 1716.6839580000014,
+      "cliMs": 1718.4786660000009,
+      "success": true,
+      "targetInputs": 4,
+      "siblingInputs": 0
+    },
+    {
+      "mode": "shared",
+      "refsMs": [
+        1656.6607090000007,
+        1395.7134999999998,
+        1366.738292
+      ],
+      "medianMs": 1395.7134999999998,
+      "cliMs": 1448.4153750000005,
+      "success": true,
+      "targetInputs": 4,
+      "siblingInputs": 0
+    },
+    {
+      "mode": "missing",
+      "refsMs": [],
+      "medianMs": null,
+      "cliMs": 908.7552080000005,
+      "success": true,
+      "targetInputs": 0,
+      "siblingInputs": 0
+    }
+  ],
+  "notRun": [
+    "exact same-frame overlap controls",
+    "raw-input stale-value controls",
+    "placed alias",
+    "actual removal probe",
+    "retained AX-handle freshness within a single query"
+  ],
+  "alreadyCompletedSafety": [
+    "clipped portrait",
+    "clipped landscape",
+    "distinct blocked/ready duplicates"
+  ]
+}

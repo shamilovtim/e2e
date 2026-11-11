@@ -1,0 +1,294 @@
+{
+  "case": "final2a9-exact-1",
+  "classification": "pass",
+  "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "c1ba061c6c4e0af9425f551c6964100b4e0f51ea84a547b9e68c3d7263e48413",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "exact",
+  "coldOpenMs": 1898.815083,
+  "targets": [
+    {
+      "index": 8,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Overlapping action",
+      "identifier": "overlap",
+      "rect": {
+        "x": 24,
+        "y": 650,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e9",
+      "kind": "button"
+    },
+    {
+      "index": 9,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Overlapping action",
+      "identifier": "overlap",
+      "rect": {
+        "x": 24,
+        "y": 650,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e10",
+      "kind": "button"
+    }
+  ],
+  "nativeBinaryUnchanged": true,
+  "samples": [
+    {
+      "label": "selector-ambiguity",
+      "target": {
+        "selector": "id=overlap"
+      },
+      "error": {
+        "code": "AMBIGUOUS_MATCH",
+        "message": "Selector matched 2 distinct actionable elements: id=overlap",
+        "details": {
+          "selector": "id=overlap",
+          "matches": 2,
+          "candidates": [
+            "@e9 [button] \"Overlapping action\"",
+            "@e10 [button] \"Overlapping action\""
+          ],
+          "dispatched": "no",
+          "hint": "Multiple candidates matched. Narrow the query or pass an exact identifier."
+        }
+      },
+      "ms": 39.95666699999947,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "accepted",
+          "command": "appState"
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 0.868
+        },
+        {
+          "phase": "completed",
+          "command": "appState",
+          "nativeDurationMs": 1.295
+        }
+      ]
+    },
+    {
+      "label": "ref-ambiguity",
+      "target": {
+        "ref": "@e10"
+      },
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Resolved target was not ready for input; nothing was dispatched",
+        "details": {
+          "reason": "target_not_ready",
+          "readiness": "ambiguous",
+          "dispatched": "no",
+          "hint": "Inspect the current surface and retry when the intended control is available. For an @ref, run snapshot -i and retry with a selector; re-observation can retire the old ref."
+        }
+      },
+      "ms": 137.3360419999999,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 126.72900000000001
+        }
+      ]
+    }
+  ],
+  "nativeGeometryObservations": {
+    "liveElementRead": {
+      "ms": 58.855084000000716,
+      "result": {
+        "error": {
+          "code": "AMBIGUOUS_MATCH",
+          "message": "selector matched multiple elements"
+        },
+        "ok": false
+      }
+    },
+    "rawSnapshotQuality": {
+      "backend": "tree",
+      "state": "healthy",
+      "timing": {
+        "presentationMs": 0.032067298889160156,
+        "acquisitionMs": 17.02296733856201
+      }
+    },
+    "rawWindowRects": [
+      {
+        "x": 0,
+        "height": 852,
+        "y": 0,
+        "width": 393
+      }
+    ],
+    "nativeWindowTreeQuality": {
+      "backend": "tree",
+      "state": "healthy",
+      "timing": {
+        "presentationMs": 0.032067298889160156,
+        "acquisitionMs": 17.02296733856201
+      }
+    },
+    "sourceRootRects": [
+      {
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "x": 0
+      }
+    ],
+    "rawNodes": [
+      {
+        "rect": {
+          "width": 340,
+          "x": 24,
+          "height": 48,
+          "y": 650
+        },
+        "label": "Overlapping action",
+        "index": 17,
+        "nativePressTarget": {
+          "type": 9,
+          "identifier": "overlap",
+          "label": "Overlapping action",
+          "rect": {
+            "x": 24,
+            "y": 650,
+            "height": 48,
+            "width": 340
+          }
+        },
+        "identifier": "overlap",
+        "enabled": true,
+        "type": "Button",
+        "parentIndex": 4,
+        "depth": 5,
+        "hittable": true
+      },
+      {
+        "rect": {
+          "width": 340,
+          "x": 24,
+          "height": 48,
+          "y": 650
+        },
+        "label": "Overlapping action",
+        "index": 19,
+        "nativePressTarget": {
+          "type": 9,
+          "identifier": "overlap",
+          "label": "Overlapping action",
+          "rect": {
+            "y": 650,
+            "width": 340,
+            "x": 24,
+            "height": 48
+          }
+        },
+        "identifier": "overlap",
+        "enabled": true,
+        "type": "Button",
+        "parentIndex": 4,
+        "depth": 5,
+        "hittable": true
+      }
+    ],
+    "strict": [
+      {
+        "target": {
+          "type": 9,
+          "identifier": "overlap",
+          "label": "Overlapping action",
+          "rect": {
+            "x": 24,
+            "y": 650,
+            "height": 48,
+            "width": 340
+          },
+          "point": {
+            "x": 194,
+            "y": 674
+          }
+        },
+        "observation": {
+          "ms": 121.62287500000002,
+          "result": {
+            "ok": true,
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadiness": "ambiguous",
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        }
+      },
+      {
+        "target": {
+          "type": 9,
+          "identifier": "overlap",
+          "label": "Overlapping action",
+          "rect": {
+            "y": 650,
+            "width": 340,
+            "x": 24,
+            "height": 48
+          },
+          "point": {
+            "x": 194,
+            "y": 674
+          }
+        },
+        "observation": {
+          "ms": 120.64487499999996,
+          "result": {
+            "ok": true,
+            "data": {
+              "pressReadiness": "ambiguous",
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.overlayreadinessvariants"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.00662502134218812
+    }
+  ]
+}

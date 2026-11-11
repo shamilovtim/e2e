@@ -1,0 +1,113 @@
+[
+  {
+    "mode": "anonymous",
+    "routes": [
+      {
+        "kind": "ref",
+        "overallMs": 1613.045083,
+        "nativeReadinessMs": [
+          866.604
+        ]
+      },
+      {
+        "kind": "ref",
+        "overallMs": 1873.6429590000007,
+        "nativeReadinessMs": [
+          858.2070000000001
+        ]
+      },
+      {
+        "kind": "ref",
+        "overallMs": 1826.633084000001,
+        "nativeReadinessMs": [
+          852.51
+        ]
+      },
+      {
+        "kind": "cli",
+        "overallMs": 1830.4537500000006,
+        "nativeReadinessMs": [
+          862.375
+        ]
+      }
+    ]
+  },
+  {
+    "mode": "buttons",
+    "routes": [
+      {
+        "kind": "ref",
+        "overallMs": 1474.5448749999996,
+        "nativeReadinessMs": [
+          747.223
+        ]
+      },
+      {
+        "kind": "ref",
+        "overallMs": 1708.1649589999997,
+        "nativeReadinessMs": [
+          740.88
+        ]
+      },
+      {
+        "kind": "ref",
+        "overallMs": 1747.368957999999,
+        "nativeReadinessMs": [
+          749.249
+        ]
+      },
+      {
+        "kind": "cli",
+        "overallMs": 1741.7411250000005,
+        "nativeReadinessMs": [
+          764.563
+        ]
+      }
+    ]
+  },
+  {
+    "mode": "shared",
+    "routes": [
+      {
+        "kind": "ref",
+        "overallMs": 1708.7157500000003,
+        "nativeReadinessMs": [
+          919.8629999999999
+        ]
+      },
+      {
+        "kind": "ref",
+        "overallMs": 1347.3732920000002,
+        "nativeReadinessMs": [
+          898.552
+        ]
+      },
+      {
+        "kind": "ref",
+        "overallMs": 1358.9034999999985,
+        "nativeReadinessMs": [
+          912.477
+        ]
+      },
+      {
+        "kind": "cli",
+        "overallMs": 1446.525334,
+        "nativeReadinessMs": [
+          921.249
+        ]
+      }
+    ]
+  },
+  {
+    "mode": "missing",
+    "routes": [
+      {
+        "kind": "cli",
+        "overallMs": 899.7528339999999,
+        "nativeReadinessMs": [
+          805.729
+        ]
+      }
+    ]
+  }
+]

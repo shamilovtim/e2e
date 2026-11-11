@@ -1,0 +1,31 @@
+{
+  "method": "Full-stream AVFoundation AVAssetReader decoding with uncompressed BGRA output; every sample yielded a pixel buffer, reader completed, decoded first/last PNGs exported with track preferredTransform. No adaptive interface rotation or cropping.",
+  "videos": 1,
+  "samples": 101,
+  "decodeErrors": 0,
+  "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f",
+  "cases": [
+    {
+      "video": "./video.mp4",
+      "decodedVideoSamples": 101,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 9.436666666666667,
+      "videoSha256": "d4f4fab706e36a064dda4ce83a42c8263ee6393521b364aa52558bd6632b1bb9",
+      "videoBytes": 1393150,
+      "firstPngSha256": "b4b01c27164906f23e1295283be81f93a98ac34b1b7b180c674219d64ab72386",
+      "lastPngSha256": "3691fe730776aa813d74d14a6a93ddaa24d693b6a9e0a6a2967ef08994ea6322",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    }
+  ]
+}

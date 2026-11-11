@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "finalHead": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "experiment": {
+    "base": "3c9efb43155683f714ca1af5768f42ddf7112aa6",
+    "uncommittedInputPatchSha256": "21fa4e99a0a6a974e8dab2006fc91aeed70e5590f08b00f4b591ed6e5550efc3",
+    "relationshipToFinal": "The same implementation and test passed before full-repository formatting; final exact-head validation is recorded separately.",
+    "setup": "Independent owned checkout with its own frozen-lockfile installation and build; workspace package resolution was local to that checkout.",
+    "command": "pnpm exec vitest run --project provider-integration test/integration/provider-scenarios/press-selector-resolution.test.ts -t 'native fallback readiness failure cannot corroborate a changed tree'",
+    "request": "Existing internal native tree capture preference; matching healthy tree captures; the runner readiness failure initially reports unknown delivery.",
+    "mutation": "Remove only readDispatchDisclosure(error.details) !== 'no' from the iOS tap-corroboration eligibility condition.",
+    "results": {
+      "beforeMutation": {
+        "passed": 1,
+        "failed": 0,
+        "skipped": 2,
+        "exitCode": 0
+      },
+      "mutated": {
+        "passed": 0,
+        "failed": 1,
+        "skipped": 2,
+        "exitCode": 1,
+        "failure": "RPC returned false success: HTTP 200 with Tapped and corroboration warning, instead of the asserted HTTP 500 failure."
+      },
+      "restored": {
+        "passed": 1,
+        "failed": 0,
+        "skipped": 2,
+        "exitCode": 0
+      }
+    },
+    "assertions": [
+      "Native read-origin error remains typed and reports no press input dispatched.",
+      "No tap or post-action capture is sent after the failed readiness read."
+    ],
+    "cleanup": {
+      "productionMutationRestored": true,
+      "ownedCheckoutRemoved": true,
+      "reviewedMainShaStatusAndDiffUnchangedDuringExperiment": true
+    }
+  },
+  "preliminaryControls": {
+    "status": "Not counted as false-success detection.",
+    "findings": [
+      "Early fallback/backend controls failed only on an extra post-action capture; they did not prove false success.",
+      "The default simulator route independently rejects a keyed baseline paired with an unkeyed legacy observation."
+    ],
+    "retainedLocally": true,
+    "scope": "The final proof specifically covers the existing pinned native fallback route, without fabricating identity keys or disabling lineage checks."
+  }
+}

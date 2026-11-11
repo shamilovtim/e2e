@@ -1,0 +1,261 @@
+{
+  "case": "final2a9-clipped-1",
+  "classification": "pass",
+  "explanation": "Requested generic-fixture behavior observed; exact source, native artifact and fixture attribution retained.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "fabcc12f1ecde84783f97cfdf90b1761a4f9a7690e8e854a0d0c6fc86506e10f",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "clipped",
+  "coldOpenMs": 1979.7762500000001,
+  "target": {
+    "index": 8,
+    "parentIndex": 7,
+    "type": "Cell",
+    "role": "UITableViewCellAccessibilityElement",
+    "subrole": "UIAccessibilityElement",
+    "identifier": "clipped-row",
+    "rect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "enabled": true,
+    "depth": 2,
+    "hittable": true,
+    "label": "Visible tail of row 0",
+    "ref": "e9",
+    "kind": "cell"
+  },
+  "frameComparison": {
+    "publicVisibleRect": {
+      "x": 24,
+      "y": 180,
+      "width": 345,
+      "height": 70
+    },
+    "canonicalPoint": {
+      "x": 197,
+      "y": 215
+    },
+    "nativeSourceRect": {
+      "height": 400,
+      "x": 24,
+      "width": 345,
+      "y": -150
+    },
+    "nativeLiveElementRect": {
+      "x": 24,
+      "height": 400,
+      "y": -150,
+      "width": 345
+    },
+    "nativeRectsMatch": true,
+    "strictReadiness": "ready"
+  },
+  "actualInputPoint": {
+    "x": 197,
+    "y": 215
+  },
+  "nativeBinaryUnchanged": true,
+  "samples": [
+    {
+      "label": "frame-ref",
+      "target": {
+        "ref": "@e9"
+      },
+      "press": {
+        "x": 197,
+        "y": 215,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e9 (197, 215)",
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "ref",
+        "ref": "e9",
+        "refLabel": "Visible tail of row 0",
+        "selectorChain": [
+          "id=\"clipped-row\"",
+          "role=\"cell\" label=\"Visible tail of row 0\"",
+          "label=\"Visible tail of row 0\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 459.8111250000002,
+      "nativeCommands": [
+        {
+          "phase": "accepted",
+          "command": "pressReadiness"
+        },
+        {
+          "phase": "completed",
+          "command": "pressReadiness",
+          "nativeDurationMs": 109.59
+        },
+        {
+          "phase": "accepted",
+          "command": "tap"
+        },
+        {
+          "phase": "completed",
+          "command": "tap",
+          "nativeDurationMs": 324.772
+        }
+      ]
+    }
+  ],
+  "nativeGeometryObservations": {
+    "liveElementRead": {
+      "ms": 117.06016699999964,
+      "result": {
+        "data": {
+          "found": true,
+          "runnerMainThreadBusy": false,
+          "text": "clipped-row",
+          "nodes": [
+            {
+              "depth": 0,
+              "index": 0,
+              "enabled": true,
+              "identifier": "clipped-row",
+              "rect": {
+                "x": 24,
+                "height": 400,
+                "y": -150,
+                "width": 345
+              },
+              "type": "Cell",
+              "hittable": true
+            }
+          ]
+        },
+        "ok": true
+      }
+    },
+    "rawSnapshotQuality": {
+      "state": "healthy",
+      "backend": "tree",
+      "timing": {
+        "acquisitionMs": 23.91493320465088,
+        "presentationMs": 0.04303455352783203
+      }
+    },
+    "rawWindowRects": [
+      {
+        "width": 393,
+        "height": 852,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "nativeWindowTreeQuality": {
+      "state": "healthy",
+      "backend": "tree",
+      "timing": {
+        "acquisitionMs": 23.91493320465088,
+        "presentationMs": 0.04303455352783203
+      }
+    },
+    "sourceRootRects": [
+      {
+        "width": 393,
+        "y": 0,
+        "height": 852,
+        "x": 0
+      }
+    ],
+    "rawNodes": [
+      {
+        "label": "Visible tail of row 0",
+        "identifier": "clipped-row",
+        "enabled": true,
+        "depth": 7,
+        "rect": {
+          "x": 24,
+          "width": 345,
+          "height": 400,
+          "y": -150
+        },
+        "type": "Cell",
+        "nativePressTarget": {
+          "rect": {
+            "height": 400,
+            "x": 24,
+            "width": 345,
+            "y": -150
+          },
+          "identifier": "clipped-row",
+          "type": 75
+        },
+        "index": 18,
+        "hittable": true,
+        "parentIndex": 17
+      }
+    ],
+    "strict": [
+      {
+        "target": {
+          "rect": {
+            "height": 400,
+            "x": 24,
+            "width": 345,
+            "y": -150
+          },
+          "identifier": "clipped-row",
+          "type": 75,
+          "point": {
+            "x": 197,
+            "y": 215
+          }
+        },
+        "observation": {
+          "ms": 105.04358400000001,
+          "result": {
+            "data": {
+              "runnerMainThreadBusy": false,
+              "pressReadinessAppBundleId": "dev.e2e.readinessmaintainer",
+              "pressReadiness": "ready"
+            },
+            "ok": true
+          }
+        }
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "event": "geometryChanged",
+      "mode": "clipped",
+      "ms": 1.392750011291355,
+      "orientation": 0,
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "event": "modeChanged",
+      "mode": "clipped",
+      "ms": 6.783166667446494
+    },
+    {
+      "event": "appReady",
+      "ms": 6.922999978996813,
+      "otherControlCount": 500
+    },
+    {
+      "event": "clippedRowReceivedTap",
+      "ms": 5766.0294999950565,
+      "row": 0
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "case": "final2a9-fade750-1",
+  "classification": "pass",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+  "fixtureAttribution": "Retained original generic fade fixture; hash previously inspected on this owned device. Unchanged d006 harness does not collect fixture digest at run time.",
+  "result": {
+    "mode": "fade750-1",
+    "close": {
+      "x": 194,
+      "y": 514,
+      "message": "Tapped @e3 (194, 514)",
+      "runnerMainThreadBusy": false,
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e3",
+      "refLabel": "Close overlay",
+      "selectorChain": [
+        "id=\"Close overlay\"",
+        "role=\"button\" label=\"Close overlay\"",
+        "label=\"Close overlay\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "closeMs": 1004.6208749999996,
+    "target": {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    "press": {
+      "x": 194,
+      "y": 384,
+      "runnerMainThreadBusy": false,
+      "message": "Tapped @e6 (194, 384)",
+      "referenceWidth": 393,
+      "referenceHeight": 852,
+      "targetKind": "ref",
+      "ref": "e6",
+      "refLabel": "Underlying action",
+      "selectorChain": [
+        "id=\"Underlying action\"",
+        "role=\"button\" label=\"Underlying action\"",
+        "label=\"Underlying action\""
+      ],
+      "resolution": {
+        "source": "ref",
+        "phase": "pre-action",
+        "kind": "exact"
+      }
+    },
+    "pressMs": 953.4820840000002,
+    "result": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true
+  },
+  "run": {
+    "exitCode": 0,
+    "wallSeconds": 10.646868374999999,
+    "source": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+    "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599"
+  },
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.00866665504872799
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeOverlayOpened",
+      "ms": 4798.545625002589
+    },
+    {
+      "durationMs": 750,
+      "event": "fadeDismissBegin",
+      "ms": 5845.726291649044
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 6595.862208341714
+    },
+    {
+      "count": 1,
+      "event": "underlyingReceivedTap",
+      "ms": 6862.437708303332
+    }
+  ]
+}

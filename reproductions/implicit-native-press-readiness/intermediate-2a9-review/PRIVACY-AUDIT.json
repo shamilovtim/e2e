@@ -1,0 +1,30 @@
+{
+  "textFilesChecked": 56,
+  "forbiddenPatternHits": [],
+  "sourceFieldNamesQualification": "Public generic source may declare standard protocol field names such as requestId; these declarations are not actual private state values. JSON proof data is checked for forbidden state keys.",
+  "originalVideos": 18,
+  "fullStreamDecoded": true,
+  "decodedSamples": 3061,
+  "decodeErrors": 0,
+  "visualReview": {
+    "endpointPngs": 36,
+    "contactSheets": 4,
+    "allEndpointsInspected": true,
+    "method": "First/last decoded PNGs inspected on contact sheets. Full streams decoded; not every interior frame was visually inspected.",
+    "observedContent": "Generic UIKit fixtures and default dedicated simulator OS/Springboard. No private product/account content observed at reviewed endpoints."
+  },
+  "excluded": "Raw state, process/runner logs, headers/tokens, device UUIDs, private paths, inventories, local socket/process/generation data, and xcresult remain outside this subset.",
+  "published": true,
+  "rootIndependentAudit": {
+    "subset": "public-curated-2a9",
+    "files": 116,
+    "videos": 18,
+    "decodedSamples": 3061,
+    "decodeErrors": 0,
+    "whitelist": "passed",
+    "hashes": "passed",
+    "symlinks": 0,
+    "privacyPatternHits": [],
+    "rootVisualReview": "All7 contact sheets reviewed;52 generic fixture/default OS endpoints; no private content observed. Interior frames fully decoded, not individually visually reviewed."
+  }
+}

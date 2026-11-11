@@ -1,0 +1,287 @@
+{
+  "case": "final2a9-alias-2",
+  "classification": "pass",
+  "explanation": "Real native positive window origin, intended and alias full captured/live frames, identical native identity, strict ready, one intended and zero alias actions. Production prefilter count is inferred from constructed geometry/source, not directly logged.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "recordedSuccess": true,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "alias",
+  "coldOpenMs": 2206.78225,
+  "nativeBinaryUnchanged": true,
+  "nativeWindowRects": [
+    {
+      "x": 241,
+      "y": 224,
+      "width": 551,
+      "height": 813
+    }
+  ],
+  "intendedLiveBeforeAlias": {
+    "ok": true,
+    "data": {
+      "nodes": [
+        {
+          "identifier": "geometry-action",
+          "hittable": true,
+          "type": "Button",
+          "enabled": true,
+          "depth": 0,
+          "label": "Geometry action",
+          "index": 0,
+          "rect": {
+            "width": 220,
+            "x": 481,
+            "y": 314,
+            "height": 42
+          }
+        }
+      ],
+      "runnerMainThreadBusy": false,
+      "found": true,
+      "text": "Geometry action"
+    }
+  },
+  "aliasLiveBeforeIdentityChange": {
+    "ok": true,
+    "data": {
+      "found": true,
+      "nodes": [
+        {
+          "identifier": "geometry-alias-diagnostic",
+          "hittable": true,
+          "type": "Button",
+          "rect": {
+            "y": 538,
+            "x": 722,
+            "width": 220,
+            "height": 42
+          },
+          "label": "Frame alias",
+          "depth": 0,
+          "index": 0,
+          "enabled": true
+        }
+      ],
+      "runnerMainThreadBusy": false,
+      "text": "Frame alias"
+    }
+  },
+  "nativeSourceQuality": {
+    "backend": "private-ax",
+    "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+    "reasonCode": "requested-backend",
+    "state": "recovered",
+    "customActions": {
+      "read": 12,
+      "candidates": 13,
+      "blocked": false,
+      "truncated": 0
+    },
+    "timing": {
+      "acquisitionMs": 1659.727931022644,
+      "presentationMs": 0.21195411682128906
+    }
+  },
+  "nativeTargets": [
+    {
+      "type": "Button",
+      "nativePressTarget": {
+        "value": "",
+        "identifier": "geometry-action",
+        "type": 9,
+        "label": "Geometry action",
+        "rect": {
+          "x": 481,
+          "height": 42,
+          "width": 220,
+          "y": 314
+        }
+      },
+      "enabled": true,
+      "depth": 1,
+      "identifier": "geometry-action",
+      "label": "Geometry action",
+      "index": 3,
+      "parentIndex": 0,
+      "rect": {
+        "height": 42,
+        "width": 220,
+        "x": 481,
+        "y": 314
+      },
+      "hittable": true
+    },
+    {
+      "type": "Button",
+      "hittable": false,
+      "parentIndex": 0,
+      "rect": {
+        "width": 70,
+        "y": 538,
+        "height": 42,
+        "x": 722
+      },
+      "identifier": "geometry-action",
+      "enabled": true,
+      "label": "Geometry action",
+      "depth": 1,
+      "nativePressTarget": {
+        "type": 9,
+        "identifier": "geometry-action",
+        "value": "",
+        "rect": {
+          "y": 538,
+          "x": 722,
+          "height": 42,
+          "width": 220
+        },
+        "label": "Geometry action"
+      },
+      "index": 29
+    }
+  ],
+  "geometryQualification": "Constructed extra-candidate geometry from fixed fixture local frames, positive native window origin and independent live/captured frame pairs. Production prefilter count is not directly observed.",
+  "readiness": {
+    "data": {
+      "pressReadiness": "ready",
+      "runnerMainThreadBusy": false,
+      "pressReadinessAppBundleId": "dev.e2e.readinessgeometry"
+    },
+    "ok": true
+  },
+  "press": {
+    "x": 591,
+    "y": 335,
+    "runnerMainThreadBusy": false,
+    "message": "Tapped @e4 (591, 335)",
+    "referenceWidth": 551,
+    "referenceHeight": 813,
+    "targetKind": "ref",
+    "ref": "e4",
+    "refLabel": "Geometry action",
+    "selectorChain": [
+      "role=\"button\" label=\"Geometry action\"",
+      "label=\"Geometry action\""
+    ],
+    "resolution": {
+      "source": "ref",
+      "phase": "pre-action",
+      "kind": "exact"
+    }
+  },
+  "inputEvents": [
+    {
+      "count": 1,
+      "event": "actionReceivedTap",
+      "ms": 13111.395250016358,
+      "orientation": 1
+    }
+  ],
+  "focusRoutes": [],
+  "setup": [
+    {
+      "label": "Expose distinct diagnostic alias for independent live frame read",
+      "id": "setup-alias-mode",
+      "result": {
+        "x": 440,
+        "y": 477,
+        "message": "Tapped id=setup-alias-mode (440, 477)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 551,
+        "referenceHeight": 813,
+        "targetKind": "selector",
+        "selector": "id=setup-alias-mode",
+        "selectorChain": [
+          "id=\"setup-alias-mode\"",
+          "role=\"button\" label=\"Enable frame alias\"",
+          "label=\"Enable frame alias\""
+        ],
+        "refLabel": "Enable frame alias",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "event": "setupAliasPrepared",
+          "localFrame": "(481.0, 314.0, 220.0, 42.0)",
+          "ms": 7764.360625005793
+        }
+      ]
+    },
+    {
+      "label": "Change actual alias control to the same native id and label",
+      "id": "setup-alias-mode",
+      "result": {
+        "x": 440,
+        "y": 477,
+        "message": "Tapped id=setup-alias-mode (440, 477)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 551,
+        "referenceHeight": 813,
+        "targetKind": "selector",
+        "selector": "id=setup-alias-mode",
+        "selectorChain": [
+          "id=\"setup-alias-mode\"",
+          "role=\"button\" label=\"Enable frame alias\"",
+          "label=\"Enable frame alias\""
+        ],
+        "refLabel": "Enable frame alias",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "event": "setupAliasEnabled",
+          "localFrame": "(481.0, 314.0, 220.0, 42.0)",
+          "ms": 8678.04349999642
+        }
+      ]
+    }
+  ],
+  "staleValueReads": [],
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.004125002305954695
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 14.975083351600915,
+      "screenBounds": "(0.0, 0.0, 1032.0, 1376.0)",
+      "viewBounds": "(0.0, 0.0, 551.0, 813.0)"
+    },
+    {
+      "event": "setupAliasPrepared",
+      "localFrame": "(481.0, 314.0, 220.0, 42.0)",
+      "ms": 7764.360625005793
+    },
+    {
+      "event": "setupAliasEnabled",
+      "localFrame": "(481.0, 314.0, 220.0, 42.0)",
+      "ms": 8678.04349999642
+    },
+    {
+      "count": 1,
+      "event": "actionReceivedTap",
+      "ms": 13111.395250016358,
+      "orientation": 1
+    }
+  ]
+}

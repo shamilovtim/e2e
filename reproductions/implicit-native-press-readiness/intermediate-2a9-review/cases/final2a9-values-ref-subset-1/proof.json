@@ -1,0 +1,312 @@
+{
+  "case": "final2a9-values-ref-subset-1",
+  "classification": "harness-setup-failure",
+  "explanation": "Private AX ref focus passed, then SDK rejected mutually exclusive raw/actions flags before the next ref was dispatched. QA capture flags were corrected in later attempts.",
+  "hostSource": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeBuiltFrom": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "nativeFingerprint": "e3323709ec2e9a029d3796cc35dc16b34eff242827ed4daf3cdef646f16d2391",
+  "nativeBinarySha256": "d603c415dac9ab5552ebf43ca2d531c5ee0740ddd8a744ff5a31d11b0e6672d7",
+  "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "recordedSuccess": false,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "sessionClosed": true,
+  "mode": "values",
+  "scope": "Independent captured-ref/raw-value subset only. Ordinary-selector focus is a separately recorded2a9 regression and is excluded here, not marked passed.",
+  "coldOpenMs": 1987.365458,
+  "focusRoutes": [
+    {
+      "label": "actual-private-AX-ref",
+      "publicField": {
+        "identifier": "geometry-input",
+        "hittable": true,
+        "type": "TextField",
+        "rect": {
+          "width": 200,
+          "y": 90,
+          "x": 24,
+          "height": 42
+        },
+        "enabled": true,
+        "depth": 1,
+        "placeholder": "Geometry input",
+        "parentIndex": 0,
+        "index": 2,
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      "captureOptions": {
+        "raw": false,
+        "customActions": true
+      },
+      "nativeSource": {
+        "raw": false,
+        "node": {
+          "identifier": "geometry-input",
+          "rect": {
+            "height": 42,
+            "x": 24,
+            "y": 90,
+            "width": 200
+          },
+          "type": "TextField",
+          "enabled": true,
+          "index": 2,
+          "parentIndex": 0,
+          "nativePressTarget": {
+            "label": "",
+            "value": "",
+            "type": 49,
+            "identifier": "geometry-input",
+            "rect": {
+              "width": 200,
+              "y": 90,
+              "x": 24,
+              "height": 42
+            }
+          },
+          "placeholder": "Geometry input",
+          "hittable": true,
+          "depth": 1
+        },
+        "quality": {
+          "state": "recovered",
+          "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+          "reasonCode": "requested-backend",
+          "customActions": {
+            "candidates": 12,
+            "blocked": false,
+            "truncated": 0,
+            "read": 12
+          },
+          "backend": "private-ax",
+          "timing": {
+            "presentationMs": 0.2110004425048828,
+            "acquisitionMs": 1649.9550342559814
+          }
+        },
+        "binding": {
+          "label": "",
+          "value": "",
+          "type": 49,
+          "identifier": "geometry-input",
+          "rect": {
+            "width": 200,
+            "y": 90,
+            "x": 24,
+            "height": 42
+          }
+        }
+      },
+      "press": {
+        "x": 124,
+        "y": 111,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped @e3 (124, 111)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "ref",
+        "ref": "e3",
+        "refLabel": "geometry-input",
+        "selectorChain": [
+          "id=\"geometry-input\"",
+          "text=\"geometry-input\""
+        ],
+        "resolution": {
+          "source": "ref",
+          "phase": "pre-action",
+          "kind": "exact"
+        }
+      },
+      "ms": 496.10662499999853,
+      "events": [
+        {
+          "actualText": "",
+          "event": "inputFocusBegan",
+          "length": 0,
+          "ms": 10553.757541696541
+        }
+      ],
+      "afterField": {
+        "identifier": "geometry-input",
+        "hittable": true,
+        "type": "TextField",
+        "rect": {
+          "height": 42,
+          "x": 24,
+          "y": 90,
+          "width": 200
+        },
+        "enabled": true,
+        "depth": 1,
+        "placeholder": "Geometry input",
+        "parentIndex": 0,
+        "index": 2,
+        "focused": true,
+        "password": false,
+        "editable": true,
+        "ref": "e3",
+        "kind": "text-field"
+      },
+      "keyboardKeys": 35
+    }
+  ],
+  "setup": [
+    {
+      "label": "Rotate generic input fixture to the reproduced failing orientation",
+      "id": "landscape",
+      "result": {
+        "x": 74,
+        "y": 158,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=landscape (74, 158)",
+        "referenceWidth": 393,
+        "referenceHeight": 852,
+        "targetKind": "selector",
+        "selector": "id=landscape",
+        "selectorChain": [
+          "id=\"landscape\"",
+          "role=\"button\" label=\"Landscape\"",
+          "label=\"Landscape\""
+        ],
+        "refLabel": "Landscape",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+          "event": "geometryChanged",
+          "interfaceOrientation": 3,
+          "ms": 5593.718875024933,
+          "screenBounds": "(0.0, 0.0, 852.0, 393.0)",
+          "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+        }
+      ]
+    },
+    {
+      "label": "End editing before ordinary focus proof",
+      "id": "hide-keyboard",
+      "result": {
+        "x": 310,
+        "y": 158,
+        "message": "Tapped id=hide-keyboard (310, 158)",
+        "runnerMainThreadBusy": false,
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=hide-keyboard",
+        "selectorChain": [
+          "id=\"hide-keyboard\"",
+          "role=\"button\" label=\"Hide keyboard\"",
+          "label=\"Hide keyboard\""
+        ],
+        "refLabel": "Hide keyboard",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "event": "keyboardDismissRequested",
+          "ms": 6393.424458336085
+        }
+      ]
+    },
+    {
+      "label": "End editing before ordinary focus proof",
+      "id": "hide-keyboard",
+      "result": {
+        "x": 310,
+        "y": 158,
+        "runnerMainThreadBusy": false,
+        "message": "Tapped id=hide-keyboard (310, 158)",
+        "referenceWidth": 852,
+        "referenceHeight": 393,
+        "targetKind": "selector",
+        "selector": "id=hide-keyboard",
+        "selectorChain": [
+          "id=\"hide-keyboard\"",
+          "role=\"button\" label=\"Hide keyboard\"",
+          "label=\"Hide keyboard\""
+        ],
+        "refLabel": "Hide keyboard",
+        "resolution": {
+          "source": "runtime",
+          "phase": "pre-action",
+          "kind": "unique"
+        }
+      },
+      "events": [
+        {
+          "actualText": "",
+          "event": "inputFocusEnded",
+          "length": 0,
+          "ms": 13157.98887499841
+        },
+        {
+          "event": "keyboardDismissRequested",
+          "ms": 13158.880624978337
+        }
+      ]
+    }
+  ],
+  "staleValueReads": [],
+  "error": {
+    "code": "INVALID_ARGS",
+    "message": "--actions and --raw are mutually exclusive: custom actions are only readable through the private-AX snapshot path, which a raw capture does not use.",
+    "details": {}
+  },
+  "samples": [],
+  "nativeEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.00320834806188941
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 129.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 1,
+      "ms": 12.857749999966472,
+      "screenBounds": "(0.0, 0.0, 393.0, 852.0)",
+      "viewBounds": "(0.0, 0.0, 393.0, 852.0)"
+    },
+    {
+      "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+      "event": "geometryChanged",
+      "interfaceOrientation": 3,
+      "ms": 5593.718875024933,
+      "screenBounds": "(0.0, 0.0, 852.0, 393.0)",
+      "viewBounds": "(0.0, 0.0, 852.0, 393.0)"
+    },
+    {
+      "event": "keyboardDismissRequested",
+      "ms": 6393.424458336085
+    },
+    {
+      "actualText": "",
+      "event": "inputFocusBegan",
+      "length": 0,
+      "ms": 10553.757541696541
+    },
+    {
+      "actualText": "",
+      "event": "inputFocusEnded",
+      "length": 0,
+      "ms": 13157.98887499841
+    },
+    {
+      "event": "keyboardDismissRequested",
+      "ms": 13158.880624978337
+    }
+  ]
+}

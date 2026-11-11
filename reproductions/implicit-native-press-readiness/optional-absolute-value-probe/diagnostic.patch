@@ -1,0 +1,73 @@
+--- a/apple/snapshot-bridge/SnapshotBridgeRuntime.h
++++ b/apple/snapshot-bridge/SnapshotBridgeRuntime.h
+@@ -1,7 +1,7 @@
+ #import <Foundation/Foundation.h>
+ 
+ #define SNAPSHOT_BRIDGE_PROTOCOL_VERSION 1
+-#define SNAPSHOT_BRIDGE_SOURCE_VERSION @"agent-device-simulator-ax-v1.10.0"
++#define SNAPSHOT_BRIDGE_SOURCE_VERSION @"agent-device-simulator-ax-absolute-value-diagnostic"
+ 
+ NS_ASSUME_NONNULL_BEGIN
+ 
+--- a/apple/snapshot-bridge/SnapshotBridgeRuntime.m
++++ b/apple/snapshot-bridge/SnapshotBridgeRuntime.m
+@@ -256,6 +256,51 @@
+   return nil;
+ }
+ 
++// Diagnostic only: never add the optional attribute to the required snapshot vocabulary.
++- (void)recordAbsoluteValueProbeForSnapshot:(NSDictionary *)snapshot node:(NSDictionary *)node
++{
++  NSString *identifier = node[kAttributeIdentifier];
++  NSNumber *type = node[kAttributeAutomationType];
++  if (![identifier isKindOfClass:NSString.class] || ![@[@"geometry-input", @"native-field"] containsObject:identifier] ||
++      ![type isKindOfClass:NSNumber.class] || type.unsignedIntegerValue != 49) return;
++  NSMutableDictionary *row = [@{
++    @"identifier": identifier,
++    @"guestValue": node[kAttributeValue] ?: NSNull.null,
++    @"placeholder": node[kAttributePlaceholderValue] ?: NSNull.null,
++  } mutableCopy];
++  @try {
++    NSArray *numbers = _attributeNumbersForNames(@[@"XC_kAXXCAttributeAbsoluteValue"]);
++    BOOL supported = [numbers isKindOfClass:NSArray.class] && numbers.count == 1 &&
++        [numbers.firstObject isKindOfClass:NSNumber.class];
++    row[@"vocabularySupported"] = @(supported);
++    id element = snapshot[kSnapshotElement];
++    row[@"sameSnapshotElementPresent"] = @(element != nil);
++    if (supported && element) {
++      NSMutableDictionary *options = [_defaultSnapshotParameters() mutableCopy] ?: [NSMutableDictionary dictionary];
++      options[@"attributes"] = numbers;
++      options[@"maxDepth"] = @0;
++      options[@"maxChildren"] = @0;
++      options[@"maxArrayCount"] = @0;
++      NSError *failure = nil;
++      NSDictionary *read = [_framework userTestingSnapshotForElement:element options:options error:&failure];
++      NSDictionary *attributes = [read isKindOfClass:NSDictionary.class] ? read[kSnapshotAttributes] : nil;
++      id value = [attributes isKindOfClass:NSDictionary.class] ? attributes[numbers.firstObject] : nil;
++      row[@"readSucceeded"] = @([attributes isKindOfClass:NSDictionary.class] && failure == nil);
++      row[@"attributePresent"] = @(value != nil);
++      if (failure) row[@"nativeErrorCode"] = @(failure.code);
++      if (value) row[@"valueClass"] = NSStringFromClass([value class]);
++      if ([value isKindOfClass:NSString.class] || [value isKindOfClass:NSNumber.class]) row[@"absoluteValue"] = value;
++    }
++  } @catch (NSException *exception) {
++    row[@"probeException"] = exception.name;
++  }
++  NSData *data = [NSJSONSerialization dataWithJSONObject:row options:NSJSONWritingSortedKeys error:NULL];
++  if (data) {
++    NSString *line = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
++    fprintf(stderr, "AGENT_DEVICE_ABSOLUTE_VALUE_PROBE %s\n", line.UTF8String);
++  }
++}
++
+ /*
+  * Whether a presentation's dimming view takes touches is what separates a sheet that blocks the
+  * content under it from one resting at an undimmed detent, and nothing else in the tree says so.
+@@ -314,6 +359,7 @@
+     id safe = [self jsonValue:attributes[number] name:name];
+     if (safe) node[name] = safe;
+   }
++  [self recordAbsoluteValueProbeForSnapshot:(NSDictionary *)snapshot node:node];
+   if ([node[kAttributeElementType] isEqual:kPresentationDimmingViewClass]) {
+     NSNumber *interaction = [self userInteractionEnabledForSnapshot:(NSDictionary *)snapshot
+                                                             options:interactionOptions];

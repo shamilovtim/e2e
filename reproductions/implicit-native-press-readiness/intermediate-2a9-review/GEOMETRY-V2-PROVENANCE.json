@@ -1,0 +1,21 @@
+{
+  "binarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+  "files": [
+    {
+      "path": "geometry-v2/source/GeometryFixture.swift",
+      "sha256": "be5a926611ebcb7bae605ed2d1545748d8a8336fd247818264d7dbfd2ccd8c65",
+      "bytes": 10305
+    },
+    {
+      "path": "geometry-v2/source/Info.plist",
+      "sha256": "084f681cca102e443e4be18e488f79321d832d69a5645131da9b94e08abcad7e",
+      "bytes": 1104
+    },
+    {
+      "path": "geometry-v2/source/build.py",
+      "sha256": "16bc111cf5661dce76ad841fc12e8058b18e3452f123feeb1e359ac4db8ee4b1",
+      "bytes": 653
+    }
+  ],
+  "qualification": "Generic real UI setup mutates actual UITextField contents and aliases actual control identity. No native binding payload is fabricated. Old v1 source/binary remain immutable in earlier evidence."
+}

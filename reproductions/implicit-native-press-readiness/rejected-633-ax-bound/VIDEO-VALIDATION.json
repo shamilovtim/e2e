@@ -1,0 +1,163 @@
+{
+  "method": "Full-stream AVFoundation AVAssetReader decoding with uncompressed BGRA output; every sample yielded a pixel buffer, reader completed, decoded first/last PNGs exported with track preferredTransform. No adaptive interface rotation or cropping.",
+  "videos": 7,
+  "samples": 948,
+  "decodeErrors": 0,
+  "decoderSourceSha256": "b88a1cb4a73f157fdec489610ae330aa557dd81641a373122f82e105a195f75f",
+  "cases": [
+    {
+      "video": "cases/ax633-anonymous-1/video.mp4",
+      "decodedVideoSamples": 105,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 16.325,
+      "videoSha256": "4c44cf17ecbc4d73e0884c94cd382a66271e9ec3664bb1b7b7ec69c8f6c9429a",
+      "videoBytes": 1042328,
+      "firstPngSha256": "40b6e33db33bb00990bf20a229e5415bf4026ea61871b57068cd2dd27a71d09d",
+      "lastPngSha256": "a69313994744bf0077bf4e43bc82a3fd925ad03f20352bf69e639aa06620f4d4",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    },
+    {
+      "video": "cases/ax633-buttons-1/video.mp4",
+      "decodedVideoSamples": 129,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 15.015,
+      "videoSha256": "ef2577194e882cac80525d0c2d0b44591e10a526aa103c37e4cc6b845535b254",
+      "videoBytes": 1351496,
+      "firstPngSha256": "f124f2a2fa9256164d318df457306814d1acd8bcb8abd0c0609635c696bac160",
+      "lastPngSha256": "9b7e75b5fbb1af83b0889bcbb7c81bb4a83a289d58744e2df67e4153b3bb236c",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    },
+    {
+      "video": "cases/ax633-clipped-1/video.mp4",
+      "decodedVideoSamples": 95,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 8.358333333333333,
+      "videoSha256": "8152bcf3cdc9f270f81368317b407a93a183e3b2c0336bac5dc5809bd5ebb76c",
+      "videoBytes": 777952,
+      "firstPngSha256": "26dab6f887f8415411398610fcd5d96ee244e77686556d9fd835f67578e6ae88",
+      "lastPngSha256": "a198d445a5c80f5c4c026941fb22cfc1d85faa19ac01789107a7e20f582ac84f",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    },
+    {
+      "video": "cases/ax633-duplicates-1/video.mp4",
+      "decodedVideoSamples": 205,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        2556,
+        1178
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        2556,
+        1178
+      ],
+      "lastSampleSeconds": 11.061666666666667,
+      "videoSha256": "1571bfab3a8b1d5f206ff9bd1b0edec50e7cfbc28d274cb3e1ef5207e251140e",
+      "videoBytes": 1621558,
+      "firstPngSha256": "c5e0d51a8bdba20e62aa264c520fce013733a596b44360af779e226f19b5e8d1",
+      "lastPngSha256": "89a9a970e998e0b5ca4b03df80e815eb915eeb15246b136dd7d11ebb59cc11d2",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    },
+    {
+      "video": "cases/ax633-landscape-1/video.mp4",
+      "decodedVideoSamples": 158,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 8.973333333333333,
+      "videoSha256": "4382f85fe31bfafc745c1313997de2d89d22d94de30fbdb9031bb74b361de34c",
+      "videoBytes": 2455014,
+      "firstPngSha256": "2003ac3afbd1bf13d5e383019f38241dc7b791de0f64c0ec6e4fe0c86861190d",
+      "lastPngSha256": "e74b525d00ba30ade39fdd7a36c66efca9e2debed4fd44f3bb88c72819c98789",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    },
+    {
+      "video": "cases/ax633-missing-1/video.mp4",
+      "decodedVideoSamples": 120,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 8.601666666666667,
+      "videoSha256": "9e575bf0eaac63d4b6bf0d26901c192c34b34becd7842987314fc2a860a0fb32",
+      "videoBytes": 1356924,
+      "firstPngSha256": "432bf733a0e908286f542488cbb40d628baa710215e794fd8e8197f891a5c0cd",
+      "lastPngSha256": "2a52307a27f4f85162739c967abb9fc209f699b9be3d7c3d7dda2523d6c905e9",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    },
+    {
+      "video": "cases/ax633-shared-1/video.mp4",
+      "decodedVideoSamples": 136,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1178,
+        2556
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1178,
+        2556
+      ],
+      "lastSampleSeconds": 14.206666666666667,
+      "videoSha256": "0d1c8807c87ff0d9a1b023ee340933d6e817bdefa7c9c4f8e24929dafd634e46",
+      "videoBytes": 1479586,
+      "firstPngSha256": "9f1167cc05e0dc1a8d3903842876c6561ffbc9557e42cbeb70b601220b5ff40f",
+      "lastPngSha256": "ac343533d4ff9dd809af415fb80eee0b3ce1ac043ccfef25e742885ddbf8ca67",
+      "decoderBinarySha256": "9c10d5919bc51f69179a0ae4c2ab9790d20a85e75c8f0c556ecf3f24b67abbd5"
+    }
+  ]
+}

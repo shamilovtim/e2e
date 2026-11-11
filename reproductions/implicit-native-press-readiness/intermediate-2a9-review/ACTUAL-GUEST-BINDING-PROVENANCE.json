@@ -1,0 +1,155 @@
+{
+  "source": "2a9e69e976ddb1e6bdfb168d2f1c22a2706db4ff",
+  "actualAuthorizedTarget": {
+    "type": 49,
+    "identifier": "geometry-input",
+    "value": "Geometry input",
+    "rect": {
+      "x": 24,
+      "y": 90,
+      "width": 200,
+      "height": 42
+    }
+  },
+  "actualResponse": [
+    {
+      "pressReadiness": "missing"
+    }
+  ],
+  "captureProducer": "simulator-ax-bridge",
+  "transport": "guest-process",
+  "acquisition": {
+    "requestedLevels": 129,
+    "acceptedLevels": 65,
+    "requests": 1,
+    "rejected": 0,
+    "continuations": 0,
+    "truncated": false
+  },
+  "qualityQualification": "Runtime request log does not emit a snapshotQuality object here. The separate preceding orientation capture had transient healthy/tree fallback and is not asserted as the selector producer or quality.",
+  "separateNativeCaptures": [
+    {
+      "raw": false,
+      "quality": {
+        "customActions": {
+          "truncated": 0,
+          "blocked": false,
+          "read": 12,
+          "candidates": 12
+        },
+        "backend": "private-ax",
+        "timing": {
+          "presentationMs": 0.1499652862548828,
+          "acquisitionMs": 1625.838041305542
+        },
+        "state": "recovered",
+        "reason": "the private AX backend was selected because this capture asked for accessibility custom actions",
+        "reasonCode": "requested-backend"
+      },
+      "node": {
+        "rect": {
+          "y": 90,
+          "x": 24,
+          "height": 42,
+          "width": 200
+        },
+        "nativePressTarget": {
+          "value": "",
+          "rect": {
+            "y": 90,
+            "height": 42,
+            "width": 200,
+            "x": 24
+          },
+          "identifier": "geometry-input",
+          "type": 49,
+          "label": ""
+        },
+        "index": 2,
+        "placeholder": "Geometry input",
+        "identifier": "geometry-input",
+        "depth": 1,
+        "enabled": true,
+        "type": "TextField",
+        "hittable": true,
+        "parentIndex": 0
+      },
+      "target": {
+        "value": "",
+        "rect": {
+          "y": 90,
+          "height": 42,
+          "width": 200,
+          "x": 24
+        },
+        "identifier": "geometry-input",
+        "type": 49,
+        "label": ""
+      },
+      "readiness": {
+        "ok": true,
+        "data": {
+          "pressReadiness": "ready",
+          "runnerMainThreadBusy": false,
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry"
+        }
+      }
+    },
+    {
+      "raw": true,
+      "quality": {
+        "state": "healthy",
+        "timing": {
+          "acquisitionMs": 23.88596534729004,
+          "presentationMs": 0.04601478576660156
+        },
+        "backend": "tree"
+      },
+      "node": {
+        "enabled": true,
+        "placeholder": "Geometry input",
+        "parentIndex": 4,
+        "type": "TextField",
+        "nativePressTarget": {
+          "type": 49,
+          "identifier": "geometry-input",
+          "rect": {
+            "width": 200,
+            "height": 42,
+            "x": 24,
+            "y": 90
+          }
+        },
+        "depth": 5,
+        "rect": {
+          "y": 90,
+          "width": 200,
+          "x": 24,
+          "height": 42
+        },
+        "index": 6,
+        "hittable": true,
+        "identifier": "geometry-input"
+      },
+      "target": {
+        "type": 49,
+        "identifier": "geometry-input",
+        "rect": {
+          "width": 200,
+          "height": 42,
+          "x": 24,
+          "y": 90
+        }
+      },
+      "readiness": {
+        "ok": true,
+        "data": {
+          "pressReadiness": "ready",
+          "pressReadinessAppBundleId": "dev.e2e.readinessgeometry",
+          "runnerMainThreadBusy": false
+        }
+      }
+    }
+  ],
+  "observationMethod": "External scoped Node fetch observer records actual request JSON and response unchanged; no headers/tokens, SDK edits, native edits or fabricated identity. The actual guest selector producer must be fixed, not inferred from separate native querySelector display metadata."
+}
