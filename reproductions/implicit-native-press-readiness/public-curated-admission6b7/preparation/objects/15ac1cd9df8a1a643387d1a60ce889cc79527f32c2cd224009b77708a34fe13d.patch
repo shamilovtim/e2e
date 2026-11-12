@@ -1,0 +1,12 @@
+diff --git a/packages/contracts/src/snapshot-private-evidence.ts b/packages/contracts/src/snapshot-private-evidence.ts
+index aebaf00..f995c81 100644
+--- a/packages/contracts/src/snapshot-private-evidence.ts
++++ b/packages/contracts/src/snapshot-private-evidence.ts
+@@ -160,7 +160,6 @@ export function transferSnapshotPrivateEvidence<T extends { nodes: RawSnapshotNo
+       target.nodes,
+       remapPrivateEvidence(nodeEvidence, sourceIndexByNodeIndex),
+     );
+-  if (initialNodeFacts) attachSnapshotPrivateEvidence(target.nodes, initialNodeFacts);
+   if (nativeTargets.size) {
+     const carried = readSnapshotNativePressTargets(target.nodes);
+     attachSnapshotPrivateEvidence(target.nodes, {

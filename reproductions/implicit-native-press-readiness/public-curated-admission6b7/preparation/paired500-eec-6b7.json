@@ -1,0 +1,146 @@
+{
+  "base": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "head": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "protocol": "Variant-by-variant base then head, serialized, three SDK refs and one CLI ref each, same owned 402x874 iOS27.0 phone and frozen fixture; no concurrent local builds/media/uploads. First samples and variance retained. This is not a first-call latency SLO.",
+  "modelSetupCorrection": "Initial base setup rejected old345-point width before any measured target press. Correct354-point width (402−48) frozen once for all six qualified cases. That setup action/recording is preserved separately.",
+  "pairs": [
+    {
+      "mode": "shared",
+      "base": {
+        "case": "admission-eec-shared-2",
+        "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+        "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+        "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+        "runtimeJavaScriptFiles": 631,
+        "nativeSameTypeCount": 511,
+        "refSamplesMs": [
+          765.3062909999999,
+          461.137917,
+          460.9612080000006
+        ],
+        "medianMs": 461.137917,
+        "cliMs": 541.2409169999992,
+        "targetTaps": 4,
+        "siblingTaps": 0,
+        "wrapperSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "ownedConfigurationSha256": "0959be417fae243ee046674c0da947a1c487796b180a2b5e928b3b12d8d07d29"
+      },
+      "head": {
+        "case": "admission6b7-shared-1",
+        "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+        "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+        "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+        "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+        "runtimeJavaScriptFiles": 631,
+        "nativeSameTypeCount": 511,
+        "refSamplesMs": [
+          803.2738340000005,
+          793.3703749999986,
+          815.9714999999997
+        ],
+        "medianMs": 803.2738340000005,
+        "cliMs": 882.9042079999999,
+        "targetTaps": 4,
+        "siblingTaps": 0,
+        "wrapperSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "ownedConfigurationSha256": "0959be417fae243ee046674c0da947a1c487796b180a2b5e928b3b12d8d07d29"
+      },
+      "addedMedianMs": 342.1359170000005
+    },
+    {
+      "mode": "anonymous",
+      "base": {
+        "case": "admission-eec-anonymous-1",
+        "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+        "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+        "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+        "runtimeJavaScriptFiles": 631,
+        "nativeSameTypeCount": 511,
+        "refSamplesMs": [
+          486.4319169999999,
+          989.6461670000008,
+          956.4345830000002
+        ],
+        "medianMs": 956.4345830000002,
+        "cliMs": 977.6044169999986,
+        "targetTaps": 4,
+        "siblingTaps": 0,
+        "wrapperSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "ownedConfigurationSha256": "0959be417fae243ee046674c0da947a1c487796b180a2b5e928b3b12d8d07d29"
+      },
+      "head": {
+        "case": "admission6b7-anonymous-1",
+        "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+        "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+        "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+        "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+        "runtimeJavaScriptFiles": 631,
+        "nativeSameTypeCount": 511,
+        "refSamplesMs": [
+          1075.8281660000002,
+          1314.1414999999997,
+          1314.4858329999988
+        ],
+        "medianMs": 1314.1414999999997,
+        "cliMs": 1322.1822090000005,
+        "targetTaps": 4,
+        "siblingTaps": 0,
+        "wrapperSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "ownedConfigurationSha256": "0959be417fae243ee046674c0da947a1c487796b180a2b5e928b3b12d8d07d29"
+      },
+      "addedMedianMs": 357.7069169999995
+    },
+    {
+      "mode": "buttons",
+      "base": {
+        "case": "admission-eec-buttons-1",
+        "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+        "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+        "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+        "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+        "runtimeJavaScriptFiles": 631,
+        "nativeSameTypeCount": 504,
+        "refSamplesMs": [
+          733.3973750000005,
+          957.5414999999994,
+          973.2041669999999
+        ],
+        "medianMs": 957.5414999999994,
+        "cliMs": 976.3801249999997,
+        "targetTaps": 4,
+        "siblingTaps": 0,
+        "wrapperSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "ownedConfigurationSha256": "0959be417fae243ee046674c0da947a1c487796b180a2b5e928b3b12d8d07d29"
+      },
+      "head": {
+        "case": "admission6b7-buttons-1",
+        "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+        "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+        "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+        "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+        "runtimeJavaScriptFiles": 631,
+        "nativeSameTypeCount": 504,
+        "refSamplesMs": [
+          1012.3827089999995,
+          1258.1150419999994,
+          1256.366415999999
+        ],
+        "medianMs": 1256.366415999999,
+        "cliMs": 1249.470874999999,
+        "targetTaps": 4,
+        "siblingTaps": 0,
+        "wrapperSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "ownedConfigurationSha256": "0959be417fae243ee046674c0da947a1c487796b180a2b5e928b3b12d8d07d29"
+      },
+      "addedMedianMs": 298.8249159999996
+    }
+  ]
+}

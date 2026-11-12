@@ -1,0 +1,499 @@
+{
+  "case": "admission6b7-ipad-known-1",
+  "classification": "current-head-functional",
+  "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+  "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+  "runtimeJavaScriptFiles": 631,
+  "success": true,
+  "wrapperExitCode": 0,
+  "daemonCleanupExitCode": 0,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "recordingOwner": "simctl-child",
+  "wrapperSha256": "63cce2d07bd627b22b84e343e292ea60935ddccbb6ca72f09548a50babbf292e",
+  "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+  "media": "../../../media/admission6b7-ipad-known-1/video.mp4",
+  "executedSources": {
+    "executed-driver.py": {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    "executed-wrapper.mjs": {
+      "originalArchivedSha256": "63cce2d07bd627b22b84e343e292ea60935ddccbb6ca72f09548a50babbf292e",
+      "public": {
+        "path": "objects/63cce2d07bd627b22b84e343e292ea60935ddccbb6ca72f09548a50babbf292e.mjs",
+        "sha256": "63cce2d07bd627b22b84e343e292ea60935ddccbb6ca72f09548a50babbf292e",
+        "bytes": 15291
+      },
+      "normalization": "None; byte-equal actual executed source."
+    }
+  },
+  "nativeBuild": {
+    "schemaVersion": 3,
+    "packageVersion": "0.21.37-dev",
+    "runnerSourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "xcodeBuildVersion": "27B52",
+    "sdkName": "iphonesimulator",
+    "sdkVersion": "27.2",
+    "sdkBuildVersion": "24B8118",
+    "platformName": "iOS",
+    "deviceKind": "simulator",
+    "target": "mobile",
+    "buildDestinationFamily": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd"
+  },
+  "runtimeJavaScriptManifest": {
+    "path": "objects/b6dc5b1903fe89f4ed6079c90a75633111d2ecd94f9299ae61400e8dac047d8d.json",
+    "sha256": "b6dc5b1903fe89f4ed6079c90a75633111d2ecd94f9299ae61400e8dac047d8d",
+    "bytes": 102593
+  },
+  "sourceTreeManifest": {
+    "path": "objects/c8d3eaeb42a9335caeabe0ae030b2ab93c9e696e1dd29b85d46ef0755c40cbf8.txt",
+    "sha256": "c8d3eaeb42a9335caeabe0ae030b2ab93c9e696e1dd29b85d46ef0755c40cbf8",
+    "bytes": 659070
+  },
+  "sourceCommitPatch": {
+    "path": "objects/90d2a2174cc381c904478ab5284463721be03e76c878630abec3e5cedc8c140e.patch",
+    "sha256": "90d2a2174cc381c904478ab5284463721be03e76c878630abec3e5cedc8c140e",
+    "bytes": 1949
+  },
+  "runtimeLauncherInputs": {
+    "bin/agent-device.mjs": {
+      "path": "objects/3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30",
+      "bytes": 584
+    },
+    "package.json": {
+      "path": "objects/57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f.json",
+      "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f",
+      "bytes": 23774
+    },
+    "scripts/build-entries.ts": {
+      "path": "objects/c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13",
+      "bytes": 1872
+    },
+    "scripts/build-xcuitest-apple.sh": {
+      "path": "objects/1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a",
+      "bytes": 5978
+    }
+  },
+  "wrapperSummary": {
+    "phase": "admission6b7-ipad-known-1",
+    "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {
+      "actionReceivedTap": 2
+    },
+    "frameComparison": {
+      "publicVisibleRect": {
+        "height": 42,
+        "width": 111,
+        "y": 395,
+        "x": 470
+      },
+      "canonicalPoint": {
+        "x": 526,
+        "y": 416
+      },
+      "nativeSourceRect": {
+        "x": 470,
+        "y": 395,
+        "width": 111,
+        "height": 42
+      },
+      "nativeLiveElementRect": {
+        "width": 111,
+        "y": 395,
+        "x": 470,
+        "height": 42
+      },
+      "nativeRectsMatch": true,
+      "strictReadiness": "ready"
+    },
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "originalResultSha256": "c2bee89523956337694ea741d4418b9c405114ec8e43f479898d8256e07f35f3",
+  "observations": {
+    "phase": "admission6b7-ipad-known-1",
+    "mode": "ipad",
+    "sdkSource": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+    "coldOpenMs": 2376.739542,
+    "target": {
+      "label": "Geometry action",
+      "type": "Button",
+      "parentIndex": 0,
+      "identifier": "geometry-action",
+      "depth": 1,
+      "hittable": true,
+      "index": 3,
+      "enabled": true,
+      "rect": {
+        "height": 42,
+        "width": 111,
+        "y": 395,
+        "x": 470
+      },
+      "ref": "e4",
+      "kind": "button"
+    },
+    "frameComparison": {
+      "publicVisibleRect": {
+        "height": 42,
+        "width": 111,
+        "y": 395,
+        "x": 470
+      },
+      "canonicalPoint": {
+        "x": 526,
+        "y": 416
+      },
+      "nativeSourceRect": {
+        "x": 470,
+        "y": 395,
+        "width": 111,
+        "height": 42
+      },
+      "nativeLiveElementRect": {
+        "width": 111,
+        "y": 395,
+        "x": 470,
+        "height": 42
+      },
+      "nativeRectsMatch": true,
+      "strictReadiness": "ready"
+    },
+    "placement": {
+      "inferredRootViewOrigin": {
+        "x": 230,
+        "y": 305
+      },
+      "nativeWindowRects": [
+        {
+          "x": 230,
+          "height": 486,
+          "y": 305,
+          "width": 375
+        }
+      ],
+      "sourceRootRects": [
+        {
+          "height": 486,
+          "x": 230,
+          "y": 305,
+          "width": 375
+        }
+      ],
+      "qualification": "actionScreenFrame fixture event is window-local and is not used as screen proof.",
+      "verifiedByNativeWindow": true
+    },
+    "actualInputPoint": {
+      "x": 526,
+      "y": 416
+    },
+    "selectorInputPoint": {
+      "x": 526,
+      "y": 416
+    },
+    "nativeBinaryUnchanged": true,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "samples": [
+      {
+        "label": "frame-ref",
+        "target": {
+          "ref": "@e4"
+        },
+        "press": {
+          "x": 526,
+          "y": 416,
+          "message": "Tapped @e4 (526, 416)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 375,
+          "referenceHeight": 486,
+          "targetKind": "ref",
+          "ref": "e4",
+          "refLabel": "Geometry action",
+          "selectorChain": [
+            "id=\"geometry-action\"",
+            "role=\"button\" label=\"Geometry action\"",
+            "label=\"Geometry action\""
+          ],
+          "resolution": {
+            "source": "ref",
+            "phase": "pre-action",
+            "kind": "exact"
+          }
+        },
+        "ms": 470.73533399999906,
+        "events": [
+          {
+            "event": "appReady",
+            "ms": 0.004208297468721867
+          },
+          {
+            "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+            "event": "geometryChanged",
+            "interfaceOrientation": 1,
+            "ms": 17.53383327741176,
+            "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+            "viewBounds": "(0.0, 0.0, 375.0, 486.0)"
+          },
+          {
+            "count": 1,
+            "event": "actionReceivedTap",
+            "ms": 10710.91191668529,
+            "orientation": 1
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 69.672
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 375.20599999999996
+          }
+        ]
+      },
+      {
+        "label": "frame-selector",
+        "target": {
+          "selector": "id=geometry-action"
+        },
+        "press": {
+          "x": 526,
+          "y": 416,
+          "message": "Tapped id=geometry-action (526, 416)",
+          "runnerMainThreadBusy": false,
+          "referenceWidth": 375,
+          "referenceHeight": 486,
+          "targetKind": "selector",
+          "selector": "id=geometry-action",
+          "selectorChain": [
+            "id=\"geometry-action\"",
+            "role=\"button\" label=\"Geometry action\"",
+            "label=\"Geometry action\""
+          ],
+          "refLabel": "Geometry action",
+          "resolution": {
+            "source": "runtime",
+            "phase": "pre-action",
+            "kind": "unique"
+          }
+        },
+        "ms": 549.3523750000004,
+        "events": [
+          {
+            "event": "appReady",
+            "ms": 0.004208297468721867
+          },
+          {
+            "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+            "event": "geometryChanged",
+            "interfaceOrientation": 1,
+            "ms": 17.53383327741176,
+            "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+            "viewBounds": "(0.0, 0.0, 375.0, 486.0)"
+          },
+          {
+            "count": 1,
+            "event": "actionReceivedTap",
+            "ms": 10710.91191668529,
+            "orientation": 1
+          },
+          {
+            "count": 2,
+            "event": "actionReceivedTap",
+            "ms": 11377.485416596755,
+            "orientation": 1
+          }
+        ],
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 2.155
+          },
+          {
+            "phase": "completed",
+            "command": "appState",
+            "nativeDurationMs": 3.333
+          },
+          {
+            "phase": "accepted",
+            "command": "snapshot"
+          },
+          {
+            "phase": "completed",
+            "command": "snapshot",
+            "nativeDurationMs": 80.25699999999999
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness",
+            "nativeDurationMs": 57.887
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap",
+            "nativeDurationMs": 368.633
+          }
+        ]
+      }
+    ],
+    "nativeEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.004208297468721867
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 17.53383327741176,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 486.0)"
+      },
+      {
+        "count": 1,
+        "event": "actionReceivedTap",
+        "ms": 10710.91191668529,
+        "orientation": 1
+      },
+      {
+        "count": 2,
+        "event": "actionReceivedTap",
+        "ms": 11377.485416596755,
+        "orientation": 1
+      }
+    ]
+  }
+}

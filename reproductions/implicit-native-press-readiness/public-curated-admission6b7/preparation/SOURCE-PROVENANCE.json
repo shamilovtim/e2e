@@ -1,0 +1,444 @@
+{
+  "head": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "base": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "sourceTree": "f5d404e19c7be37d2cc2fa7ea6d2ea243fe39be1",
+  "patchSha256": "50728f96ed8a16a22caeda2988a94ad95a7e37dbdab84c6789e7ad2e3890656c",
+  "nativeBuildAtHead": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "nativeBuildAtBase": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "qualification": "Fresh TypeScript hosts on exact 6b7/eec source; official matching native artifacts reused with unchanged source fingerprints. Native seven-method execution remains historical d9, not a fresh6b7 native-unit run. Per-case prospective inputs include complete631 JS, launcher/build recipes, actual11 native entries/xctestrun, ten guest source hashes plus binary, fixture binary and actual executed wrapper/driver. Complete emitted JS does not enumerate every dependency/system runtime.",
+  "fixtureSourceQualification": "Published generic fixture source retained for inspection; installed binary hashes are per-case. No fresh source-to-binary build mapping is reconstructed for retained binaries.",
+  "sourceArchives": [
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84",
+      "public": {
+        "path": "objects/fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84.py",
+        "sha256": "fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84",
+        "bytes": 7536
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "public": {
+        "path": "objects/d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599.mjs",
+        "sha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+        "bytes": 3528
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "3960844bda191f154b4f5cfbb02dc4325d5b34cb507dd6d70282c77002d19f2a",
+      "public": {
+        "path": "objects/3960844bda191f154b4f5cfbb02dc4325d5b34cb507dd6d70282c77002d19f2a.py",
+        "sha256": "3960844bda191f154b4f5cfbb02dc4325d5b34cb507dd6d70282c77002d19f2a",
+        "bytes": 12567
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "a2d54f8de729364ad2dfaa2eb2edae4123a238e02701d5e3dd40964d6b9b2abe",
+      "public": {
+        "path": "objects/a2d54f8de729364ad2dfaa2eb2edae4123a238e02701d5e3dd40964d6b9b2abe.mjs",
+        "sha256": "a2d54f8de729364ad2dfaa2eb2edae4123a238e02701d5e3dd40964d6b9b2abe",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84",
+      "public": {
+        "path": "objects/fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84.py",
+        "sha256": "fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84",
+        "bytes": 7536
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "public": {
+        "path": "objects/d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599.mjs",
+        "sha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+        "bytes": 3528
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "63cce2d07bd627b22b84e343e292ea60935ddccbb6ca72f09548a50babbf292e",
+      "public": {
+        "path": "objects/63cce2d07bd627b22b84e343e292ea60935ddccbb6ca72f09548a50babbf292e.mjs",
+        "sha256": "63cce2d07bd627b22b84e343e292ea60935ddccbb6ca72f09548a50babbf292e",
+        "bytes": 15291
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "public": {
+        "path": "objects/d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0.mjs",
+        "sha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+        "bytes": 4308
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+      "public": {
+        "path": "objects/be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf.mjs",
+        "sha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+        "bytes": 11154
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+      "public": {
+        "path": "objects/be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf.mjs",
+        "sha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+        "bytes": 11154
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+      "public": {
+        "path": "objects/be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf.mjs",
+        "sha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+        "bytes": 11154
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+      "public": {
+        "path": "objects/be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf.mjs",
+        "sha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+        "bytes": 11154
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+      "public": {
+        "path": "objects/be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf.mjs",
+        "sha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+        "bytes": 11154
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "3960844bda191f154b4f5cfbb02dc4325d5b34cb507dd6d70282c77002d19f2a",
+      "public": {
+        "path": "objects/3960844bda191f154b4f5cfbb02dc4325d5b34cb507dd6d70282c77002d19f2a.py",
+        "sha256": "3960844bda191f154b4f5cfbb02dc4325d5b34cb507dd6d70282c77002d19f2a",
+        "bytes": 12567
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+      "public": {
+        "path": "objects/be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf.mjs",
+        "sha256": "be5889383712ba6d35983fde727af53f3b4c0085b7fed9ea0f50d07f54847ebf",
+        "bytes": 11154
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+      "public": {
+        "path": "objects/c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69.mjs",
+        "sha256": "c5e92ea858bda104938d8fe16270e244a2a8309526179fbaba5cd4842f83de69",
+        "bytes": 12550
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "a914e5acd3fa6bdc89d3337f0f3f3e0e471b981841f578698f7b6ff3d6086cc6",
+      "public": {
+        "path": "objects/a914e5acd3fa6bdc89d3337f0f3f3e0e471b981841f578698f7b6ff3d6086cc6.mjs",
+        "sha256": "a914e5acd3fa6bdc89d3337f0f3f3e0e471b981841f578698f7b6ff3d6086cc6",
+        "bytes": 6277
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "72299fcb56bfa5d05a8fe5479c8a5764ec46a4a4cc057c1e2f4bebf989386b47",
+      "public": {
+        "path": "objects/907f016ab78999a6ec9b7de3aa6ec6554c543f90c061e0e69afeb082b9055011.py",
+        "sha256": "907f016ab78999a6ec9b7de3aa6ec6554c543f90c061e0e69afeb082b9055011",
+        "bytes": 3243
+      },
+      "normalization": "Host-local absolute literals and owned device identifiers replaced by generic placeholders. This inspected public copy is not byte-equal or a claim of executable replay; original executed hash retained."
+    },
+    {
+      "originalArchivedSha256": "197f9a293e87c8bac0d456f8ac92636e80dad4eb5c67d932f66c7f51956c7e07",
+      "public": {
+        "path": "objects/8a18b0e425f4183ea2947fbe7d8a0e69a7587a1506983e48b355756b99bf3608.py",
+        "sha256": "8a18b0e425f4183ea2947fbe7d8a0e69a7587a1506983e48b355756b99bf3608",
+        "bytes": 1940
+      },
+      "normalization": "Host-local absolute literals and owned device identifiers replaced by generic placeholders. This inspected public copy is not byte-equal or a claim of executable replay; original executed hash retained."
+    },
+    {
+      "originalArchivedSha256": "2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a",
+      "public": {
+        "path": "objects/2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a.ts",
+        "sha256": "2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a",
+        "bytes": 7731
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "15ac1cd9df8a1a643387d1a60ce889cc79527f32c2cd224009b77708a34fe13d",
+      "public": {
+        "path": "objects/15ac1cd9df8a1a643387d1a60ce889cc79527f32c2cd224009b77708a34fe13d.patch",
+        "sha256": "15ac1cd9df8a1a643387d1a60ce889cc79527f32c2cd224009b77708a34fe13d",
+        "bytes": 697
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "7e5efac415ea0412a7da0bf7351373bf8219a90b458224d49867da15e60a35cb",
+      "public": {
+        "path": "objects/7e5efac415ea0412a7da0bf7351373bf8219a90b458224d49867da15e60a35cb.ts",
+        "sha256": "7e5efac415ea0412a7da0bf7351373bf8219a90b458224d49867da15e60a35cb",
+        "bytes": 13127
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "6c4efa68c51c74e9ab196d410f9a7089563deec6ac9b9ddbb19e09182abc534c",
+      "public": {
+        "path": "objects/6c4efa68c51c74e9ab196d410f9a7089563deec6ac9b9ddbb19e09182abc534c.patch",
+        "sha256": "6c4efa68c51c74e9ab196d410f9a7089563deec6ac9b9ddbb19e09182abc534c",
+        "bytes": 1413
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "3f14e6ad5d1719645aa220f29d9456b202a0c4fab3b9eab72cdbd546e601b8b9",
+      "public": {
+        "path": "objects/3f14e6ad5d1719645aa220f29d9456b202a0c4fab3b9eab72cdbd546e601b8b9.patch",
+        "sha256": "3f14e6ad5d1719645aa220f29d9456b202a0c4fab3b9eab72cdbd546e601b8b9",
+        "bytes": 15076
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    {
+      "originalArchivedSha256": "bacccf766fb6be94dc8ec24fe2c1b51e062ab2b2605a3003de71878527c4bdbc",
+      "public": {
+        "path": "objects/d1b678c0c68020ede29b89467c93be4830b38869cdcc4625489d13df1e69dd12.patch",
+        "sha256": "d1b678c0c68020ede29b89467c93be4830b38869cdcc4625489d13df1e69dd12",
+        "bytes": 1113
+      },
+      "normalization": "Host-local absolute literals and owned device identifiers replaced by generic placeholders. This inspected public copy is not byte-equal or a claim of executable replay; original executed hash retained."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "head": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "mergeable": "MERGEABLE",
+  "checks": [
+    {
+      "name": "Bundle Size",
+      "workflowName": "Size",
+      "status": "COMPLETED",
+      "conclusion": "SKIPPED",
+      "startedAt": "2026-11-12T18:42:09Z",
+      "completedAt": "2026-11-12T18:42:08Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570727/job/131407441581"
+    },
+    {
+      "name": "Smoke Tests",
+      "workflowName": "Android",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:15Z",
+      "completedAt": "2026-11-12T18:47:26Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570582/job/131407437228"
+    },
+    {
+      "name": "Smoke Tests (ios)",
+      "workflowName": "Apple",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:37Z",
+      "completedAt": "2026-11-12T18:47:06Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570572/job/131407438948"
+    },
+    {
+      "name": "Lint, Typecheck & Package",
+      "workflowName": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:17Z",
+      "completedAt": "2026-11-12T18:43:33Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570502/job/131407438891"
+    },
+    {
+      "name": "Prose, internal links, and heading anchors",
+      "workflowName": "Docs",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:19Z",
+      "completedAt": "2026-11-12T18:43:12Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570552/job/131407443172"
+    },
+    {
+      "name": "Smoke Tests",
+      "workflowName": "Linux",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:19Z",
+      "completedAt": "2026-11-12T18:43:53Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570566/job/131407438145"
+    },
+    {
+      "name": "Resolve native fingerprint",
+      "workflowName": "Test App Build Cache",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:16Z",
+      "completedAt": "2026-11-12T18:42:50Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570669/job/131407438837"
+    },
+    {
+      "name": "Smoke Tests (macos)",
+      "workflowName": "Apple",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:33Z",
+      "completedAt": "2026-11-12T18:46:47Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570572/job/131407438686"
+    },
+    {
+      "name": "matrix.name",
+      "workflowName": "Test App Build Cache",
+      "status": "COMPLETED",
+      "conclusion": "SKIPPED",
+      "startedAt": "2026-11-12T18:42:51Z",
+      "completedAt": "2026-11-12T18:42:50Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570669/job/131407859228"
+    },
+    {
+      "name": "Smoke Tests",
+      "workflowName": "Apple",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:47:17Z",
+      "completedAt": "2026-11-12T18:47:22Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570572/job/131410406882"
+    },
+    {
+      "name": "Repo Guards & Compatibility",
+      "workflowName": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:17Z",
+      "completedAt": "2026-11-12T18:45:10Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570502/job/131407438743"
+    },
+    {
+      "name": "Command reference doc coverage",
+      "workflowName": "Docs",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:19Z",
+      "completedAt": "2026-11-12T18:42:47Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570552/job/131407442390"
+    },
+    {
+      "name": "Numeric Ranges",
+      "workflowName": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:17Z",
+      "completedAt": "2026-11-12T18:48:22Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570502/job/131407438188"
+    },
+    {
+      "name": "Coverage",
+      "workflowName": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:16Z",
+      "completedAt": "2026-11-12T18:47:11Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570502/job/131407438629"
+    },
+    {
+      "name": "Integration Tests",
+      "workflowName": "CI",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-11-12T18:42:17Z",
+      "completedAt": "2026-11-12T18:45:26Z",
+      "detailsUrl": "https://github.com/callstack/agent-device/actions/runs/43282570502/job/131407438665"
+    },
+    {
+      "name": "cubic \u00b7 AI code reviewer",
+      "workflowName": "",
+      "status": "COMPLETED",
+      "conclusion": "NEUTRAL",
+      "startedAt": "2026-11-12T18:42:23Z",
+      "completedAt": "2026-11-12T18:42:22Z",
+      "detailsUrl": "https://www.cubic.dev/pr/callstack/agent-device/pull/4391"
+    }
+  ],
+  "counts": {
+    "SKIPPED": 2,
+    "SUCCESS": 13,
+    "NEUTRAL": 1
+  },
+  "cubic": {
+    "conclusion": "neutral",
+    "title": "Incremental review could not start",
+    "summary": "cubic could not start the incremental review, so it stopped without running a full review. Try the incremental review again, or comment `@cubic review` for a full review.",
+    "annotations": 0,
+    "qualification": "No actual review ran at6b7. No retrigger requested."
+  }
+}

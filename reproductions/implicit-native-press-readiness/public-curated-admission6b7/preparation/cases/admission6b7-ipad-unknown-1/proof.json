@@ -1,0 +1,324 @@
+{
+  "case": "admission6b7-ipad-unknown-1",
+  "classification": "current-head-functional",
+  "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+  "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+  "runtimeJavaScriptFiles": 631,
+  "success": true,
+  "wrapperExitCode": 0,
+  "daemonCleanupExitCode": 0,
+  "recording": null,
+  "recordingOwner": "sdk",
+  "wrapperSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+  "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+  "media": "../../../media/admission6b7-ipad-unknown-1/video.mp4",
+  "executedSources": {
+    "executed-driver.py": {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    "executed-wrapper.mjs": {
+      "originalArchivedSha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+      "public": {
+        "path": "objects/d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0.mjs",
+        "sha256": "d28e4b6febffb42b70643a49ce285cd44151f059e314adcaddf81248432f5ca0",
+        "bytes": 4308
+      },
+      "normalization": "None; byte-equal actual executed source."
+    }
+  },
+  "nativeBuild": {
+    "schemaVersion": 3,
+    "packageVersion": "0.21.37-dev",
+    "runnerSourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "xcodeBuildVersion": "27B52",
+    "sdkName": "iphonesimulator",
+    "sdkVersion": "27.2",
+    "sdkBuildVersion": "24B8118",
+    "platformName": "iOS",
+    "deviceKind": "simulator",
+    "target": "mobile",
+    "buildDestinationFamily": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd"
+  },
+  "runtimeJavaScriptManifest": {
+    "path": "objects/b6dc5b1903fe89f4ed6079c90a75633111d2ecd94f9299ae61400e8dac047d8d.json",
+    "sha256": "b6dc5b1903fe89f4ed6079c90a75633111d2ecd94f9299ae61400e8dac047d8d",
+    "bytes": 102593
+  },
+  "sourceTreeManifest": {
+    "path": "objects/c8d3eaeb42a9335caeabe0ae030b2ab93c9e696e1dd29b85d46ef0755c40cbf8.txt",
+    "sha256": "c8d3eaeb42a9335caeabe0ae030b2ab93c9e696e1dd29b85d46ef0755c40cbf8",
+    "bytes": 659070
+  },
+  "sourceCommitPatch": {
+    "path": "objects/90d2a2174cc381c904478ab5284463721be03e76c878630abec3e5cedc8c140e.patch",
+    "sha256": "90d2a2174cc381c904478ab5284463721be03e76c878630abec3e5cedc8c140e",
+    "bytes": 1949
+  },
+  "runtimeLauncherInputs": {
+    "bin/agent-device.mjs": {
+      "path": "objects/3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30",
+      "bytes": 584
+    },
+    "package.json": {
+      "path": "objects/57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f.json",
+      "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f",
+      "bytes": 23774
+    },
+    "scripts/build-entries.ts": {
+      "path": "objects/c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13",
+      "bytes": 1872
+    },
+    "scripts/build-xcuitest-apple.sh": {
+      "path": "objects/1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a",
+      "bytes": 5978
+    }
+  },
+  "wrapperSummary": {
+    "phase": "admission6b7-ipad-unknown-1",
+    "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": null,
+    "siblingTaps": null,
+    "inputEvents": {},
+    "frameComparison": null,
+    "error": null,
+    "recording": null
+  },
+  "originalResultSha256": "08a34abf5a0cc238d83429c8f6a18dfc7a547dcd62d4a4702b3f3e214325f345",
+  "originalClassificationSha256": "93bd3e94f2558c203452960db951cbb381776c17eacc32e5103e9ed531f46782",
+  "observations": {
+    "phase": "admission6b7-ipad-unknown-1",
+    "target": {
+      "label": "Geometry action",
+      "rect": {
+        "x": 240,
+        "y": 90,
+        "width": 111,
+        "height": 42
+      },
+      "depth": 1,
+      "hittable": true,
+      "identifier": "geometry-action",
+      "index": 3,
+      "enabled": true,
+      "parentIndex": 0,
+      "type": "Button",
+      "ref": "e4",
+      "kind": "button"
+    },
+    "externalAbort": false,
+    "producerPins": false,
+    "sequence": [
+      "open",
+      "recordStart",
+      "snapshot",
+      "nativeCapture",
+      "refPress",
+      "selectorPress",
+      "repeatedSnapshot",
+      "recordStop",
+      "close"
+    ],
+    "counterBefore": 0,
+    "counterAfterRef": 0,
+    "counterAfterSelector": 0,
+    "refPress": {
+      "ms": 11.416916999998648,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Ref @e4 has no established screen-coordinate origin",
+        "details": {
+          "reason": "window-origin-unknown",
+          "dispatched": "no",
+          "hint": "Take a fresh snapshot after the accessibility channel recovers, or use screenshot to choose screen coordinates."
+        }
+      },
+      "nativeCommands": []
+    },
+    "selectorPress": {
+      "ms": 397.01433299999917,
+      "error": {
+        "code": "COMMAND_FAILED",
+        "message": "Selector id=geometry-action has no established screen-coordinate origin",
+        "details": {
+          "reason": "window-origin-unknown",
+          "dispatched": "no",
+          "hint": "Take a fresh snapshot after the accessibility channel recovers, or use screenshot to choose screen coordinates."
+        }
+      },
+      "nativeCommands": []
+    },
+    "classification": {
+      "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+      "viewportKind": "derived",
+      "nativeBindingPresent": true,
+      "trustedPublicViewportPresent": false,
+      "counters": [
+        0,
+        0,
+        0
+      ],
+      "nativeReadinessAcceptedCount": 0,
+      "nativeTapAcceptedCount": 0,
+      "producerPins": false,
+      "externalPressAbort": false,
+      "unknownSetupEstablished": true,
+      "success": true,
+      "refusalDetails": [
+        {
+          "reason": "window-origin-unknown",
+          "dispatched": "no"
+        },
+        {
+          "reason": "window-origin-unknown",
+          "dispatched": "no"
+        }
+      ]
+    },
+    "sdkCapture": {
+      "snapshotQuality": {
+        "state": "recovered",
+        "backend": "private-ax",
+        "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen",
+        "reasonCode": "deferred",
+        "timing": {
+          "acquisitionMs": 316.50805473327637,
+          "presentationMs": 0.5069971084594727
+        }
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 3,
+          "droppedNodeCount": 0
+        }
+      ],
+      "visibility": {
+        "partial": true,
+        "visibleNodeCount": 16,
+        "totalNodeCount": 16,
+        "reasons": [
+          "scroll-hidden-below"
+        ]
+      },
+      "nodeCount": 16
+    },
+    "separateNativeCapture": {
+      "snapshotViewport": {
+        "kind": "derived",
+        "rect": {
+          "height": 486,
+          "x": 0,
+          "y": 0,
+          "width": 375
+        }
+      },
+      "snapshotQuality": {
+        "timing": {
+          "presentationMs": 0.46503543853759766,
+          "acquisitionMs": 319.3240165710449
+        },
+        "backend": "private-ax",
+        "reasonCode": "deferred",
+        "state": "recovered",
+        "reason": "XCTest-backed snapshot tiers were deferred after recent slow accessibility work on this screen"
+      },
+      "snapshotQualityNotes": [
+        {
+          "code": "regular-geometry-clipped",
+          "clippedNodeCount": 3,
+          "droppedNodeCount": 0
+        }
+      ]
+    },
+    "recordStopReturned": true
+  }
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "sha": "ae24ea3eab6405a392e883e2f7f39bd92514bf1d",
+    "initialStatus": "",
+    "finalStatus": "",
+    "finalSha": "ae24ea3eab6405a392e883e2f7f39bd92514bf1d",
+    "isolatedWorktreeRemoved": true,
+    "reviewedCheckoutAfter": {
+      "head": "3ce966f8abfa5191baedb47f299ff582179750a4",
+      "note": "Only root-reviewed orphan export cleanup followed the immutable ae24 owner/control source; owner bodies unchanged."
+    },
+    "originalReceiptSha256": "52e29160d10b24ea8d89ecfa8baeaa15a0caa0785ce4eafb7396f5eabc029998",
+    "steps": [
+      {
+        "name": "green",
+        "exit": 0,
+        "passed": 59,
+        "failed": 0,
+        "pending": 0
+      },
+      {
+        "name": "omit-fresh-native-proof",
+        "exit": 1,
+        "passed": 0,
+        "failed": 1,
+        "pending": 23
+      },
+      {
+        "name": "restore-fresh-native-proof",
+        "exit": 0,
+        "passed": 1,
+        "failed": 0,
+        "pending": 23
+      },
+      {
+        "name": "retain-old-ready-diagnostic",
+        "exit": 1,
+        "passed": 0,
+        "failed": 1,
+        "pending": 12
+      },
+      {
+        "name": "restore-live-invalidation",
+        "exit": 0,
+        "passed": 1,
+        "failed": 0,
+        "pending": 12
+      },
+      {
+        "name": "overclassify-unrelated-native-error",
+        "exit": 1,
+        "passed": 0,
+        "failed": 1,
+        "pending": 23
+      },
+      {
+        "name": "restore-canonical-cancel-only",
+        "exit": 0,
+        "passed": 1,
+        "failed": 0,
+        "pending": 23
+      },
+      {
+        "name": "omit-node-evidence-transfer",
+        "exit": 1,
+        "passed": 0,
+        "failed": 6,
+        "pending": 13
+      },
+      {
+        "name": "restored-all",
+        "exit": 0,
+        "passed": 59,
+        "failed": 0,
+        "pending": 0
+      }
+    ]
+  },
+  {
+    "source": "428bd2d6fda5b8fa0431822e14995dd040065aea",
+    "initialStatus": "",
+    "finalStatus": "",
+    "originalSha256": "2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a",
+    "originalReceiptSha256": "4091f7895709f415412d0c9f02fedc9e59ed0d6ccb94818767d7d515dd4e56ca",
+    "steps": [
+      {
+        "name": "construction-control-red",
+        "exit": 1,
+        "passed": 15,
+        "failed": 7
+      },
+      {
+        "name": "construction-control-restored",
+        "exit": 0,
+        "passed": 22,
+        "failed": 0
+      }
+    ]
+  },
+  {
+    "family": "provider",
+    "runs": [
+      {
+        "file": "provider-control-green.json",
+        "originalJsonSha256": "10558012fb6b08d7334f1a9147960d394053f613500d99f139879bf296b75a08",
+        "passed": 5,
+        "failed": 0,
+        "pending": 0
+      },
+      {
+        "file": "provider-control-red.json",
+        "originalJsonSha256": "8ffddcce5d178213ca89f9670cd3c43bdfd02da91c8895e9d66e79b5744b4f6c",
+        "passed": 4,
+        "failed": 1,
+        "pending": 0
+      },
+      {
+        "file": "provider-control-restored.json",
+        "originalJsonSha256": "06392e5f962484570351099241f23c65b3a2b65cce2f0f2add3fd7a1ca23eec4",
+        "passed": 5,
+        "failed": 0,
+        "pending": 0
+      }
+    ]
+  },
+  {
+    "family": "construction",
+    "runs": [
+      {
+        "file": "construction-control-green.json",
+        "originalJsonSha256": "be5db3592cca578229f69414361da5f857e0ff388b801edcd48dbb5c071184a2",
+        "passed": 22,
+        "failed": 0,
+        "pending": 0
+      },
+      {
+        "file": "construction-control-red.json",
+        "originalJsonSha256": "edbdbca4983e1c3fac8af44542f76a694c2189f10728c79df541d4c11d68f4d9",
+        "passed": 15,
+        "failed": 7,
+        "pending": 0
+      },
+      {
+        "file": "construction-control-restored.json",
+        "originalJsonSha256": "ee6daa1878357fb609cd149c1a3ed9b166f6fca6de238601773abfe1c5036422",
+        "passed": 22,
+        "failed": 0,
+        "pending": 0
+      }
+    ]
+  }
+]

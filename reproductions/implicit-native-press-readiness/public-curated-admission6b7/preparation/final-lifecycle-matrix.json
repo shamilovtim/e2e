@@ -1,0 +1,173 @@
+{
+  "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "cases": [
+    {
+      "case": "admission6b7-ref-cancel-1",
+      "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+      "route": "ref",
+      "scenario": "cancel",
+      "elapsedMs": 205.0211670000008,
+      "completedReadinessReads": 2,
+      "outcome": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "request_canceled",
+        "check": null,
+        "readiness": null,
+        "dispatched": "unknown"
+      },
+      "targetPhaseTapAccepted": 0,
+      "finalCounts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 4040.8038750000005
+      },
+      "strictOracles": [],
+      "success": true
+    },
+    {
+      "case": "admission6b7-ref-deadline-1",
+      "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+      "route": "ref",
+      "scenario": "deadline",
+      "elapsedMs": 59962.8,
+      "completedReadinessReads": 623,
+      "outcome": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "daemon_request_timeout",
+        "check": "native-readiness",
+        "readiness": "blocked",
+        "dispatched": "no"
+      },
+      "targetPhaseTapAccepted": 0,
+      "finalCounts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 4047.3056249999936
+      },
+      "strictOracles": [],
+      "success": true
+    },
+    {
+      "case": "admission6b7-ref-ready-1",
+      "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+      "route": "ref",
+      "scenario": "ready",
+      "elapsedMs": 3161.601334000001,
+      "completedReadinessReads": 31,
+      "outcome": {
+        "ok": true,
+        "code": null,
+        "reason": null,
+        "check": null,
+        "readiness": null,
+        "dispatched": null
+      },
+      "targetPhaseTapAccepted": 1,
+      "finalCounts": {
+        "underlying": 1,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 1190.0586249999997
+      },
+      "strictOracles": null,
+      "success": true
+    },
+    {
+      "case": "admission6b7-selector-cancel-1",
+      "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+      "route": "selector",
+      "scenario": "cancel",
+      "elapsedMs": 206.11016699999982,
+      "completedReadinessReads": 2,
+      "outcome": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "request_canceled",
+        "check": null,
+        "readiness": null,
+        "dispatched": "unknown"
+      },
+      "targetPhaseTapAccepted": 0,
+      "finalCounts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 4027.44175
+      },
+      "strictOracles": [],
+      "success": true
+    },
+    {
+      "case": "admission6b7-selector-deadline-1",
+      "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+      "route": "selector",
+      "scenario": "deadline",
+      "elapsedMs": 59967.4585,
+      "completedReadinessReads": 624,
+      "outcome": {
+        "ok": false,
+        "code": "COMMAND_FAILED",
+        "reason": "daemon_request_timeout",
+        "check": "native-readiness",
+        "readiness": "blocked",
+        "dispatched": "no"
+      },
+      "targetPhaseTapAccepted": 0,
+      "finalCounts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 4038.324292000005
+      },
+      "strictOracles": [],
+      "success": true
+    },
+    {
+      "case": "admission6b7-selector-ready-1",
+      "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+      "route": "selector",
+      "scenario": "ready",
+      "elapsedMs": 3181.322624999999,
+      "completedReadinessReads": 31,
+      "outcome": {
+        "ok": true,
+        "code": null,
+        "reason": null,
+        "check": null,
+        "readiness": null,
+        "dispatched": null
+      },
+      "targetPhaseTapAccepted": 1,
+      "finalCounts": {
+        "underlying": 1,
+        "overlay": 0
+      },
+      "lateObservation": {
+        "dismissalObserved": true,
+        "graceMs": 1100,
+        "actualElapsedMs": 1201.6560829999999
+      },
+      "strictOracles": null,
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "kind": "overlay",
+    "app": "dev.e2e.overlay1563",
+    "files": [
+      {
+        "path": "Info.plist",
+        "sha256": "b8701eb69beb67721f84fe743a8f51e897885c19ff8e6b6dd6613d63969ddbbd",
+        "size": 843
+      },
+      {
+        "path": "OverlayFixture",
+        "sha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+        "size": 147072
+      },
+      {
+        "path": "_CodeSignature/CodeResources",
+        "sha256": "6af5c3ae5339ee1b751776fe602e0e48023e7314471e3c64dadba6d0bb236e12",
+        "size": 1798
+      }
+    ]
+  },
+  {
+    "kind": "variant",
+    "app": "dev.e2e.readinessvariants",
+    "files": [
+      {
+        "path": "Info.plist",
+        "sha256": "ec72678f5da9906f5a985d97240d06c366dd5cacc6b9d6cf16f531c3755e30bf",
+        "size": 1017
+      },
+      {
+        "path": "ReadinessVariants",
+        "sha256": "bae19d6feede5eebd96878a1d5d7801f09cea48d5c80c0ae92db7ea86078ed84",
+        "size": 156000
+      },
+      {
+        "path": "_CodeSignature/CodeResources",
+        "sha256": "969a856beeea0bdc7c89fdc54de6b40ad3dbc00b4f2cd0c023e3c4e491a02b8f",
+        "size": 1798
+      }
+    ]
+  },
+  {
+    "kind": "geometry",
+    "app": "dev.e2e.readinessgeometry",
+    "files": [
+      {
+        "path": "GeometryFixture",
+        "sha256": "92cb7758c6aa89f84c702f2a2571a24cd130b05eee3c5cd6d5b03b142f991159",
+        "size": 166832
+      },
+      {
+        "path": "Info.plist",
+        "sha256": "084f681cca102e443e4be18e488f79321d832d69a5645131da9b94e08abcad7e",
+        "size": 1104
+      },
+      {
+        "path": "_CodeSignature/CodeResources",
+        "sha256": "4518d80dbcb3b66e2629be958d276000ba1c231543f62735babf5ad74c547030",
+        "size": 1798
+      }
+    ]
+  }
+]

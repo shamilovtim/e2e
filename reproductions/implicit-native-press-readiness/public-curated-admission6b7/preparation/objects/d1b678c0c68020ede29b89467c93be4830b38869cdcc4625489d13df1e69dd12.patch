@@ -1,0 +1,11 @@
+--- LOCAL_INPUT_PATH	2026-11-11 14:21:32
++++ LOCAL_INPUT_PATH	2026-11-12 12:27:44
+@@ -35,7 +35,7 @@
+ const nativeMarkers=offset=>logText().slice(offset).split('\n').filter(x=>x.includes('AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED')||x.includes('AGENT_DEVICE_RUNNER_COMMAND_COMPLETED'));
+ const capture=async name=>{const snapshot=await client.capture.snapshot({interactiveOnly:false});fs.writeFileSync(path.join(dir,name+'.json'),JSON.stringify(snapshot,null,2)+'\n');return snapshot;};
+ const target=snapshot=>{
+- const matches=snapshot.nodes.filter(n=>n.type===targetType&&Math.abs(n.rect?.x-24)<=1&&Math.abs(n.rect?.y-220)<=1&&Math.abs(n.rect?.height-40)<=1&&Math.abs(n.rect?.width-345)<=1);
++ const matches=snapshot.nodes.filter(n=>n.type===targetType&&Math.abs(n.rect?.x-24)<=1&&Math.abs(n.rect?.y-220)<=1&&Math.abs(n.rect?.height-40)<=1&&Math.abs(n.rect?.width-354)<=1);
+  if(matches.length!==1)throw Error('Expected exactly one first-row Other by actual frame; got '+matches.length);
+  const node=matches[0];
+  if(mode==='anonymous'&&node.identifier)throw Error('Anonymous Other target acquired an identifier');

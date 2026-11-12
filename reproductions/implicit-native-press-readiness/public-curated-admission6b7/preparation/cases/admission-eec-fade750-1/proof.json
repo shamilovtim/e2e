@@ -1,0 +1,178 @@
+{
+  "case": "admission-eec-fade750-1",
+  "classification": "current-upstream-false-success-negative",
+  "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+  "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+  "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+  "runtimeJavaScriptFiles": 631,
+  "success": false,
+  "wrapperExitCode": 1,
+  "daemonCleanupExitCode": 0,
+  "recording": null,
+  "recordingOwner": "sdk",
+  "wrapperSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+  "driverSha256": "fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84",
+  "media": "../../../media/admission-eec-fade750-1/video.mp4",
+  "executedSources": {
+    "executed-driver.py": {
+      "originalArchivedSha256": "fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84",
+      "public": {
+        "path": "objects/fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84.py",
+        "sha256": "fc4525f0bf0d94289931d88ac8272035915d9be7a464dad5b3b01e87b2700e84",
+        "bytes": 7536
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    "executed-wrapper.mjs": {
+      "originalArchivedSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+      "public": {
+        "path": "objects/d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599.mjs",
+        "sha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599",
+        "bytes": 3528
+      },
+      "normalization": "None; byte-equal actual executed source."
+    }
+  },
+  "nativeBuild": {
+    "schemaVersion": 3,
+    "packageVersion": "0.21.37-dev",
+    "runnerSourceFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+    "xcodeVersion": "27.2",
+    "xcodeBuildVersion": "27B52",
+    "sdkName": "iphonesimulator",
+    "sdkVersion": "27.2",
+    "sdkBuildVersion": "24B8118",
+    "platformName": "iOS",
+    "deviceKind": "simulator",
+    "target": "mobile",
+    "buildDestinationFamily": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "06dbcbaea48a5f93837581ccb56b8dfbb380e59dc4283e469dde211096cb214a",
+    "xctestrunSize": 17957,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124288,
+        "mode": 493,
+        "digest": "0d105ca9486c53d9e8c2814d7048407d5324ae986bfcd9fd3a62c797cc53e9d9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "8a634f71b9acce05cd79d4b53009e04d0a5e1c8283f6235d244207298ef724a1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "987c8cd087ed4debf59c5c26df859d5f4eb846737a3b700c27806b2fe4d617aa"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10749536,
+        "mode": 493,
+        "digest": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "8017edf33d262b8c1d2876241744759725e44254bb5acfd8f3af8e40339348c0"
+  },
+  "runtimeJavaScriptManifest": {
+    "path": "objects/bf1d45573dbef77773bd6f67a7b996fc993168315db9c3bf60f995f679033c2d.json",
+    "sha256": "bf1d45573dbef77773bd6f67a7b996fc993168315db9c3bf60f995f679033c2d",
+    "bytes": 102593
+  },
+  "sourceTreeManifest": {
+    "path": "objects/7d052949375647246f8c90de28fae34b1f5fbb5bc215d4fbb9e2286667bfb285.txt",
+    "sha256": "7d052949375647246f8c90de28fae34b1f5fbb5bc215d4fbb9e2286667bfb285",
+    "bytes": 658675
+  },
+  "sourceCommitPatch": {
+    "path": "objects/29c701aba7e12334d88d62f3bd5988e48df742b889c666d0dc8c8b93138e4677.patch",
+    "sha256": "29c701aba7e12334d88d62f3bd5988e48df742b889c666d0dc8c8b93138e4677",
+    "bytes": 6254
+  },
+  "runtimeLauncherInputs": {
+    "bin/agent-device.mjs": {
+      "path": "objects/3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30",
+      "bytes": 584
+    },
+    "package.json": {
+      "path": "objects/57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f.json",
+      "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f",
+      "bytes": 23774
+    },
+    "scripts/build-entries.ts": {
+      "path": "objects/c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13",
+      "bytes": 1872
+    },
+    "scripts/build-xcuitest-apple.sh": {
+      "path": "objects/1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a",
+      "bytes": 5978
+    }
+  },
+  "wrapperSummary": {
+    "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "exitCode": 1,
+    "cleanupExitCode": 0,
+    "success": false,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "closeMs": 885.9655000000002,
+    "pressMs": 348.12945799999943,
+    "wallSeconds": 10.566127250000001,
+    "harnessSha256": "d0062ebf47af505bbbb25b17bce4e8400c56e46917d319d99f5588c67b4a7599"
+  },
+  "originalResultSha256": "7f87006935ef91a6bb46977dd00335edbe71a03b047b9f8bd6407780e12b0484",
+  "observations": {
+    "closeMs": 885.9655000000002,
+    "pressMs": 348.12945799999943,
+    "result": "Underlying taps: 0\nOverlay touches: 1",
+    "success": false,
+    "recordStopReturned": true
+  }
+}

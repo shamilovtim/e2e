@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "textFindings": [],
+  "scope": "Generic public SDK and fixture source only; no private app data or actual host/device/process/session identities. Two generic /tmp/native fixture literals in exact source.patch are repository test data.",
+  "media": "20 original containers;one video track each/noaudio;standard com.apple.policy.screenrecording.1 tag;40first/last endpoints generic public fixtures/defaultOS;interior frames decoded but not individually visually reviewed.",
+  "normalization": "Source copies with literal host paths normalized carry separate original/public hashes; raw private artifacts stay local."
+}

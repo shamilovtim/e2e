@@ -1,0 +1,596 @@
+{
+  "case": "admission6b7-tablet-placement-1",
+  "classification": "current-head-functional",
+  "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+  "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+  "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+  "runtimeJavaScriptFiles": 631,
+  "success": true,
+  "wrapperExitCode": 0,
+  "daemonCleanupExitCode": 0,
+  "recording": {
+    "code": 0,
+    "signal": null
+  },
+  "recordingOwner": "simctl-child",
+  "wrapperSha256": "a914e5acd3fa6bdc89d3337f0f3f3e0e471b981841f578698f7b6ff3d6086cc6",
+  "driverSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+  "media": "../../../media/admission6b7-tablet-placement-1/video.mp4",
+  "executedSources": {
+    "executed-driver.py": {
+      "originalArchivedSha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+      "public": {
+        "path": "objects/57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290.py",
+        "sha256": "57c64d15454b796884e747fcea40c8180e21ef41aba68206f34e897efc2e1290",
+        "bytes": 12667
+      },
+      "normalization": "None; byte-equal actual executed source."
+    },
+    "executed-wrapper.mjs": {
+      "originalArchivedSha256": "a914e5acd3fa6bdc89d3337f0f3f3e0e471b981841f578698f7b6ff3d6086cc6",
+      "public": {
+        "path": "objects/a914e5acd3fa6bdc89d3337f0f3f3e0e471b981841f578698f7b6ff3d6086cc6.mjs",
+        "sha256": "a914e5acd3fa6bdc89d3337f0f3f3e0e471b981841f578698f7b6ff3d6086cc6",
+        "bytes": 6277
+      },
+      "normalization": "None; byte-equal actual executed source."
+    }
+  },
+  "nativeBuild": {
+    "schemaVersion": 3,
+    "packageVersion": "0.21.37-dev",
+    "runnerSourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "xcodeVersion": "27.2",
+    "xcodeBuildVersion": "27B52",
+    "sdkName": "iphonesimulator",
+    "sdkVersion": "27.2",
+    "sdkBuildVersion": "24B8118",
+    "platformName": "iOS",
+    "deviceKind": "simulator",
+    "target": "mobile",
+    "buildDestinationFamily": "generic/platform=iOS Simulator",
+    "xctestrunDigest": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "xctestrunSize": 17969,
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ],
+    "originalPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd"
+  },
+  "runtimeJavaScriptManifest": {
+    "path": "objects/b6dc5b1903fe89f4ed6079c90a75633111d2ecd94f9299ae61400e8dac047d8d.json",
+    "sha256": "b6dc5b1903fe89f4ed6079c90a75633111d2ecd94f9299ae61400e8dac047d8d",
+    "bytes": 102593
+  },
+  "sourceTreeManifest": {
+    "path": "objects/c8d3eaeb42a9335caeabe0ae030b2ab93c9e696e1dd29b85d46ef0755c40cbf8.txt",
+    "sha256": "c8d3eaeb42a9335caeabe0ae030b2ab93c9e696e1dd29b85d46ef0755c40cbf8",
+    "bytes": 659070
+  },
+  "sourceCommitPatch": {
+    "path": "objects/90d2a2174cc381c904478ab5284463721be03e76c878630abec3e5cedc8c140e.patch",
+    "sha256": "90d2a2174cc381c904478ab5284463721be03e76c878630abec3e5cedc8c140e",
+    "bytes": 1949
+  },
+  "runtimeLauncherInputs": {
+    "bin/agent-device.mjs": {
+      "path": "objects/3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30",
+      "bytes": 584
+    },
+    "package.json": {
+      "path": "objects/57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f.json",
+      "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f",
+      "bytes": 23774
+    },
+    "scripts/build-entries.ts": {
+      "path": "objects/c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13",
+      "bytes": 1872
+    },
+    "scripts/build-xcuitest-apple.sh": {
+      "path": "objects/1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a",
+      "bytes": 5978
+    }
+  },
+  "wrapperSummary": {
+    "phase": "admission6b7-tablet-placement-1",
+    "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": 0,
+    "siblingTaps": null,
+    "inputEvents": {},
+    "frameComparison": null,
+    "error": null,
+    "recording": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "originalResultSha256": "b989ae0df236827d586c84663226a4c99002473fc480192113ad1790386eeed0",
+  "observations": {
+    "phase": "admission6b7-tablet-placement-1",
+    "source": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+    "targetTapEvents": 0,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null
+    },
+    "sessionClosed": true,
+    "setupOnly": true,
+    "coarseGestureLimit": 1,
+    "windowsBefore": [
+      {
+        "x": 0,
+        "width": 834,
+        "height": 1210,
+        "y": 0
+      }
+    ],
+    "windowsAfter": [
+      {
+        "y": 305,
+        "height": 486,
+        "x": 230,
+        "width": 375
+      }
+    ],
+    "screenshotPixels": {
+      "width": 834,
+      "height": 1210
+    },
+    "setupPan": {
+      "x": 824,
+      "y": 1200,
+      "dx": -400,
+      "dy": -450,
+      "durationMs": 900
+    },
+    "coordinateSource": "Reported native viewport and matching full window, corroborated by SDK viewport; screenshot pixels are recorded separately and not used as input coordinates.",
+    "placedWindow": {
+      "y": 305,
+      "height": 486,
+      "x": 230,
+      "width": 375
+    },
+    "recorderCleanupAttempts": [
+      {
+        "signal": "SIGINT",
+        "result": {
+          "code": 0,
+          "signal": null
+        }
+      }
+    ],
+    "nativeEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.00541668850928545
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 17.909125075675547,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 834.0, 1210.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7686.322541674599,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 798.0, 1189.5)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7707.093500066549,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 757.0, 1166.5)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7720.97020840738,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 742.0, 1158.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7737.765666679479,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 727.0, 1149.5)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7754.25841670949,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 712.0, 1141.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7770.492583396845,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 697.0, 1132.5)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7787.921500043012,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 681.0, 1123.5)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7805.980291683227,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 665.0, 1114.5)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7828.956958372146,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 633.0, 1087.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7854.459833353758,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 616.0, 1087.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7872.65550007578,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 600.0, 1055.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7898.399333353154,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 583.0, 1037.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7907.176333363168,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 566.0, 1028.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7930.788458324969,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 533.0, 986.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7947.247041738592,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 516.0, 967.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 220.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7960.381416720338,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 499.0, 948.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 218.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7976.7043750034645,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 482.0, 929.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 201.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 7993.706916691735,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 465.0, 910.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 184.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8009.476541657932,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 448.0, 890.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 167.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8024.709291639738,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 431.0, 871.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 150.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8039.462541695684,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 414.0, 852.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 133.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8070.79091668129,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 397.0, 833.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 116.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8086.8324167095125,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 380.0, 814.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8103.357166750357,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 795.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8120.053958380595,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 777.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8136.458541732281,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 758.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8153.38462498039,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 739.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8169.795666704886,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 721.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8187.841166742146,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 703.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8203.315666643903,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 685.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8230.410958407447,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 667.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8246.550500043668,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 649.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8263.738250010647,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 631.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8280.513041652739,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 614.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8296.631541685201,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 597.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8314.084500074387,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 581.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8330.056958366185,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 565.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8348.136416752823,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 549.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8363.148708362132,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 533.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8380.309666739777,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 519.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8396.318541723303,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 504.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8413.170791696757,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 491.0)"
+      },
+      {
+        "actionScreenFrame": "(240.0, 90.0, 111.0, 42.0)",
+        "event": "geometryChanged",
+        "interfaceOrientation": 1,
+        "ms": 8429.819875047542,
+        "screenBounds": "(0.0, 0.0, 834.0, 1210.0)",
+        "viewBounds": "(0.0, 0.0, 375.0, 486.0)"
+      }
+    ]
+  }
+}
