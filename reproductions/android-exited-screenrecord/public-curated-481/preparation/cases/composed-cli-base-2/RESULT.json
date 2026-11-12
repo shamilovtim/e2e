@@ -1,0 +1,59 @@
+{
+  "source": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+  "success": false,
+  "commands": [
+    {
+      "command": "open",
+      "exitCode": 0
+    },
+    {
+      "command": "snapshot",
+      "exitCode": 0
+    },
+    {
+      "command": "record-start",
+      "exitCode": 0
+    },
+    {
+      "command": "record-stop",
+      "exitCode": 1
+    },
+    {
+      "command": "record-stop-cleanup",
+      "exitCode": 1
+    },
+    {
+      "command": "close",
+      "exitCode": 0
+    },
+    {
+      "command": "daemon-stop",
+      "exitCode": 0
+    }
+  ],
+  "boundary": "built public CLI/daemon with fixture-only native launcher; all non-launch ADB commands delegated unchanged",
+  "nativeStartIdentityAttested": true,
+  "nativeBeforeStop": {
+    "state": "Z",
+    "emptyCommandLine": true,
+    "sameStartTime": true,
+    "successfulExit": true
+  },
+  "nativeCleanup": "child-reaped",
+  "parentCleanupSignalsToRecorder": 0,
+  "originalRunnerReceiptSuccess": false,
+  "classification": "baseline ordinary daemon stop fails ownership check before collection; cleanup retry also fails while Z remains. Parent reaped child, then later close recovers export. This is not a successful ordinary stop.",
+  "posthoc": {
+    "ordinaryStopExit": 1,
+    "ordinaryStopError": "Android screenrecord ownership could not be confirmed",
+    "exportPresentAfterLaterCloseCleanup": true,
+    "actualOriginalNativeVideoPreserved": true,
+    "delegatedSignalsToRecorder": 0,
+    "parentCleanupSignalsToRecorder": 0,
+    "classification": "deterministic baseline ordinary daemon stop failure; later close cleanup runs after parent reaps the child and may recover collection/export",
+    "failedPosthocAssertion": "The first posthoc check incorrectly expected export absent after close; close had recovered the export after fixture reaping. Original failed command retained in transcript."
+  },
+  "footageTimeline": "Original screenrecord capture completes before ordinary record stop; video shows generic Android system motion, not the host stop call. Typed actual CLI/ADB receipts establish stop and cleanup.",
+  "fixtureBoundary": "Only native screenrecord launch replaced by an owned parent retaining the actual child after successful exit. Requested bitrate preserved; added12-second time limit. Real process metadata, stop, pull, export and cleanup are unmodified.",
+  "identityPrivacy": "Actual PID/starttime/serial/raw manifest remain private; root independently audits consistent original identity through native parent, production manifest, live start, pre-stop Z, stop and parent reaping."
+}

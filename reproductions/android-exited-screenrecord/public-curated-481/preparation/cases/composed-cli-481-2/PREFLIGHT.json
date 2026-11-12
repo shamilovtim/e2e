@@ -1,0 +1,27 @@
+{
+  "source": "481db79c89538931be6012ccc779506e9080412c",
+  "archivedBeforeExecution": true,
+  "completeRuntimeFileCount": 631,
+  "sourceHashes": {
+    "adb_owned_parent_proxy_v1.py": "346abcd397a7376a74e972e5d4f1a9b442f7c4f694e6e54be7978364f41618a2",
+    "run_composed_cli_v2.py": "782c794eda1e3d52b61766527c8ed1fa7a91c9b6af962ce9322128978bd4f97d",
+    "hold_recorder_parent_v3.c": "bdf8a88126ea17266cd1c1c4c7b438c17e4038b5a4c1a7b93ac74617c9256d65"
+  },
+  "fixtureBinarySha256": "2a7843a925bf27ab363fa75ee919abef4535389fee02e588054d002d79ede9cf",
+  "nativeHelperAssets": [
+    {
+      "path": "android/snapshot-helper/dist/agent-device-android-snapshot-helper-0.21.37-dev.apk",
+      "bytes": 37291,
+      "sha256": "696bd7d5da5bbd7f18565c9784872370e296ab21b166ee5e0786a05aa722fa56"
+    },
+    {
+      "path": "android/ime-helper/dist/agent-device-android-ime-helper-0.21.37-dev.apk",
+      "bytes": 12779,
+      "sha256": "4784ccfab02c819232f0b964740440f5f489935da7b37ad5b9e8010aa34108e0"
+    }
+  ],
+  "device": {
+    "model": "sdk_gphone16k_arm64",
+    "api": "37"
+  }
+}

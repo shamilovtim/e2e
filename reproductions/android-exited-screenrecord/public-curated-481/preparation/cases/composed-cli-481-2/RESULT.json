@@ -1,0 +1,57 @@
+{
+  "source": "481db79c89538931be6012ccc779506e9080412c",
+  "success": false,
+  "commands": [
+    {
+      "command": "open",
+      "exitCode": 0
+    },
+    {
+      "command": "snapshot",
+      "exitCode": 0
+    },
+    {
+      "command": "record-start",
+      "exitCode": 0
+    },
+    {
+      "command": "record-stop",
+      "exitCode": 0
+    },
+    {
+      "command": "close",
+      "exitCode": 0
+    },
+    {
+      "command": "daemon-stop",
+      "exitCode": 0
+    }
+  ],
+  "boundary": "built public CLI/daemon with fixture-only native launcher; all non-launch ADB commands delegated unchanged",
+  "nativeStartIdentityAttested": true,
+  "nativeBeforeStop": {
+    "state": "Z",
+    "emptyCommandLine": true,
+    "sameStartTime": true,
+    "successfulExit": true
+  },
+  "typedStopOutcome": {
+    "recording": "stopped",
+    "recordingBackend": "adb screenrecord",
+    "recorder": "confirmed",
+    "nativePathDisposition": "retired",
+    "durationMs": 14349,
+    "capturedDurationMs": 10275,
+    "showTouches": false
+  },
+  "videoBytes": 847217,
+  "videoSha256": "b3d5a170974704df8037bdb99db9f34c3083bd80ea34b83999ca29e6b0b0cad1",
+  "signalsToRecorder": 0,
+  "nativeCleanup": "child-reaped",
+  "parentCleanupSignalsToRecorder": 0,
+  "originalRunnerReceiptSuccess": false,
+  "classification": "ordinary daemon stop/collection passed on attested zombie, but harness incorrectly expected completed fence marker absent; receipt remains failed",
+  "footageTimeline": "Original screenrecord capture completes before ordinary record stop; video shows generic Android system motion, not the host stop call. Typed actual CLI/ADB receipts establish stop and cleanup.",
+  "fixtureBoundary": "Only native screenrecord launch replaced by an owned parent retaining the actual child after successful exit. Requested bitrate preserved; added12-second time limit. Real process metadata, stop, pull, export and cleanup are unmodified.",
+  "identityPrivacy": "Actual PID/starttime/serial/raw manifest remain private; root independently audits consistent original identity through native parent, production manifest, live start, pre-stop Z, stop and parent reaping."
+}

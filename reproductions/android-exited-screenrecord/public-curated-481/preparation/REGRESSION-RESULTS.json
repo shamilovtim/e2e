@@ -1,0 +1,63 @@
+{
+  "candidate": "481db79c89538931be6012ccc779506e9080412c",
+  "priorCandidate": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+  "runs": [
+    {
+      "report": "review-final-tests-c228-red.json",
+      "success": false,
+      "passed": 21,
+      "failed": 3,
+      "filtered": 0
+    },
+    {
+      "report": "review-head-transport-green.json",
+      "success": true,
+      "passed": 24,
+      "failed": 0,
+      "filtered": 0
+    },
+    {
+      "report": "review-head-provider-green.json",
+      "success": true,
+      "passed": 10,
+      "failed": 0,
+      "filtered": 0
+    },
+    {
+      "report": "p3-before-green.json",
+      "success": true,
+      "passed": 1,
+      "failed": 0,
+      "filtered": 23
+    },
+    {
+      "report": "p3-mutant-red.json",
+      "success": false,
+      "passed": 0,
+      "failed": 1,
+      "filtered": 23
+    },
+    {
+      "report": "p3-mutant-without-assertions-green.json",
+      "success": true,
+      "passed": 1,
+      "failed": 0,
+      "filtered": 23
+    },
+    {
+      "report": "p3-restored-full-green.json",
+      "success": true,
+      "passed": 24,
+      "failed": 0,
+      "filtered": 0
+    }
+  ],
+  "sourceScope": "review-head suites used the final approved revision bytes before committing481; exact clean481 full gate is separately recorded. Isolated mutant never changed the candidate checkout.",
+  "reviewFixes": "Empty successful or unparseable stat reads share the fresh-presence check; signal-bearing presence responses remain uncertain; writer-scan test proves candidate identity reads and re-probe occurred.",
+  "counterexample": "Final tests only on unchangedc228 reproduce3failures/21passes. P3 drops the final writer candidate: new assertions fail; removing only those3assertions makes the identical mutant pass; restored full24pass.",
+  "commands": [
+    "pnpm exec vitest run --project unit-core src/platform-runtime-screen-recording-android-host.test.ts --reporter=json",
+    "pnpm exec vitest run --project provider-integration test/integration/provider-scenarios/android-recording.test.ts --reporter=json",
+    "pnpm exec vitest run --project unit-core src/platform-runtime-screen-recording-android-host.test.ts -t 'finds only exact screenrecord processes' --reporter=json"
+  ]
+}

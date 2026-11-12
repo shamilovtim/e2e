@@ -1,0 +1,11 @@
+--- a/src/platform-runtime-screen-recording-android-host.ts
++++ b/src/platform-runtime-screen-recording-android-host.ts
+@@ -86,7 +86,7 @@
+       if (result.exitCode !== 0) return { writers: [], conclusive: false };
+       const pids = result.stdout.split(/\s+/).filter((pid) => /^\d+$/.test(pid));
+       const inspected = await Promise.all(
+-        pids.map(
++        pids.slice(0, -1).map(
+           async (pid) =>
+             await inspectAndroidScreenRecordingProcess(
+               shell,

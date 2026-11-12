@@ -1,0 +1,33 @@
+{
+  "decodedVideoSamples": 32,
+  "decodeErrors": 0,
+  "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+  "firstFrame": [
+    1080,
+    2400
+  ],
+  "firstSampleSeconds": 0,
+  "fullStreamDecoded": true,
+  "lastFrame": [
+    1080,
+    2400
+  ],
+  "lastSampleSeconds": 2.4996666666666667,
+  "case": "native-zombie-pair-3",
+  "video": "cases/native-zombie-pair-3/video.mp4",
+  "videoBytes": 230992,
+  "videoSha256": "2f39ab3f46d69c2e3f7065774ac8f0838be88b0db6723f191f4121e34854f5c6",
+  "firstPngSha256": "db0ee9a4e6eb7ee7642295f262fae80c35b8f8c3852f0c4cfebb3bacf0be7e66",
+  "lastPngSha256": "5728cab1d507465593bf4b96f4c31cfab9ea03bbd3e4fe0b7f2810cbecc3f229",
+  "originalBytesUnchanged": true,
+  "duplicateCaptureCopiesVerified": 2,
+  "avAssetReaderDiagnostic": {
+    "audioTracks": 0,
+    "completed": true,
+    "count": 32,
+    "durationSeconds": 2.5342,
+    "error": "none",
+    "started": true,
+    "status": 2
+  }
+}

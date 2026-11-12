@@ -1,0 +1,22 @@
+{
+  "candidate": "481db79c89538931be6012ccc779506e9080412c",
+  "base": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+  "priorCandidate": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+  "candidatePatchSha256": "bdfd96a5f762c7aba603b39f83aa1450c09b8645f6f51834c63af78f34bc99f5",
+  "reviewPatchSha256": "a39b73c9773c07194eaa0009a54ae5e98a32a53d82c7063fe65a109aff646ed2",
+  "completeGeneratedRuntimeFileSets": {
+    "base": 631,
+    "head": 631,
+    "setEqual": true,
+    "changed": [
+      "dist/src/platform-runtime-screen-recording-android-host.js"
+    ]
+  },
+  "runtimeHashScope": "All generated dist/**/*.js files, no symlinks, package/build input hashes. Excludes external dependency bytes, Node/JDK/toolchain executables, Android OS and host frameworks. Lockfile separately pinned.",
+  "nativeBoundary": "Production TypeScript source transport with real ADB; separate healthy control uses the built public CLI.",
+  "fixtureBinarySha256": "6200f59e7ef66bfd22c307027f344f481c17b4e5578beb087018af79255cb17e",
+  "fixtureCompiler": "NDK28.2.13676358 ARM64 Android35; -O2 -Wall -Wextra -Werror -Wl,-z,max-page-size=16384",
+  "priorImmutableEvidence": "https://github.com/shamilovtim/e2e/tree/afccdbcd58613e04d87055ed346f8f2524543673/reproductions/android-exited-screenrecord/public-curated-c228",
+  "runtimePostGateRebuild": "Complete631file set, no symlinks, every JS hash and package/build input byte-identical to pre-native manifest.",
+  "exactGate": "passed all11runnable checks clean unchanged481;19186unit/3skips,330related,12command-docs"
+}

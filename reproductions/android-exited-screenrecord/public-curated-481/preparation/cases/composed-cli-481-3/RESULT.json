@@ -1,0 +1,61 @@
+{
+  "source": "481db79c89538931be6012ccc779506e9080412c",
+  "success": true,
+  "commands": [
+    {
+      "command": "open",
+      "exitCode": 0
+    },
+    {
+      "command": "snapshot",
+      "exitCode": 0
+    },
+    {
+      "command": "record-start",
+      "exitCode": 0
+    },
+    {
+      "command": "record-stop",
+      "exitCode": 0
+    },
+    {
+      "command": "close",
+      "exitCode": 0
+    },
+    {
+      "command": "daemon-stop",
+      "exitCode": 0
+    }
+  ],
+  "boundary": "built public CLI/daemon with fixture-only native launcher; all non-launch ADB commands delegated unchanged",
+  "nativeStartIdentityAttested": true,
+  "nativeBeforeStop": {
+    "state": "Z",
+    "emptyCommandLine": true,
+    "sameStartTime": true,
+    "successfulExit": true
+  },
+  "typedStopOutcome": {
+    "recording": "stopped",
+    "recordingBackend": "adb screenrecord",
+    "recorder": "confirmed",
+    "nativePathDisposition": "retired",
+    "durationMs": 14594,
+    "capturedDurationMs": 11299,
+    "showTouches": false
+  },
+  "videoBytes": 557017,
+  "videoSha256": "4c14b31d6b8361aa4e973022ad8b86ff80ad6928b13f5d88a87c466db2bf1366",
+  "signalsToRecorder": 0,
+  "nativeChunksRemoved": true,
+  "completedFenceMarkerRetainedByDesign": true,
+  "zombieRemainsUntilOwnedParentCleanup": true,
+  "stopSucceeded": true,
+  "nativeCleanup": "child-reaped",
+  "parentCleanupSignalsToRecorder": 0,
+  "originalRunnerReceiptSuccess": true,
+  "classification": "fresh complete composed candidate pass, including durable marker, removed chunks, zero recorder signals across daemon and parent cleanup, child reaped",
+  "footageTimeline": "Original screenrecord capture completes before ordinary record stop; video shows generic Android system motion, not the host stop call. Typed actual CLI/ADB receipts establish stop and cleanup.",
+  "fixtureBoundary": "Only native screenrecord launch replaced by an owned parent retaining the actual child after successful exit. Requested bitrate preserved; added12-second time limit. Real process metadata, stop, pull, export and cleanup are unmodified.",
+  "identityPrivacy": "Actual PID/starttime/serial/raw manifest remain private; root independently audits consistent original identity through native parent, production manifest, live start, pre-stop Z, stop and parent reaping."
+}

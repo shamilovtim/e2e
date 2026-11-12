@@ -1,0 +1,226 @@
+{
+  "recordings": 6,
+  "decodedSamples": 438,
+  "decodeErrors": 0,
+  "originalBytesUnchanged": true,
+  "scope": "Original byte-identical captures. AVFoundation full-stream decode when duration positive; original sole H264 sample decoded directly with VideoToolbox for any zero-duration static artifact, without editing or re-encoding the MP4. Footage ends before host stop; actual typed CLI/ADB results are separate oracle.",
+  "cases": [
+    {
+      "decodedVideoSamples": 32,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1080,
+        2400
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1080,
+        2400
+      ],
+      "lastSampleSeconds": 2.4996666666666667,
+      "case": "native-zombie-pair-3",
+      "video": "cases/native-zombie-pair-3/video.mp4",
+      "videoBytes": 230992,
+      "videoSha256": "2f39ab3f46d69c2e3f7065774ac8f0838be88b0db6723f191f4121e34854f5c6",
+      "firstPngSha256": "db0ee9a4e6eb7ee7642295f262fae80c35b8f8c3852f0c4cfebb3bacf0be7e66",
+      "lastPngSha256": "5728cab1d507465593bf4b96f4c31cfab9ea03bbd3e4fe0b7f2810cbecc3f229",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 2,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 32,
+        "durationSeconds": 2.5342,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    },
+    {
+      "decodedVideoSamples": 10,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1080,
+        2400
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1080,
+        2400
+      ],
+      "lastSampleSeconds": 0.6229888888888889,
+      "case": "healthy-cli-2",
+      "video": "cases/healthy-cli-2/video.mp4",
+      "videoBytes": 207545,
+      "videoSha256": "11bbf0b238865267cbf18bc637f5d31413b582d2f6e64a11d716126082a1bf2c",
+      "firstPngSha256": "35208fad6f33b76b00a4b47d3e1dbac5dc1f09649ec84a45a24896cd9d23f9f5",
+      "lastPngSha256": "0a9f0b54b3baeacc52343554ea7072627ce7ef4fd9a55b950bc002c75c9bf5f7",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 0,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 10,
+        "durationSeconds": 0.6727,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    },
+    {
+      "decodedVideoSamples": 1,
+      "decodeErrors": 0,
+      "decoder": "VideoToolbox direct compressed H264 sample decode",
+      "frame": [
+        1080,
+        2400
+      ],
+      "qualification": "Original MP4 has one sample with zero duration. This decodes that original compressed sample without editing or re-encoding the MP4; it does not establish playable temporal footage.",
+      "timelinePlayback": false,
+      "containerVideoSampleCount": 1,
+      "sampleDurationTicks": 0,
+      "compressedSampleSha256": "3a549ab614852342bee15efb321509c4cb2759e2d177cd9b54717822cdbc29e9",
+      "originalMp4Sha256": "ba02af3555310d4013d50afc7c2b216be955c867150b644ca8340225e7f61682",
+      "originalMp4Unchanged": true,
+      "avAssetReader": "Completed with zero frames because timeline duration is zero; original failed audit retained separately.",
+      "case": "composed-cli-481-1",
+      "video": "cases/composed-cli-481-1/video.mp4",
+      "videoBytes": 92415,
+      "videoSha256": "ba02af3555310d4013d50afc7c2b216be955c867150b644ca8340225e7f61682",
+      "firstPngSha256": "f77606f0d5d94e35a38d4c4b3e8dd5f981a01f516f3cb04967714f5693d65549",
+      "lastPngSha256": "f77606f0d5d94e35a38d4c4b3e8dd5f981a01f516f3cb04967714f5693d65549",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 0,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 0,
+        "durationSeconds": 0,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    },
+    {
+      "decodedVideoSamples": 158,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1080,
+        2400
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1080,
+        2400
+      ],
+      "lastSampleSeconds": 10.261522222222222,
+      "case": "composed-cli-481-2",
+      "video": "cases/composed-cli-481-2/video.mp4",
+      "videoBytes": 847217,
+      "videoSha256": "b3d5a170974704df8037bdb99db9f34c3083bd80ea34b83999ca29e6b0b0cad1",
+      "firstPngSha256": "2cf8faa08b2411cc16fbe9664bd93b5c2933a9e7e15a76daf1d5bc86f812292d",
+      "lastPngSha256": "9b4ea7c88f23e4b6bff9f24e5bc86b206d2b12683bc066e347da9c845f847c06",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 1,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 158,
+        "durationSeconds": 10.2753,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    },
+    {
+      "decodedVideoSamples": 112,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1080,
+        2400
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1080,
+        2400
+      ],
+      "lastSampleSeconds": 11.274466666666667,
+      "case": "composed-cli-481-3",
+      "video": "cases/composed-cli-481-3/video.mp4",
+      "videoBytes": 557017,
+      "videoSha256": "4c14b31d6b8361aa4e973022ad8b86ff80ad6928b13f5d88a87c466db2bf1366",
+      "firstPngSha256": "a3e99f33dac651992540d45feda8d1c9d8ad0a23e00877cd11d19e3757e6c05e",
+      "lastPngSha256": "b17e06ebbe397b07f79f1ee011fd8be139d48c30412a97e8d854021f2f0535a1",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 1,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 112,
+        "durationSeconds": 11.299155555555556,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    },
+    {
+      "decodedVideoSamples": 125,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1080,
+        2400
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1080,
+        2400
+      ],
+      "lastSampleSeconds": 10.6685,
+      "case": "composed-cli-base-2",
+      "video": "cases/composed-cli-base-2/video.mp4",
+      "videoBytes": 774784,
+      "videoSha256": "4eff75918cff060d1cdb74ef0859c6cbad4fd1aa97a6beaf78e82fdbef5c9c05",
+      "firstPngSha256": "4c05291f5dc6128defccdff939058164477927a995a7a684c0aa2f85d0fd652e",
+      "lastPngSha256": "4436b6fdae699aa4698aff09f99ed58ae1852cef1cb910c27817654d214e52f2",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 2,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 125,
+        "durationSeconds": 10.8602,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    }
+  ],
+  "visualReview": {
+    "reviewed": "All12 first/last endpoints in contact-sheet.png; static case has byte-identical endpoints",
+    "finding": "Default Android launcher and Settings/volume UI only; no private application/account content",
+    "limit": "Interior frames of temporal clips were not visually reviewed individually; all video samples were decoded."
+  },
+  "priorBundle": {
+    "url": "https://github.com/shamilovtim/e2e/tree/afccdbcd58613e04d87055ed346f8f2524543673/reproductions/android-exited-screenrecord/public-curated-c228",
+    "recordings": 3,
+    "decodedSamples": 15,
+    "staticZeroDurationArtifacts": 2,
+    "unchanged": true
+  },
+  "combinedAndroid": {
+    "recordings": 9,
+    "decodedSamples": 453,
+    "staticZeroDurationArtifacts": 3,
+    "decodeErrors": 0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "decodedVideoSamples": 112,
+  "decodeErrors": 0,
+  "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+  "firstFrame": [
+    1080,
+    2400
+  ],
+  "firstSampleSeconds": 0,
+  "fullStreamDecoded": true,
+  "lastFrame": [
+    1080,
+    2400
+  ],
+  "lastSampleSeconds": 11.274466666666667,
+  "case": "composed-cli-481-3",
+  "video": "cases/composed-cli-481-3/video.mp4",
+  "videoBytes": 557017,
+  "videoSha256": "4c14b31d6b8361aa4e973022ad8b86ff80ad6928b13f5d88a87c466db2bf1366",
+  "firstPngSha256": "a3e99f33dac651992540d45feda8d1c9d8ad0a23e00877cd11d19e3757e6c05e",
+  "lastPngSha256": "b17e06ebbe397b07f79f1ee011fd8be139d48c30412a97e8d854021f2f0535a1",
+  "originalBytesUnchanged": true,
+  "duplicateCaptureCopiesVerified": 1,
+  "avAssetReaderDiagnostic": {
+    "audioTracks": 0,
+    "completed": true,
+    "count": 112,
+    "durationSeconds": 11.299155555555556,
+    "error": "none",
+    "started": true,
+    "status": 2
+  }
+}

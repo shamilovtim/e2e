@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "status": "failed",
+  "exitCode": 1,
+  "refs": {
+    "base": "origin/main",
+    "head": "481db79c89538931be6012ccc779506e9080412c",
+    "resolvedBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+    "resolvedHead": "481db79c89538931be6012ccc779506e9080412c",
+    "mergeBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d"
+  },
+  "checkoutChanged": false,
+  "exactCommit": true,
+  "initial": {
+    "head": "481db79c89538931be6012ccc779506e9080412c",
+    "status": "",
+    "fingerprint": "2d584ddb98679d17ffd0d03480d295b682acee8db0a926eb940a468f3477c8ae"
+  },
+  "final": {
+    "head": "481db79c89538931be6012ccc779506e9080412c",
+    "status": "",
+    "fingerprint": "2d584ddb98679d17ffd0d03480d295b682acee8db0a926eb940a468f3477c8ae"
+  },
+  "command": "pnpm --silent check:affected --run --head 481db79c89538931be6012ccc779506e9080412c --json",
+  "results": [
+    {
+      "id": "format",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 640
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 2602
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 876
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 32758
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4474
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 8438
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 41750,
+      "testCounts": [
+        {
+          "passed": 330,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "failed",
+      "exitCode": 1,
+      "durationMs": 8192520,
+      "testCounts": [
+        {
+          "passed": 18993,
+          "failed": 14,
+          "skipped": 3,
+          "pending": 0,
+          "failedModules": 13,
+          "unhandledErrors": 16,
+          "omittedFailures": 10
+        }
+      ]
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "command-docs",
+      "status": "not-run"
+    },
+    {
+      "id": "docs-links",
+      "status": "not-run"
+    },
+    {
+      "id": "docs-prose",
+      "status": "not-run"
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ],
+  "classification": "Host-interrupted verification: unit began19:51:45; clamshell sleep19:52:56, repeated maintenance sleeps; broad573-second timeouts and worker-start failures. Exact unchanged clean481. Raw failure receipts and power events retained privately; this run is not a passing gate.",
+  "provenance": "Selected receipt fields retain every check status and counts; raw host/log paths and full failure stacks remain private."
+}

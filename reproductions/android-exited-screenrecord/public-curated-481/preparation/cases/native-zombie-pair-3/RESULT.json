@@ -1,0 +1,39 @@
+{
+  "qualified": true,
+  "cleanup": "child-reaped",
+  "phases": [
+    {
+      "phase": "base",
+      "driverExitCode": 1,
+      "observed": {
+        "source": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+        "boundary": "production TypeScript transport with real ADB provider",
+        "inspectBefore": "ownership-lost",
+        "stop": "ownership-lost",
+        "inspectAfter": "ownership-lost",
+        "signalsSent": 0
+      },
+      "videoScope": "Unchanged completed artifact from this paired unreaped recorder; not a host-screen recording"
+    },
+    {
+      "phase": "head",
+      "driverExitCode": 0,
+      "observed": {
+        "source": "481db79c89538931be6012ccc779506e9080412c",
+        "boundary": "production TypeScript transport with real ADB provider",
+        "inspectBefore": "missing",
+        "stop": "already-missing",
+        "inspectAfter": "missing",
+        "signalsSent": 0
+      },
+      "videoScope": "Unchanged completed artifact from this paired unreaped recorder; not a host-screen recording"
+    }
+  ],
+  "nativeFact": {
+    "state": "Z",
+    "commandLineEmpty": true,
+    "successfulExit": true
+  },
+  "footageTimeline": "Fixture artifact completes before either host inspection/stop. Typed real-ADB results establish host outcomes; footage does not show host calls.",
+  "publicationMedia": "One original capture with volume motion; local base/head copies are duplicates of the same artifact."
+}

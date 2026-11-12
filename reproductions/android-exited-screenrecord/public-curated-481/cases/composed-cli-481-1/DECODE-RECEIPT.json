@@ -1,0 +1,34 @@
+{
+  "decodedVideoSamples": 1,
+  "decodeErrors": 0,
+  "decoder": "VideoToolbox direct compressed H264 sample decode",
+  "frame": [
+    1080,
+    2400
+  ],
+  "qualification": "Original MP4 has one sample with zero duration. This decodes that original compressed sample without editing or re-encoding the MP4; it does not establish playable temporal footage.",
+  "timelinePlayback": false,
+  "containerVideoSampleCount": 1,
+  "sampleDurationTicks": 0,
+  "compressedSampleSha256": "3a549ab614852342bee15efb321509c4cb2759e2d177cd9b54717822cdbc29e9",
+  "originalMp4Sha256": "ba02af3555310d4013d50afc7c2b216be955c867150b644ca8340225e7f61682",
+  "originalMp4Unchanged": true,
+  "avAssetReader": "Completed with zero frames because timeline duration is zero; original failed audit retained separately.",
+  "case": "composed-cli-481-1",
+  "video": "cases/composed-cli-481-1/video.mp4",
+  "videoBytes": 92415,
+  "videoSha256": "ba02af3555310d4013d50afc7c2b216be955c867150b644ca8340225e7f61682",
+  "firstPngSha256": "f77606f0d5d94e35a38d4c4b3e8dd5f981a01f516f3cb04967714f5693d65549",
+  "lastPngSha256": "f77606f0d5d94e35a38d4c4b3e8dd5f981a01f516f3cb04967714f5693d65549",
+  "originalBytesUnchanged": true,
+  "duplicateCaptureCopiesVerified": 0,
+  "avAssetReaderDiagnostic": {
+    "audioTracks": 0,
+    "completed": true,
+    "count": 0,
+    "durationSeconds": 0,
+    "error": "none",
+    "started": true,
+    "status": 2
+  }
+}

@@ -1,0 +1,12 @@
+--- a/src/platform-runtime-screen-recording-android-host.test.ts
++++ b/src/platform-runtime-screen-recording-android-host.test.ts
+@@ -119,9 +119,6 @@
+         ],
+         conclusive: true,
+       });
+-      expect(candidateCalls).toContain('cat /proc/45/cmdline');
+-      expect(candidateCalls).toContain('cat /proc/45/stat');
+-      expect(candidateCalls.filter((command) => command === 'test -d /proc/45')).toHaveLength(2);
+     },
+   );
+ });
