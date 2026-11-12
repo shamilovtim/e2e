@@ -1,0 +1,97 @@
+[
+  {
+    "case": "base-settings-original-1",
+    "sha256": "8651537fd9a5d5da093a775f6bf96a96dd2609a3de9ca80a7e825cf5941ceefd",
+    "bytes": 6234907,
+    "decodedVideoSamples": 298,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 14.023333333333333
+  },
+  {
+    "case": "exact-e66-settings-original-1",
+    "sha256": "2b5efe5fdcfe097a8663281c15845f5acd623d7feb09a580492291da5d4ca5c7",
+    "bytes": 13467555,
+    "decodedVideoSamples": 521,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 17.66
+  },
+  {
+    "case": "exact-eec-settings-original-1",
+    "sha256": "c20f8fe43725b79524c300c850aaa57c1abc4687b28f8c07f74c28e502e92537",
+    "bytes": 7332893,
+    "decodedVideoSamples": 294,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 10.883333333333333
+  },
+  {
+    "case": "merge-settings-original-1",
+    "sha256": "da0aaa5c4e6f1818ab7a43626cb19d53d540f8ba008da86699a64ca00f677d41",
+    "bytes": 6988390,
+    "decodedVideoSamples": 288,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 13.041666666666666
+  },
+  {
+    "case": "semantic-e66-old-native-red-1",
+    "sha256": "f8e137dd885bcfd0c190cd9b918897bf34c19315a1c55ca75f2318c421915995",
+    "bytes": 3220138,
+    "decodedVideoSamples": 158,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 9.883333333333333
+  }
+]

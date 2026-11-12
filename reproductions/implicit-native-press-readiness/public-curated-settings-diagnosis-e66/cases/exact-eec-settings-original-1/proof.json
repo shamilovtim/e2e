@@ -1,0 +1,230 @@
+{
+  "case": "exact-eec-settings-original-1",
+  "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "localRuntime": "iOS 27.0",
+  "executionInputs": {
+    "head": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "sourceTree": "845964e4a76997b469551fc2a9d0c8fdc9844c86",
+    "comparisonBase": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "runtimeJavaScriptFiles": 631,
+    "runtimeManifestSha256": "1abc4bd573b203a319dac705ce19ce72088d9a77f507357f86a4443cc8929504",
+    "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+    "nativeBuiltAt": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "0b4ace5748e47f9d7820ea9c2b6991f6ef3b1e38901e4997397ef01a991c1ff0",
+    "replaySha256": "5c6e5534b8f24c21f2a21ddcc2a7f7dcc3f788f2751b154de7af6e974e47ef5d",
+    "wrapperSha256": "f0dd290465c347e3538822c674d1da0b7d83b5c320a7e3cdef3c218c88a410e2",
+    "runtimeLaunchInputs": [
+      {
+        "path": "bin/agent-device.mjs",
+        "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+      },
+      {
+        "path": "package.json",
+        "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f"
+      },
+      {
+        "path": "scripts/build-entries.ts",
+        "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+      },
+      {
+        "path": "scripts/build-xcuitest-apple.sh",
+        "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+      }
+    ],
+    "guestBridge": {
+      "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+      "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+      "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+      "sourceFiles": [
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridge.m",
+          "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+          "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+          "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+          "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+          "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+          "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+          "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+          "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+          "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+        },
+        {
+          "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+          "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+        }
+      ],
+      "buildCommitUnknownForExistingCache": true
+    },
+    "guestPreparerSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+    "instrumentationUsed": false,
+    "protocol": "One ordinary unchanged01-settings.ad CLI invocation with the same existing2retrysetting as CI, separate owned state; no extra read/interaction before it. Native builds fresh and source-matched. Exact eec/e66 ordinary replay comparison on localiOS27.0 versus hosted26.2. Read normal postOpenObservation after execution; no host/runtime or observable-AX parity claim unless the actual verdict supports it.",
+    "archivedBeforeRun": true
+  },
+  "originalPrivateResultSha256": "f9386ea47af0a6b995ad600023a3ca00389fcaf0729b9dfe2ede0536957e4f1c",
+  "result": {
+    "case": "exact-eec-settings-original-1",
+    "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "success": true,
+    "sourceBefore": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "statusBefore": "",
+    "elapsedSeconds": 9.781685042000001,
+    "wrapperExitCode": 0,
+    "daemonCleanupExitCode": 0,
+    "recorderExitCode": 0,
+    "sourceAfter": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "statusAfter": ""
+  },
+  "nativeBuild": {
+    "fingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+    "actualBuiltAt": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "officialPrivateManifestSha256": "7c820358d87025066e6114a1209898f2bdc0572b2b3a88fc0da05ae03bb39eb4",
+    "xctestrunSha256": "0b4ace5748e47f9d7820ea9c2b6991f6ef3b1e38901e4997397ef01a991c1ff0",
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124288,
+        "mode": 493,
+        "digest": "999c3de49ce6483e0615b5f84f48a81825b187d9123638c256eec3b245e0e033"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "0ae5e8a0c2a5316fa7b9cacd81efeb536ce87c0ac4fff94f2ac56369c15493f1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "03813dade93c66fef49904947a9d5ed49c873db95b65708f82a7d6486eb67dce"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10749456,
+        "mode": 493,
+        "digest": "c3f8499b4592b66ac05c048e72f7201557b57e9ea44a0a1e4abd77d59394d89e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ]
+  },
+  "runtimeManifest": {
+    "path": "cases/exact-eec-settings-original-1/runtime-js-manifest.json",
+    "sha256": "1abc4bd573b203a319dac705ce19ce72088d9a77f507357f86a4443cc8929504",
+    "bytes": 103078
+  },
+  "sourceTreeManifest": {
+    "path": "cases/exact-eec-settings-original-1/source-tree-manifest.txt",
+    "sha256": "7d052949375647246f8c90de28fae34b1f5fbb5bc215d4fbb9e2286667bfb285",
+    "bytes": 658675
+  },
+  "recording": {
+    "case": "exact-eec-settings-original-1",
+    "sha256": "c20f8fe43725b79524c300c850aaa57c1abc4687b28f8c07f74c28e502e92537",
+    "bytes": 7332893,
+    "decodedVideoSamples": 294,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 10.883333333333333
+  },
+  "executedSources": [
+    {
+      "path": "executed-guest-preparer.mjs",
+      "originalExecutedSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "publicSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "redacted": false,
+      "scope": "Byte-equal executed source."
+    },
+    {
+      "path": "executed-replay.ad",
+      "originalExecutedSha256": "5c6e5534b8f24c21f2a21ddcc2a7f7dcc3f788f2751b154de7af6e974e47ef5d",
+      "publicSha256": "5c6e5534b8f24c21f2a21ddcc2a7f7dcc3f788f2751b154de7af6e974e47ef5d",
+      "redacted": false,
+      "scope": "Byte-equal executed source."
+    },
+    {
+      "path": "executed-wrapper.py",
+      "originalExecutedSha256": "f0dd290465c347e3538822c674d1da0b7d83b5c320a7e3cdef3c218c88a410e2",
+      "publicSha256": "f768c06e17bdbae7df3a329954184e09488250b1a0c1a8ee7a4d41c69055f090",
+      "redacted": true,
+      "scope": "Local absolute path literals replaced with generic placeholders. Original executed SHA retained; not a byte-equal executable copy."
+    }
+  ],
+  "classification": "first-attempt-pass-with-observation-limitation",
+  "qualification": "The ordinary unchanged replay passes first attempt with unobservable post-open observation at (201,406). It does not establish a passing observable-AX baseline or classify the hosted failure as a flake."
+}

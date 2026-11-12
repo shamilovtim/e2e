@@ -1,0 +1,50 @@
+{
+  "cases": [
+    {
+      "case": "base-settings-original-1",
+      "source": "9676eedac5b05e40a88062cd0c8c45fdc730da68",
+      "classification": "first-attempt-pass-with-observation-limitation",
+      "proof": "cases/base-settings-original-1/proof.json",
+      "video": "media/base-settings-original-1/video.mp4",
+      "videoSha256": "8651537fd9a5d5da093a775f6bf96a96dd2609a3de9ca80a7e825cf5941ceefd",
+      "videoBytes": 6234907
+    },
+    {
+      "case": "exact-e66-settings-original-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "classification": "product-failure-on-first-attempt",
+      "proof": "cases/exact-e66-settings-original-1/proof.json",
+      "video": "media/exact-e66-settings-original-1/video.mp4",
+      "videoSha256": "2b5efe5fdcfe097a8663281c15845f5acd623d7feb09a580492291da5d4ca5c7",
+      "videoBytes": 13467555
+    },
+    {
+      "case": "exact-eec-settings-original-1",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "classification": "first-attempt-pass-with-observation-limitation",
+      "proof": "cases/exact-eec-settings-original-1/proof.json",
+      "video": "media/exact-eec-settings-original-1/video.mp4",
+      "videoSha256": "c20f8fe43725b79524c300c850aaa57c1abc4687b28f8c07f74c28e502e92537",
+      "videoBytes": 7332893
+    },
+    {
+      "case": "merge-settings-original-1",
+      "source": "9efcb9d7732a6f3778c075fde66f6e0cc6dc4233",
+      "classification": "first-attempt-pass-with-observation-limitation",
+      "proof": "cases/merge-settings-original-1/proof.json",
+      "video": "media/merge-settings-original-1/video.mp4",
+      "videoSha256": "da0aaa5c4e6f1818ab7a43626cb19d53d540f8ba008da86699a64ca00f677d41",
+      "videoBytes": 6988390
+    },
+    {
+      "case": "semantic-e66-old-native-red-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "classification": "expected-old-code-regression-failure",
+      "proof": "cases/semantic-e66-old-native-red-1/proof.json",
+      "video": "media/semantic-e66-old-native-red-1/video.mp4",
+      "videoSha256": "f8e137dd885bcfd0c190cd9b918897bf34c19315a1c55ca75f2318c421915995",
+      "videoBytes": 3220138
+    }
+  ],
+  "scope": "Five distinct unchanged recordings: four ordinary local Settings replays and one deterministic old-native-code regression failure. Source/build attribution and failures retained. No new-source repair or CI-green claim."
+}

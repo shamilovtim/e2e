@@ -1,0 +1,160 @@
+{
+  "case": "semantic-e66-old-native-red-1",
+  "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "localRuntime": "iOS 27.0",
+  "executionInputs": {
+    "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+    "sourcePatchSha256": "5230ae851a3f505d20406d9a28a74852bc906e64b78e42e7dae11a08cce0b2a4",
+    "sourceTree": "09262d288ca6714c4599661bf7070688eabbbc59",
+    "test": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+    "runtimeJavaScriptFiles": 631,
+    "nativeFingerprint": "7934da878182b2d9f5ba69c45a3612ddcf5c8eb4c9b4e44d1585b59487d63030",
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "6c762b465ebb7f2cb49a20d1f50b310e004da41d25eb8e73857d17cca6777bc4",
+    "wrapperSha256": "fdccb63011af3cd55d6768cc44adb3a91669068c19111b3fd4aa5dc350f274fe",
+    "archivedBeforeRun": true
+  },
+  "originalPrivateResultSha256": "886b46d348346be6784abbcf4a79144b4c8060f6fd23f3820973fc47b7d33a9c",
+  "result": {
+    "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+    "sourcePatchSha256": "5230ae851a3f505d20406d9a28a74852bc906e64b78e42e7dae11a08cce0b2a4",
+    "sourceTree": "09262d288ca6714c4599661bf7070688eabbbc59",
+    "test": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+    "runtimeJavaScriptFiles": 631,
+    "nativeFingerprint": "7934da878182b2d9f5ba69c45a3612ddcf5c8eb4c9b4e44d1585b59487d63030",
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "6c762b465ebb7f2cb49a20d1f50b310e004da41d25eb8e73857d17cca6777bc4",
+    "wrapperSha256": "fdccb63011af3cd55d6768cc44adb3a91669068c19111b3fd4aa5dc350f274fe",
+    "archivedBeforeRun": true,
+    "exitCode": 65,
+    "recorderExitCode": 0,
+    "sourceUnchanged": true
+  },
+  "nativeBuild": {
+    "fingerprint": "7934da878182b2d9f5ba69c45a3612ddcf5c8eb4c9b4e44d1585b59487d63030",
+    "actualBuiltAt": "e66 plus test/fixture patch 5230ae851a3f505d20406d9a28a74852bc906e64b78e42e7dae11a08cce0b2a4",
+    "officialPrivateManifestSha256": "3c8e6f069eecc5a80e4c70b25b745491da677aa452742e4f591b90799226e8d4",
+    "xctestrunSha256": "6c762b465ebb7f2cb49a20d1f50b310e004da41d25eb8e73857d17cca6777bc4",
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 387648,
+        "mode": 493,
+        "digest": "58b42947765e6cf48b9590bcaf851ff6926077783853bad5ca7b10efa31512c0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "eaf74f1f7e71a974df6740db1b9291e3042d555de77516d15a7a87b57e6848e1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "946466a29ff8041052a612e8cd28fe83cb1c4a161645d9b8b9f3666bf4fb7d75"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 26970048,
+        "mode": 493,
+        "digest": "31dd12102a8e2df71fcb1ea546e29c0c43ff2d93118106f7cdbe21f05f8565c6"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ]
+  },
+  "runtimeManifest": {
+    "path": "cases/semantic-e66-old-native-red-1/runtime-js-manifest.json",
+    "sha256": "02fbe7374e8c8f30dda760d624038a591470853e285f3cf3a7d3ce84251fee40",
+    "bytes": 89858
+  },
+  "sourceTreeManifest": {
+    "path": "cases/semantic-e66-old-native-red-1/source-tree-manifest.txt",
+    "sha256": "9451151b40e802143d3d3af7e122b2079ac6508f52e8f40f7ef92a604245fe6b",
+    "bytes": 659070
+  },
+  "recording": {
+    "case": "semantic-e66-old-native-red-1",
+    "sha256": "f8e137dd885bcfd0c190cd9b918897bf34c19315a1c55ca75f2318c421915995",
+    "bytes": 3220138,
+    "decodedVideoSamples": 158,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 9.883333333333333
+  },
+  "executedSources": [
+    {
+      "path": "executed-wrapper.py",
+      "originalExecutedSha256": "fdccb63011af3cd55d6768cc44adb3a91669068c19111b3fd4aa5dc350f274fe",
+      "publicSha256": "af393cfd6072beb3e1c26c2fed5f35226415b4a45f4872aa5ae028d38d05a487",
+      "redacted": true,
+      "scope": "Local absolute path literals replaced with generic placeholders. Original executed SHA retained; not a byte-equal executable copy."
+    }
+  ],
+  "classification": "expected-old-code-regression-failure",
+  "qualification": "e66 production plus the two-file test/fixture-only patch, not a clean e66 native build. One selected native test fails its intended assertion: replacement child label with unchanged anonymous parent raw tuple/frame/hittability returns ready instead of expected missing. All preconditions and zero-tap witness pass. This captures the old-code bug; it does not prove a production fix or the separate GuestAX row-title path.",
+  "testPatch": {
+    "path": "cases/semantic-e66-old-native-red-1/source-delta.patch",
+    "sha256": "5230ae851a3f505d20406d9a28a74852bc906e64b78e42e7dae11a08cce0b2a4",
+    "bytes": 6608
+  },
+  "selectedNativeResult": {
+    "tests": 1,
+    "failures": 1,
+    "assertion": "Optional(ready) != Optional(missing)",
+    "test": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+    "originalPrivateLogSha256": "9e5617a48b22661a4cc964da67cebf686d99f8aea9f7568d923589c0924a7ff2",
+    "originalLogAssertionLine": 83
+  }
+}

@@ -1,0 +1,1316 @@
+{
+  "scope": "Whitelisted existing hosted CI artifacts. No new runtime/device reads. Tree times are nearest preceding precise native log prefix, not individual row acquisition timestamps. Memory addresses, element IDs, processes, sessions, host paths and unrelated UI omitted. Line numbers are one-based within original logs.",
+  "facts": [
+    {
+      "source": "9efcb9d7732a6f3778c075fde66f6e0cc6dc4233",
+      "artifactArchiveSha256": "3903f42d0ddd82087b7a481c6f46987d67a66274dac2f2b0dc60a94a90f67dea",
+      "verboseSessionLogSha256": "375ab1463928be26faed97abe88ea1ee5124aa0579c55ab8117b5295199b8c19",
+      "verboseSessionLogLines": 15184,
+      "selectedTreeAndQueryFacts": [
+        {
+          "sourceLine": 2875,
+          "precedingNativeLogTime": "19:44:21.872",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 2889,
+          "precedingNativeLogTime": "19:44:21.872",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 2895,
+          "precedingNativeLogTime": "19:44:21.873",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 2906,
+          "precedingNativeLogTime": "19:44:21.873",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 44"
+        },
+        {
+          "sourceLine": 2907,
+          "precedingNativeLogTime": "19:44:21.873",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 2930,
+          "precedingNativeLogTime": "19:44:21.918",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3082,
+          "precedingNativeLogTime": "19:44:21.920",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 3085,
+          "precedingNativeLogTime": "19:44:21.920",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 3130,
+          "precedingNativeLogTime": "19:44:21.920",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3131,
+          "precedingNativeLogTime": "19:44:21.920",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3132,
+          "precedingNativeLogTime": "19:44:21.921",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3134,
+          "precedingNativeLogTime": "19:44:21.921",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3135,
+          "precedingNativeLogTime": "19:44:21.921",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3137,
+          "precedingNativeLogTime": "19:44:21.921",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3254,
+          "precedingNativeLogTime": "19:44:21.921",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 3257,
+          "precedingNativeLogTime": "19:44:21.921",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 3384,
+          "precedingNativeLogTime": "19:44:21.923",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 3416,
+          "precedingNativeLogTime": "19:44:21.923",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 3507,
+          "precedingNativeLogTime": "19:44:21.923",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 3521,
+          "precedingNativeLogTime": "19:44:21.924",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3536,
+          "precedingNativeLogTime": "19:44:21.924",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3543,
+          "precedingNativeLogTime": "19:44:21.924",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3555,
+          "precedingNativeLogTime": "19:44:21.925",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 45"
+        },
+        {
+          "sourceLine": 3556,
+          "precedingNativeLogTime": "19:44:21.925",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 3579,
+          "precedingNativeLogTime": "19:44:21.975",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3732,
+          "precedingNativeLogTime": "19:44:21.976",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 3735,
+          "precedingNativeLogTime": "19:44:21.976",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 3780,
+          "precedingNativeLogTime": "19:44:21.977",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3781,
+          "precedingNativeLogTime": "19:44:21.977",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3782,
+          "precedingNativeLogTime": "19:44:21.977",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3784,
+          "precedingNativeLogTime": "19:44:21.978",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3785,
+          "precedingNativeLogTime": "19:44:21.978",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3787,
+          "precedingNativeLogTime": "19:44:21.978",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 3904,
+          "precedingNativeLogTime": "19:44:21.978",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 3907,
+          "precedingNativeLogTime": "19:44:21.978",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 4046,
+          "precedingNativeLogTime": "19:44:21.980",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 4078,
+          "precedingNativeLogTime": "19:44:21.980",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 4169,
+          "precedingNativeLogTime": "19:44:21.980",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 4177,
+          "precedingNativeLogTime": "19:44:21.981",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 46"
+        },
+        {
+          "sourceLine": 4179,
+          "precedingNativeLogTime": "19:44:21.981",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 4269,
+          "precedingNativeLogTime": "19:44:21.989",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4284,
+          "precedingNativeLogTime": "19:44:21.989",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4291,
+          "precedingNativeLogTime": "19:44:21.989",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4303,
+          "precedingNativeLogTime": "19:44:21.990",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 51"
+        },
+        {
+          "sourceLine": 4305,
+          "precedingNativeLogTime": "19:44:21.990",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 4329,
+          "precedingNativeLogTime": "19:44:22.038",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4363,
+          "precedingNativeLogTime": "19:44:22.040",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4483,
+          "precedingNativeLogTime": "19:44:22.040",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 4486,
+          "precedingNativeLogTime": "19:44:22.040",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 4531,
+          "precedingNativeLogTime": "19:44:22.040",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4532,
+          "precedingNativeLogTime": "19:44:22.041",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4534,
+          "precedingNativeLogTime": "19:44:22.041",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4535,
+          "precedingNativeLogTime": "19:44:22.041",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4537,
+          "precedingNativeLogTime": "19:44:22.041",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 4654,
+          "precedingNativeLogTime": "19:44:22.041",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 4657,
+          "precedingNativeLogTime": "19:44:22.041",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 4796,
+          "precedingNativeLogTime": "19:44:22.044",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 4828,
+          "precedingNativeLogTime": "19:44:22.044",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 449.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 4919,
+          "precedingNativeLogTime": "19:44:22.044",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 7135,
+          "precedingNativeLogTime": "19:44:31.202",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7149,
+          "precedingNativeLogTime": "19:44:31.203",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7155,
+          "precedingNativeLogTime": "19:44:31.203",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7166,
+          "precedingNativeLogTime": "19:44:31.203",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 294"
+        },
+        {
+          "sourceLine": 7167,
+          "precedingNativeLogTime": "19:44:31.203",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 7191,
+          "precedingNativeLogTime": "19:44:31.316",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7349,
+          "precedingNativeLogTime": "19:44:31.318",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 7350,
+          "precedingNativeLogTime": "19:44:31.318",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 7353,
+          "precedingNativeLogTime": "19:44:31.318",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 7400,
+          "precedingNativeLogTime": "19:44:31.319",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7401,
+          "precedingNativeLogTime": "19:44:31.319",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7402,
+          "precedingNativeLogTime": "19:44:31.320",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7404,
+          "precedingNativeLogTime": "19:44:31.320",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7405,
+          "precedingNativeLogTime": "19:44:31.320",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7407,
+          "precedingNativeLogTime": "19:44:31.320",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7531,
+          "precedingNativeLogTime": "19:44:31.320",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 7532,
+          "precedingNativeLogTime": "19:44:31.320",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 7535,
+          "precedingNativeLogTime": "19:44:31.320",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 7666,
+          "precedingNativeLogTime": "19:44:31.322",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence'"
+        },
+        {
+          "sourceLine": 7676,
+          "precedingNativeLogTime": "19:44:31.322",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 7708,
+          "precedingNativeLogTime": "19:44:31.322",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 7799,
+          "precedingNativeLogTime": "19:44:31.322",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 7813,
+          "precedingNativeLogTime": "19:44:31.323",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7828,
+          "precedingNativeLogTime": "19:44:31.324",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7835,
+          "precedingNativeLogTime": "19:44:31.324",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 7847,
+          "precedingNativeLogTime": "19:44:31.324",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 296"
+        },
+        {
+          "sourceLine": 7848,
+          "precedingNativeLogTime": "19:44:31.324",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 7871,
+          "precedingNativeLogTime": "19:44:31.388",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8031,
+          "precedingNativeLogTime": "19:44:31.389",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 8032,
+          "precedingNativeLogTime": "19:44:31.389",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 8035,
+          "precedingNativeLogTime": "19:44:31.389",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 8082,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8083,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8084,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8086,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8087,
+          "precedingNativeLogTime": "19:44:31.391",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8089,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8213,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 8214,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 8217,
+          "precedingNativeLogTime": "19:44:31.390",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 8360,
+          "precedingNativeLogTime": "19:44:31.394",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence'"
+        },
+        {
+          "sourceLine": 8370,
+          "precedingNativeLogTime": "19:44:31.394",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 8402,
+          "precedingNativeLogTime": "19:44:31.394",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 8493,
+          "precedingNativeLogTime": "19:44:31.394",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 8501,
+          "precedingNativeLogTime": "19:44:31.394",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 297"
+        },
+        {
+          "sourceLine": 8503,
+          "precedingNativeLogTime": "19:44:31.394",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 8593,
+          "precedingNativeLogTime": "19:44:31.405",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8608,
+          "precedingNativeLogTime": "19:44:31.405",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8615,
+          "precedingNativeLogTime": "19:44:31.406",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8627,
+          "precedingNativeLogTime": "19:44:31.406",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 302"
+        },
+        {
+          "sourceLine": 8629,
+          "precedingNativeLogTime": "19:44:31.406",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 8653,
+          "precedingNativeLogTime": "19:44:31.472",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8686,
+          "precedingNativeLogTime": "19:44:31.476",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8815,
+          "precedingNativeLogTime": "19:44:31.475",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 8816,
+          "precedingNativeLogTime": "19:44:31.475",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 8819,
+          "precedingNativeLogTime": "19:44:31.475",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 8866,
+          "precedingNativeLogTime": "19:44:31.477",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8867,
+          "precedingNativeLogTime": "19:44:31.480",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8869,
+          "precedingNativeLogTime": "19:44:31.478",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8870,
+          "precedingNativeLogTime": "19:44:31.480",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8872,
+          "precedingNativeLogTime": "19:44:31.478",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 8996,
+          "precedingNativeLogTime": "19:44:31.478",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 8997,
+          "precedingNativeLogTime": "19:44:31.478",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 9000,
+          "precedingNativeLogTime": "19:44:31.478",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 9141,
+          "precedingNativeLogTime": "19:44:31.481",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence'"
+        },
+        {
+          "sourceLine": 9151,
+          "precedingNativeLogTime": "19:44:31.481",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 9183,
+          "precedingNativeLogTime": "19:44:31.481",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 9274,
+          "precedingNativeLogTime": "19:44:31.482",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 11443,
+          "precedingNativeLogTime": "19:44:40.641",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11457,
+          "precedingNativeLogTime": "19:44:40.641",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11463,
+          "precedingNativeLogTime": "19:44:40.641",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11474,
+          "precedingNativeLogTime": "19:44:40.641",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 544"
+        },
+        {
+          "sourceLine": 11475,
+          "precedingNativeLogTime": "19:44:40.641",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 11498,
+          "precedingNativeLogTime": "19:44:40.710",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11657,
+          "precedingNativeLogTime": "19:44:40.713",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 11658,
+          "precedingNativeLogTime": "19:44:40.713",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 11661,
+          "precedingNativeLogTime": "19:44:40.713",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 11708,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11709,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11710,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11712,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11713,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11715,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 11839,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 11840,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 11843,
+          "precedingNativeLogTime": "19:44:40.714",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 11974,
+          "precedingNativeLogTime": "19:44:40.717",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence'"
+        },
+        {
+          "sourceLine": 11984,
+          "precedingNativeLogTime": "19:44:40.717",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 12016,
+          "precedingNativeLogTime": "19:44:40.717",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 12107,
+          "precedingNativeLogTime": "19:44:40.717",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 12121,
+          "precedingNativeLogTime": "19:44:40.718",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12136,
+          "precedingNativeLogTime": "19:44:40.718",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12144,
+          "precedingNativeLogTime": "19:44:40.719",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12155,
+          "precedingNativeLogTime": "19:44:40.719",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 545"
+        },
+        {
+          "sourceLine": 12156,
+          "precedingNativeLogTime": "19:44:40.719",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 12180,
+          "precedingNativeLogTime": "19:44:40.805",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12213,
+          "precedingNativeLogTime": "19:44:40.807",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12340,
+          "precedingNativeLogTime": "19:44:40.807",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 12341,
+          "precedingNativeLogTime": "19:44:40.807",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 12344,
+          "precedingNativeLogTime": "19:44:40.807",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 12391,
+          "precedingNativeLogTime": "19:44:40.807",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12392,
+          "precedingNativeLogTime": "19:44:40.808",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12394,
+          "precedingNativeLogTime": "19:44:40.808",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12395,
+          "precedingNativeLogTime": "19:44:40.808",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12398,
+          "precedingNativeLogTime": "19:44:40.808",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12522,
+          "precedingNativeLogTime": "19:44:40.808",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 12523,
+          "precedingNativeLogTime": "19:44:40.808",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 12526,
+          "precedingNativeLogTime": "19:44:40.808",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 12668,
+          "precedingNativeLogTime": "19:44:40.813",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence'"
+        },
+        {
+          "sourceLine": 12678,
+          "precedingNativeLogTime": "19:44:40.813",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 12710,
+          "precedingNativeLogTime": "19:44:40.813",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 12801,
+          "precedingNativeLogTime": "19:44:40.813",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        },
+        {
+          "sourceLine": 12809,
+          "precedingNativeLogTime": "19:44:40.814",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 546"
+        },
+        {
+          "sourceLine": 12811,
+          "precedingNativeLogTime": "19:44:40.814",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 12902,
+          "precedingNativeLogTime": "19:44:40.844",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12917,
+          "precedingNativeLogTime": "19:44:40.844",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12924,
+          "precedingNativeLogTime": "19:44:40.844",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12935,
+          "precedingNativeLogTime": "19:44:40.844",
+          "kind": "query-capture",
+          "text": "Current snapshot generation is 551"
+        },
+        {
+          "sourceLine": 12937,
+          "precedingNativeLogTime": "19:44:40.844",
+          "kind": "query-capture",
+          "text": "Capturing a new snapshot"
+        },
+        {
+          "sourceLine": 12960,
+          "precedingNativeLogTime": "19:44:40.913",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 12994,
+          "precedingNativeLogTime": "19:44:40.915",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 13114,
+          "precedingNativeLogTime": "19:44:40.915",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 13115,
+          "precedingNativeLogTime": "19:44:40.915",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 13118,
+          "precedingNativeLogTime": "19:44:40.915",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 13161,
+          "precedingNativeLogTime": "19:44:40.916",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 13162,
+          "precedingNativeLogTime": "19:44:40.918",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 13164,
+          "precedingNativeLogTime": "19:44:40.917",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 13165,
+          "precedingNativeLogTime": "19:44:40.918",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 13168,
+          "precedingNativeLogTime": "19:44:40.917",
+          "kind": "query-type",
+          "text": "elementType == 75"
+        },
+        {
+          "sourceLine": 13285,
+          "precedingNativeLogTime": "19:44:40.917",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence',"
+        },
+        {
+          "sourceLine": 13286,
+          "precedingNativeLogTime": "19:44:40.917",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General',"
+        },
+        {
+          "sourceLine": 13289,
+          "precedingNativeLogTime": "19:44:40.917",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri',"
+        },
+        {
+          "sourceLine": 13425,
+          "precedingNativeLogTime": "19:44:40.921",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 293.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.followUpItem.com.apple.icloud.gm', label: 'Ready for Apple Intelligence'"
+        },
+        {
+          "sourceLine": 13435,
+          "precedingNativeLogTime": "19:44:40.921",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 380.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.general', label: 'General'"
+        },
+        {
+          "sourceLine": 13467,
+          "precedingNativeLogTime": "19:44:40.921",
+          "kind": "tree-row",
+          "text": "Button, {{16.0, 536.3}, {370.0, 52.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'"
+        },
+        {
+          "sourceLine": 13547,
+          "precedingNativeLogTime": "19:44:40.922",
+          "kind": "filtered-query-match",
+          "values": [
+            "Cell, {{16.0, 293.3}, {370.0, 52.0}}"
+          ]
+        }
+      ],
+      "nativeCommandAndPointFacts": [
+        {
+          "sourceLine": 51,
+          "nativeLogTime": "2026-11-12 19:44:21.817415",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=pressReadiness commandId=<omitted>"
+        },
+        {
+          "sourceLine": 77,
+          "nativeLogTime": "2026-11-12 19:44:22.050616",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=pressReadiness commandId=<omitted> ok=1"
+        },
+        {
+          "sourceLine": 78,
+          "nativeLogTime": "2026-11-12 19:44:22.061496",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=<omitted>"
+        },
+        {
+          "sourceLine": 85,
+          "nativeLogTime": "2026-11-12 19:44:22.188883",
+          "text": "AGENT_DEVICE_RUNNER_SYNTHESIZED_DISPATCH kind=tap point=(201.0,319.0) reference=(0.0,0.0,402.0,874.0) orientation=1"
+        },
+        {
+          "sourceLine": 89,
+          "nativeLogTime": "2026-11-12 19:44:22.634548",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=<omitted> ok=1"
+        },
+        {
+          "sourceLine": 159,
+          "nativeLogTime": "2026-11-12 19:44:30.870192",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=pressReadiness commandId=<omitted>"
+        },
+        {
+          "sourceLine": 188,
+          "nativeLogTime": "2026-11-12 19:44:31.545093",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=pressReadiness commandId=<omitted> ok=1"
+        },
+        {
+          "sourceLine": 189,
+          "nativeLogTime": "2026-11-12 19:44:31.560277",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=<omitted>"
+        },
+        {
+          "sourceLine": 196,
+          "nativeLogTime": "2026-11-12 19:44:31.712214",
+          "text": "AGENT_DEVICE_RUNNER_SYNTHESIZED_DISPATCH kind=tap point=(201.0,319.0) reference=(0.0,0.0,402.0,874.0) orientation=1"
+        },
+        {
+          "sourceLine": 200,
+          "nativeLogTime": "2026-11-12 19:44:32.026959",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=<omitted> ok=1"
+        },
+        {
+          "sourceLine": 260,
+          "nativeLogTime": "2026-11-12 19:44:40.476737",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=pressReadiness commandId=<omitted>"
+        },
+        {
+          "sourceLine": 289,
+          "nativeLogTime": "2026-11-12 19:44:40.929809",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=pressReadiness commandId=<omitted> ok=1"
+        },
+        {
+          "sourceLine": 290,
+          "nativeLogTime": "2026-11-12 19:44:40.935924",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=<omitted>"
+        },
+        {
+          "sourceLine": 297,
+          "nativeLogTime": "2026-11-12 19:44:41.067500",
+          "text": "AGENT_DEVICE_RUNNER_SYNTHESIZED_DISPATCH kind=tap point=(201.0,319.0) reference=(0.0,0.0,402.0,874.0) orientation=1"
+        },
+        {
+          "sourceLine": 301,
+          "nativeLogTime": "2026-11-12 19:44:41.375425",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=<omitted> ok=1"
+        }
+      ]
+    },
+    {
+      "source": "9676eedac5b05e40a88062cd0c8c45fdc730da68",
+      "artifactArchiveSha256": "adfc3f19d0d397ab84298e395016a775bd6f689983b3666f8344a3361674cc62",
+      "verboseSessionLogSha256": "eda0afd3841aa6488da823340621c435684f860334b7efa369676389ab3bc552",
+      "verboseSessionLogLines": 59887,
+      "selectedTreeAndQueryFacts": [],
+      "nativeCommandAndPointFacts": [
+        {
+          "sourceLine": 50,
+          "nativeLogTime": "2026-11-12 17:22:59.015483",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=<omitted>"
+        },
+        {
+          "sourceLine": 57,
+          "nativeLogTime": "2026-11-12 17:22:59.128613",
+          "text": "AGENT_DEVICE_RUNNER_SYNTHESIZED_DISPATCH kind=tap point=(201.0,319.0) reference=(0.0,0.0,402.0,874.0) orientation=1"
+        },
+        {
+          "sourceLine": 61,
+          "nativeLogTime": "2026-11-12 17:22:59.553752",
+          "text": "AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=<omitted> ok=1"
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    "Failed attempts2/3: filtered anonymous Cell at(16,293.3,370,52) owns Ready-for-Apple-Intelligence child; General is(16,380.3,370,52) and Siri(16,536.3,370,52) in the same tree. Tap remains(201,319).",
+    "Attempt1 last logged pre-dispatch General rect is(16,293.3,370,52), Siri(16,449.3,370,52), with no Ready-for-Apple-Intelligence row in those trees. Its exact reflow time after the last logged tree is unknown.",
+    "Passing base967 first replay tap is also(201,319). Its artifact has no General/Siri tree rows, so no equivalent baseline native tree can be reconstructed.",
+    "Source evaluation publishes recursive aggregated label but private XCTest target stores raw snapshot.label. Actual request descriptors and readiness state strings are absent from the old logs; command succeeded and tap followed, but complete original descriptor is not reconstructed."
+  ],
+  "qualification": {
+    "hostedRuntime": "iOS26.2",
+    "buildSDK": "26.5",
+    "base967PostOpenObservation": "probe-failed",
+    "failedMergePostOpenObservation": "observable",
+    "local27BaseAndMergePostOpenObservation": "unobservable",
+    "classification": "Actual wrong-row tap under investigation; no claim of flake or environment-only cause."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "environment": "Local iOS27.0; hosted failingCIiOS26.2. One ordinary unchanged replay invocation per source with the existing --retries2. No backend/observation override.",
+  "cases": [
+    {
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "case": "exact-eec-settings-original-1",
+      "overallCLIExit": 0,
+      "daemonCleanupExit": 0,
+      "recorderExit": 0,
+      "elapsedSeconds": 9.781685042000001,
+      "sourceClean": true,
+      "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+      "nativeBuiltAt": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "runtimeJavaScriptFiles": 631,
+      "originalRunLogSha256": "b4a41b1c1af219610828b842f0d6606da99f4a9a80472c7372066a44ff9ba87d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "postOpenObservation": "unobservable"
+        }
+      ],
+      "firstAttemptPassed": true,
+      "qualification": "First attempt passed point201406/unobservable. Requested observable baseline remains unestablished."
+    },
+    {
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "case": "exact-e66-settings-original-1",
+      "overallCLIExit": 0,
+      "daemonCleanupExit": 0,
+      "recorderExit": 0,
+      "elapsedSeconds": 16.57499425,
+      "sourceClean": true,
+      "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "nativeBuiltAt": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "runtimeJavaScriptFiles": 631,
+      "originalRunLogSha256": "d2e66e70173b2b2fd4343ffb380473b90afb4be51bebeea62be1cb970211e345",
+      "attempts": [
+        {
+          "attempt": 1,
+          "postOpenObservation": "observable"
+        },
+        {
+          "attempt": 2,
+          "postOpenObservation": "unobservable"
+        }
+      ],
+      "firstAttemptPassed": false,
+      "qualification": "Head firstattempt failed wait after wrong row/point201319 with observable launch; existingretry2point201406/unobservable then passed. Overall green is not first-attempt correctness."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+[
+  {
+    "case": "base-settings-original-1",
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "wide",
+      "mdat"
+    ],
+    "movieBoxes": [
+      "mvhd",
+      "trak"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "rawMetadata": [
+      {
+        "kind": "track udta/tagc",
+        "value": "com.apple.policy.screenrecording.1",
+        "bytes": 42
+      }
+    ]
+  },
+  {
+    "case": "exact-e66-settings-original-1",
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "wide",
+      "mdat"
+    ],
+    "movieBoxes": [
+      "mvhd",
+      "trak"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "rawMetadata": [
+      {
+        "kind": "track udta/tagc",
+        "value": "com.apple.policy.screenrecording.1",
+        "bytes": 42
+      }
+    ]
+  },
+  {
+    "case": "exact-eec-settings-original-1",
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "wide",
+      "mdat"
+    ],
+    "movieBoxes": [
+      "mvhd",
+      "trak"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "rawMetadata": [
+      {
+        "kind": "track udta/tagc",
+        "value": "com.apple.policy.screenrecording.1",
+        "bytes": 42
+      }
+    ]
+  },
+  {
+    "case": "merge-settings-original-1",
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "wide",
+      "mdat"
+    ],
+    "movieBoxes": [
+      "mvhd",
+      "trak"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "rawMetadata": [
+      {
+        "kind": "track udta/tagc",
+        "value": "com.apple.policy.screenrecording.1",
+        "bytes": 42
+      }
+    ]
+  },
+  {
+    "case": "semantic-e66-old-native-red-1",
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "wide",
+      "mdat"
+    ],
+    "movieBoxes": [
+      "mvhd",
+      "trak"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "rawMetadata": [
+      {
+        "kind": "track udta/tagc",
+        "value": "com.apple.policy.screenrecording.1",
+        "bytes": 42
+      }
+    ]
+  }
+]

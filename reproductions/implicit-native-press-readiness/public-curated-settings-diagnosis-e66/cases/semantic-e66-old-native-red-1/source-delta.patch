@@ -1,0 +1,119 @@
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m b/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
+index f8bc75f..0b9f6bc 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
+@@ -47,7 +47,14 @@
+ @interface AgentDeviceRunnerFixtureViewController : AgentDeviceRunnerViewController
+ @end
+ 
+-@interface AgentDeviceRunnerFixtureViewController () <UNUserNotificationCenterDelegate>
++@interface AgentDeviceAnonymousCell : UITableViewCell
++@end
++
++@implementation AgentDeviceAnonymousCell
++- (NSString *)accessibilityLabel { return nil; }
++@end
++
++@interface AgentDeviceRunnerFixtureViewController () <UNUserNotificationCenterDelegate, UITableViewDataSource>
+ // Held for the app's lifetime: a window nobody retained would be gone before the test queried it.
+ @property(nonatomic, strong) UIWindow *secondWindow;
+ @property(nonatomic, strong) UILabel *navigationBackStatus;
+@@ -66,6 +73,7 @@ @interface AgentDeviceRunnerFixtureViewController () <UNUserNotificationCenterDe
+ // refusal that ran nothing from one that dispatched its gesture first and refused afterwards.
+ @property(nonatomic, strong) UILabel *tapWitnessStatus;
+ @property(nonatomic, assign) NSUInteger tapWitnessPresses;
++@property(nonatomic, strong) UIButton *derivedLabelAction;
+ // Filled from the fixture field's own delegate callbacks so a test can tell that a gesture really
+ // took focus from an input that has stopped answering the accessibility query that found it.
+ @property(nonatomic, strong) UILabel *textEntryFocusWitness;
+@@ -547,6 +555,27 @@ - (void)updateTapWitnessStatus {
+       [NSString stringWithFormat:@"presses=%lu", (unsigned long)self.tapWitnessPresses];
+ }
+ 
++- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
++  return 1;
++}
++
++- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
++  AgentDeviceAnonymousCell *cell = [[AgentDeviceAnonymousCell alloc] initWithStyle:UITableViewCellStyleDefault
++                                                                reuseIdentifier:nil];
++  UIButton *action = [UIButton buttonWithType:UIButtonTypeSystem];
++  action.frame = CGRectMake(0, 0, 300, 52);
++  action.accessibilityIdentifier = @"derived-label-action";
++  [action setTitle:@"Original row" forState:UIControlStateNormal];
++  [action addTarget:self action:@selector(agentDeviceTapWitnessDidPress:) forControlEvents:UIControlEventTouchUpInside];
++  [cell.contentView addSubview:action];
++  self.derivedLabelAction = action;
++  return cell;
++}
++
++- (void)replaceDerivedLabel {
++  [self.derivedLabelAction setTitle:@"Replacement row" forState:UIControlStateNormal];
++}
++
+ - (void)updateMaskedToggleStatus {
+   self.maskedToggleStatus.text =
+       [NSString stringWithFormat:@"presses=%lu", (unsigned long)self.maskedTogglePresses];
+@@ -666,6 +695,24 @@ - (void)viewDidLoad {
+     }
+   }
+ 
++  if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-derived-label"]) {
++    UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(40, 300, 300, 52)
++                                                   style:UITableViewStylePlain];
++    table.rowHeight = 52;
++    table.dataSource = self;
++    [self.view addSubview:table];
++    UIButton *replace = [UIButton buttonWithType:UIButtonTypeSystem];
++    replace.frame = CGRectMake(40, 200, 300, 44);
++    replace.accessibilityIdentifier = @"replace-derived-label";
++    [replace setTitle:@"Replace row" forState:UIControlStateNormal];
++    [replace addTarget:self action:@selector(replaceDerivedLabel) forControlEvents:UIControlEventTouchUpInside];
++    [self.view addSubview:replace];
++    self.tapWitnessStatus = [[UILabel alloc] initWithFrame:CGRectMake(40, 400, 300, 44)];
++    self.tapWitnessStatus.accessibilityIdentifier = @"agent-device-tap-witness-presses";
++    [self updateTapWitnessStatus];
++    [self.view addSubview:self.tapWitnessStatus];
++  }
++
+   if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-second-window-duplicate"]) {
+     UIButton *duplicate = AgentDeviceWindowDuplicateButton();
+     [self.view addSubview:duplicate];
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
+index 96dfca9..8f904df 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+SelectorMatchPolicyTests.swift
+@@ -145,6 +145,33 @@ extension RunnerTests {
+   }
+ 
+ #if os(iOS)
++  @MainActor
++  func testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel() throws {
++    app.launchArguments = ["--agent-device-derived-label"]
++    app.launch()
++    defer { app.terminate() }
++    let action = app.buttons["derived-label-action"]
++    XCTAssertTrue(action.waitForFixtureExistence(timeout: appExistenceTimeout))
++    let cell = app.cells.firstMatch
++    let original = try cell.snapshot()
++    XCTAssertTrue(original.label.isEmpty, "fixture must expose an anonymous native container")
++    XCTAssertTrue(original.identifier.isEmpty)
++    let evaluation = evaluateSnapshot(original)
++    XCTAssertEqual(evaluation.label, "Original row")
++    let target = try XCTUnwrap(makeSnapshotNode(snapshot: original, evaluation: evaluation,
++      depth: 1, index: 1, parentIndex: 0).nativePressTarget)
++    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: target).data?.pressReadiness, "ready")
++    app.buttons["replace-derived-label"].tap()
++    XCTAssertEqual(action.label, "Replacement row")
++    let replacement = try cell.snapshot()
++    XCTAssertEqual(replacement.frame, original.frame)
++    XCTAssertEqual(replacement.label, original.label)
++    XCTAssertEqual(replacement.identifier, original.identifier)
++    XCTAssertTrue(cell.isHittable)
++    XCTAssertEqual(try queryAuthorizedPressTarget(app: app, target: target).data?.pressReadiness, "missing")
++    XCTAssertEqual(app.staticTexts["agent-device-tap-witness-presses"].label, "presses=0")
++  }
++
+   @MainActor
+   func testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow() throws {
+     app.launchArguments = ["--agent-device-native-states", "--agent-device-second-window", "--agent-device-second-window-zero-frame"]
