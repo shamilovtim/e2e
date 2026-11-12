@@ -1,0 +1,28 @@
+{
+  "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "priorSource": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "sixFileDeltaSha256": "5b6ec04ba60d6051c06e257f5f6ae78282a3ba47ce6e46ab6d43e49478aa74c4",
+  "files": [
+    {
+      "path": "source/run-nits-controls.py",
+      "originalExecutedSourceSha256": "e6c7fc234554f1d45aaed7503628acfd3f9184c65b77661645ba9ae2612b1568",
+      "publicSha256": "86c4123389385b2e2dc060379cea56f433209cb0e4b805dca6b34d712a900e0d",
+      "bytes": 3666,
+      "scope": "Host-local absolute literals replaced with generic placeholders. Original executed SHA retained; public copy is not byte-equal executable replay."
+    },
+    {
+      "path": "source/record-nits-artifacts.mjs",
+      "originalExecutedSourceSha256": "48d44c79cc614daee000e39dd8a26d88c8a4a383fcd8535709b79358ad8e8daa",
+      "publicSha256": "48d44c79cc614daee000e39dd8a26d88c8a4a383fcd8535709b79358ad8e8daa",
+      "bytes": 4200,
+      "scope": "Byte-equal actual executed source."
+    },
+    {
+      "path": "source/prepare-guest-bridge.mjs",
+      "originalExecutedSourceSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "publicSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "bytes": 2198,
+      "scope": "Byte-equal actual executed source."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "protocol": "Common v3: native XCTest alert get is a read-only warmup; each measured press is first in a normal close/reopened fresh session record at same alias. Base precedes head per route. Three samples per side, first-call effects retained, descriptive only. No inspector overhead in these cases. Small generic fixture; not the500controlbenchmark.",
+  "cases": [
+    {
+      "case": "idle-timing-e66-ref-3",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "ref",
+      "success": true,
+      "medianMs": 375.50091599999905,
+      "samplesMs": [
+        500.545666,
+        375.50091599999905,
+        371.536250000001
+      ],
+      "nativeReadinessReads": [
+        1,
+        1,
+        1
+      ],
+      "nativeTapCommands": [
+        1,
+        1,
+        1
+      ],
+      "nativeCounts": [
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        }
+      ]
+    },
+    {
+      "case": "idle-timing-e66-selector-3",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "selector",
+      "success": true,
+      "medianMs": 396.59091700000045,
+      "samplesMs": [
+        539.1395830000001,
+        396.59091700000045,
+        395.0472089999985
+      ],
+      "nativeReadinessReads": [
+        1,
+        1,
+        1
+      ],
+      "nativeTapCommands": [
+        1,
+        1,
+        1
+      ],
+      "nativeCounts": [
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        }
+      ]
+    },
+    {
+      "case": "idle-timing-eec-ref-3",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "route": "ref",
+      "success": true,
+      "medianMs": 341.5465829999994,
+      "samplesMs": [
+        695.5375000000004,
+        341.5465829999994,
+        341.3479590000006
+      ],
+      "nativeReadinessReads": [
+        0,
+        0,
+        0
+      ],
+      "nativeTapCommands": [
+        1,
+        1,
+        1
+      ],
+      "nativeCounts": [
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        }
+      ]
+    },
+    {
+      "case": "idle-timing-eec-selector-3",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "route": "selector",
+      "success": true,
+      "medianMs": 369.3155000000006,
+      "samplesMs": [
+        709.3549169999997,
+        356.83541700000023,
+        369.3155000000006
+      ],
+      "nativeReadinessReads": [
+        0,
+        0,
+        0
+      ],
+      "nativeTapCommands": [
+        1,
+        1,
+        1
+      ],
+      "nativeCounts": [
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        },
+        {
+          "underlying": 1,
+          "overlay": 0
+        }
+      ]
+    }
+  ]
+}

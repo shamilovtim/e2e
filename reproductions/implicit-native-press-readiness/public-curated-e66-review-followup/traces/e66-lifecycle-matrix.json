@@ -1,0 +1,179 @@
+{
+  "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "cases": [
+    {
+      "case": "trace-e66-selector-ready-2",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "selector",
+      "scenario": "ready",
+      "elapsedMs": 3135.8669579999996,
+      "output": {
+        "ok": true
+      },
+      "traceStates": {
+        "blocked": 28,
+        "ready": 2
+      },
+      "targetTaps": 1,
+      "counts": {
+        "underlying": 1,
+        "overlay": 0
+      },
+      "allPointsBound": true,
+      "loadedRuntimeBytesEqual": true,
+      "unexpectedPauses": 0
+    },
+    {
+      "case": "trace-e66-ref-ready-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "ref",
+      "scenario": "ready",
+      "elapsedMs": 3210.219792,
+      "output": {
+        "ok": true
+      },
+      "traceStates": {
+        "blocked": 29,
+        "ready": 2
+      },
+      "targetTaps": 1,
+      "counts": {
+        "underlying": 1,
+        "overlay": 0
+      },
+      "allPointsBound": true,
+      "loadedRuntimeBytesEqual": true,
+      "unexpectedPauses": 0
+    },
+    {
+      "case": "trace-e66-selector-deadline-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "selector",
+      "scenario": "deadline",
+      "elapsedMs": 60015.939625,
+      "output": {
+        "ok": false,
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "Daemon request deadline exceeded",
+          "details": {
+            "remainingMs": 0,
+            "reason": "daemon_request_timeout",
+            "dispatched": "no",
+            "check": "native-readiness",
+            "readiness": "blocked",
+            "hint": "The request had 0 ms left when pre-dispatch admission stopped, so nothing was dispatched. Retry once the UI is idle, or allow the request more time."
+          },
+          "name": "Error"
+        }
+      },
+      "traceStates": {
+        "blocked": 626
+      },
+      "targetTaps": 0,
+      "counts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "allPointsBound": true,
+      "loadedRuntimeBytesEqual": true,
+      "unexpectedPauses": 0
+    },
+    {
+      "case": "trace-e66-ref-deadline-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "ref",
+      "scenario": "deadline",
+      "elapsedMs": 59976.57762499999,
+      "output": {
+        "ok": false,
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "Daemon request deadline exceeded",
+          "details": {
+            "remainingMs": 34,
+            "reason": "daemon_request_timeout",
+            "dispatched": "no",
+            "check": "native-readiness",
+            "readiness": "blocked",
+            "hint": "The request had 34 ms left when pre-dispatch admission stopped, so nothing was dispatched. Retry once the UI is idle, or allow the request more time."
+          },
+          "name": "Error"
+        }
+      },
+      "traceStates": {
+        "blocked": 627
+      },
+      "targetTaps": 0,
+      "counts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "allPointsBound": true,
+      "loadedRuntimeBytesEqual": true,
+      "unexpectedPauses": 0
+    },
+    {
+      "case": "trace-e66-selector-cancel-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "selector",
+      "scenario": "cancel",
+      "elapsedMs": 204.8668749999997,
+      "output": {
+        "ok": false,
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "request canceled",
+          "details": {
+            "hint": "The request was canceled intentionally (explicit cancel or client disconnect) \u2014 no retry is needed unless the cancellation was unintended.",
+            "dispatched": "unknown",
+            "reason": "request_canceled"
+          },
+          "name": "Error"
+        }
+      },
+      "traceStates": {
+        "blocked": 2
+      },
+      "targetTaps": 0,
+      "counts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "allPointsBound": true,
+      "loadedRuntimeBytesEqual": true,
+      "unexpectedPauses": 0
+    },
+    {
+      "case": "trace-e66-ref-cancel-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "route": "ref",
+      "scenario": "cancel",
+      "elapsedMs": 154.56779199999983,
+      "output": {
+        "ok": false,
+        "error": {
+          "code": "COMMAND_FAILED",
+          "message": "request canceled",
+          "details": {
+            "hint": "The request was canceled intentionally (explicit cancel or client disconnect) \u2014 no retry is needed unless the cancellation was unintended.",
+            "dispatched": "unknown",
+            "reason": "request_canceled"
+          },
+          "name": "Error"
+        }
+      },
+      "traceStates": {
+        "blocked": 2
+      },
+      "targetTaps": 0,
+      "counts": {
+        "underlying": 0,
+        "overlay": 0
+      },
+      "allPointsBound": true,
+      "loadedRuntimeBytesEqual": true,
+      "unexpectedPauses": 0
+    }
+  ]
+}

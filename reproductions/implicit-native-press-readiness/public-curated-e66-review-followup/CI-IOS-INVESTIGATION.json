@@ -1,0 +1,59 @@
+{
+  "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "ciMerge": "9efcb9d7732a6f3778c075fde66f6e0cc6dc4233",
+  "ciBase": "9676eedac5b05e40a88062cd0c8c45fdc730da68",
+  "run": 43292852997,
+  "job": 131443328265,
+  "jobUrl": "https://github.com/callstack/agent-device/actions/runs/43292852997/job/131443328265",
+  "conclusion": "failure",
+  "failingOwner": "test/integration/replays/ios/simulator/01-settings.ad",
+  "precedingNativeMethods": {
+    "passed": 7,
+    "failed": 0
+  },
+  "observedAttempts": 3,
+  "observedEachAttempt": {
+    "clickSelector": "role=cell label=General || role=button label=General",
+    "pressReadinessCommands": 1,
+    "tapCommands": 1,
+    "synthesizedPoint": {
+      "x": 201,
+      "y": 319
+    },
+    "referenceRect": {
+      "x": 0,
+      "y": 0,
+      "width": 402,
+      "height": 874
+    },
+    "orientation": "portrait",
+    "clickReportedSuccess": true
+  },
+  "failedStep": {
+    "line": 6,
+    "action": "wait",
+    "timeoutMs": 5000,
+    "code": "COMMAND_FAILED",
+    "message": "wait timed out for selector: label=About || label=\"Software Update\" || text=\"Manage your overall setup and preferences\"",
+    "attempt3CurrentSurface": "Settings, BETA, Apple Intelligence & Siri, A personal intelligence system integrated deeply into your iPhone, apps, and Sir.",
+    "typedDetailsReason": "Not present in uploaded request_failed records; no reason inferred."
+  },
+  "classification": "Actual wrong-page/next-step timeout; product or baseline/host cause remains unproven. Not classified as flaky or infrastructure.",
+  "limits": [
+    "The authored DSL actually invoked readiness; no pinned-bypass assumption.",
+    "Artifacts omit General target/binding rectangle and native reply state.",
+    "The two host screenshots show black desktop and a Runner.Listener local-network permission prompt; neither shows simulator target pixels. Prompt alone does not establish cause.",
+    "No rerun or new source/device execution performed during this light triage."
+  ],
+  "originalJobLogSha256": "7594294a8b1fb30c4620737a4fe4d40da0d59331b722a076cd9577ff447a594e",
+  "originalArtifactZipSha256": "3903f42d0ddd82087b7a481c6f46987d67a66274dac2f2b0dc60a94a90f67dea",
+  "ciSimulatorRuntime": "iOS26.2",
+  "ciBuildSdk": "iOSSimulator26.5",
+  "qualification": "Runtime token was read from both exact job logs; SDK/xctestrun filename26.5 is not the simulator runtime.",
+  "baselineComparison": {
+    "source": "9676eedac5b05e40a88062cd0c8c45fdc730da68",
+    "iosJobUrl": "https://github.com/callstack/agent-device/actions/runs/43268335809/job/131358067550",
+    "result": "Settings01 sameCLIcommand passed1/1 in11.8s onruntime26.2. This is not evidence of a matching baseline failure.",
+    "originalLogSha256": "1c72103a97f71568b0af5cf4a00fb59462bf6ff997833fc95dd89d7980f1228c"
+  }
+}

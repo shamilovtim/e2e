@@ -1,0 +1,423 @@
+{
+  "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "baseline": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "cases": [
+    {
+      "case": "idle-timing-e66-ref-1",
+      "classification": "proof-harness-failure",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": false,
+      "video": "media/idle-timing-e66-ref-1/video.mp4",
+      "videoSha256": "dc32ad967c1325dedab32a134cc2e41b9eafdf66451ecead9a49c81499e6a0ff",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-e66-ref-1/DECODE.json",
+      "proof": "traces/cases/idle-timing-e66-ref-1/proof.json"
+    },
+    {
+      "case": "idle-timing-e66-ref-2",
+      "classification": "proof-harness-failure",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": false,
+      "video": "media/idle-timing-e66-ref-2/video.mp4",
+      "videoSha256": "62cb7b0e14ca93a02964bb9185861540c0f72a2c5903d4447ad64e2a28ee9be1",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-e66-ref-2/DECODE.json",
+      "proof": "traces/cases/idle-timing-e66-ref-2/proof.json"
+    },
+    {
+      "case": "idle-timing-e66-ref-3",
+      "classification": "qualified-first-idle-timing",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/idle-timing-e66-ref-3/video.mp4",
+      "videoSha256": "cf168b94506225534a3d49ca71de713097137ebbcdc04076c453c7324ed729c0",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-e66-ref-3/DECODE.json",
+      "proof": "traces/cases/idle-timing-e66-ref-3/proof.json"
+    },
+    {
+      "case": "idle-timing-e66-selector-1",
+      "classification": "proof-harness-failure",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": false,
+      "video": "media/idle-timing-e66-selector-1/video.mp4",
+      "videoSha256": "54b5edc58c538093fa3584ce53d3cb46e30b06fba2aeaf6ff9f5cbc9c6369516",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-e66-selector-1/DECODE.json",
+      "proof": "traces/cases/idle-timing-e66-selector-1/proof.json"
+    },
+    {
+      "case": "idle-timing-e66-selector-2",
+      "classification": "proof-harness-failure",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": false,
+      "video": "media/idle-timing-e66-selector-2/video.mp4",
+      "videoSha256": "4f236c9c399554e4e487c2acd4171dd3e440e23958017e879fee0e606b7d81fe",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-e66-selector-2/DECODE.json",
+      "proof": "traces/cases/idle-timing-e66-selector-2/proof.json"
+    },
+    {
+      "case": "idle-timing-e66-selector-3",
+      "classification": "qualified-first-idle-timing",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/idle-timing-e66-selector-3/video.mp4",
+      "videoSha256": "90d813f9652b5ab825a781c81dbf1dfa23d30b3cfed8c42b6d11f6d231f98e67",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-e66-selector-3/DECODE.json",
+      "proof": "traces/cases/idle-timing-e66-selector-3/proof.json"
+    },
+    {
+      "case": "idle-timing-eec-ref-1",
+      "classification": "proof-harness-failure",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "success": false,
+      "video": "media/idle-timing-eec-ref-1/video.mp4",
+      "videoSha256": "66817bda53147dbcac5c9a861859cb7081e281424f851ad8425eefca21a93235",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-eec-ref-1/DECODE.json",
+      "proof": "traces/cases/idle-timing-eec-ref-1/proof.json"
+    },
+    {
+      "case": "idle-timing-eec-ref-2",
+      "classification": "proof-harness-failure",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "success": false,
+      "video": "media/idle-timing-eec-ref-2/video.mp4",
+      "videoSha256": "4fca182dfe502a4f592b9728fde84e9633c21ff7b63d67ac1b316a32f2b200ec",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-eec-ref-2/DECODE.json",
+      "proof": "traces/cases/idle-timing-eec-ref-2/proof.json"
+    },
+    {
+      "case": "idle-timing-eec-ref-3",
+      "classification": "qualified-first-idle-timing",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "success": true,
+      "video": "media/idle-timing-eec-ref-3/video.mp4",
+      "videoSha256": "cac068ca01e1819e7007a3fdca7330d0b2f17fce47ad9c6ff3918a9344a82c07",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-eec-ref-3/DECODE.json",
+      "proof": "traces/cases/idle-timing-eec-ref-3/proof.json"
+    },
+    {
+      "case": "idle-timing-eec-selector-1",
+      "classification": "proof-harness-failure",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "success": false,
+      "video": "media/idle-timing-eec-selector-1/video.mp4",
+      "videoSha256": "dda37e4112d82a83d66f3899fd9cce2a4425ff9454cfe5cd65eceb46efb482fb",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-eec-selector-1/DECODE.json",
+      "proof": "traces/cases/idle-timing-eec-selector-1/proof.json"
+    },
+    {
+      "case": "idle-timing-eec-selector-2",
+      "classification": "proof-harness-failure",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "success": false,
+      "video": "media/idle-timing-eec-selector-2/video.mp4",
+      "videoSha256": "7c20122393efe98909ab1e701d0f028a169c5aef95df79b1a47535560a00fb61",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-eec-selector-2/DECODE.json",
+      "proof": "traces/cases/idle-timing-eec-selector-2/proof.json"
+    },
+    {
+      "case": "idle-timing-eec-selector-3",
+      "classification": "qualified-first-idle-timing",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "success": true,
+      "video": "media/idle-timing-eec-selector-3/video.mp4",
+      "videoSha256": "f1dd9bbafe1b3dc01abf9aaca0aa235eac1014546d30cfaa37d38afd1124eb49",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/idle-timing-eec-selector-3/DECODE.json",
+      "proof": "traces/cases/idle-timing-eec-selector-3/proof.json"
+    },
+    {
+      "case": "trace-e66-idle-ref-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-idle-ref-1/video.mp4",
+      "videoSha256": "5e69d01e87ef4804320adfbe74b11cb2df143ca009aa65c4f64aed97247171b8",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-idle-ref-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-idle-ref-1/proof.json"
+    },
+    {
+      "case": "trace-e66-idle-selector-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-idle-selector-1/video.mp4",
+      "videoSha256": "7a7d1259e7711441e7aeda1368d0d8f886d171af1a1c634f40c0e5dd5233485b",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-idle-selector-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-idle-selector-1/proof.json"
+    },
+    {
+      "case": "trace-e66-motion-ref-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-motion-ref-1/video.mp4",
+      "videoSha256": "a20f0a324b28d47a673c3323be648b7916b8f8b12ea523ad14e2ed56010ee7d1",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-motion-ref-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-motion-ref-1/proof.json"
+    },
+    {
+      "case": "trace-e66-motion-selector-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-motion-selector-1/video.mp4",
+      "videoSha256": "e4c7999c0678cbc83d7f663fe8a0a09fab2ea2ba6c42c5e009ca6d552780485e",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-motion-selector-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-motion-selector-1/proof.json"
+    },
+    {
+      "case": "trace-e66-ref-cancel-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-ref-cancel-1/video.mp4",
+      "videoSha256": "3c3e304ca6a5927e125877836b68487ce66bd01b12923033df40060a62ca2fac",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-ref-cancel-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-ref-cancel-1/proof.json"
+    },
+    {
+      "case": "trace-e66-ref-deadline-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-ref-deadline-1/video.mp4",
+      "videoSha256": "f7347e2702c151782cfdd92e3f9cf0f6673b41c86a524908a0dd93288090a881",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-ref-deadline-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-ref-deadline-1/proof.json"
+    },
+    {
+      "case": "trace-e66-ref-ready-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-ref-ready-1/video.mp4",
+      "videoSha256": "64657e7d3d0b319ac64b04dd02f3a6cf852825b18ced88875950329a85095996",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-ref-ready-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-ref-ready-1/proof.json"
+    },
+    {
+      "case": "trace-e66-selector-cancel-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-selector-cancel-1/video.mp4",
+      "videoSha256": "08278924322bc30ae049fed1a512165e7115fb4b0ab65e6ee1bb99100c47d7ce",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-selector-cancel-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-selector-cancel-1/proof.json"
+    },
+    {
+      "case": "trace-e66-selector-deadline-1",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-selector-deadline-1/video.mp4",
+      "videoSha256": "c4c2f2ed8190502adc7df72c781f1370e68fd471b8e7531ee05b12afff68e904",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-selector-deadline-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-selector-deadline-1/proof.json"
+    },
+    {
+      "case": "trace-e66-selector-ready-1",
+      "classification": "proof-harness-failure",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": false,
+      "video": "media/trace-e66-selector-ready-1/video.mp4",
+      "videoSha256": "2d605a3589f1f91d46d712d0aa3f1c446663ae104a5f7125f0e4d5702aa11c92",
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-selector-ready-1/DECODE.json",
+      "proof": "traces/cases/trace-e66-selector-ready-1/proof.json"
+    },
+    {
+      "case": "trace-e66-selector-ready-2",
+      "classification": "functional-pass",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "success": true,
+      "video": "media/trace-e66-selector-ready-2/video.mp4",
+      "videoSha256": "7728f89eee2aec286cdfae70f84c73ca0d63bcb156ce1e06b80fbfc291bbfc4c",
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "recording": {
+        "code": 0,
+        "signal": null,
+        "escalated": false
+      },
+      "decode": "media/trace-e66-selector-ready-2/DECODE.json",
+      "proof": "traces/cases/trace-e66-selector-ready-2/proof.json"
+    }
+  ],
+  "recordings": 23,
+  "passed": 14,
+  "harnessFailures": 9
+}

@@ -1,0 +1,176 @@
+{
+  "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "sourceTree": "09262d288ca6714c4599661bf7070688eabbbc59",
+  "priorSource": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "completeJavaScriptFiles": 631,
+  "addedJavaScriptFiles": [],
+  "removedJavaScriptFiles": [],
+  "changedJavaScriptFiles": [
+    {
+      "path": "dist/src/runtime-factory.js",
+      "before": "84188168ed4e56f3b7a23d25cc8b8f744accd9a0a4832be1a8122c34b51eb245",
+      "after": "ad3bdb71969c8837653edd0a232f319c7076f0e971ae6caa851aa72f217230e5"
+    },
+    {
+      "path": "dist/src/runtime-session.js",
+      "before": "2192104a629f6cb52a87a7c4cbca182b4958d651886d7f8f2bb9eabb2f066c2d",
+      "after": "27592b8a7f624f512909dd37dd37acc10f6a240d2339387de753d4070d43b118"
+    }
+  ],
+  "nativeSourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+  "nativeBuildInputChanges": [],
+  "builds": {
+    "production": {
+      "builtAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "sourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "officialManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+      "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+      "artifactsVerified": 11,
+      "files": [
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+          "size": 1869,
+          "mode": 420,
+          "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 124304,
+          "mode": 493,
+          "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+          "size": 1403,
+          "mode": 420,
+          "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+          "size": 8,
+          "mode": 420,
+          "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+          "size": 2799,
+          "mode": 420,
+          "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 144400,
+          "mode": 493,
+          "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+          "size": 10944,
+          "mode": 420,
+          "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+          "size": 8,
+          "mode": 420,
+          "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+          "size": 1798,
+          "mode": 420,
+          "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 10949344,
+          "mode": 493,
+          "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+          "size": 798,
+          "mode": 420,
+          "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+        }
+      ]
+    },
+    "unit": {
+      "builtAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "sourceFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+      "officialManifestSha256": "50e352d3e3afed74033409ae5d2f34c64e5c9b66d337b3225d1406d0b24e855e",
+      "xctestrunSha256": "c2ddb9a2c00775efc11003061a7232014632a3f74a603b2fd5cd91a48219428f",
+      "artifactsVerified": 11,
+      "files": [
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+          "size": 1869,
+          "mode": 420,
+          "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+          "size": 368880,
+          "mode": 493,
+          "digest": "16c4e974865aa7df6abddb2453ca962aeec67a607b9f897cf4035bf05be3a619"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+          "size": 1403,
+          "mode": 420,
+          "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+          "size": 8,
+          "mode": 420,
+          "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+          "size": 2799,
+          "mode": 420,
+          "digest": "f14c03be72a8b9b6afbcf14ffe8ddcd1e18b5cb1b35fe6c11a577a4f245624cb"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+          "size": 144400,
+          "mode": 493,
+          "digest": "5beeb2ffa2b0e880506be55e77ec6a82de2a8add7cb0730477a6c99a1e8c9265"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+          "size": 10944,
+          "mode": 420,
+          "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+          "size": 8,
+          "mode": 420,
+          "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+          "size": 1798,
+          "mode": 420,
+          "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+          "size": 26945280,
+          "mode": 493,
+          "digest": "b23f62bc31d22d2870241bbffe37a42b5294014798c291a91b02ab342675bf0f"
+        },
+        {
+          "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+          "size": 798,
+          "mode": 420,
+          "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+        }
+      ]
+    }
+  },
+  "scriptSha256": "48d44c79cc614daee000e39dd8a26d88c8a4a383fcd8535709b79358ad8e8daa",
+  "qualification": "Actual native products/unit7 execution retain d9 attribution; no new native compile/test or device operation performed by this manifest check."
+}

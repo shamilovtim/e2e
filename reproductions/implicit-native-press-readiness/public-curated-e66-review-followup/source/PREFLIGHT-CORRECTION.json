@@ -1,0 +1,17 @@
+{
+  "kind": "local-focused-typecheck",
+  "statusBefore": "failed",
+  "cause": "New Android regression fixture omitted its required snapshot producer.",
+  "fix": "Added the registered android-uiautomator producer to the fixture; production source unchanged by this correction.",
+  "originalFailureLogSha256": "91ec14cac67f19a064d75bf2bf643d93361d3e2b8f35123b8ef4e30fe3189394",
+  "restoredTypecheckLogSha256": "4ebf8453b2e0bfd065d8d9fe6773d1c53218b822afba3fd93d1210bb53de63bb",
+  "focusedBefore": {
+    "passed": 64,
+    "failed": 0
+  },
+  "focusedAfter": {
+    "passed": 64,
+    "failed": 0
+  },
+  "qualification": "The final exact e66 gate passed types and all tests. The earlier type failure is retained as a real fixture-construction error, not called a flake or a passed gate."
+}

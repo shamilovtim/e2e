@@ -1,0 +1,386 @@
+{
+  "case": "idle-timing-eec-selector-3",
+  "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "originalPrivateResultSha256": "ee4d1788c81584aca6dbc6baed827cc43f7ee219abd9a4c52cae12c5fffafbfd",
+  "originalPrivateSummarySha256": "429c9ac186c661202a1695d1d41c097ac0eff7230d8e7a3dd1b481bea6e787de",
+  "executionInputs": {
+    "head": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "kind": "lifecycle",
+    "mode": "selector-ready",
+    "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+    "sourceTree": "845964e4a76997b469551fc2a9d0c8fdc9844c86",
+    "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+    "nativeBinarySha256": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34",
+    "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+    "runtimeJSFiles": 631,
+    "wrapperSha256": "2ab0261547108c040edd229a0f7df589d30bfda0a3487c2e20ecc4065e68bafa",
+    "driverSha256": "add476fe2cfc9e2542faa05cd257b64cafcb9975eaa154f99159d555c1323a41",
+    "archivedBeforeRun": true,
+    "runtimeCompleteFileSetVerified": true,
+    "runtimeSymlinksFound": false,
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "06dbcbaea48a5f93837581ccb56b8dfbb380e59dc4283e469dde211096cb214a",
+    "nativeCacheManifestSha256": "8017edf33d262b8c1d2876241744759725e44254bb5acfd8f3af8e40339348c0",
+    "runtimeLaunchInputs": [
+      {
+        "path": "bin/agent-device.mjs",
+        "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+      },
+      {
+        "path": "package.json",
+        "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f"
+      },
+      {
+        "path": "scripts/build-entries.ts",
+        "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+      },
+      {
+        "path": "scripts/build-xcuitest-apple.sh",
+        "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+      }
+    ],
+    "resolvedCLIEntry": "dist/src/internal/bin.js",
+    "guestBridge": {
+      "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+      "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+      "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+      "sourceFiles": [
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridge.m",
+          "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+          "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+          "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+          "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+          "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+          "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+          "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+          "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+          "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+        },
+        {
+          "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+          "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+        }
+      ]
+    },
+    "instrumentationUsed": false,
+    "expectedReadinessReads": 0,
+    "nodeVersion": "v24.22.0",
+    "warmRefRuns": null,
+    "callerSignalBudgetMs": null,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "29c701aba7e12334d88d62f3bd5988e48df742b889c666d0dc8c8b93138e4677",
+    "sourceTreeManifestSha256": "7d052949375647246f8c90de28fae34b1f5fbb5bc215d4fbb9e2286667bfb285",
+    "observedFixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2"
+  },
+  "wrapperSummary": {
+    "phase": "idle-timing-eec-selector-3",
+    "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": 3,
+    "siblingTaps": 0,
+    "inputEvents": {},
+    "frameComparison": null,
+    "recording": {
+      "code": 0,
+      "signal": null,
+      "escalated": false
+    },
+    "error": null
+  },
+  "observations": {
+    "phase": "idle-timing-eec-selector-3",
+    "route": "selector",
+    "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+    "targetTapEvents": 3,
+    "otherTapEvents": 0,
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null,
+      "escalated": false
+    },
+    "sessionClosed": true,
+    "observerUsed": false,
+    "expectedReadinessReads": 0,
+    "protocol": "Three measured first presses, each after normal close/reopen creates a fresh ordinary session record at the same session alias after relaunch, read-only public alert get to initialize the XCTest runner, and one public snapshot. No input precedes the measured press in its session. Native transport is warm; this is not a warmed target/latency SLO. Cases serialized base before head per route.",
+    "samples": [
+      {
+        "kind": "selector",
+        "sample": 1,
+        "warmup": false,
+        "ms": 709.3549169999997,
+        "nativeReadinessReads": 0,
+        "nativeTapCommands": 1,
+        "counts": {
+          "underlying": 1,
+          "overlay": 0
+        },
+        "priorSessionInteractionCalls": 0,
+        "nativeEvents": [
+          {
+            "event": "appReady",
+            "ms": 0.007916591130197048
+          },
+          {
+            "count": 1,
+            "event": "underlyingReceivedTap",
+            "ms": 4145.435333251953
+          }
+        ],
+        "output": {
+          "ok": true,
+          "result": {
+            "x": 194,
+            "y": 384,
+            "runnerMainThreadBusy": false,
+            "message": "Tapped id=\"Underlying action\" (194, 384)",
+            "referenceWidth": 402,
+            "referenceHeight": 874,
+            "targetKind": "selector",
+            "selector": "id=\"Underlying action\"",
+            "selectorChain": [
+              "id=\"Underlying action\"",
+              "role=\"button\" label=\"Underlying action\"",
+              "label=\"Underlying action\""
+            ],
+            "refLabel": "Underlying action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            }
+          }
+        }
+      },
+      {
+        "kind": "selector",
+        "sample": 2,
+        "warmup": false,
+        "ms": 356.83541700000023,
+        "nativeReadinessReads": 0,
+        "nativeTapCommands": 1,
+        "counts": {
+          "underlying": 1,
+          "overlay": 0
+        },
+        "priorSessionInteractionCalls": 0,
+        "nativeEvents": [
+          {
+            "event": "appReady",
+            "ms": 0.006375019438564777
+          },
+          {
+            "count": 1,
+            "event": "underlyingReceivedTap",
+            "ms": 453.2654583454132
+          }
+        ],
+        "output": {
+          "ok": true,
+          "result": {
+            "x": 194,
+            "y": 384,
+            "message": "Tapped id=\"Underlying action\" (194, 384)",
+            "runnerMainThreadBusy": false,
+            "referenceWidth": 402,
+            "referenceHeight": 874,
+            "targetKind": "selector",
+            "selector": "id=\"Underlying action\"",
+            "selectorChain": [
+              "id=\"Underlying action\"",
+              "role=\"button\" label=\"Underlying action\"",
+              "label=\"Underlying action\""
+            ],
+            "refLabel": "Underlying action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            }
+          }
+        }
+      },
+      {
+        "kind": "selector",
+        "sample": 3,
+        "warmup": false,
+        "ms": 369.3155000000006,
+        "nativeReadinessReads": 0,
+        "nativeTapCommands": 1,
+        "counts": {
+          "underlying": 1,
+          "overlay": 0
+        },
+        "priorSessionInteractionCalls": 0,
+        "nativeEvents": [
+          {
+            "event": "appReady",
+            "ms": 0.010708346962928772
+          },
+          {
+            "count": 1,
+            "event": "underlyingReceivedTap",
+            "ms": 461.97895833756775
+          }
+        ],
+        "output": {
+          "ok": true,
+          "result": {
+            "x": 194,
+            "y": 384,
+            "runnerMainThreadBusy": false,
+            "message": "Tapped id=\"Underlying action\" (194, 384)",
+            "referenceWidth": 402,
+            "referenceHeight": 874,
+            "targetKind": "selector",
+            "selector": "id=\"Underlying action\"",
+            "selectorChain": [
+              "id=\"Underlying action\"",
+              "role=\"button\" label=\"Underlying action\"",
+              "label=\"Underlying action\""
+            ],
+            "refLabel": "Underlying action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "executedSources": {
+    "executed-driver.py": {
+      "path": "sources/add476fe2cfc9e2542faa05cd257b64cafcb9975eaa154f99159d555c1323a41.py",
+      "originalExecutedSha256": "add476fe2cfc9e2542faa05cd257b64cafcb9975eaa154f99159d555c1323a41",
+      "publicSha256": "add476fe2cfc9e2542faa05cd257b64cafcb9975eaa154f99159d555c1323a41",
+      "bytes": 12766,
+      "scope": "Byte-equal actual executed source."
+    },
+    "executed-wrapper.mjs": {
+      "path": "sources/2ab0261547108c040edd229a0f7df589d30bfda0a3487c2e20ecc4065e68bafa.mjs",
+      "originalExecutedSha256": "2ab0261547108c040edd229a0f7df589d30bfda0a3487c2e20ecc4065e68bafa",
+      "publicSha256": "2ab0261547108c040edd229a0f7df589d30bfda0a3487c2e20ecc4065e68bafa",
+      "bytes": 6614,
+      "scope": "Byte-equal actual executed source."
+    }
+  },
+  "completeRuntimeManifest": {
+    "path": "objects/bf1d45573dbef77773bd6f67a7b996fc993168315db9c3bf60f995f679033c2d.json",
+    "sha256": "bf1d45573dbef77773bd6f67a7b996fc993168315db9c3bf60f995f679033c2d",
+    "bytes": 102593
+  },
+  "sourceTreeManifest": {
+    "path": "objects/7d052949375647246f8c90de28fae34b1f5fbb5bc215d4fbb9e2286667bfb285.txt",
+    "sha256": "7d052949375647246f8c90de28fae34b1f5fbb5bc215d4fbb9e2286667bfb285",
+    "bytes": 658675
+  },
+  "nativeBuild": {
+    "actualBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+    "fingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+    "officialPrivateManifestSha256": "8017edf33d262b8c1d2876241744759725e44254bb5acfd8f3af8e40339348c0",
+    "xctestrunSha256": "06dbcbaea48a5f93837581ccb56b8dfbb380e59dc4283e469dde211096cb214a",
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124288,
+        "mode": 493,
+        "digest": "0d105ca9486c53d9e8c2814d7048407d5324ae986bfcd9fd3a62c797cc53e9d9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "8a634f71b9acce05cd79d4b53009e04d0a5e1c8283f6235d244207298ef724a1"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "987c8cd087ed4debf59c5c26df859d5f4eb846737a3b700c27806b2fe4d617aa"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10749536,
+        "mode": 493,
+        "digest": "969b5e3867c371f83c975edcb6bd6311a42740126e5f8895a404a722af8d8b34"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ]
+  },
+  "classification": "pass",
+  "qualification": "Actual source and per-case pins retained; selected outputs only. Client cancellation uncertainty is not upgraded to no-send. Timed first presses have no inspector and are separate from traced proof."
+}

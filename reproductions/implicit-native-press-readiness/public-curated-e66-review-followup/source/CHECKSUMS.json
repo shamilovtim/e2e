@@ -1,0 +1,70 @@
+{
+  "scope": "All files except this checksum file. Live/media append is owned separately by root.",
+  "files": [
+    {
+      "path": "EXACT-VALIDATION.json",
+      "sha256": "c56b43a47dad7ed8b4413655fde3db6a0f230b8b88eadba7bb19ec7d18da9ac9",
+      "bytes": 6087
+    },
+    {
+      "path": "GUEST-BRIDGE.json",
+      "sha256": "1b5598b7c536eef5b172d4d28cb367d813445d7b547264f74c07f21d7890586c",
+      "bytes": 2286
+    },
+    {
+      "path": "OMISSION-CONTROLS.json",
+      "sha256": "a0fa6f11c872e9a50ab5cefab30da04843ccf5ae1106cb76384862bf6259fddf",
+      "bytes": 3265
+    },
+    {
+      "path": "PREFLIGHT-CORRECTION.json",
+      "sha256": "78ce2847e53371c46d446a4cc0e78af357db920561ba6f487ced94f92c5c12d8",
+      "bytes": 783
+    },
+    {
+      "path": "PROPOSED-ADR0039-AMENDMENT.md",
+      "sha256": "a1c6b50e878b92308fe4fe7ea715bcc6d01e5d5a9ae9233ed36fe9e9e8dc1023",
+      "bytes": 2204
+    },
+    {
+      "path": "README.md",
+      "sha256": "3ebae8b324998d8af074a757cf592cad05cc96946249442095a87cb8aed0ca11",
+      "bytes": 3130
+    },
+    {
+      "path": "SOURCE-ARCHIVES.json",
+      "sha256": "b1e7909536a676d7c76087ec48acd5e4ed0aaf41610cb18375834cbad28a2e8e",
+      "bytes": 1330
+    },
+    {
+      "path": "nits-artifact-provenance.json",
+      "sha256": "f74d7c684e35b63977af57028025513d3d8015bedf744e9aa21fa1551b82b571",
+      "bytes": 8043
+    },
+    {
+      "path": "runtime-e66-full.json",
+      "sha256": "bdd7fefa6125bb0e5b7afa34b81b64f0159fd08ae5b7499d46f31b9f4ad44522",
+      "bytes": 102672
+    },
+    {
+      "path": "source/prepare-guest-bridge.mjs",
+      "sha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "bytes": 2198
+    },
+    {
+      "path": "source/record-nits-artifacts.mjs",
+      "sha256": "48d44c79cc614daee000e39dd8a26d88c8a4a383fcd8535709b79358ad8e8daa",
+      "bytes": 4200
+    },
+    {
+      "path": "source/run-nits-controls.py",
+      "sha256": "86c4123389385b2e2dc060379cea56f433209cb0e4b805dca6b34d712a900e0d",
+      "bytes": 3666
+    },
+    {
+      "path": "source-six-file-delta.patch",
+      "sha256": "5b6ec04ba60d6051c06e257f5f6ae78282a3ba47ce6e46ab6d43e49478aa74c4",
+      "bytes": 11021
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+  "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+  "protocolVersion": 1,
+  "sourceVersion": "agent-device-simulator-ax-v1.10.0",
+  "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+  "sourceFiles": [
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridge.m",
+      "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+      "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+      "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+      "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+      "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+      "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+      "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+      "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+    },
+    {
+      "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+      "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+    },
+    {
+      "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+      "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+    }
+  ],
+  "selection": "Normal production cache entry, no source/cache/producer override; binary preparation does not launch a guest process or capture a device.",
+  "buildCommitUnknownForExistingCache": true,
+  "originalPrivateManifestSha256": "cbac6dcba21c4597d9da316e70b8b53c5f8ad43653b2300aaae04ca1d09b7ac5"
+}

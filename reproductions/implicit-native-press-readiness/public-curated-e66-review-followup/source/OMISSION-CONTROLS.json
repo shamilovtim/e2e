@@ -1,0 +1,80 @@
+{
+  "base": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "patchSha256": "5b6ec04ba60d6051c06e257f5f6ae78282a3ba47ce6e46ab6d43e49478aa74c4",
+  "reviewedHeadAfter": "6b7c8eab65ee8fce80ef001313031cacf97175c2",
+  "reviewedPatchAfterSha256": "5b6ec04ba60d6051c06e257f5f6ae78282a3ba47ce6e46ab6d43e49478aa74c4",
+  "ownWorktreeRemoved": true,
+  "originalReceiptSha256": "9ba49154d766889a9876bcd535eb0e4100bd281eae98802360ca921152407eba",
+  "scope": "Disposable checkout with its own frozen install and build, exact six-file patch applied over6b7. Runtime-only negative restores two production owners from6b7 while retaining new tests/caller. Not an unchanged6b7 baseline test run or a new exact-commit gate.",
+  "steps": [
+    {
+      "name": "nits-controls-install",
+      "exitCode": 0,
+      "failedTestNames": []
+    },
+    {
+      "name": "nits-controls-build",
+      "exitCode": 0,
+      "failedTestNames": []
+    },
+    {
+      "name": "nits-controls-green",
+      "exitCode": 0,
+      "passed": 64,
+      "failed": 0,
+      "pending": 0,
+      "reportSha256": "3bc88d7fc2e601a869a11dfec1c10a50d60c09c2a9bcf45d49ea17857e63f6fb",
+      "failedTestNames": []
+    },
+    {
+      "name": "nits-controls-old-runtime-red",
+      "exitCode": 1,
+      "passed": 62,
+      "failed": 2,
+      "pending": 0,
+      "reportSha256": "2d0469b6c38cde55c2fe65c559e7b5a8b3e48dc94485c47cbbbdf3348a13c34e",
+      "failedTestNames": [
+        "snapshot capture retains Android facts at their normalized node indices",
+        "a ref the second observation cannot re-measure is refused, never self-agreed"
+      ]
+    },
+    {
+      "name": "nits-controls-old-runtime-restored",
+      "exitCode": 0,
+      "passed": 64,
+      "failed": 0,
+      "pending": 0,
+      "reportSha256": "f04eb28614c9aa216c2755e9c4d241321025bd24112fc4aea329787d82e856b7",
+      "failedTestNames": []
+    },
+    {
+      "name": "nits-controls-ignore-intent-red",
+      "exitCode": 1,
+      "passed": 0,
+      "failed": 6,
+      "pending": 25,
+      "reportSha256": "b3e049e42319b4a8f1c45aac0d06ee39d059b5fc65171a6633bd89bf67bafd82",
+      "failedTestNames": [
+        "non-default tap intent skips readiness: {\"count\":2}",
+        "non-default tap intent skips readiness: {\"doubleTap\":true}",
+        "non-default tap intent skips readiness: {\"intervalMs\":1}",
+        "non-default tap intent skips readiness: {\"holdMs\":25}",
+        "non-default tap intent skips readiness: {\"jitterPx\":1}",
+        "non-default tap intent skips readiness: {\"button\":\"secondary\"}"
+      ]
+    },
+    {
+      "name": "nits-controls-restored",
+      "exitCode": 0,
+      "passed": 64,
+      "failed": 0,
+      "pending": 0,
+      "reportSha256": "1ea575b767b23f03f13cf15287f6b2317909cbc99059902c3fcff5b6b26296c4",
+      "failedTestNames": []
+    }
+  ],
+  "failureClassifications": {
+    "nits-controls-old-runtime-red": "Exactly two assertion failures: clickability retained original10/20 keys instead of normalized0/1; unmeasured-ref refusal reported0 instead of50ms.",
+    "nits-controls-ignore-intent-red": "Removing only the declared intent condition makes six non-default taps enter blocked native readiness and reject at the request deadline. Restored intent skips those reads and dispatches normally."
+  }
+}

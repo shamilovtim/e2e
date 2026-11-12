@@ -1,0 +1,260 @@
+{
+  "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "caseCount": 23,
+  "cases": [
+    {
+      "case": "idle-timing-e66-ref-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-e66-ref-1/proof.json",
+      "media": "../media/idle-timing-e66-ref-1/video.mp4"
+    },
+    {
+      "case": "idle-timing-e66-ref-2",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-e66-ref-2/proof.json",
+      "media": "../media/idle-timing-e66-ref-2/video.mp4"
+    },
+    {
+      "case": "idle-timing-e66-ref-3",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-e66-ref-3/proof.json",
+      "media": "../media/idle-timing-e66-ref-3/video.mp4"
+    },
+    {
+      "case": "idle-timing-e66-selector-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-e66-selector-1/proof.json",
+      "media": "../media/idle-timing-e66-selector-1/video.mp4"
+    },
+    {
+      "case": "idle-timing-e66-selector-2",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-e66-selector-2/proof.json",
+      "media": "../media/idle-timing-e66-selector-2/video.mp4"
+    },
+    {
+      "case": "idle-timing-e66-selector-3",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-e66-selector-3/proof.json",
+      "media": "../media/idle-timing-e66-selector-3/video.mp4"
+    },
+    {
+      "case": "idle-timing-eec-ref-1",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-eec-ref-1/proof.json",
+      "media": "../media/idle-timing-eec-ref-1/video.mp4"
+    },
+    {
+      "case": "idle-timing-eec-ref-2",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-eec-ref-2/proof.json",
+      "media": "../media/idle-timing-eec-ref-2/video.mp4"
+    },
+    {
+      "case": "idle-timing-eec-ref-3",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-eec-ref-3/proof.json",
+      "media": "../media/idle-timing-eec-ref-3/video.mp4"
+    },
+    {
+      "case": "idle-timing-eec-selector-1",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-eec-selector-1/proof.json",
+      "media": "../media/idle-timing-eec-selector-1/video.mp4"
+    },
+    {
+      "case": "idle-timing-eec-selector-2",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-eec-selector-2/proof.json",
+      "media": "../media/idle-timing-eec-selector-2/video.mp4"
+    },
+    {
+      "case": "idle-timing-eec-selector-3",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "nativeBuiltAt": "c2677fdd4ce37010d8d8b6664df3d4f98674ec85",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/idle-timing-eec-selector-3/proof.json",
+      "media": "../media/idle-timing-eec-selector-3/video.mp4"
+    },
+    {
+      "case": "trace-e66-idle-ref-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-idle-ref-1/proof.json",
+      "media": "../media/trace-e66-idle-ref-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-idle-selector-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-idle-selector-1/proof.json",
+      "media": "../media/trace-e66-idle-selector-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-motion-ref-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-motion-ref-1/proof.json",
+      "media": "../media/trace-e66-motion-ref-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-motion-selector-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-motion-selector-1/proof.json",
+      "media": "../media/trace-e66-motion-selector-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-ref-cancel-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-ref-cancel-1/proof.json",
+      "media": "../media/trace-e66-ref-cancel-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-ref-deadline-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-ref-deadline-1/proof.json",
+      "media": "../media/trace-e66-ref-deadline-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-ref-ready-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-ref-ready-1/proof.json",
+      "media": "../media/trace-e66-ref-ready-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-selector-cancel-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-selector-cancel-1/proof.json",
+      "media": "../media/trace-e66-selector-cancel-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-selector-deadline-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-selector-deadline-1/proof.json",
+      "media": "../media/trace-e66-selector-deadline-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-selector-ready-1",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "setup-failure",
+      "success": false,
+      "wrapperExitCode": 1,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-selector-ready-1/proof.json",
+      "media": "../media/trace-e66-selector-ready-1/video.mp4"
+    },
+    {
+      "case": "trace-e66-selector-ready-2",
+      "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+      "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+      "classification": "pass",
+      "success": true,
+      "wrapperExitCode": 0,
+      "daemonCleanupExitCode": 0,
+      "proof": "cases/trace-e66-selector-ready-2/proof.json",
+      "media": "../media/trace-e66-selector-ready-2/video.mp4"
+    }
+  ],
+  "scope": "Original cases including pilot and timing-setup failures. Root owns media/recording copy, decode and final publication. No claim of media audit in this selected-text set."
+}

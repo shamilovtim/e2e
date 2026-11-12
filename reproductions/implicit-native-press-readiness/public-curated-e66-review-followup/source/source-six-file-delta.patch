@@ -1,0 +1,245 @@
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/interactions.ts b/packages/command-runtime/src/commands/interaction/runtime/interactions.ts
+index 6c19cdc..9cb0304 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/interactions.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/interactions.ts
+@@ -159,7 +159,20 @@ async function tapCommand(
+   if (!runtime.backend.tap) {
+     throw new AppError('UNSUPPORTED_OPERATION', 'tap is not supported by this backend');
+   }
+-  const atRest = await admitResolvedTarget(runtime, options, resolutionRequest, resolved);
++  const atRest = await admitResolvedTarget(
++    runtime,
++    options,
++    resolutionRequest,
++    resolved,
++    (options.count ?? 1) === 1 &&
++      (options.intervalMs ?? 0) === 0 &&
++      (options.holdMs ?? 0) === 0 &&
++      (options.jitterPx ?? 0) === 0 &&
++      options.doubleTap !== true &&
++      (options.button ?? 'primary') === 'primary'
++      ? 'when-unknown'
++      : 'skip',
++  );
+   const point = requireResolvedPoint(atRest);
+   const pointObservation = pointObservationOf(atRest);
+   let backendResult;
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.test.ts b/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.test.ts
+index 2532dbe..c3c62a4 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.test.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.test.ts
+@@ -279,6 +279,7 @@ test('a ref the second observation cannot re-measure is refused, never self-agre
+       const details = (error as { details?: Record<string, unknown> }).details;
+       assert.equal(details?.reason, INTERACTION_ERROR_REASONS.targetStillMoving);
+       assert.equal(details?.dispatched, 'no');
++      assert.equal(details?.waitedMs, MOVING_TARGET_GATE_SAMPLE_GAP_MS);
+       // Nothing was measured, so nothing is reported: a caller reading `movedToRect` would take the
+       // stale frame position for a fresh observation of where the target went.
+       assert.equal(details?.movedToRect, undefined);
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission-readiness.test.ts b/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission-readiness.test.ts
+index 64d099e..c389b4d 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission-readiness.test.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission-readiness.test.ts
+@@ -80,7 +80,14 @@ async function exercise(input: {
+   resultDeadline?: boolean;
+   missingSource?: boolean;
+   movingChild?: boolean;
+-  options?: { count?: number; doubleTap?: boolean };
++  options?: {
++    count?: number;
++    doubleTap?: boolean;
++    intervalMs?: number;
++    holdMs?: number;
++    jitterPx?: number;
++    button?: 'primary' | 'secondary';
++  };
+ }) {
+   const events: string[] = [];
+   const points: Point[] = [];
+@@ -377,7 +384,11 @@ test('a child moving into the old parent point uses the fresh canonically guarde
+   expect(points[0]!.y).toBeLessThan(166);
+ });
+ 
+-for (const options of [{ count: 1 }, { doubleTap: false }]) {
++for (const options of [
++  { count: 1 },
++  { doubleTap: false },
++  { count: 1, doubleTap: false, intervalMs: 0, holdMs: 0, jitterPx: 0, button: 'primary' },
++] as const) {
+   test(`explicit ordinary tap defaults still await readiness: ${JSON.stringify(options)}`, async () => {
+     const { run, events, points } = await exercise({ states: ['blocked', 'ready'], options });
+     await run;
+@@ -386,6 +397,22 @@ for (const options of [{ count: 1 }, { doubleTap: false }]) {
+   });
+ }
+ 
++for (const options of [
++  { count: 2 },
++  { doubleTap: true },
++  { intervalMs: 1 },
++  { holdMs: 25 },
++  { jitterPx: 1 },
++  { button: 'secondary' },
++] as const) {
++  test(`non-default tap intent skips readiness: ${JSON.stringify(options)}`, async () => {
++    const { run, events, points } = await exercise({ states: ['blocked'], options });
++    await run;
++    expect(events).not.toContain('read');
++    expect(points).toHaveLength(1);
++  });
++}
++
+ for (const producer of ['simulator-ax-bridge', 'apple-runner'] as const) {
+   test(`${producer} capture stored and read through the session retains raw native row binding privately`, async () => {
+     const screen = { x: 0, y: 0, width: 400, height: 800 };
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts b/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts
+index 8bd133c..45d6115 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts
+@@ -12,7 +12,6 @@ import type {
+   InteractionTarget,
+   ResolvedInteractionTarget,
+ } from '@agent-device/contracts/interaction';
+-import type { BackendTapOptions } from '@agent-device/contracts/backend';
+ import type { NativePressReadiness } from '@agent-device/contracts/selector-observation-runtime';
+ import type { AgentDeviceRuntime, CommandContext } from '@agent-device/contracts/runtime-contract';
+ import {
+@@ -40,9 +39,10 @@ import { INTERACTION_ERROR_REASONS } from '@agent-device/selectors/interaction-e
+ 
+ export async function admitResolvedTarget(
+   runtime: AgentDeviceRuntime,
+-  options: CommandContext & BackendTapOptions & { target: InteractionTarget },
++  options: CommandContext & { target: InteractionTarget },
+   params: ResolveInteractionTargetParams,
+   resolved: ResolvedInteractionTarget,
++  nativeReadiness: 'when-unknown' | 'skip',
+ ): Promise<ResolvedInteractionTarget> {
+   if (resolved.kind === 'point' || !resolved.node?.rect) return resolved;
+   if (params.expectedResolvedTarget || params.preresolvedTarget) return resolved;
+@@ -50,14 +50,7 @@ export async function admitResolvedTarget(
+   const screening = await budget.read(() =>
+     screenMotion(runtime, options, resolved.node!, resolved.preAction),
+   );
+-  const native =
+-    !!runtime.backend.readPressReadiness &&
+-    (options.count ?? 1) === 1 &&
+-    (options.intervalMs ?? 0) === 0 &&
+-    (options.holdMs ?? 0) === 0 &&
+-    (options.jitterPx ?? 0) === 0 &&
+-    options.doubleTap !== true &&
+-    (options.button ?? 'primary') === 'primary';
++  const native = nativeReadiness === 'when-unknown' && !!runtime.backend.readPressReadiness;
+   if (screening.kind === 'pass' && !native) {
+     assertWithinBudget(budget);
+     return resolved;
+@@ -266,7 +259,8 @@ async function checkMotion(
+     state.motion = undefined;
+     return true;
+   }
+-  if (verdict.kind === 'refuse') throw motionRefusal(state.resolved, undefined, 0);
++  if (verdict.kind === 'refuse')
++    throw motionRefusal(state.resolved, undefined, look.observedAtMs - motion.wait.firstLookAtMs);
+   if (verdict.kind === 'wait') motion.restingSinceMs = verdict.restingSinceMs;
+   if (look.observedAtMs < motion.wait.giveUpAtMs)
+     motion.endsAtMs = Math.max(
+diff --git a/packages/daemon/src/core/__tests__/snapshot-capture.test.ts b/packages/daemon/src/core/__tests__/snapshot-capture.test.ts
+index 211094c..06d15dd 100644
+--- a/packages/daemon/src/core/__tests__/snapshot-capture.test.ts
++++ b/packages/daemon/src/core/__tests__/snapshot-capture.test.ts
+@@ -1,6 +1,12 @@
+ import { expect, test, vi } from 'vitest';
+ import { captureSnapshot, captureSnapshotData } from '../snapshot-capture.ts';
+-import { summarizeSnapshotDiagnostics } from '@agent-device/contracts/capture';
++import {
++  attachSnapshotClickabilityEvidence,
++  attachSnapshotOcclusionContextEvidence,
++  readSnapshotClickabilityEvidence,
++  readSnapshotOcclusionContextEvidence,
++  summarizeSnapshotDiagnostics,
++} from '@agent-device/contracts/capture';
+ import { buildSnapshotVisibility } from '@agent-device/capture-kit/snapshot-visibility';
+ import { ANDROID_EMULATOR, buildNodes, IOS_SIMULATOR, MACOS_DEVICE } from '@agent-device/test-kit';
+ import {
+@@ -68,6 +74,59 @@ test('snapshot capture preserves scope for every other platform projection', asy
+   ]);
+ });
+ 
++test('snapshot capture retains Android facts at their normalized node indices', async () => {
++  const data = {
++    backend: 'android' as const,
++    producer: 'android-uiautomator' as const,
++    nodes: [
++      { index: 10, depth: 0, type: 'Button', label: 'Save' },
++      { index: 20, depth: 0, type: 'Button', label: 'Cancel' },
++    ],
++  };
++  attachSnapshotClickabilityEvidence(data, {
++    kind: 'exact',
++    provider: 'android-helper',
++    clickableByNodeIndex: new Map([
++      [10, true],
++      [20, false],
++    ]),
++  });
++  attachSnapshotOcclusionContextEvidence(data, {
++    nodes: [{ index: 100 }, { index: 200 }],
++    sourceIndexByNodeIndex: new Map([
++      [10, 100],
++      [20, 200],
++    ]),
++  });
++
++  const { snapshot } = await captureSnapshot({
++    device: ANDROID_EMULATOR,
++    session: undefined,
++    flags: { snapshotRaw: true },
++    logPath: '/tmp/snapshot-capture-test.log',
++    captureData: async () => data,
++  });
++
++  expect(snapshot.nodes.map((node) => [node.index, node.label])).toEqual([
++    [0, 'Save'],
++    [1, 'Cancel'],
++  ]);
++  expect(readSnapshotClickabilityEvidence(snapshot)).toEqual({
++    kind: 'exact',
++    provider: 'android-helper',
++    clickableByNodeIndex: new Map([
++      [0, true],
++      [1, false],
++    ]),
++  });
++  expect(readSnapshotOcclusionContextEvidence(snapshot)?.sourceIndexByNodeIndex).toEqual(
++    new Map([
++      [0, 100],
++      [1, 200],
++    ]),
++  );
++});
++
+ test('buildSnapshotVisibility returns non-partial for empty node list', () => {
+   const vis = buildSnapshotVisibility({ nodes: [], backend: 'android' });
+   expect(vis.partial).toBe(false);
+diff --git a/packages/daemon/src/core/snapshot-capture.ts b/packages/daemon/src/core/snapshot-capture.ts
+index cb1f412..2cdf5e6 100644
+--- a/packages/daemon/src/core/snapshot-capture.ts
++++ b/packages/daemon/src/core/snapshot-capture.ts
+@@ -1,6 +1,5 @@
+ import type { CommandFlags } from '@agent-device/contracts/command';
+ import {
+-  copySnapshotClickabilityEvidence,
+   recordSnapshotTiming,
+   snapshotCaptureAnnotationsFrom,
+   type SnapshotCaptureAnnotations,
+@@ -139,10 +138,7 @@ async function captureSnapshotAttempt(params: CaptureSnapshotParams): Promise<Sn
+     platform: publicPlatformString(params.device),
+   });
+   const annotations = snapshotCaptureAnnotationsFrom(data);
+-  const snapshot = copySnapshotClickabilityEvidence(
+-    data,
+-    buildSnapshotState(data, resolveSnapshotStateFlags(params)),
+-  );
++  const snapshot = buildSnapshotState(data, resolveSnapshotStateFlags(params));
+   // The one seam where snapshot state and capture annotations meet: consumers that only keep the
+   // SnapshotState (selector-backed find/wait, session-stored snapshots) must still learn that the
+   // capture is an occluding system surface, so the disclosure is not lost with the annotations.

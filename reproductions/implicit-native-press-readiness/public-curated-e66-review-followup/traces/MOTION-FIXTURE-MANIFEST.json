@@ -1,0 +1,37 @@
+{
+  "app": "dev.e2e.motionreadiness",
+  "sourceBuild": "Fresh generic fixture build from archived relative build.py and UIKit source; binary/signedbundle recorded before live use. Target moves120ms to y420 while cover fades3000ms.",
+  "binarySha256": "cc04cd71639d9abd45a5b5becb443b6110726f1c6687a4c12ab5801af751e6b4",
+  "files": [
+    {
+      "path": "source/build.py",
+      "sha256": "d419e8fec7fb003fe95f3540ad8f2b512dba7e18b87496f1b91d0900b5dab625",
+      "bytes": 650
+    },
+    {
+      "path": "source/OverlayFixture.swift",
+      "sha256": "327d52391776bc0d475c44f1314d3545b815ca2b5213c43f33562736e4a871d7",
+      "bytes": 7309
+    },
+    {
+      "path": "source/Info.plist",
+      "sha256": "48539c9a69b26439e0616c9c25f67a3b21cdeb9822f658a4a2ba5aa042b5ae89",
+      "bytes": 906
+    },
+    {
+      "path": "build/OverlayFixture.app/OverlayFixture",
+      "sha256": "cc04cd71639d9abd45a5b5becb443b6110726f1c6687a4c12ab5801af751e6b4",
+      "bytes": 148688
+    },
+    {
+      "path": "build/OverlayFixture.app/Info.plist",
+      "sha256": "48539c9a69b26439e0616c9c25f67a3b21cdeb9822f658a4a2ba5aa042b5ae89",
+      "bytes": 906
+    },
+    {
+      "path": "build/OverlayFixture.app/_CodeSignature/CodeResources",
+      "sha256": "d6387f23932e36383626d103a9c76d34b06461dc17c38f2dcfa12b8fa968e4ef",
+      "bytes": 1798
+    }
+  ]
+}

@@ -1,0 +1,2050 @@
+{
+  "case": "trace-e66-selector-ready-2",
+  "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+  "originalPrivateResultSha256": "6523bf48d9c2c015ecb99ad1d9b4a7a5f01abf9e9f98fa4bc51ed170366cf3bc",
+  "originalPrivateSummarySha256": "af1c309470783441f42a155aa2611e19bfacfb2799a6de9d03e18236b4985ee8",
+  "executionInputs": {
+    "head": "e66ec2a063b5fde0ff74609322bee54535003478",
+    "kind": "lifecycle",
+    "mode": "selector-ready",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "sourceTree": "09262d288ca6714c4599661bf7070688eabbbc59",
+    "nativeFingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "nativeBinarySha256": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837",
+    "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+    "runtimeJSFiles": 631,
+    "wrapperSha256": "4c600606931c32912f86eda22bbd27046899f9f0cc9a365fc63c1dc81c34a14b",
+    "driverSha256": "5684deae2cd1bcc75f5a3fe9ced7df354dd93cc826c1b3a01ec7ddf2e31d46ee",
+    "observerSha256": "fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2",
+    "archivedBeforeRun": true,
+    "runtimeCompleteFileSetVerified": true,
+    "runtimeSymlinksFound": false,
+    "nativeArtifactsVerified": 11,
+    "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "nativeCacheManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "runtimeLaunchInputs": [
+      {
+        "path": "bin/agent-device.mjs",
+        "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+      },
+      {
+        "path": "package.json",
+        "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f"
+      },
+      {
+        "path": "scripts/build-entries.ts",
+        "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+      },
+      {
+        "path": "scripts/build-xcuitest-apple.sh",
+        "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+      }
+    ],
+    "resolvedCLIEntry": "dist/src/internal/bin.js",
+    "guestBridge": {
+      "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+      "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+      "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+      "sourceFiles": [
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridge.m",
+          "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+          "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+          "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+          "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+          "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+          "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+          "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+          "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+        },
+        {
+          "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+          "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+        },
+        {
+          "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+          "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+        }
+      ]
+    },
+    "nodeVersion": "v24.22.0",
+    "warmRefRuns": null,
+    "callerSignalBudgetMs": null,
+    "explicitNormalBudgetWarmup": false,
+    "sourceCommitPatchSha256": "5b6ec04ba60d6051c06e257f5f6ae78282a3ba47ce6e46ab6d43e49478aa74c4",
+    "sourceTreeManifestSha256": "9451151b40e802143d3d3af7e122b2079ac6508f52e8f40f7ef92a604245fe6b",
+    "observedFixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2"
+  },
+  "wrapperSummary": {
+    "phase": "trace-e66-selector-ready-2",
+    "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "success": true,
+    "warmRefsMs": [],
+    "medianMs": null,
+    "cliMs": null,
+    "targetTaps": 1,
+    "siblingTaps": 0,
+    "inputEvents": {
+      "underlyingReceivedTap": 1
+    },
+    "frameComparison": null,
+    "recording": {
+      "code": 0,
+      "signal": null,
+      "escalated": false
+    },
+    "error": null
+  },
+  "observations": {
+    "phase": "trace-e66-selector-ready-2",
+    "mode": "selector-ready",
+    "route": "selector",
+    "scenario": "ready",
+    "source": "e66ec2a063b5fde0ff74609322bee54535003478",
+    "nativeBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+    "publicTimeoutOverride": false,
+    "externalCallerSignal": false,
+    "declaredDefaultClientEnvelopeMs": 90000,
+    "declaredOrdinaryDaemonResultPolicyMs": 60000,
+    "target": {
+      "index": 5,
+      "parentIndex": 0,
+      "type": "Button",
+      "role": "UIButton",
+      "label": "Underlying action",
+      "identifier": "Underlying action",
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "enabled": true,
+      "depth": 1,
+      "hittable": true,
+      "ref": "e6",
+      "kind": "button"
+    },
+    "completedReadiness": 30,
+    "targetPhaseTapAccepted": 1,
+    "requestPhaseEvents": [
+      {
+        "event": "appReady",
+        "ms": 0.005999929271638393
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeOverlayOpened",
+        "ms": 4137.644666596316
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeDismissBegin",
+        "ms": 5167.499208357185
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 8169.246916659176
+      },
+      {
+        "count": 1,
+        "event": "underlyingReceivedTap",
+        "ms": 8384.122708346695
+      }
+    ],
+    "admissionTrace": [
+      {
+        "sequence": 16,
+        "phase": "target",
+        "hostMs": 7469.416458,
+        "event": "phase",
+        "name": "target"
+      },
+      {
+        "sequence": 17,
+        "phase": "target",
+        "hostMs": 7479.985875,
+        "event": "capture-start"
+      },
+      {
+        "sequence": 18,
+        "phase": "target",
+        "hostMs": 7513.274791,
+        "event": "capture-complete"
+      },
+      {
+        "sequence": 19,
+        "phase": "target",
+        "hostMs": 7513.876333,
+        "event": "motion-baseline",
+        "present": true
+      },
+      {
+        "sequence": 20,
+        "phase": "target",
+        "hostMs": 7513.973541,
+        "event": "motion-decision",
+        "kind": "stationary"
+      },
+      {
+        "sequence": 21,
+        "phase": "target",
+        "hostMs": 7514.047208,
+        "event": "admission-screen",
+        "screening": "pass",
+        "targetKind": "selector"
+      },
+      {
+        "sequence": 22,
+        "phase": "target",
+        "hostMs": 7559.693375,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 23,
+        "phase": "target",
+        "hostMs": 7655.17875,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 24,
+        "phase": "target",
+        "hostMs": 7750.295375,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 25,
+        "phase": "target",
+        "hostMs": 7845.711666,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 26,
+        "phase": "target",
+        "hostMs": 7939.833208,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 27,
+        "phase": "target",
+        "hostMs": 8035.994291,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 28,
+        "phase": "target",
+        "hostMs": 8131.311291,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 29,
+        "phase": "target",
+        "hostMs": 8228.626708,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 30,
+        "phase": "target",
+        "hostMs": 8322.554833,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 31,
+        "phase": "target",
+        "hostMs": 8416.926625,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 32,
+        "phase": "target",
+        "hostMs": 8512.955458,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 33,
+        "phase": "target",
+        "hostMs": 8608.751625,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 34,
+        "phase": "target",
+        "hostMs": 8703.98025,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 35,
+        "phase": "target",
+        "hostMs": 8799.672583,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 36,
+        "phase": "target",
+        "hostMs": 8893.247416,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 37,
+        "phase": "target",
+        "hostMs": 8989.511541,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 38,
+        "phase": "target",
+        "hostMs": 9083.574,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 39,
+        "phase": "target",
+        "hostMs": 9181.328041,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 40,
+        "phase": "target",
+        "hostMs": 9277.336416,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 41,
+        "phase": "target",
+        "hostMs": 9372.730291,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 42,
+        "phase": "target",
+        "hostMs": 9467.5225,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 43,
+        "phase": "target",
+        "hostMs": 9560.201166,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 44,
+        "phase": "target",
+        "hostMs": 9654.43825,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 45,
+        "phase": "target",
+        "hostMs": 9751.240708,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 46,
+        "phase": "target",
+        "hostMs": 9844.98225,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 47,
+        "phase": "target",
+        "hostMs": 9942.009958,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 48,
+        "phase": "target",
+        "hostMs": 10037.953083,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 49,
+        "phase": "target",
+        "hostMs": 10134.684541,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 50,
+        "phase": "target",
+        "hostMs": 10220.226916,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "ready"
+      },
+      {
+        "sequence": 51,
+        "phase": "target",
+        "hostMs": 10222.651375,
+        "event": "canonical-refresh-start",
+        "generation": 0
+      },
+      {
+        "sequence": 52,
+        "phase": "target",
+        "hostMs": 10222.764625,
+        "event": "capture-start"
+      },
+      {
+        "sequence": 53,
+        "phase": "target",
+        "hostMs": 10246.909958,
+        "event": "capture-complete"
+      },
+      {
+        "sequence": 54,
+        "phase": "target",
+        "hostMs": 10247.076875,
+        "event": "motion-baseline",
+        "present": true
+      },
+      {
+        "sequence": 55,
+        "phase": "target",
+        "hostMs": 10247.151166,
+        "event": "motion-decision",
+        "kind": "not-recent"
+      },
+      {
+        "sequence": 56,
+        "phase": "target",
+        "hostMs": 10247.206125,
+        "event": "canonical-refresh-complete",
+        "generation": 1
+      },
+      {
+        "sequence": 57,
+        "phase": "target",
+        "hostMs": 10280.94125,
+        "event": "native-readiness",
+        "generation": 1,
+        "liveGeneration": 1,
+        "state": "ready"
+      },
+      {
+        "sequence": 58,
+        "phase": "target",
+        "hostMs": 10281.015791,
+        "event": "tap-dispatch",
+        "targetKind": "selector"
+      }
+    ],
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 1192.7434169999997
+    },
+    "events": [
+      {
+        "event": "appReady",
+        "ms": 0.005999929271638393
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeOverlayOpened",
+        "ms": 4137.644666596316
+      },
+      {
+        "durationMs": 3000,
+        "event": "fadeDismissBegin",
+        "ms": 5167.499208357185
+      },
+      {
+        "event": "fadeDismissComplete",
+        "ms": 8169.246916659176
+      },
+      {
+        "count": 1,
+        "event": "underlyingReceivedTap",
+        "ms": 8384.122708346695
+      }
+    ],
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "targetTapEvents": 1,
+    "otherTapEvents": 0,
+    "resultLabel": "Underlying taps: 1\nOverlay touches: 0",
+    "success": true,
+    "recording": {
+      "code": 0,
+      "signal": null,
+      "escalated": false
+    },
+    "sessionClosed": true,
+    "samples": [
+      {
+        "kind": "selector",
+        "ms": 3135.8669579999996,
+        "press": {
+          "x": 194,
+          "y": 384,
+          "runnerMainThreadBusy": false,
+          "message": "Tapped id=\"Underlying action\" (194, 384)",
+          "referenceWidth": 402,
+          "referenceHeight": 874,
+          "targetKind": "selector",
+          "selector": "id=\"Underlying action\"",
+          "selectorChain": [
+            "id=\"Underlying action\"",
+            "role=\"button\" label=\"Underlying action\"",
+            "label=\"Underlying action\""
+          ],
+          "refLabel": "Underlying action",
+          "resolution": {
+            "source": "runtime",
+            "phase": "pre-action",
+            "kind": "unique"
+          }
+        },
+        "nativeCommands": [
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState"
+          },
+          {
+            "phase": "completed",
+            "command": "appState"
+          },
+          {
+            "phase": "accepted",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "completed",
+            "command": "pressReadiness"
+          },
+          {
+            "phase": "accepted",
+            "command": "tap"
+          },
+          {
+            "phase": "completed",
+            "command": "tap"
+          }
+        ]
+      }
+    ],
+    "request": {
+      "method": "client.interactions.press",
+      "timeoutOverride": false,
+      "callerReason": "none",
+      "startedAt": "2026-11-12T19:36:45.080Z",
+      "elapsedMs": 3135.8669579999996,
+      "finishedAt": "2026-11-12T19:36:48.216Z",
+      "output": {
+        "ok": true,
+        "result": {
+          "x": 194,
+          "y": 384,
+          "runnerMainThreadBusy": false,
+          "message": "Tapped id=\"Underlying action\" (194, 384)",
+          "referenceWidth": 402,
+          "referenceHeight": 874,
+          "targetKind": "selector",
+          "selector": "id=\"Underlying action\"",
+          "selectorChain": [
+            "id=\"Underlying action\"",
+            "role=\"button\" label=\"Underlying action\"",
+            "label=\"Underlying action\""
+          ],
+          "refLabel": "Underlying action",
+          "resolution": {
+            "source": "runtime",
+            "phase": "pre-action",
+            "kind": "unique"
+          }
+        }
+      }
+    },
+    "targetPhaseCommands": [
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "completed",
+        "command": "appState"
+      },
+      {
+        "phase": "completed",
+        "command": "appState"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "accepted",
+        "command": "appState"
+      },
+      {
+        "phase": "completed",
+        "command": "appState"
+      },
+      {
+        "phase": "completed",
+        "command": "appState"
+      },
+      {
+        "phase": "accepted",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "completed",
+        "command": "pressReadiness"
+      },
+      {
+        "phase": "accepted",
+        "command": "tap"
+      },
+      {
+        "phase": "completed",
+        "command": "tap"
+      }
+    ]
+  },
+  "executedSources": {
+    "executed-driver.py": {
+      "path": "sources/5684deae2cd1bcc75f5a3fe9ced7df354dd93cc826c1b3a01ec7ddf2e31d46ee.py",
+      "originalExecutedSha256": "5684deae2cd1bcc75f5a3fe9ced7df354dd93cc826c1b3a01ec7ddf2e31d46ee",
+      "publicSha256": "5684deae2cd1bcc75f5a3fe9ced7df354dd93cc826c1b3a01ec7ddf2e31d46ee",
+      "bytes": 12898,
+      "scope": "Byte-equal actual executed source."
+    },
+    "executed-inspector.mjs": {
+      "path": "sources/fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2.mjs",
+      "originalExecutedSha256": "fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2",
+      "publicSha256": "fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2",
+      "bytes": 12301,
+      "scope": "Byte-equal actual executed source."
+    },
+    "executed-wrapper.mjs": {
+      "path": "sources/4c600606931c32912f86eda22bbd27046899f9f0cc9a365fc63c1dc81c34a14b.mjs",
+      "originalExecutedSha256": "4c600606931c32912f86eda22bbd27046899f9f0cc9a365fc63c1dc81c34a14b",
+      "publicSha256": "4c600606931c32912f86eda22bbd27046899f9f0cc9a365fc63c1dc81c34a14b",
+      "bytes": 12957,
+      "scope": "Byte-equal actual executed source."
+    }
+  },
+  "completeRuntimeManifest": {
+    "path": "objects/bdd7fefa6125bb0e5b7afa34b81b64f0159fd08ae5b7499d46f31b9f4ad44522.json",
+    "sha256": "bdd7fefa6125bb0e5b7afa34b81b64f0159fd08ae5b7499d46f31b9f4ad44522",
+    "bytes": 102672
+  },
+  "sourceTreeManifest": {
+    "path": "objects/9451151b40e802143d3d3af7e122b2079ac6508f52e8f40f7ef92a604245fe6b.txt",
+    "sha256": "9451151b40e802143d3d3af7e122b2079ac6508f52e8f40f7ef92a604245fe6b",
+    "bytes": 659070
+  },
+  "inspectorTrace": {
+    "scriptSha256": "ad3bdb71969c8837653edd0a232f319c7076f0e971ae6caa851aa72f217230e5",
+    "sourceBytes": 83858,
+    "mechanism": "V8 conditional breakpoints: console-only primitive observation, always return false. Built source bytes are unchanged. Timings from this instrumented run are not performance measurements.",
+    "startupPauses": 1,
+    "unexpectedPauses": 0,
+    "loadedSourceVerified": true,
+    "conditionsAlwaysFalse": true,
+    "allRequestedPointsBound": true,
+    "sourceFileStillMatches": true,
+    "cleanup": {
+      "commandExit": 0,
+      "daemonExit": 0,
+      "daemonSignal": null,
+      "escalated": false
+    },
+    "runtimeModule": "dist/src/runtime-factory.js",
+    "originalPrivateTraceSha256": "0c6af5803f9700e11e00edb39d2d4f954d00404fb2a8b3fa5cfd626a8f8d5820",
+    "points": [
+      {
+        "event": "admission-screen",
+        "lineNumber": 0,
+        "columnNumber": 32184,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"admission-screen\",screening:o.kind,targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"admission-screen\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          32184,
+          32308
+        ],
+        "functionSpan": [
+          31950,
+          32309
+        ],
+        "requestedSnippet": "return o.kind===`pass`&&!s?(G(a),r):$r(e,t,n,{resolved:r,generation:0,native:s,...o.kind===`wait`?{motion:Qr(o.wait)}:{}},a)",
+        "pointAlias": "point-1"
+      },
+      {
+        "event": "motion-baseline",
+        "lineNumber": 0,
+        "columnNumber": 29276,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-baseline\",present:!!i}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-baseline\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          29276,
+          29302
+        ],
+        "functionSpan": [
+          29176,
+          29654
+        ],
+        "requestedSnippet": "if(!i)return{kind:`pass`};",
+        "pointAlias": "point-2"
+      },
+      {
+        "event": "motion-decision",
+        "lineNumber": 0,
+        "columnNumber": 29468,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-decision\",kind:s.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-decision\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          29468,
+          29510
+        ],
+        "functionSpan": [
+          29176,
+          29654
+        ],
+        "requestedSnippet": "if(s.kind!==`recheck`)return{kind:`pass`};",
+        "pointAlias": "point-3"
+      },
+      {
+        "event": "native-readiness",
+        "lineNumber": 0,
+        "columnNumber": 35292,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"native-readiness\",generation:n.generation,liveGeneration:n.live.generation,state:n.live.state}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"native-readiness\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          35292,
+          35322
+        ],
+        "functionSpan": [
+          34911,
+          35437
+        ],
+        "requestedSnippet": "if(i.state===`ready`)return!0;",
+        "pointAlias": "point-4"
+      },
+      {
+        "event": "motion-look",
+        "lineNumber": 0,
+        "columnNumber": 34434,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-look\",generation:r.generation,verdict:s.kind,looksBeforeVerdict:r.motion.looks}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-look\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          34434,
+          34551
+        ],
+        "functionSpan": [
+          34107,
+          34911
+        ],
+        "requestedSnippet": "if(a.looks++,a.previous=o,s.kind===`pass`&&s.admitted.kind!==`point`)return r.resolved=s.admitted,r.motion=void 0,!0;",
+        "pointAlias": "point-5"
+      },
+      {
+        "event": "canonical-refresh-start",
+        "lineNumber": 0,
+        "columnNumber": 35466,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-start\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-start\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          35466,
+          35480
+        ],
+        "functionSpan": [
+          35437,
+          35793
+        ],
+        "requestedSnippet": "r.live=void 0;",
+        "pointAlias": "point-6"
+      },
+      {
+        "event": "canonical-refresh-complete",
+        "lineNumber": 0,
+        "columnNumber": 35754,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-complete\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-complete\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          35754,
+          35792
+        ],
+        "functionSpan": [
+          35437,
+          35793
+        ],
+        "requestedSnippet": "s.kind===`wait`&&(r.motion=Qr(s.wait))",
+        "pointAlias": "point-7"
+      },
+      {
+        "event": "capture-start",
+        "lineNumber": 0,
+        "columnNumber": 2918,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-start\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-start\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          2918,
+          3029
+        ],
+        "functionSpan": [
+          2894,
+          3311
+        ],
+        "requestedSnippet": "if(!e.backend.captureSnapshot)throw new o(`UNSUPPORTED_OPERATION`,`snapshot is not supported by this backend`);",
+        "pointAlias": "point-8"
+      },
+      {
+        "event": "capture-complete",
+        "lineNumber": 0,
+        "columnNumber": 3251,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-complete\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-complete\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          3251,
+          3310
+        ],
+        "functionSpan": [
+          2894,
+          3311
+        ],
+        "requestedSnippet": "return await e.sessions.set({...i,snapshot:a}),{snapshot:a}",
+        "pointAlias": "point-9"
+      },
+      {
+        "event": "tap-dispatch",
+        "lineNumber": 0,
+        "columnNumber": 42418,
+        "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"tap-dispatch\",targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"tap-dispatch\",name:e.name}))}return false})()",
+        "sourceSpan": [
+          42418,
+          42592
+        ],
+        "functionSpan": [
+          41808,
+          42686
+        ],
+        "requestedSnippet": "d=await e.backend.tap(P(e,t),l,{button:t.button,count:t.count,intervalMs:t.intervalMs,holdMs:t.holdMs,jitterPx:t.jitterPx,doubleTap:t.doubleTap,...u?{pointObser",
+        "pointAlias": "point-10"
+      }
+    ],
+    "bindings": [
+      {
+        "pointAlias": "point-8",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 2924
+        }
+      },
+      {
+        "pointAlias": "point-2",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 29276
+        }
+      },
+      {
+        "pointAlias": "point-3",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 29473
+        }
+      },
+      {
+        "pointAlias": "point-1",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 32193
+        }
+      },
+      {
+        "pointAlias": "point-9",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 3266
+        }
+      },
+      {
+        "pointAlias": "point-5",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 34434
+        }
+      },
+      {
+        "pointAlias": "point-4",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 35297
+        }
+      },
+      {
+        "pointAlias": "point-6",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 35466
+        }
+      },
+      {
+        "pointAlias": "point-7",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 35756
+        }
+      },
+      {
+        "pointAlias": "point-10",
+        "location": {
+          "lineNumber": 0,
+          "columnNumber": 42428
+        }
+      }
+    ],
+    "events": [
+      {
+        "sequence": 1,
+        "phase": "setup",
+        "hostMs": 2162.574833,
+        "event": "motion-baseline",
+        "present": false
+      },
+      {
+        "sequence": 2,
+        "phase": "setup",
+        "hostMs": 2163.584291,
+        "event": "admission-screen",
+        "screening": "pass",
+        "targetKind": "ref"
+      },
+      {
+        "sequence": 3,
+        "phase": "setup",
+        "hostMs": 5848.414791,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "ready"
+      },
+      {
+        "sequence": 4,
+        "phase": "setup",
+        "hostMs": 5850.840375,
+        "event": "tap-dispatch",
+        "targetKind": "ref"
+      },
+      {
+        "sequence": 5,
+        "phase": "setup",
+        "hostMs": 6561.081208,
+        "event": "motion-baseline",
+        "present": true
+      },
+      {
+        "sequence": 6,
+        "phase": "setup",
+        "hostMs": 6561.199458,
+        "event": "motion-decision",
+        "kind": "recheck"
+      },
+      {
+        "sequence": 7,
+        "phase": "setup",
+        "hostMs": 6561.266291,
+        "event": "admission-screen",
+        "screening": "wait",
+        "targetKind": "ref"
+      },
+      {
+        "sequence": 8,
+        "phase": "setup",
+        "hostMs": 6871.242083,
+        "event": "capture-start"
+      },
+      {
+        "sequence": 9,
+        "phase": "setup",
+        "hostMs": 6920.727,
+        "event": "capture-complete"
+      },
+      {
+        "sequence": 10,
+        "phase": "setup",
+        "hostMs": 6923.025,
+        "event": "motion-look",
+        "generation": 1,
+        "verdict": "wait",
+        "looksBeforeVerdict": 0
+      },
+      {
+        "sequence": 11,
+        "phase": "setup",
+        "hostMs": 6974.427375,
+        "event": "capture-start"
+      },
+      {
+        "sequence": 12,
+        "phase": "setup",
+        "hostMs": 7017.732458,
+        "event": "capture-complete"
+      },
+      {
+        "sequence": 13,
+        "phase": "setup",
+        "hostMs": 7018.119958,
+        "event": "motion-look",
+        "generation": 2,
+        "verdict": "pass",
+        "looksBeforeVerdict": 1
+      },
+      {
+        "sequence": 14,
+        "phase": "setup",
+        "hostMs": 7065.429958,
+        "event": "native-readiness",
+        "generation": 2,
+        "liveGeneration": 2,
+        "state": "ready"
+      },
+      {
+        "sequence": 15,
+        "phase": "setup",
+        "hostMs": 7065.540291,
+        "event": "tap-dispatch",
+        "targetKind": "ref"
+      },
+      {
+        "sequence": 16,
+        "phase": "target",
+        "hostMs": 7469.416458,
+        "event": "phase",
+        "name": "target"
+      },
+      {
+        "sequence": 17,
+        "phase": "target",
+        "hostMs": 7479.985875,
+        "event": "capture-start"
+      },
+      {
+        "sequence": 18,
+        "phase": "target",
+        "hostMs": 7513.274791,
+        "event": "capture-complete"
+      },
+      {
+        "sequence": 19,
+        "phase": "target",
+        "hostMs": 7513.876333,
+        "event": "motion-baseline",
+        "present": true
+      },
+      {
+        "sequence": 20,
+        "phase": "target",
+        "hostMs": 7513.973541,
+        "event": "motion-decision",
+        "kind": "stationary"
+      },
+      {
+        "sequence": 21,
+        "phase": "target",
+        "hostMs": 7514.047208,
+        "event": "admission-screen",
+        "screening": "pass",
+        "targetKind": "selector"
+      },
+      {
+        "sequence": 22,
+        "phase": "target",
+        "hostMs": 7559.693375,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 23,
+        "phase": "target",
+        "hostMs": 7655.17875,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 24,
+        "phase": "target",
+        "hostMs": 7750.295375,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 25,
+        "phase": "target",
+        "hostMs": 7845.711666,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 26,
+        "phase": "target",
+        "hostMs": 7939.833208,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 27,
+        "phase": "target",
+        "hostMs": 8035.994291,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 28,
+        "phase": "target",
+        "hostMs": 8131.311291,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 29,
+        "phase": "target",
+        "hostMs": 8228.626708,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 30,
+        "phase": "target",
+        "hostMs": 8322.554833,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 31,
+        "phase": "target",
+        "hostMs": 8416.926625,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 32,
+        "phase": "target",
+        "hostMs": 8512.955458,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 33,
+        "phase": "target",
+        "hostMs": 8608.751625,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 34,
+        "phase": "target",
+        "hostMs": 8703.98025,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 35,
+        "phase": "target",
+        "hostMs": 8799.672583,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 36,
+        "phase": "target",
+        "hostMs": 8893.247416,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 37,
+        "phase": "target",
+        "hostMs": 8989.511541,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 38,
+        "phase": "target",
+        "hostMs": 9083.574,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 39,
+        "phase": "target",
+        "hostMs": 9181.328041,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 40,
+        "phase": "target",
+        "hostMs": 9277.336416,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 41,
+        "phase": "target",
+        "hostMs": 9372.730291,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 42,
+        "phase": "target",
+        "hostMs": 9467.5225,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 43,
+        "phase": "target",
+        "hostMs": 9560.201166,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 44,
+        "phase": "target",
+        "hostMs": 9654.43825,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 45,
+        "phase": "target",
+        "hostMs": 9751.240708,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 46,
+        "phase": "target",
+        "hostMs": 9844.98225,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 47,
+        "phase": "target",
+        "hostMs": 9942.009958,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 48,
+        "phase": "target",
+        "hostMs": 10037.953083,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 49,
+        "phase": "target",
+        "hostMs": 10134.684541,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "blocked"
+      },
+      {
+        "sequence": 50,
+        "phase": "target",
+        "hostMs": 10220.226916,
+        "event": "native-readiness",
+        "generation": 0,
+        "liveGeneration": 0,
+        "state": "ready"
+      },
+      {
+        "sequence": 51,
+        "phase": "target",
+        "hostMs": 10222.651375,
+        "event": "canonical-refresh-start",
+        "generation": 0
+      },
+      {
+        "sequence": 52,
+        "phase": "target",
+        "hostMs": 10222.764625,
+        "event": "capture-start"
+      },
+      {
+        "sequence": 53,
+        "phase": "target",
+        "hostMs": 10246.909958,
+        "event": "capture-complete"
+      },
+      {
+        "sequence": 54,
+        "phase": "target",
+        "hostMs": 10247.076875,
+        "event": "motion-baseline",
+        "present": true
+      },
+      {
+        "sequence": 55,
+        "phase": "target",
+        "hostMs": 10247.151166,
+        "event": "motion-decision",
+        "kind": "not-recent"
+      },
+      {
+        "sequence": 56,
+        "phase": "target",
+        "hostMs": 10247.206125,
+        "event": "canonical-refresh-complete",
+        "generation": 1
+      },
+      {
+        "sequence": 57,
+        "phase": "target",
+        "hostMs": 10280.94125,
+        "event": "native-readiness",
+        "generation": 1,
+        "liveGeneration": 1,
+        "state": "ready"
+      },
+      {
+        "sequence": 58,
+        "phase": "target",
+        "hostMs": 10281.015791,
+        "event": "tap-dispatch",
+        "targetKind": "selector"
+      },
+      {
+        "sequence": 59,
+        "phase": "after-target",
+        "hostMs": 10603.550916,
+        "event": "phase",
+        "name": "after-target"
+      }
+    ],
+    "sourceVerificationError": null,
+    "locationScope": "Inspector zero-based line/column and original observer source/function spans. Actual file URLs, script IDs and raw breakpoint IDs omitted; stable aliases join requested points to resolved bindings.",
+    "instrumentationScope": "Non-pausing always-false conditional inspector logpoints on actual loaded runtime; expected startup pause is disclosed. Trace overhead means these durations are not performance measurements."
+  },
+  "nativeBuild": {
+    "actualBuiltAt": "d9f43ffe4658f0f25649714b9a82bb7c9128a47a",
+    "fingerprint": "e37181d13fe0cb5a4d83377b907c20252e65f7b5143659b361fb3744b79669fd",
+    "officialPrivateManifestSha256": "ecdf494a06bc0e2b5fe2cfac2a1e9d00fe2c8133a0788943f56d8c0ca314d5dd",
+    "xctestrunSha256": "785971d69e9077b4c597433b0b6bb89cadd2643bd704c5184f2230070199ee2e",
+    "files": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "5cf0e5a7da99ebd16bee3ffbf94eefc18c46c52727a471907eec91b450bb5545"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 124304,
+        "mode": 493,
+        "digest": "787bb2109f37b18d378623ec5f4fe6073bc74b53348f134c8fcf26a824c04bc4"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1403,
+        "mode": 420,
+        "digest": "9598ba8cdb193f133a0162eb33ecb5c0a538217ff59a5ff9280ae9bd4a4fe1c9"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "acd8d5b4632a8101e9aa6e57c76f992832c97afac5734379d13d512f58c1c603"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 144400,
+        "mode": 493,
+        "digest": "7560f200b8c9194095ce4abcf3501b1d3bf87515066c4e9c074d5823e3854f1e"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10944,
+        "mode": 420,
+        "digest": "7997679c01e8ec1718c5744fddc03e42f87b47f2887e3748952f73fb4b128129"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "3ae45001d8f6f3be78093f66b4f436c71ffb0ec0af77b603dc5a2ac1fea5975d"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 10949344,
+        "mode": 493,
+        "digest": "58bb1c9557aabdf1f6fef6dba90e9fcc7553bcc3e1bbe46e68a07c9d21018837"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 798,
+        "mode": 420,
+        "digest": "bcc87d2022723828a9d0fd7bb726884650a5b06f19c02331e4f5edb9fa93bb76"
+      }
+    ]
+  },
+  "classification": "pass",
+  "qualification": "Actual source and per-case pins retained; selected outputs only. Client cancellation uncertainty is not upgraded to no-send. Timed first presses have no inspector and are separate from traced proof."
+}
