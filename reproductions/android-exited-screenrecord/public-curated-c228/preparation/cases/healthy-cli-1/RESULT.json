@@ -1,0 +1,47 @@
+{
+  "source": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+  "success": true,
+  "commands": [
+    {
+      "command": "open",
+      "exitCode": 0
+    },
+    {
+      "command": "snapshot",
+      "exitCode": 0
+    },
+    {
+      "command": "record-start",
+      "exitCode": 0
+    },
+    {
+      "command": "record-stop",
+      "exitCode": 0
+    },
+    {
+      "command": "close",
+      "exitCode": 0
+    },
+    {
+      "command": "daemon-stop",
+      "exitCode": 0
+    }
+  ],
+  "boundary": "built public CLI with local ADB on a new task-owned emulator",
+  "androidSnapshot": {
+    "backend": "android-helper",
+    "helperVersion": "0.21.37-dev"
+  },
+  "videoBytes": 212234,
+  "videoSha256": "193e545da480e720f13e5d80981d0c9cec388a5473c917db90a8248cfad6b5bd",
+  "typedStopOutcome": {
+    "recording": "stopped",
+    "recordingBackend": "adb screenrecord",
+    "recorder": "confirmed",
+    "nativePathDisposition": "retired",
+    "durationMs": 4531,
+    "capturedDurationMs": 1302,
+    "showTouches": false
+  },
+  "footageTimeline": "Original video returned by the built public CLI record stop; no frame editing or re-encoding has been performed."
+}

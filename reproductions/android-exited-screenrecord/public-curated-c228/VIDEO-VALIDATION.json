@@ -1,0 +1,115 @@
+{
+  "recordings": 3,
+  "decodedSamples": 15,
+  "decodeErrors": 0,
+  "originalBytesUnchanged": true,
+  "qualification": "Two original Android fixture artifacts each contain one H264 sample with zero timeline duration. AVAssetReader completes with zero frames; original generic decoder failed before frame validation. VideoToolbox directly decoded the sole original compressed sample in each (no original MP4 editing/retiming/re-encoding). These are static artifacts, not playable temporal proof. Separate healthy public CLI clip decoded all13 samples normally. Host observations occur after fixture captures; typed real-ADB outputs are their oracle.",
+  "cases": [
+    {
+      "decodedVideoSamples": 1,
+      "decodeErrors": 0,
+      "decoder": "VideoToolbox direct compressed H264 sample decode",
+      "frame": [
+        1080,
+        2400
+      ],
+      "qualification": "Original MP4 has one sample with zero duration. This decodes that original compressed sample without editing or re-encoding the MP4; it does not establish playable temporal footage.",
+      "timelinePlayback": false,
+      "containerVideoSampleCount": 1,
+      "sampleDurationTicks": 0,
+      "compressedSampleSha256": "d02be595ecd7322d052e5d31c9e86721fe8c55bbe4fe1a98821282e92621fd8f",
+      "originalMp4Sha256": "880e1ccb38f52a9dcc251aefccd00c2010a277d2ab1d2f326bbf010bd7a0ede6",
+      "originalMp4Unchanged": true,
+      "avAssetReader": "Completed with zero frames because timeline duration is zero; original failed audit retained separately.",
+      "case": "native-zombie-pair-1",
+      "video": "cases/native-zombie-pair-1/video.mp4",
+      "videoBytes": 63018,
+      "videoSha256": "880e1ccb38f52a9dcc251aefccd00c2010a277d2ab1d2f326bbf010bd7a0ede6",
+      "firstPngSha256": "5fec7f9e2d9ec5e7ca93e20f2b009e870e962f08ffd5d32a092eed0ed0cc3508",
+      "lastPngSha256": "5fec7f9e2d9ec5e7ca93e20f2b009e870e962f08ffd5d32a092eed0ed0cc3508",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 2,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 0,
+        "durationSeconds": 0,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    },
+    {
+      "decodedVideoSamples": 1,
+      "decodeErrors": 0,
+      "decoder": "VideoToolbox direct compressed H264 sample decode",
+      "frame": [
+        1080,
+        2400
+      ],
+      "qualification": "Original MP4 has one sample with zero duration. This decodes that original compressed sample without editing or re-encoding the MP4; it does not establish playable temporal footage.",
+      "timelinePlayback": false,
+      "containerVideoSampleCount": 1,
+      "sampleDurationTicks": 0,
+      "compressedSampleSha256": "15e038cb5a294712579488f1c5329670334e5fab88b33c471423cff74ddbaa05",
+      "originalMp4Sha256": "f03df193fa64897581df89a58422ffdcd7dbe1a564ad3d94ad071b53c851a36a",
+      "originalMp4Unchanged": true,
+      "avAssetReader": "Completed with zero frames because timeline duration is zero; original failed audit retained separately.",
+      "case": "native-zombie-pair-2",
+      "video": "cases/native-zombie-pair-2/video.mp4",
+      "videoBytes": 62988,
+      "videoSha256": "f03df193fa64897581df89a58422ffdcd7dbe1a564ad3d94ad071b53c851a36a",
+      "firstPngSha256": "4da9b19620bd0c7d1da85d475bef47504d1f75c802c40b6b9767425e57c971b1",
+      "lastPngSha256": "4da9b19620bd0c7d1da85d475bef47504d1f75c802c40b6b9767425e57c971b1",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 2,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 0,
+        "durationSeconds": 0,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    },
+    {
+      "decodedVideoSamples": 13,
+      "decodeErrors": 0,
+      "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+      "firstFrame": [
+        1080,
+        2400
+      ],
+      "firstSampleSeconds": 0,
+      "fullStreamDecoded": true,
+      "lastFrame": [
+        1080,
+        2400
+      ],
+      "lastSampleSeconds": 1.2407333333333332,
+      "case": "healthy-cli-1",
+      "video": "cases/healthy-cli-1/video.mp4",
+      "videoBytes": 212234,
+      "videoSha256": "193e545da480e720f13e5d80981d0c9cec388a5473c917db90a8248cfad6b5bd",
+      "firstPngSha256": "0c870dcf42ae546e7a668117f5cc6ad5655e4537a42eb7422b1006138071755a",
+      "lastPngSha256": "38d8a424261fe63019466f671dfed97ce7927185fc36f242cbcf9bc32ee76941",
+      "originalBytesUnchanged": true,
+      "duplicateCaptureCopiesVerified": 0,
+      "avAssetReaderDiagnostic": {
+        "audioTracks": 0,
+        "completed": true,
+        "count": 13,
+        "durationSeconds": 1.3019555555555555,
+        "error": "none",
+        "started": true,
+        "status": 2
+      }
+    }
+  ],
+  "visualReview": {
+    "reviewed": "All six first/last endpoints; static pairs have byte-identical first/last PNGs, four distinct images inspected",
+    "finding": "Default fresh Android launcher and Settings/volume UI only; no private app/account content",
+    "limit": "Healthy clip interior frames were not individually visually reviewed. Static artifacts each contain only one decoded frame."
+  }
+}

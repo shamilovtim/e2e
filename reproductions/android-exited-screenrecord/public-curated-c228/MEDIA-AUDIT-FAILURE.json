@@ -1,0 +1,7 @@
+{
+  "attempt": "Original AVFoundation full-stream decoder on native-zombie-pair-1",
+  "exitCode": 133,
+  "error": "DecodeVideo Code=1; no yielded video samples",
+  "classification": "Neither product regression nor intermittent test failure: zero-duration static Android artifact is unsupported by this temporal reader path. All original bytes retained; direct encoded-sample validation recorded separately.",
+  "repeatedDiagnosticConfirmed": true
+}

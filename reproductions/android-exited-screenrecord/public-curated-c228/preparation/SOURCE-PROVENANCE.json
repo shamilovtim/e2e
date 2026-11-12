@@ -1,0 +1,39 @@
+{
+  "candidate": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+  "base": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+  "sourcePatch": {
+    "path": "candidate-source.patch",
+    "sha256": "30c7e3d617fe9be89c255890f809ca8e3891c054356cd683400e24393d0067cb"
+  },
+  "diff": "4 files changed, 154 insertions(+), 66 deletions(-)",
+  "completeGeneratedRuntimeFileSets": {
+    "base": 631,
+    "candidate": 631,
+    "setEqual": true,
+    "added": [],
+    "removed": [],
+    "changed": [
+      "dist/src/platform-runtime-screen-recording-android-host.js"
+    ]
+  },
+  "sourceOwnerNativeComparison": "Actual production TypeScript transport modules with real ADB. Node source imports and scoped command host; not a built SDK or public CLI comparison.",
+  "publicRouteControl": "Separate candidate built public CLI start/snapshot/record start/record stop/close/daemon-stop run.",
+  "helperVersion": "0.21.37-dev",
+  "fixtureCompiler": "NDK 28.2.13676358 aarch64-linux-android35-clang",
+  "fixtureFlags": [
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wl,-z,max-page-size=16384"
+  ],
+  "fixtureBinarySha256": "a0056cc62c0a09780a7aceb31194207e9d5f6f1f00c968083d733d4e0dd49006",
+  "fixtureBinaryArchitecture": "ARM aarch64, ELF64 PIE, Android linker64",
+  "validationStatus": "Exact clean unchanged candidate passed all11runnable checks:19181unit passes/3existing skips;330related passes. Same-filter regression confirms9transport/1provider head passes against5+1base failures. Media/root publication audit pending.",
+  "runtimeHashExclusions": [
+    "external dependency byte contents (lockfile hash recorded separately)",
+    "Node/JDK/toolchain executables",
+    "Android operating-system and host-framework binaries"
+  ],
+  "runtimePostGateRebuild": "All631 generated JS file paths/hashes and package/build inputs byte-identical to actual pre-native/CLI manifest."
+}

@@ -1,0 +1,127 @@
+{
+  "status": "Frozen selected text/source inputs for root independent media/privacy publication; no media copied or decoded",
+  "files": [
+    {
+      "path": "CASE-INDEX.json",
+      "bytes": 2025,
+      "sha256": "187dbba7dfd1d9ddd916d3b9f19c77130b758f974f4132e2780ed940ab3557bc"
+    },
+    {
+      "path": "EXACT-VALIDATION.json",
+      "bytes": 4213,
+      "sha256": "ab0376879bcf7eb905d530682b24f56e43178ab77f5d315b6f37fc044ec37fcf"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2903,
+      "sha256": "18b950523bb98250f25c9b9c3ee679583d924531e68e833495c6a6ed48c756e5"
+    },
+    {
+      "path": "REGRESSION-RESULTS.json",
+      "bytes": 2479,
+      "sha256": "9b66d0b0cd2575c8933f8f7f212c77eb9f84cf247c3ec49222eb04f7776cd0ee"
+    },
+    {
+      "path": "SETUP-AND-FAILURE-DISPOSITIONS.json",
+      "bytes": 3012,
+      "sha256": "689de01d5a8883dae7e0cd332dc0a350f6560f8c0f1fb0f3a62c15ac4a1b47a6"
+    },
+    {
+      "path": "SOURCE-PROVENANCE.json",
+      "bytes": 1869,
+      "sha256": "d887baeabd89d1042085fc504a756edc605f5fab4388064f50494cbfb6ada110"
+    },
+    {
+      "path": "base2deb-runtime-manifest.json",
+      "bytes": 106271,
+      "sha256": "72701b02a14b37dd9b03ddae834d7d38219b862ca33c79fc5c2d0b9aaf7f2515"
+    },
+    {
+      "path": "c228-runtime-manifest.json",
+      "bytes": 106271,
+      "sha256": "bd9e6e243221361eabe811fcec991ba4a959d4bd1344d55c0ce85aed4627d124"
+    },
+    {
+      "path": "candidate-source.patch",
+      "bytes": 18514,
+      "sha256": "30c7e3d617fe9be89c255890f809ca8e3891c054356cd683400e24393d0067cb"
+    },
+    {
+      "path": "cases/healthy-cli-1/PREFLIGHT.json",
+      "bytes": 673,
+      "sha256": "4a839afd906bd142b5961f412f086e91190e60e51a70b009e850dc18233b82fa"
+    },
+    {
+      "path": "cases/healthy-cli-1/RESULT.json",
+      "bytes": 1144,
+      "sha256": "89d73111b798a38acfeb3fc5d7228adb4e0e011184eb95698843e0c91a769abb"
+    },
+    {
+      "path": "cases/healthy-cli-1/source/run_healthy_cli_v1.py",
+      "bytes": 5415,
+      "sha256": "90223d0a65aa862640649e5db8f084ae3be4eb7fd47372368247a1fba92da9f3"
+    },
+    {
+      "path": "cases/native-zombie-pair-1/PREFLIGHT.json",
+      "bytes": 647,
+      "sha256": "f8b1c32c286c561bc46b8bc2197fe86c02951e60366bc1e0bf2ea325956a75c7"
+    },
+    {
+      "path": "cases/native-zombie-pair-1/RESULT.json",
+      "bytes": 1081,
+      "sha256": "baa7955fb37bf2216a602861419d04227c1302430a6dd9a2483fe506a27dfa48"
+    },
+    {
+      "path": "cases/native-zombie-pair-1/source/hold_recorder_parent_v1.c",
+      "bytes": 1584,
+      "sha256": "d83609053a8a6b35c6d45c5e298e1d3769aa73e42bf468c10a94267881bd3425"
+    },
+    {
+      "path": "cases/native-zombie-pair-1/source/native_transport_driver_v1.mjs",
+      "bytes": 3077,
+      "sha256": "ef6aadb00bb22fd35eaa5e42968ee25582febf04bbca83829756d999db4f21b8"
+    },
+    {
+      "path": "cases/native-zombie-pair-1/source/run_native_pair_v1.py",
+      "bytes": 7786,
+      "sha256": "e3ee9cc150375f5c9a77325f1a7302d141b3f8f94581ecc547997e80f206b090"
+    },
+    {
+      "path": "cases/native-zombie-pair-2/PREFLIGHT.json",
+      "bytes": 647,
+      "sha256": "5f4a92f920d9be6fe68ca78b410aacde7c44f74c9d8b27a9bc1cb5dee3d58b7f"
+    },
+    {
+      "path": "cases/native-zombie-pair-2/RESULT.json",
+      "bytes": 1568,
+      "sha256": "6862a88427757a436f146bf1c59b17746d4eccb8083ba198e6438c64a2a40bd1"
+    },
+    {
+      "path": "cases/native-zombie-pair-2/source/hold_recorder_parent_v1.c",
+      "bytes": 1584,
+      "sha256": "d83609053a8a6b35c6d45c5e298e1d3769aa73e42bf468c10a94267881bd3425"
+    },
+    {
+      "path": "cases/native-zombie-pair-2/source/native_transport_driver_v2.mjs",
+      "bytes": 3182,
+      "sha256": "be76fcff4890996bc59862a20afb59409cf359113e3b80cdc7c0b0b6aab5c00c"
+    },
+    {
+      "path": "cases/native-zombie-pair-2/source/run_native_pair_v2.py",
+      "bytes": 7786,
+      "sha256": "5a7663e19add44dfd955203aaca08b8755b77455ac8a22ae61e7df57561eabe1"
+    },
+    {
+      "path": "regression-tests-only.patch",
+      "bytes": 12501,
+      "sha256": "edb899f57f79890a5a68ae4487ef0bc4b1a6b984c04dbf07b51258de248f96b0"
+    },
+    {
+      "path": "sources/archive_runtime_manifest_v1.py",
+      "bytes": 1999,
+      "sha256": "c491f25bf763a0505290c5cf61efdcdab67e6f6b1cad3d9d1308bb3f6460b630"
+    }
+  ],
+  "fileCount": 24,
+  "excluded": "PREPARED-INPUTS.json self-excluded"
+}

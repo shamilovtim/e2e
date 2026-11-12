@@ -1,0 +1,34 @@
+{
+  "decodedVideoSamples": 1,
+  "decodeErrors": 0,
+  "decoder": "VideoToolbox direct compressed H264 sample decode",
+  "frame": [
+    1080,
+    2400
+  ],
+  "qualification": "Original MP4 has one sample with zero duration. This decodes that original compressed sample without editing or re-encoding the MP4; it does not establish playable temporal footage.",
+  "timelinePlayback": false,
+  "containerVideoSampleCount": 1,
+  "sampleDurationTicks": 0,
+  "compressedSampleSha256": "15e038cb5a294712579488f1c5329670334e5fab88b33c471423cff74ddbaa05",
+  "originalMp4Sha256": "f03df193fa64897581df89a58422ffdcd7dbe1a564ad3d94ad071b53c851a36a",
+  "originalMp4Unchanged": true,
+  "avAssetReader": "Completed with zero frames because timeline duration is zero; original failed audit retained separately.",
+  "case": "native-zombie-pair-2",
+  "video": "cases/native-zombie-pair-2/video.mp4",
+  "videoBytes": 62988,
+  "videoSha256": "f03df193fa64897581df89a58422ffdcd7dbe1a564ad3d94ad071b53c851a36a",
+  "firstPngSha256": "4da9b19620bd0c7d1da85d475bef47504d1f75c802c40b6b9767425e57c971b1",
+  "lastPngSha256": "4da9b19620bd0c7d1da85d475bef47504d1f75c802c40b6b9767425e57c971b1",
+  "originalBytesUnchanged": true,
+  "duplicateCaptureCopiesVerified": 2,
+  "avAssetReaderDiagnostic": {
+    "audioTracks": 0,
+    "completed": true,
+    "count": 0,
+    "durationSeconds": 0,
+    "error": "none",
+    "started": true,
+    "status": 2
+  }
+}

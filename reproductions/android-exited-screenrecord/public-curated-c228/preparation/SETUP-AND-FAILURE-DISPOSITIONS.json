@@ -1,0 +1,53 @@
+{
+  "attempts": [
+    {
+      "case": "java-tool-selection-1",
+      "classification": "tooling setup failure, before any device or recording",
+      "outcome": "macOS launcher could not locate a registered JDK; command-local installed JDK17 selection succeeds; no source/config install change",
+      "video": null
+    },
+    {
+      "case": "provider-null-fixture-1",
+      "classification": "test fixture seam error, not runtime zombie regression",
+      "outcome": "Two interrupted controls returned null through a provider contract that requires a numeric exitCode and normalizes nonnumbers. Controls moved to the existing direct executor seam; unchanged uncertain/null expectation then passes.",
+      "counts": {
+        "passed": 17,
+        "failed": 2
+      },
+      "video": null,
+      "sourceAttributionGap": "Exact initially formatted test bytes were not separately archived before this first run. The unformatted draft and actual results are retained; no byte-exact executed-source claim is made."
+    },
+    {
+      "case": "owned-avd-setup-1",
+      "classification": "native setup failed before recording",
+      "outcome": "Guest ADB unauthorized with isolated emulator-home selection. Only the owned emulator was stopped. No global ADB restart or credential copy/reconfiguration.",
+      "video": null
+    },
+    {
+      "case": "owned-avd-setup-2",
+      "classification": "native setup passed, no recording phase",
+      "outcome": "Same task-owned AVD starts with standard emulator-home default; original and retry setup sources/logs retained locally. Existing user/worker AVDs untouched.",
+      "video": null
+    },
+    {
+      "case": "native-zombie-pair-1",
+      "classification": "harness setup failure after native recorder prerequisite succeeded",
+      "outcome": "Both drivers failed before ADB inspection because the Android host composition import was missing. Neither is a demonstrated base/head product outcome. Original completed recorder artifact retained.",
+      "video": "cases/native-zombie-pair-1/video.mp4"
+    },
+    {
+      "case": "native-zombie-pair-2",
+      "classification": "deterministic base bug reproduced; candidate passes",
+      "outcome": "Same successful unreaped recorder: base ownership-lost/driver1, candidate missing+already-missing/driver0; both0signals; child reaped after the observations.",
+      "video": "cases/native-zombie-pair-2/video.mp4"
+    },
+    {
+      "case": "healthy-cli-1",
+      "classification": "passed candidate public built CLI control",
+      "outcome": "All six public CLI commands exit0; matching android-helper; recording stopped, recorder confirmed, native artifact retired.",
+      "video": "cases/healthy-cli-1/video.mp4"
+    }
+  ],
+  "recordingScope": "Two native fixture capture artifacts and one built CLI recording, three actual captures. Native base/head copies are duplicate paths for the same per-pair capture.",
+  "mediaAudit": "Not yet decoded or visually/privacy-reviewed by root; no publication claim."
+}

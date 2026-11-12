@@ -1,0 +1,110 @@
+{
+  "recordings": [
+    {
+      "case": "native-zombie-pair-1",
+      "tracks": [
+        {
+          "handler": "vide",
+          "codec": "avc1",
+          "sampleCount": 1
+        },
+        {
+          "handler": "meta",
+          "codec": "mett",
+          "sampleCount": 1,
+          "metadata": "Standard Android screenrecord Winscope clock correlation sample; no text/device identity fields",
+          "magic": "#VV1NSC0PET1ME!#",
+          "sampleBytes": 28,
+          "sampleSha256": "9ce54dbd9c55abb8d358782b26aa966d335d7f9f45c6a3a04e3b21580c681880"
+        },
+        {
+          "handler": "meta",
+          "codec": "mett",
+          "sampleCount": 1,
+          "metadata": "Standard Android screenrecord Winscope clock correlation sample; no text/device identity fields",
+          "magic": "#VV1NSC0PET1ME2#",
+          "sampleBytes": 40,
+          "sampleSha256": "f7c8645552ebaa5a924f11a337e643cf4336ee68f93f523ea156b0048ba2407b"
+        }
+      ],
+      "audioTracks": 0,
+      "globalMetadata": [
+        {
+          "key": "com.android.version",
+          "value": "17"
+        }
+      ]
+    },
+    {
+      "case": "native-zombie-pair-2",
+      "tracks": [
+        {
+          "handler": "vide",
+          "codec": "avc1",
+          "sampleCount": 1
+        },
+        {
+          "handler": "meta",
+          "codec": "mett",
+          "sampleCount": 1,
+          "metadata": "Standard Android screenrecord Winscope clock correlation sample; no text/device identity fields",
+          "magic": "#VV1NSC0PET1ME!#",
+          "sampleBytes": 28,
+          "sampleSha256": "67e1f4448e27c7c0f5dc55c4804b8b566c43a45ec45054aea08d4cb4c2f44260"
+        },
+        {
+          "handler": "meta",
+          "codec": "mett",
+          "sampleCount": 1,
+          "metadata": "Standard Android screenrecord Winscope clock correlation sample; no text/device identity fields",
+          "magic": "#VV1NSC0PET1ME2#",
+          "sampleBytes": 40,
+          "sampleSha256": "a856baa7112dffdccebafe314c04a742f3456c57770ec10670dd8214f33769d7"
+        }
+      ],
+      "audioTracks": 0,
+      "globalMetadata": [
+        {
+          "key": "com.android.version",
+          "value": "17"
+        }
+      ]
+    },
+    {
+      "case": "healthy-cli-1",
+      "tracks": [
+        {
+          "handler": "vide",
+          "codec": "avc1",
+          "sampleCount": 13
+        },
+        {
+          "handler": "meta",
+          "codec": "mett",
+          "sampleCount": 1,
+          "metadata": "Standard Android screenrecord Winscope clock correlation sample; no text/device identity fields",
+          "magic": "#VV1NSC0PET1ME!#",
+          "sampleBytes": 124,
+          "sampleSha256": "db5efcb8c5677c1578b263d505bc15e017927a80951ce47ed4af8319c2d2aee7"
+        },
+        {
+          "handler": "meta",
+          "codec": "mett",
+          "sampleCount": 1,
+          "metadata": "Standard Android screenrecord Winscope clock correlation sample; no text/device identity fields",
+          "magic": "#VV1NSC0PET1ME2#",
+          "sampleBytes": 136,
+          "sampleSha256": "e927aecf8a260470bb8f500d26a4341aa514da586d57b150f86118751312835f"
+        }
+      ],
+      "audioTracks": 0,
+      "globalMetadata": [
+        {
+          "key": "com.android.version",
+          "value": "17"
+        }
+      ]
+    }
+  ],
+  "review": "All tracks enumerated; standard Android version tag and two screenrecord timestamp metadata samples only. No audio or app/host/device identity fields found."
+}

@@ -1,0 +1,31 @@
+{
+  "sourceHead": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+  "sourceBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+  "recordings": [
+    {
+      "case": "native-zombie-pair-1",
+      "video": "cases/native-zombie-pair-1/video.mp4",
+      "proof": "preparation/cases/native-zombie-pair-1/RESULT.json",
+      "decodeReceipt": "cases/native-zombie-pair-1/DECODE-RECEIPT.json",
+      "staticZeroDuration": true,
+      "baseHeadSameCapture": true
+    },
+    {
+      "case": "native-zombie-pair-2",
+      "video": "cases/native-zombie-pair-2/video.mp4",
+      "proof": "preparation/cases/native-zombie-pair-2/RESULT.json",
+      "decodeReceipt": "cases/native-zombie-pair-2/DECODE-RECEIPT.json",
+      "staticZeroDuration": true,
+      "baseHeadSameCapture": true
+    },
+    {
+      "case": "healthy-cli-1",
+      "video": "cases/healthy-cli-1/video.mp4",
+      "proof": "preparation/cases/healthy-cli-1/RESULT.json",
+      "decodeReceipt": "cases/healthy-cli-1/DECODE-RECEIPT.json",
+      "staticZeroDuration": false,
+      "baseHeadSameCapture": false
+    }
+  ],
+  "originalPreparationIndex": "preparation/CASE-INDEX.json"
+}

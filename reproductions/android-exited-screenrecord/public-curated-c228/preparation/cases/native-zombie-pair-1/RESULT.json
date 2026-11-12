@@ -1,0 +1,29 @@
+{
+  "qualified": true,
+  "cleanup": "child-reaped",
+  "phases": [
+    {
+      "phase": "base",
+      "driverExitCode": 1,
+      "observed": {
+        "driverSetupFailed": true
+      },
+      "videoScope": "Unchanged completed artifact from this paired unreaped recorder; not a host-screen recording"
+    },
+    {
+      "phase": "head",
+      "driverExitCode": 1,
+      "observed": {
+        "driverSetupFailed": true
+      },
+      "videoScope": "Unchanged completed artifact from this paired unreaped recorder; not a host-screen recording"
+    }
+  ],
+  "nativeFact": {
+    "state": "Z",
+    "commandLineEmpty": true,
+    "successfulExit": true
+  },
+  "footageTimeline": "This original artifact was recorded by the native screenrecord fixture and finished before the host inspection/stop calls. It cannot visually prove those host outcomes. The typed real-ADB observations are their oracle.",
+  "publicationMedia": "video.mp4 is the single unchanged completed-recorder artifact; base/head local video copies are byte-identical copies from this capture, not separate recordings."
+}

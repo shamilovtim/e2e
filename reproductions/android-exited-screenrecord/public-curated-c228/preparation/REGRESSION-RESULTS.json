@@ -1,0 +1,81 @@
+{
+  "candidateSha": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+  "baseSha": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+  "regressionTestsPatch": {
+    "path": "regression-tests-only.patch",
+    "sha256": "edb899f57f79890a5a68ae4487ef0bc4b1a6b984c04dbf07b51258de248f96b0"
+  },
+  "runs": [
+    {
+      "report": "transport-green-corrected.json",
+      "passed": 19,
+      "failed": 0,
+      "filtered": 0,
+      "success": true
+    },
+    {
+      "report": "provider-green.json",
+      "passed": 10,
+      "failed": 0,
+      "filtered": 0,
+      "success": true
+    },
+    {
+      "report": "base-transport-red.json",
+      "passed": 4,
+      "failed": 5,
+      "filtered": 10,
+      "success": false
+    },
+    {
+      "report": "base-provider-red.json",
+      "passed": 0,
+      "failed": 1,
+      "filtered": 9,
+      "success": false
+    },
+    {
+      "report": "transport-green-restored.json",
+      "passed": 19,
+      "failed": 0,
+      "filtered": 0,
+      "success": true
+    },
+    {
+      "report": "provider-green-restored.json",
+      "passed": 10,
+      "failed": 0,
+      "filtered": 0,
+      "success": true
+    },
+    {
+      "report": "head-filtered-transport-green.json",
+      "passed": 9,
+      "failed": 0,
+      "filtered": 10,
+      "success": true
+    },
+    {
+      "report": "head-filtered-provider-green.json",
+      "passed": 1,
+      "failed": 0,
+      "filtered": 9,
+      "success": true
+    }
+  ],
+  "baseProductionUnchanged": true,
+  "baseTestsRestoredForNative": true,
+  "firstFixtureFailure": {
+    "path": "transport-green.json",
+    "passed": 17,
+    "failed": 2,
+    "classification": "invalid provider-null fixture; provider exec contract exitCode:number; same uncertain/null expectations now at existing direct ADB executor seam",
+    "exactInitialFormattedTestBytesArchivedBeforeRun": false,
+    "sourceRuntimeChangedForCorrection": false
+  },
+  "sameFilteredCandidateCommands": "Exact same filter/project/source commands as the base regression, run on clean unchanged candidate after the passing gate.",
+  "focusedCommands": [
+    "pnpm exec vitest run --project unit-core src/platform-runtime-screen-recording-android-host.test.ts -t 'finds only exact screenrecord|rechecks process presence|does not signal an exited|never signals a recorder whose pid' --reporter=json",
+    "pnpm exec vitest run --project provider-integration test/integration/provider-scenarios/android-recording.test.ts -t 'zombie recorder' --reporter=json"
+  ]
+}

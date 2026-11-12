@@ -1,0 +1,43 @@
+{
+  "status": "FROZEN TEXT/SOURCE CANDIDATE: exact gate and same-filter regressions passed; media and root audit/publication pending.",
+  "recordings": [
+    {
+      "case": "native-zombie-pair-1",
+      "video": "cases/native-zombie-pair-1/video.mp4",
+      "bytes": 63018,
+      "proof": "cases/native-zombie-pair-1/RESULT.json",
+      "footageScope": "native fixture artifact ends before host driver calls",
+      "sourceBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+      "sourceHead": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+      "captureProducer": "independent authored native screenrecord parent fixture; recorded before both host calls",
+      "fixtureCSourceSha256": "d83609053a8a6b35c6d45c5e298e1d3769aa73e42bf468c10a94267881bd3425",
+      "hostOutcomeScope": "Pinned base/head inputs only; both host drivers failed before production inspection."
+    },
+    {
+      "case": "native-zombie-pair-2",
+      "video": "cases/native-zombie-pair-2/video.mp4",
+      "bytes": 62988,
+      "proof": "cases/native-zombie-pair-2/RESULT.json",
+      "footageScope": "native fixture artifact ends before host driver calls",
+      "sourceBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+      "sourceHead": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+      "captureProducer": "independent authored native screenrecord parent fixture; recorded before both host calls",
+      "fixtureCSourceSha256": "d83609053a8a6b35c6d45c5e298e1d3769aa73e42bf468c10a94267881bd3425",
+      "hostOutcomeScope": "Actual observed production source transport with real ADB on both pinned checkouts."
+    },
+    {
+      "case": "healthy-cli-1",
+      "video": "cases/healthy-cli-1/video.mp4",
+      "bytes": 212234,
+      "source": "c2280170a22f4ed7a62c0b9f1f17e9092acb70f2",
+      "proof": "cases/healthy-cli-1/RESULT.json",
+      "footageScope": "built public CLI returned recording"
+    }
+  ],
+  "nonRecordingAttempts": [
+    "java-tool-selection-1",
+    "provider-null-fixture-1",
+    "owned-avd-setup-1",
+    "owned-avd-setup-2"
+  ]
+}

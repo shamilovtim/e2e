@@ -1,0 +1,33 @@
+{
+  "decodedVideoSamples": 13,
+  "decodeErrors": 0,
+  "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+  "firstFrame": [
+    1080,
+    2400
+  ],
+  "firstSampleSeconds": 0,
+  "fullStreamDecoded": true,
+  "lastFrame": [
+    1080,
+    2400
+  ],
+  "lastSampleSeconds": 1.2407333333333332,
+  "case": "healthy-cli-1",
+  "video": "cases/healthy-cli-1/video.mp4",
+  "videoBytes": 212234,
+  "videoSha256": "193e545da480e720f13e5d80981d0c9cec388a5473c917db90a8248cfad6b5bd",
+  "firstPngSha256": "0c870dcf42ae546e7a668117f5cc6ad5655e4537a42eb7422b1006138071755a",
+  "lastPngSha256": "38d8a424261fe63019466f671dfed97ce7927185fc36f242cbcf9bc32ee76941",
+  "originalBytesUnchanged": true,
+  "duplicateCaptureCopiesVerified": 0,
+  "avAssetReaderDiagnostic": {
+    "audioTracks": 0,
+    "completed": true,
+    "count": 13,
+    "durationSeconds": 1.3019555555555555,
+    "error": "none",
+    "started": true,
+    "status": 2
+  }
+}
