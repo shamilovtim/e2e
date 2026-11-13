@@ -1,0 +1,327 @@
+{
+  "head": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "sourceTree": "845964e4a76997b469551fc2a9d0c8fdc9844c86",
+  "kind": "lifecycle",
+  "mode": "selector-ready",
+  "nativeBuiltAt": "eec35e9622c339a21b1a588794254f6bdf50d476",
+  "nativeFingerprint": "f0334a8ed57538eb1f07c558098cad117ed54134366f9ee7dbb68a9c8d46de4d",
+  "nativeBinarySha256": "cbf867274d2c3b1e5b5ba26cd275a95988f77914f5482cfedfab838f2df7869a",
+  "nativeArtifactsVerified": 11,
+  "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+  "observedFixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+  "fixtureApp": "dev.e2e.overlay1563",
+  "runtimeJSFiles": 631,
+  "runtimeCompleteFileSetVerified": true,
+  "runtimeSymlinksFound": false,
+  "xctestrunSha256": "e926511efcfa6d1a496e80c6a55450d07e9efb54f450389402d4015946c14120",
+  "nativeCacheManifestSha256": "380b6c5ebb2af6028692fde83deb084f2ace6d3d3465cfad1ec3cef5fef94d0d",
+  "wrapperSha256": "0df6c901c53f4655d8c3a61afad34be765ca688b6686598d8eafa44a292704a2",
+  "driverSha256": "eb6fe64e3a38e55538183da2c83cd7ae234d90cf1f292648f142b3735d395f36",
+  "sourceCommitPatchSha256": "29c701aba7e12334d88d62f3bd5988e48df742b889c666d0dc8c8b93138e4677",
+  "sourceTreeManifestSha256": "7d052949375647246f8c90de28fae34b1f5fbb5bc215d4fbb9e2286667bfb285",
+  "archivedBeforeRun": true,
+  "case": "warm-idle-eec-selector-1",
+  "originalPrivateResultSha256": "0c3fff279d1bb0b8a044152c8eddfedd5d3bf51015e53a7e9b5b969e9d21cac0",
+  "runtimeLaunchInputs": [
+    {
+      "path": "bin/agent-device.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+    },
+    {
+      "path": "package.json",
+      "sha256": "57f31f1ec22e2b9b8f5ba072ac58986614cd95d498725cde693f100021ccdd2f"
+    },
+    {
+      "path": "scripts/build-entries.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+    },
+    {
+      "path": "scripts/build-xcuitest-apple.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+    }
+  ],
+  "guestBridge": {
+    "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+    "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+    "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+    "sourceFiles": [
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridge.m",
+        "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+        "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+        "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+        "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+        "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+        "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+        "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+        "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+        "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+      },
+      {
+        "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+        "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+      }
+    ],
+    "buildCommitUnknownForExistingCache": true,
+    "scope": "The cached guest binary is matched to the ten source-file hashes and binary digest; its original build commit is unknown. It is not claimed freshly compiled at the candidate."
+  },
+  "sources": [
+    {
+      "file": "executed-sources/eb6fe64e3a38e55538183da2c83cd7ae234d90cf1f292648f142b3735d395f36.py",
+      "originalExecutedSha256": "eb6fe64e3a38e55538183da2c83cd7ae234d90cf1f292648f142b3735d395f36",
+      "publicRedactedSha256": "ab33b340fd3689a9f3fcfd8e778b18ebe127202befa33736cfdb9b91dbd858c6",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/0df6c901c53f4655d8c3a61afad34be765ca688b6686598d8eafa44a292704a2.mjs",
+      "originalExecutedSha256": "0df6c901c53f4655d8c3a61afad34be765ca688b6686598d8eafa44a292704a2",
+      "publicRedactedSha256": "0df6c901c53f4655d8c3a61afad34be765ca688b6686598d8eafa44a292704a2",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "success": true,
+    "recordingOwnedByParentDriver": true,
+    "recording": {
+      "code": 0,
+      "escalated": false,
+      "ownedBy": "Python driver"
+    },
+    "sessionClosed": true,
+    "targetTapEvents": 3,
+    "otherTapEvents": 0
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "parentDriver": {
+    "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "phase": "warm-idle-eec-selector-1",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "recorderExitCode": 0,
+    "sourceUnchanged": true,
+    "success": true
+  },
+  "warmIdle": {
+    "route": "selector",
+    "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "nativeBuiltAt": "eec35e9622c339a21b1a588794254f6bdf50d476",
+    "observerUsed": false,
+    "expectedReadinessReads": 0,
+    "protocol": "Three measured first presses, each after normal close/reopen creates a fresh ordinary session record at the same session alias after relaunch, read-only public alert get to initialize the XCTest runner, and one public snapshot. No input precedes the measured press in its session. Native transport is warm; this is not a warmed target/latency SLO. Cases serialized base before head per route.",
+    "medianMs": 363.8385419999995,
+    "targetTapEvents": 3,
+    "otherTapEvents": 0,
+    "success": true,
+    "sessionClosed": true,
+    "samples": [
+      {
+        "kind": "selector",
+        "sample": 1,
+        "warmup": false,
+        "ms": 738.2600830000001,
+        "nativeReadinessReads": 0,
+        "nativeTapCommands": 1,
+        "counts": {
+          "underlying": 1,
+          "overlay": 0
+        },
+        "priorSessionInteractionCalls": 0,
+        "logExistedBeforeNativeWarmup": true,
+        "output": {
+          "ok": true,
+          "result": {
+            "x": 194,
+            "y": 384,
+            "targetKind": "selector",
+            "selector": "id=\"Underlying action\"",
+            "refLabel": "Underlying action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            },
+            "referenceWidth": 402,
+            "referenceHeight": 874
+          }
+        },
+        "readOnlyNativeWarmup": {
+          "expectedAbsent": true,
+          "error": {
+            "name": "Error",
+            "code": "COMMAND_FAILED",
+            "message": "alert not found",
+            "details": {
+              "dispatched": "no",
+              "runnerErrorCode": "ALERT_NOT_FOUND"
+            }
+          }
+        },
+        "nativeEvents": [
+          {
+            "event": "appReady",
+            "ms": 0.0071249669417738914
+          },
+          {
+            "event": "underlyingReceivedTap",
+            "ms": 4385.312624974176,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "kind": "selector",
+        "sample": 2,
+        "warmup": false,
+        "ms": 363.8385419999995,
+        "nativeReadinessReads": 0,
+        "nativeTapCommands": 1,
+        "counts": {
+          "underlying": 1,
+          "overlay": 0
+        },
+        "priorSessionInteractionCalls": 0,
+        "logExistedBeforeNativeWarmup": true,
+        "output": {
+          "ok": true,
+          "result": {
+            "x": 194,
+            "y": 384,
+            "targetKind": "selector",
+            "selector": "id=\"Underlying action\"",
+            "refLabel": "Underlying action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            },
+            "referenceWidth": 402,
+            "referenceHeight": 874
+          }
+        },
+        "readOnlyNativeWarmup": {
+          "expectedAbsent": true,
+          "error": {
+            "name": "Error",
+            "code": "COMMAND_FAILED",
+            "message": "alert not found",
+            "details": {
+              "dispatched": "no",
+              "runnerErrorCode": "ALERT_NOT_FOUND"
+            }
+          }
+        },
+        "nativeEvents": [
+          {
+            "event": "appReady",
+            "ms": 0.007958384230732918
+          },
+          {
+            "event": "underlyingReceivedTap",
+            "ms": 591.7842916678637,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "kind": "selector",
+        "sample": 3,
+        "warmup": false,
+        "ms": 354.55162499999824,
+        "nativeReadinessReads": 0,
+        "nativeTapCommands": 1,
+        "counts": {
+          "underlying": 1,
+          "overlay": 0
+        },
+        "priorSessionInteractionCalls": 0,
+        "logExistedBeforeNativeWarmup": true,
+        "output": {
+          "ok": true,
+          "result": {
+            "x": 194,
+            "y": 384,
+            "targetKind": "selector",
+            "selector": "id=\"Underlying action\"",
+            "refLabel": "Underlying action",
+            "resolution": {
+              "source": "runtime",
+              "phase": "pre-action",
+              "kind": "unique"
+            },
+            "referenceWidth": 402,
+            "referenceHeight": 874
+          }
+        },
+        "readOnlyNativeWarmup": {
+          "expectedAbsent": true,
+          "error": {
+            "name": "Error",
+            "code": "COMMAND_FAILED",
+            "message": "alert not found",
+            "details": {
+              "dispatched": "no",
+              "runnerErrorCode": "ALERT_NOT_FOUND"
+            }
+          }
+        },
+        "nativeEvents": [
+          {
+            "event": "appReady",
+            "ms": 0.00641669612377882
+          },
+          {
+            "event": "underlyingReceivedTap",
+            "ms": 502.424499951303,
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "recording": {
+    "path": "../media/warm-idle-eec-selector-1/video.mp4",
+    "originalSha256": "f8d666d429399f09e6af43acd7b07025da7cca49e04e2bb81ef0b84ea472171b",
+    "bytes": 8720547
+  },
+  "originalPrivateExecutionInputsSha256": "e4c57cfb30c6bf532d71c85d596082c33e729875bfdf58d9a62f80b655650204",
+  "nativeManifests": [
+    {
+      "role": "private-native-manifest.json",
+      "file": "native-manifests/380b6c5ebb2af6028692fde83deb084f2ace6d3d3465cfad1ec3cef5fef94d0d.json",
+      "originalPrivateManifestSha256": "380b6c5ebb2af6028692fde83deb084f2ace6d3d3465cfad1ec3cef5fef94d0d"
+    }
+  ]
+}

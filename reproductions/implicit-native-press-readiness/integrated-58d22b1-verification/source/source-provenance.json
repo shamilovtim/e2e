@@ -1,0 +1,26 @@
+{
+  "head": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "base": "cc3b99b38530027d734626e17fec9734743d2c66",
+  "tree": "f82efe51c3e70994fb4619d95edaf153b9cf7d0c",
+  "patchSha256": "df68d56fddfd4f646d65ab38ef3ed4be817e9c5812df6410c96f9753e928d819",
+  "patchAppliesToBaseAndRecreatesExactTree": true,
+  "review": "Root and independent integration reviews cleared this exact source; only commands documentation required manual resolution, preserving both upstream settle/verify guidance and native-readiness guidance.",
+  "validation": "Exact frozen-source gate passed: 19,830 unit tests with three existing skips, 413 related tests, all 15 runnable checks. Fresh production and unit native builds passed. Eleven selected native methods and seventeen live SDK cases passed, including six actual GuestAX cases, ten lifecycle/motion/idle cases and the unchanged Settings replay on its first attempt. Settings post-open observation remained unobservable. Four uninstrumented paired warm-idle cases passed with twelve first presses; separate post-batch source/runtime/native/guest/fixture verification passed.",
+  "publication": "GitHub rejected the verified 58d22b1 update to the existing PR branch because an upstream .github/workflows/android.yml update requires workflow scope. The public branch remains e66ec2a. The exact candidate patch remains reviewable in this evidence bundle. Credentials and workflows were not changed.",
+  "policies": "Proposed idle-readiness and size exceptions remain unaccepted.",
+  "files": 102,
+  "added": 3942,
+  "deleted": 265,
+  "gross": 4207,
+  "timingScope": "Three first-press samples per side/route, base eec before candidate58 in non-interleaved groups, native connection warmed by read-only alert inspection, no input warmup or inspector. Small generic fixture, first effects retained. Descriptive whole-command observations, not a latency guarantee or isolated causal cost estimate.",
+  "timingMediansMs": {
+    "selector": {
+      "baseline": 363.8385419999995,
+      "candidate": 437.9358749999992
+    },
+    "ref": {
+      "baseline": 344.6479159999999,
+      "candidate": 394.63179200000013
+    }
+  }
+}

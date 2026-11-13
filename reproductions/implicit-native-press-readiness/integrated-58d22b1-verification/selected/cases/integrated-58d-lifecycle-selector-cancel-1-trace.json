@@ -1,0 +1,292 @@
+{
+  "script": "dist/src/runtime-factory.js",
+  "scriptSha256": "2af767b2db713d0874184b12f14ccc1ab23e675d1b6c4709b177660458377c4c",
+  "sourceBytes": 84672,
+  "mechanism": "V8 conditional breakpoints: console-only primitive observation, always return false. Built source bytes are unchanged. Timings from this instrumented run are not performance measurements.",
+  "startupPauses": 1,
+  "unexpectedPauses": 0,
+  "loadedSourceVerified": true,
+  "conditionsAlwaysFalse": true,
+  "allRequestedPointsBound": true,
+  "sourceVerificationError": false,
+  "sourceFileStillMatches": true,
+  "cleanup": {
+    "commandExit": 0,
+    "daemonExit": 0,
+    "daemonSignal": null,
+    "escalated": false
+  },
+  "points": [
+    {
+      "event": "admission-screen",
+      "lineNumber": 0,
+      "columnNumber": 32657,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"admission-screen\",screening:o.kind,targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"admission-screen\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        32657,
+        32781
+      ],
+      "functionSpan": [
+        32423,
+        32782
+      ],
+      "requestedSnippet": "return o.kind===`pass`&&!s?(W(a),r):ri(e,t,n,{resolved:r,generation:0,native:s,...o.kind===`wait`?{motion:ni(o.wait)}:{}},a)"
+    },
+    {
+      "event": "motion-baseline",
+      "lineNumber": 0,
+      "columnNumber": 29749,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-baseline\",present:!!i}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-baseline\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29749,
+        29775
+      ],
+      "functionSpan": [
+        29649,
+        30127
+      ],
+      "requestedSnippet": "if(!i)return{kind:`pass`};"
+    },
+    {
+      "event": "motion-decision",
+      "lineNumber": 0,
+      "columnNumber": 29941,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-decision\",kind:s.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-decision\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29941,
+        29983
+      ],
+      "functionSpan": [
+        29649,
+        30127
+      ],
+      "requestedSnippet": "if(s.kind!==`recheck`)return{kind:`pass`};"
+    },
+    {
+      "event": "native-readiness",
+      "lineNumber": 0,
+      "columnNumber": 35823,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"native-readiness\",generation:n.generation,liveGeneration:n.live.generation,state:n.live.state}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"native-readiness\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        35823,
+        35853
+      ],
+      "functionSpan": [
+        35442,
+        36021
+      ],
+      "requestedSnippet": "if(i.state===`ready`)return!0;"
+    },
+    {
+      "event": "motion-look",
+      "lineNumber": 0,
+      "columnNumber": 34965,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-look\",generation:r.generation,verdict:s.kind,looksBeforeVerdict:r.motion.looks}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-look\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        34965,
+        35082
+      ],
+      "functionSpan": [
+        34638,
+        35442
+      ],
+      "requestedSnippet": "if(a.looks++,a.previous=o,s.kind===`pass`&&s.admitted.kind!==`point`)return r.resolved=s.admitted,r.motion=void 0,!0;"
+    },
+    {
+      "event": "canonical-refresh-start",
+      "lineNumber": 0,
+      "columnNumber": 36050,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-start\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        36050,
+        36064
+      ],
+      "functionSpan": [
+        36021,
+        36377
+      ],
+      "requestedSnippet": "r.live=void 0;"
+    },
+    {
+      "event": "canonical-refresh-complete",
+      "lineNumber": 0,
+      "columnNumber": 36338,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-complete\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        36338,
+        36376
+      ],
+      "functionSpan": [
+        36021,
+        36377
+      ],
+      "requestedSnippet": "s.kind===`wait`&&(r.motion=ni(s.wait))"
+    },
+    {
+      "event": "capture-start",
+      "lineNumber": 0,
+      "columnNumber": 18245,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-start\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        18245,
+        18356
+      ],
+      "functionSpan": [
+        18221,
+        18638
+      ],
+      "requestedSnippet": "if(!e.backend.captureSnapshot)throw new a(`UNSUPPORTED_OPERATION`,`snapshot is not supported by this backend`);"
+    },
+    {
+      "event": "capture-complete",
+      "lineNumber": 0,
+      "columnNumber": 18578,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-complete\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        18578,
+        18637
+      ],
+      "functionSpan": [
+        18221,
+        18638
+      ],
+      "requestedSnippet": "return await e.sessions.set({...i,snapshot:o}),{snapshot:o}"
+    },
+    {
+      "event": "tap-dispatch",
+      "lineNumber": 0,
+      "columnNumber": 43002,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"tap-dispatch\",targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"tap-dispatch\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        43002,
+        43176
+      ],
+      "functionSpan": [
+        42392,
+        43270
+      ],
+      "requestedSnippet": "d=await e.backend.tap(N(e,t),l,{button:t.button,count:t.count,intervalMs:t.intervalMs,holdMs:t.holdMs,jitterPx:t.jitterPx,doubleTap:t.doubleTap,...u?{pointObser"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "phase": "setup",
+      "event": "motion-baseline",
+      "present": false
+    },
+    {
+      "sequence": 2,
+      "phase": "setup",
+      "event": "admission-screen",
+      "screening": "pass",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 3,
+      "phase": "setup",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "ready"
+    },
+    {
+      "sequence": 4,
+      "phase": "setup",
+      "event": "tap-dispatch",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 5,
+      "phase": "target",
+      "event": "phase",
+      "name": "target"
+    },
+    {
+      "sequence": 6,
+      "phase": "target",
+      "event": "capture-start"
+    },
+    {
+      "sequence": 7,
+      "phase": "target",
+      "event": "capture-complete"
+    },
+    {
+      "sequence": 8,
+      "phase": "target",
+      "event": "motion-baseline",
+      "present": true
+    },
+    {
+      "sequence": 9,
+      "phase": "target",
+      "event": "motion-decision",
+      "kind": "stationary"
+    },
+    {
+      "sequence": 10,
+      "phase": "target",
+      "event": "admission-screen",
+      "screening": "pass",
+      "targetKind": "selector"
+    },
+    {
+      "sequence": 11,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 12,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 13,
+      "phase": "after-target",
+      "event": "phase",
+      "name": "after-target"
+    },
+    {
+      "sequence": 14,
+      "phase": "after-target",
+      "event": "motion-baseline",
+      "present": true
+    },
+    {
+      "sequence": 15,
+      "phase": "after-target",
+      "event": "motion-decision",
+      "kind": "not-recent"
+    },
+    {
+      "sequence": 16,
+      "phase": "after-target",
+      "event": "admission-screen",
+      "screening": "pass",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 17,
+      "phase": "after-target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "ready"
+    },
+    {
+      "sequence": 18,
+      "phase": "after-target",
+      "event": "tap-dispatch",
+      "targetKind": "ref"
+    }
+  ],
+  "originalPrivateTraceSha256": "9cf39805b0fafeccd55c61617b4e47a9071a608c9f9e8731778d2041d73f54fc",
+  "scope": "Actual debugger breakpoint/script identifiers and host file URLs are omitted. Ordered observations and relative source positions remain. Captured binding values here belong only to the generic fixture."
+}

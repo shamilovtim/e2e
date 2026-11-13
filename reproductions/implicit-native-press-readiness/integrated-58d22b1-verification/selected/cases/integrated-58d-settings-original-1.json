@@ -1,0 +1,140 @@
+{
+  "head": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "sourceTree": "f82efe51c3e70994fb4619d95edaf153b9cf7d0c",
+  "nativeBuiltAt": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "nativeFingerprint": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "nativeArtifactsVerified": 11,
+  "runtimeJavaScriptFiles": 632,
+  "runtimeManifestSha256": "f6e5b56f738a5c56953c0619ab61f401285cdf8379e3d0686abd3e33b8c78a34",
+  "xctestrunSha256": "cda11114eb149fddc4cabe3dd99242bb42b1ff44f1bde61d9d88763988e15919",
+  "wrapperSha256": "baa65332f8540def6a49ba77627100713a192300ba7a8b7b35900a8583cc6148",
+  "archivedBeforeRun": true,
+  "case": "integrated-58d-settings-original-1",
+  "originalPrivateResultSha256": "9f5f321f587bcce3e5ee0307086cc55ce20c897b253c9ca2304a039131b437ce",
+  "runtimeLaunchInputs": [
+    {
+      "path": "bin/agent-device.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+    },
+    {
+      "path": "package.json",
+      "sha256": "67b11461d1b62e656962dc10fc01974c19ff83d5bef26d31a7cc30c899ccd3b1"
+    },
+    {
+      "path": "scripts/build-entries.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+    },
+    {
+      "path": "scripts/build-xcuitest-apple.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+    }
+  ],
+  "guestBridge": {
+    "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+    "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+    "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+    "sourceFiles": [
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridge.m",
+        "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+        "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+        "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+        "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+        "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+        "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+        "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+        "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+        "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+      },
+      {
+        "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+        "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+      }
+    ],
+    "buildCommitUnknownForExistingCache": true,
+    "scope": "The cached guest binary is matched to the ten source-file hashes and binary digest; its original build commit is unknown. It is not claimed freshly compiled at the candidate."
+  },
+  "sources": [
+    {
+      "file": "executed-sources/f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7.mjs",
+      "originalExecutedSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "publicRedactedSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/baa65332f8540def6a49ba77627100713a192300ba7a8b7b35900a8583cc6148.py",
+      "originalExecutedSha256": "baa65332f8540def6a49ba77627100713a192300ba7a8b7b35900a8583cc6148",
+      "publicRedactedSha256": "c11d39455284ebe61cfdbde894b207ab21c326d2643da820cda18fa3484c274b",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "success": true,
+    "wrapperExitCode": 0,
+    "recorderExitCode": 0,
+    "daemonCleanupExitCode": 0,
+    "overallCLIPassed": true,
+    "firstAttemptPassed": true,
+    "attemptVerdicts": [
+      {
+        "attempt": "1/3",
+        "status": "passed",
+        "replayed": "7",
+        "healed": "0"
+      }
+    ],
+    "elapsedSeconds": 10.873434541999998
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "parentDriver": null,
+  "postOpenObservation": [
+    "unobservable"
+  ],
+  "qualification": "First attempt passed, but the actual post-open observation was unobservable; this does not establish parity with the earlier observable Settings reflow failure.",
+  "recording": {
+    "path": "../media/integrated-58d-settings-original-1/video.mp4",
+    "originalSha256": "13837bf7fd1b90199f6e3b536a44232e43ab5cbb83c5ebf0796c88e78e84ad3f",
+    "bytes": 6243760
+  },
+  "originalPrivateExecutionInputsSha256": "aba701aed8ba218dcde0d1d96920cb2c2c5bb045c05a2e516a6b9c66640d6bc1",
+  "nativeManifests": [
+    {
+      "role": "private-native-manifest.json",
+      "file": "native-manifests/d741ec8070b768be8e9442ce4172ddb540a441a33416026ede79814cbd107bdb.json",
+      "originalPrivateManifestSha256": "d741ec8070b768be8e9442ce4172ddb540a441a33416026ede79814cbd107bdb"
+    }
+  ]
+}

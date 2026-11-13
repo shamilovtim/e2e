@@ -1,0 +1,24 @@
+{
+  "head": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "sourceTree": "f82efe51c3e70994fb4619d95edaf153b9cf7d0c",
+  "variant": "production",
+  "wrapperSha256": "58c353ee3ce4f8413fad7558e118041b7900ab7d60c93623f0efef325b5e7c50",
+  "buildScriptSha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a",
+  "archivedBeforeRun": true,
+  "exitCode": 0,
+  "nativeFingerprint": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "nativeArtifactsVerified": 11,
+  "xctestrunSha256": "cda11114eb149fddc4cabe3dd99242bb42b1ff44f1bde61d9d88763988e15919",
+  "nativeBinarySha256": "4e442d7c0ad583148105c25a57e392a5f9564a21d67514fb933b34005d53424e",
+  "sourceUnchanged": true,
+  "originalPrivateResultSha256": "b95101a06aac0ce2523829781af7f4e74c10f198f05dbcb1a9f8463032a8f246",
+  "executedSources": [
+    {
+      "file": "executed-sources/58c353ee3ce4f8413fad7558e118041b7900ab7d60c93623f0efef325b5e7c50.py",
+      "originalExecutedSha256": "58c353ee3ce4f8413fad7558e118041b7900ab7d60c93623f0efef325b5e7c50",
+      "publicRedactedSha256": "0418c2f518fbae07d60941001b0aa4cef03e356cc2045c0997c86da8af69e7f2",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ]
+}

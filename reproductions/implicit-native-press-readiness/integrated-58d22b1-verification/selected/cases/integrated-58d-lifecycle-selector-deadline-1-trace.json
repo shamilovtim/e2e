@@ -1,0 +1,5220 @@
+{
+  "script": "dist/src/runtime-factory.js",
+  "scriptSha256": "2af767b2db713d0874184b12f14ccc1ab23e675d1b6c4709b177660458377c4c",
+  "sourceBytes": 84672,
+  "mechanism": "V8 conditional breakpoints: console-only primitive observation, always return false. Built source bytes are unchanged. Timings from this instrumented run are not performance measurements.",
+  "startupPauses": 1,
+  "unexpectedPauses": 0,
+  "loadedSourceVerified": true,
+  "conditionsAlwaysFalse": true,
+  "allRequestedPointsBound": true,
+  "sourceVerificationError": false,
+  "sourceFileStillMatches": true,
+  "cleanup": {
+    "commandExit": 0,
+    "daemonExit": 0,
+    "daemonSignal": null,
+    "escalated": false
+  },
+  "points": [
+    {
+      "event": "admission-screen",
+      "lineNumber": 0,
+      "columnNumber": 32657,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"admission-screen\",screening:o.kind,targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"admission-screen\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        32657,
+        32781
+      ],
+      "functionSpan": [
+        32423,
+        32782
+      ],
+      "requestedSnippet": "return o.kind===`pass`&&!s?(W(a),r):ri(e,t,n,{resolved:r,generation:0,native:s,...o.kind===`wait`?{motion:ni(o.wait)}:{}},a)"
+    },
+    {
+      "event": "motion-baseline",
+      "lineNumber": 0,
+      "columnNumber": 29749,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-baseline\",present:!!i}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-baseline\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29749,
+        29775
+      ],
+      "functionSpan": [
+        29649,
+        30127
+      ],
+      "requestedSnippet": "if(!i)return{kind:`pass`};"
+    },
+    {
+      "event": "motion-decision",
+      "lineNumber": 0,
+      "columnNumber": 29941,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-decision\",kind:s.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-decision\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29941,
+        29983
+      ],
+      "functionSpan": [
+        29649,
+        30127
+      ],
+      "requestedSnippet": "if(s.kind!==`recheck`)return{kind:`pass`};"
+    },
+    {
+      "event": "native-readiness",
+      "lineNumber": 0,
+      "columnNumber": 35823,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"native-readiness\",generation:n.generation,liveGeneration:n.live.generation,state:n.live.state}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"native-readiness\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        35823,
+        35853
+      ],
+      "functionSpan": [
+        35442,
+        36021
+      ],
+      "requestedSnippet": "if(i.state===`ready`)return!0;"
+    },
+    {
+      "event": "motion-look",
+      "lineNumber": 0,
+      "columnNumber": 34965,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-look\",generation:r.generation,verdict:s.kind,looksBeforeVerdict:r.motion.looks}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-look\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        34965,
+        35082
+      ],
+      "functionSpan": [
+        34638,
+        35442
+      ],
+      "requestedSnippet": "if(a.looks++,a.previous=o,s.kind===`pass`&&s.admitted.kind!==`point`)return r.resolved=s.admitted,r.motion=void 0,!0;"
+    },
+    {
+      "event": "canonical-refresh-start",
+      "lineNumber": 0,
+      "columnNumber": 36050,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-start\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        36050,
+        36064
+      ],
+      "functionSpan": [
+        36021,
+        36377
+      ],
+      "requestedSnippet": "r.live=void 0;"
+    },
+    {
+      "event": "canonical-refresh-complete",
+      "lineNumber": 0,
+      "columnNumber": 36338,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-complete\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        36338,
+        36376
+      ],
+      "functionSpan": [
+        36021,
+        36377
+      ],
+      "requestedSnippet": "s.kind===`wait`&&(r.motion=ni(s.wait))"
+    },
+    {
+      "event": "capture-start",
+      "lineNumber": 0,
+      "columnNumber": 18245,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-start\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        18245,
+        18356
+      ],
+      "functionSpan": [
+        18221,
+        18638
+      ],
+      "requestedSnippet": "if(!e.backend.captureSnapshot)throw new a(`UNSUPPORTED_OPERATION`,`snapshot is not supported by this backend`);"
+    },
+    {
+      "event": "capture-complete",
+      "lineNumber": 0,
+      "columnNumber": 18578,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-complete\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        18578,
+        18637
+      ],
+      "functionSpan": [
+        18221,
+        18638
+      ],
+      "requestedSnippet": "return await e.sessions.set({...i,snapshot:o}),{snapshot:o}"
+    },
+    {
+      "event": "tap-dispatch",
+      "lineNumber": 0,
+      "columnNumber": 43002,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"tap-dispatch\",targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"tap-dispatch\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        43002,
+        43176
+      ],
+      "functionSpan": [
+        42392,
+        43270
+      ],
+      "requestedSnippet": "d=await e.backend.tap(N(e,t),l,{button:t.button,count:t.count,intervalMs:t.intervalMs,holdMs:t.holdMs,jitterPx:t.jitterPx,doubleTap:t.doubleTap,...u?{pointObser"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "phase": "setup",
+      "event": "motion-baseline",
+      "present": false
+    },
+    {
+      "sequence": 2,
+      "phase": "setup",
+      "event": "admission-screen",
+      "screening": "pass",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 3,
+      "phase": "setup",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "ready"
+    },
+    {
+      "sequence": 4,
+      "phase": "setup",
+      "event": "tap-dispatch",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 5,
+      "phase": "target",
+      "event": "phase",
+      "name": "target"
+    },
+    {
+      "sequence": 6,
+      "phase": "target",
+      "event": "capture-start"
+    },
+    {
+      "sequence": 7,
+      "phase": "target",
+      "event": "capture-complete"
+    },
+    {
+      "sequence": 8,
+      "phase": "target",
+      "event": "motion-baseline",
+      "present": true
+    },
+    {
+      "sequence": 9,
+      "phase": "target",
+      "event": "motion-decision",
+      "kind": "stationary"
+    },
+    {
+      "sequence": 10,
+      "phase": "target",
+      "event": "admission-screen",
+      "screening": "pass",
+      "targetKind": "selector"
+    },
+    {
+      "sequence": 11,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 12,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 13,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 14,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 15,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 16,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 17,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 18,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 19,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 20,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 21,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 22,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 23,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 24,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 25,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 26,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 27,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 28,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 29,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 30,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 31,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 32,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 33,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 34,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 35,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 36,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 37,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 38,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 39,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 40,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 41,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 42,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 43,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 44,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 45,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 46,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 47,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 48,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 49,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 50,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 51,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 52,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 53,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 54,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 55,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 56,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 57,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 58,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 59,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 60,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 61,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 62,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 63,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 64,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 65,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 66,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 67,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 68,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 69,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 70,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 71,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 72,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 73,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 74,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 75,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 76,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 77,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 78,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 79,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 80,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 81,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 82,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 83,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 84,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 85,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 86,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 87,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 88,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 89,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 90,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 91,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 92,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 93,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 94,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 95,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 96,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 97,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 98,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 99,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 100,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 101,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 102,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 103,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 104,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 105,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 106,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 107,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 108,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 109,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 110,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 111,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 112,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 113,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 114,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 115,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 116,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 117,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 118,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 119,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 120,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 121,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 122,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 123,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 124,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 125,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 126,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 127,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 128,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 129,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 130,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 131,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 132,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 133,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 134,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 135,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 136,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 137,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 138,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 139,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 140,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 141,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 142,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 143,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 144,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 145,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 146,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 147,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 148,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 149,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 150,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 151,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 152,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 153,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 154,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 155,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 156,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 157,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 158,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 159,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 160,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 161,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 162,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 163,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 164,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 165,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 166,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 167,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 168,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 169,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 170,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 171,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 172,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 173,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 174,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 175,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 176,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 177,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 178,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 179,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 180,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 181,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 182,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 183,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 184,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 185,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 186,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 187,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 188,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 189,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 190,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 191,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 192,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 193,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 194,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 195,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 196,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 197,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 198,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 199,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 200,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 201,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 202,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 203,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 204,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 205,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 206,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 207,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 208,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 209,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 210,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 211,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 212,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 213,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 214,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 215,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 216,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 217,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 218,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 219,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 220,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 221,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 222,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 223,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 224,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 225,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 226,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 227,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 228,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 229,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 230,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 231,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 232,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 233,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 234,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 235,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 236,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 237,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 238,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 239,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 240,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 241,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 242,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 243,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 244,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 245,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 246,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 247,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 248,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 249,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 250,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 251,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 252,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 253,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 254,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 255,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 256,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 257,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 258,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 259,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 260,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 261,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 262,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 263,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 264,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 265,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 266,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 267,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 268,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 269,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 270,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 271,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 272,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 273,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 274,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 275,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 276,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 277,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 278,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 279,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 280,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 281,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 282,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 283,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 284,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 285,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 286,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 287,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 288,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 289,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 290,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 291,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 292,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 293,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 294,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 295,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 296,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 297,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 298,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 299,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 300,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 301,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 302,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 303,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 304,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 305,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 306,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 307,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 308,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 309,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 310,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 311,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 312,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 313,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 314,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 315,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 316,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 317,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 318,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 319,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 320,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 321,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 322,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 323,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 324,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 325,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 326,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 327,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 328,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 329,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 330,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 331,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 332,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 333,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 334,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 335,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 336,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 337,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 338,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 339,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 340,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 341,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 342,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 343,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 344,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 345,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 346,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 347,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 348,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 349,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 350,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 351,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 352,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 353,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 354,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 355,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 356,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 357,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 358,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 359,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 360,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 361,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 362,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 363,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 364,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 365,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 366,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 367,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 368,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 369,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 370,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 371,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 372,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 373,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 374,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 375,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 376,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 377,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 378,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 379,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 380,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 381,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 382,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 383,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 384,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 385,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 386,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 387,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 388,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 389,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 390,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 391,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 392,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 393,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 394,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 395,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 396,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 397,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 398,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 399,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 400,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 401,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 402,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 403,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 404,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 405,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 406,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 407,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 408,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 409,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 410,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 411,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 412,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 413,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 414,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 415,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 416,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 417,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 418,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 419,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 420,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 421,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 422,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 423,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 424,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 425,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 426,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 427,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 428,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 429,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 430,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 431,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 432,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 433,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 434,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 435,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 436,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 437,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 438,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 439,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 440,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 441,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 442,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 443,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 444,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 445,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 446,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 447,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 448,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 449,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 450,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 451,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 452,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 453,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 454,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 455,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 456,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 457,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 458,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 459,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 460,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 461,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 462,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 463,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 464,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 465,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 466,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 467,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 468,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 469,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 470,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 471,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 472,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 473,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 474,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 475,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 476,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 477,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 478,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 479,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 480,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 481,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 482,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 483,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 484,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 485,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 486,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 487,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 488,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 489,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 490,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 491,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 492,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 493,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 494,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 495,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 496,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 497,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 498,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 499,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 500,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 501,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 502,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 503,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 504,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 505,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 506,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 507,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 508,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 509,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 510,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 511,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 512,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 513,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 514,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 515,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 516,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 517,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 518,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 519,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 520,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 521,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 522,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 523,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 524,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 525,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 526,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 527,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 528,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 529,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 530,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 531,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 532,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 533,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 534,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 535,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 536,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 537,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 538,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 539,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 540,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 541,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 542,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 543,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 544,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 545,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 546,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 547,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 548,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 549,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 550,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 551,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 552,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 553,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 554,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 555,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 556,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 557,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 558,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 559,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 560,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 561,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 562,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 563,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 564,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 565,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 566,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 567,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 568,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 569,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 570,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 571,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 572,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 573,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 574,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 575,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 576,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 577,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 578,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 579,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 580,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 581,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 582,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 583,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 584,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 585,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 586,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 587,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 588,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 589,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 590,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 591,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 592,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 593,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 594,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 595,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 596,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 597,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 598,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 599,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 600,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 601,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 602,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 603,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 604,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 605,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 606,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 607,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 608,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 609,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 610,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 611,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 612,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 613,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 614,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 615,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 616,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 617,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 618,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 619,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 620,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 621,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 622,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 623,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 624,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 625,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 626,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 627,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 628,
+      "phase": "target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "blocked"
+    },
+    {
+      "sequence": 629,
+      "phase": "after-target",
+      "event": "phase",
+      "name": "after-target"
+    },
+    {
+      "sequence": 630,
+      "phase": "after-target",
+      "event": "motion-baseline",
+      "present": true
+    },
+    {
+      "sequence": 631,
+      "phase": "after-target",
+      "event": "motion-decision",
+      "kind": "not-recent"
+    },
+    {
+      "sequence": 632,
+      "phase": "after-target",
+      "event": "admission-screen",
+      "screening": "pass",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 633,
+      "phase": "after-target",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "ready"
+    },
+    {
+      "sequence": 634,
+      "phase": "after-target",
+      "event": "tap-dispatch",
+      "targetKind": "ref"
+    }
+  ],
+  "originalPrivateTraceSha256": "a047de6c09dacc77984be2936d873d90c963ab3cabeece2a48a65772c7ca41d0",
+  "scope": "Actual debugger breakpoint/script identifiers and host file URLs are omitted. Ordered observations and relative source positions remain. Captured binding values here belong only to the generic fixture."
+}

@@ -1,0 +1,224 @@
+{
+  "head": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "sourceTree": "f82efe51c3e70994fb4619d95edaf153b9cf7d0c",
+  "kind": "lifecycle",
+  "mode": "ref-cancel",
+  "nativeBuiltAt": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "nativeFingerprint": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "nativeBinarySha256": "4e442d7c0ad583148105c25a57e392a5f9564a21d67514fb933b34005d53424e",
+  "nativeArtifactsVerified": 11,
+  "fixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+  "observedFixtureBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+  "fixtureApp": "dev.e2e.overlay1563",
+  "runtimeJSFiles": 632,
+  "runtimeCompleteFileSetVerified": true,
+  "runtimeSymlinksFound": false,
+  "xctestrunSha256": "cda11114eb149fddc4cabe3dd99242bb42b1ff44f1bde61d9d88763988e15919",
+  "nativeCacheManifestSha256": "d741ec8070b768be8e9442ce4172ddb540a441a33416026ede79814cbd107bdb",
+  "wrapperSha256": "bbdef6df866c28333e7412b71c166992cd4982d0e9e82968f12174454556b903",
+  "driverSha256": "83dfbb7e8f3dec905f3bc726baf62f2fab829a18247dbcb4433ca5de92cea85c",
+  "observerSha256": "fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2",
+  "sourceCommitPatchSha256": "635e244d474a44e0b5f95ba81c6e72503bda18eba5dc21757276a399d91af4d5",
+  "sourceTreeManifestSha256": "5d153f4ea84cf228aaea3ddea5bf595ea03c0b501c491f190e31aea725162b46",
+  "archivedBeforeRun": true,
+  "case": "integrated-58d-lifecycle-ref-cancel-1",
+  "originalPrivateResultSha256": "0f7fd671f9c1a2b2d084ed09422a636c4fc1ce96ea5ea0399a960802855c3aed",
+  "runtimeLaunchInputs": [
+    {
+      "path": "bin/agent-device.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+    },
+    {
+      "path": "package.json",
+      "sha256": "67b11461d1b62e656962dc10fc01974c19ff83d5bef26d31a7cc30c899ccd3b1"
+    },
+    {
+      "path": "scripts/build-entries.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+    },
+    {
+      "path": "scripts/build-xcuitest-apple.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+    }
+  ],
+  "guestBridge": {
+    "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+    "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+    "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+    "sourceFiles": [
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridge.m",
+        "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+        "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+        "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+        "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+        "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+        "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+        "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+        "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+        "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+      },
+      {
+        "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+        "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+      }
+    ],
+    "buildCommitUnknownForExistingCache": true,
+    "scope": "The cached guest binary is matched to the ten source-file hashes and binary digest; its original build commit is unknown. It is not claimed freshly compiled at the candidate."
+  },
+  "sources": [
+    {
+      "file": "executed-sources/83dfbb7e8f3dec905f3bc726baf62f2fab829a18247dbcb4433ca5de92cea85c.py",
+      "originalExecutedSha256": "83dfbb7e8f3dec905f3bc726baf62f2fab829a18247dbcb4433ca5de92cea85c",
+      "publicRedactedSha256": "edf46d1abb164ea6424a696259f122cffcf53616a6f0fa916bc50d302d2b1637",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2.mjs",
+      "originalExecutedSha256": "fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2",
+      "publicRedactedSha256": "fb349f5480308acaca56c683fa2ae55669ffe72568a141b6063e547001a464b2",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/bbdef6df866c28333e7412b71c166992cd4982d0e9e82968f12174454556b903.mjs",
+      "originalExecutedSha256": "bbdef6df866c28333e7412b71c166992cd4982d0e9e82968f12174454556b903",
+      "publicRedactedSha256": "bbdef6df866c28333e7412b71c166992cd4982d0e9e82968f12174454556b903",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "success": true,
+    "publicTimeoutOverride": false,
+    "externalCallerSignal": true,
+    "declaredDefaultClientEnvelopeMs": 90000,
+    "declaredOrdinaryDaemonResultPolicyMs": 60000,
+    "cancelAfterCompletedReadiness": 2,
+    "blockedPrecondition": "Only blocked readiness repeats; two completed target-phase reads precede cancellation.",
+    "recordingOwnedByParentDriver": true,
+    "recording": {
+      "code": 0,
+      "escalated": false,
+      "ownedBy": "Python driver"
+    },
+    "sessionClosed": true,
+    "counts": {
+      "underlying": 0,
+      "overlay": 0
+    },
+    "targetTapEvents": 0,
+    "otherTapEvents": 0,
+    "completedReadiness": 2,
+    "targetPhaseTapAccepted": 0,
+    "classificationValid": true,
+    "deadlineDurationValid": true,
+    "targetPhaseZeroInput": true,
+    "coverHeldUntilRefusal": true,
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 3928.3354999999992
+    },
+    "failedOracles": []
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "fixtureEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.007666647434234619
+    },
+    {
+      "event": "fadeOverlayOpened",
+      "ms": 3931.717125000432,
+      "durationMs": 3000
+    },
+    {
+      "event": "fadeDismissBegin",
+      "ms": 4945.733124972321,
+      "durationMs": 3000
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 7948.630874976516
+    }
+  ],
+  "parentDriver": {
+    "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+    "phase": "integrated-58d-lifecycle-ref-cancel-1",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "recorderExitCode": 0,
+    "sourceUnchanged": true,
+    "success": true
+  },
+  "request": {
+    "method": "client.interactions.press",
+    "arguments": {
+      "ref": "@e8"
+    },
+    "timeoutOverride": false,
+    "callerReason": "AbortController.abort(new Error)",
+    "startedAt": "2026-11-13T16:05:15.439Z",
+    "finishedAt": "2026-11-13T16:05:15.595Z",
+    "elapsedMs": 155.83408400000008,
+    "output": {
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "code": "COMMAND_FAILED",
+        "message": "request canceled",
+        "details": {
+          "reason": "request_canceled",
+          "dispatched": "unknown"
+        }
+      }
+    }
+  },
+  "traceFile": "cases/integrated-58d-lifecycle-ref-cancel-1-trace.json",
+  "recording": {
+    "path": "../media/integrated-58d-lifecycle-ref-cancel-1/video.mp4",
+    "originalSha256": "bf6b740b647e1a0b9cec6d7aad6c29501f9f3dc9af24d7731ef2346cc2176336",
+    "bytes": 3006401
+  },
+  "originalPrivateExecutionInputsSha256": "7f0a34038fa56a2a5769c55ae184a4710328684ec9a485810634a7443c8eabba",
+  "nativeManifests": [
+    {
+      "role": "private-native-manifest.json",
+      "file": "native-manifests/d741ec8070b768be8e9442ce4172ddb540a441a33416026ede79814cbd107bdb.json",
+      "originalPrivateManifestSha256": "d741ec8070b768be8e9442ce4172ddb540a441a33416026ede79814cbd107bdb"
+    }
+  ]
+}

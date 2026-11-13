@@ -1,0 +1,104 @@
+{
+  "head": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "sourceTree": "f82efe51c3e70994fb4619d95edaf153b9cf7d0c",
+  "nativeBuiltAt": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "nativeFingerprint": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "nativeArtifactsVerified": 11,
+  "runtimeJavaScriptFiles": 632,
+  "runtimeManifestSha256": "4f56dfe4dc4667509ca8380e668e36b2a3291e6f19bfcb2841b9148f661542ee",
+  "xctestrunSha256": "4ecb01dd9651f0dfcebdad6ff198af765c0be62b666a10b146db8e322f5b51fe",
+  "wrapperSha256": "9a1cb186793c1759f66d15b0093b00db83211b4980a0997a632c209f6150ab56",
+  "archivedBeforeRun": true,
+  "case": "integrated-58d-native11-1",
+  "originalPrivateResultSha256": "f12531cda5478a75c54eb2624b41e71f76207033e71474fde91c6c7b95f94ca9",
+  "runtimeLaunchInputs": [],
+  "guestBridge": null,
+  "sources": [
+    {
+      "file": "executed-sources/9a1cb186793c1759f66d15b0093b00db83211b4980a0997a632c209f6150ab56.py",
+      "originalExecutedSha256": "9a1cb186793c1759f66d15b0093b00db83211b4980a0997a632c209f6150ab56",
+      "publicRedactedSha256": "ef82a804dc2561cc7a374c544afac33b9684cdec23670dfe2def6bc6c87b1af1",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "exitCode": 0,
+    "sourceUnchanged": true,
+    "actualNativeTests": {
+      "outcomes": [
+        {
+          "method": "testAuthorizedPressTargetMatchesGoldenParityTable",
+          "status": "passed"
+        },
+        {
+          "method": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+          "status": "passed"
+        },
+        {
+          "method": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+          "status": "passed"
+        },
+        {
+          "method": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+          "status": "passed"
+        },
+        {
+          "method": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessKeepsTextInputBindingAcrossContentChanges",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessValidatesAPromotedSwitchIdentifierInItsCoherentWindow",
+          "status": "passed"
+        },
+        {
+          "method": "testSynthesizedPressLabelRequiresTheCapturedLabelSourceInsteadOfAnEqualValue",
+          "status": "passed"
+        }
+      ],
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "allRequestedExactlyOncePassed": true
+    },
+    "recorderExitCode": 0
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "parentDriver": null,
+  "recording": {
+    "path": "../media/integrated-58d-native11-1/video.mp4",
+    "originalSha256": "8379ab58935bc254a5e2e16a52be9c5148f0f8ff567453f94d2a87bea3322274",
+    "bytes": 29989457
+  },
+  "originalPrivateExecutionInputsSha256": "9a797d125ba2031ae9c07a1916b108c9bedb648c9cbd7cc562d96acdd9080cf2",
+  "nativeManifests": [
+    {
+      "role": "private-native-manifest.json",
+      "file": "native-manifests/8ca2fb90a898bd6556f7ed99980e62184619f7232b3869d335f4ac82eef6383d.json",
+      "originalPrivateManifestSha256": "8ca2fb90a898bd6556f7ed99980e62184619f7232b3869d335f4ac82eef6383d"
+    }
+  ]
+}

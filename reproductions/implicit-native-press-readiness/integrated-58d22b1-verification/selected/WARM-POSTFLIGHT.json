@@ -1,0 +1,54 @@
+{
+  "scope": "Separate unmeasured verification after all four timing cases. The parent checks artifact pins before each case and source HEAD/clean after; this receipt verifies current artifacts against every archived case manifest after the full batch.",
+  "success": true,
+  "cases": [
+    {
+      "case": "warm-idle-eec-selector-1",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 631,
+      "runtimeLaunchInputsVerified": 4,
+      "nativeArtifactsVerified": 11,
+      "xctestrunVerified": true,
+      "guestBinaryVerified": true,
+      "guestSourceFilesVerified": 10,
+      "fixtureBinaryVerified": true
+    },
+    {
+      "case": "warm-idle-58d-selector-1",
+      "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "nativeArtifactsVerified": 11,
+      "xctestrunVerified": true,
+      "guestBinaryVerified": true,
+      "guestSourceFilesVerified": 10,
+      "fixtureBinaryVerified": true
+    },
+    {
+      "case": "warm-idle-eec-ref-1",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 631,
+      "runtimeLaunchInputsVerified": 4,
+      "nativeArtifactsVerified": 11,
+      "xctestrunVerified": true,
+      "guestBinaryVerified": true,
+      "guestSourceFilesVerified": 10,
+      "fixtureBinaryVerified": true
+    },
+    {
+      "case": "warm-idle-58d-ref-1",
+      "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "nativeArtifactsVerified": 11,
+      "xctestrunVerified": true,
+      "guestBinaryVerified": true,
+      "guestSourceFilesVerified": 10,
+      "fixtureBinaryVerified": true
+    }
+  ]
+}

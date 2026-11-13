@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "case": "warm-idle-eec-selector-1",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "route": "selector",
+      "samplesMs": [
+        738.2600830000001,
+        363.8385419999995,
+        354.55162499999824
+      ],
+      "medianMs": 363.8385419999995,
+      "expectedNativeReadinessReadsPerPress": 0,
+      "originalPrivateResultSha256": "0c3fff279d1bb0b8a044152c8eddfedd5d3bf51015e53a7e9b5b969e9d21cac0"
+    },
+    {
+      "case": "warm-idle-58d-selector-1",
+      "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+      "route": "selector",
+      "samplesMs": [
+        526.1419999999998,
+        437.9358749999992,
+        405.1311249999999
+      ],
+      "medianMs": 437.9358749999992,
+      "expectedNativeReadinessReadsPerPress": 1,
+      "originalPrivateResultSha256": "715bf0e4f4cb43d5a7a2ce3d21a2420608d76f561b5ea3dfb82cd4c8463cc4e8"
+    },
+    {
+      "case": "warm-idle-eec-ref-1",
+      "source": "eec35e9622c339a21b1a588794254f6bdf50d476",
+      "route": "ref",
+      "samplesMs": [
+        712.87075,
+        344.2741669999996,
+        344.6479159999999
+      ],
+      "medianMs": 344.6479159999999,
+      "expectedNativeReadinessReadsPerPress": 0,
+      "originalPrivateResultSha256": "b66f97a866f766b2d980655cafc19305882540b66c273ec91167e6d43522df1a"
+    },
+    {
+      "case": "warm-idle-58d-ref-1",
+      "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+      "route": "ref",
+      "samplesMs": [
+        498.3003749999998,
+        394.63179200000013,
+        380.00916700000016
+      ],
+      "medianMs": 394.63179200000013,
+      "expectedNativeReadinessReadsPerPress": 1,
+      "originalPrivateResultSha256": "5169c345ac2441d38aa4fa2c808be2625de80b4e8cbacb4c8c40425f09f1dd93"
+    }
+  ],
+  "pairs": [
+    {
+      "route": "selector",
+      "baseMedianMs": 363.8385419999995,
+      "headMedianMs": 437.9358749999992,
+      "differenceMs": 74.09733299999971
+    },
+    {
+      "route": "ref",
+      "baseMedianMs": 344.6479159999999,
+      "headMedianMs": 394.63179200000013,
+      "differenceMs": 49.98387600000024
+    }
+  ],
+  "scope": "Uninstrumented whole SDK command; native transport warmed only with ordinary read-only alert get. Each measured press has a fresh normal session record after close/reopen at the same alias, no prior input. First sample effects and all raw samples remain. No latency guarantee or sole-query-cost causal claim. Baseline is requested eec, not current main.",
+  "order": "Base then head per route; selector pair before ref pair. Non-interleaved three-sample groups.",
+  "beforeAndAfterQualification": "Parent verifies all input artifacts before each case and only source HEAD/clean after each. The separate, unmeasured WARM-POSTFLIGHT verifies complete runtime, launchers, native artifacts/XCTRun, guest binary/sources and fixture against every archived case after all four cases."
+}

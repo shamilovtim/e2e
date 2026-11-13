@@ -1,0 +1,82 @@
+{
+  "head": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "base": "cc3b99b38530027d734626e17fec9734743d2c66",
+  "mergeBase": "cc3b99b38530027d734626e17fec9734743d2c66",
+  "tree": "f82efe51c3e70994fb4619d95edaf153b9cf7d0c",
+  "sourceClean": true,
+  "backup": "codex/proof-contributor93a-pre-cc3",
+  "onlyDifferenceFromIndependentThreeWayConflictTree": [
+    "website/docs/docs/commands.md"
+  ],
+  "manualResolution": "Retain both upstream settle/verify-view paragraphs and the final native-readiness/refusal paragraphs. No runtime conflict was manually resolved.",
+  "criticalOwnerComparisons": [
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts",
+      "byteEqual93a": true,
+      "oldSha256": "578b80cdf1cad30fcf0f497bb2e4ba56a0ef19ed32b9386901beeed299483f8c",
+      "newSha256": "578b80cdf1cad30fcf0f497bb2e4ba56a0ef19ed32b9386901beeed299483f8c"
+    },
+    {
+      "path": "packages/contracts/src/snapshot-private-evidence.ts",
+      "byteEqual93a": true,
+      "oldSha256": "2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a",
+      "newSha256": "2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a"
+    },
+    {
+      "path": "packages/capture-kit/src/ios-snapshot-engine/rows.ts",
+      "byteEqual93a": true,
+      "oldSha256": "69862b2fda7aebb1f5d1c956827e5a2263b660e6bc8b190db8e35e3245cd8549",
+      "newSha256": "69862b2fda7aebb1f5d1c956827e5a2263b660e6bc8b190db8e35e3245cd8549"
+    },
+    {
+      "path": "packages/platform-apple/src/runtime-selector-query.ts",
+      "byteEqual93a": true,
+      "oldSha256": "c703ceb351e494057f135e0e21525276a3834fcffd0eb15959846db65fdc394c",
+      "newSha256": "c703ceb351e494057f135e0e21525276a3834fcffd0eb15959846db65fdc394c"
+    },
+    {
+      "path": "packages/platform-apple/src/snapshot-presentation.ts",
+      "byteEqual93a": true,
+      "oldSha256": "9de385e7ade1a790bcd2e83c6632ba0e6c3ed4e02dc6afeeb825b8330134b37b",
+      "newSha256": "9de385e7ade1a790bcd2e83c6632ba0e6c3ed4e02dc6afeeb825b8330134b37b"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift",
+      "byteEqual93a": true,
+      "oldSha256": "1a3b89f5550300769195c880365f06a80a149ed5e1bb1e196e4448501cabe784",
+      "newSha256": "1a3b89f5550300769195c880365f06a80a149ed5e1bb1e196e4448501cabe784"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift",
+      "byteEqual93a": true,
+      "oldSha256": "d68a5fb065ec89a8bb9c0d7f39632584f23ecc2d7a1513212cfe379c636605a1",
+      "newSha256": "d68a5fb065ec89a8bb9c0d7f39632584f23ecc2d7a1513212cfe379c636605a1"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift",
+      "byteEqual93a": true,
+      "oldSha256": "cf67fc7343c02d4d77a872cb0eb0ba1ec29070f8130e64ba2a930ab5287b437b",
+      "newSha256": "cf67fc7343c02d4d77a872cb0eb0ba1ec29070f8130e64ba2a930ab5287b437b"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+      "byteEqual93a": false,
+      "oldSha256": "ab2179e8e276e3cea4971e12fb8a942399fac48e5bbf014c6b1cd5b65094f9ab",
+      "newSha256": "763bd7a5b9e33df1a125a1fefa084e3930d51ce792b04ca220e47780f1c35739"
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift",
+      "byteEqual93a": true,
+      "oldSha256": "70b244e0da9f91849b1638ad01e2c4568a5c80db9b8b31f6af5332c8bb4c625c",
+      "newSha256": "70b244e0da9f91849b1638ad01e2c4568a5c80db9b8b31f6af5332c8bb4c625c"
+    },
+    {
+      "path": "packages/kernel/src/snapshot.ts",
+      "byteEqual93a": false,
+      "oldSha256": "25ebef86c4e314b394dc0a382aa8945642aaaa2bba1d336775964a5bea4c6d8a",
+      "newSha256": "7185b0c7f9f5e2156af0653032a7e7d8b6128f9b705b82a5cbed5a75ce420757"
+    }
+  ],
+  "patchSha256": "df68d56fddfd4f646d65ab38ef3ed4be817e9c5812df6410c96f9753e928d819",
+  "rangeDiffSha256": "540f69a546fcbaa562e17fe1ac199611d10b7de01d9b55ac92d5b37fe8c85e7a"
+}

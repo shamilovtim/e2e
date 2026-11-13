@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 3,
+  "packageVersion": "0.21.38-dev",
+  "runnerSourceFingerprint": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "xcodeVersion": "27.2",
+  "xcodeBuildVersion": "27B52",
+  "sdkName": "iphonesimulator",
+  "sdkVersion": "27.2",
+  "sdkBuildVersion": "24B8118",
+  "platformName": "iOS",
+  "deviceKind": "simulator",
+  "target": "mobile",
+  "buildDestinationFamily": "generic/platform=iOS Simulator",
+  "runnerBundleBuildSettings": [
+    "AGENT_DEVICE_IOS_RUNNER_APP_BUNDLE_ID=dev.e2e.semanticfixture",
+    "AGENT_DEVICE_IOS_RUNNER_TEST_BUNDLE_ID=dev.e2e.semanticfixture.uitests"
+  ],
+  "runnerSigningBuildSettings": [],
+  "runnerPerformanceBuildSettings": [
+    "COMPILER_INDEX_STORE_ENABLE=NO",
+    "ENABLE_CODE_COVERAGE=NO",
+    "ONLY_ACTIVE_ARCH=YES",
+    "ENABLE_PREVIEWS=NO",
+    "ENABLE_DEBUG_DYLIB=NO"
+  ],
+  "runnerArchBuildSettings": [
+    "ARCHS=arm64"
+  ],
+  "runnerSandboxBuildArgs": [
+    "-IDEPackageSupportDisableManifestSandbox=1",
+    "-IDEPackageSupportDisablePluginExecutionSandbox=1",
+    "ENABLE_USER_SCRIPT_SANDBOXING=NO",
+    "OTHER_SWIFT_FLAGS=$(inherited) -disable-sandbox -D AGENT_DEVICE_RUNNER_ISOLATION_CANARY -D AGENT_DEVICE_RUNNER_UNIT_TESTS",
+    "OTHER_CFLAGS=$(inherited) -D AGENT_DEVICE_RUNNER_UNIT_TESTS"
+  ],
+  "artifacts": {
+    "xctestrunSize": 19950,
+    "xctestrunDigest": "4ecb01dd9651f0dfcebdad6ff198af765c0be62b666a10b146db8e322f5b51fe",
+    "entries": [
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/_CodeSignature/CodeResources",
+        "size": 1869,
+        "mode": 420,
+        "digest": "0fe34b6cfdb6f4bc9000402a79792ec664e8ebc3dfc54795b2ae194e5ede5b88"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/AgentDeviceRunner",
+        "size": 211984,
+        "mode": 493,
+        "digest": "fdf056571002c5cdc857557d76c6217f454837c9a603ddd5b3cf0881b55ce7de"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/Info.plist",
+        "size": 1394,
+        "mode": 420,
+        "digest": "7ee33a8bcf3efbe224cec0933f65e0f332f069aa57bf7655d4f194cb98ce8d27"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/_CodeSignature/CodeResources",
+        "size": 2799,
+        "mode": 420,
+        "digest": "2c57c82e12ad506c1382d3e7aa2fe13f8afce518d5cd5e16697bb73e0b6c74a2"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/AgentDeviceRunnerUITests-Runner",
+        "size": 95248,
+        "mode": 493,
+        "digest": "7c59262ec4053ab06c501dc03f1e5345bdada68f25419cb453dd6520623ef33a"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/Info.plist",
+        "size": 10935,
+        "mode": 420,
+        "digest": "1aa85f485ca2bbfa16d04a173fbcba5023a7d1ba94cfb60c51a595f2d8034531"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PkgInfo",
+        "size": 8,
+        "mode": 420,
+        "digest": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/_CodeSignature/CodeResources",
+        "size": 1798,
+        "mode": 420,
+        "digest": "69bf4d9510ef6e755034158e86fb6c0f18b825e85efd2e1940d667fded6cab69"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/AgentDeviceRunnerUITests",
+        "size": 13574048,
+        "mode": 493,
+        "digest": "c83b9237e497e8d03115571f825f67db99c28cf1f3b66ad02539827eb3ec07d3"
+      },
+      {
+        "path": "Build/Products/Debug-iphonesimulator/AgentDeviceRunnerUITests-Runner.app/PlugIns/AgentDeviceRunnerUITests.xctest/Info.plist",
+        "size": 789,
+        "mode": 420,
+        "digest": "57be75c30fd8d3ad9c0fb4a907c579a0d6d8b436df55999f6bcc008768f84ce4"
+      }
+    ]
+  },
+  "originalPrivateManifestSha256": "8ca2fb90a898bd6556f7ed99980e62184619f7232b3869d335f4ac82eef6383d"
+}
