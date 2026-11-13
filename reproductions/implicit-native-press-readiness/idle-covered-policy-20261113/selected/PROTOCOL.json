@@ -1,0 +1,27 @@
+{
+  "baseline": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "control": "31062db819d790119c35e62939e1793f94a209db",
+  "controlPatchSha256": "7c94f70b2321e2e8ba348b65d8299f752015cf4c30241c476a009443826337d8",
+  "controlIsExperimentalNegativeOnly": true,
+  "targetRoute": "ordinary SDK selector press",
+  "sourceOrder": [
+    "always-read",
+    "idle-skip"
+  ],
+  "sameDeclaredCallerAbortMs": 2000,
+  "defaultDaemonDeadlineProof": false,
+  "nativeBuiltAt": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "nativeFingerprint": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "nativeRebuildPerformed": false,
+  "pointProofScope": "Public setup/fresh rectangles match; only fresh B actual captured native full rectangle and resolved point are observed. Raw A private binding is not claimed.",
+  "inputCountProof": "After reading target log, require unchanged inode and string length/file size at least saved offset; rotation/truncation makes proof unavailable.",
+  "finalClassification": "After Node observer/session finalization and Python recorder/group/source cleanup, any failure clears qualified/safety/counterexample flags. The observed unsafe recipient remains a separate factual field. Control remains failed safety/exit1.",
+  "callerClock": "Start clock/timer after target phase mark; explicitly await the common abort promise in both arms, recording whether request completed earlier.",
+  "originalPrivateFrozenPlanSha256": "707cb14669013d7a0d650ff0cfa4d7248bbfb00d415e8b971fa68020f02fac94",
+  "deviceEnvironment": {
+    "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+    "deviceType": "com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro",
+    "createdByThisTask": true,
+    "bootedByThisTask": true
+  }
+}

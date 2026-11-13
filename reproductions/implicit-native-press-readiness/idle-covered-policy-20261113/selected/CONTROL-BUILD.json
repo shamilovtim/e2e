@@ -1,0 +1,30 @@
+{
+  "baseline": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "control": "31062db819d790119c35e62939e1793f94a209db",
+  "controlTree": "d0c6f31f951c9cc5f6a04798207ee05e3cac2ab4",
+  "controlParent": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "sourceCleanBeforeCommitAndAfterBuild": true,
+  "changedSourceFiles": [
+    "packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts",
+    "packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts"
+  ],
+  "controlPatchSha256": "7c94f70b2321e2e8ba348b65d8299f752015cf4c30241c476a009443826337d8",
+  "frozenInstallExitCode": 0,
+  "fullFormatExitCode": 0,
+  "buildExitCode": 0,
+  "buildCommand": "caffeinate -i pnpm build",
+  "buildWrapperArchivedBeforeRun": false,
+  "buildCommandScope": "Executed directly through the recorded tool call after committing the exact control source; no separate build wrapper was used.",
+  "runtimeFiles": 632,
+  "emittedChangedFiles": [
+    "dist/src/runtime-factory.js"
+  ],
+  "nativeFingerprintBaseline": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "nativeFingerprintControl": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "nativeFingerprintEqual": true,
+  "nativeSourceDiffEmpty": true,
+  "nativeBuiltAt": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "nativeRebuildPerformed": false,
+  "guestSourceAndBinaryVerified": true,
+  "guestOriginalBuildCommitUnknown": true
+}

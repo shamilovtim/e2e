@@ -1,0 +1,22 @@
+[
+  {
+    "case": "idle-covered-always-read-selector-1",
+    "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+    "selectedFile": "cases/idle-covered-always-read-selector-1.json",
+    "recordingFile": "../media/idle-covered-always-read-selector-1/video.mp4",
+    "originalPrivateResultSha256": "5bf6e00d9b2137eab21cd7a492418f97c7aa72a6cd4f2057942d333355bdf7c7",
+    "safetyValid": true,
+    "qualifiedComparison": true,
+    "counterexampleObserved": false
+  },
+  {
+    "case": "idle-covered-idle-skip-selector-1",
+    "source": "31062db819d790119c35e62939e1793f94a209db",
+    "selectedFile": "cases/idle-covered-idle-skip-selector-1.json",
+    "recordingFile": "../media/idle-covered-idle-skip-selector-1/video.mp4",
+    "originalPrivateResultSha256": "523efc07eac263c3245cf7fabac390e20d4824d2f481492f3295fb9aa421ecf0",
+    "safetyValid": false,
+    "qualifiedComparison": true,
+    "counterexampleObserved": true
+  }
+]

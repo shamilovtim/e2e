@@ -1,0 +1,40 @@
+[
+  {
+    "case": "idle-covered-always-read-selector-1",
+    "sha256": "c8aa05bc014bf22df8765834e810c137085464dfd7946c9ba8419288588bce46",
+    "bytes": 2812208,
+    "decodedVideoSamples": 271,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 15.968333333333334
+  },
+  {
+    "case": "idle-covered-idle-skip-selector-1",
+    "sha256": "3714f0c573312c7f7561c289599a3baaa19eefe6b179cc587620de86cdd4ece3",
+    "bytes": 2869570,
+    "decodedVideoSamples": 307,
+    "decodeErrors": 0,
+    "decoder": "Apple AVFoundation AVAssetReader BGRA output",
+    "firstFrame": [
+      1206,
+      2622
+    ],
+    "firstSampleSeconds": 0,
+    "fullStreamDecoded": true,
+    "lastFrame": [
+      1206,
+      2622
+    ],
+    "lastSampleSeconds": 14.511666666666667
+  }
+]

@@ -1,0 +1,46 @@
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts b/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts
+index 30ff9ff..d2d0f94 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts
+@@ -52,12 +52,12 @@ export async function screenMotion(
+   options: CommandContext,
+   resolvedNode: SnapshotNode,
+   resolvedSurface: SurfaceScopedNodes | undefined,
+-): Promise<{ kind: 'pass' } | { kind: 'wait'; wait: MotionWait }> {
++): Promise<{ kind: 'idle' | 'stationary' | 'not-recent' } | { kind: 'wait'; wait: MotionWait }> {
+   // A session store that carries no baseline is the non-daemon case: an in-process runtime owns no
+   // mutation history, and a check with no history has nothing to worry about.
+   const session = await runtime.sessions.get(options.session ?? 'default');
+   const baseline = session?.movingTargetBaseline;
+-  if (!baseline) return { kind: 'pass' };
++  if (!baseline) return { kind: 'idle' };
+   const policy = MOTION_POLICIES[runtime.backend.platform === 'android' ? 'android' : 'default'];
+   const nowMs = now(runtime);
+   const decision = movingTargetGateDecision({
+@@ -66,7 +66,7 @@ export async function screenMotion(
+     nowMs,
+     windowMs: policy.windowMs,
+   });
+-  if (decision.kind !== 'recheck') return { kind: 'pass' };
++  if (decision.kind !== 'recheck') return decision;
+   const firstLookAtMs = policy.firstLook === 'after-window' ? nowMs + decision.waitMs : nowMs;
+   return {
+     kind: 'wait',
+diff --git a/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts b/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts
+index da642ce..fcd46bf 100644
+--- a/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts
++++ b/packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts
+@@ -50,8 +50,11 @@ export async function admitResolvedTarget(
+   const screening = await budget.read(() =>
+     screenMotion(runtime, options, resolved.node!, resolved.preAction),
+   );
+-  const native = nativeReadiness === 'when-unknown' && !!runtime.backend.readPressReadiness;
+-  if (screening.kind === 'pass' && !native) {
++  const native =
++    nativeReadiness === 'when-unknown' &&
++    screening.kind !== 'idle' &&
++    !!runtime.backend.readPressReadiness;
++  if (screening.kind !== 'wait' && !native) {
+     assertWithinBudget(budget);
+     return resolved;
+   }

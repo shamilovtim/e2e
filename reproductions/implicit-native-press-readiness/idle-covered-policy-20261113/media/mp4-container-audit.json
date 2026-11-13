@@ -1,0 +1,48 @@
+[
+  {
+    "case": "idle-covered-always-read-selector-1",
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "wide",
+      "mdat"
+    ],
+    "movieBoxes": [
+      "mvhd",
+      "trak"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "rawMetadata": [
+      {
+        "kind": "track udta/tagc",
+        "value": "com.apple.policy.screenrecording.1",
+        "bytes": 42
+      }
+    ]
+  },
+  {
+    "case": "idle-covered-idle-skip-selector-1",
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "wide",
+      "mdat"
+    ],
+    "movieBoxes": [
+      "mvhd",
+      "trak"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "rawMetadata": [
+      {
+        "kind": "track udta/tagc",
+        "value": "com.apple.policy.screenrecording.1",
+        "bytes": 42
+      }
+    ]
+  }
+]

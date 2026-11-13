@@ -1,0 +1,30 @@
+{
+  "scope": "Separate unmeasured verification after both idle-cover comparison cases. The parent checks artifact pins before each case and source HEAD/clean after; this receipt verifies current artifacts against every archived case manifest after the two-case comparison.",
+  "success": true,
+  "cases": [
+    {
+      "case": "idle-covered-always-read-selector-1",
+      "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "nativeArtifactsVerified": 11,
+      "xctestrunVerified": true,
+      "guestBinaryVerified": true,
+      "guestSourceFilesVerified": 10,
+      "fixtureBinaryVerified": true
+    },
+    {
+      "case": "idle-covered-idle-skip-selector-1",
+      "source": "31062db819d790119c35e62939e1793f94a209db",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "nativeArtifactsVerified": 11,
+      "xctestrunVerified": true,
+      "guestBinaryVerified": true,
+      "guestSourceFilesVerified": 10,
+      "fixtureBinaryVerified": true
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "script": "dist/src/runtime-factory.js",
+  "scriptSha256": "37972126670895d768f42a51caa6480c5a84c14ebae3d5ff18d3350d951260e2",
+  "sourceBytes": 84678,
+  "mechanism": "V8 conditional breakpoints serialize read-only observations and the captured binding through the same pure binding lookup used by readiness; conditions always return false. Built and loaded source bytes are verified unchanged. Instrumented timings are not performance measurements.",
+  "startupPauses": 1,
+  "unexpectedPauses": 0,
+  "loadedSourceVerified": true,
+  "conditionsAlwaysFalse": true,
+  "allRequestedPointsBound": true,
+  "sourceVerificationError": false,
+  "sourceFileStillMatches": true,
+  "cleanup": {
+    "commandExit": 0,
+    "daemonExit": 0,
+    "daemonSignal": null,
+    "escalated": false
+  },
+  "originalPrivateTraceSha256": "bcfe857d0a9a687dded362ab234fd24844981b3892cc03ab026fb6a16c00642e",
+  "points": [
+    {
+      "event": "motion-baseline",
+      "lineNumber": 0,
+      "columnNumber": 29749,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-baseline\",present:!!i}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-baseline\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29749,
+        29775
+      ],
+      "functionSpan": [
+        29649,
+        30116
+      ],
+      "requestedSnippet": "if(!i)return{kind:`idle`};"
+    },
+    {
+      "event": "motion-decision",
+      "lineNumber": 0,
+      "columnNumber": 29941,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-decision\",kind:s.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-decision\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29941,
+        29972
+      ],
+      "functionSpan": [
+        29649,
+        30116
+      ],
+      "requestedSnippet": "if(s.kind!==`recheck`)return s;"
+    },
+    {
+      "event": "admission-screen",
+      "lineNumber": 0,
+      "columnNumber": 32593,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"admission-screen\",screening:o.kind,targetKind:t.target.kind,point:r.point,rect:r.node.rect,binding:ci(r)}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"admission-screen\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        32593,
+        32662
+      ],
+      "functionSpan": [
+        32412,
+        32788
+      ],
+      "requestedSnippet": "s=i===`when-unknown`&&o.kind!==`idle`&&!!e.backend.readPressReadiness"
+    },
+    {
+      "event": "native-readiness",
+      "lineNumber": 0,
+      "columnNumber": 35829,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"native-readiness\",generation:n.generation,liveGeneration:n.live.generation,state:n.live.state,binding:ci(n.resolved)}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"native-readiness\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        35829,
+        35859
+      ],
+      "functionSpan": [
+        35448,
+        36027
+      ],
+      "requestedSnippet": "if(i.state===`ready`)return!0;"
+    },
+    {
+      "event": "motion-look",
+      "lineNumber": 0,
+      "columnNumber": 34971,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-look\",generation:r.generation,verdict:s.kind,looksBeforeVerdict:r.motion.looks}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-look\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        34971,
+        35088
+      ],
+      "functionSpan": [
+        34644,
+        35448
+      ],
+      "requestedSnippet": "if(a.looks++,a.previous=o,s.kind===`pass`&&s.admitted.kind!==`point`)return r.resolved=s.admitted,r.motion=void 0,!0;"
+    },
+    {
+      "event": "canonical-refresh-start",
+      "lineNumber": 0,
+      "columnNumber": 36056,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-start\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        36056,
+        36070
+      ],
+      "functionSpan": [
+        36027,
+        36383
+      ],
+      "requestedSnippet": "r.live=void 0;"
+    },
+    {
+      "event": "canonical-refresh-complete",
+      "lineNumber": 0,
+      "columnNumber": 36344,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-complete\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        36344,
+        36382
+      ],
+      "functionSpan": [
+        36027,
+        36383
+      ],
+      "requestedSnippet": "s.kind===`wait`&&(r.motion=ni(s.wait))"
+    },
+    {
+      "event": "capture-start",
+      "lineNumber": 0,
+      "columnNumber": 18245,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-start\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        18245,
+        18356
+      ],
+      "functionSpan": [
+        18221,
+        18638
+      ],
+      "requestedSnippet": "if(!e.backend.captureSnapshot)throw new a(`UNSUPPORTED_OPERATION`,`snapshot is not supported by this backend`);"
+    },
+    {
+      "event": "capture-complete",
+      "lineNumber": 0,
+      "columnNumber": 18578,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-complete\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        18578,
+        18637
+      ],
+      "functionSpan": [
+        18221,
+        18638
+      ],
+      "requestedSnippet": "return await e.sessions.set({...i,snapshot:o}),{snapshot:o}"
+    },
+    {
+      "event": "tap-dispatch",
+      "lineNumber": 0,
+      "columnNumber": 43008,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"tap-dispatch\",targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"tap-dispatch\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        43008,
+        43182
+      ],
+      "functionSpan": [
+        42398,
+        43276
+      ],
+      "requestedSnippet": "d=await e.backend.tap(N(e,t),l,{button:t.button,count:t.count,intervalMs:t.intervalMs,holdMs:t.holdMs,jitterPx:t.jitterPx,doubleTap:t.doubleTap,...u?{pointObser"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "phase": "intentional-cover-setup",
+      "event": "phase",
+      "name": "intentional-cover-setup"
+    },
+    {
+      "sequence": 2,
+      "phase": "intentional-cover-setup",
+      "event": "capture-start"
+    },
+    {
+      "sequence": 3,
+      "phase": "intentional-cover-setup",
+      "event": "capture-complete"
+    },
+    {
+      "sequence": 4,
+      "phase": "intentional-cover-setup",
+      "event": "motion-baseline",
+      "present": false
+    },
+    {
+      "sequence": 5,
+      "phase": "intentional-cover-setup",
+      "event": "admission-screen",
+      "screening": "idle",
+      "targetKind": "selector",
+      "point": {
+        "x": 194,
+        "y": 224
+      },
+      "rect": {
+        "x": 24,
+        "y": 200,
+        "width": 340,
+        "height": 48
+      },
+      "binding": {
+        "type": 9,
+        "identifier": "Open slow fade overlay",
+        "label": "Open slow fade overlay",
+        "rect": {
+          "x": 24,
+          "y": 200,
+          "width": 340,
+          "height": 48
+        }
+      }
+    },
+    {
+      "sequence": 6,
+      "phase": "intentional-cover-setup",
+      "event": "tap-dispatch",
+      "targetKind": "selector"
+    },
+    {
+      "sequence": 7,
+      "phase": "fresh-record-open",
+      "event": "phase",
+      "name": "fresh-record-open"
+    },
+    {
+      "sequence": 8,
+      "phase": "target",
+      "event": "phase",
+      "name": "target"
+    },
+    {
+      "sequence": 9,
+      "phase": "target",
+      "event": "capture-start"
+    },
+    {
+      "sequence": 10,
+      "phase": "target",
+      "event": "capture-complete"
+    },
+    {
+      "sequence": 11,
+      "phase": "target",
+      "event": "motion-baseline",
+      "present": false
+    },
+    {
+      "sequence": 12,
+      "phase": "target",
+      "event": "admission-screen",
+      "screening": "idle",
+      "targetKind": "selector",
+      "point": {
+        "x": 194,
+        "y": 384
+      },
+      "rect": {
+        "x": 24,
+        "y": 360,
+        "width": 340,
+        "height": 48
+      },
+      "binding": {
+        "type": 9,
+        "identifier": "Underlying action",
+        "label": "Underlying action",
+        "rect": {
+          "x": 24,
+          "y": 360,
+          "width": 340,
+          "height": 48
+        }
+      }
+    },
+    {
+      "sequence": 13,
+      "phase": "target",
+      "event": "tap-dispatch",
+      "targetKind": "selector"
+    },
+    {
+      "sequence": 14,
+      "phase": "after-target",
+      "event": "phase",
+      "name": "after-target"
+    },
+    {
+      "sequence": 15,
+      "phase": "intentional-cover-release",
+      "event": "phase",
+      "name": "intentional-cover-release"
+    },
+    {
+      "sequence": 16,
+      "phase": "intentional-cover-release",
+      "event": "capture-start"
+    },
+    {
+      "sequence": 17,
+      "phase": "intentional-cover-release",
+      "event": "capture-complete"
+    },
+    {
+      "sequence": 18,
+      "phase": "intentional-cover-release",
+      "event": "motion-baseline",
+      "present": true
+    },
+    {
+      "sequence": 19,
+      "phase": "intentional-cover-release",
+      "event": "motion-decision",
+      "kind": "not-recent"
+    },
+    {
+      "sequence": 20,
+      "phase": "intentional-cover-release",
+      "event": "admission-screen",
+      "screening": "not-recent",
+      "targetKind": "selector",
+      "point": {
+        "x": 194,
+        "y": 514
+      },
+      "rect": {
+        "x": 24,
+        "y": 490,
+        "width": 340,
+        "height": 48
+      },
+      "binding": {
+        "type": 9,
+        "identifier": "Close overlay",
+        "label": "Close overlay",
+        "rect": {
+          "x": 24,
+          "y": 490,
+          "width": 340,
+          "height": 48
+        }
+      }
+    },
+    {
+      "sequence": 21,
+      "phase": "intentional-cover-release",
+      "event": "native-readiness",
+      "binding": {
+        "type": 9,
+        "identifier": "Close overlay",
+        "label": "Close overlay",
+        "rect": {
+          "x": 24,
+          "y": 490,
+          "width": 340,
+          "height": 48
+        }
+      },
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "ready"
+    },
+    {
+      "sequence": 22,
+      "phase": "intentional-cover-release",
+      "event": "tap-dispatch",
+      "targetKind": "selector"
+    }
+  ],
+  "scope": "Actual breakpoint/script identifiers, process identities, runtime URLs, ports and host timing fields are omitted. Ordered events, actual source-relative locations and read-only binding observations remain."
+}
