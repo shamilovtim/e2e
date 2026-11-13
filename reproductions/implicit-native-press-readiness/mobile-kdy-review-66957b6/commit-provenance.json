@@ -1,0 +1,11 @@
+{
+  "head": "66957b62067bfd5cb02b1b5abc4c1885e1df3f6c",
+  "base": "d45a6e1551629f0f2dd165b739d6970a059febeb",
+  "patch_sha256": "4b5442972af93bc1d49f17b97ffcaffba87c8e28cded031bd56f1492061d3689",
+  "committed_patch_matches_reviewed_and_tested_bytes": true,
+  "source_worktree_clean": true,
+  "raw_validation_receipt": "validation.json",
+  "native_run": false,
+  "source_pushed": true,
+  "validation_attribution": "The separately installed checkout ran at base d45 plus the exact reviewed patch. Committed bytes are independently verified identical; no native rerun or claim that historical UIKit runs used the new commit."
+}

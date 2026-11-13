@@ -1,0 +1,97 @@
+{
+  "base_head": "d45a6e1551629f0f2dd165b739d6970a059febeb",
+  "patch_sha256": "4b5442972af93bc1d49f17b97ffcaffba87c8e28cded031bd56f1492061d3689",
+  "started_at": "2026-11-13T06:41:22+00:00",
+  "node": "v24.22.0",
+  "pnpm": "12.3.4",
+  "sdk_version": "0.21.36",
+  "keep_awake": "caffeinate -i scoped to this verification command",
+  "native_run": false,
+  "steps": [
+    {
+      "name": "install",
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "exit": 0,
+      "seconds": 0.21,
+      "log": "install.log"
+    },
+    {
+      "name": "build-e2e",
+      "command": [
+        "pnpm",
+        "--filter",
+        "e2e",
+        "run",
+        "build"
+      ],
+      "exit": 0,
+      "seconds": 0.76,
+      "log": "build-e2e.log"
+    },
+    {
+      "name": "build-mobile",
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "run",
+        "build"
+      ],
+      "exit": 0,
+      "seconds": 0.29,
+      "log": "build-mobile.log"
+    },
+    {
+      "name": "focused-tests",
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/engine.test.ts",
+        "tests/unit/support.test.ts",
+        "tests/unit/input-cancellation.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.97,
+      "log": "focused-tests.log",
+      "tests_passed": 247,
+      "files_passed": 3
+    },
+    {
+      "name": "mobile-tests",
+      "command": [
+        "pnpm",
+        "--filter",
+        "@e2e-dev/mobile",
+        "run",
+        "test"
+      ],
+      "exit": 0,
+      "seconds": 1.9,
+      "log": "mobile-tests.log",
+      "tests_passed": 524,
+      "files_passed": 21
+    },
+    {
+      "name": "repository-check",
+      "command": [
+        "pnpm",
+        "check"
+      ],
+      "exit": 0,
+      "seconds": 8.38,
+      "log": "repository-check.log",
+      "mobile_typecheck_passed": true
+    }
+  ],
+  "finished_at": "2026-11-13T06:41:36+00:00",
+  "all_checks_passed": true,
+  "verified_diff_matches_reviewed_patch": true
+}
