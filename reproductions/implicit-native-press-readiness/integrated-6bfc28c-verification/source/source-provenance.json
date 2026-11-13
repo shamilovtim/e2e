@@ -1,0 +1,18 @@
+{
+  "head": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "base": "ddbfc855661fa9d29b8c836057b7f5b099bcad44",
+  "tree": "80917c012424b1389414adf15bea3d2855d74150",
+  "patchSha256": "946299d0f143ca399392532d99d200e034f8f5d68e238f827081286aa0a47ebe",
+  "patchAppliesToBaseAndRecreatesExactTree": true,
+  "files": 102,
+  "added": 3942,
+  "deleted": 265,
+  "gross": 4207,
+  "integrationReview": "Root and independent review cleared the exact rebased source. Sole fixture conflict preserves both upstream back-navigation fixtures and the contributor fixture; all eighteen critical owners remain byte-identical to58. Experimental idle skip is not adopted.",
+  "validation": "Exact gate passed at the clean rebased commit: all15 runnable stages;19,844 unit tests passed with10 skipped,413 related passed. Seven added skips are new upstream Linux-only tests on Darwin. Fresh arm64 unit/production native builds passed. Fourteen selected native methods passed exactly once with zero failures/skips;17 live daemon cases passed, including six actual GuestAX cases,10 lifecycle/motion/idle cases and unchanged Settings replay on first attempt (seven steps,zero healed,10.412seconds). Settings post-open observation remained unobservable locally. Separate postflight matched complete632runtime/applicable4launchers/native11artifacts+XCTRun/guest10sources+cachedbinary/installedgenericfixtures. All18 original recordings decoded fully (5,881 samples,zero errors);36 endpoints inspected, video-only/no AV metadata/only standard screen-recording policy tag.",
+  "historicalAttribution": "Existing58 and310 recordings, timings and negative controls retain their original source/native attribution.",
+  "publication": "Public PR branch still e66; workflow-authorization publishing restriction remains unresolved.",
+  "policy": "Idle lifecycle correctness decision and coherent size exception remain unresolved; accepted ADR text is unchanged.",
+  "nativeFingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e",
+  "guestBridgeBuildAttribution": "Cached source/binary matched;original build commit unknown."
+}

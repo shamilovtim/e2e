@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-11-13T23:30:06.396937+00:00",
+  "ownershipRecordSha256": "9e9e46b133f2d02d6c308314a6cb10fe87465086412b0adb9419d42ea526714f",
+  "createdByThisTask": true,
+  "bootedByThisTask": true,
+  "exactlyOneOwnedPhone": true,
+  "stateBefore": "Booted",
+  "shutdownConfirmed": true,
+  "authoritativelyAbsentFromSimctl": true,
+  "success": true,
+  "finishedAt": "2026-11-13T23:30:07.814728+00:00",
+  "commandExitCodes": {
+    "shutdown": 0,
+    "delete": 0
+  },
+  "residualTaskProcessesBefore": 0,
+  "residualTaskProcessesAfter": 0,
+  "otherDevicesAndCachesPreserved": true,
+  "preflightQualification": "Initial cleanup preflight stopped before any shutdown/delete action because the task-owned unit fixture host remained alive. Its exact installed identity and binary were verified; only that fixture application was terminated successfully. The unchanged approved cleanup then passed. This was cleanup triage, not a product/case failure or a test rerun.",
+  "rootIndependentFreshAbsenceCheck": true
+}

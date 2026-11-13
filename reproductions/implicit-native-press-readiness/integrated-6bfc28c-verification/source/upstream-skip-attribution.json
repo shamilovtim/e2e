@@ -1,0 +1,12 @@
+{
+  "previousUnitSkipped": 3,
+  "currentUnitSkipped": 10,
+  "additionalSkipped": 7,
+  "reason": "New upstream Linux-only tests are skipped on Darwin.",
+  "upstreamPullRequest": "https://github.com/callstack/agent-device/pull/4438",
+  "casesByOwner": {
+    "host-process-liveness.test.ts": 6,
+    "owner-identity.test.ts": 1
+  },
+  "ourTestExpectationsChanged": false
+}

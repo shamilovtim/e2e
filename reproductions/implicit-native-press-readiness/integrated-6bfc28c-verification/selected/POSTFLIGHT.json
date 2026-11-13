@@ -1,0 +1,433 @@
+{
+  "success": true,
+  "scope": "Separate unmeasured after all18 cases. Complete runtime and applicable launch/native/guest inputs match each archived case. Native-only suite does not load SDK launchers or guest bridge. Installed generic fixtures and unit host also verified.",
+  "cases": [
+    {
+      "case": "integrated-ddb-native14-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 0,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": null,
+      "nativeOnlyRuntimeScope": true
+    },
+    {
+      "case": "integrated-ddb-guest-label-ref-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-fixture-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        },
+        {
+          "role": "private-production-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-guest-label-selector-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-fixture-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        },
+        {
+          "role": "private-production-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-guest-identifier-ref-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-fixture-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        },
+        {
+          "role": "private-production-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-guest-identifier-selector-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-fixture-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        },
+        {
+          "role": "private-production-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-guest-switch-ref-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-fixture-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        },
+        {
+          "role": "private-production-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-guest-switch-selector-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-fixture-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        },
+        {
+          "role": "private-production-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-settings-original-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-lifecycle-selector-ready-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-lifecycle-ref-ready-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-lifecycle-selector-deadline-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-lifecycle-ref-deadline-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-lifecycle-selector-cancel-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-lifecycle-ref-cancel-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-motion-selector-ready-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-motion-ref-ready-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-idle-selector-ready-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    },
+    {
+      "case": "integrated-ddb-idle-ref-ready-1",
+      "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+      "sourceHeadAndCleanVerified": true,
+      "runtimeFilesVerified": 632,
+      "runtimeLaunchInputsVerified": 4,
+      "native": [
+        {
+          "role": "private-native-manifest.json",
+          "entries": 11,
+          "xctestrunVerified": true,
+          "fingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e"
+        }
+      ],
+      "guest": {
+        "sourceFiles": 10,
+        "binaryVerified": true,
+        "originalBuildCommitUnknown": true
+      },
+      "nativeOnlyRuntimeScope": false
+    }
+  ],
+  "installedFixtures": [
+    {
+      "app": "dev.e2e.overlay1563",
+      "installedBinarySha256": "4daf9e0cff9511f6282ead5e7a4bd61cb057d4428c586605996a941c8b1b39f2",
+      "verified": true
+    },
+    {
+      "app": "dev.e2e.motionreadiness",
+      "installedBinarySha256": "cc04cd71639d9abd45a5b5becb443b6110726f1c6687a4c12ab5801af751e6b4",
+      "verified": true
+    },
+    {
+      "app": "dev.e2e.semanticfixture",
+      "installedBinarySha256": "3fb31b3ae39842d11923d238f306c9ff6ca2c8e0d65cb8f9ac39a021a40c909a",
+      "verified": true
+    }
+  ]
+}

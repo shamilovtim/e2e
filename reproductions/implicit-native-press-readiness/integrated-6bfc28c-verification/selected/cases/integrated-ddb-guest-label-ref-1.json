@@ -1,0 +1,232 @@
+{
+  "head": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "sourceTree": "80917c012424b1389414adf15bea3d2855d74150",
+  "mode": "label-ref",
+  "nativeBuiltAt": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "nativeFingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e",
+  "nativeArtifactsVerified": 11,
+  "fixtureArtifactsVerified": 11,
+  "fixtureBuiltAt": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "fixtureBinarySha256": "3fb31b3ae39842d11923d238f306c9ff6ca2c8e0d65cb8f9ac39a021a40c909a",
+  "runtimeJSFiles": 632,
+  "runtimeCompleteFileSetVerified": true,
+  "runtimeSymlinksFound": false,
+  "runtimeManifestSha256": "b22596ed9dcc43719588a0f34aef002016ea9faf3d2845037d40b69ef8439698",
+  "wrapperSha256": "e863764e21b9c9786487d5ce3525841792c46ba065b8458d2e5337831e69b0cb",
+  "driverSha256": "ee1c67bc142f97a39d88a0dd9598821069543ddd83b39ff0ad143c63767e5d34",
+  "observerSha256": "f0e181c7c87866c6ec0aa50d30437a10abdb1841ff6d3f2de4552d3a1959591e",
+  "archivedBeforeRun": true,
+  "case": "integrated-ddb-guest-label-ref-1",
+  "originalPrivateResultSha256": "e297e5442ed53516c2dad5350f18d06decce418647b5d9a7a3334ba3ed428cad",
+  "runtimeLaunchInputs": [
+    {
+      "path": "bin/agent-device.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+    },
+    {
+      "path": "package.json",
+      "sha256": "67b11461d1b62e656962dc10fc01974c19ff83d5bef26d31a7cc30c899ccd3b1"
+    },
+    {
+      "path": "scripts/build-entries.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+    },
+    {
+      "path": "scripts/build-xcuitest-apple.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+    }
+  ],
+  "guestBridge": {
+    "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+    "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+    "sourceFiles": [
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridge.m",
+        "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+        "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+        "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+        "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+        "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+        "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+        "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+        "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+        "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+      },
+      {
+        "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+        "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+      }
+    ],
+    "buildCommitUnknownForExistingCache": true,
+    "scope": "The cached guest binary is matched to the ten source-file hashes and binary digest; its original build commit is unknown. It is not claimed freshly compiled at the candidate."
+  },
+  "sources": [
+    {
+      "file": "executed-sources/ee1c67bc142f97a39d88a0dd9598821069543ddd83b39ff0ad143c63767e5d34.py",
+      "originalExecutedSha256": "ee1c67bc142f97a39d88a0dd9598821069543ddd83b39ff0ad143c63767e5d34",
+      "publicRedactedSha256": "8e686b2b6e28a80c4d4d2378a07a9d245a29075ff11952ebcc094ac92b01cd02",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/f0e181c7c87866c6ec0aa50d30437a10abdb1841ff6d3f2de4552d3a1959591e.mjs",
+      "originalExecutedSha256": "f0e181c7c87866c6ec0aa50d30437a10abdb1841ff6d3f2de4552d3a1959591e",
+      "publicRedactedSha256": "f0e181c7c87866c6ec0aa50d30437a10abdb1841ff6d3f2de4552d3a1959591e",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/e863764e21b9c9786487d5ce3525841792c46ba065b8458d2e5337831e69b0cb.mjs",
+      "originalExecutedSha256": "e863764e21b9c9786487d5ce3525841792c46ba065b8458d2e5337831e69b0cb",
+      "publicRedactedSha256": "e863764e21b9c9786487d5ce3525841792c46ba065b8458d2e5337831e69b0cb",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "success": true,
+    "recordingOwnedByParentDriver": true,
+    "recording": {
+      "code": 0,
+      "escalated": false,
+      "ownedBy": "Python driver"
+    },
+    "sessionClosed": true,
+    "healthyProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "producer": {
+      "simulator-ax-bridge": 2
+    },
+    "healthyContributorProof": true,
+    "healthySdkTapDispatches": 1,
+    "healthyNativeTapAccepted": 1,
+    "rawBefore": {
+      "type": 75,
+      "identifier": null,
+      "label": null,
+      "value": null,
+      "rect": {
+        "x": 40,
+        "y": 300,
+        "width": 300,
+        "height": 52
+      }
+    },
+    "rawAfter": {
+      "type": 75,
+      "identifier": null,
+      "label": null,
+      "value": null,
+      "rect": {
+        "x": 40,
+        "y": 300,
+        "width": 300,
+        "height": 52
+      }
+    },
+    "typedRefusal": true,
+    "targetTapDispatches": 0,
+    "targetNativeTapAccepted": 0,
+    "nativeReadingsAfterChange": 0,
+    "contributorProofEstablished": true,
+    "refreshProof": {
+      "refreshStarts": 1,
+      "changedBeforeRefresh": true,
+      "capturesInsideRefresh": 1,
+      "completedCapturesInsideRefresh": 1,
+      "generationBefore": 0,
+      "canonicalResolutionCompleted": false,
+      "initialCaptures": 0,
+      "completedInitialCaptures": 0
+    }
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": "presses=0",
+    "healthyNative": "presses=1",
+    "nativeBefore": "presses=0",
+    "nativeAfter": "presses=0",
+    "nativeFinal": "presses=0",
+    "nativeLate": "presses=0"
+  },
+  "parentDriver": {
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "case": "integrated-ddb-guest-label-ref-1",
+    "exitCode": 0,
+    "daemonCleanupExitCode": 0,
+    "recorderExitCode": 0,
+    "sourceUnchanged": true,
+    "success": true
+  },
+  "request": {
+    "method": "client.interactions.press",
+    "arguments": {
+      "ref": "@e4"
+    },
+    "elapsedMs": 126.10549999999967,
+    "output": {
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "code": "COMMAND_FAILED",
+        "message": "Resolved target was not ready for input; nothing was dispatched",
+        "details": {
+          "reason": "target_not_ready",
+          "readiness": "changed",
+          "dispatched": "no"
+        }
+      }
+    }
+  },
+  "traceFile": "cases/integrated-ddb-guest-label-ref-1-trace.json",
+  "recording": {
+    "path": "../media/integrated-ddb-guest-label-ref-1/video.mp4",
+    "originalSha256": "b02b05dbf3bc73edb2dfc67fe02fc744e4e3978c73d9812a7f8701a9c891c8ba",
+    "bytes": 3440189
+  },
+  "attemptOutcome": "Passed its first recorded invocation at source 6bfc28c.",
+  "sourceVerification": {
+    "sourceUnchanged": true,
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "sourceTree": "80917c012424b1389414adf15bea3d2855d74150"
+  },
+  "originalPrivateExecutionInputsSha256": "95fa1b0e17659c3f5aafb3588a7539a9a0b9b4b3c63d93ae53c035516536883f",
+  "archivedRuntimeManifestSha256": "b22596ed9dcc43719588a0f34aef002016ea9faf3d2845037d40b69ef8439698",
+  "runtimeManifestDigestScope": "Derived from the actual immutable manifest archived before this case; a missing original digest field is not retroactively added to execution-inputs.",
+  "nativeManifests": [
+    {
+      "role": "private-fixture-native-manifest.json",
+      "file": "native-manifests/7c33bd5926f340e3f1f4df687d77f6d48c32751131751eaeee3ba5b136204f39.json",
+      "originalPrivateManifestSha256": "7c33bd5926f340e3f1f4df687d77f6d48c32751131751eaeee3ba5b136204f39"
+    },
+    {
+      "role": "private-production-native-manifest.json",
+      "file": "native-manifests/e821a3b2502f06f5395ea60ddc7bd23b71ac363b0da83099b97fd286d2993917.json",
+      "originalPrivateManifestSha256": "e821a3b2502f06f5395ea60ddc7bd23b71ac363b0da83099b97fd286d2993917"
+    }
+  ]
+}

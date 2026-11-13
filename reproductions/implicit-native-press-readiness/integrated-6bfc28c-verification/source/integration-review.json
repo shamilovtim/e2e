@@ -1,0 +1,148 @@
+{
+  "head": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "base": "ddbfc855661fa9d29b8c836057b7f5b099bcad44",
+  "mergeBase": "ddbfc855661fa9d29b8c836057b7f5b099bcad44",
+  "tree": "80917c012424b1389414adf15bea3d2855d74150",
+  "sourceClean": true,
+  "oldHead": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+  "oldBase": "cc3b99b38530027d734626e17fec9734743d2c66",
+  "backupRef": "codex/proof-integrated58-before-ddb-rebase",
+  "expectedThreeWayConflictTree": "09a3809ce5b1df2f9ce58dd140f7a2aba81199c9",
+  "expectedFinalTree": "80917c012424b1389414adf15bea3d2855d74150",
+  "fullTreeMatchesExpectedResolvedThreeWay": true,
+  "onlyDifferenceFromAutomaticConflictTree": [
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m"
+  ],
+  "manualResolution": "Retain upstream two navigation fixture classes and our AnonymousCell; preserve both UNUserNotificationCenterDelegate and UITableViewDataSource protocols. All other files equal aggregate three-way merge.",
+  "rangeDiffPatchIdenticalCommits": 39,
+  "rangeDiffOnlyContextChangedCommits": 1,
+  "experimentalIdleSkipAdopted": false,
+  "criticalOwnerComparisons": [
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/pre-dispatch-admission.ts",
+      "byteEqual58": true,
+      "oldSha256": "578b80cdf1cad30fcf0f497bb2e4ba56a0ef19ed32b9386901beeed299483f8c",
+      "newSha256": "578b80cdf1cad30fcf0f497bb2e4ba56a0ef19ed32b9386901beeed299483f8c"
+    },
+    {
+      "path": "packages/contracts/src/snapshot-private-evidence.ts",
+      "byteEqual58": true,
+      "oldSha256": "2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a",
+      "newSha256": "2f3663a0c52ef32db0c0e45ba38b7b4a58bdc4473126ad61f09b698e691c626a"
+    },
+    {
+      "path": "packages/capture-kit/src/ios-snapshot-engine/rows.ts",
+      "byteEqual58": true,
+      "oldSha256": "69862b2fda7aebb1f5d1c956827e5a2263b660e6bc8b190db8e35e3245cd8549",
+      "newSha256": "69862b2fda7aebb1f5d1c956827e5a2263b660e6bc8b190db8e35e3245cd8549"
+    },
+    {
+      "path": "packages/platform-apple/src/runtime-selector-query.ts",
+      "byteEqual58": true,
+      "oldSha256": "c703ceb351e494057f135e0e21525276a3834fcffd0eb15959846db65fdc394c",
+      "newSha256": "c703ceb351e494057f135e0e21525276a3834fcffd0eb15959846db65fdc394c"
+    },
+    {
+      "path": "packages/platform-apple/src/snapshot-presentation.ts",
+      "byteEqual58": true,
+      "oldSha256": "9de385e7ade1a790bcd2e83c6632ba0e6c3ed4e02dc6afeeb825b8330134b37b",
+      "newSha256": "9de385e7ade1a790bcd2e83c6632ba0e6c3ed4e02dc6afeeb825b8330134b37b"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Interaction.swift",
+      "byteEqual58": true,
+      "oldSha256": "1a3b89f5550300769195c880365f06a80a149ed5e1bb1e196e4448501cabe784",
+      "newSha256": "1a3b89f5550300769195c880365f06a80a149ed5e1bb1e196e4448501cabe784"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+SnapshotAcquisition.swift",
+      "byteEqual58": true,
+      "oldSha256": "d68a5fb065ec89a8bb9c0d7f39632584f23ecc2d7a1513212cfe379c636605a1",
+      "newSha256": "d68a5fb065ec89a8bb9c0d7f39632584f23ecc2d7a1513212cfe379c636605a1"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Models.swift",
+      "byteEqual58": true,
+      "oldSha256": "cf67fc7343c02d4d77a872cb0eb0ba1ec29070f8130e64ba2a930ab5287b437b",
+      "newSha256": "cf67fc7343c02d4d77a872cb0eb0ba1ec29070f8130e64ba2a930ab5287b437b"
+    },
+    {
+      "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+      "byteEqual58": true,
+      "oldSha256": "763bd7a5b9e33df1a125a1fefa084e3930d51ce792b04ca220e47780f1c35739",
+      "newSha256": "763bd7a5b9e33df1a125a1fefa084e3930d51ce792b04ca220e47780f1c35739"
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotModels.swift",
+      "byteEqual58": true,
+      "oldSha256": "70b244e0da9f91849b1638ad01e2c4568a5c80db9b8b31f6af5332c8bb4c625c",
+      "newSha256": "70b244e0da9f91849b1638ad01e2c4568a5c80db9b8b31f6af5332c8bb4c625c"
+    },
+    {
+      "path": "packages/kernel/src/snapshot.ts",
+      "byteEqual58": true,
+      "oldSha256": "7185b0c7f9f5e2156af0653032a7e7d8b6128f9b705b82a5cbed5a75ce420757",
+      "newSha256": "7185b0c7f9f5e2156af0653032a7e7d8b6128f9b705b82a5cbed5a75ce420757"
+    },
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/moving-target-gate.ts",
+      "byteEqual58": true,
+      "oldSha256": "195e61770d18a592386b7fc605fb02b0314ad9e9f78e026959c55ff0b47696cd",
+      "newSha256": "195e61770d18a592386b7fc605fb02b0314ad9e9f78e026959c55ff0b47696cd"
+    },
+    {
+      "path": "packages/command-runtime/src/commands/interaction/runtime/interactions.ts",
+      "byteEqual58": true,
+      "oldSha256": "fa814af465f2438f1ae598ddbd3a20df05b36960a61e12ed43aa4b4526a4a3c6",
+      "newSha256": "fa814af465f2438f1ae598ddbd3a20df05b36960a61e12ed43aa4b4526a4a3c6"
+    },
+    {
+      "path": "packages/capture-kit/src/snapshot-state.ts",
+      "byteEqual58": true,
+      "oldSha256": "0890ccba857a6290038c854fde871c1afcfb18d25d2db114f0757c530521bc55",
+      "newSha256": "0890ccba857a6290038c854fde871c1afcfb18d25d2db114f0757c530521bc55"
+    },
+    {
+      "path": "packages/capture-kit/src/snapshot-tree-ingestion.ts",
+      "byteEqual58": true,
+      "oldSha256": "ea152f3a59f1c418d444d5b99f10404f7517bcb045bf817409bc1d18f143515e",
+      "newSha256": "ea152f3a59f1c418d444d5b99f10404f7517bcb045bf817409bc1d18f143515e"
+    },
+    {
+      "path": "packages/contracts/src/facades/capture.ts",
+      "byteEqual58": true,
+      "oldSha256": "429846a8f7d028cb9c9ba3a1e91318f3a13d41b5e805db03178fc7444c05475a",
+      "newSha256": "429846a8f7d028cb9c9ba3a1e91318f3a13d41b5e805db03178fc7444c05475a"
+    },
+    {
+      "path": "packages/platform-apple/src/snapshot-source/tree.ts",
+      "byteEqual58": true,
+      "oldSha256": "da039fbf9810d86f3f992c34fa2daef2f5b1589425f7206d317c57e1111556b1",
+      "newSha256": "da039fbf9810d86f3f992c34fa2daef2f5b1589425f7206d317c57e1111556b1"
+    },
+    {
+      "path": "apple/snapshot-presentation/Sources/AgentDeviceSnapshotPresentation/SnapshotCoordinateSpace.swift",
+      "byteEqual58": true,
+      "oldSha256": "ae94b6e346c276391944f85ce3d8e8e7dd173f9a8eda2e6ca7151c308329d23e",
+      "newSha256": "ae94b6e346c276391944f85ce3d8e8e7dd173f9a8eda2e6ca7151c308329d23e"
+    }
+  ],
+  "upstreamOnlyOwnersByteEqualDdb": [
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+Navigation.swift",
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests.swift",
+    "packages/contracts/src/gesture-plan.ts",
+    "packages/platform-android/src/touch-plan-lowering.ts",
+    "packages/host-kit/src/internal/host-process.ts"
+  ],
+  "nativeFingerprintAfterRebaseNotYetBuilt": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e",
+  "oldNativeFingerprintActualHistorical": "610e8171b1c32bc183558fff98d575437803c617a3f1c2d907fa1f2bcc8d738c",
+  "patchSha256": "946299d0f143ca399392532d99d200e034f8f5d68e238f827081286aa0a47ebe",
+  "rangeDiffSha256": "42b10149600b1a51a8e65bd6eab965fa4d4cba4f95108f67345dddd5a9da2ab4",
+  "filesChanged": 102,
+  "insertions": 3942,
+  "deletions": 265,
+  "grossChangedLines": 4207,
+  "sizeExceptionStillRequired": true,
+  "currentValidation": "No build, test, native execution or device operation at this rebased source. Old58 proof remains attributed to58. Ignored dist/native products preserved and archived as actual58 inputs.",
+  "reviewScope": "Pre-validation integration snapshot. Later executed validation is recorded separately in exact-gate.json, source-provenance.json and selected cases."
+}

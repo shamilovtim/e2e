@@ -1,0 +1,25 @@
+{
+  "scope": "Forward correction of two prose-only fields. Immutable published commits, actual source58 results/traces and genuine historical93 failed attempts are unchanged. Legacy93 suffix matching is removed from the new curator.",
+  "items": [
+    {
+      "immutableCommit": "2c85530dc3479f7dfbd7fce924e7f5d9dedb9435",
+      "oldSelectedPath": "selected/cases/integrated-58d-guest-label-ref-1.json",
+      "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+      "erroneousField": "qualification",
+      "originalSelectedFileSha256": "280ebb892861cc5a8db04e24c962940cb16d9e251e8e9b432c21031863cca4ed",
+      "originalPrivateResultSha256": "aa74375a425d04408326b3b2ad7374be49326098825396d75a94200bb822723d",
+      "originalProse": "Harness setup failed before any target request: ordinary GuestAX capture succeeded, but the direct native reader was not initialized. The later protocol adds a declared read-only alert get.",
+      "correctedStatement": "The source58 run passed on its first recorded invocation. Healthy GuestAX input succeeded; after the intentional Replace setup, the stale saved reference produced semantic-changed, one canonical refresh capture and a typed unsent refusal with zero target/late input. There was no startup or direct-reader setup failure in this58 case."
+    },
+    {
+      "immutableCommit": "2c85530dc3479f7dfbd7fce924e7f5d9dedb9435",
+      "oldSelectedPath": "selected/cases/integrated-58d-guest-label-selector-1.json",
+      "source": "58d22b144bfb5dbd4e3ffe3a723206b220a57dab",
+      "erroneousField": "qualification",
+      "originalSelectedFileSha256": "ae4f04a8959b3c1b80f76c28365d9c4807841b01b68539f9307625e825249e34",
+      "originalPrivateResultSha256": "7b322ee28e343fdbe8f024436c890fbe8b8b08a0116cf7a70d009af882f7932d",
+      "originalProse": "Harness argument setup failed before healthy or stale target input because && is not selector conjunction syntax; the later version uses documented whitespace conjunction.",
+      "correctedStatement": "The source58 run passed on its first recorded invocation using the valid whitespace selector grammar. Fresh interactive/full-tree resolution produced the expected typed selector-not-found refusal with zero readiness/refresh/input. There was no invalid-grammar setup failure in this58 case."
+    }
+  ]
+}

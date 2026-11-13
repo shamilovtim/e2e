@@ -1,0 +1,147 @@
+{
+  "head": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "sourceTree": "80917c012424b1389414adf15bea3d2855d74150",
+  "nativeBuiltAt": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "nativeFingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e",
+  "nativeArtifactsVerified": 11,
+  "runtimeJavaScriptFiles": 632,
+  "runtimeManifestSha256": "b22596ed9dcc43719588a0f34aef002016ea9faf3d2845037d40b69ef8439698",
+  "xctestrunSha256": "d629bfe83701673e13bd21f2096274dd67fcf2e6a59d12659a21fbd34ac7fd18",
+  "wrapperSha256": "81ab3823d49fcadc2f38a1c2900dd38eb3574bf138582e9126596fa2f5f7190c",
+  "archivedBeforeRun": true,
+  "case": "integrated-ddb-settings-original-1",
+  "originalPrivateResultSha256": "ebd8f9bfbbd7a62cc70ff7def0ba8a4e2c9b6c66cd75b692f8e60bb86f108558",
+  "runtimeLaunchInputs": [
+    {
+      "path": "bin/agent-device.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+    },
+    {
+      "path": "package.json",
+      "sha256": "67b11461d1b62e656962dc10fc01974c19ff83d5bef26d31a7cc30c899ccd3b1"
+    },
+    {
+      "path": "scripts/build-entries.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+    },
+    {
+      "path": "scripts/build-xcuitest-apple.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+    }
+  ],
+  "guestBridge": {
+    "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+    "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+    "sourceFiles": [
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridge.m",
+        "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+        "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+        "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+        "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+        "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+        "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+        "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+        "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+        "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+      },
+      {
+        "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+        "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+      }
+    ],
+    "buildCommitUnknownForExistingCache": true,
+    "scope": "The cached guest binary is matched to the ten source-file hashes and binary digest; its original build commit is unknown. It is not claimed freshly compiled at the candidate."
+  },
+  "sources": [
+    {
+      "file": "executed-sources/f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7.mjs",
+      "originalExecutedSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "publicRedactedSha256": "f1f1001fbb81dc892f09dcaeb9aa9803b34a2e843085d04dff361997cd97a3e7",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/81ab3823d49fcadc2f38a1c2900dd38eb3574bf138582e9126596fa2f5f7190c.py",
+      "originalExecutedSha256": "81ab3823d49fcadc2f38a1c2900dd38eb3574bf138582e9126596fa2f5f7190c",
+      "publicRedactedSha256": "db731c0ab16a044ff2d072b179aa14daaee08c3ac3b40fa046471124b44db8dc",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "success": true,
+    "wrapperExitCode": 0,
+    "recorderExitCode": 0,
+    "daemonCleanupExitCode": 0,
+    "overallCLIPassed": true,
+    "firstAttemptPassed": true,
+    "attemptVerdicts": [
+      {
+        "attempt": "1/3",
+        "status": "passed",
+        "replayed": "7",
+        "healed": "0"
+      }
+    ],
+    "elapsedSeconds": 10.411750042
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "parentDriver": null,
+  "postOpenObservation": [
+    "unobservable"
+  ],
+  "qualification": "First attempt passed, but the actual post-open observation was unobservable; this does not establish parity with the earlier observable Settings reflow failure.",
+  "recording": {
+    "path": "../media/integrated-ddb-settings-original-1/video.mp4",
+    "originalSha256": "bab420c001204165723d389b7e0b1efbd5339a4663f1d9fcf4103c78202e0e20",
+    "bytes": 5998791
+  },
+  "attemptOutcome": "Passed its first recorded invocation at source 6bfc28c.",
+  "sourceVerification": {
+    "sourceUnchanged": true,
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "sourceTree": "80917c012424b1389414adf15bea3d2855d74150"
+  },
+  "originalPrivateExecutionInputsSha256": "df2c9910d9098e970463260f4f637ac52827c632ee50730a3104100d4121b826",
+  "archivedRuntimeManifestSha256": "b22596ed9dcc43719588a0f34aef002016ea9faf3d2845037d40b69ef8439698",
+  "runtimeManifestDigestScope": "Derived from the actual immutable manifest archived before this case; a missing original digest field is not retroactively added to execution-inputs.",
+  "nativeManifests": [
+    {
+      "role": "private-native-manifest.json",
+      "file": "native-manifests/e821a3b2502f06f5395ea60ddc7bd23b71ac363b0da83099b97fd286d2993917.json",
+      "originalPrivateManifestSha256": "e821a3b2502f06f5395ea60ddc7bd23b71ac363b0da83099b97fd286d2993917"
+    }
+  ]
+}

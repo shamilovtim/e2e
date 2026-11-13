@@ -1,0 +1,124 @@
+{
+  "head": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "sourceTree": "80917c012424b1389414adf15bea3d2855d74150",
+  "nativeBuiltAt": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+  "nativeFingerprint": "46a06d4af78afdea3775f5ef17df8890f9bfabe629964f4723cddf396b13045e",
+  "nativeArtifactsVerified": 11,
+  "runtimeJavaScriptFiles": 632,
+  "runtimeManifestSha256": "ea686dd3d60f730bb085c7f33b23e8ceb576224f1626522581c62f7ac72b3942",
+  "xctestrunSha256": "4f9c0ba45e04476e58d5824be9b3fbda929ffe69dbfc44584624d2612b810c1e",
+  "wrapperSha256": "ee1af3a00c601766ec9edba83f9a28960ed2e2c295e1e522e148f7e22a0aa5e4",
+  "archivedBeforeRun": true,
+  "case": "integrated-ddb-native14-1",
+  "originalPrivateResultSha256": "66d0279359e15709ec7f336b34b50f256843fcc68c24c18815317eef0a4fea0a",
+  "runtimeLaunchInputs": [],
+  "guestBridge": null,
+  "sources": [
+    {
+      "file": "executed-sources/ee1af3a00c601766ec9edba83f9a28960ed2e2c295e1e522e148f7e22a0aa5e4.py",
+      "originalExecutedSha256": "ee1af3a00c601766ec9edba83f9a28960ed2e2c295e1e522e148f7e22a0aa5e4",
+      "publicRedactedSha256": "8aa0236a7ef3e83d648c6636ef106107b32c9624d6b1fc7bc7074960edf384a6",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "exitCode": 0,
+    "sourceUnchanged": true,
+    "actualNativeTests": {
+      "outcomes": [
+        {
+          "method": "testAuthorizedPressTargetMatchesGoldenParityTable",
+          "status": "passed"
+        },
+        {
+          "method": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+          "status": "passed"
+        },
+        {
+          "method": "testInAppBackPressesNoneOfTwoNavigationBarBackButtons",
+          "status": "passed"
+        },
+        {
+          "method": "testInAppBackPressesTheNavigationBarBackButton",
+          "status": "passed"
+        },
+        {
+          "method": "testInAppBackReportsAPressedBackButtonThatDoesNotNavigateAsUnverified",
+          "status": "passed"
+        },
+        {
+          "method": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+          "status": "passed"
+        },
+        {
+          "method": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+          "status": "passed"
+        },
+        {
+          "method": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessKeepsTextInputBindingAcrossContentChanges",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessValidatesAPromotedSwitchIdentifierInItsCoherentWindow",
+          "status": "passed"
+        },
+        {
+          "method": "testSynthesizedPressLabelRequiresTheCapturedLabelSourceInsteadOfAnEqualValue",
+          "status": "passed"
+        }
+      ],
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "allRequestedExactlyOncePassed": true
+    },
+    "recorderExitCode": 0
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "parentDriver": null,
+  "recording": {
+    "path": "../media/integrated-ddb-native14-1/video.mp4",
+    "originalSha256": "b6256778f8a598ba40a8536e488b8380d224f9110b28d917de0f315e01b6394e",
+    "bytes": 55995694
+  },
+  "attemptOutcome": "Passed its first recorded invocation at source 6bfc28c.",
+  "sourceVerification": {
+    "sourceUnchanged": true,
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "sourceTree": "80917c012424b1389414adf15bea3d2855d74150"
+  },
+  "originalPrivateExecutionInputsSha256": "f44d8bb6c05f03fb3b0a1e8dba9dadafa582419ab831f4145fee0d901415fe9b",
+  "archivedRuntimeManifestSha256": "ea686dd3d60f730bb085c7f33b23e8ceb576224f1626522581c62f7ac72b3942",
+  "runtimeManifestDigestScope": "Derived from the actual immutable manifest archived before this case; a missing original digest field is not retroactively added to execution-inputs.",
+  "nativeManifests": [
+    {
+      "role": "private-native-manifest.json",
+      "file": "native-manifests/7c33bd5926f340e3f1f4df687d77f6d48c32751131751eaeee3ba5b136204f39.json",
+      "originalPrivateManifestSha256": "7c33bd5926f340e3f1f4df687d77f6d48c32751131751eaeee3ba5b136204f39"
+    }
+  ]
+}

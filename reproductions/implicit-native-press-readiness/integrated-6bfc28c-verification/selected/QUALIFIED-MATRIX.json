@@ -1,0 +1,823 @@
+[
+  {
+    "case": "integrated-ddb-native14-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": null,
+    "errorDetails": {},
+    "readinessRuns": [],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": null,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-guest-label-ref-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 126.10549999999967,
+    "errorDetails": {
+      "reason": "target_not_ready",
+      "readiness": "changed",
+      "dispatched": "no"
+    },
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "semantic-changed",
+        "count": 1
+      }
+    ],
+    "refresh": [
+      {
+        "event": "canonical-refresh-start",
+        "generation": 0
+      }
+    ],
+    "motionLooks": [],
+    "baselinePresent": [
+      false
+    ],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": {
+      "refreshStarts": 1,
+      "changedBeforeRefresh": true,
+      "capturesInsideRefresh": 1,
+      "completedCapturesInsideRefresh": 1,
+      "generationBefore": 0,
+      "canonicalResolutionCompleted": false,
+      "initialCaptures": 0,
+      "completedInitialCaptures": 0
+    },
+    "healthyProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "targetProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "healthySdkTapDispatches": 1,
+    "healthyNativeTapAccepted": 1,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-guest-label-selector-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 75.34979199999907,
+    "errorDetails": {
+      "reason": "selector_not_found",
+      "dispatched": "no"
+    },
+    "readinessRuns": [],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": {
+      "refreshStarts": 0,
+      "changedBeforeRefresh": false,
+      "capturesInsideRefresh": 0,
+      "completedCapturesInsideRefresh": 0,
+      "canonicalResolutionCompleted": false,
+      "initialCaptures": 2,
+      "completedInitialCaptures": 2
+    },
+    "healthyProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "targetProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "healthySdkTapDispatches": 1,
+    "healthyNativeTapAccepted": 1,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-guest-identifier-ref-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 131.8856250000008,
+    "errorDetails": {
+      "reason": "target_not_ready",
+      "readiness": "changed",
+      "dispatched": "no"
+    },
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "semantic-changed",
+        "count": 1
+      }
+    ],
+    "refresh": [
+      {
+        "event": "canonical-refresh-start",
+        "generation": 0
+      }
+    ],
+    "motionLooks": [],
+    "baselinePresent": [
+      false
+    ],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": {
+      "refreshStarts": 1,
+      "changedBeforeRefresh": true,
+      "capturesInsideRefresh": 1,
+      "completedCapturesInsideRefresh": 1,
+      "generationBefore": 0,
+      "canonicalResolutionCompleted": false,
+      "initialCaptures": 0,
+      "completedInitialCaptures": 0
+    },
+    "healthyProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "targetProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "healthySdkTapDispatches": 1,
+    "healthyNativeTapAccepted": 1,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-guest-identifier-selector-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 72.95437500000116,
+    "errorDetails": {
+      "reason": "selector_not_found",
+      "dispatched": "no"
+    },
+    "readinessRuns": [],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": {
+      "refreshStarts": 0,
+      "changedBeforeRefresh": false,
+      "capturesInsideRefresh": 0,
+      "completedCapturesInsideRefresh": 0,
+      "canonicalResolutionCompleted": false,
+      "initialCaptures": 2,
+      "completedInitialCaptures": 2
+    },
+    "healthyProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "targetProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "healthySdkTapDispatches": 1,
+    "healthyNativeTapAccepted": 1,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-guest-switch-ref-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 129.30645800000093,
+    "errorDetails": {
+      "reason": "target_not_ready",
+      "readiness": "changed",
+      "dispatched": "no"
+    },
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "semantic-changed",
+        "count": 1
+      }
+    ],
+    "refresh": [
+      {
+        "event": "canonical-refresh-start",
+        "generation": 0
+      }
+    ],
+    "motionLooks": [],
+    "baselinePresent": [
+      false
+    ],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": {
+      "refreshStarts": 1,
+      "changedBeforeRefresh": true,
+      "capturesInsideRefresh": 1,
+      "completedCapturesInsideRefresh": 1,
+      "generationBefore": 0,
+      "canonicalResolutionCompleted": false,
+      "initialCaptures": 0,
+      "completedInitialCaptures": 0
+    },
+    "healthyProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "targetProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "healthySdkTapDispatches": 1,
+    "healthyNativeTapAccepted": 1,
+    "healthySwitchValues": [
+      "0",
+      "1"
+    ],
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-guest-switch-selector-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 63.326624999999694,
+    "errorDetails": {
+      "reason": "selector_not_found",
+      "dispatched": "no"
+    },
+    "readinessRuns": [],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": {
+      "refreshStarts": 0,
+      "changedBeforeRefresh": false,
+      "capturesInsideRefresh": 0,
+      "completedCapturesInsideRefresh": 0,
+      "canonicalResolutionCompleted": false,
+      "initialCaptures": 2,
+      "completedInitialCaptures": 2
+    },
+    "healthyProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "targetProducer": {
+      "simulator-ax-bridge": 2
+    },
+    "healthySdkTapDispatches": 1,
+    "healthyNativeTapAccepted": 1,
+    "healthySwitchValues": [
+      "0",
+      "1"
+    ],
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-settings-original-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": null,
+    "errorDetails": {},
+    "readinessRuns": [],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": null,
+    "counts": null,
+    "lateObservation": null,
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": true,
+    "postOpenObservation": [
+      "unobservable"
+    ]
+  },
+  {
+    "case": "integrated-ddb-lifecycle-selector-ready-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 3188.930957999999,
+    "errorDetails": {},
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "blocked",
+        "count": 30
+      },
+      {
+        "generation": 0,
+        "state": "ready",
+        "count": 1
+      },
+      {
+        "generation": 1,
+        "state": "ready",
+        "count": 1
+      }
+    ],
+    "refresh": [
+      {
+        "event": "canonical-refresh-start",
+        "generation": 0
+      },
+      {
+        "event": "canonical-refresh-complete",
+        "generation": 1
+      }
+    ],
+    "motionLooks": [],
+    "baselinePresent": [
+      true,
+      true
+    ],
+    "sdkTapDispatches": 1,
+    "nativeTargetTaps": 1,
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 1205.8758749999997
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-lifecycle-ref-ready-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 3235.8420000000006,
+    "errorDetails": {},
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "blocked",
+        "count": 29
+      },
+      {
+        "generation": 0,
+        "state": "ready",
+        "count": 1
+      },
+      {
+        "generation": 1,
+        "state": "ready",
+        "count": 1
+      }
+    ],
+    "refresh": [
+      {
+        "event": "canonical-refresh-start",
+        "generation": 0
+      },
+      {
+        "event": "canonical-refresh-complete",
+        "generation": 1
+      }
+    ],
+    "motionLooks": [],
+    "baselinePresent": [
+      true,
+      true
+    ],
+    "sdkTapDispatches": 1,
+    "nativeTargetTaps": 1,
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 1204.2084160000013
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-lifecycle-selector-deadline-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 59964.04762500001,
+    "errorDetails": {
+      "reason": "daemon_request_timeout",
+      "check": "native-readiness",
+      "readiness": "blocked",
+      "dispatched": "no"
+    },
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "blocked",
+        "count": 606
+      }
+    ],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [
+      true
+    ],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": {
+      "underlying": 0,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 3915.5049590000126
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-lifecycle-ref-deadline-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 60010.416541,
+    "errorDetails": {
+      "reason": "daemon_request_timeout",
+      "check": "native-readiness",
+      "readiness": "blocked",
+      "dispatched": "no"
+    },
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "blocked",
+        "count": 607
+      }
+    ],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [
+      true
+    ],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": {
+      "underlying": 0,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 4050.5046250000014
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-lifecycle-selector-cancel-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 206.14016599999923,
+    "errorDetails": {
+      "reason": "request_canceled",
+      "dispatched": "unknown"
+    },
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "blocked",
+        "count": 2
+      }
+    ],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [
+      true
+    ],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": {
+      "underlying": 0,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 3929.994375
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-lifecycle-ref-cancel-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 153.30225000000064,
+    "errorDetails": {
+      "reason": "request_canceled",
+      "dispatched": "unknown"
+    },
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "blocked",
+        "count": 2
+      }
+    ],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [
+      true
+    ],
+    "sdkTapDispatches": 0,
+    "nativeTargetTaps": 0,
+    "counts": {
+      "underlying": 0,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 3951.857000000001
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-motion-selector-ready-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 3234.094541999999,
+    "errorDetails": {},
+    "readinessRuns": [
+      {
+        "generation": 2,
+        "state": "blocked",
+        "count": 23
+      },
+      {
+        "generation": 2,
+        "state": "ready",
+        "count": 1
+      },
+      {
+        "generation": 3,
+        "state": "ready",
+        "count": 1
+      }
+    ],
+    "refresh": [
+      {
+        "event": "canonical-refresh-start",
+        "generation": 2
+      },
+      {
+        "event": "canonical-refresh-complete",
+        "generation": 3
+      }
+    ],
+    "motionLooks": [
+      {
+        "generation": 1,
+        "verdict": "wait",
+        "looksBeforeVerdict": 0
+      },
+      {
+        "generation": 2,
+        "verdict": "pass",
+        "looksBeforeVerdict": 1
+      }
+    ],
+    "baselinePresent": [
+      true,
+      true
+    ],
+    "sdkTapDispatches": 1,
+    "nativeTargetTaps": 1,
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 1193.8419159999994
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-motion-ref-ready-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 3200.1812090000003,
+    "errorDetails": {},
+    "readinessRuns": [
+      {
+        "generation": 2,
+        "state": "blocked",
+        "count": 23
+      },
+      {
+        "generation": 2,
+        "state": "ready",
+        "count": 1
+      },
+      {
+        "generation": 3,
+        "state": "ready",
+        "count": 1
+      }
+    ],
+    "refresh": [
+      {
+        "event": "canonical-refresh-start",
+        "generation": 2
+      },
+      {
+        "event": "canonical-refresh-complete",
+        "generation": 3
+      }
+    ],
+    "motionLooks": [
+      {
+        "generation": 1,
+        "verdict": "wait",
+        "looksBeforeVerdict": 0
+      },
+      {
+        "generation": 2,
+        "verdict": "pass",
+        "looksBeforeVerdict": 1
+      }
+    ],
+    "baselinePresent": [
+      true,
+      true
+    ],
+    "sdkTapDispatches": 1,
+    "nativeTargetTaps": 1,
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 1192.4277500000007
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-idle-selector-ready-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 510.21000000000004,
+    "errorDetails": {},
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "ready",
+        "count": 1
+      }
+    ],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [
+      false
+    ],
+    "sdkTapDispatches": 1,
+    "nativeTargetTaps": 1,
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "graceMs": 1100
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  },
+  {
+    "case": "integrated-ddb-idle-ref-ready-1",
+    "source": "6bfc28c7c2dd3b2eb293eb7e2de97c12430d6d20",
+    "success": true,
+    "requestMs": 487.97141699999975,
+    "errorDetails": {},
+    "readinessRuns": [
+      {
+        "generation": 0,
+        "state": "ready",
+        "count": 1
+      }
+    ],
+    "refresh": [],
+    "motionLooks": [],
+    "baselinePresent": [
+      false
+    ],
+    "sdkTapDispatches": 1,
+    "nativeTargetTaps": 1,
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "lateObservation": {
+      "graceMs": 1100
+    },
+    "refreshProof": null,
+    "healthyProducer": null,
+    "targetProducer": null,
+    "healthySdkTapDispatches": null,
+    "healthyNativeTapAccepted": null,
+    "healthySwitchValues": null,
+    "firstAttemptPassed": null,
+    "postOpenObservation": []
+  }
+]
