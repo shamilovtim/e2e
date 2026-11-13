@@ -1,0 +1,15 @@
+{
+  "head": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+  "base": "b7ded9cfb26927c7c60d3a04272b62ef7d47da92",
+  "tree": "ea638390011f70400d0d2f8a616ef7fc97b7408c",
+  "patchSha256": "5f3609c2961e13db1c3e6775c7612e09b73e0547a8382869e2ee3196c052e27a",
+  "sourcePatchAppliesToBaseAndRecreatesExactTree": true,
+  "files": 102,
+  "added": 3942,
+  "deleted": 265,
+  "sourceReviews": "Root and independent reviews cleared contributor continuity, text-entry value versus label distinction, legacy runner attestation, and integration onto the stated b7ded9c base. Later changes only moved an existing test and corrected Swift test argument order.",
+  "nativeAttribution": "Fresh production and unit products built at this source. Cached GuestAX binary remains source-equivalent by pinned inputs; its original build commit is not inferred.",
+  "scope": "Necessary captured-contributor continuity, not full canonical projection equivalence. Idle readiness and size policy exceptions remain pending.",
+  "validation": "Exact local gate passed. Eleven selected native methods passed; an isolated comparison-omission mutation produced the intended two failed methods and three assertions, then both methods passed with original candidate products. Six actual GuestAX cases, the original first-attempt Settings replay, and ten selector/reference lifecycle, motion and initial-idle cases passed. Four failed GuestAX setup/oracle attempts remain included with their original outcomes.",
+  "publicationStatus": "Historical verified candidate, not the current public PR branch. A subsequent integration onto cc3b99b is separate work; this evidence is not attributed to it. Source-branch publication is blocked by a GitHub workflow-scope restriction."
+}

@@ -1,0 +1,217 @@
+{
+  "head": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+  "sourceTree": "ea638390011f70400d0d2f8a616ef7fc97b7408c",
+  "kind": "lifecycle",
+  "mode": "selector-ready",
+  "nativeBuiltAt": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+  "nativeFingerprint": "0cef456b89393f894aa161eb686b9db918925b07c0e16d1c8c88c04ce7c0dcac",
+  "nativeBinarySha256": "48d3422c5ffa3865f1fab42c920ac7fed7eca68b1ac01ce2dc0bfcba72291068",
+  "nativeArtifactsVerified": 11,
+  "fixtureBinarySha256": "cc04cd71639d9abd45a5b5becb443b6110726f1c6687a4c12ab5801af751e6b4",
+  "observedFixtureBinarySha256": "cc04cd71639d9abd45a5b5becb443b6110726f1c6687a4c12ab5801af751e6b4",
+  "fixtureApp": "dev.e2e.motionreadiness",
+  "runtimeJSFiles": 631,
+  "runtimeCompleteFileSetVerified": true,
+  "runtimeSymlinksFound": false,
+  "xctestrunSha256": "24d587dda968c1a5188dc8115f878383880db3e88778e2bff594853a5ce43b6f",
+  "nativeCacheManifestSha256": "bca45b77bc2b574f9daa8ae0a82acd914e265b1534d4d1188384cb7407b6b728",
+  "wrapperSha256": "8a0182aea5758c454d3e7dc86f4ed80f6be07c7637f7a49933c140f732ffbc00",
+  "driverSha256": "3c808539d5b622a7075cc6b3604c68baaaa648918d5abfa06bc615fa71413107",
+  "observerSha256": "e1820dc199b3ee0c745309c260ef6a71a2f12272f4687831846c81d9fc52aa12",
+  "sourceCommitPatchSha256": "635e244d474a44e0b5f95ba81c6e72503bda18eba5dc21757276a399d91af4d5",
+  "sourceTreeManifestSha256": "2a42d9ee4bfd4c1c3cbf0f89d8a880954200386d1d4b758bf42368cded7cc84c",
+  "archivedBeforeRun": true,
+  "case": "contributor-93a-motion-selector-ready-1",
+  "originalPrivateResultSha256": "9aa59c5f1da6279ec56358a144978756a36d707b0652041286435b551b624e22",
+  "runtimeLaunchInputs": [
+    {
+      "path": "bin/agent-device.mjs",
+      "sha256": "3238c2b0ac09fb5a96cf30020ea01b902f2242f0316616b81a8855a7420e9a30"
+    },
+    {
+      "path": "package.json",
+      "sha256": "eed41e5cda69363a5a1d30a4680afc3bf623ad2fc65e6bf93dc41c7b5e51dc94"
+    },
+    {
+      "path": "scripts/build-entries.ts",
+      "sha256": "c5b0617af365e0fa8b6a355ef54b0220e419d54a078ec63eacd17cc4495b8e13"
+    },
+    {
+      "path": "scripts/build-xcuitest-apple.sh",
+      "sha256": "1e7302b88084b028003bc7287323fe347a711e3185bcb8c460dc05600628958a"
+    }
+  ],
+  "guestBridge": {
+    "sourceHash": "1a0738288041600582d7bcaccc346bfbafe946b0cad5a8412541041bd302decc",
+    "cacheKey": "6b17a6b3aaa822d07d81486ceb1dfaf9",
+    "binarySha256": "cb93b118e639641d17404cb55ca142034b896e7167c985cb88b12cb96fdd1470",
+    "sourceFiles": [
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridge.m",
+        "sha256": "4e6bec980dd5f831374e285f3e1cbfbbbc839fd4e2a6b588fe1912116f8bd8ff"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.h",
+        "sha256": "c4b432db5e0d9f1cbd3d1d4ede4c75293366a0851bd1200f3f6cb182b818dc90"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRequest.m",
+        "sha256": "aef6eb77f97291840e89b0abcd18f7537c1678e4e9f3f28fa144eba505a5c041"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.h",
+        "sha256": "ed825c677f631ebf8e402dbae058480455c173e81aad44039ecf008b2aba50b9"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeRuntime.m",
+        "sha256": "4feff5c6f0ada51dd3250016b039644207b3ff6645e3976b9e1669f40eac3dee"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.h",
+        "sha256": "2e9c74eee2d04ec5aaa33cc0a812b5f80cc46a8146c66f0c12b94545c8352dcb"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeCapture.m",
+        "sha256": "b8960a696480de0b43fe5dba9de1573857a3c65974a6e5c01ab6c4936ed7705e"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.h",
+        "sha256": "0384b5f9bbbb0040509061a4d62146306e3dbd12f937c02e0f637dba9d470c6b"
+      },
+      {
+        "path": "apple/snapshot-bridge/SnapshotBridgeSurfaceHosts.m",
+        "sha256": "a088c04f0cbbeae7d6c24f939971424042cdf56d72e858cea116b9ce9fc703b2"
+      },
+      {
+        "path": "apple/snapshot-bridge/ForegroundApplicationGeometry.h",
+        "sha256": "82fcb1e29523020b1b113c7862732c4b5676efd8b3906032c44b663cf8d1174e"
+      }
+    ],
+    "buildCommitUnknownForExistingCache": true,
+    "scope": "The cached guest binary is matched to the ten source-file hashes and binary digest; its original build commit is unknown. It is not claimed freshly compiled at the candidate."
+  },
+  "sources": [
+    {
+      "file": "executed-sources/3c808539d5b622a7075cc6b3604c68baaaa648918d5abfa06bc615fa71413107.py",
+      "originalExecutedSha256": "3c808539d5b622a7075cc6b3604c68baaaa648918d5abfa06bc615fa71413107",
+      "publicRedactedSha256": "d4b640dccb093359f7d83a73c84f8c914706cc41507b553db32b4d9e802d9551",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/e1820dc199b3ee0c745309c260ef6a71a2f12272f4687831846c81d9fc52aa12.mjs",
+      "originalExecutedSha256": "e1820dc199b3ee0c745309c260ef6a71a2f12272f4687831846c81d9fc52aa12",
+      "publicRedactedSha256": "e1820dc199b3ee0c745309c260ef6a71a2f12272f4687831846c81d9fc52aa12",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    },
+    {
+      "file": "executed-sources/8a0182aea5758c454d3e7dc86f4ed80f6be07c7637f7a49933c140f732ffbc00.mjs",
+      "originalExecutedSha256": "8a0182aea5758c454d3e7dc86f4ed80f6be07c7637f7a49933c140f732ffbc00",
+      "publicRedactedSha256": "8a0182aea5758c454d3e7dc86f4ed80f6be07c7637f7a49933c140f732ffbc00",
+      "byteEqualToExecuted": true,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "success": true,
+    "publicTimeoutOverride": false,
+    "externalCallerSignal": false,
+    "declaredDefaultClientEnvelopeMs": 90000,
+    "declaredOrdinaryDaemonResultPolicyMs": 60000,
+    "recordingOwnedByParentDriver": true,
+    "recording": {
+      "code": 0,
+      "escalated": false,
+      "ownedBy": "Python driver"
+    },
+    "sessionClosed": true,
+    "counts": {
+      "underlying": 1,
+      "overlay": 0
+    },
+    "targetTapEvents": 1,
+    "otherTapEvents": 0,
+    "completedReadiness": 25,
+    "targetPhaseTapAccepted": 1,
+    "lateObservation": {
+      "dismissalObserved": true,
+      "graceMs": 1100,
+      "actualElapsedMs": 1194.6054170000007
+    }
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "fixtureEvents": [
+    {
+      "event": "appReady",
+      "ms": 0.007541617378592491
+    },
+    {
+      "event": "fadeOverlayOpened",
+      "ms": 4025.199875002727,
+      "durationMs": 3000
+    },
+    {
+      "event": "targetMoveBegin",
+      "ms": 5072.715374990366,
+      "durationMs": 120,
+      "fromY": 360,
+      "toY": 420
+    },
+    {
+      "event": "fadeDismissBegin",
+      "ms": 5073.951416648924,
+      "durationMs": 3000
+    },
+    {
+      "event": "targetMoveComplete",
+      "ms": 5194.801458274014,
+      "y": 420
+    },
+    {
+      "event": "fadeDismissComplete",
+      "ms": 8075.631083338521
+    },
+    {
+      "event": "underlyingReceivedTap",
+      "ms": 8355.998291634023,
+      "count": 1
+    }
+  ],
+  "parentDriver": {
+    "source": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+    "phase": "contributor-93a-motion-selector-ready-1",
+    "exitCode": 0,
+    "cleanupExitCode": 0,
+    "recorderExitCode": 0,
+    "sourceUnchanged": true,
+    "success": true
+  },
+  "request": {
+    "method": "client.interactions.press",
+    "arguments": {
+      "selector": "id=\"Underlying action\""
+    },
+    "timeoutOverride": false,
+    "callerReason": "none",
+    "startedAt": "2026-11-13T15:18:12.164Z",
+    "finishedAt": "2026-11-13T15:18:15.402Z",
+    "elapsedMs": 3238.125959000001,
+    "output": {
+      "ok": true
+    }
+  },
+  "traceFile": "cases/contributor-93a-motion-selector-ready-1-trace.json",
+  "recording": {
+    "path": "../media/contributor-93a-motion-selector-ready-1/video.mp4",
+    "originalSha256": "e587754ebc749c1c232a0306aaa78a0c59dae64b4dcff1d71e2b135967d706cc",
+    "bytes": 2574098
+  }
+}

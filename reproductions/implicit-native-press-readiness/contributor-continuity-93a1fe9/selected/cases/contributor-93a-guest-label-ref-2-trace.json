@@ -1,0 +1,246 @@
+{
+  "script": "dist/src/runtime-factory.js",
+  "scriptSha256": "fc51eb5729746d18aef0ee3dde45e504a7d9d552738bc22da993405131252474",
+  "sourceBytes": 84119,
+  "mechanism": "V8 conditional breakpoints serialize read-only observations and the captured binding through the same pure binding lookup used by readiness; conditions always return false. Built and loaded source bytes are verified unchanged. Instrumented timings are not performance measurements.",
+  "startupPauses": 1,
+  "unexpectedPauses": 0,
+  "loadedSourceVerified": true,
+  "conditionsAlwaysFalse": true,
+  "allRequestedPointsBound": true,
+  "sourceVerificationError": false,
+  "sourceFileStillMatches": true,
+  "cleanup": {
+    "commandExit": 0,
+    "daemonExit": 0,
+    "daemonSignal": null,
+    "escalated": false
+  },
+  "points": [
+    {
+      "event": "admission-screen",
+      "lineNumber": 0,
+      "columnNumber": 32225,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"admission-screen\",screening:o.kind,targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"admission-screen\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        32225,
+        32349
+      ],
+      "functionSpan": [
+        31991,
+        32350
+      ],
+      "requestedSnippet": "return o.kind===`pass`&&!s?(K(a),r):ei(e,t,n,{resolved:r,generation:0,native:s,...o.kind===`wait`?{motion:$r(o.wait)}:{}},a)"
+    },
+    {
+      "event": "motion-baseline",
+      "lineNumber": 0,
+      "columnNumber": 29317,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-baseline\",present:!!i}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-baseline\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29317,
+        29343
+      ],
+      "functionSpan": [
+        29217,
+        29695
+      ],
+      "requestedSnippet": "if(!i)return{kind:`pass`};"
+    },
+    {
+      "event": "motion-decision",
+      "lineNumber": 0,
+      "columnNumber": 29509,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-decision\",kind:s.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-decision\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        29509,
+        29551
+      ],
+      "functionSpan": [
+        29217,
+        29695
+      ],
+      "requestedSnippet": "if(s.kind!==`recheck`)return{kind:`pass`};"
+    },
+    {
+      "event": "native-readiness",
+      "lineNumber": 0,
+      "columnNumber": 35392,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"native-readiness\",generation:n.generation,liveGeneration:n.live.generation,state:n.live.state,binding:ai(n.resolved)}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"native-readiness\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        35392,
+        35422
+      ],
+      "functionSpan": [
+        35010,
+        35591
+      ],
+      "requestedSnippet": "if(i.state===`ready`)return!0;"
+    },
+    {
+      "event": "motion-look",
+      "lineNumber": 0,
+      "columnNumber": 34533,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"motion-look\",generation:r.generation,verdict:s.kind,looksBeforeVerdict:r.motion.looks}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"motion-look\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        34533,
+        34650
+      ],
+      "functionSpan": [
+        34206,
+        35010
+      ],
+      "requestedSnippet": "if(a.looks++,a.previous=o,s.kind===`pass`&&s.admitted.kind!==`point`)return r.resolved=s.admitted,r.motion=void 0,!0;"
+    },
+    {
+      "event": "canonical-refresh-start",
+      "lineNumber": 0,
+      "columnNumber": 35620,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-start\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        35620,
+        35634
+      ],
+      "functionSpan": [
+        35591,
+        35948
+      ],
+      "requestedSnippet": "r.live=void 0;"
+    },
+    {
+      "event": "canonical-refresh-complete",
+      "lineNumber": 0,
+      "columnNumber": 35909,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"canonical-refresh-complete\",generation:r.generation}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"canonical-refresh-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        35909,
+        35947
+      ],
+      "functionSpan": [
+        35591,
+        35948
+      ],
+      "requestedSnippet": "s.kind===`wait`&&(r.motion=$r(s.wait))"
+    },
+    {
+      "event": "capture-start",
+      "lineNumber": 0,
+      "columnNumber": 2934,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-start\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-start\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        2934,
+        3045
+      ],
+      "functionSpan": [
+        2910,
+        3327
+      ],
+      "requestedSnippet": "if(!e.backend.captureSnapshot)throw new o(`UNSUPPORTED_OPERATION`,`snapshot is not supported by this backend`);"
+    },
+    {
+      "event": "capture-complete",
+      "lineNumber": 0,
+      "columnNumber": 3267,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"capture-complete\",}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"capture-complete\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        3267,
+        3326
+      ],
+      "functionSpan": [
+        2910,
+        3327
+      ],
+      "requestedSnippet": "return await e.sessions.set({...i,snapshot:a}),{snapshot:a}"
+    },
+    {
+      "event": "tap-dispatch",
+      "lineNumber": 0,
+      "columnNumber": 42579,
+      "condition": "(()=>{try{console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:\"tap-dispatch\",targetKind:t.target.kind}))}catch(e){console.debug('__ADMISSION_PROOF__'+JSON.stringify({event:'trace-error',site:\"tap-dispatch\",name:e.name}))}return false})()",
+      "sourceSpan": [
+        42579,
+        42753
+      ],
+      "functionSpan": [
+        41969,
+        42847
+      ],
+      "requestedSnippet": "d=await e.backend.tap(F(e,t),l,{button:t.button,count:t.count,intervalMs:t.intervalMs,holdMs:t.holdMs,jitterPx:t.jitterPx,doubleTap:t.doubleTap,...u?{pointObser"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "phase": "healthy",
+      "event": "phase",
+      "name": "healthy"
+    },
+    {
+      "sequence": 2,
+      "phase": "healthy",
+      "event": "motion-baseline",
+      "present": false
+    },
+    {
+      "sequence": 3,
+      "phase": "healthy",
+      "event": "admission-screen",
+      "screening": "pass",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 4,
+      "phase": "healthy",
+      "event": "native-readiness",
+      "generation": 0,
+      "liveGeneration": 0,
+      "state": "ready",
+      "binding": {
+        "type": 75,
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 300,
+          "height": 52
+        },
+        "contributors": [
+          {
+            "type": 48,
+            "label": "Original row",
+            "rect": {
+              "x": 149,
+              "y": 317,
+              "width": 82,
+              "height": 18
+            }
+          },
+          {
+            "type": 9,
+            "identifier": "derived-label-action",
+            "label": "Original row",
+            "rect": {
+              "x": 40,
+              "y": 300,
+              "width": 300,
+              "height": 52
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "phase": "healthy",
+      "event": "tap-dispatch",
+      "targetKind": "ref"
+    },
+    {
+      "sequence": 6,
+      "phase": "after-healthy",
+      "event": "phase",
+      "name": "after-healthy"
+    }
+  ],
+  "originalPrivateTraceSha256": "4ff1f1480430c87a1684595ccc4893956338efde8f996778274dd439aa5b1558",
+  "scope": "Actual debugger breakpoint/script identifiers and host file URLs are omitted. Ordered observations and relative source positions remain. Captured binding values here belong only to the generic fixture."
+}

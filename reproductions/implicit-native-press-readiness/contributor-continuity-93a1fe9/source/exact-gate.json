@@ -1,0 +1,230 @@
+{
+  "originalPrivateReceiptSha256": "154f1c5cdfe2311e3fea8277dab5e10b98be3018905864c55e4dc3dfc7151f3e",
+  "head": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+  "base": "b7ded9cfb26927c7c60d3a04272b62ef7d47da92",
+  "startedAt": "2026-11-13T06:55:09.210Z",
+  "finishedAt": "2026-11-13T06:59:02.238Z",
+  "exactCommit": true,
+  "checkoutChanged": false,
+  "initial": {
+    "head": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+    "status": "",
+    "fingerprint": "82665fa4b7b3aa5248399b5154024c10cf2cecd1d6e2b1220b1e167ce8794664"
+  },
+  "final": {
+    "head": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+    "status": "",
+    "fingerprint": "82665fa4b7b3aa5248399b5154024c10cf2cecd1d6e2b1220b1e167ce8794664"
+  },
+  "stages": [
+    {
+      "id": "format",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 460,
+      "tests": []
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 1616,
+      "tests": []
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 338,
+      "tests": []
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 21703,
+      "tests": []
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 2935,
+      "tests": []
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 283,
+      "tests": []
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4186,
+      "tests": []
+    },
+    {
+      "id": "ios-snapshot-differential",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 40359,
+      "tests": [
+        {
+          "passed": 410,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 147095,
+      "tests": [
+        {
+          "passed": 19633,
+          "failed": 0,
+          "skipped": 3,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "deduplicated",
+      "reason": "covered by related tests"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "command-docs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 732,
+      "tests": [
+        {
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "adr-citations",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 713,
+      "tests": [
+        {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "docs-links",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4910,
+      "tests": []
+    },
+    {
+      "id": "docs-prose",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 484,
+      "tests": []
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 409,
+      "tests": []
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 6498,
+      "tests": []
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ]
+}

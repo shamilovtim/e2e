@@ -1,0 +1,84 @@
+{
+  "head": "d81e71657aafda50ff9508c5e9f431da5bdd2dec",
+  "sourceTree": "902fcfcbec3755909ef868ea07b9e22eb39cf865",
+  "nativeBuiltAt": "d81e71657aafda50ff9508c5e9f431da5bdd2dec",
+  "nativeFingerprint": "ccbad4ebf417a8d909258e008f6257276392688fa64f8ef75c80d940e704fa89",
+  "nativeArtifactsVerified": 11,
+  "runtimeJavaScriptFiles": 631,
+  "runtimeManifestSha256": "e9f59d18255771dbdae31311cb887424e6548c7766b5374733af486ef72f4838",
+  "xctestrunSha256": "73dd9cf557768b935d0e66bf357d29a3950c07b1c9cc8ad9890d5890ab2b76bc",
+  "wrapperSha256": "f3df2beb608dc293d7a3908375d7987a322f27d481527331a5ed6d354d73c313",
+  "archivedBeforeRun": true,
+  "case": "contributor-d81-native2-red-1",
+  "originalPrivateResultSha256": "ceab22ce26e50a21f5089818fdc1d74ddd05fe01ce21709eb68c3029e77bab25",
+  "runtimeLaunchInputs": [],
+  "guestBridge": null,
+  "sources": [
+    {
+      "file": "executed-sources/f3df2beb608dc293d7a3908375d7987a322f27d481527331a5ed6d354d73c313.py",
+      "originalExecutedSha256": "f3df2beb608dc293d7a3908375d7987a322f27d481527331a5ed6d354d73c313",
+      "publicRedactedSha256": "fa570cc1c9418a26fee0464afe362441d3d91525d331063358de75f595bb2cf3",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "exitCode": 65,
+    "sourceUnchanged": true,
+    "actualNativeTests": {
+      "outcomes": [
+        {
+          "method": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+          "status": "failed"
+        },
+        {
+          "method": "testReadinessValidatesAPromotedSwitchIdentifierInItsCoherentWindow",
+          "status": "failed"
+        }
+      ],
+      "passed": 0,
+      "failed": 2,
+      "skipped": 0,
+      "allRequestedExactlyOncePassed": false
+    },
+    "recorderExitCode": 0
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "parentDriver": null,
+  "controlledFailureAssertions": [
+    "XCTAssertEqual failed: (\"Optional(\"ready\")\") is not equal to (\"Optional(\"semantic-changed\")\")",
+    "XCTAssertEqual failed: (\"Optional(\"ready\")\") is not equal to (\"Optional(\"semantic-changed\")\")",
+    "XCTAssertEqual failed: (\"Optional(\"ready\")\") is not equal to (\"Optional(\"semantic-changed\")\")"
+  ],
+  "actualMethodOccurrences": [
+    {
+      "method": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+      "status": "started"
+    },
+    {
+      "method": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+      "status": "failed"
+    },
+    {
+      "method": "testReadinessValidatesAPromotedSwitchIdentifierInItsCoherentWindow",
+      "status": "started"
+    },
+    {
+      "method": "testReadinessValidatesAPromotedSwitchIdentifierInItsCoherentWindow",
+      "status": "failed"
+    }
+  ],
+  "qualification": "Intentional isolated native mutation. The two methods each ran once; the first includes label and ID variants. The three assertion failures are retained. No Xcode retry occurred. Only live contributor label/identifier comparisons were disabled; type, value, full rectangle, raw parent matching and test fixtures remain. Both methods fail specifically with unsafe ready instead of semantic-changed.",
+  "recording": {
+    "path": "../media/contributor-d81-native2-red-1/video.mp4",
+    "originalSha256": "245fcc6674b17286433416645e6764d2ec503ef0ca870ab2135fc6f924ba8f71",
+    "bytes": 15567458
+  }
+}

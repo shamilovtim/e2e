@@ -1,0 +1,96 @@
+{
+  "head": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+  "sourceTree": "ea638390011f70400d0d2f8a616ef7fc97b7408c",
+  "nativeBuiltAt": "93a1fe9fa8d43574ddcfddfa01c5d9d9f2f1d8b7",
+  "nativeFingerprint": "0cef456b89393f894aa161eb686b9db918925b07c0e16d1c8c88c04ce7c0dcac",
+  "nativeArtifactsVerified": 11,
+  "runtimeJavaScriptFiles": 631,
+  "runtimeManifestSha256": "5fb78aa8c580a865a7869acba241a10523c693f22a87757037eb59b48e2058e3",
+  "xctestrunSha256": "4ecb01dd9651f0dfcebdad6ff198af765c0be62b666a10b146db8e322f5b51fe",
+  "wrapperSha256": "78e67c3760773dff9fb71c8b5f62ee7963c12fd3ba1a67e3be30b433bcfcacb6",
+  "archivedBeforeRun": true,
+  "case": "contributor-93a-native11-green-1",
+  "originalPrivateResultSha256": "e8dccd309b61b8841b79fec629f17ac9c34b8c73065749403c8fae79be393d66",
+  "runtimeLaunchInputs": [],
+  "guestBridge": null,
+  "sources": [
+    {
+      "file": "executed-sources/78e67c3760773dff9fb71c8b5f62ee7963c12fd3ba1a67e3be30b433bcfcacb6.py",
+      "originalExecutedSha256": "78e67c3760773dff9fb71c8b5f62ee7963c12fd3ba1a67e3be30b433bcfcacb6",
+      "publicRedactedSha256": "a7247ec3022798d5ad838718e2738a5c8c6cb3ba0ddf30d588c68f9750a8b0d0",
+      "byteEqualToExecuted": false,
+      "redactionScope": "Only task host-directory literals are replaced by /path/to placeholders; actual executed bytes remain private and are bound by originalExecutedSha256."
+    }
+  ],
+  "results": {
+    "exitCode": 0,
+    "sourceUnchanged": true,
+    "actualNativeTests": {
+      "outcomes": [
+        {
+          "method": "testAuthorizedPressTargetMatchesGoldenParityTable",
+          "status": "passed"
+        },
+        {
+          "method": "testAuthorizedReadinessRefusesAReplacementPreparedSurfaceBeforeQuerying",
+          "status": "passed"
+        },
+        {
+          "method": "testNativeBindingKeepsRawLabelsBeforeValueAndChildLabelSynthesis",
+          "status": "passed"
+        },
+        {
+          "method": "testNativeReadPrefilterPreservesNormalizedExactIdentity",
+          "status": "passed"
+        },
+        {
+          "method": "testQuerySelectorPrefersHittableMatchOverNonHittableDuplicate",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessCountsOverlappingWindowDuplicatesAndRefusesUnknownGeometry",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessKeepsAControlWithAnEmptyZeroFrameAuxiliaryWindow",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessKeepsTextInputBindingAcrossContentChanges",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessRefusesAReplacementAnonymousCellWithADifferentSynthesizedLabel",
+          "status": "passed"
+        },
+        {
+          "method": "testReadinessValidatesAPromotedSwitchIdentifierInItsCoherentWindow",
+          "status": "passed"
+        },
+        {
+          "method": "testSynthesizedPressLabelRequiresTheCapturedLabelSourceInsteadOfAnEqualValue",
+          "status": "passed"
+        }
+      ],
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "allRequestedExactlyOncePassed": true
+    },
+    "recorderExitCode": 0
+  },
+  "witnessLabels": {
+    "healthyNativeBefore": null,
+    "healthyNative": null,
+    "nativeBefore": null,
+    "nativeAfter": null,
+    "nativeFinal": null,
+    "nativeLate": null
+  },
+  "parentDriver": null,
+  "recording": {
+    "path": "../media/contributor-93a-native11-green-1/video.mp4",
+    "originalSha256": "ae2b3382e9c543c90737ced7f7630fc3432a1e549850888d73ef787a130990dd",
+    "bytes": 38900102
+  }
+}

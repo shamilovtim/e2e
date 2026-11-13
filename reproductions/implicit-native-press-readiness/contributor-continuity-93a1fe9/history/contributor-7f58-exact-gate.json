@@ -1,0 +1,150 @@
+{
+  "startedAt": "2026-11-12T23:00:52.624Z",
+  "finishedAt": "2026-11-12T23:47:51.081Z",
+  "status": "failed",
+  "exitCode": 1,
+  "checkoutChanged": false,
+  "exactCommit": true,
+  "originalPrivateReceiptSha256": "e48255a3bc9c83743783efd8e0996e2aa4db01486018b2283a4d7d83bcb141f2",
+  "head": "7f58a8596417c91144730e17804ecc38c8e4c3ac",
+  "base": "9676eedac5b05e40a88062cd0c8c45fdc730da68",
+  "stages": [
+    {
+      "id": "format",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 456
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 3671
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 407
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 22255
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 3490
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 932
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4106
+    },
+    {
+      "id": "ios-snapshot-differential",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 41217
+    },
+    {
+      "id": "unit",
+      "status": "failed",
+      "exitCode": 1,
+      "durationMs": 2741586
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "not-run"
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "command-docs",
+      "status": "not-run"
+    },
+    {
+      "id": "adr-citations",
+      "status": "not-run"
+    },
+    {
+      "id": "docs-links",
+      "status": "not-run"
+    },
+    {
+      "id": "docs-prose",
+      "status": "not-run"
+    },
+    {
+      "id": "xctest-selection",
+      "status": "not-run"
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "not-run"
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ]
+}
